@@ -42,10 +42,10 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *window=NULL,*recursive_window=NULL,*radio=NULL;
 	GtkEntry *url_entry=NULL,*save_in_entry=NULL;
-	gchar *url=NULL,*save_in=NULL;
+	gchar *url=NULL,*save_in=NULL, *reverse_filename;
 	GwgetData *gwgetdata;
 	gint response;
-	
+		
 	
 	window = glade_xml_get_widget(xml_new,"new_window");
 	url_entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
@@ -68,7 +68,11 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	
 		gwgetdata = gwget_data_create(url,save_in);
 		/* if the url it's not a file drop a dialog to recurse into the url */
-		if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url)) {
+		reverse_filename = g_strdup(gwgetdata->filename);
+		reverse_filename = g_strreverse(reverse_filename);
+		printf("Reverse: %s\nNormal: %s\n",reverse_filename, gwgetdata->filename);
+		if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url) ||
+			!strncmp(reverse_filename,"lmth",4) || !strncmp(reverse_filename,"mth",3)) {
 			recursive_window=glade_xml_get_widget(xml,"dialog2");
 			response=gtk_dialog_run(GTK_DIALOG(recursive_window));
 			gtk_widget_hide(GTK_WIDGET(recursive_window));

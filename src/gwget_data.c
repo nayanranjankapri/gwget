@@ -348,12 +348,14 @@ gwget_data_start_download(GwgetData *gwgetdata)
 					argv[arg]="-m";
 					arg++;
 				}
-			
-				if (!gwgetdata->multimedia && !gwgetdata->mirror){
-					if (gwget_pref.no_create_directories) {
+				
+				if (gwget_pref.no_create_directories) {
 						argv[arg]="-nd";
 						arg++;
-					}
+				}
+				
+				if (!gwgetdata->multimedia && !gwgetdata->mirror){
+					
 					if (gwget_pref.follow_relative) {
 						argv[arg]="-L";
 						arg++;
