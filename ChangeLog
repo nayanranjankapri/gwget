@@ -1,3 +1,9 @@
+2004-12-08 David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (stop_all_downloads,
+	on_cancel_download_activate, on_remove_all_activate): Set the title
+	when remove download.
+
 2004-12-07 David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (new_download): Select the download added.

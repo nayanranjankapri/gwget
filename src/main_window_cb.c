@@ -125,6 +125,8 @@ stop_all_downloads(void)
 		}
 		gtk_tree_model_iter_next(model,&iter);
 	}
+
+	gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
 }
 
 void
@@ -558,8 +560,11 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
 		if (response==GTK_RESPONSE_OK) {
 			gwget_data_stop_download(gwgetdata); 
 			unlink (gwgetdata->local_filename);
-    		gwgetdata->total_time = 0;
-    		gwget_data_set_state (gwgetdata, DL_COMPLETED);
+    			gwgetdata->total_time = 0;
+    			gwget_data_set_state (gwgetdata, DL_COMPLETED);
+			if (gwgetdata == gwget_data_get_selected()) {
+				gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
+			}
 			gtk_list_store_remove(GTK_LIST_STORE(model),&gwgetdata->file_list);
 			downloads=g_list_remove(downloads,gwgetdata);
 			gwget_data_free(gwgetdata);
@@ -654,6 +659,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 			gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
 			downloads=g_list_remove(downloads,gwgetdata);
 		}
+		gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
 	}
 				
 }
