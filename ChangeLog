@@ -1,4 +1,8 @@
 2005-01-15  David Sedeño <david@alderia.com>
+
+	* data/new_download.glade: Delete horizontal separator. Hide from task list.
+
+2005-01-15  David Sedeño <david@alderia.com>
 	
 	* src/main_window_cb.c (on_pref_ok_button_clicked, on_boton_pref_clicked):
 	Replace num_retries_entry Entry for a GtkSpin button
