@@ -1,6 +1,10 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS = po include src pixmaps data
+SUBDIRS = po include src pixmaps data 
+
+if ENABLE_EPIPHANY_EXTENSION
+	SUBDIRS += epiphany-extension
+endif
 
 EXTRA_DIST = \
 	intltool-extract.in \
