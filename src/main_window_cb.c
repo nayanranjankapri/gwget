@@ -318,6 +318,10 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 
 	
 	/* General */
+	checkbutton = glade_xml_get_widget (GLADE_XML(xml_pref), "ask_save_each_dl_check");
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton), gwget_pref.ask_save_each_dl);
+
+	
 	checkbutton = glade_xml_get_widget(GLADE_XML(xml_pref),"num_retries_spin");
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.num_retries);
 
@@ -367,7 +371,7 @@ on_pref_cancel_button_clicked(GtkWidget *widget,gpointer data)
 void 
 on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 {
-	GtkWidget *save_in = NULL, *pref_window = NULL,*num_retries=NULL,*resume = NULL, *open_after_dl = NULL;
+	GtkWidget *save_in = NULL, *ask_each_dl = NULL, *pref_window = NULL,*num_retries=NULL,*resume = NULL, *open_after_dl = NULL;
 	GtkWidget *http_proxy = NULL, *http_proxy_port_spin = NULL;
 	GtkWidget *no_create_directories = NULL;
 	GtkWidget *follow_relative = NULL;	
@@ -409,6 +413,12 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 		gwget_pref.network_mode="default";
 	}	
 		
+	ask_each_dl = glade_xml_get_widget(xml_pref, "ask_save_each_dl_check");
+	gwget_pref.ask_save_each_dl = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ask_each_dl));
+	gconf_client_set_bool(gconf_client, "/apps/gwget2/ask_save_each_dl",
+				gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ask_each_dl)), NULL);
+	
+	
 	num_retries = glade_xml_get_widget(xml_pref,"num_retries_spin");
 	gwget_pref.num_retries = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(num_retries));
 	

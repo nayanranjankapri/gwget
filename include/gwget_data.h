@@ -22,6 +22,7 @@
 typedef struct
 {
 	gchar *download_dir; /* Default download directory */
+	gboolean ask_save_each_dl; 
 	gint num_retries;    /* Number of Retries */
 	gchar *http_proxy; /* HTTP Proxy */
 	gint http_proxy_port; /* HTTP Proxy Port */

@@ -1,5 +1,14 @@
 2005-01-15  David Sedeño <david@alderia.com>
 
+	* src/main_window.c (on_treeview_drag_received): Cleanup.
+	* data/preferences.glade: Added check button for ask save in for each download. Reallocation of widgets.
+	* include/gwget_data.h: Add ask_save_each_dl to preferences.
+	* src/main_window_cb.c (on_boton_pref_clicked, on_pref_ok_button_clicked): Set and get 
+	the new ask_save_each_dl from gconf.
+	* data/gwget.schemas.in: add ask save in for each download key. 
+
+2005-01-15  David Sedeño <david@alderia.com>
+
 	* data/gwget.glade: Skip dialogs from taskbar and pager. Hide hseparator for recursive
 	options dialog.
 

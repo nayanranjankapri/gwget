@@ -159,6 +159,7 @@ gwget_get_defaults_from_gconf(void)
 	gwget_pref.view_file_type=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_file_type",NULL);
 	gwget_pref.limit_speed = gconf_client_get_bool (gconf_client,"/apps/gwget2/limit_speed", NULL);
 	gwget_pref.max_speed=gconf_client_get_int(gconf_client,"/apps/gwget2/max_speed",NULL);
+	gwget_pref.ask_save_each_dl = gconf_client_get_bool (gconf_client,"/apps/gwget2/ask_save_each_dl", NULL);
 	
 	if (!gwget_pref.download_dir) {
 		gwget_pref.download_dir = g_strdup(g_get_home_dir());
@@ -361,33 +362,37 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 	gchar *file;
 	GList *files;
 	GwgetData *gwgetdata;
+	gboolean drop_ok;
 	
 	g_return_if_fail(gwget_pref.download_dir != NULL);
 
 	dnd_type = GPOINTER_TO_UINT(data);
-	  
+	
+	drop_ok = FALSE;
 	if (dnd_type==TARGET_URI_LIST) {
 		GnomeVFSURI *vfs_uri;
 		files = gnome_vfs_uri_list_parse (seldata->data);
 		vfs_uri = files->data;
 		file = gnome_vfs_uri_to_string(vfs_uri,GNOME_VFS_URI_HIDE_NONE);
-		gwgetdata=gwget_data_create(file,gwget_pref.download_dir);
-		new_download(gwgetdata);
-		gwget_data_start_download(gwgetdata);
-		gtk_drag_finish(context, TRUE, FALSE, time);
+		drop_ok = TRUE;
 	} else if (dnd_type==TARGET_NETSCAPE_URL) {
 		file=((gchar *) (seldata->data));
+		drop_ok = TRUE;
+	} else 	{
+		gtk_drag_finish(context, FALSE, TRUE, time);
+	}
+
+	if (drop_ok) {
 		gwgetdata = gwget_data_create(file, gwget_pref.download_dir);
-    		if (gwgetdata) {
+		if (gwgetdata) {
 			new_download(gwgetdata);
 			gwget_data_start_download(gwgetdata);
 		} else {
 			run_dialog(_("Error starting the download"), _("There was an unexpected error starting the download"));
 		}
 		gtk_drag_finish(context, TRUE, FALSE, time);
-	} else 	{
-		gtk_drag_finish(context, FALSE, TRUE, time);
 	}
+	
 }
 
 static void

@@ -60,7 +60,20 @@
 	   <long></long>
 	 </locale>
 	</schema>
-		 
+
+	<schema>
+	 <key>/schemas/apps/gwget2/ask_save_each_dl</key>
+	 <applyto>/apps/gwget2/ask_save_each_dl</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>Ask save in for each new download</short>
+	   <long>When new download it is added, ask for where to save in. If false, save always in default directory without asking the user.</long>
+	 </locale>
+	</schema>
+	 
+
  	<schema>
 	 <key>/schemas/apps/gwget2/follow_relative</key>
 	 <applyto>/apps/gwget2/follow_relative</applyto>
