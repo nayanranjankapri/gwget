@@ -276,11 +276,41 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 		
 	window = glade_xml_get_widget (xml_pref, "pref_window");
 	entry = glade_xml_get_widget(xml_pref,"save_in_entry");
+
 	if (strlen(gwget_pref.download_dir)!=0) {
 		gtk_entry_set_text(GTK_ENTRY(entry), gwget_pref.download_dir);
 	} else {
 		gtk_entry_set_text(GTK_ENTRY(entry), g_get_home_dir());
 	}
+
+        /* Put HTTP proxy values */
+
+	if (gwget_pref.network_mode!=NULL) {
+		if ( strcmp (gwget_pref.network_mode, "manual") == 0) {
+			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"manual_radio");
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
+		} else if ( strcmp (gwget_pref.network_mode, "default") == 0 ) {
+			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"default_radio");
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
+		} else {
+			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"direct_radio");
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
+		}
+	} else {
+			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"direct_radio");
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
+	}
+	
+
+	if (gwget_pref.http_proxy!=NULL) {
+		entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.http_proxy);
+	}
+	
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"http_proxy_port_spin");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.http_proxy_port);
+
+	
 	entry = glade_xml_get_widget(xml_pref,"num_retries_entry");
 	gtk_entry_set_text(GTK_ENTRY(entry),g_strdup_printf("%d",gwget_pref.num_retries));
 
