@@ -1,7 +1,11 @@
 2004-10-14 David Sedeño <david@alderia.com>
 	
+	* include/Makefile.am: distribute *h files
+	* autogen.sh: Use automake-1.7
 	* src/Makefile.am: Put gwget-application-server.h in BUILD_SOURCES
 	* configure.in: Put ENABLE_EPIPHANY_EXTENSION out of the if statment.
+	Set enable_epiphany_extension=no when there are not epiphany
+	installed.
 
 2004-10-14 David Sedeño <david@alderia.com>
 
