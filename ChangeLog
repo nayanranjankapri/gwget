@@ -1,3 +1,9 @@
+2004-12-07 David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (new_download): Select the download added.
+	* src/gwget_data.c (gwget_data_update_statistics): If the download
+	it's selected, put the percentage in the window title.
+
 2004-12-05 David Sedeño <david@alderia.com>
 
 	* src/main_window.c (show_prefered_columns): Fix columns to show.

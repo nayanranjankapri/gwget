@@ -210,6 +210,7 @@ on_button_new_clicked(GtkWidget *widget, gpointer data)
 void 
 new_download(GwgetData* gwgetdata) {
 	GtkTreeIter iter;
+	GtkTreeSelection *select;
 	GtkIconTheme *theme;
 	GtkIconInfo *icon_info;
 	GdkPixbuf *pixbuf;
@@ -233,9 +234,11 @@ new_download(GwgetData* gwgetdata) {
 			PERCENTAGE_COLUMN,(gint)perc,-1);
 		
 	gwgetdata->file_list=iter; 
+
+        select=gtk_tree_view_get_selection(GTK_TREE_VIEW(glade_xml_get_widget(xml,"treeview1")));
+	gtk_tree_selection_select_iter(select, &iter);
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
-	
 	
 	mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
 	theme = gtk_icon_theme_get_default ();

@@ -61,6 +61,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	guint32 retr_size, remain_size;
 	time_t estimated;
 	gdouble perc;
+	gchar *title;
 		
 	
 	/* Get time and size of the file being retrieved */
@@ -166,6 +167,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	perc = gwgetdata->total_size==0?0:((gdouble)gwgetdata->cur_size*100)/(gdouble)gwgetdata->total_size;
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 			PERCENTAGE_COLUMN,(gint)perc,-1);
+	title = g_strdup_printf("%s %d %%", gwgetdata->filename, (gint)perc);
 	/* Speed column */
 	if ((gwgetdata->state != DL_NOT_STARTED) &&
 		(gwgetdata->state != DL_NOT_RUNNING) &&
@@ -191,6 +193,11 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 					FILENAME_COLUMN,gwgetdata->filename,-1);
 	}
 	gwget_data_update_statistics_ui(gwgetdata);
+	if (gwgetdata == gwget_data_get_selected()) {
+		gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), title);
+	}
+
+
 	check_download_in_progress();
 }
 
