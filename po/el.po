@@ -136,15 +136,15 @@ msgstr "Απομάκρυνση ολοκληρωμένων"
 
 #: data/gwget.glade.h:24
 msgid "Remove completed downloads from list"
-msgstr "Απομάκρυνση·ολοκληρωμένων μεταφορτώσεων από την λίστα"
+msgstr "Απομάκρυνση ολοκληρωμένων μεταφορτώσεων από την λίστα"
 
 #: data/gwget.glade.h:25 src/main_window_cb.c:628
 msgid "Remove inactive"
-msgstr "Απομάκρυνση·ανενεργών"
+msgstr "Απομάκρυνση ανενεργών"
 
 #: data/gwget.glade.h:26
 msgid "Remove inactive downloads from list"
-msgstr "Απομάκρυνση·ανενεργών μεταφορτώσεων από την λίστα"
+msgstr "Απομάκρυνση ανενεργών μεταφορτώσεων από την λίστα"
 
 #: data/gwget.glade.h:27
 msgid "Resume all"
@@ -551,7 +551,7 @@ msgid ""
 "(URL: %s)"
 msgstr ""
 "Είστε σίγουροι ότι θέλετε να ακυρώσετε την τρέχουσα μεταφόρτωση;\n"
-"(URL:·%s)"
+"(URL: %s)"
 
 #: src/main_window_cb.c:571
 msgid "Cancel download?"
@@ -607,11 +607,11 @@ msgstr "Το σύστημα δεν βρέθηκε\n"
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr ""
 "Το πρωτόκολλο δεν υποστηρίζεται - χρειάζεστε μεγαλύτερη έκδοση από το "
-"·wget·1.7 για https:\n"
+" wget 1.7 για https:\n"
 
 #: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
-msgstr "Άρνηση truncate·υπάρχοντος αρχείου"
+msgstr "Άρνηση truncate υπάρχοντος αρχείου"
 
 #: src/wget-log.c:98
 msgid "Unknown error"
