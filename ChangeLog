@@ -1,3 +1,8 @@
+2004-08-05  David Sedeño <david@alderia.com>
+	
+	* src/main_window_cb.c: Fix wrong gconf type for max_speed.
+	  Fixed #149038. Thanks to Baris Cicek. 
+
 2004-08-02  Baris Cicek <baris@teamforce.name.tr>
 	
 	* data/preferences.glade: Fixed a typo
