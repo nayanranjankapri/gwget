@@ -151,7 +151,7 @@
 	 <owner>gwget</owner>
 	 <type>int</type>
 	 <locale name="C">
-	   <default></default>
+	   <default>0</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -163,7 +163,7 @@
 	 <owner>gwget</owner>
 	 <type>int</type>
 	 <locale name="C">
-	   <default></default>
+	   <default>0</default>
 	   <short></short>
 	   <long></long>
 	 </locale>

@@ -1,5 +1,10 @@
 2004-12-05 David Sedeño <david@alderia.com>
 
+	* data/gwget.schemas.in: Put default positions to 0. Thanks to
+	Thorsten Leemhuis.
+
+2004-12-05 David Sedeño <david@alderia.com>
+
 	Patch from Julien to add a waiting state and set it when there are a
 	login incorrect in already dowloading to the same server. Fix bug
 	#156278.
