@@ -55,7 +55,7 @@ fi
 AC_SUBST(pixmapsdir)
 
 
-tuff for the CORBA interface
+dnl Stuff for the CORBA interface
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 
 ORBIT_IDL="`$PKG_CONFIG --variable=orbit_idl ORBit-2.0`"
