@@ -163,7 +163,7 @@ gwget_get_defaults_from_gconf(void)
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		state=gconf_client_get_int(gconf_client,key,NULL); 
 		new_download(data);
-		gwget_data_set_state(data,state); 
+		gwget_data_set_state(data,DL_NOT_RUNNING); 
 		if (gwget_pref.resume_at_start && data->state!=DL_COMPLETED) {
 			gwget_data_start_download(data);
 		}

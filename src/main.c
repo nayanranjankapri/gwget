@@ -19,6 +19,7 @@
 
 #include <gnome.h>
 #include <gconf/gconf-client.h>
+#include <locale.h>
 #include "main_window_cb.h"
 #include "main_window.h"
 

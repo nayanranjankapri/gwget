@@ -1,7 +1,17 @@
+2004-08-06  David Sedeño <david@alderia.com>
+
+	* src/main_window.c: include <locale.h> to compile
+	  in Freebsd systems. Fix #149378.
+	  (gwget_get_defaults_from_gconf): Put initial state to 
+	  not running.
+
 2004-08-05  David Sedeño <david@alderia.com>
 	
 	* src/main_window_cb.c: Fix wrong gconf type for max_speed.
 	  Fixed #149038. Thanks to Baris Cicek. 
+	* src/gwget_data.c: Pass the limit option to wget.
+	* src/main_window.c: Set the limit speed to the spin button 
+	  in preferences window.
 
 2004-08-02  Baris Cicek <baris@teamforce.name.tr>
 	
