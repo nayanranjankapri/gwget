@@ -1,4 +1,19 @@
 =============
+Version 0.92
+=============
+Fixes: 
+	* Message of dialogs fixes.
+	* Columns display fixes.
+
+Features:
+	* Put a download in waiting state when there are a server concurrent restrintion (Julien Cegarra).
+	* Set the window title with the percentage of the download (David Sedeño).
+
+Translations:
+	* New: zh_CN (Funda Wang)
+	* Updated: ru (Pavlo Bohmat), de (Frank Arnold), cs (Miloslav Trmac), en_CA (Adam Weinberger), lt (Lech Jankowski), nl (Laurens Buhler).
+
+=============
 Version 0.91 
 =============
 General:
