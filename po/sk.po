@@ -1,0 +1,509 @@
+# Slovak translations for gwget package.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gwget package.
+# Marcel Telka <marcel@telka.sk>, 2004.
+#
+# $Id$
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-16 22:15+0100\n"
+"PO-Revision-Date: 2004-12-16 22:41+0100\n"
+"Last-Translator: Marcel Telka <marcel@telka.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "aplikácia gwget"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr ""
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "O programe gwget"
+
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL verzia 2"
+
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Správca sťahovania pre Gnome 2"
+
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "Marcel Telka <marcel@telka.sk>"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Stiahnutie:</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Vlastnosti</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Pokračovať"
+
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
+#: src/main_window_cb.c:662
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Správca sťahovania"
+
+#: data/gwget.glade.h:7
+msgid "Information"
+msgstr "Informácie"
+
+#: data/gwget.glade.h:8
+msgid "Local Directory: "
+msgstr "Miestny priečinok: "
+
+#: data/gwget.glade.h:9
+msgid "Local File: "
+msgstr "Miestny súbor: "
+
+#: data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimediálne súbory (videá a obrázky)"
+
+#: data/gwget.glade.h:11
+msgid "New download"
+msgstr "Nové sťahovanie"
+
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Pozastaviť"
+
+#: data/gwget.glade.h:13
+msgid "Pause all"
+msgstr "Pozastaviť všetko"
+
+#: data/gwget.glade.h:14
+msgid "Pause all downloads"
+msgstr "Pozastaviť všetky sťahovania"
+
+#: data/gwget.glade.h:15
+msgid "Pause download"
+msgstr "Pozastaviť sťahovania"
+
+#: data/gwget.glade.h:16
+msgid "Properties"
+msgstr "Vlastnosti"
+
+#: data/gwget.glade.h:17
+msgid "Question"
+msgstr "Otázka"
+
+#: data/gwget.glade.h:18 data/preferences.glade.h:31
+msgid "Recursive"
+msgstr "Rekurzívne"
+
+#: data/gwget.glade.h:19
+msgid "Recursive options"
+msgstr "Rekurzívne voľby"
+
+#: data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:645
+msgid "Remove all"
+msgstr "Odstrániť všetko"
+
+#: data/gwget.glade.h:22
+msgid "Remove all downloads from list"
+msgstr "Odstrániť všetky sťahovania zo zoznamu"
+
+#: data/gwget.glade.h:23 src/main_window_cb.c:587
+msgid "Remove completed"
+msgstr "Odstránenie dokončené"
+
+#: data/gwget.glade.h:24
+msgid "Remove completed downloads from list"
+msgstr "Odstrániť dokončené sťahovania zo zoznamu"
+
+#: data/gwget.glade.h:25 src/main_window_cb.c:616
+msgid "Remove inactive"
+msgstr "Odstrániť neaktívne"
+
+#: data/gwget.glade.h:26
+msgid "Remove inactive downloads from list"
+msgstr "Odstrániť neaktívne sťahovania zo zoznamu"
+
+#: data/gwget.glade.h:27
+msgid "Resume all"
+msgstr "Obnoviť všetko"
+
+#: data/gwget.glade.h:28
+msgid "Resume all downloads"
+msgstr "Obnoviť všetky sťahovania"
+
+#: data/gwget.glade.h:29
+msgid "Stop and delete downloaded file"
+msgstr "Zastaviť a odstrániť stiahnutý súbor"
+
+#: data/gwget.glade.h:30
+msgid "The index file only"
+msgstr "Len indexový súbor"
+
+#: data/gwget.glade.h:31
+msgid "This site (mirror)"
+msgstr "Tento server (zrkadlo)"
+
+#: data/gwget.glade.h:32
+msgid "Url:"
+msgstr "Url:"
+
+#: data/gwget.glade.h:33
+msgid "_New"
+msgstr "_Nový"
+
+#: data/gwget.glade.h:34
+msgid "_Toolbar"
+msgstr "_Nástrojová lišta"
+
+#: data/newdownload.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Nové sťahovanie</span>"
+
+#: data/newdownload.glade.h:3
+msgid "New Download"
+msgstr "Nové sťahovanie"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+msgid "Save in:"
+msgstr "Uložiťdo:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr "URL: "
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  kB/sec"
+msgstr "  kB/s"
+
+#: data/preferences.glade.h:4
+msgid "<b>General</b>"
+msgstr "<b>Všeobecné</b>"
+
+#: data/preferences.glade.h:5
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Správanie</span>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Zoznam stĺpcov</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Odkazy</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Konfigurácia proxy</span>"
+
+#: data/preferences.glade.h:9
+msgid "Column List"
+msgstr "Zoznam stĺpcov"
+
+#: data/preferences.glade.h:10
+msgid "Continue downloads on startup"
+msgstr "Pokračovať v sťahovaní pri spustení"
+
+#: data/preferences.glade.h:11
+msgid "Convert links"
+msgstr ""
+
+#: data/preferences.glade.h:12 src/main_window.c:284
+msgid "Current Size"
+msgstr "Aktuálna veľkosť"
+
+#: data/preferences.glade.h:13
+msgid "Default GNOME network settings"
+msgstr "Štandardné nastavenia siete GNOME"
+
+#: data/preferences.glade.h:14
+msgid "Direct Internet connection"
+msgstr "Priame pripojenie k internetu"
+
+#: data/preferences.glade.h:15
+msgid "Don't create directories"
+msgstr "Nevytvárať priečinky"
+
+#: data/preferences.glade.h:16
+msgid "Download Speed"
+msgstr "Rýchlosť sťahovania"
+
+#: data/preferences.glade.h:17
+msgid "Download page requisites"
+msgstr ""
+
+#: data/preferences.glade.h:18 src/main_window.c:316
+msgid "Elapsed Time"
+msgstr ""
+
+#: data/preferences.glade.h:19
+msgid "Follow relative links only"
+msgstr "Nasledovať len relatívne odkazy"
+
+#: data/preferences.glade.h:20
+msgid "General"
+msgstr "Všeobecné"
+
+#: data/preferences.glade.h:21
+msgid "Limit download speed to: "
+msgstr "Obmedziť rýchlosť sťahovania na: "
+
+#: data/preferences.glade.h:22
+msgid "Manual proxy configuration"
+msgstr "Ručná konfigurácia proxy"
+
+#: data/preferences.glade.h:23
+msgid "Maximum depth level: "
+msgstr "Maximálna hĺbka: "
+
+#: data/preferences.glade.h:24
+msgid "Network"
+msgstr "Sieť"
+
+#: data/preferences.glade.h:25
+msgid "Number of retries:"
+msgstr "Počet opakovaní:"
+
+#: data/preferences.glade.h:26
+msgid "Open files automatically after download"
+msgstr "Otvoriť súbory automaticky po stiahnutí"
+
+#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
+msgid "Percentage"
+msgstr "Percentá"
+
+#: data/preferences.glade.h:28
+msgid "Port:"
+msgstr "Port:"
+
+#: data/preferences.glade.h:29
+msgid "Preferences"
+msgstr "Predvoľby"
+
+#: data/preferences.glade.h:30
+msgid "Proxy:"
+msgstr "Proxy:"
+
+#: data/preferences.glade.h:32 src/main_window.c:326
+msgid "Remaining Time"
+msgstr "Zostávajúci čas"
+
+#: data/preferences.glade.h:34 src/main_window.c:295
+msgid "Total Size"
+msgstr "Celková veľkosť"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Neznámy"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Zlyhalo"
+
+#: src/gwget_data.c:177
+msgid "stalled"
+msgstr ""
+
+#: src/gwget_data.c:210
+msgid "Waiting"
+msgstr "Čakanie"
+
+#: src/gwget_data.c:212
+msgid "Not Started"
+msgstr "Nezačaté"
+
+#: src/gwget_data.c:214
+msgid "Not Running"
+msgstr "Nebežiace"
+
+#: src/gwget_data.c:216
+msgid "Not Connected"
+msgstr "Nepripojené"
+
+#: src/gwget_data.c:218
+msgid "Connected"
+msgstr "Pripojené"
+
+#: src/gwget_data.c:220
+msgid "Retrieving"
+msgstr ""
+
+#: src/gwget_data.c:222
+msgid "Completed"
+msgstr "Dokončené"
+
+#: src/gwget_data.c:226
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Sťahovanie dokončené\n"
+"(%s)"
+
+#: src/gwget_data.c:233
+msgid "Error"
+msgstr "Chyba"
+
+#: src/gwget_data.c:611
+msgid "Unable to add this download"
+msgstr "Nepodarilo sa pridať toto sťahovanie"
+
+#: src/gwget_data.c:611
+msgid "This download is already added"
+msgstr "Toto sťahovanie je už pridané"
+
+#: src/gwget_data.c:659 src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Chyba pri otváraní súboru"
+
+#: src/gwget_data.c:659 src/main_window_cb.c:99
+msgid "Couldn't open the file"
+msgstr "Nepodarilo sa otvoriť súbor"
+
+#: src/main_window.c:266
+msgid "File Name"
+msgstr "Názov súboru"
+
+#: src/main_window.c:273
+msgid "State"
+msgstr "Stav"
+
+#: src/main_window.c:336
+msgid "Speed"
+msgstr "Rýchlosť"
+
+#: src/main_window.c:560
+msgid "Cancel current downloads?"
+msgstr "Zrušiť aktuálne sťahovania?"
+
+#: src/main_window.c:560
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+
+#: src/main_window_cb.c:94
+msgid "Error in download"
+msgstr "Chyba pri sťahovaní"
+
+#: src/main_window_cb.c:167
+msgid "Download Manager for Gnome2."
+msgstr "Správca sťahovania pre Gnome2."
+
+#: src/main_window_cb.c:174
+msgid "translator_credits"
+msgstr "Marcel Telka <marcel@telka.sk>"
+
+#: src/main_window_cb.c:186
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:503 src/new_window.c:140
+msgid "Select Folder"
+msgstr "Vybrať priečinok"
+
+#: src/main_window_cb.c:558
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(Url: %s)"
+msgstr ""
+
+#: src/main_window_cb.c:559
+msgid "Cancel download?"
+msgstr "Zrušiť sťahovanie?"
+
+#: src/main_window_cb.c:587
+msgid "Really remove completed downloads from the list?"
+msgstr "Naozaj odstrániť dokončené sťahovania zo zoznamu?"
+
+#: src/main_window_cb.c:616
+msgid "Really remove inactive downloads from the list?"
+msgstr "Naozaj odstrániť neaktívne sťahovania zo zoznamu?"
+
+#: src/main_window_cb.c:645
+msgid "Really remove all downloads from the list?"
+msgstr "Naozaj odstrániť všetky sťahovania zo zoznamu?"
+
+#: src/systray.c:135
+msgid "Nothing"
+msgstr "Nič"
+
+#: src/systray.c:142
+msgid "Downloads"
+msgstr "Sťahovania"
+
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr "Chyba zásuvky"
+
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Spojenie odmietnuté\n"
+
+#: src/wget-log.c:87
+msgid "No route to host"
+msgstr "Nie je cesta k hostiteľovi"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr ""
+
+#: src/wget-log.c:91
+msgid "Host not found\n"
+msgstr "Hostiteľ nebol nájdený\n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Nepodporovaný protokol - pre https potrebujete wget >= 1.7:\n"
+
+#: src/wget-log.c:96
+msgid "Refusing to truncate existing file"
+msgstr ""
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Neznáma chyba"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+msgid "File not found"
+msgstr "Súbor nebol nájdený"
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+
+#: src/wget-log.c:180
+msgid "Can't write to target directory"
+msgstr "Nepodarilo sa zapísať do cieľového priečinka"
