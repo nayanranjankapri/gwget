@@ -421,9 +421,7 @@ gwget_data_create(gchar *url, gchar *dir)
 {
 	GwgetData *gwgetdata;
 	gint length;
-	gchar *filename,*filename2;
-	
-	
+		
 	gwgetdata = g_new0(GwgetData,1);
 	
 	gwgetdata->url = g_strdup(url);
@@ -444,7 +442,6 @@ gwget_data_create(gchar *url, gchar *dir)
 	
 	gwget_data_set_filename_from_url(gwgetdata,gwgetdata->url);
 	
-	printf ("FILENAME: %s\n",gwgetdata->filename);
 	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
 	
 	gwgetdata->line = NULL;
