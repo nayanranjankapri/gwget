@@ -40,13 +40,11 @@ GladeXML *xml_new = NULL;
 
 void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 {
-	GtkWidget *window=NULL,*recursive_window=NULL,*radio=NULL;
+	GtkWidget *window=NULL;
 	GtkEntry *url_entry=NULL,*save_in_entry=NULL;
-	gchar *url=NULL,*save_in=NULL, *reverse_filename;
+	gchar *url=NULL,*save_in=NULL;
 	GwgetData *gwgetdata;
-	gint response;
 		
-	
 	window = glade_xml_get_widget(xml_new,"new_window");
 	url_entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
 	save_in_entry=GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
@@ -67,39 +65,7 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 		}
 	
 		gwgetdata = gwget_data_create(url,save_in);
-		/* if the url it's not a file drop a dialog to recurse into the url */
-		reverse_filename = g_strdup(gwgetdata->filename);
-		reverse_filename = g_strreverse(reverse_filename);
-		if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url) ||
-			!strncmp(reverse_filename,"lmth",4) || !strncmp(reverse_filename,"mth",3) || 
-			!strncmp(reverse_filename,"php",3)  || !strncmp(reverse_filename,"asp",3)) {
-			recursive_window=glade_xml_get_widget(xml,"dialog2");
-			response=gtk_dialog_run(GTK_DIALOG(recursive_window));
-			gtk_widget_hide(GTK_WIDGET(recursive_window));
-			if (response==GTK_RESPONSE_OK) {
-				radio=glade_xml_get_widget(xml,"radio_index");
-				if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
-					gwgetdata->recursive=FALSE;
-				}
-				radio=glade_xml_get_widget(xml,"radio_multimedia");
-				if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
-					gwgetdata->recursive=TRUE;
-					gwgetdata->multimedia=TRUE;
-				}
-				radio=glade_xml_get_widget(xml,"radio_mirror");
-				if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
-					gwgetdata->recursive=TRUE;
-					gwgetdata->mirror=TRUE;
-				}
-				radio=glade_xml_get_widget(xml,"radio_recursive");
-				if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
-					gwgetdata->recursive=TRUE;
-				}
-			}
-		}
-		downloads = g_list_append(downloads,gwgetdata);
-		gwget_data_set_state(gwgetdata,DL_NOT_CONNECTED);
-		new_download(gwgetdata);
+		gwget_data_add_download(gwgetdata);
 		gwget_data_start_download(gwgetdata);
 		g_free(save_in);		
 	}

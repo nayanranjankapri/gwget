@@ -1,5 +1,14 @@
 2004-09-19  David Sedeño <david@alderia.com>
 
+	* src/gwget_data.c (gwget_data_add_download): New function
+	  that get a gwgetdata struct and add to the main window.
+	* src/gwget-application-server.c
+	(impl_gwget_application_openURLSList): Call gwget_data_add_download.
+	* src/new_window.c (on_ok_button_clicked): Call
+	gwget_data_add_download instead of do it ourself in this function.
+
+2004-09-19  David Sedeño <david@alderia.com>
+
 	* src/main.c: change Activation_ID. Add function to get data from 
 	  command line. Send the urls list to the bonobo server.
 	* src/gwget-application-server.c

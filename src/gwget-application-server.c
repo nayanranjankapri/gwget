@@ -117,6 +117,7 @@ impl_gwget_application_openURLSList (PortableServer_Servant _servant,
 		while (list!=NULL) {
 			url = g_strdup((const gchar *)list->data);
 			gwgetdata = gwget_data_create (url, gwget_pref.download_dir);
+			gwget_data_add_download(gwgetdata);
 			gwget_data_start_download(gwgetdata);
 			list = g_slist_next(list);
 		}
