@@ -123,6 +123,7 @@ stop_all_downloads(void)
 		if (gwget_data_run(gwgetdata)) {
 				gwget_data_stop_download(gwgetdata);
 		}
+		gtk_tree_model_iter_next(model,&iter);
 	}
 }
 
@@ -143,6 +144,7 @@ continue_all_downloads(void)
 		if (!gwget_data_run(gwgetdata)) {
 				gwget_data_start_download(gwgetdata);
 		}
+		gtk_tree_model_iter_next(model,&iter);
  	}
 }
 
