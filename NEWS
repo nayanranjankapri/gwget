@@ -1,108 +1,169 @@
-0.14
-Fixed: 
-* Put the correct filename in recursive mode.
-* Porcentage column works in recursive mode.
-Change: 
-* Show recursive options with html, htm, php and asp extensions in the url
+=============
+Version 0.14
+=============
+General 
+	* Limit speed option.
+	* Show recursive options with html, htm, php and asp extensions in the url.
 
+Bugfixes
+	* Show correct filename in recursive mode.
+	* Porcentage column works in recursive mode.
+	* Hide main window when clicked in systray icon.
+	* Translations fixes.
 
-0.13.1
-* Fix a critical bug about column order.
+Translations
+	* Added pt (Duarte Loreto), en_CA (Adam Weinberger), hu (Gabor Kelemen), pt_BR (Raphael Higino) and pa(Amanpreet Singh Alam)
+	* Updated ru (Pavlo Bohmat)
 
-0.13
-* GtkFileChooser support.
-* Drag and Drop fixed.
-* Support d&d to the notification icon.
-* UI fixed (Thanks to Miroslav Strugarevic)
-* Column with the image of the file mime type added.
+=============
+Version 0.13.1
+=============
+Bugfixes
+	* Fix a critical bug about column order.
 
-0.12
-Features:
-* One of the most recuested feature it's here at last: systray notification integration!
-* Romanian translation added (Thanks to Spoiala Cristian).
+=============
+Version 0.13
+=============
+General
+	* GtkFileChooser support.
+	* Support d&d to the notification icon.
+	* Column with the image of the file mime type added.
 
-0.11
-Features:
-* Add a Column list preference tab. Now you can select what column do you want
-to view. Thanks to Patrik Kullman for the suggestion.
-* Add a propierties to the popup context menu. 
-* Remember if the toolbar must be shown.
-* Remember the window size and position.
+Bugfixes
+	* Drag and Drop fixed.
+	* UI fixed (Thanks to Miroslav Strugarevic)
+	
 
+=============
+Version 0.12
+=============
+General
+	* One of the most recuested feature it's here at last: systray notification integration!
 
-0.10 
-Features: 
-* Added a progress bar to the main treeview. Thanks to epiphany for the Gobject :)
-* Added types of files to download in recursive mode (index, multimedia, mirror and recursive).
-* Show the filename downloaded in recursive mode.
-* Added russian translation. Thanks to Pavlo Bohmat <bohm@ukr.net>
-Fixed: 
-* Put 100% in the percentage column at startup if the download already compleated.
+Translations
+	* ro(Spoiala Cristian).
 
+=============
+Version 0.11
+=============
+Features
+	* Add a Column list preference tab. Now you can select what column do you want
+	  to view. Thanks to Patrik Kullman for the suggestion.
+	* Add a propierties to the popup context menu. 
+	* Remember if the toolbar must be shown.
+	* Remember the window size and position.
 
-0.9
-Features:
-* Added a "View -> Toolbar" menu item to hide/show the toolbar
-* Toolbar style fits the gnome preferences.
-* Double click in the downloaded file, open it with the default gnome
-application.
+=============
+Version 0.10 
+=============
+Features 
+	* Added a progress bar to the main treeview. Thanks to epiphany for the Gobject :)
+	* Added types of files to download in recursive mode (index, multimedia, mirror and recursive).
+	* Show the filename downloaded in recursive mode.
 
-Fixed:
-* Calculate if there are running downloads on exit.
-* Preferences window more HIG compliant 
-* Check if the url is empty
+Bugfixes 
+	* Put 100% in the percentage column at startup if the download already compleated.
 
-0.8
-Features:
-* Added more Recursive options in the preferences window.
+Translation
+	* ru(Pavlo Bohmat)
 
-0.7 
-Features:
-* Added Recursive option if the url added it's not a file.
-* Added "Remove all downloads" and "Remove not running" options to the popup
-(Thanks to Axel Schwarz).
-* Added Japanese translation (Thanks to Yukihiro Nakai)
-* Cancel download in the popup menu now can be selected if the download it's
-in error state.
-Fixed:
-* main.c - add setlocale(LC_ALL, "")  Without this, GNOME translation will not
-take effect with "gwget2 --help". (Thanks to Yukihiro Nakai)
-* main_window.c - include config.h first. main windows's columns are translated 
-with fully translated .po files. (Thanks to Yukihiro Nakai).
+=============
+Version 0.9
+=============
+Features
+	* Added a "View -> Toolbar" menu item to hide/show the toolbar
+	* Toolbar style fits the gnome preferences.
+	* Double click in the downloaded file, open it with the default gnome
+	  application.
 
+Bugfixes
+	* Calculate if there are running downloads on exit.
+	* Preferences window more HIG compliant 
+	* Check if the url is empty
 
-0.6 (27-September-2003)
-Features:
-* New icon image. Thanks to my friend Fran Barrionuevo.
-* Added error messages to the status.
-* Added Bulgarian translation (Thanks to Filip Andonov).
-Fixed:
-* About window now works correctly.
-* Various typos in messages (Thanks to Jens Granseuer).
+=============
+Version 0.8
+=============
+Features
+	* Added more Recursive options in the preferences window.
 
-0.5 (25-June-2003)
-* Added Drag&Drop support. Now it's posible to drag urls from galeon/mozilla
-  to gwget2 but only works with urls of files.
-* Added speed of the download information. 
-* Added dutch translation (thanks to Reinout van Schouwen)
-* Fixed i18n support. Now i18n works but not in the column titles. I don't
-  know why, so if you know how to fix this, let me known (with a patch ;) )
-* Fixed path of gwget2.xpm install to.
+=============
+Version 0.7 
+=============
+Features
+	* Added Recursive option if the url added it's not a file.
+	* Added "Remove all downloads" and "Remove not running" options to the popup
+	  (Thanks to Axel Schwarz).
+	* Cancel download in the popup menu now can be selected if the download it's
+	  in error state.
+Bugfixes
+	* main.c - add setlocale(LC_ALL, "")  Without this, GNOME translation will not
+	  take effect with "gwget2 --help". (Thanks to Yukihiro Nakai)
+	* main_window.c - include config.h first. main windows's columns are translated 
+	  with fully translated .po files. (Thanks to Yukihiro Nakai).
 
-0.4 (18-June-2003)
-* The downloads are stored in GConf.
-* "Remove completed downloads" option in the popup menu. 
-* Added Percentage of the download information.
-* Added a option for resume downloads on startup
-* Added polish translation. Thanks to Arkadiusz Lipiec
-  <A.Lipiec@elka.pw.edu.pl>
+Translations
+	* Added ja(Yukihiro Nakai)
 
-0.3 (3-June-2003):
-* Added popup menu for currents downloads
-* Pause/Continue Download
-* Some HIG in dialogs
-0.2 (1-April-2003): 
-* Dialog on quit if there are current downloads retrieving.
-* Kill wget's process on quit.
-* Number of retries in preferences.
-* Preferences now store it's data in GConf.
+=============
+Version 0.6 
+=============
+Features
+	* New icon image. Thanks to my friend Fran Barrionuevo.
+	* Added error messages to the status.
+
+Fixed
+	* About window now works correctly.
+	* Various typos in messages (Thanks to Jens Granseuer).
+
+Translations
+	* Added bg(Filip Andonov).
+
+=============
+Version 0.5
+=============
+Features
+	* Added Drag&Drop support. Now it's posible to drag urls from galeon/mozilla
+	  to gwget2 but only works with urls of files.
+	* Added speed of the download information. 
+
+Bugfixes
+	* Fixed i18n support. Now i18n works but not in the column titles. I don't
+	  know why, so if you know how to fix this, let me known (with a patch ;) )
+	* Fixed path of gwget2.xpm install to.
+
+Translations
+	* Added nl(Reinout van Schouwen)
+
+=============
+Version 0.4
+=============
+Features
+	* The downloads are stored in GConf.
+	* "Remove completed downloads" option in the popup menu. 
+	* Added Percentage of the download information.
+	* Added a option for resume downloads on startup
+
+Translations
+	* Added po(Arkadiusz Lipiec)
+
+=============
+Version 0.3 
+=============
+Features
+	* Added popup menu for currents downloads
+	* Pause/Continue Download
+	* Some HIG in dialogs
+
+=============
+Version 0.2
+=============
+General
+	* Preferences now store it's data in GConf.
+
+Features
+	* Dialog on quit if there are current downloads retrieving.
+	* Number of retries in preferences.
+
+Bugfixes
+	* Kill wget's process on quit.
