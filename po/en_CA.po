@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-06 19:19-0500\n"
-"PO-Revision-Date: 2004-12-06 00:01-0400\n"
+"POT-Creation-Date: 2004-12-26 03:33-0500\n"
+"PO-Revision-Date: 2004-12-26 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,8 @@ msgstr "Cancel"
 msgid "Continue"
 msgstr "Continue"
 
-#: data/gwget.glade.h:6
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
+#: src/main_window_cb.c:662
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Download Manager"
 
@@ -120,7 +121,7 @@ msgstr "Recursive options"
 msgid "Remove"
 msgstr "Remove"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:637
+#: data/gwget.glade.h:21 src/main_window_cb.c:645
 msgid "Remove all"
 msgstr "Remove all"
 
@@ -128,7 +129,7 @@ msgstr "Remove all"
 msgid "Remove all downloads from list"
 msgstr "Remove all downloads from list"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:579
+#: data/gwget.glade.h:23 src/main_window_cb.c:587
 msgid "Remove completed"
 msgstr "Remove completed"
 
@@ -136,7 +137,7 @@ msgstr "Remove completed"
 msgid "Remove completed downloads from list"
 msgstr "Remove completed downloads from list"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:608
+#: data/gwget.glade.h:25 src/main_window_cb.c:616
 msgid "Remove inactive"
 msgstr "Remove inactive"
 
@@ -328,39 +329,39 @@ msgstr "Unknown"
 msgid "Failed"
 msgstr "Failed"
 
-#: src/gwget_data.c:175
+#: src/gwget_data.c:177
 msgid "stalled"
 msgstr "stalled"
 
-#: src/gwget_data.c:203
+#: src/gwget_data.c:210
 msgid "Waiting"
 msgstr "Waiting"
 
-#: src/gwget_data.c:205
+#: src/gwget_data.c:212
 msgid "Not Started"
 msgstr "Not Started"
 
-#: src/gwget_data.c:207
+#: src/gwget_data.c:214
 msgid "Not Running"
 msgstr "Not Running"
 
-#: src/gwget_data.c:209
+#: src/gwget_data.c:216
 msgid "Not Connected"
 msgstr "Not Connected"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:218
 msgid "Connected"
 msgstr "Connected"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:220
 msgid "Retrieving"
 msgstr "Retrieving"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:222
 msgid "Completed"
 msgstr "Completed"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:226
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -369,23 +370,23 @@ msgstr ""
 "Download Completed\n"
 "(%s)"
 
-#: src/gwget_data.c:226
+#: src/gwget_data.c:233
 msgid "Error"
 msgstr "Error"
 
-#: src/gwget_data.c:604
+#: src/gwget_data.c:615
 msgid "Unable to add this download"
 msgstr "Unable to add this download"
 
-#: src/gwget_data.c:604
+#: src/gwget_data.c:615
 msgid "This download is already added"
 msgstr "This download is already added"
 
-#: src/gwget_data.c:652 src/main_window_cb.c:99
+#: src/gwget_data.c:663 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: src/gwget_data.c:652 src/main_window_cb.c:99
+#: src/gwget_data.c:663 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Could not open the file"
 
@@ -401,11 +402,19 @@ msgstr "State"
 msgid "Speed"
 msgstr "Speed"
 
-#: src/main_window.c:560
+#: src/main_window.c:374
+msgid "Error starting the download"
+msgstr "Error starting the download"
+
+#: src/main_window.c:374
+msgid "There is a unexpected error starting the download"
+msgstr "There was an unexpected error starting the download"
+
+#: src/main_window.c:565
 msgid "Cancel current downloads?"
 msgstr "Cancel current downloads?"
 
-#: src/main_window.c:560
+#: src/main_window.c:565
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -417,23 +426,23 @@ msgstr ""
 msgid "Error in download"
 msgstr "Error in download"
 
-#: src/main_window_cb.c:165
+#: src/main_window_cb.c:167
 msgid "Download Manager for Gnome2."
 msgstr "Download Manager for GNOME 2."
 
-#: src/main_window_cb.c:172
+#: src/main_window_cb.c:174
 msgid "translator_credits"
 msgstr "Adam Weinberger <adamw@gnome.org>"
 
-#: src/main_window_cb.c:184
+#: src/main_window_cb.c:186
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:498 src/new_window.c:140
+#: src/main_window_cb.c:503 src/new_window.c:140
 msgid "Select Folder"
 msgstr "Select Folder"
 
-#: src/main_window_cb.c:553
+#: src/main_window_cb.c:558
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -442,19 +451,19 @@ msgstr ""
 "Really cancel current download?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:554
+#: src/main_window_cb.c:559
 msgid "Cancel download?"
 msgstr "Cancel download?"
 
-#: src/main_window_cb.c:579
+#: src/main_window_cb.c:587
 msgid "Really remove completed downloads from the list?"
 msgstr "Really remove completed downloads from the list?"
 
-#: src/main_window_cb.c:608
+#: src/main_window_cb.c:616
 msgid "Really remove inactive downloads from the list?"
 msgstr "Really remove inactive downloads from the list?"
 
-#: src/main_window_cb.c:637
+#: src/main_window_cb.c:645
 msgid "Really remove all downloads from the list?"
 msgstr "Really remove all downloads from the list?"
 
