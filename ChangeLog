@@ -1,3 +1,9 @@
+2004-10-30 David Sedeño <david@alderia.com>
+
+	* configure.in: Check for gconftool
+	* data/Makefile.am: Install schema.
+	* data/gwget.schemas.in: new file
+	
 2004-10-15 David Sedeño <david@alderia.com>
 	
 	* configure.in: Correct epiphany detection.

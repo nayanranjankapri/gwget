@@ -7,6 +7,7 @@ AC_INIT(configure.in)
 AM_INIT_AUTOMAKE(gwget, 0.90)
 AM_CONFIG_HEADER(config.h)
 
+AC_PATH_PROG(GCONFTOOL, gconftool-2)
 AC_PROG_INTLTOOL([0.11])
 
 AC_ISC_POSIX

@@ -20,7 +20,14 @@ $(server_in_files:.server.in.in=.server.in): $(server_in_files)
 	sed -e "s|\@BONOBODIR\@|$(bonobodir)|" $< > $@
 @INTLTOOL_SERVER_RULE@
                                                                                                              
+schemasdir = $(sysconfdir)/gconf/schemas
+schemas_in_files = gwget.schemas.in
+schemas_DATA =  $(schemas_in_files:.schemas.in=.schemas)
+@INTLTOOL_SCHEMAS_RULE@
 
+
+install-data-local:
+	GCONF_CONFIG_SOURCE=$(GCONF_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule gwget.schemas
 
 EXTRA_DIST = $(gwget_data_DATA) \
 	     $(server_in_files)
