@@ -15,10 +15,14 @@ INCLUDES =				\
  	-DGDK_PIXBUF_DISABLE_DEPRECATED	\
  	-DGNOME_DISABLE_DEPRECATED
 
-libgwgetextension_la_SOURCES =		\
- 	ephy-gwget.c			\
-	ephy-gwget-extension.c		\
- 	ephy-gwget-extension.h
+libgwgetextension_la_SOURCES =			\
+ 	ephy-gwget.c				\
+	ephy-gwget-extension.c			\
+ 	ephy-gwget-extension.h			\
+	$(top_builddir)/src/GNOME_Gwget-stubs.c	\
+	$(top_builddir)/src/GNOME_Gwget-common.c\
+	$(top_builddir)/src/GNOME_Gwget-skels.c	\
+	$(top_builddir)/src/GNOME_Gwget.h
 
 libgwgetextension_la_LDFLAGS = -module -avoid-version
 

@@ -22,11 +22,14 @@
 #endif
 
 #include "ephy-gwget-extension.h"
+#include "GNOME_Gwget.h"
 
 #include <epiphany/ephy-embed-single.h>
 #include <epiphany/ephy-embed-shell.h>
 
 #include <gmodule.h>
+
+#include <libbonobo.h>
 
 #define EPHY_GWGET_EXTENSION_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionPrivate))
 
@@ -43,16 +46,38 @@ handle_content_cb (EphyEmbedSingle *single,
 		   const char *uri,
 		   GObject *extension)
 {
-	char *command;
+	CORBA_Environment env;
+	GNOME_Gwget_Application server;
+	GNOME_Gwget_URIList *list;
+	gboolean retval = FALSE;
 
-	command = g_strdup_printf ("gwget %s", uri);
+	g_return_val_if_fail (uri != NULL, FALSE);
 
-	g_spawn_command_line_async (command, NULL);
+	CORBA_exception_init (&env);
+	server = bonobo_activation_activate_from_id
+			("OAFIID:GNOME_Gwget_Application", 0, NULL, &env);
+	if (BONOBO_EX (&env) || server == CORBA_OBJECT_NIL) return FALSE;
 
-	g_free (command);
+	list = GNOME_Gwget_URIList__alloc ();
+	if (!list) goto out;
 
-	/* we handled the url */
-	return TRUE;
+	list->_maximum = list->_length = 1;
+	list->_buffer = CORBA_sequence_GNOME_Gwget_URI_allocbuf (1);
+	list->_buffer[0] = CORBA_string_dup (uri);
+	
+	CORBA_sequence_set_release (list, CORBA_TRUE);
+
+	CORBA_exception_init (&env);
+	GNOME_Gwget_Application_openURLSList (server, list, &env);
+
+	retval = !BONOBO_EX (&env);
+
+	/* FIXME: do we need to CORBA_free the list? */
+out:
+	CORBA_exception_init (&env);
+	CORBA_Object_release (server, &env);
+
+	return retval;
 }
 
 static void
