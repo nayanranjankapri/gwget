@@ -536,9 +536,7 @@ on_popup_continue_activate(GtkWidget *widget, gpointer data)
 	
 	if (gwgetdata) {
 		gwget_data_start_download(gwgetdata);
-	} else {
-		printf("NULL\n");
-	}
+	} 
 }
 
 void 
@@ -561,7 +559,6 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
     		gwget_data_set_state (gwgetdata, DL_COMPLETED);
 			gtk_list_store_remove(GTK_LIST_STORE(model),&gwgetdata->file_list);
 			downloads=g_list_remove(downloads,gwgetdata);
-			printf("N: %d\n",g_list_length(downloads));
 			gwget_data_free(gwgetdata);
 			
 		}
@@ -614,7 +611,6 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 		gtk_tree_model_get_iter_root(model,&iter);
 		for (i=0;i<length;i++) {
 			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-			printf("URL:%s\n",url);
 			gwgetdata=g_object_get_data(G_OBJECT(model),url);
 			
 			if (gwgetdata->state!=DL_RETRIEVING) {
@@ -644,7 +640,6 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 		gtk_tree_model_get_iter_root(model,&iter);
 		for (i=0;i<length;i++) {
 			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-			printf("URL:%s\n",url);
 			gwgetdata=g_object_get_data(G_OBJECT(model),url);
 			/* If it's running we must stop it */
 			/* because the function that update the info will */
@@ -857,5 +852,27 @@ check_download_in_progress(void)
 		set_icon_downloading();
 	} else {
 		set_icon_idle();
+	}
+}
+
+void 
+start_first_waiting_download(void)
+{
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length,i;
+	gchar *url;
+
+	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+	gtk_tree_model_get_iter_root(model,&iter);
+	for (i=0;i<length;i++) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model),url);
+			
+		if (gwgetdata->state==DL_WAITING) {
+			gwget_data_start_download(gwgetdata);
+			return;
+		}
+	gtk_tree_model_iter_next(model,&iter);
 	}
 }

@@ -1,5 +1,21 @@
 2004-12-05 David Sedeño <david@alderia.com>
 
+	Patch from Julien to add a waiting state and set it when there are a
+	login incorrect in already dowloading to the same server. Fix bug
+	#156278.
+	* include/gwget_data.h: Add a waiting status. 
+	* include/utils.h: Added check_server_already_exists.
+	* include/main_window_cb.h: start_first_waiting_download added.
+	* src/gwget_data.c: check if a login fail due to max number of 
+	connexions (using check_server_already_exists), if this is the
+	case set the download state as WAITING. This fix bug #156278
+	* src/main_window_cb.c (start_first_waiting_download): When called,
+	start the first waiting download.
+	* src/wget-log.c (wget_log_process_line): Check if there are a login
+	incorrect and set the gwgetdata in waiting state.
+	
+2004-12-05 David Sedeño <david@alderia.com>
+
 	Patch from Julien: 
 	* src/main_window_cb.c (continue_all_downloads): don't try to continue
 	a completed download.

@@ -76,3 +76,47 @@ gboolean check_url_already_exists(gchar *checkurl)
 	return FALSE;
 }
 
+gboolean check_server_already_exists(gchar *checkurl)
+{
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length,i;
+	gchar *url,*filename, *ptr, *ptrb;
+
+	/* extract server name from url */
+	ptr = strchr (checkurl, ':');
+	if (ptr != NULL) {
+		ptr += 3;
+		ptrb = strchr (ptr, '/');
+		if (ptrb != NULL) {
+			checkurl = g_strndup (ptr, ptrb-ptr);
+		} else {
+			checkurl = g_strdup (ptr);
+		}
+	}
+
+	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+	gtk_tree_model_get_iter_root(model,&iter);
+	for (i=0;i<length;i++) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model),url);
+
+		ptr = strchr (url, ':');
+		if (ptr != NULL) {
+			ptr += 3;
+			ptrb = strchr (ptr, '/');
+			if (ptrb != NULL) {
+				url = g_strndup (ptr, ptrb-ptr);
+			} else {
+				url = g_strdup (ptr);
+			}
+		}
+
+		if (strcmp(url, checkurl)) {
+			return TRUE;
+		}
+		gtk_tree_model_iter_next(model,&iter);
+	}
+	return FALSE;
+}
+

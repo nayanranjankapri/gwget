@@ -23,6 +23,7 @@
 gint run_dialog(gchar *title, gchar *msg);
 gint run_dialog_information(gchar *title, gchar *msg);
 gboolean check_url_already_exists(gchar *checkurl);
+gboolean check_server_already_exists(gchar *checkurl);
 
 
 

@@ -199,9 +199,9 @@ gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 {
 	gchar *tooltip_message;
 	
-	
-	
 	switch(gwgetdata->state) {
+		case DL_WAITING: gwgetdata->state_str = g_strdup(_("Waiting"));
+				 break;
 		case DL_NOT_STARTED: gwgetdata->state_str = g_strdup(_("Not Started"));
 								break;
 		case DL_NOT_RUNNING: gwgetdata->state_str = g_strdup(_("Not Running"));
@@ -252,32 +252,36 @@ gwget_data_process_information (GwgetData *gwgetdata)
 		g_free (gwgetdata->line);
 		gwgetdata->line = NULL;
 
-        /* Set the appropriate state after stopping */
+        	/* Set the appropriate state after stopping */
 		if (gwgetdata->error) 
 			gwget_data_set_state (gwgetdata, DL_ERROR);
 		else if (WIFEXITED (status)) {
-            if (WEXITSTATUS (status) == 0) {
-                gwget_data_set_state (gwgetdata, DL_COMPLETED);
+            		if (WEXITSTATUS (status) == 0) {
+                		gwget_data_set_state (gwgetdata, DL_COMPLETED);
+				start_first_waiting_download();
 				if (gwget_pref.open_after_dl) {
 					gwget_data_exec(gwgetdata);
 				} 
-	    	} else if (WEXITSTATUS (status) == 255) {
-                /* Only reaches here if wget is not found */
-                gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
-                g_warning ("couldn't find program wget to exec\n");
-            } else
-                gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
+	    		} else if (WEXITSTATUS (status) == 255) {
+                		/* Only reaches here if wget is not found */
+                		gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
+                		g_warning ("couldn't find program wget to exec\n");
+            		} else {
+				if (gwgetdata->state!=DL_WAITING) {
+                			gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
+				}
+			}
 		} else {
 			gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
 		}
 		gwget_data_update_statistics (gwgetdata);
 
-        /* Decrease the number of current downloads */
-        if (num_of_download > 0)
-            num_of_download--;
+        	/* Decrease the number of current downloads */
+        	if (num_of_download > 0)
+            		num_of_download--;
 
-        /* All done this download can be started again */
-        gwgetdata->log_tag = -1;
+	        /* All done this download can be started again */
+        	gwgetdata->log_tag = -1;
 
 		return FALSE;
     }
@@ -546,6 +550,7 @@ void gwget_data_stop_download(GwgetData *data)
 			/* Set the appropriate state after stopping */
 			if (WIFEXITED (status) && (WEXITSTATUS (status) == 0)) {
 				gwget_data_set_state (data, DL_COMPLETED);
+				start_first_waiting_download();
 				if (gwget_pref.open_after_dl) {
 					gwget_data_exec(data);
 				}

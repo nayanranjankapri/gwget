@@ -79,7 +79,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 			strncmp (gwgetdata->line, "Connecting to ", 14) == 0 ||
 			strlen(gwgetdata->line) ==0)
 			break;
-	    else if (strncmp (gwgetdata->line, "socket: ", 8) == 0)
+		else if (strncmp (gwgetdata->line, "socket: ", 8) == 0)
 			show_error (gwgetdata, _ ("Socket error"));
 	    else if (strncmp (gwgetdata->line, "Connection to ", 14) == 0)
 			show_error (gwgetdata, _ ("Connection refused\n"));
@@ -124,11 +124,22 @@ wget_log_process_line (GwgetData *gwgetdata)
 			break;
 	    }
 
+		/* Incorrect login or FTP with limited concurrent downloads */
+		if (strstr (gwgetdata->line, "Login incorrect") != NULL) {
+			if (check_server_already_exists(gwgetdata->url)==TRUE) {
+				/* Login is correct but there is a limit in concurrents downloads */
+				gwget_data_set_state (gwgetdata, DL_WAITING);			
+			} else {
+				gwget_data_set_state (gwgetdata, DL_ERROR);
+			}
+			break;
+		}
+
 		/* Get the leght of file being downloaded */
 		p = strstr (gwgetdata->line, "Length: ");
 		if (p != NULL) {
 			p += 8;
-            /* Only set the total size of we don't have one yet. */
+            /* Only set the total size if we don't have one yet. */
             if (gwgetdata->total_size == 0) { 
             	gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
 			}
@@ -205,7 +216,6 @@ wget_log_process_line (GwgetData *gwgetdata)
 					}
 					gwgetdata->session_elapsed = 0;
 				}
-				
 			if (strstr (gwgetdata->line,"-- ") != NULL) {
 				gchar *tmp=NULL;
 				gint i,j;

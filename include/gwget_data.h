@@ -53,13 +53,14 @@ extern Preferences gwget_pref;
 
 typedef enum
 {
-    DL_NOT_STARTED,       /* We have not started the download of the file */
-    DL_NOT_RUNNING,       /* Wget is not running */
-    DL_NOT_CONNECTED,     /* Wget is trying to connect with remote host */
-    DL_CONNECTED,         /* Wget is connected with remote host */
-    DL_RETRIEVING,        /* Wget is retrieving the file */
-	DL_COMPLETED,         /* The downloaded is completed */
-	DL_ERROR			  /* Error in the download */
+	DL_NOT_STARTED,		/* We have not started the download of the file */
+	DL_NOT_RUNNING,		/* Wget is not running */
+	DL_NOT_CONNECTED,	/* Wget is trying to connect with remote host */
+	DL_CONNECTED,		/* Wget is connected with remote host */
+	DL_RETRIEVING,		/* Wget is retrieving the file */
+	DL_COMPLETED,         	/* The downloaded is completed */
+	DL_ERROR,		/* Error in the download */
+	DL_WAITING		/* Waiting for another try */
 } DlState;
 
 
