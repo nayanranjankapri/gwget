@@ -121,9 +121,29 @@ stop_all_downloads(void)
 		gwgetdata=g_object_get_data(G_OBJECT(model),url);
 			
 		if (gwget_data_run(gwgetdata)) {
-				kill(gwgetdata->wget_pid,SIGINT);
+				gwget_data_stop_download(gwgetdata);
 		}
 	}
+}
+
+void
+continue_all_downloads(void)
+{
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length,i;
+	gchar *url;
+	
+	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+	gtk_tree_model_get_iter_root(model,&iter);
+	for (i=0;i<length;i++) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model),url);
+			
+		if (!gwget_data_run(gwgetdata)) {
+				gwget_data_start_download(gwgetdata);
+		}
+ 	}
 }
 
 void 

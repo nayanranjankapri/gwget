@@ -1,3 +1,10 @@
+2004-09-22  Julien Cegarra <JulienC@psychologie-fr.org>
+
+	* main_window_cb.c: Add continue_all_downloads (Julien Cegarra)
+	* gwet.glade: Stop button now global and call stop_all_downloads,
+	preferences button removed, added a continue_all_downloads button
+	(Julien Cegarra)
+	  
 2004-09-21  David Sedeño <david@alderia.com>
 
 	* configure.in: Added mk to ALL_LINGUAS

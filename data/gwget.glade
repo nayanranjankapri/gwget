@@ -178,11 +178,11 @@
 	      <child>
 		<widget class="GtkToolButton" id="boton_pref">
 		  <property name="visible">True</property>
-		  <property name="stock_id">gtk-preferences</property>
+		  <property name="stock_id">gtk-refresh</property>
 		  <property name="visible_horizontal">True</property>
 		  <property name="visible_vertical">True</property>
 		  <property name="is_important">False</property>
-		  <signal name="clicked" handler="on_boton_pref_clicked" last_modification_time="Tue, 18 Mar 2003 00:19:14 GMT"/>
+		  <signal name="clicked" handler="continue_all_downloads" last_modification_time="Thu, 23 Sep 2004 07:05:28 GMT"/>
 		</widget>
 		<packing>
 		  <property name="expand">False</property>
@@ -197,7 +197,7 @@
 		  <property name="visible_horizontal">True</property>
 		  <property name="visible_vertical">True</property>
 		  <property name="is_important">False</property>
-		  <signal name="clicked" handler="on_popup_pause_button_clicked" last_modification_time="Sat, 31 May 2003 17:56:10 GMT"/>
+		  <signal name="clicked" handler="stop_all_downloads" last_modification_time="Thu, 23 Sep 2004 07:03:06 GMT"/>
 		</widget>
 		<packing>
 		  <property name="expand">False</property>
