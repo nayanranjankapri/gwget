@@ -176,7 +176,6 @@ wget_log_process_line (GwgetData *gwgetdata)
 				/* Get the leght of file being downloaded */
 				p = strstr (gwgetdata->line, "Length: ");
 				if (p != NULL) {
-					printf("DETECTADO Lenght!: %s\n",p);
 					p += 8;
 					gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
 					/* Get session start time and session file start size */
@@ -188,8 +187,6 @@ wget_log_process_line (GwgetData *gwgetdata)
 						gwgetdata->session_start_size = 0;
 					}
 					gwgetdata->session_elapsed = 0;
-					printf("DETECTADO Lenght!: %s\n",p);
-					
 				} else {
                 	/* We didn't get a length so, probably it's unspecified size
                    so get the start of download by trying to catch the
@@ -220,6 +217,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 				}
 				tmp[j]='\0';
 				gwget_data_set_filename_from_url(gwgetdata,tmp);
+				gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
 			}
 		}
 		break;
