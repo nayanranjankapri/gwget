@@ -26,6 +26,11 @@
 #include "main_window.h"
 #include "gwget-application-server.h"
 
+static const struct poptOption options[] = {
+	{"trayonly", '\0', POPT_ARG_NONE, &(gwget_pref.trayonly), 0, NULL, NULL},
+	{NULL, '\0', 0, NULL, 0} 
+};
+
 typedef struct {
 	int argc;
 	char **argv;
@@ -71,7 +76,7 @@ gwget_handle_automation_cmdline (GnomeProgram *program)
 	/* List of urls to download pased in command line */
 	GSList *data, *list;
 	gint i;
-	
+
 
 		
 	CORBA_exception_init (&env);
@@ -113,9 +118,23 @@ save_yourself_handler (GnomeClient *client, gint phase, GnomeSaveStyle save_styl
                        gint is_shutdown, GnomeInteractStyle interact_style,
                        gint is_fast, gpointer client_data)
 {
-	Args *args = (Args*)client_data;
-	int argc = (*args).argc;
-	char **argv = (*args).argv;
+	Args *args_original = (Args*)client_data;
+	int argc_original = (*args_original).argc;
+	char **argv_original = (*args_original).argv;
+
+	int argc;
+	char **argv; 
+
+	if (gwget_pref.trayonly) {
+		argc = argc_original;
+		argv = argv_original;
+	} else {
+		argc = argc_original + 2;
+		argv = g_malloc(sizeof(char*)*argc);
+		g_memmove(argv, argv_original, argc_original*sizeof(char*));
+		argv[argc-2] = "--trayonly";
+		argv[argc-1] = NULL;
+	}
 	
 	gnome_client_set_clone_command(client, argc, argv);
 	gnome_client_set_restart_command(client, argc, argv);
@@ -124,7 +143,8 @@ save_yourself_handler (GnomeClient *client, gint phase, GnomeSaveStyle save_styl
 }
 
 static void 
-gnome_session_join(int argc,char *argv[]) {
+gnome_session_join(int argc,char *argv[]) 
+{
 	Args *args = g_malloc(sizeof(Args));
 
 	(*args).argc = argc;
@@ -148,8 +168,11 @@ int main(int argc,char *argv[])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 	setlocale(LC_ALL, "");
-	
-	gwget = gnome_program_init("Gwget",VERSION,LIBGNOMEUI_MODULE,argc,argv,NULL);
+
+	gwget_pref.trayonly = FALSE;
+	gwget = gnome_program_init("Gwget", VERSION, LIBGNOMEUI_MODULE, argc, argv,
+			            GNOME_PARAM_POPT_TABLE,options,GNOME_PARAM_NONE);
+
 	gnome_session_join(argc,argv);		
 
 	/* check whether we are running already */
@@ -171,6 +194,6 @@ int main(int argc,char *argv[])
 	gwget_handle_automation_cmdline(gwget);
 	
 	gtk_main();
-		
+	
 	return (0);
 }

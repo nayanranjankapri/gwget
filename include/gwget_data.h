@@ -48,6 +48,7 @@ typedef struct
 	gboolean docked;
 	gboolean limit_speed;
 	gint max_speed;
+	gboolean trayonly;
 } Preferences;
 
 extern Preferences gwget_pref;

@@ -1,5 +1,17 @@
 2005-01-24  David Sedeño <david@alderia.com>
 
+	Patch from Ivan Yosifov for support --trayonly switch. See bug
+	#164699.
+	* src/main.c: Support for --trayicon switch in command line.
+	* src/main_window.c (main_window): Not show main window here. Passed
+	to systray_load.
+	* src/systray.c (systray_embedded): Show or Hide the main window if
+	gwget_pref.trayonly bool variable.
+	* include/gwget_data.h: Added trayonly bool var the gwget pref.
+	* include/systray.h: Passed the main window to systray_load.
+	
+2005-01-24  David Sedeño <david@alderia.com>
+
 	* src/main_window.c (gwget_get_defaults_from_gconf): Set network_mode
 	if nothing it's set in gconf.
 

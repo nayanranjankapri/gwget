@@ -21,7 +21,7 @@ static GdkPixbuf *icon_idle, *icon_downloading;
 static GtkWidget *image_icon;
 
 void 
-systray_load(void) 
+systray_load(void *windowToHide) 
 {
 	GtkWidget *eventbox;
 	
@@ -41,7 +41,7 @@ systray_load(void)
 	gtk_container_add(GTK_CONTAINER(tray_icon), eventbox);
 
 	gtk_widget_show_all(GTK_WIDGET(tray_icon));	
-	g_signal_connect(G_OBJECT(tray_icon), "embedded", G_CALLBACK(systray_embedded), NULL);
+	g_signal_connect(G_OBJECT(tray_icon), "embedded", G_CALLBACK(systray_embedded), windowToHide);
 	g_signal_connect(G_OBJECT(tray_icon), "destroy", G_CALLBACK(systray_destroyed), NULL);
 	g_signal_connect(G_OBJECT(eventbox), "button-press-event", G_CALLBACK(systray_clicked), NULL);
 	gtk_drag_dest_set(GTK_WIDGET(tray_icon), 
@@ -171,6 +171,10 @@ systray_generate_menu(GdkEventButton *event)
 static void 
 systray_embedded(GtkWidget *widget, gpointer data)
 {
+	if (gwget_pref.trayonly)
+		gtk_widget_hide(GTK_WIDGET(data));
+	else 
+		gtk_widget_show(GTK_WIDGET(data));
 	gwget_pref.docked = TRUE;
 }
 

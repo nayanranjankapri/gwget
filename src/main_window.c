@@ -72,7 +72,7 @@ main_window(void)
 	gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
                 
 	/* add the columns titles to the tree view */
-    add_columns (GTK_TREE_VIEW (treev));
+	add_columns (GTK_TREE_VIEW (treev));
 	
 	gconf_client = gconf_client_get_default();
 	gconf_client_add_dir (gconf_client, "/apps/gwget2", GCONF_CLIENT_PRELOAD_NONE,
@@ -113,15 +113,14 @@ main_window(void)
 	
 	/* Listen to changes to the key. */
 	gconf_client_notify_add (gconf_client,
-							"/desktop/gnome/interface/toolbar_style",
-				 			gwget_gconf_notify_toolbar,
-				 			NULL,
-				 			NULL,
-				 			NULL);
+				"/desktop/gnome/interface/toolbar_style",
+				gwget_gconf_notify_toolbar,
+				NULL,
+				NULL,
+				NULL);
 	
 	/* Show the toolbar ? */
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_toolbar")),gwget_pref.view_toolbar);
-	gtk_widget_show(window);
 	toolbar = glade_xml_get_widget(xml,"bonobotoolbar"); 
 	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
 	if (!gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(menu_item))) {
@@ -129,9 +128,9 @@ main_window(void)
 	} else {
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}
-	
-	systray_load();
-	
+
+	systray_load(window);
+
 	/* Create the model for the "save in" option in new download dialog */
 	save_in_model = (GtkTreeModel*)gtk_list_store_new (1, G_TYPE_STRING);
 	combo = glade_xml_get_widget (xml_new, "save_in_comboboxentry");
