@@ -29,7 +29,7 @@ run_dialog(gchar *title, gchar *msg)
 	gint response;
 	
 	dialog = glade_xml_get_widget(xml,"dialog1");
-	mark=g_strdup_printf("<span size=\"large\">%s</span>",title);
+	mark=g_strdup_printf("<span size=\"large\" weight=\"bold\">%s</span>",title);
 	gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml,"title_label")),mark);
 	gtk_label_set_text(GTK_LABEL(glade_xml_get_widget(xml,"msg_label")),msg);
 	

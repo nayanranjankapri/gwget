@@ -1,3 +1,9 @@
+2004-08-17  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: some UI fixes. 
+	* src/utils.c (run_dialog): Set title in bold.
+	Thanks to Pedro Villavicencio for both patches.
+
 2004-08-16  David Sedeño <david@alderia.com>
 
 	* data/preferences.glade: Change "No create directories" 
