@@ -1,62 +1,61 @@
-# Translation of Wget2.pot to Russian.
+# Translation of Wget.pot to Russian.
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # Pavlo Bohmat <bohm@ukr.net>, 2004.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: wget2-0.9\n"
+"Project-Id-Version: wget-0.13.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-12 20:41+0200\n"
-"PO-Revision-Date: 2004-02-19 12:53+0200\n"
+"POT-Creation-Date: 2004-07-21 20:01+0200\n"
+"PO-Revision-Date: 2004-07-15 20:20+0200\n"
 "Last-Translator: Pavlo Bohmat <bohm@ukr.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:231
-#, fuzzy
+#: src/main_window.c:228
 msgid "File Type"
-msgstr "Имя файла"
+msgstr "Тип файла"
 
-#: src/main_window.c:240
+#: src/main_window.c:237
 msgid "File Name"
 msgstr "Имя файла"
 
-#: src/main_window.c:250
+#: src/main_window.c:247
 msgid "State"
 msgstr "Состояние"
 
-#: src/main_window.c:259
+#: src/main_window.c:256
 msgid "Current Size"
 msgstr "Текущий размер"
 
-#: src/main_window.c:269
+#: src/main_window.c:266
 msgid "Total Size"
 msgstr "Общий размер"
 
-#: src/main_window.c:279 src/main_window.c:284
+#: src/main_window.c:276 src/main_window.c:281
 msgid "Percentage"
 msgstr "Процент"
 
-#: src/main_window.c:289
+#: src/main_window.c:286
 msgid "Elapsed Time"
 msgstr "Прошло времени"
 
-#: src/main_window.c:299
+#: src/main_window.c:296
 msgid "Remaining Time"
 msgstr "Осталось времени"
 
-#: src/main_window.c:309
+#: src/main_window.c:306
 msgid "Speed"
 msgstr "Скорость"
 
-#: src/main_window.c:539
+#: src/main_window.c:528
 msgid "Cancel current downloads?"
 msgstr "Отменить текущие закачки?"
 
-#: src/main_window.c:539
+#: src/main_window.c:528
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -65,9 +64,8 @@ msgstr ""
 "передачи?"
 
 #: src/main_window_cb.c:95
-#, fuzzy
 msgid "Error in download"
-msgstr "Новая закачка"
+msgstr "Ошибка закачки"
 
 #: src/main_window_cb.c:100
 msgid "Error opening file"
@@ -78,258 +76,292 @@ msgid "Couldn't open the file"
 msgstr "Невозможно открыть файл"
 
 #: src/main_window_cb.c:143
-#, fuzzy
 msgid "Download Manager for Gnome2."
-msgstr "Менеджер закачек для Гном2, использующий движок wget'а."
+msgstr "Менеджер закачек для Гном 2."
 
 #: src/main_window_cb.c:149
 msgid "translator_credits"
-msgstr "Павел и Алёна Богмат"
+msgstr "Павел Богмат"
 
 #: src/main_window_cb.c:161
-#, fuzzy
 msgid "Gwget"
-msgstr "Gwget2"
+msgstr "Gwget"
 
-#: src/main_window_cb.c:391 src/new_window.c:151
+#: src/main_window_cb.c:376 src/new_window.c:147
 msgid "Select Folder"
-msgstr ""
+msgstr "Выбрать папку"
 
-#: src/main_window_cb.c:448
+#: src/main_window_cb.c:433
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Действительно отменить текущую закачку? (Url: %s)"
 
-#: src/main_window_cb.c:449
+#: src/main_window_cb.c:434
 msgid "Cancel download?"
 msgstr "Отменить закачку?"
 
-#: src/main_window_cb.c:475
+#: src/main_window_cb.c:460
 msgid "Remove completed"
 msgstr "Удалить завершённые"
 
-#: src/main_window_cb.c:475
+#: src/main_window_cb.c:460
 msgid "Really remove completed downloads from the list?"
 msgstr "Действительно удалить завершённые закачки из списка?"
 
-#: src/main_window_cb.c:504
+#: src/main_window_cb.c:489
 msgid "Remove not running"
 msgstr "Удалить не запуская"
 
-#: src/main_window_cb.c:504
+#: src/main_window_cb.c:489
 msgid "Really remove not running downloads from the list?"
 msgstr "Действительно удалить не запущенные закачки из списка?"
 
-#: src/main_window_cb.c:534
+#: src/main_window_cb.c:519
 msgid "Remove all"
 msgstr "Удалить все"
 
-#: src/main_window_cb.c:534
+#: src/main_window_cb.c:519
 msgid "Really remove all downloads from the list?"
 msgstr "Действительно удалить все закачки из списка?"
 
 #: src/gwget_data.c:172
 msgid "stalled"
-msgstr ""
+msgstr "срыв потока"
 
-#: src/gwget_data.c:201
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "Не стартовать"
 
-#: src/gwget_data.c:203
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "Не запускать"
 
-#: src/gwget_data.c:205
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "Нет соединения"
 
-#: src/gwget_data.c:207
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Соединение"
 
-#: src/gwget_data.c:209
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "Закачка"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Завершена"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:216
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
+"Закачка завершена\n"
+"(%s)"
 
-#: src/gwget_data.c:222
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr "Ошибка"
 
-#: src/wget-log.c:83
+#: src/wget-log.c:92
 msgid "Socket error"
 msgstr "Ошибка сокета"
 
-#: src/wget-log.c:85
+#: src/wget-log.c:94
 msgid "Connection refused\n"
 msgstr "Соединение отклонено\n"
 
-#: src/wget-log.c:87
+#: src/wget-log.c:96
 msgid "No route to host"
 msgstr "Нет маршрута к узлу"
 
-#: src/wget-log.c:89
+#: src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Соединение отклонено при закачивании URL:\n"
 
-#: src/wget-log.c:91
+#: src/wget-log.c:100
 msgid "Host not found\n"
 msgstr "Узел не найден\n"
 
-#: src/wget-log.c:93
+#: src/wget-log.c:102
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Неподдерживаемый протокол - вам нужен wget >= 1.7 для https:\n"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:105
 msgid "Refusing to truncate existing file"
 msgstr "Отклонено для сокращения существующего файла"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:107
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: src/wget-log.c:118 src/wget-log.c:124
 msgid "File not found"
 msgstr "Файл не найден"
 
-#: src/wget-log.c:122
+#: src/wget-log.c:131
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Невозможно продолжить закачку, существующий локальный файл конфликтует с "
 "удалённым файлом"
 
-#: src/wget-log.c:169
+#: src/wget-log.c:178
 msgid "Can't write to target directory"
 msgstr "Невозможно записать в указанный каталог"
 
 #: src/custom-cell-renderer-progressbar.c:36
-#, fuzzy
 msgid "Unknown"
 msgstr "Неизвестная ошибка"
 
 #: src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
-msgstr ""
+msgstr "Неудачно"
 
 #: src/systray.c:133
-#, fuzzy
 msgid "Nothing"
-msgstr "Не запускать"
+msgstr "Ничего"
 
 #: src/systray.c:140
-#, fuzzy
 msgid "Downloads"
+msgstr "Закачки"
+
+msgid "Recurse into the Url ?"
+msgstr "Рекурсировать в Url ?"
+
+msgid ""
+"The url it's not a file. \n"
+" Do you like to recurse into the url ?\n"
+"Otherwise only the index file will be downloaded."
+msgstr ""
+"Url не является файлом. \n"
+" Хотите ли вы рекурсировать в url ?\n"
+"Иначе будет загружен только индексный файл."
+
+msgid "_New"
+msgstr "_Новая"
+
+msgid "Pause download"
+msgstr "Остановить закачку"
+
+msgid "Pause"
+msgstr "Остановить"
+
+msgid "Continue"
+msgstr "Продолжить"
+
+msgid "Remove completed downloads from list"
+msgstr "Удалить завершенные закачки из списка"
+
+msgid "Stop and delete downloaded file"
+msgstr "Остановить и удалить закачанный файл"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Question"
+msgstr "Вопрос"
+
+msgid "URL: "
+msgstr "URL: "
+
+msgid "*"
+msgstr "*"
+
+msgid "Save in:"
+msgstr "Сохранить в:"
+
+msgid "Select target directory"
+msgstr "Выбрать каталог"
+
+msgid "Preferences"
+msgstr "Настройки"
+
+msgid "    "
+msgstr "    "
+
+msgid "Save in: "
+msgstr "Сохранить в: "
+
+msgid "Default directory for downloaded data"
+msgstr "Каталог по умолчанию для данных закачек"
+
+msgid "Number of retries:"
+msgstr "Количество попыток:"
+
+msgid "Continue downloads on startup"
+msgstr "Продолжить закачки при запуске"
+
+msgid "General"
+msgstr "Общие"
+
+msgid "<span weight=\"bold\">Behaviour</span>"
+msgstr "<span weight=\"bold\">Поведение</span>"
+
+msgid "Download page requisites"
+msgstr "Закачивать страницу со всем необходимым"
+
+msgid "Do not create a hierarchy of directories when retrieving recursively"
+msgstr "Не создавать иерархию каталогов при рекурсивном закачивании"
+
+msgid "No create directories"
+msgstr "Не создавать каталоги"
+
+msgid "Maximum depth level: "
+msgstr "Максимальный уровень глубины: "
+
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Ссылки</span>"
+
+msgid "Follow relative links only"
+msgstr "Следовать только за связанными ссылками"
+
+msgid "Convert links"
+msgstr "Конвертировать ссылки"
+
+msgid "Recursivity"
+msgstr "Рекурсивность"
+
+msgid "_Toolbar"
+msgstr "_Панель инструментов"
+
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Список колонок</span>"
+
+msgid "Column List"
+msgstr "Список колонок"
+
+msgid "Download Speed"
+msgstr "Скорость закачки"
+
+msgid "Fite Type Image"
+msgstr "Пиктограмма соответствующего типа"
+
+msgid "Propierties"
+msgstr "Свойства"
+
+msgid "<span weight=\"bold\">Propierties</span>"
+msgstr "<span weight=\"bold\">Свойства</span>"
+
+msgid "Local File: "
+msgstr "Локальный файл: "
+
+msgid "Local Directory: "
+msgstr "Локальный каталог: "
+
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Новая закачка</span>"
+
+msgid "New Download"
 msgstr "Новая закачка"
 
-#~ msgid "Recurse into the Url ?"
-#~ msgstr "Рекурсировать в Url ?"
+msgid "Remove not running downloads from list"
+msgstr "Удалить не запущенные закачки из списка"
 
-#~ msgid ""
-#~ "The url it's not a file. \n"
-#~ " Do you like to recurse into the url ?\n"
-#~ "Otherwise only the index file will be downloaded."
-#~ msgstr ""
-#~ "Url не является файлом. \n"
-#~ " Хотите ли вы рекурсировать в url ?\n"
-#~ "Иначе будет загружен только индексный файл."
+msgid "Remove all downloads from list"
+msgstr "Удалить все закачки из списка"
 
-#~ msgid "_New"
-#~ msgstr "_Новая"
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Общие</span>"
 
-#~ msgid "Pause download"
-#~ msgstr "Остановить закачку"
-
-#~ msgid "Pause"
-#~ msgstr "Остановить"
-
-#~ msgid "Continue"
-#~ msgstr "Продолжить"
-
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "Удалить завершенные закачки из списка"
-
-#~ msgid "Stop and delete downloaded file"
-#~ msgstr "Остановить и удалить закачанный файл"
-
-#~ msgid "Cancel"
-#~ msgstr "Отмена"
-
-#~ msgid "Question"
-#~ msgstr "Вопрос"
-
-#~ msgid "URL: "
-#~ msgstr "URL: "
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Save in:"
-#~ msgstr "Сохранить в:"
-
-#~ msgid "Select target directory"
-#~ msgstr "Выбрать каталог"
-
-#~ msgid "Preferences"
-#~ msgstr "Настройки"
-
-#~ msgid "<span weight=\"bold\">General</span>"
-#~ msgstr "<span weight=\"bold\">Общие</span>"
-
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "Save in: "
-#~ msgstr "Сохранить в: "
-
-#~ msgid "Default directory for downloaded data"
-#~ msgstr "Каталог по умолчанию для данных закачек"
-
-#~ msgid "Number of retries: "
-#~ msgstr "Количество попыток: "
-
-#~ msgid "Continue downloads on startup?"
-#~ msgstr "Продолжить закачки при запуске?"
-
-#~ msgid "General"
-#~ msgstr "Общие"
-
-#~ msgid "<span weight=\"bold\">Behaviour </span>"
-#~ msgstr "<span weight=\"bold\">Поведение </span>"
-
-#~ msgid "Download page requisites"
-#~ msgstr "Закачивать страницу со всем необходимым"
-
-#~ msgid "Do not create a hierarchy of directories when retrieving recursively"
-#~ msgstr "Не создавать иерархию каталогов при рекурсивном закачивании"
-
-#~ msgid "No create directories"
-#~ msgstr "Не создавать каталоги"
-
-#~ msgid "Maximum depth level: "
-#~ msgstr "Максимальный уровень глубины: "
-
-#~ msgid "<span weight=\"bold\">Links</span>"
-#~ msgstr "<span weight=\"bold\">Ссылки</span>"
-
-#~ msgid "Follow relative links only"
-#~ msgstr "Следовать только за связанными ссылками"
-
-#~ msgid "Convert links"
-#~ msgstr "Конвертировать ссылки"
-
-#~ msgid "Recursivity"
-#~ msgstr "Рекурсивность"
-
-#~ msgid "_Toolbar"
-#~ msgstr "_Панель инструментов"
