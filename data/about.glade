@@ -19,7 +19,7 @@
   <property name="comments" translatable="yes">Gwget: Download Manager for Gnome 2</property>
   <property name="authors">David Sedeño Fernández
 &lt;david@alderia.com&gt;</property>
-  <property name="translator_credits" translatable="yes">translator_credits</property>
+  <property name="translator_credits" translatable="yes">translator-credits</property>
   <accessibility>
     <atkproperty name="AtkObject::accessible_name" translatable="yes">About Gwget</atkproperty>
   </accessibility>
