@@ -203,13 +203,11 @@ new_download(GwgetData* gwgetdata) {
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
 	
-	downloads = g_list_append(downloads,gwgetdata);
 	
 	mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
 	theme = gtk_icon_theme_get_default ();
 	icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
 									mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
-	g_free (mime);
 	gtk_icon_size_lookup (GTK_ICON_SIZE_MENU, &width, &height);
 	width *= 2;
 	height *= 2;

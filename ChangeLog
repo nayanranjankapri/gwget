@@ -1,3 +1,10 @@
+2004-09-08  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (new_download):
+	  Dont free mime var. This fix a crash.
+	  Dont add the download to the download list 
+	  (already added).
+
 2004-09-05  David Sedeño <david@alderia.com>
 
 	* src/main_window.c (on_treeview_drag_received): 
