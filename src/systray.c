@@ -32,8 +32,8 @@ systray_load(void)
 	tray_tooltip = gtk_tooltips_new();
 
 	/* icon list */
-	icon_idle = systray_load_icon("waiting32x32.xpm");
-	icon_downloading = systray_load_icon("download32x32.xpm");
+	icon_idle = systray_load_icon("gwget-off.png");
+	icon_downloading = systray_load_icon("gwget.png");
 	
 	set_icon_idle();
 

@@ -1,3 +1,13 @@
+2004-10-14 David Sedeño <david@alderia.com>
+
+	* src/systray.c: Use gwget.png and gwget-off.png for notification
+	icon.
+	* data/gwget.glade: Change label of Resume toolbar button. Added
+	tooltips.
+	* pixmaps/gwget-off.png: new file
+	* pixmaps/Makefile.am: install gwget-off.png
+
+
 2004-10-07  David Sedeño <david@alderia.com>
 
 	* configure.in: Try to autodetect Epiphany version (1.2, 1.4 or 1.6).
