@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-21 20:01+0200\n"
+"POT-Creation-Date: 2004-08-12 20:41+0200\n"
 "PO-Revision-Date: 2004-06-01 13:47+0300\n"
 "Last-Translator: SpoialÄƒ Cristianã Cristian <s_cristian@ezrs.com>\n"
 "Language-Team: Romanian\n"
@@ -19,48 +19,48 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:228
+#: src/main_window.c:231
 #, fuzzy
 msgid "File Type"
 msgstr "Numele fiºierului"
 
-#: src/main_window.c:237
+#: src/main_window.c:240
 msgid "File Name"
 msgstr "Numele fiºierului"
 
-#: src/main_window.c:247
+#: src/main_window.c:250
 msgid "State"
 msgstr "Stare"
 
-#: src/main_window.c:256
+#: src/main_window.c:259
 msgid "Current Size"
 msgstr "Mãrimea curentã"
 
-#: src/main_window.c:266
+#: src/main_window.c:269
 msgid "Total Size"
 msgstr "Mãrimea totalã"
 
-#: src/main_window.c:276 src/main_window.c:281
+#: src/main_window.c:279 src/main_window.c:284
 msgid "Percentage"
 msgstr "Procent"
 
-#: src/main_window.c:286
+#: src/main_window.c:289
 msgid "Elapsed Time"
 msgstr "Timpul trecut"
 
-#: src/main_window.c:296
+#: src/main_window.c:299
 msgid "Remaining Time"
 msgstr "Timpul Rãmas"
 
-#: src/main_window.c:306
+#: src/main_window.c:309
 msgid "Speed"
 msgstr "Vitezã"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid "Cancel current downloads?"
 msgstr "Anulaþi download-urile curente?"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -94,40 +94,40 @@ msgstr "credite pentru traducãtor"
 msgid "Gwget"
 msgstr "Gwget2"
 
-#: src/main_window_cb.c:376 src/new_window.c:147
+#: src/main_window_cb.c:391 src/new_window.c:151
 msgid "Select Folder"
 msgstr ""
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:448
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Chiar doriþi sã anulaþi download-ul? (Url: %s)"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:449
 msgid "Cancel download?"
 msgstr "Anulaþi download-ul ?"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Remove completed"
 msgstr "ªtergere terminatã"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Really remove completed downloads from the list?"
 msgstr "Chiar doriþi sã ºtergeþi download-urile terminate din listã?"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 msgid "Remove not running"
 msgstr "ªtergere care nu ruleazã"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 msgid "Really remove not running downloads from the list?"
 msgstr "Chiar doriþi sã ºtergeþi din listã download-urile care n-au rulat?"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 msgid "Remove all"
 msgstr "Scoateþi toate"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 msgid "Really remove all downloads from the list?"
 msgstr "Scoateþi toate download-urile din listã ?"
 
@@ -135,84 +135,84 @@ msgstr "Scoateþi toate download-urile din listã ?"
 msgid "stalled"
 msgstr "blocat"
 
-#: src/gwget_data.c:202
+#: src/gwget_data.c:201
 msgid "Not Started"
 msgstr "Nu a pornit"
 
-#: src/gwget_data.c:204
+#: src/gwget_data.c:203
 msgid "Not Running"
 msgstr "Nu ruleazã"
 
-#: src/gwget_data.c:206
+#: src/gwget_data.c:205
 msgid "Not Connected"
 msgstr "Nu s-a conectat"
 
-#: src/gwget_data.c:208
+#: src/gwget_data.c:207
 msgid "Connected"
 msgstr "Conectat"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:209
 msgid "Retrieving"
 msgstr "Se downloadeazã"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:211
 msgid "Completed"
 msgstr "Gata"
 
-#: src/gwget_data.c:216
+#: src/gwget_data.c:215
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:222
 msgid "Error"
 msgstr "Eroare"
 
-#: src/wget-log.c:92
+#: src/wget-log.c:83
 msgid "Socket error"
 msgstr "Eroare la socket"
 
-#: src/wget-log.c:94
+#: src/wget-log.c:85
 msgid "Connection refused\n"
 msgstr "Conexiune refuzatã\n"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:87
 msgid "No route to host"
 msgstr "Nu este rutã cu destinaþia"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
 msgstr "Conexiunea refuzatã în timp ce se downloada URL-ul:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:91
 msgid "Host not found\n"
 msgstr "Destinaþia nu s-a gãsit\n"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Protocol nesuportat-aveþi nevoie de wget>= 1.7 pentur https:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
 msgstr "Se refuzã trunchierea fiºierului existent"
 
-#: src/wget-log.c:107
+#: src/wget-log.c:98
 msgid "Unknown error"
 msgstr "Eroare necunoscutã"
 
-#: src/wget-log.c:118 src/wget-log.c:124
+#: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
 msgstr "Fiºierul nu s-a gãsit"
 
-#: src/wget-log.c:131
+#: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nu se poate continua download-ul, fiºierul de scris este în conflict cu "
 "fiºierul local"
 
-#: src/wget-log.c:178
+#: src/wget-log.c:169
 msgid "Can't write to target directory"
 msgstr "Nu se poate scrie în directorul specificat"
 

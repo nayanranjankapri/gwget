@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-21 20:01+0200\n"
+"POT-Creation-Date: 2004-08-12 20:41+0200\n"
 "PO-Revision-Date: 2004-04-22 21:31+0200\n"
 "Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
 "Language-Team: Basque <gnome@euskalgnu.org>\n"
@@ -17,48 +17,48 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:228
+#: src/main_window.c:231
 #, fuzzy
 msgid "File Type"
 msgstr "Fitxategiaren izena"
 
-#: src/main_window.c:237
+#: src/main_window.c:240
 msgid "File Name"
 msgstr "Fitxategiaren izena"
 
-#: src/main_window.c:247
+#: src/main_window.c:250
 msgid "State"
 msgstr "Egoera"
 
-#: src/main_window.c:256
+#: src/main_window.c:259
 msgid "Current Size"
 msgstr "Uneko tamainua"
 
-#: src/main_window.c:266
+#: src/main_window.c:269
 msgid "Total Size"
 msgstr "Tamainu totala"
 
-#: src/main_window.c:276 src/main_window.c:281
+#: src/main_window.c:279 src/main_window.c:284
 msgid "Percentage"
 msgstr "Portzentaia"
 
-#: src/main_window.c:286
+#: src/main_window.c:289
 msgid "Elapsed Time"
 msgstr "Igarotako denbora"
 
-#: src/main_window.c:296
+#: src/main_window.c:299
 msgid "Remaining Time"
 msgstr "Geratzen den denbora"
 
-#: src/main_window.c:306
+#: src/main_window.c:309
 msgid "Speed"
 msgstr "Abiadura"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid "Cancel current downloads?"
 msgstr "Utzi une hontan jaisten hari den guztia?"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -92,40 +92,40 @@ msgstr "Mikel Olasagasti <hey_neken@mundurat.net>"
 msgid "Gwget"
 msgstr "Gwget2"
 
-#: src/main_window_cb.c:376 src/new_window.c:147
+#: src/main_window_cb.c:391 src/new_window.c:151
 msgid "Select Folder"
 msgstr ""
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:448
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Benetan utzi jaisten ari zaren fitxategia? (URL %s)"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:449
 msgid "Cancel download?"
 msgstr "Utzi jaisten hari zaren fitxategia?"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Remove completed"
 msgstr "Kendu amaitutakoak"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Really remove completed downloads from the list?"
 msgstr "Benetan kendu zerrendatik amaitutakoak?"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 msgid "Remove not running"
 msgstr "Kendu abian ez daudenak"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 msgid "Really remove not running downloads from the list?"
 msgstr "Benetan kendu geldi dauden jaisteko fitxategiak zerrendatik?"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 msgid "Remove all"
 msgstr "Kendu guztiak"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 msgid "Really remove all downloads from the list?"
 msgstr "Benetan kendu zerrendatik guztiak?"
 
@@ -133,84 +133,84 @@ msgstr "Benetan kendu zerrendatik guztiak?"
 msgid "stalled"
 msgstr "trabatuta"
 
-#: src/gwget_data.c:202
+#: src/gwget_data.c:201
 msgid "Not Started"
 msgstr "Hasi gabe"
 
-#: src/gwget_data.c:204
+#: src/gwget_data.c:203
 msgid "Not Running"
 msgstr "Geldirik"
 
-#: src/gwget_data.c:206
+#: src/gwget_data.c:205
 msgid "Not Connected"
 msgstr "Konektatu gabe"
 
-#: src/gwget_data.c:208
+#: src/gwget_data.c:207
 msgid "Connected"
 msgstr "Konektatua"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:209
 msgid "Retrieving"
 msgstr "Jasotzen"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:211
 msgid "Completed"
 msgstr "Amaitua"
 
-#: src/gwget_data.c:216
+#: src/gwget_data.c:215
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:222
 msgid "Error"
 msgstr "Errorea"
 
-#: src/wget-log.c:92
+#: src/wget-log.c:83
 msgid "Socket error"
 msgstr "Socket errorea"
 
-#: src/wget-log.c:94
+#: src/wget-log.c:85
 msgid "Connection refused\n"
 msgstr "Konexioa ukatua\n"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:87
 msgid "No route to host"
 msgstr "Ez dago biderik hostalariarentzat"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
 msgstr "Konexioa ukatua URL jaisterakoan:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:91
 msgid "Host not found\n"
 msgstr "Ez da hostalaria aurkitu\n"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr ""
 "Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
 msgstr "Fitxategia mozteari uko egiten"
 
-#: src/wget-log.c:107
+#: src/wget-log.c:98
 msgid "Unknown error"
 msgstr "Errore ezezaguna"
 
-#: src/wget-log.c:118 src/wget-log.c:124
+#: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
 msgstr "Ez da fitxategia aurkitu"
 
-#: src/wget-log.c:131
+#: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Ezin jarraitu jaisten, fittxategi lokal batek urrunekoarekin konflikoak ditu"
 
-#: src/wget-log.c:178
+#: src/wget-log.c:169
 msgid "Can't write to target directory"
 msgstr "Ezin da objetibo direktorioan idatzi"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-21 20:01+0200\n"
+"POT-Creation-Date: 2004-08-12 20:41+0200\n"
 "PO-Revision-Date: 2003-09-30 17:22+0200\n"
 "Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -15,48 +15,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:228
+#: src/main_window.c:231
 #, fuzzy
 msgid "File Type"
 msgstr "ファイル名"
 
-#: src/main_window.c:237
+#: src/main_window.c:240
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/main_window.c:247
+#: src/main_window.c:250
 msgid "State"
 msgstr "状態"
 
-#: src/main_window.c:256
+#: src/main_window.c:259
 msgid "Current Size"
 msgstr "現在のサイズ"
 
-#: src/main_window.c:266
+#: src/main_window.c:269
 msgid "Total Size"
 msgstr "トータルサイズ"
 
-#: src/main_window.c:276 src/main_window.c:281
+#: src/main_window.c:279 src/main_window.c:284
 msgid "Percentage"
 msgstr "パーセンテージ"
 
-#: src/main_window.c:286
+#: src/main_window.c:289
 msgid "Elapsed Time"
 msgstr "経過時間"
 
-#: src/main_window.c:296
+#: src/main_window.c:299
 msgid "Remaining Time"
 msgstr "残り時間"
 
-#: src/main_window.c:306
+#: src/main_window.c:309
 msgid "Speed"
 msgstr "速度"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid "Cancel current downloads?"
 msgstr "現在のダウンロードをキャンセルしますか?"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -91,40 +91,40 @@ msgstr "中井 幸博 <nakai@gnome.gr.jp>"
 msgid "Gwget"
 msgstr "Gwget2"
 
-#: src/main_window_cb.c:376 src/new_window.c:147
+#: src/main_window_cb.c:391 src/new_window.c:151
 msgid "Select Folder"
 msgstr ""
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:448
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "現在のダウンロードを本当にキャンセルしますか? (URL: %s)"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:449
 msgid "Cancel download?"
 msgstr "ダウンロードをキャンセルしますか?"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Remove completed"
 msgstr "完了したものを削除"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Really remove completed downloads from the list?"
 msgstr "完了したダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 msgid "Remove not running"
 msgstr "実行していないものを削除"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 msgid "Really remove not running downloads from the list?"
 msgstr "実行していないダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 msgid "Remove all"
 msgstr "すべて削除"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 msgid "Really remove all downloads from the list?"
 msgstr "すべてのダウンロードを本当に一覧から削除しますか?"
 
@@ -132,84 +132,84 @@ msgstr "すべてのダウンロードを本当に一覧から削除しますか
 msgid "stalled"
 msgstr "停止"
 
-#: src/gwget_data.c:202
+#: src/gwget_data.c:201
 msgid "Not Started"
 msgstr "開始していません"
 
-#: src/gwget_data.c:204
+#: src/gwget_data.c:203
 msgid "Not Running"
 msgstr "実行していません"
 
-#: src/gwget_data.c:206
+#: src/gwget_data.c:205
 msgid "Not Connected"
 msgstr "接続していません"
 
-#: src/gwget_data.c:208
+#: src/gwget_data.c:207
 msgid "Connected"
 msgstr "接続しました"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:209
 msgid "Retrieving"
 msgstr "取得中です"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:211
 msgid "Completed"
 msgstr "完了しました"
 
-#: src/gwget_data.c:216
+#: src/gwget_data.c:215
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:222
 msgid "Error"
 msgstr "エラー"
 
-#: src/wget-log.c:92
+#: src/wget-log.c:83
 msgid "Socket error"
 msgstr "ソケットエラー"
 
-#: src/wget-log.c:94
+#: src/wget-log.c:85
 msgid "Connection refused\n"
 msgstr "接続が拒否されました\n"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:87
 msgid "No route to host"
 msgstr "ホストへの経路がありません"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
 msgstr "ダウンロード中に接続が拒否されました URL:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:91
 msgid "Host not found\n"
 msgstr "ホストが見つかりません\n"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "サポートされていないプロトコル - wget 1.7 以上が必要です https:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
 msgstr "存在するファイルの切り捨てを拒否しています"
 
-#: src/wget-log.c:107
+#: src/wget-log.c:98
 msgid "Unknown error"
 msgstr "不明なエラー"
 
-#: src/wget-log.c:118 src/wget-log.c:124
+#: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
 msgstr "ファイルが見つかりませんでした"
 
-#: src/wget-log.c:131
+#: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "ダウンロードを再開できません。ローカルにあるファイルがリモートファイルと衝突"
 "しています"
 
-#: src/wget-log.c:178
+#: src/wget-log.c:169
 msgid "Can't write to target directory"
 msgstr "ターゲットディレクトリに書き込めません"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-21 20:01+0200\n"
+"POT-Creation-Date: 2004-08-12 20:41+0200\n"
 "PO-Revision-Date: 2003-06-19 11:41+0100\n"
 "Last-Translator: Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -15,49 +15,49 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:228
+#: src/main_window.c:231
 #, fuzzy
 msgid "File Type"
 msgstr "Nazwa pliku"
 
-#: src/main_window.c:237
+#: src/main_window.c:240
 msgid "File Name"
 msgstr "Nazwa pliku"
 
-#: src/main_window.c:247
+#: src/main_window.c:250
 msgid "State"
 msgstr "Stan"
 
-#: src/main_window.c:256
+#: src/main_window.c:259
 msgid "Current Size"
 msgstr "Aktualny rozmiar"
 
-#: src/main_window.c:266
+#: src/main_window.c:269
 msgid "Total Size"
 msgstr "Cakowity rozmiar"
 
-#: src/main_window.c:276 src/main_window.c:281
+#: src/main_window.c:279 src/main_window.c:284
 msgid "Percentage"
 msgstr "Procentowo"
 
-#: src/main_window.c:286
+#: src/main_window.c:289
 msgid "Elapsed Time"
 msgstr "Czas do koca"
 
-#: src/main_window.c:296
+#: src/main_window.c:299
 msgid "Remaining Time"
 msgstr "Pozostay czas"
 
-#: src/main_window.c:306
+#: src/main_window.c:309
 msgid "Speed"
 msgstr ""
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 #, fuzzy
 msgid "Cancel current downloads?"
 msgstr "Czy anulowa bieťce pobieranie?"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -88,45 +88,45 @@ msgstr ""
 msgid "Gwget"
 msgstr ""
 
-#: src/main_window_cb.c:376 src/new_window.c:147
+#: src/main_window_cb.c:391 src/new_window.c:151
 msgid "Select Folder"
 msgstr ""
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:448
 #, fuzzy, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Czy chcesz anulowa aktualne pobieranie? (Url: %s)"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:449
 msgid "Cancel download?"
 msgstr "Czy anulowa pobieranie?"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 #, fuzzy
 msgid "Remove completed"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 #, fuzzy
 msgid "Really remove completed downloads from the list?"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 #, fuzzy
 msgid "Remove not running"
 msgstr "Nie dziaa"
 
-#: src/main_window_cb.c:489
+#: src/main_window_cb.c:504
 #, fuzzy
 msgid "Really remove not running downloads from the list?"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 #, fuzzy
 msgid "Remove all"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:519
+#: src/main_window_cb.c:534
 #, fuzzy
 msgid "Really remove all downloads from the list?"
 msgstr "Usu zakoczone pobierania"
@@ -135,88 +135,88 @@ msgstr "Usu zakoczone pobierania"
 msgid "stalled"
 msgstr ""
 
-#: src/gwget_data.c:202
+#: src/gwget_data.c:201
 msgid "Not Started"
 msgstr "Nie uruchomiono"
 
-#: src/gwget_data.c:204
+#: src/gwget_data.c:203
 msgid "Not Running"
 msgstr "Nie dziaa"
 
-#: src/gwget_data.c:206
+#: src/gwget_data.c:205
 msgid "Not Connected"
 msgstr "Nie poczono"
 
-#: src/gwget_data.c:208
+#: src/gwget_data.c:207
 msgid "Connected"
 msgstr "Poczono"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:209
 msgid "Retrieving"
 msgstr "Pobieranie"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:211
 msgid "Completed"
 msgstr "Zakoczone"
 
-#: src/gwget_data.c:216
+#: src/gwget_data.c:215
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:222
 msgid "Error"
 msgstr ""
 
-#: src/wget-log.c:92
+#: src/wget-log.c:83
 msgid "Socket error"
 msgstr ""
 
-#: src/wget-log.c:94
+#: src/wget-log.c:85
 #, fuzzy
 msgid "Connection refused\n"
 msgstr "Poczono"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:87
 #, fuzzy
 msgid "No route to host"
 msgstr "Brak cieťki routowania do komputera:\n"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
 msgstr "Poczenie odrzucone podczas pobierania adresu URL:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:91
 msgid "Host not found\n"
 msgstr ""
 
-#: src/wget-log.c:102
+#: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Nieobsugiwany protokó - do https potrzeba wget >= 1.7:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:96
 #, fuzzy
 msgid "Refusing to truncate existing file"
 msgstr "Odrzucanie obcicia istniejcego pliku\n"
 
-#: src/wget-log.c:107
+#: src/wget-log.c:98
 msgid "Unknown error"
 msgstr ""
 
-#: src/wget-log.c:118 src/wget-log.c:124
+#: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
 msgstr ""
 
-#: src/wget-log.c:131
+#: src/wget-log.c:122
 #, fuzzy
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nie moťna kontynuowa pobierania, istniejcy plik lokalny koliduje ze "
 "zdalnym:\n"
 
-#: src/wget-log.c:178
+#: src/wget-log.c:169
 #, fuzzy
 msgid "Can't write to target directory"
 msgstr "Nie moťna zapisa do katalogu docelowego:\n"
