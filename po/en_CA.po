@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-26 19:13-0400\n"
-"PO-Revision-Date: 2004-09-26 00:01-0400\n"
+"POT-Creation-Date: 2004-10-02 20:02-0400\n"
+"PO-Revision-Date: 2004-10-02 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -104,51 +104,55 @@ msgstr "Recursive"
 msgid "Recursive options"
 msgstr "Recursive options"
 
-#: data/gwget.glade.h:17 src/main_window_cb.c:558
+#: data/gwget.glade.h:17
+msgid "Remove"
+msgstr "Remove"
+
+#: data/gwget.glade.h:18 src/main_window_cb.c:558
 msgid "Remove all"
 msgstr "Remove all"
 
-#: data/gwget.glade.h:18
+#: data/gwget.glade.h:19
 msgid "Remove all downloads from list"
 msgstr "Remove all downloads from list"
 
-#: data/gwget.glade.h:19 src/main_window_cb.c:499
+#: data/gwget.glade.h:20 src/main_window_cb.c:499
 msgid "Remove completed"
 msgstr "Remove completed"
 
-#: data/gwget.glade.h:20
+#: data/gwget.glade.h:21
 msgid "Remove completed downloads from list"
 msgstr "Remove completed downloads from list"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:528
+#: data/gwget.glade.h:22 src/main_window_cb.c:528
 msgid "Remove inactive"
 msgstr "Remove inactive"
 
-#: data/gwget.glade.h:22
+#: data/gwget.glade.h:23
 msgid "Remove inactive downloads from list"
 msgstr "Remove inactive downloads from list"
 
-#: data/gwget.glade.h:23
+#: data/gwget.glade.h:24
 msgid "Stop and delete downloaded file"
 msgstr "Stop and delete downloaded file"
 
-#: data/gwget.glade.h:24
+#: data/gwget.glade.h:25
 msgid "The index file only"
 msgstr "The index file only"
 
-#: data/gwget.glade.h:25
+#: data/gwget.glade.h:26
 msgid "This site (mirror)"
 msgstr "This site (mirror)"
 
-#: data/gwget.glade.h:26
+#: data/gwget.glade.h:27
 msgid "Url:"
 msgstr "URL:"
 
-#: data/gwget.glade.h:27
+#: data/gwget.glade.h:28
 msgid "_New"
 msgstr "_New"
 
-#: data/gwget.glade.h:28
+#: data/gwget.glade.h:29
 msgid "_Toolbar"
 msgstr "_Toolbar"
 
