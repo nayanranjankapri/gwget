@@ -1,3 +1,8 @@
+2005-02-22  David Sedeño <david@alderia.com>
+
+	* src/systray.c: Present the main window. Thanks to Ivan for the
+	patch.
+
 2005-02-21  David Sedeño <david@alderia.com>
 
 	* src/systray.c: Add a new download item.

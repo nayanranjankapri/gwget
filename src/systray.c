@@ -198,7 +198,7 @@ pop_main_window()
 	if((gdk_window_get_state(GTK_WIDGET(window)->window) & 
 				 GDK_WINDOW_STATE_ICONIFIED) || 
 			         !GTK_WIDGET_VISIBLE(window)) 
-		gtk_widget_show(GTK_WIDGET(window));
+		gtk_window_present(GTK_WINDOW(window));
 	else 
 		gtk_widget_hide(GTK_WIDGET(window));
 }
