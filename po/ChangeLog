@@ -1,3 +1,7 @@
+2004-09-21  David Sedeño <david@alderia.com>
+
+	* mk.po: Added Macedonian translation
+
 2004-09-14  Vincent van Adrighem  <adrighem@gnome.org>
 
 	* nl.po: Translation updated by Tino Meinen.
@@ -83,4 +87,3 @@
 
 	* gwget2.pot: Removed
 	* gwget.pot: Added
-
