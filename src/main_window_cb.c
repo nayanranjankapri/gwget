@@ -160,46 +160,32 @@ on_quit1_activate(GtkWidget *widget, gpointer data)
 void 
 on_about1_activate(GtkWidget *widget, gpointer data)
 {
-	static GtkWidget *about = NULL;
 	GdkPixbuf *pixbuf = NULL;
 	gchar *logo_file;
-	gchar *copy_text = "Copyright © 2004 David Sedeño Fernández";
-	gchar *about_text = _("Download Manager for GNOME.");
-	gchar *authors[] = { 
+
+	static const gchar *authors[] = { 
 			"David Sedeño Fernández <david@alderia.com>",
 			"Julien Cegarra <julienc@psychologie-fr.org>",
 			NULL
 	};
-
-	gchar *translator_credits = _("translator-credits");
-
-	if (about != NULL ) 
-	{
-		gdk_window_show (about->window);
-		gdk_window_raise (about->window);
-		return;
-	}
-
+		
 	logo_file=g_strdup_printf("%s/%s",DATADIR,"gwget-large.png");
 	pixbuf = gdk_pixbuf_new_from_file (logo_file, NULL);
+	g_free (logo_file);
 
-	about = gnome_about_new (_("Gwget"), VERSION,
-							copy_text,
-							about_text,
-							(const char **)authors,
-							(const char **)NULL,
-							(const char *)translator_credits,
-							pixbuf);
+	gtk_show_about_dialog (NULL,
+			       "name", _("Gwget"), 
+			       "version", VERSION,
+			       "copyright", "Copyright © 2004 David Sedeño Fernández",
+			       "comments", _("Download Manager for GNOME."),
+			       "authors", authors,
+			       "translator-credits", _("translator-credits"),
+			       "logo", pixbuf,
+			       NULL);
 
 	if (pixbuf != NULL) {
 		g_object_unref (pixbuf);
 	}
-	
-	g_signal_connect (G_OBJECT (about), "destroy", 
-						G_CALLBACK (gtk_widget_destroyed), &about);
-	                                                                                                                             
-	gtk_widget_show (about);
-
 }
 
 

@@ -1,3 +1,8 @@
+2005-03-20  Pedro Villavicencio Garrido  <pvillavi@gnome.org>
+
+	* src/main_window_cb.c (on_about1_activate): use GtkAboutDialog instead
+	of deprecated GnomeAbout. fix a little memory leak.
+
 2005-03-19  David Sedeño <david@alderia.com>
 
 	* src/main_window.c: include gstdio.h. Declare static
