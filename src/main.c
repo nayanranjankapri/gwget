@@ -21,10 +21,15 @@
 #include <gconf/gconf-client.h>
 #include <locale.h>
 #include <libbonobo.h>
+#include <libgnomeui/libgnomeui.h>
 #include "main_window_cb.h"
 #include "main_window.h"
 #include "gwget-application-server.h"
 
+typedef struct {
+	int argc;
+	char **argv;
+} Args;
 
 BonoboObject *gwget_app_server = NULL;
 
@@ -102,9 +107,40 @@ gwget_handle_automation_cmdline (GnomeProgram *program)
 	}	
 }
 
+
+static gint
+save_yourself_handler (GnomeClient *client, gint phase, GnomeSaveStyle save_style,
+                       gint is_shutdown, GnomeInteractStyle interact_style,
+                       gint is_fast, gpointer client_data)
+{
+	Args *args = (Args*)client_data;
+	int argc = (*args).argc;
+	char **argv = (*args).argv;
+	
+	gnome_client_set_clone_command(client, argc, argv);
+	gnome_client_set_restart_command(client, argc, argv);
+
+	return TRUE;
+}
+
+static void 
+gnome_session_join(int argc,char *argv[]) {
+	Args *args = g_malloc(sizeof(Args));
+
+	(*args).argc = argc;
+	(*args).argv = argv;
+	
+	GnomeClient* client = gnome_master_client();
+		
+	gnome_client_set_restart_style(client,GNOME_RESTART_IF_RUNNING);	
+	gtk_signal_connect(GTK_OBJECT(client),"save_yourself",
+                           GTK_SIGNAL_FUNC(save_yourself_handler),args);
+        gtk_signal_connect(GTK_OBJECT(client),"die",
+                           GTK_SIGNAL_FUNC(gtk_main_quit),NULL);
+}
+
 int main(int argc,char *argv[])
 {
-	
 	GnomeProgram *gwget;
 	CORBA_Object factory;
 	
@@ -114,6 +150,7 @@ int main(int argc,char *argv[])
 	setlocale(LC_ALL, "");
 	
 	gwget = gnome_program_init("Gwget",VERSION,LIBGNOMEUI_MODULE,argc,argv,NULL);
+	gnome_session_join(argc,argv);		
 
 	/* check whether we are running already */
 	factory = bonobo_activation_activate_from_id
