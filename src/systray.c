@@ -5,6 +5,7 @@
 #include "eggtrayicon.h"
 #include "gwget_data.h"
 #include "systray.h"
+#include "main_window_cb.h"
 
 static GtkWidget *systray_set_image(void);
 static GdkPixbuf *systray_pixbuf_new_from_file(const gchar *filename);
@@ -12,6 +13,8 @@ static void systray_embedded(GtkWidget *widget, gpointer data);
 static void systray_destroyed(GtkWidget *widget, gpointer data);
 static void systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data);
 static gboolean systray_generate_menu(GdkEventButton *event);
+static void systray_add_download(gpointer data1, gpointer data2);
+
 
 void 
 systray_load(void) 
@@ -104,32 +107,50 @@ systray_pixbuf_new_from_file(const gchar *filename)
 static gboolean 
 systray_generate_menu(GdkEventButton *event)
 {
-	GtkWidget *menu = NULL;
+	GtkWidget *systray_menu;
+	GtkWidget *downloads_menu;
 	GtkWidget *item = NULL;
-
+	
 	if(event == NULL) {
 		g_warning("systray_generate_menu: gdk event was NULL");
 		return FALSE;
 	}
 	
-	menu = gtk_menu_new();
+	systray_menu = gtk_menu_new();
+		
+	downloads_menu = gtk_menu_new();
+	
+	if (g_list_length(downloads) == 0) {
+		item = gtk_menu_item_new_with_label(_("Nothing"));
+		gtk_widget_set_sensitive(item,FALSE);
+		gtk_menu_shell_append(GTK_MENU_SHELL(downloads_menu),item);
+	} else {
+		g_list_foreach(downloads,systray_add_download,downloads_menu);
+	}
+	
+	item = gtk_menu_item_new_with_label(_("Downloads"));
+	gtk_menu_item_set_submenu(GTK_MENU_ITEM(item),downloads_menu);
+	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu),item);
 	
 	item = gtk_image_menu_item_new_from_stock(GTK_STOCK_PREFERENCES, NULL);
-	gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
+	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu), item);
+	gtk_signal_connect (GTK_OBJECT (item), "activate", 
+			    GTK_SIGNAL_FUNC(on_boton_pref_clicked), 
+			    NULL);
 	
 	item = gtk_separator_menu_item_new();
-	gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
+	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu), item);
 	item = gtk_image_menu_item_new_from_stock(GTK_STOCK_QUIT, NULL);
-	gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
+	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu), item);
 	gtk_signal_connect (GTK_OBJECT (item), "activate", 
 			    GTK_SIGNAL_FUNC(gwget_quit), 
 			    NULL);
 	/* show */
-	gtk_widget_show_all(GTK_WIDGET(menu));
-	gtk_menu_popup(GTK_MENU(menu), NULL, NULL, NULL, NULL, event->button, event->time);
+	gtk_widget_show_all(GTK_WIDGET(systray_menu));
+	gtk_menu_popup(GTK_MENU(systray_menu), NULL, NULL, NULL, NULL, event->button, event->time);
 
 	/* clean up */
-	gtk_object_sink(GTK_OBJECT(menu));
+	/* gtk_object_sink(GTK_OBJECT(menu)); */
 
 	return TRUE;
 
@@ -140,13 +161,12 @@ static void
 systray_embedded(GtkWidget *widget, gpointer data)
 {
 	gwget_pref.docked = TRUE;
-	g_message("docket embedded");
 }
 
 static void 
 systray_destroyed(GtkWidget *widget, gpointer data)
 {
-	g_message("docket destroyed");
+	
 }
 
 static void 
@@ -162,4 +182,18 @@ systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data)
 		window = glade_xml_get_widget(xml,"main_window");
 		gtk_widget_show(GTK_WIDGET(window));
 	}
+}
+
+static void
+systray_add_download(gpointer data1,gpointer data2)
+{
+	GwgetData *gwgetdata = data1;
+	GtkWidget *menu = data2;
+	GtkWidget *item;
+	gchar *title;
+	
+	title = g_strdup_printf("%s\n(%s)",gwgetdata->url,gwgetdata->state_str);
+	item = gtk_menu_item_new_with_label(title);
+	gtk_menu_shell_append(GTK_MENU_SHELL(menu),item);
+	
 }

@@ -196,37 +196,38 @@ gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 	gchar *state;
 	gchar *tooltip_message;
 	
-	state=g_new(char,20);
+	
 	
 	switch(gwgetdata->state) {
-		case DL_NOT_STARTED: strcpy(state,_("Not Started"));
+		case DL_NOT_STARTED: gwgetdata->state_str = g_strdup(_("Not Started"));
 								break;
-		case DL_NOT_RUNNING: strcpy(state,_("Not Running"));
+		case DL_NOT_RUNNING: gwgetdata->state_str = g_strdup(_("Not Running"));
 								break;
-		case DL_NOT_CONNECTED: strcpy(state,_("Not Connected"));
+		case DL_NOT_CONNECTED: gwgetdata->state_str = g_strdup(_("Not Connected"));
 								break;
-		case DL_CONNECTED: strcpy(state,_("Connected"));
+		case DL_CONNECTED: gwgetdata->state_str = g_strdup(_("Connected"));
 								break;
-		case DL_RETRIEVING: strcpy(state,_("Retrieving"));
+		case DL_RETRIEVING: gwgetdata->state_str = g_strdup(_("Retrieving"));
 								break;
-		case DL_COMPLETED: strcpy(state,_("Completed"));
+		case DL_COMPLETED: gwgetdata->state_str=g_strdup(_("Completed"));
 				   gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 							      PERCENTAGE_COLUMN,100,-1);
 				   if (gwget_pref.docked) {
 					   tooltip_message=g_strdup_printf(_("Download Completed\n(%s)"), 
 							   gwgetdata->url);
 					   gtk_tooltips_set_tip (GTK_TOOLTIPS(tray_tooltip), GTK_WIDGET(tray_icon),tooltip_message,NULL);
+					   egg_tray_icon_send_message(tray_icon,100000,tooltip_message,strlen(tooltip_message));
 				   }
 					   
 				   break;
-		case DL_ERROR: 	state = g_strdup_printf("%s: %s",_("Error"),gwgetdata->error_msg);
+		case DL_ERROR: 	gwgetdata->state_str = g_strdup_printf("%s: %s",_("Error"),gwgetdata->error_msg);
 				break;
 	}
 	
 	
 	
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
-						STATE_COLUMN,state,
+						STATE_COLUMN,gwgetdata->state_str,
 						-1);
 }
 

@@ -1,3 +1,21 @@
+2004-07-03  David Sedeño <david@alderia.com>
+
+	* include/main_window.h: downloads Glist
+	* src/main_window_cb.c (on_about1_activate): 
+	  - fix logo location 
+	  - removed documenters var.
+	  (all):
+	  - Use gwget2 dir instead of gwget in GConf
+	* src/main_window.c:
+	  - Use gwget2 dir instead of gwget in GConf
+	  - Include utils.h
+	* src/systray.c: Added download submenu
+	* include/gwgetdata.h: Added state_str to gwgetdata struct
+	* src/gwgetdata.c: Set the state_str
+	* po/gwget.pot: udpated
+	* po/es.po: Updated
+	* data/newdonwload.glade: window icon
+
 2004-06-25  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: Added tray_tooltip var.

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"POT-Creation-Date: 2004-07-03 13:04+0200\n"
 "PO-Revision-Date: 2003-09-30 17:22+0200\n"
 "Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -15,58 +15,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:223
+#: src/main_window.c:226
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/main_window.c:233
+#: src/main_window.c:236
 msgid "State"
 msgstr "状態"
 
-#: src/main_window.c:242
+#: src/main_window.c:245
 msgid "Current Size"
 msgstr "現在のサイズ"
 
-#: src/main_window.c:252
+#: src/main_window.c:255
 msgid "Total Size"
 msgstr "トータルサイズ"
 
-#. column = gtk_tree_view_column_new();
-#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
-#: src/main_window.c:270 src/main_window.c:279
+#: src/main_window.c:265 src/main_window.c:270
 msgid "Percentage"
 msgstr "パーセンテージ"
 
-#: src/main_window.c:296
+#: src/main_window.c:275
 msgid "Elapsed Time"
 msgstr "経過時間"
 
-#: src/main_window.c:328
+#: src/main_window.c:285
 msgid "Remaining Time"
 msgstr "残り時間"
 
-#: src/main_window.c:338
+#: src/main_window.c:295
 msgid "Speed"
 msgstr "速度"
 
-#: src/main_window_cb.c:108
-#, fuzzy
-msgid "Error in download"
-msgstr "新規ダウンロード"
-
-#: src/main_window_cb.c:114
-msgid "Error opening file"
-msgstr ""
-
-#: src/main_window_cb.c:114
-msgid "Couldn't open the file"
-msgstr ""
-
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 msgid "Cancel current downloads?"
 msgstr "現在のダウンロードをキャンセルしますか?"
 
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -74,126 +59,147 @@ msgstr ""
 "一つ以上のダウンロードが残っています。実行中の転送を本当にすべてキャンセルし"
 "ますか?"
 
-#: src/main_window_cb.c:247
+#: src/main_window_cb.c:95
+#, fuzzy
+msgid "Error in download"
+msgstr "新規ダウンロード"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr ""
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr ""
+
+#: src/main_window_cb.c:143
 msgid "A download manager for gnome2 using wget as backend."
 msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャ。"
 
-#: src/main_window_cb.c:258
+#: src/main_window_cb.c:149
 msgid "translator_credits"
 msgstr "中井 幸博 <nakai@gnome.gr.jp>"
 
-#: src/main_window_cb.c:270
-msgid "Gwget2"
+#: src/main_window_cb.c:161
+#, fuzzy
+msgid "Gwget"
 msgstr "Gwget2"
 
-#: src/main_window_cb.c:523
+#: src/main_window_cb.c:407
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "現在のダウンロードを本当にキャンセルしますか? (URL: %s)"
 
-#: src/main_window_cb.c:524
+#: src/main_window_cb.c:408
 msgid "Cancel download?"
 msgstr "ダウンロードをキャンセルしますか?"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 msgid "Remove completed"
 msgstr "完了したものを削除"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 msgid "Really remove completed downloads from the list?"
 msgstr "完了したダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 msgid "Remove not running"
 msgstr "実行していないものを削除"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 msgid "Really remove not running downloads from the list?"
 msgstr "実行していないダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 msgid "Remove all"
 msgstr "すべて削除"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 msgid "Really remove all downloads from the list?"
 msgstr "すべてのダウンロードを本当に一覧から削除しますか?"
 
-#: src/gwget_data.c:180
+#: src/gwget_data.c:172
 msgid "stalled"
 msgstr "停止"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "開始していません"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "実行していません"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "接続していません"
 
-#: src/gwget_data.c:217
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "接続しました"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "取得中です"
 
-#: src/gwget_data.c:221
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "完了しました"
 
-#: src/gwget_data.c:225
+#: src/gwget_data.c:216
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr "エラー"
 
-#: src/wget-log.c:93
+#: src/wget-log.c:92
 msgid "Socket error"
 msgstr "ソケットエラー"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:94
 msgid "Connection refused\n"
 msgstr "接続が拒否されました\n"
 
-#: src/wget-log.c:99
+#: src/wget-log.c:96
 msgid "No route to host"
 msgstr "ホストへの経路がありません"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "ダウンロード中に接続が拒否されました URL:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:100
 msgid "Host not found\n"
 msgstr "ホストが見つかりません\n"
 
-#: src/wget-log.c:108
+#: src/wget-log.c:102
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "サポートされていないプロトコル - wget 1.7 以上が必要です https:\n"
 
-#: src/wget-log.c:112
+#: src/wget-log.c:105
 msgid "Refusing to truncate existing file"
 msgstr "存在するファイルの切り捨てを拒否しています"
 
-#: src/wget-log.c:115
+#: src/wget-log.c:107
 msgid "Unknown error"
 msgstr "不明なエラー"
 
-#: src/wget-log.c:127 src/wget-log.c:135
+#: src/wget-log.c:118 src/wget-log.c:124
 msgid "File not found"
 msgstr "ファイルが見つかりませんでした"
 
-#: src/wget-log.c:142
+#: src/wget-log.c:131
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "ダウンロードを再開できません。ローカルにあるファイルがリモートファイルと衝突"
 "しています"
 
-#: src/wget-log.c:190
+#: src/wget-log.c:178
 msgid "Can't write to target directory"
 msgstr "ターゲットディレクトリに書き込めません"
 
@@ -206,6 +212,16 @@ msgstr "不明なエラー"
 #, fuzzy
 msgid "Failed"
 msgstr "停止"
+
+#: src/systray.c:124
+#, fuzzy
+msgid "Nothing"
+msgstr "実行していません"
+
+#: src/systray.c:131
+#, fuzzy
+msgid "Downloads"
+msgstr "新規ダウンロード"
 
 #~ msgid "_New"
 #~ msgstr "新規(_N)"
@@ -230,9 +246,6 @@ msgstr "停止"
 
 #~ msgid "Question"
 #~ msgstr "質問"
-
-#~ msgid "New Download"
-#~ msgstr "新規ダウンロード"
 
 #~ msgid "URL: "
 #~ msgstr "URL: "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget2-0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"POT-Creation-Date: 2004-07-03 13:04+0200\n"
 "PO-Revision-Date: 2004-02-19 12:53+0200\n"
 "Last-Translator: Pavlo Bohmat <bohm@ukr.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -15,58 +15,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:223
+#: src/main_window.c:226
 msgid "File Name"
 msgstr "Имя файла"
 
-#: src/main_window.c:233
+#: src/main_window.c:236
 msgid "State"
 msgstr "Состояние"
 
-#: src/main_window.c:242
+#: src/main_window.c:245
 msgid "Current Size"
 msgstr "Текущий размер"
 
-#: src/main_window.c:252
+#: src/main_window.c:255
 msgid "Total Size"
 msgstr "Общий размер"
 
-#. column = gtk_tree_view_column_new();
-#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
-#: src/main_window.c:270 src/main_window.c:279
+#: src/main_window.c:265 src/main_window.c:270
 msgid "Percentage"
 msgstr "Процент"
 
-#: src/main_window.c:296
+#: src/main_window.c:275
 msgid "Elapsed Time"
 msgstr "Прошло времени"
 
-#: src/main_window.c:328
+#: src/main_window.c:285
 msgid "Remaining Time"
 msgstr "Осталось времени"
 
-#: src/main_window.c:338
+#: src/main_window.c:295
 msgid "Speed"
 msgstr "Скорость"
 
-#: src/main_window_cb.c:108
-#, fuzzy
-msgid "Error in download"
-msgstr "Новая закачка"
-
-#: src/main_window_cb.c:114
-msgid "Error opening file"
-msgstr "Ошибка открытия файла"
-
-#: src/main_window_cb.c:114
-msgid "Couldn't open the file"
-msgstr "Невозможно открыть файл"
-
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 msgid "Cancel current downloads?"
 msgstr "Отменить текущие закачки?"
 
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -74,126 +59,147 @@ msgstr ""
 "Осталась, по крайней мере, одна активная закачка. Отменить все запущенные "
 "передачи?"
 
-#: src/main_window_cb.c:247
+#: src/main_window_cb.c:95
+#, fuzzy
+msgid "Error in download"
+msgstr "Новая закачка"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr "Ошибка открытия файла"
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr "Невозможно открыть файл"
+
+#: src/main_window_cb.c:143
 msgid "A download manager for gnome2 using wget as backend."
 msgstr "Менеджер закачек для Гном2, использующий движок wget'а."
 
-#: src/main_window_cb.c:258
+#: src/main_window_cb.c:149
 msgid "translator_credits"
 msgstr "Павел и Алёна Богмат"
 
-#: src/main_window_cb.c:270
-msgid "Gwget2"
+#: src/main_window_cb.c:161
+#, fuzzy
+msgid "Gwget"
 msgstr "Gwget2"
 
-#: src/main_window_cb.c:523
+#: src/main_window_cb.c:407
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Действительно отменить текущую закачку? (Url: %s)"
 
-#: src/main_window_cb.c:524
+#: src/main_window_cb.c:408
 msgid "Cancel download?"
 msgstr "Отменить закачку?"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 msgid "Remove completed"
 msgstr "Удалить завершённые"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 msgid "Really remove completed downloads from the list?"
 msgstr "Действительно удалить завершённые закачки из списка?"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 msgid "Remove not running"
 msgstr "Удалить не запуская"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 msgid "Really remove not running downloads from the list?"
 msgstr "Действительно удалить не запущенные закачки из списка?"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 msgid "Remove all"
 msgstr "Удалить все"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 msgid "Really remove all downloads from the list?"
 msgstr "Действительно удалить все закачки из списка?"
 
-#: src/gwget_data.c:180
+#: src/gwget_data.c:172
 msgid "stalled"
 msgstr ""
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "Не стартовать"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "Не запускать"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "Нет соединения"
 
-#: src/gwget_data.c:217
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Соединение"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "Закачка"
 
-#: src/gwget_data.c:221
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Завершена"
 
-#: src/gwget_data.c:225
+#: src/gwget_data.c:216
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr "Ошибка"
 
-#: src/wget-log.c:93
+#: src/wget-log.c:92
 msgid "Socket error"
 msgstr "Ошибка сокета"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:94
 msgid "Connection refused\n"
 msgstr "Соединение отклонено\n"
 
-#: src/wget-log.c:99
+#: src/wget-log.c:96
 msgid "No route to host"
 msgstr "Нет маршрута к узлу"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Соединение отклонено при закачивании URL:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:100
 msgid "Host not found\n"
 msgstr "Узел не найден\n"
 
-#: src/wget-log.c:108
+#: src/wget-log.c:102
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Неподдерживаемый протокол - вам нужен wget >= 1.7 для https:\n"
 
-#: src/wget-log.c:112
+#: src/wget-log.c:105
 msgid "Refusing to truncate existing file"
 msgstr "Отклонено для сокращения существующего файла"
 
-#: src/wget-log.c:115
+#: src/wget-log.c:107
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
-#: src/wget-log.c:127 src/wget-log.c:135
+#: src/wget-log.c:118 src/wget-log.c:124
 msgid "File not found"
 msgstr "Файл не найден"
 
-#: src/wget-log.c:142
+#: src/wget-log.c:131
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Невозможно продолжить закачку, существующий локальный файл конфликтует с "
 "удалённым файлом"
 
-#: src/wget-log.c:190
+#: src/wget-log.c:178
 msgid "Can't write to target directory"
 msgstr "Невозможно записать в указанный каталог"
 
@@ -205,6 +211,16 @@ msgstr "Неизвестная ошибка"
 #: src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
 msgstr ""
+
+#: src/systray.c:124
+#, fuzzy
+msgid "Nothing"
+msgstr "Не запускать"
+
+#: src/systray.c:131
+#, fuzzy
+msgid "Downloads"
+msgstr "Новая закачка"
 
 #~ msgid "Recurse into the Url ?"
 #~ msgstr "Рекурсировать в Url ?"
@@ -241,9 +257,6 @@ msgstr ""
 
 #~ msgid "Question"
 #~ msgstr "Вопрос"
-
-#~ msgid "New Download"
-#~ msgstr "Новая закачка"
 
 #~ msgid "URL: "
 #~ msgstr "URL: "

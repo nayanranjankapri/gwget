@@ -79,6 +79,7 @@ GtkTooltips *tray_tooltip;
 /* the options of the column list from Gconf on load */
 GladeXML *xml_pref;
 
+GList *donwloads;
 
 
 void main_window(void);

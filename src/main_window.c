@@ -22,6 +22,7 @@
 #include "main_window_cb.h"
 #include "gwget_data.h"
 #include "custom-cell-renderer-progressbar.h"
+#include "utils.h"
 #include "systray.h"
 
 
@@ -66,7 +67,7 @@ main_window(void)
     add_columns (GTK_TREE_VIEW (treev));
 	
 	gconf_client = gconf_client_get_default();
-	gconf_client_add_dir (gconf_client, "/apps/gwget", GCONF_CLIENT_PRELOAD_NONE,
+	gconf_client_add_dir (gconf_client, "/apps/gwget2", GCONF_CLIENT_PRELOAD_NONE,
                         NULL);
 	
 	/* gwget_pref.download_dir=NULL; */
@@ -133,29 +134,29 @@ gwget_get_defaults_from_gconf(void)
 	DlState state;
 	gint default_width, default_height;
 	
-	gwget_pref.download_dir=gconf_client_get_string(gconf_client,"/apps/gwget/download_dir",NULL);
-	gwget_pref.num_retries=gconf_client_get_int(gconf_client,"/apps/gwget/num_retries",NULL);
-	gwget_pref.resume_at_start=gconf_client_get_bool(gconf_client,"/apps/gwget/resume_at_start",NULL);
-	gwget_pref.no_create_directories=gconf_client_get_bool(gconf_client,"/apps/gwget/no_create_directories",NULL);
-	gwget_pref.follow_relative=gconf_client_get_bool(gconf_client,"/apps/gwget/follow_relative",NULL);
-	gwget_pref.convert_links = gconf_client_get_bool(gconf_client,"/apps/gwget/convert_links",NULL);	
-	gwget_pref.dl_page_requisites = gconf_client_get_bool(gconf_client,"/apps/gwget/dl_page_requisites",NULL);
-	gwget_pref.max_depth=gconf_client_get_int(gconf_client,"/apps/gwget/max_depth",NULL);
-	gwget_pref.view_actual_size=gconf_client_get_bool(gconf_client,"/apps/gwget/view_actual_size",NULL);
-	gwget_pref.view_total_size=gconf_client_get_bool(gconf_client,"/apps/gwget/view_total_size",NULL);
-	gwget_pref.view_percentage=gconf_client_get_bool(gconf_client,"/apps/gwget/view_percentage",NULL);
-	gwget_pref.view_elapse_time=gconf_client_get_bool(gconf_client,"/apps/gwget/view_elapse_time",NULL);
-	gwget_pref.view_down_speed=gconf_client_get_bool(gconf_client,"/apps/gwget/view_down_speed",NULL);
-	gwget_pref.view_toolbar=gconf_client_get_bool(gconf_client,"/apps/gwget/view_toolbar",NULL);
+	gwget_pref.download_dir=gconf_client_get_string(gconf_client,"/apps/gwget2/download_dir",NULL);
+	gwget_pref.num_retries=gconf_client_get_int(gconf_client,"/apps/gwget2/num_retries",NULL);
+	gwget_pref.resume_at_start=gconf_client_get_bool(gconf_client,"/apps/gwget2/resume_at_start",NULL);
+	gwget_pref.no_create_directories=gconf_client_get_bool(gconf_client,"/apps/gwget2/no_create_directories",NULL);
+	gwget_pref.follow_relative=gconf_client_get_bool(gconf_client,"/apps/gwget2/follow_relative",NULL);
+	gwget_pref.convert_links = gconf_client_get_bool(gconf_client,"/apps/gwget2/convert_links",NULL);	
+	gwget_pref.dl_page_requisites = gconf_client_get_bool(gconf_client,"/apps/gwget2/dl_page_requisites",NULL);
+	gwget_pref.max_depth=gconf_client_get_int(gconf_client,"/apps/gwget2/max_depth",NULL);
+	gwget_pref.view_actual_size=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_actual_size",NULL);
+	gwget_pref.view_total_size=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_total_size",NULL);
+	gwget_pref.view_percentage=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_percentage",NULL);
+	gwget_pref.view_elapse_time=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_elapse_time",NULL);
+	gwget_pref.view_down_speed=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_down_speed",NULL);
+	gwget_pref.view_toolbar=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_toolbar",NULL);
 	
-	num_dl=gconf_client_get_int(gconf_client,"/apps/gwget/n_downloads",NULL);
+	num_dl=gconf_client_get_int(gconf_client,"/apps/gwget2/n_downloads",NULL);
 	for (i=0;i<num_dl;i++) {
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/url",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/url",i);
 		url=gconf_client_get_string(gconf_client,key,NULL);
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/dir",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/dir",i);
 		dir=gconf_client_get_string(gconf_client,key,NULL);
 		data=gwget_data_create(url,dir);
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/state",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		state=gconf_client_get_int(gconf_client,key,NULL); 
 		new_download(data);
 		gwget_data_set_state(data,state); 
@@ -166,14 +167,14 @@ gwget_get_defaults_from_gconf(void)
 	show_prefered_columns();
 		
 	/* Default width and height */
-	default_width=gconf_client_get_int (gconf_client,"/apps/gwget/default_width",NULL);
-	default_height=gconf_client_get_int (gconf_client,"/apps/gwget/default_height",NULL);
+	default_width=gconf_client_get_int (gconf_client,"/apps/gwget2/default_width",NULL);
+	default_height=gconf_client_get_int (gconf_client,"/apps/gwget2/default_height",NULL);
 	gtk_window_resize (GTK_WINDOW (glade_xml_get_widget(xml,"main_window")),default_width,default_height);
 	
 	/* Default position */
 	gtk_window_move(GTK_WINDOW(glade_xml_get_widget(xml,"main_window")),
-					gconf_client_get_int (gconf_client,"/apps/gwget/position_x",NULL),
-					gconf_client_get_int (gconf_client,"/apps/gwget/position_y",NULL)
+					gconf_client_get_int (gconf_client,"/apps/gwget2/position_x",NULL),
+					gconf_client_get_int (gconf_client,"/apps/gwget2/position_y",NULL)
 					);
 }			
 
@@ -448,7 +449,7 @@ gwget_quit(void)
 	
 	/* Save the number of current downloads in the treev */
 	/* When load again we can known the number of directories to load */
-	gconf_client_set_int(gconf_client,"/apps/gwget/n_downloads",length,NULL);
+	gconf_client_set_int(gconf_client,"/apps/gwget2/n_downloads",length,NULL);
 		
 	gtk_tree_model_get_iter_root(model,&iter);
 	/* Safe current downloads in GConf */
@@ -458,19 +459,19 @@ gwget_quit(void)
 		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
 		gwgetdata=g_object_get_data(G_OBJECT(model),url);
 	
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d",i);
 		gconf_client_add_dir(gconf_client,key,
 							 GCONF_CLIENT_PRELOAD_NONE,NULL);
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/url",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/url",i);
 		gconf_client_set_string(gconf_client,key,gwgetdata->url,NULL);
 		
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/filename",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/filename",i);
 		gconf_client_set_string(gconf_client,key,gwgetdata->filename,NULL);	
 	
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/dir",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/dir",i);
 		gconf_client_set_string(gconf_client,key,gwgetdata->dir,NULL);	
 		
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/state",i);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		gconf_client_set_int(gconf_client,key,gwgetdata->state,NULL);	
 		
 		if (gwgetdata->state==DL_RETRIEVING) 
@@ -484,13 +485,13 @@ gwget_quit(void)
 	/* Remember the size of the window */
 	main_window=glade_xml_get_widget(xml,"main_window");
 	allocation= &(GTK_WIDGET (main_window)->allocation);
-	gconf_client_set_int (gconf_client, "/apps/gwget/default_width",allocation->width,NULL);
-	gconf_client_set_int (gconf_client, "/apps/gwget/default_height",allocation->height,NULL);
+	gconf_client_set_int (gconf_client, "/apps/gwget2/default_width",allocation->width,NULL);
+	gconf_client_set_int (gconf_client, "/apps/gwget2/default_height",allocation->height,NULL);
 	
 	/* Remember the position */
 	gtk_window_get_position(GTK_WINDOW(main_window), &position_x,&position_y);
-	gconf_client_set_int (gconf_client,"/apps/gwget/position_x",position_x,NULL);
-	gconf_client_set_int (gconf_client,"/apps/gwget/position_y",position_y,NULL);
+	gconf_client_set_int (gconf_client,"/apps/gwget2/position_x",position_x,NULL);
+	gconf_client_set_int (gconf_client,"/apps/gwget2/position_y",position_y,NULL);
 	
 	
 	if (running) {

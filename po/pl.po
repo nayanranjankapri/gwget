@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"POT-Creation-Date: 2004-07-03 13:04+0200\n"
 "PO-Revision-Date: 2003-06-19 11:41+0100\n"
 "Last-Translator: Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -15,194 +15,199 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:223
+#: src/main_window.c:226
 msgid "File Name"
 msgstr "Nazwa pliku"
 
-#: src/main_window.c:233
+#: src/main_window.c:236
 msgid "State"
 msgstr "Stan"
 
-#: src/main_window.c:242
+#: src/main_window.c:245
 msgid "Current Size"
 msgstr "Aktualny rozmiar"
 
-#: src/main_window.c:252
+#: src/main_window.c:255
 msgid "Total Size"
 msgstr "Cakowity rozmiar"
 
-#. column = gtk_tree_view_column_new();
-#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
-#: src/main_window.c:270 src/main_window.c:279
+#: src/main_window.c:265 src/main_window.c:270
 msgid "Percentage"
 msgstr "Procentowo"
 
-#: src/main_window.c:296
+#: src/main_window.c:275
 msgid "Elapsed Time"
 msgstr "Czas do koca"
 
-#: src/main_window.c:328
+#: src/main_window.c:285
 msgid "Remaining Time"
 msgstr "Pozostay czas"
 
-#: src/main_window.c:338
+#: src/main_window.c:295
 msgid "Speed"
 msgstr ""
 
-#: src/main_window_cb.c:108
-#, fuzzy
-msgid "Error in download"
-msgstr "Czy anulowa pobieranie?"
-
-#: src/main_window_cb.c:114
-msgid "Error opening file"
-msgstr ""
-
-#: src/main_window_cb.c:114
-msgid "Couldn't open the file"
-msgstr ""
-
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 #, fuzzy
 msgid "Cancel current downloads?"
 msgstr "Czy anulowa bieťce pobieranie?"
 
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
 
-#: src/main_window_cb.c:247
+#: src/main_window_cb.c:95
+#, fuzzy
+msgid "Error in download"
+msgstr "Czy anulowa pobieranie?"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr ""
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr ""
+
+#: src/main_window_cb.c:143
 msgid "A download manager for gnome2 using wget as backend."
 msgstr ""
 
-#: src/main_window_cb.c:258
+#: src/main_window_cb.c:149
 msgid "translator_credits"
 msgstr ""
 
-#: src/main_window_cb.c:270
-msgid "Gwget2"
+#: src/main_window_cb.c:161
+msgid "Gwget"
 msgstr ""
 
-#: src/main_window_cb.c:523
+#: src/main_window_cb.c:407
 #, fuzzy, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Czy chcesz anulowa aktualne pobieranie? (Url: %s)"
 
-#: src/main_window_cb.c:524
+#: src/main_window_cb.c:408
 msgid "Cancel download?"
 msgstr "Czy anulowa pobieranie?"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 #, fuzzy
 msgid "Remove completed"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 #, fuzzy
 msgid "Really remove completed downloads from the list?"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 #, fuzzy
 msgid "Remove not running"
 msgstr "Nie dziaa"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 #, fuzzy
 msgid "Really remove not running downloads from the list?"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 #, fuzzy
 msgid "Remove all"
 msgstr "Usu zakoczone pobierania"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 #, fuzzy
 msgid "Really remove all downloads from the list?"
 msgstr "Usu zakoczone pobierania"
 
-#: src/gwget_data.c:180
+#: src/gwget_data.c:172
 msgid "stalled"
 msgstr ""
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "Nie uruchomiono"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "Nie dziaa"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "Nie poczono"
 
-#: src/gwget_data.c:217
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Poczono"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "Pobieranie"
 
-#: src/gwget_data.c:221
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Zakoczone"
 
-#: src/gwget_data.c:225
+#: src/gwget_data.c:216
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr ""
 
-#: src/wget-log.c:93
+#: src/wget-log.c:92
 msgid "Socket error"
 msgstr ""
 
-#: src/wget-log.c:96
+#: src/wget-log.c:94
 #, fuzzy
 msgid "Connection refused\n"
 msgstr "Poczono"
 
-#: src/wget-log.c:99
+#: src/wget-log.c:96
 #, fuzzy
 msgid "No route to host"
 msgstr "Brak cieťki routowania do komputera:\n"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Poczenie odrzucone podczas pobierania adresu URL:\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:100
 msgid "Host not found\n"
 msgstr ""
 
-#: src/wget-log.c:108
+#: src/wget-log.c:102
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Nieobsugiwany protokó - do https potrzeba wget >= 1.7:\n"
 
-#: src/wget-log.c:112
+#: src/wget-log.c:105
 #, fuzzy
 msgid "Refusing to truncate existing file"
 msgstr "Odrzucanie obcicia istniejcego pliku\n"
 
-#: src/wget-log.c:115
+#: src/wget-log.c:107
 msgid "Unknown error"
 msgstr ""
 
-#: src/wget-log.c:127 src/wget-log.c:135
+#: src/wget-log.c:118 src/wget-log.c:124
 msgid "File not found"
 msgstr ""
 
-#: src/wget-log.c:142
+#: src/wget-log.c:131
 #, fuzzy
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nie moťna kontynuowa pobierania, istniejcy plik lokalny koliduje ze "
 "zdalnym:\n"
 
-#: src/wget-log.c:190
+#: src/wget-log.c:178
 #, fuzzy
 msgid "Can't write to target directory"
 msgstr "Nie moťna zapisa do katalogu docelowego:\n"
@@ -215,6 +220,16 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
+#: src/systray.c:124
+#, fuzzy
+msgid "Nothing"
+msgstr "Nie dziaa"
+
+#: src/systray.c:131
+#, fuzzy
+msgid "Downloads"
+msgstr "Czy anulowa pobieranie?"
+
 #, fuzzy
 #~ msgid "Pause download"
 #~ msgstr "Czy anulowa pobieranie?"
@@ -222,10 +237,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Remove completed downloads from list"
 #~ msgstr "Usu zakoczone pobierania"
-
-#, fuzzy
-#~ msgid "New Download"
-#~ msgstr "Czy anulowa pobieranie?"
 
 #, fuzzy
 #~ msgid "Select target directory"

@@ -8,212 +8,213 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-06 23:52+0200\n"
-"PO-Revision-Date: 2002-01-30 21:36+0100\n"
+"POT-Creation-Date: 2004-07-03 13:04+0200\n"
+"PO-Revision-Date: 2004-07-03 13:10+0200\n"
 "Last-Translator: David Sedeño Fernández <david@alderia.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
-"\n"
+"Content-Transfer-Encoding: 8bit"
 
-#: src/main_window.c:223
+#: src/main_window.c:226
 msgid "File Name"
 msgstr "Fichero"
 
-#: src/main_window.c:233
+#: src/main_window.c:236
 msgid "State"
 msgstr "Estado"
 
-#: src/main_window.c:242
+#: src/main_window.c:245
 msgid "Current Size"
 msgstr "Tamaño actual"
 
-#: src/main_window.c:252
+#: src/main_window.c:255
 msgid "Total Size"
 msgstr "Tamaño Total"
 
-#. column = gtk_tree_view_column_new();
-#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
-#: src/main_window.c:270 src/main_window.c:279
+#: src/main_window.c:265 src/main_window.c:270
 msgid "Percentage"
 msgstr "Porcentaje"
 
-#: src/main_window.c:296
+#: src/main_window.c:275
 msgid "Elapsed Time"
 msgstr "Tiempo de descarga"
 
-#: src/main_window.c:328
+#: src/main_window.c:285
 msgid "Remaining Time"
 msgstr "Tiempo restante"
 
-#: src/main_window.c:338
+#: src/main_window.c:295
 msgid "Speed"
 msgstr "Velocidad"
 
-#: src/main_window_cb.c:108
-#, fuzzy
-msgid "Error in download"
-msgstr "Nueva descarga"
-
-#: src/main_window_cb.c:114
-msgid "Error opening file"
-msgstr ""
-
-#: src/main_window_cb.c:114
-msgid "Couldn't open the file"
-msgstr ""
-
-#: src/main_window_cb.c:212
-#, fuzzy
+#: src/main_window.c:498
 msgid "Cancel current downloads?"
 msgstr "¿ Cancelar las descargas actuales ?"
 
-#: src/main_window_cb.c:212
+#: src/main_window.c:498
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr "Hay descargas activas. ¿Desea cancelarlas?"
 
-#: src/main_window_cb.c:247
+#: src/main_window_cb.c:95
+msgid "Error in download"
+msgstr "Error en la descarga"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr "Error al abrir el fichero"
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr "No se puede abrir el fichero"
+
+#: src/main_window_cb.c:143
 msgid "A download manager for gnome2 using wget as backend."
 msgstr "Agente de descarga para gnome2 usando wget."
 
-#: src/main_window_cb.c:258
+#: src/main_window_cb.c:149
 msgid "translator_credits"
 msgstr "David Sedeño <david@alderia.com>"
 
-#: src/main_window_cb.c:270
-msgid "Gwget2"
-msgstr "Gwget2"
+#: src/main_window_cb.c:161
+msgid "Gwget"
+msgstr "Gwget"
 
-#: src/main_window_cb.c:523
-#, fuzzy, c-format
+#: src/main_window_cb.c:407
+#, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "¿ Está seguro de cancelar la descarga ? (Url: %s)"
 
-#: src/main_window_cb.c:524
+#: src/main_window_cb.c:408
 msgid "Cancel download?"
 msgstr "¿ Cancelar descarga ?"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 msgid "Remove completed"
 msgstr "Borrar descargas completadas"
 
-#: src/main_window_cb.c:546
+#: src/main_window_cb.c:434
 msgid "Really remove completed downloads from the list?"
 msgstr "¿ Realmente desea borrar las descargas completas ?"
 
-#: src/main_window_cb.c:576
+#: src/main_window_cb.c:463
 msgid "Remove not running"
 msgstr "Barrar las descargas que no están corriendo"
 
-#: src/main_window_cb.c:576
-#, fuzzy
+#: src/main_window_cb.c:463
 msgid "Really remove not running downloads from the list?"
 msgstr "¿ Desea borrar las descargas que no están corriendo ?"
 
-#: src/main_window_cb.c:606
+#: src/main_window_cb.c:493
 msgid "Remove all"
 msgstr "Borrar todas las descargas"
 
-#: src/main_window_cb.c:606
-#, fuzzy
+#: src/main_window_cb.c:493
 msgid "Really remove all downloads from the list?"
 msgstr "¿ Borrar todas las descargas ?"
 
-#: src/gwget_data.c:180
+#: src/gwget_data.c:172
 msgid "stalled"
 msgstr "parado"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "No iniciado"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "No ejecutado"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "No conectado"
 
-#: src/gwget_data.c:217
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Conectado"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "Descargando"
 
-#: src/gwget_data.c:221
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Completado"
 
-#: src/gwget_data.c:225
-msgid "Error"
-msgstr ""
+#: src/gwget_data.c:216
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr "Descarga completa\n"
+"(%s)"
 
-#: src/wget-log.c:93
+#: src/gwget_data.c:223
+msgid "Error"
+msgstr "Error"
+
+#: src/wget-log.c:92
 msgid "Socket error"
 msgstr "Error de socket"
 
-#: src/wget-log.c:96
-#, fuzzy
+#: src/wget-log.c:94
 msgid "Connection refused\n"
-msgstr "Conexión rechazada"
+msgstr "Conexión rechazada\n"
 
-#: src/wget-log.c:99
-#, fuzzy
+#: src/wget-log.c:96
 msgid "No route to host"
 msgstr "Sin ruta hasta el host"
 
-#: src/wget-log.c:102
+#: src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Conexión reusada\n"
 
-#: src/wget-log.c:105
+#: src/wget-log.c:100
 msgid "Host not found\n"
 msgstr "Host no encontrado\n"
 
-#: src/wget-log.c:108
+#: src/wget-log.c:102
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Protocolo no soportado - necesita wget >= 1.7 para https:\n"
 
-#: src/wget-log.c:112
-#, fuzzy
+#: src/wget-log.c:105
 msgid "Refusing to truncate existing file"
-msgstr "Reusando a truncar fichero existente\n"
+msgstr "Reusando a truncar fichero existente"
 
-#: src/wget-log.c:115
+#: src/wget-log.c:107
 msgid "Unknown error"
-msgstr ""
+msgstr "Error desconocido"
 
-#: src/wget-log.c:127 src/wget-log.c:135
+#: src/wget-log.c:118 src/wget-log.c:124
 msgid "File not found"
 msgstr "Fichero no encontrado"
 
-#: src/wget-log.c:142
-#, fuzzy
+#: src/wget-log.c:131
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"No se puede continuar la descarga, fichero local entra en conflicto con "
-"fichero remoto.\n"
+msgstr "No se puede continuar la descarga, fichero local entra en conflicto con "
+"fichero remoto."
 
-#: src/wget-log.c:190
-#, fuzzy
+#: src/wget-log.c:178
 msgid "Can't write to target directory"
-msgstr "No puedo escribir en directorio destino:\n"
+msgstr "No puedo escribir en directorio destino"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
-msgstr ""
+msgstr "Desconocido"
 
 #: src/custom-cell-renderer-progressbar.c:99
-#, fuzzy
 msgid "Failed"
-msgstr "parado"
+msgstr "Fallo"
+
+#: src/systray.c:124
+msgid "Nothing"
+msgstr "Ninguno"
+
+#: src/systray.c:131
+msgid "Downloads"
+msgstr "Descargas"
 
 #~ msgid "Recurse into the Url ?"
 #~ msgstr "¿ Activar recursividad ?"
@@ -250,9 +251,6 @@ msgstr "parado"
 
 #~ msgid "Question"
 #~ msgstr "Pregunta"
-
-#~ msgid "New Download"
-#~ msgstr "Nueva descarga"
 
 #~ msgid "URL: "
 #~ msgstr "Url: "

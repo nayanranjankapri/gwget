@@ -28,6 +28,7 @@
 #include "new_window.h"
 #include "gwget_data.h"
 #include "utils.h"
+#include "systray.h"
 
 
 void 
@@ -145,11 +146,6 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 			NULL
 	};
 
-	gchar  *documenters[] = {
-			"",
-			NULL
-	};
-
 	gchar *translator_credits = _("translator_credits");
 
 	if (about != NULL ) 
@@ -159,7 +155,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 		return;
 	}
 
-	logo_file=g_strdup_printf("%s/%s/%s",DATADIR,"gwget-large.png");
+	logo_file=g_strdup_printf("%s/%s",DATADIR,"gwget-large.png");
 	pixbuf = gdk_pixbuf_new_from_file (logo_file, NULL);
 
 	about = gnome_about_new (_("Gwget"), VERSION,
@@ -201,6 +197,8 @@ new_download(GwgetData* gwgetdata) {
 	gwgetdata->file_list=iter; 
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
+	
+	downloads = g_list_append(downloads,gwgetdata);
 }
 
 
@@ -276,61 +274,61 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	pref_window = glade_xml_get_widget(xml_pref,"pref_window");
 	gtk_widget_hide(pref_window);
 	
-	gconf_client_set_string(gconf_client,"/apps/gwget/download_dir",
+	gconf_client_set_string(gconf_client,"/apps/gwget2/download_dir",
 							g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in))),NULL);
-	gconf_client_set_int(gconf_client,"/apps/gwget/num_retries",
+	gconf_client_set_int(gconf_client,"/apps/gwget2/num_retries",
 						atoi(gtk_entry_get_text(GTK_ENTRY(num_retries))),NULL);
-	gconf_client_set_bool(gconf_client,"/apps/gwget/resume_at_start",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/resume_at_start",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume)),NULL);
 	
 	/* Recursivity */
 	no_create_directories  = glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
 	gwget_pref.no_create_directories = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/no_create_directories",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/no_create_directories",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories)),NULL);
 	
 	/* Follow relative links only */
 	follow_relative = glade_xml_get_widget(GLADE_XML(xml_pref),"follow_relative");
 	gwget_pref.follow_relative = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(follow_relative));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/follow_relative",gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(follow_relative)), NULL);
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/follow_relative",gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(follow_relative)), NULL);
 	
 	/* Convert links */
 	convert_links = glade_xml_get_widget(GLADE_XML(xml_pref),"convert_links");
 	gwget_pref.follow_relative = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(convert_links));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/convert_links",gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(convert_links)), NULL);
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/convert_links",gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(convert_links)), NULL);
 	/* Download page requisites */
 	dl_page_requisites= glade_xml_get_widget(GLADE_XML(xml_pref),"dl_page_requisites");
 	gwget_pref.follow_relative = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dl_page_requisites));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/dl_page_requisites",	gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dl_page_requisites)), NULL);
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/dl_page_requisites",	gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dl_page_requisites)), NULL);
 	/* Max Depth */
 	max_depth=glade_xml_get_widget(GLADE_XML(xml_pref),"max_depth");
 	gwget_pref.max_depth=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth));
-	gconf_client_set_int(gconf_client,"/apps/gwget/max_depth",gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth)), NULL);
+	gconf_client_set_int(gconf_client,"/apps/gwget2/max_depth",gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth)), NULL);
 	
 	/* Column listing */
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_actual_size",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_actual_size",
 	 					  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size"))),NULL);
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_total_size",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_total_size",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size"))),NULL);
 	
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_percentage",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_percentage",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage"))),NULL);
 
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_elapse_time",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_elapse_time",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time"))),NULL);
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_rem_time",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_rem_time",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time"))),NULL);
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_down_speed",
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_down_speed",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed"))),NULL);
 
 }
@@ -414,7 +412,10 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
     		gwgetdata->total_time = 0;
     		gwget_data_set_state (gwgetdata, DL_COMPLETED);
 			gtk_list_store_remove(GTK_LIST_STORE(model),&gwgetdata->file_list);
+			downloads=g_list_remove(downloads,gwgetdata);
+			printf("N: %d\n",g_list_length(downloads));
 			gwget_data_free(gwgetdata);
+			
 		}
 	}
 }
@@ -440,6 +441,7 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 			
 			if (gwgetdata->state==DL_COMPLETED) {
 				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
+				downloads=g_list_remove(downloads,gwgetdata);
 			} else {
 				gtk_tree_model_iter_next(model,&iter);
 			}
@@ -469,7 +471,7 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 			
 			if (gwgetdata->state!=DL_RETRIEVING) {
 				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
-				printf("Remove: %s\n",url);
+				downloads=g_list_remove(downloads,gwgetdata);
 			} else {
 				gtk_tree_model_iter_next(model,&iter);
 			}
@@ -504,6 +506,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 			}
 			
 			gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
+			downloads=g_list_remove(downloads,gwgetdata);
 		}
 	}
 				
@@ -525,7 +528,7 @@ on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 	} else {
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}		
-	gconf_client_set_bool(gconf_client,"/apps/gwget/view_toolbar",state,NULL);
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_toolbar",state,NULL);
 }
 
 void 

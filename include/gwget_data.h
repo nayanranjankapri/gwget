@@ -37,7 +37,6 @@ typedef struct
 	gboolean view_down_speed;
 	gboolean view_toolbar;
 	gboolean docked;
-	
 } Preferences;
 
 extern Preferences gwget_pref;
@@ -82,6 +81,7 @@ typedef struct
     gboolean recursive;		/* Recursive download */
 	gboolean multimedia;	/* Only download multimedia files in recursive mode */
 	gboolean mirror;		/* Mirror the site in recursive mode */
+	gchar *state_str;
     
 } GwgetData;
 

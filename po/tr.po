@@ -6,7 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.10\n"
-"POT-Creation-Date: 2004-06-21 21:15+0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-07-03 13:04+0200\n"
 "PO-Revision-Date: 2004-06-21 00:57 +0300\n"
 "Last-Translator: Mark R. Pariente <mark@demar.com.tr>\n"
 "Language-Team: Turkish <kabalak@gtranslator.org>\n"
@@ -14,102 +15,102 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:225
+#: src/main_window.c:226
 msgid "File Name"
 msgstr "Dosya Adı"
 
-#: src/main_window.c:235
+#: src/main_window.c:236
 msgid "State"
 msgstr "Durum"
 
-#: src/main_window.c:244
+#: src/main_window.c:245
 msgid "Current Size"
 msgstr "Gelen Boyut"
 
-#: src/main_window.c:254
+#: src/main_window.c:255
 msgid "Total Size"
 msgstr "Toplam Boyut"
 
-#: src/main_window.c:264 src/main_window.c:269
+#: src/main_window.c:265 src/main_window.c:270
 msgid "Percentage"
 msgstr "Yüzde"
 
-#: src/main_window.c:274
+#: src/main_window.c:275
 msgid "Elapsed Time"
 msgstr "Aşılan Süre"
 
-#: src/main_window.c:284
+#: src/main_window.c:285
 msgid "Remaining Time"
 msgstr "Kalan Süre"
 
-#: src/main_window.c:294
+#: src/main_window.c:295
 msgid "Speed"
 msgstr "Hız"
 
-#: src/main_window.c:497
+#: src/main_window.c:498
 msgid "Cancel current downloads?"
 msgstr "İndirmeler iptal edilsin mi?"
 
-#: src/main_window.c:497
+#: src/main_window.c:498
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr "En az bir aktif indirme var. Tüm indirmeler iptal edilsin mi?"
 
-#: src/main_window_cb.c:94
+#: src/main_window_cb.c:95
 msgid "Error in download"
 msgstr "İndirme sırasında hata"
 
-#: src/main_window_cb.c:99
+#: src/main_window_cb.c:100
 msgid "Error opening file"
 msgstr "Dosya açma sırasında hata"
 
-#: src/main_window_cb.c:99
+#: src/main_window_cb.c:100
 msgid "Couldn't open the file"
 msgstr "Dosya açılamadı"
 
-#: src/main_window_cb.c:142
+#: src/main_window_cb.c:143
 msgid "A download manager for gnome2 using wget as backend."
 msgstr "Gnome2 için wget kullanan bir indirme arabirimi."
 
-#: src/main_window_cb.c:153
+#: src/main_window_cb.c:149
 msgid "translator_credits"
 msgstr "Mark R. Pariente <mark@demar.com.tr>"
 
-#: src/main_window_cb.c:165
+#: src/main_window_cb.c:161
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:409
+#: src/main_window_cb.c:407
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "İndirme iptal edilsin mi? (Url: %s)"
 
-#: src/main_window_cb.c:410
+#: src/main_window_cb.c:408
 msgid "Cancel download?"
 msgstr "İndirmeyi iptal et?"
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:434
 msgid "Remove completed"
 msgstr "Bitenleri kaldır"
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:434
 msgid "Really remove completed downloads from the list?"
 msgstr "Biten indirmeler listeden kaldırılsın mı?"
 
-#: src/main_window_cb.c:461
+#: src/main_window_cb.c:463
 msgid "Remove not running"
 msgstr "Çalışmayanları kaldır"
 
-#: src/main_window_cb.c:461
+#: src/main_window_cb.c:463
 msgid "Really remove not running downloads from the list?"
 msgstr "Çalışmayan indirmeler listeden kaldırılsın mı?"
 
-#: src/main_window_cb.c:491
+#: src/main_window_cb.c:493
 msgid "Remove all"
 msgstr "Hepsini kaldır"
 
-#: src/main_window_cb.c:491
+#: src/main_window_cb.c:493
 msgid "Really remove all downloads from the list?"
 msgstr "Tüm indirmeler listeden kaldırılsın mı?"
 
@@ -117,31 +118,38 @@ msgstr "Tüm indirmeler listeden kaldırılsın mı?"
 msgid "stalled"
 msgstr "durakladı"
 
-#: src/gwget_data.c:201
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "Başlamadı"
 
-#: src/gwget_data.c:203
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "Çalışmıyor"
 
-#: src/gwget_data.c:205
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "Bağlı Değil"
 
-#: src/gwget_data.c:207
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Bağlı"
 
-#: src/gwget_data.c:209
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "İndiriyor"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Bitti"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:216
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr "Hata"
 
@@ -196,3 +204,12 @@ msgstr "Bilinmeyen"
 #: src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
 msgstr "Başarısız"
+
+#: src/systray.c:124
+#, fuzzy
+msgid "Nothing"
+msgstr "Çalışmıyor"
+
+#: src/systray.c:131
+msgid "Downloads"
+msgstr ""
