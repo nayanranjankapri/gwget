@@ -14,39 +14,8 @@ module GNOME {
 		typedef string URI;
 		typedef sequence<URI> URIList;
 
-/*		interface Document : Bonobo::Unknown {
-			exception DocumentReadOnly {};
-		
-			oneway void setLinePosition (in long line);
-
-			void insert (in long offset, in string str,
-					    in long length)
-				raises (DocumentReadOnly);
-
-			void delete (in long offset, in long length)
-				raises (DocumentReadOnly);
-
-			string getChars (in long offset, in long length);
-
-			long getCharCount ();
-		};
-
-*/
-/*		interface Window : Bonobo::Unknown {
-			oneway void openURIList (in URIList locations);
-			oneway void grabFocus ();
-			/* Document newDocument (); 
-		};
-*/
-
-
 		interface Application : Bonobo::Unknown {
-/*			Window newWindow (); */
-
-			/* Document getActiveDocument (); */
-/*			Window getActiveWindow (); */
 			string echo();
-
 			oneway void quit ();
 		};
 
