@@ -22,6 +22,7 @@
 #include "eggtrayicon.h"
 
 enum {
+	IMAGE_COLUMN,
 	FILENAME_COLUMN,
 	URL_COLUMN,
 	STATE_COLUMN,
@@ -36,7 +37,6 @@ enum {
 	PID_COLUMN,
 	STATE_INT_COLUMN,
 	SPEED_COLUMN,
-	IMAGE_COLUMN,
 	NUM_COLUMNS
 	
 };

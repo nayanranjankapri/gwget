@@ -36,7 +36,10 @@ typedef struct
 	gboolean view_rem_time;
 	gboolean view_down_speed;
 	gboolean view_toolbar;
+	gboolean view_file_type;
 	gboolean docked;
+	gboolean limit_speed;
+	gint max_speed;
 } Preferences;
 
 extern Preferences gwget_pref;
@@ -99,6 +102,7 @@ void gwget_data_set_total_size (GwgetData *gwgetdata,guint32 total_size);
 GwgetData* gwget_data_get_selected(void);
 void gwget_data_free(gpointer data);
 void gwget_data_stop_download(GwgetData *data);
+void gwget_data_set_filename_from_url(GwgetData *gwgetdata, gchar *url);
 
 
 #endif
