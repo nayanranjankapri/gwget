@@ -18,6 +18,7 @@
 #include <glade/glade.h>
 #include <gnome.h>
 #include <gconf/gconf-client.h>
+#include <glib/gstdio.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -35,6 +36,9 @@ Preferences gwget_pref;
 
 static void 
 show_prefered_columns(void);
+
+static gboolean
+gwget_destination_file_exists(GwgetData *data);
 
 static void 
 gwget_gconf_notify_toolbar(GConfClient *client,
@@ -158,12 +162,11 @@ main_window(void)
 		
 }
 
-gboolean
+static gboolean
 gwget_destination_file_exists(GwgetData *data)
 {
 	struct stat s;
 	
-	//g_print("%s %d\n",data->local_filename , g_stat(data->local_filename,&s));	
 	return ( g_stat(data->local_filename,&s) == 0 );
 }
 
