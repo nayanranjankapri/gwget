@@ -196,6 +196,7 @@ create_model (void)
 	GtkListStore *model;
 
 	model = gtk_list_store_new (NUM_COLUMNS,
+								GDK_TYPE_PIXBUF,
 								G_TYPE_STRING, /* File name */
 								G_TYPE_STRING, /* URL */
 								G_TYPE_STRING, /* State */
@@ -210,8 +211,7 @@ create_model (void)
 								/* Not viewable columns */ 
 								G_TYPE_INT,    /* Pid */
 								G_TYPE_INT,	   /* State int column */
-								G_TYPE_STRING,  /* Speed */
-								GDK_TYPE_PIXBUF
+								G_TYPE_STRING  /* Speed */
 								);
 				  
 	return GTK_TREE_MODEL (model);
