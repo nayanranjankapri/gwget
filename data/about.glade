@@ -16,7 +16,7 @@
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="logo">gwget-large.png</property>
   <property name="copyright" translatable="yes">GNU GPL Version 2</property>
-  <property name="comments" translatable="yes">Gwget: Download Manager for Gnome 2</property>
+  <property name="comments" translatable="yes">Gwget: Download Manager for GNOME</property>
   <property name="authors">David Sedeño Fernández
 &lt;david@alderia.com&gt;</property>
   <property name="translator_credits" translatable="yes">translator-credits</property>

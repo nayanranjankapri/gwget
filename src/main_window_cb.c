@@ -164,7 +164,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 	GdkPixbuf *pixbuf = NULL;
 	gchar *logo_file;
 	gchar *copy_text = "Copyright © 2004 David Sedeño Fernández";
-	gchar *about_text = _("Download Manager for Gnome2.");
+	gchar *about_text = _("Download Manager for GNOME.");
 	gchar *authors[] = { 
 			"David Sedeño Fernández <david@alderia.com>",
 			"Julien Cegarra <julienc@psychologie-fr.org>",

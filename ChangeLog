@@ -1,3 +1,8 @@
+2005-01-03  David Sedeño <david@alderia.com>
+
+	* data/about.glade: Fix GNOME string.
+	* src/main_window_cb.c (on_about1_activate): Fix GNOME string.
+
 2005-01-03  Christian Rose  <menthos@menthos.com>
 
 	* configure.in: Added "sv" to ALL_LINGUAS.
