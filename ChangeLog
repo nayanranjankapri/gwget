@@ -1,3 +1,7 @@
+2004-11-06 David Sedeño <david@alderia.com>
+
+	* data/Makefile.am: Fix schemas install dir.
+
 2004-11-04 David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (continue_downloads, stop_all_downloads): Fix the 
