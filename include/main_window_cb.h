@@ -50,7 +50,7 @@ void on_remove_completed_activate(GtkWidget *widget, gpointer data);
 void on_remove_notrunning_activate(GtkWidget *widget, gpointer data);
 void on_remove_all_activate(GtkWidget *widget, gpointer data);
 void on_view_toolbar_activate(GtkWidget *widget,gpointer data);
-void on_propierties_activate(GtkWidget *widget, gpointer data);
+void on_properties_activate(GtkWidget *widget, gpointer data);
 /* CAllbacks for the column list view */
 void on_check_actual_size_toggled(GtkWidget *widget, gpointer data);
 void on_check_total_size_toggled(GtkWidget *widget, gpointer data);

@@ -558,23 +558,23 @@ on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 }
 
 void 
-on_propierties_activate(GtkWidget *widget, gpointer data)
+on_properties_activate(GtkWidget *widget, gpointer data)
 {
-	GtkWidget *main_window,*propierties,*url_txt,*local_file,*local_dir;
+	GtkWidget *main_window,*properties,*url_txt,*local_file,*local_dir;
 	GwgetData *gwgetdata;
 
 	gwgetdata = gwget_data_get_selected();	
 	
 	main_window=glade_xml_get_widget(GLADE_XML(xml),"main_window");
-	propierties=glade_xml_get_widget(GLADE_XML(xml),"propierties_window");
-	gtk_window_set_transient_for(GTK_WINDOW(propierties),GTK_WINDOW(main_window));
+	properties=glade_xml_get_widget(GLADE_XML(xml),"properties_window");
+	gtk_window_set_transient_for(GTK_WINDOW(properties),GTK_WINDOW(main_window));
 	url_txt=glade_xml_get_widget(GLADE_XML(xml),"url_text");
 	gtk_label_set_text(GTK_LABEL(url_txt),gwgetdata->url);
 	local_file=glade_xml_get_widget(GLADE_XML(xml),"local_file_text");
 	gtk_label_set_text(GTK_LABEL(local_file),gwgetdata->filename);
 	local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
 	gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
-	gtk_widget_show(propierties);
+	gtk_widget_show(properties);
 }
 
 void
