@@ -328,8 +328,9 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 	dnd_type = GPOINTER_TO_UINT(data);
 	  
 	if (dnd_type==TARGET_URI_LIST) {
+		GnomeVFSURI *vfs_uri;
 		files = gnome_vfs_uri_list_parse (seldata->data);
-		GnomeVFSURI *vfs_uri = files->data;
+		vfs_uri = files->data;
 		file = gnome_vfs_uri_to_string(vfs_uri,GNOME_VFS_URI_HIDE_NONE);
 		gwgetdata=gwget_data_create(file,gwget_pref.download_dir);
 		new_download(gwgetdata);

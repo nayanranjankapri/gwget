@@ -1,3 +1,8 @@
+2004-09-05  David Sedeño <david@alderia.com>
+
+	* src/main_window.c (on_treeview_drag_received): 
+	  Fix compilation build with gcc 2.95 (Jens Granseuer).
+
 2004-08-31  David Sedeño <david@alderia.com>
 
 	* pixmaps/Makefile.am: Fix icon installation.
