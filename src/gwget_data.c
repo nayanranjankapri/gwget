@@ -343,6 +343,8 @@ gwget_data_start_download(GwgetData *gwgetdata)
 					arg++;
 					argv[arg]="-Apng";
 					arg++;
+					argv[arg]="-Awmv";
+					arg++;
 				}
 				if (gwgetdata->mirror) {
 					argv[arg]="-m";
