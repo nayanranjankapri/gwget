@@ -1,5 +1,9 @@
 2005-01-03  David Sedeño <david@alderia.com>
 
+	* data/gwget.schemas.in: Don't use abbreviations. Fixed bug #162799
+	
+2005-01-03  David Sedeño <david@alderia.com>
+
 	* data/gwget.schemas.in: Put default values outside of locale tags.
 	Fix bug 162797.
 
