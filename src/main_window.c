@@ -209,7 +209,8 @@ create_model (void)
 								/* Not viewable columns */ 
 								G_TYPE_INT,    /* Pid */
 								G_TYPE_INT,	   /* State int column */
-								G_TYPE_STRING  /* Speed */
+								G_TYPE_STRING,  /* Speed */
+								GDK_TYPE_PIXBUF
 								);
 				  
 	return GTK_TREE_MODEL (model);
@@ -220,6 +221,15 @@ add_columns (GtkTreeView *treeview)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
+	
+	
+	renderer = gtk_cell_renderer_pixbuf_new ();
+	column = gtk_tree_view_column_new_with_attributes (_("File Type"),
+														renderer,
+														"pixbuf", 
+														IMAGE_COLUMN,
+														NULL);
+	gtk_tree_view_append_column (treeview, column);
 	
 	/* File Name Column */
 	renderer = gtk_cell_renderer_text_new ();

@@ -1,3 +1,10 @@
+2004-07-09  David Sedeño <david@alderia.com>
+
+	* include/main_window.h: added IMAGE_COLUMN
+	* src/main_window_cb.c (new_download): 
+	Put the icon of the file mime type in the column.
+	* src/main_window.c (add_column): Create the image column.
+
 2004-07-03  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: downloads Glist

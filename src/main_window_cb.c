@@ -22,7 +22,7 @@
 #include <libgnome/gnome-url.h>
 #include <libgnome/gnome-program.h>
 #include <libgnome/gnome-init.h>
-#include <libgnomevfs/gnome-vfs-utils.h>
+#include <libgnomevfs/gnome-vfs.h>
 #include "main_window.h"
 #include "main_window_cb.h"
 #include "new_window.h"
@@ -187,6 +187,12 @@ on_button_new_clicked(GtkWidget *widget, gpointer data)
 void 
 new_download(GwgetData* gwgetdata) {
 	GtkTreeIter iter;
+	GtkTreePath *path;
+	GtkIconTheme *theme;
+	GtkIconInfo *icon_info;
+	GdkPixbuf *pixbuf;
+	char *mime, *icon_name;
+	int width = 16, height = 16;
 	
 	gtk_list_store_append (GTK_LIST_STORE(model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE(model), &iter,URL_COLUMN,gwgetdata->url,
@@ -199,6 +205,30 @@ new_download(GwgetData* gwgetdata) {
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
 	
 	downloads = g_list_append(downloads,gwgetdata);
+	
+	mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
+	theme = gtk_icon_theme_get_default ();
+	icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
+									mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
+	g_free (mime);
+	gtk_icon_size_lookup (GTK_ICON_SIZE_MENU, &width, &height);
+	width *= 2;
+	height *= 2;
+	
+	icon_info = gtk_icon_theme_lookup_icon (theme, icon_name, width, height);
+	g_free (icon_name);
+	if (icon_info == NULL) return;
+	
+	icon_name = g_strdup (gtk_icon_info_get_filename (icon_info));
+	gtk_icon_info_free (icon_info);
+	
+	pixbuf = gdk_pixbuf_new_from_file_at_size (icon_name, width, height, NULL);
+	gtk_list_store_set (GTK_LIST_STORE (model),
+						&iter, IMAGE_COLUMN, pixbuf, -1);
+	if (pixbuf)
+		g_object_unref (pixbuf);
+	
+	
 }
 
 
