@@ -1,0 +1,525 @@
+# Vietnamese Translation for GWget.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GWget-vi\n"
+"POT-Creation-Date: 2004-12-13 12:37+0100\n"
+"PO-Revision-Date: 2004-12-18 23:59+0700\n"
+"Last-Translator: Trinh Minh Thanh <tmthanh@yahoo.com>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "Chương trình Wget"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "factory tự động Gwget"
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "Giới thiệu Gwget"
+
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL phiên bản 2"
+
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: trình quản lý tải về cho Gnome 2"
+
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "Gnome-vi Team http://gnomevi.sf.net"
+
+#: data/gwget.glade.h:1
+#: data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Tải về:</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Thuộc tính</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Bỏ qua"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: data/gwget.glade.h:6
+#: src/main_window_cb.c:129
+#: src/main_window_cb.c:566
+#: src/main_window_cb.c:662
+msgid "Gwget - Download Manager"
+msgstr "Gwget - trình quản lý tải về"
+
+#: data/gwget.glade.h:7
+msgid "Information"
+msgstr "Thông tin"
+
+#: data/gwget.glade.h:8
+msgid "Local Directory: "
+msgstr "Thư mục cục bộ:"
+
+#: data/gwget.glade.h:9
+msgid "Local File: "
+msgstr "Tập tin cục bộ:"
+
+#: data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "Tập tin đa phương tiện (video và ảnh)"
+
+#: data/gwget.glade.h:11
+msgid "New download"
+msgstr "Tải về mới"
+
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Tạm dừng"
+
+#: data/gwget.glade.h:13
+msgid "Pause all"
+msgstr "Tạm dừng tất cả"
+
+#: data/gwget.glade.h:14
+msgid "Pause all downloads"
+msgstr "Tạm dừng mọi tải về"
+
+#: data/gwget.glade.h:15
+msgid "Pause download"
+msgstr "Tạm dừng tải về"
+
+#: data/gwget.glade.h:16
+msgid "Properties"
+msgstr "Thuộc tính"
+
+#: data/gwget.glade.h:17
+msgid "Question"
+msgstr "Câu hỏi"
+
+#: data/gwget.glade.h:18
+#: data/preferences.glade.h:31
+msgid "Recursive"
+msgstr "Đệ quy"
+
+#: data/gwget.glade.h:19
+msgid "Recursive options"
+msgstr "Tùy chọn đệ quy"
+
+#: data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Xóa bỏ"
+
+#: data/gwget.glade.h:21
+#: src/main_window_cb.c:645
+msgid "Remove all"
+msgstr "Xóa bỏ tất cả"
+
+#: data/gwget.glade.h:22
+msgid "Remove all downloads from list"
+msgstr "Xóa bỏ mọi tải về ra khỏi danh sách"
+
+#: data/gwget.glade.h:23
+#: src/main_window_cb.c:587
+msgid "Remove completed"
+msgstr "Hòan thành xóa bỏ"
+
+#: data/gwget.glade.h:24
+msgid "Remove completed downloads from list"
+msgstr "Xóa bỏ các tập tin đã tải về xong khỏi danh sách"
+
+#: data/gwget.glade.h:25
+#: src/main_window_cb.c:616
+msgid "Remove inactive"
+msgstr "Xóa cái không hoạt động"
+
+#: data/gwget.glade.h:26
+msgid "Remove inactive downloads from list"
+msgstr "Xóa các tải về không hoạt động khỏi danh sách"
+
+#: data/gwget.glade.h:27
+msgid "Resume all"
+msgstr "Tiếp tục lại tất cả"
+
+#: data/gwget.glade.h:28
+msgid "Resume all downloads"
+msgstr "Tiếp tục lại mọi tải về"
+
+#: data/gwget.glade.h:29
+msgid "Stop and delete downloaded file"
+msgstr "Dừng và xóa tập tin tải về"
+
+#: data/gwget.glade.h:30
+msgid "The index file only"
+msgstr "Chỉ có tập tin danh mục"
+
+#: data/gwget.glade.h:31
+msgid "This site (mirror)"
+msgstr "Site này (mirror)"
+
+#: data/gwget.glade.h:32
+msgid "Url:"
+msgstr "Url:"
+
+#: data/gwget.glade.h:33
+msgid "_New"
+msgstr "_Mới"
+
+#: data/gwget.glade.h:34
+msgid "_Toolbar"
+msgstr "Th_anh công cụ"
+
+#: data/newdownload.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Tải về mới</span>"
+
+#: data/newdownload.glade.h:3
+msgid "New Download"
+msgstr "Tải về mới"
+
+#: data/newdownload.glade.h:4
+#: data/preferences.glade.h:33
+msgid "Save in:"
+msgstr "Lưu vào:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr "URL: "
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  kB/sec"
+msgstr "  kB/sec"
+
+#: data/preferences.glade.h:4
+msgid "<b>General</b>"
+msgstr "<b>Phần chung</b>"
+
+#: data/preferences.glade.h:5
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Ứng xử</span>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Danh sách cột</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Liên kết</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Cấu hình proxy</span>"
+
+#: data/preferences.glade.h:9
+msgid "Column List"
+msgstr "Danh sách cột"
+
+#: data/preferences.glade.h:10
+msgid "Continue downloads on startup"
+msgstr "Tiếp tục tải về khi khởi chạy"
+
+#: data/preferences.glade.h:11
+msgid "Convert links"
+msgstr "Đổi liên kết"
+
+#: data/preferences.glade.h:12
+#: src/main_window.c:284
+msgid "Current Size"
+msgstr "Kích thước hiện thời"
+
+#: data/preferences.glade.h:13
+msgid "Default GNOME network settings"
+msgstr "Thiết lập mạng Gnome mặc định"
+
+#: data/preferences.glade.h:14
+msgid "Direct Internet connection"
+msgstr "Kết nối internet trực tiếp"
+
+#: data/preferences.glade.h:15
+msgid "Don't create directories"
+msgstr "Không tạo thư mục"
+
+#: data/preferences.glade.h:16
+msgid "Download Speed"
+msgstr "Tốc độ tải về"
+
+#: data/preferences.glade.h:17
+msgid "Download page requisites"
+msgstr "Yêu cầu trang tải về"
+
+#: data/preferences.glade.h:18
+#: src/main_window.c:316
+msgid "Elapsed Time"
+msgstr "Thời gian trôi qua"
+
+#: data/preferences.glade.h:19
+msgid "Follow relative links only"
+msgstr "Chỉ theo các liên kết liên quan"
+
+#: data/preferences.glade.h:20
+msgid "General"
+msgstr "Chung"
+
+#: data/preferences.glade.h:21
+msgid "Limit download speed to: "
+msgstr "Giới hạn tốc độ tải về là:"
+
+#: data/preferences.glade.h:22
+msgid "Manual proxy configuration"
+msgstr "Cấu hình thủ công proxy"
+
+#: data/preferences.glade.h:23
+msgid "Maximum depth level: "
+msgstr "Độ sâu tối đa:"
+
+#: data/preferences.glade.h:24
+msgid "Network"
+msgstr "Mạng"
+
+#: data/preferences.glade.h:25
+msgid "Number of retries:"
+msgstr "Số lần kết nối lại"
+
+#: data/preferences.glade.h:26
+msgid "Open files automatically after download"
+msgstr "Tự động mở tập tin sau khi tải về"
+
+#: data/preferences.glade.h:27
+#: src/main_window.c:305
+#: src/main_window.c:311
+msgid "Percentage"
+msgstr "Phần trăm"
+
+#: data/preferences.glade.h:28
+msgid "Port:"
+msgstr "Port:"
+
+#: data/preferences.glade.h:29
+msgid "Preferences"
+msgstr "Tùy thích"
+
+#: data/preferences.glade.h:30
+msgid "Proxy:"
+msgstr "Proxy:"
+
+#: data/preferences.glade.h:32
+#: src/main_window.c:326
+msgid "Remaining Time"
+msgstr "Thời gian còn lại"
+
+#: data/preferences.glade.h:34
+#: src/main_window.c:295
+msgid "Total Size"
+msgstr "Kích thước tổng cộng"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Không xác định"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Không được"
+
+#: src/gwget_data.c:177
+msgid "stalled"
+msgstr "Giữ"
+
+#: src/gwget_data.c:210
+msgid "Waiting"
+msgstr "Chờ"
+
+#: src/gwget_data.c:212
+msgid "Not Started"
+msgstr "Không khởi chạy"
+
+#: src/gwget_data.c:214
+msgid "Not Running"
+msgstr "Không chạy"
+
+#: src/gwget_data.c:216
+msgid "Not Connected"
+msgstr "Không kết nối"
+
+#: src/gwget_data.c:218
+msgid "Connected"
+msgstr "Kết nối"
+
+#: src/gwget_data.c:220
+msgid "Retrieving"
+msgstr "Lấy về"
+
+#: src/gwget_data.c:222
+msgid "Completed"
+msgstr "Hoàn thành"
+
+#: src/gwget_data.c:226
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Hoàn thành tải về\n"
+"(%s)"
+
+#: src/gwget_data.c:233
+msgid "Error"
+msgstr "Lỗi"
+
+#: src/gwget_data.c:611
+msgid "Unable to add this download"
+msgstr "Không thể thêm tải về này"
+
+#: src/gwget_data.c:611
+msgid "This download is already added"
+msgstr "Tải về này đã được thêm rồi"
+
+#: src/gwget_data.c:659
+#: src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Lỗi mở tập tin"
+
+#: src/gwget_data.c:659
+#: src/main_window_cb.c:99
+msgid "Couldn't open the file"
+msgstr "Không thể mở tập tin"
+
+#: src/main_window.c:266
+msgid "File Name"
+msgstr "Tên tập tin"
+
+#: src/main_window.c:273
+msgid "State"
+msgstr "Trạng thái"
+
+#: src/main_window.c:336
+msgid "Speed"
+msgstr "Tốc độ"
+
+#: src/main_window.c:560
+msgid "Cancel current downloads?"
+msgstr "Thôi tải về hiện thời không?"
+
+#: src/main_window.c:560
+msgid "There is at least one active download left. Really cancel all running transfers?"
+msgstr "Còn ít nhất một tải về đang hoạt động. Thật sự muốn bỏ mọi truyền tải đang chạy không?"
+
+#: src/main_window_cb.c:94
+msgid "Error in download"
+msgstr "Lỗi tải về"
+
+#: src/main_window_cb.c:167
+msgid "Download Manager for Gnome2."
+msgstr "Chương trình quản lý tải về cho Gnome 2"
+
+#: src/main_window_cb.c:174
+msgid "translator_credits"
+msgstr "Gnome-vi Team http://gnomevi.sf.net"
+
+#: src/main_window_cb.c:186
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:503
+#: src/new_window.c:140
+msgid "Select Folder"
+msgstr "Chọn thư mục"
+
+#: src/main_window_cb.c:558
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(Url: %s)"
+msgstr ""
+"Thật sự muốn thôi tải về hiện thời không?\n"
+"(Url: %s)"
+
+#: src/main_window_cb.c:559
+msgid "Cancel download?"
+msgstr "Thôi tải về?"
+
+#: src/main_window_cb.c:587
+msgid "Really remove completed downloads from the list?"
+msgstr "Thật sự muốn xóa bỏ tải về đã hoàn thành ra khỏi danh sách?"
+
+#: src/main_window_cb.c:616
+msgid "Really remove inactive downloads from the list?"
+msgstr "Thật sự muốn xóa bỏ tải về không hoạt động ra khỏi danh sách?"
+
+#: src/main_window_cb.c:645
+msgid "Really remove all downloads from the list?"
+msgstr "Thật sự muốn xóa bỏ mọi tải về ra khỏi danh sách?"
+
+#: src/systray.c:135
+msgid "Nothing"
+msgstr "Không có"
+
+#: src/systray.c:142
+msgid "Downloads"
+msgstr "Các tải về"
+
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr "Lỗi socket"
+
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Kết nối bị từ chối\n"
+
+#: src/wget-log.c:87
+msgid "No route to host"
+msgstr "Không có route đến host"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr "Kết nối bị từ chối khi tải về URL:\n"
+
+#: src/wget-log.c:91
+msgid "Host not found\n"
+msgstr "Không thấy host\n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Giao thức không được hỗ trợ - bạn cần wget >= 1.7 cho https:\n"
+
+#: src/wget-log.c:96
+msgid "Refusing to truncate existing file"
+msgstr "Từ chối cắt xén tập tin hiện có"
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Lỗi không xác định"
+
+#: src/wget-log.c:109
+#: src/wget-log.c:115
+msgid "File not found"
+msgstr "Không thấy tập tin"
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "Không thể tiếp tục tải về, tập tin cục bộ hiện có xung đột với tập tin ở xa"
+
+#: src/wget-log.c:180
+msgid "Can't write to target directory"
+msgstr "Không thể ghi vào thư mục đích"
+
