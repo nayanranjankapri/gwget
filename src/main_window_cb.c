@@ -251,6 +251,9 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	}
 	entry = glade_xml_get_widget(xml_pref,"num_retries_entry");
 	gtk_entry_set_text(GTK_ENTRY(entry),g_strdup_printf("%d",gwget_pref.num_retries));
+
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"resume_at_start");
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.resume_at_start);
 	
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.no_create_directories);
@@ -265,6 +268,9 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"max_depth");
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_depth);
+
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_speed_check");
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.limit_speed);
 
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_speed_spin");
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_speed);
