@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-16 22:15+0100\n"
-"PO-Revision-Date: 2004-12-16 22:41+0100\n"
+"POT-Creation-Date: 2004-12-18 09:52+0100\n"
+"PO-Revision-Date: 2004-12-18 10:34+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "aplikácia gwget"
 
 #: data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
-msgstr ""
+msgstr "továreň aktivácie gwget"
 
 #: data/about.glade.h:1
 msgid "About Gwget"
@@ -236,7 +236,7 @@ msgstr "Pokračovať v sťahovaní pri spustení"
 
 #: data/preferences.glade.h:11
 msgid "Convert links"
-msgstr ""
+msgstr "Konvertovať odkazy"
 
 #: data/preferences.glade.h:12 src/main_window.c:284
 msgid "Current Size"
@@ -260,11 +260,11 @@ msgstr "Rýchlosť sťahovania"
 
 #: data/preferences.glade.h:17
 msgid "Download page requisites"
-msgstr ""
+msgstr "Stiahnuť to, čo stránka potrebuje"
 
 #: data/preferences.glade.h:18 src/main_window.c:316
 msgid "Elapsed Time"
-msgstr ""
+msgstr "Uplynutý čas"
 
 #: data/preferences.glade.h:19
 msgid "Follow relative links only"
@@ -332,7 +332,7 @@ msgstr "Zlyhalo"
 
 #: src/gwget_data.c:177
 msgid "stalled"
-msgstr ""
+msgstr "zastavené"
 
 #: src/gwget_data.c:210
 msgid "Waiting"
@@ -356,7 +356,7 @@ msgstr "Pripojené"
 
 #: src/gwget_data.c:220
 msgid "Retrieving"
-msgstr ""
+msgstr "Sťahovanie"
 
 #: src/gwget_data.c:222
 msgid "Completed"
@@ -412,6 +412,8 @@ msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
+"Ostalo aspoň jedno aktívne sťahovanie. Naozaj zrušiť všetky bežiace "
+"prenosy?"
 
 #: src/main_window_cb.c:94
 msgid "Error in download"
@@ -439,6 +441,8 @@ msgid ""
 "Really cancel current download?\n"
 "(Url: %s)"
 msgstr ""
+"Naozaj zrušiť aktuálne sťahovanie?\n"
+"(Url: %s)"
 
 #: src/main_window_cb.c:559
 msgid "Cancel download?"
@@ -478,7 +482,7 @@ msgstr "Nie je cesta k hostiteľovi"
 
 #: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
-msgstr ""
+msgstr "Spojenie odmietnuté pri sťahovaní URL:\n"
 
 #: src/wget-log.c:91
 msgid "Host not found\n"
@@ -490,7 +494,7 @@ msgstr "Nepodporovaný protokol - pre https potrebujete wget >= 1.7:\n"
 
 #: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
-msgstr ""
+msgstr "Odmietam orezať existujúci súbor"
 
 #: src/wget-log.c:98
 msgid "Unknown error"
@@ -503,6 +507,8 @@ msgstr "Súbor nebol nájdený"
 #: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
+"Nemôžem pokračovať v sťahovaní, existujúci lokálny súbor je v konflikte so "
+"vzdialeným súborom"
 
 #: src/wget-log.c:180
 msgid "Can't write to target directory"
