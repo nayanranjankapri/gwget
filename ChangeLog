@@ -1,3 +1,7 @@
+2004-09-28  Abel Cheung  <maddog@linuxhall.org>
+
+	* configure.in: Added "zh_TW" to ALL_LINGUAS.
+
 2004-09-22  Julien Cegarra <JulienC@psychologie-fr.org>
 
 	* main_window_cb.c: Add continue_all_downloads (Julien Cegarra)
