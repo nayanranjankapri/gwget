@@ -1,3 +1,7 @@
+2004-08-14  Adam Weinberger  <adamw@gnome.org>
+
+	* en_CA.po: Added Canadian English translation.
+
 2004-08-13  Christian Rose  <menthos@menthos.com>
 
 	* POTFILES.in: Added [encoding: UTF-8] keyword.
