@@ -1,7 +1,7 @@
 # Slovak translations for gwget package.
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
-# Marcel Telka <marcel@telka.sk>, 2004.
+# Marcel Telka <marcel@telka.sk>, 2004, 2005.
 #
 # $Id$
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-28 01:02+0100\n"
-"PO-Revision-Date: 2004-12-28 01:03+0100\n"
+"POT-Creation-Date: 2005-01-04 20:37+0100\n"
+"PO-Revision-Date: 2005-01-04 20:51+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -34,10 +34,10 @@ msgid "GNU GPL Version 2"
 msgstr "GNU GPL verzia 2"
 
 #: data/about.glade.h:3
-msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget: Správca sťahovania pre Gnome 2"
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Gwget: Správca sťahovania pre GNOME"
 
-#: data/about.glade.h:4
+#: data/about.glade.h:4 src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr "Marcel Telka <marcel@telka.sk>"
 
@@ -71,12 +71,12 @@ msgid "Information"
 msgstr "Informácie"
 
 #: data/gwget.glade.h:8
-msgid "Local Directory: "
-msgstr "Miestny priečinok: "
+msgid "Local Directory:"
+msgstr "Miestny priečinok:"
 
 #: data/gwget.glade.h:9
-msgid "Local File: "
-msgstr "Miestny súbor: "
+msgid "Local File:"
+msgstr "Miestny súbor:"
 
 #: data/gwget.glade.h:10
 msgid "Multimedia files (Videos and images)"
@@ -178,25 +178,93 @@ msgstr "_Nový"
 msgid "_Toolbar"
 msgstr "_Nástrojová lišta"
 
-#: data/newdownload.glade.h:1
-msgid "*"
-msgstr "*"
+#: data/gwget.schemas.in.h:1
+msgid "Convert Links"
+msgstr "Konvertovať odkazy"
 
-#: data/newdownload.glade.h:2
+#: data/gwget.schemas.in.h:2
+msgid "Convert to relative links in recursive mode."
+msgstr "Konvertovať na relatívne odkazy v rekurzívnom režime."
+
+#: data/gwget.schemas.in.h:3
+msgid "Default Download Directory"
+msgstr "Štandardný priečinok na sťahovanie"
+
+#: data/gwget.schemas.in.h:4
+msgid "Download Page Requisites"
+msgstr "Stiahnuť to, čo stránka potrebuje"
+
+#: data/gwget.schemas.in.h:5
+msgid "Follow relative links"
+msgstr "Nasledovať relatívne odkazy"
+
+#: data/gwget.schemas.in.h:6
+msgid "Limit maximum speed"
+msgstr "Obmedziť najvyššiu rýchlosť"
+
+#: data/gwget.schemas.in.h:7
+msgid "Maximum depth in recursive mode"
+msgstr "Maximálna hĺbka v rekurzívnom režime"
+
+#: data/gwget.schemas.in.h:8
+msgid "Maximum speed limit"
+msgstr "Obmedzenie najvyššej rýchlosti"
+
+#: data/gwget.schemas.in.h:9
+msgid "Number of downloads"
+msgstr "Počet sťahovaní"
+
+#: data/gwget.schemas.in.h:10
+msgid "Number of retries"
+msgstr "Počet opakovaní"
+
+#: data/gwget.schemas.in.h:11
+msgid "Open the file after download"
+msgstr "Otvoriť súbor po stiahnutí"
+
+#: data/gwget.schemas.in.h:12
+msgid "Resume downloads at startup"
+msgstr "Pokračovať v sťahovaní pri spustení"
+
+#: data/gwget.schemas.in.h:13
+msgid "View download speed column"
+msgstr "Zobraziť stĺpec s rýchlosťou sťahovania"
+
+#: data/gwget.schemas.in.h:14
+msgid "View elapsed time column"
+msgstr "Zobraziť stĺpec s uplynulým časom"
+
+#: data/gwget.schemas.in.h:15
+msgid "View percentage column"
+msgstr "Zobraziť stĺpec s percentami"
+
+#: data/gwget.schemas.in.h:16
+msgid "View remaining time column"
+msgstr "Zobraziť stĺpec so zostávajúcim časom"
+
+#: data/gwget.schemas.in.h:17
+msgid "View toolbar"
+msgstr "Zobraziť nástrojovú lištu"
+
+#: data/gwget.schemas.in.h:18
+msgid "View total size column"
+msgstr "Zobraziť stĺpec s celkovou veľkosťou"
+
+#: data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Nové sťahovanie</span>"
 
-#: data/newdownload.glade.h:3
+#: data/newdownload.glade.h:2
 msgid "New Download"
 msgstr "Nové sťahovanie"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+#: data/newdownload.glade.h:3 data/preferences.glade.h:33
 msgid "Save in:"
-msgstr "Uložiťdo:"
+msgstr "Uložiť do:"
 
-#: data/newdownload.glade.h:5
-msgid "URL: "
-msgstr "URL: "
+#: data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -238,7 +306,7 @@ msgstr "Pokračovať v sťahovaní pri spustení"
 msgid "Convert links"
 msgstr "Konvertovať odkazy"
 
-#: data/preferences.glade.h:12 src/main_window.c:284
+#: data/preferences.glade.h:12 src/main_window.c:294
 msgid "Current Size"
 msgstr "Aktuálna veľkosť"
 
@@ -262,7 +330,7 @@ msgstr "Rýchlosť sťahovania"
 msgid "Download page requisites"
 msgstr "Stiahnuť to, čo stránka potrebuje"
 
-#: data/preferences.glade.h:18 src/main_window.c:316
+#: data/preferences.glade.h:18 src/main_window.c:326
 msgid "Elapsed Time"
 msgstr "Uplynutý čas"
 
@@ -275,16 +343,16 @@ msgid "General"
 msgstr "Všeobecné"
 
 #: data/preferences.glade.h:21
-msgid "Limit download speed to: "
-msgstr "Obmedziť rýchlosť sťahovania na: "
+msgid "Limit download speed to:"
+msgstr "Obmedziť rýchlosť sťahovania na:"
 
 #: data/preferences.glade.h:22
 msgid "Manual proxy configuration"
 msgstr "Ručná konfigurácia proxy"
 
 #: data/preferences.glade.h:23
-msgid "Maximum depth level: "
-msgstr "Maximálna hĺbka: "
+msgid "Maximum depth level:"
+msgstr "Maximálna hĺbka:"
 
 #: data/preferences.glade.h:24
 msgid "Network"
@@ -298,7 +366,7 @@ msgstr "Počet opakovaní:"
 msgid "Open files automatically after download"
 msgstr "Otvoriť súbory automaticky po stiahnutí"
 
-#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
+#: data/preferences.glade.h:27 src/main_window.c:315 src/main_window.c:321
 msgid "Percentage"
 msgstr "Percentá"
 
@@ -314,11 +382,11 @@ msgstr "Predvoľby"
 msgid "Proxy:"
 msgstr "Proxy:"
 
-#: data/preferences.glade.h:32 src/main_window.c:326
+#: data/preferences.glade.h:32 src/main_window.c:336
 msgid "Remaining Time"
 msgstr "Zostávajúci čas"
 
-#: data/preferences.glade.h:34 src/main_window.c:295
+#: data/preferences.glade.h:34 src/main_window.c:305
 msgid "Total Size"
 msgstr "Celková veľkosť"
 
@@ -375,47 +443,47 @@ msgstr ""
 msgid "Error"
 msgstr "Chyba"
 
-#: src/gwget_data.c:615
+#: src/gwget_data.c:616
 msgid "Unable to add this download"
 msgstr "Nepodarilo sa pridať toto sťahovanie"
 
-#: src/gwget_data.c:615
+#: src/gwget_data.c:616
 msgid "This download is already added"
 msgstr "Toto sťahovanie je už pridané"
 
-#: src/gwget_data.c:663 src/main_window_cb.c:99
+#: src/gwget_data.c:664 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Chyba pri otváraní súboru"
 
-#: src/gwget_data.c:663 src/main_window_cb.c:99
+#: src/gwget_data.c:664 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
-#: src/main_window.c:266
+#: src/main_window.c:276
 msgid "File Name"
 msgstr "Názov súboru"
 
-#: src/main_window.c:273
+#: src/main_window.c:283
 msgid "State"
 msgstr "Stav"
 
-#: src/main_window.c:336
+#: src/main_window.c:346
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: src/main_window.c:374
+#: src/main_window.c:385
 msgid "Error starting the download"
 msgstr "Chyba pri štarte sťahovania"
 
-#: src/main_window.c:374
-msgid "There is a unexpected error starting the download"
+#: src/main_window.c:385
+msgid "There was an unexpected error starting the download"
 msgstr "Vyskytla sa neočakávaná chyba pri štarte sťahovania"
 
-#: src/main_window.c:565
+#: src/main_window.c:576
 msgid "Cancel current downloads?"
 msgstr "Zrušiť aktuálne sťahovania?"
 
-#: src/main_window.c:565
+#: src/main_window.c:576
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -427,12 +495,8 @@ msgid "Error in download"
 msgstr "Chyba pri sťahovaní"
 
 #: src/main_window_cb.c:167
-msgid "Download Manager for Gnome2."
-msgstr "Správca sťahovania pre Gnome2."
-
-#: src/main_window_cb.c:174
-msgid "translator_credits"
-msgstr "Marcel Telka <marcel@telka.sk>"
+msgid "Download Manager for GNOME."
+msgstr "Správca sťahovania pre GNOME."
 
 #: src/main_window_cb.c:186
 msgid "Gwget"
