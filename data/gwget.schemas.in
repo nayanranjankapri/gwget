@@ -224,7 +224,7 @@
 	 <type>bool</type>
 	 <default>false</default>
 	 <locale name="C">
-	   <short>View elapse time column</short>
+	   <short>View elapsed time column</short>
 	   <long></long>
 	 </locale>
 	</schema>
@@ -248,7 +248,7 @@
 	 <type>bool</type>
 	 <default>true</default>
 	 <locale name="C">
-	   <short>View Remain time column</short>
+	   <short>View remaining time column</short>
 	   <long></long>
 	 </locale>
 	</schema>
