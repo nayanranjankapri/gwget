@@ -110,7 +110,6 @@ on_cancel_button_clicked(GtkWidget *widget,gpointer data)
 	
 	gtk_widget_hide(window);
 }
-	
 
 void 
 create_new_window(void)
@@ -143,34 +142,25 @@ create_new_window(void)
 void
 on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 {
-	GtkWidget *fs=NULL;
+	GtkWidget *filesel,*save_in_entry;
 	
-	fs=glade_xml_get_widget(xml_new,"new_fileselection1");
-	gtk_widget_set_sensitive (GTK_WIDGET(GTK_FILE_SELECTION(fs)->file_list),FALSE);
-	gtk_widget_show(fs);
-	
-}
-
-void
-on_new_fs_cancel_button_clicked(GtkWidget *widget, gpointer data)
-{
-	GtkWidget *fs=NULL;
-	
-	fs=glade_xml_get_widget(xml_new,"new_fileselection1");
-	gtk_widget_hide(fs);
-}
-
-
-void
-on_new_fs_ok_button_clicked(GtkWidget *widget, gpointer data)
-{
-	GtkWidget *fs=NULL,*save_in_entry=NULL;
-	
-	fs=glade_xml_get_widget(xml_new,"new_fileselection1");
+	filesel = gtk_file_chooser_dialog_new  (_("Select Folder"),
+											NULL,
+											GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
+											GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+				      						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
+											NULL);
 	
 	save_in_entry = glade_xml_get_widget(xml_new,"save_in_entry");
-	
-	gtk_entry_set_text(GTK_ENTRY(save_in_entry),gtk_file_selection_get_filename(GTK_FILE_SELECTION(fs)));
+	if (gtk_dialog_run (GTK_DIALOG (filesel)) == GTK_RESPONSE_ACCEPT) {
+		char *directory;
 		
-	gtk_widget_hide(fs);
+		directory = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(filesel));
+		gtk_entry_set_text(GTK_ENTRY(save_in_entry),directory);
+		
+		g_free(directory);
+	}
+	
+	gtk_widget_destroy(filesel);
+
 }
