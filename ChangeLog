@@ -1,5 +1,10 @@
 2005-01-15  David Sedeño <david@alderia.com>
 
+	* data/gwget.glade: Skip dialogs from taskbar and pager. Hide hseparator for recursive
+	options dialog.
+
+2005-01-15  David Sedeño <david@alderia.com>
+
 	* data/new_download.glade: Delete horizontal separator. Hide from task list.
 
 2005-01-15  David Sedeño <david@alderia.com>
