@@ -1,5 +1,10 @@
 2004-08-14  David Sedeño <david@alderia.com>
 
+	* src/systray.c (systray_clicked): Hide main window
+	  when clicked if main window is visble.
+
+2004-08-14  David Sedeño <david@alderia.com>
+
 	* data/about.glade, data/gwget.glade, 
 	  data/preferences.glade: Fix some translations
 	* main_window_cb_c: "inactive" instead of "not running"

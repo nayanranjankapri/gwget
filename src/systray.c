@@ -189,7 +189,10 @@ systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data)
 		systray_generate_menu(event);
 	} else {
 		window = glade_xml_get_widget(xml,"main_window");
-		gtk_widget_show(GTK_WIDGET(window));
+		if((gdk_window_get_state(GTK_WIDGET(window)->window) & GDK_WINDOW_STATE_ICONIFIED) || !GTK_WIDGET_VISIBLE(window)) 
+			gtk_widget_show(GTK_WIDGET(window));
+		else 
+			gtk_widget_hide(GTK_WIDGET(window));
 	}
 }
 
