@@ -1,6 +1,7 @@
 2004-08-31  David Sedeño <david@alderia.com>
 
 	* pixmaps/Makefile.am: Fix icon installation.
+	* gwget.desktop.in: Icon gwget.png instead of gwget/gwget.png.
  
 2004-08-29  David Sedeño <david@alderia.com>
 

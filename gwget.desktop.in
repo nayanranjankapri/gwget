@@ -3,7 +3,7 @@
 Name=Download Manager
 Comment=Download files from the Internet
 Exec=gwget
-Icon=@PACKAGE_PIXMAPS_DIR@/gwget.xpm 
+Icon=gwget.png
 Terminal=false
 MultipleArgs=false
 Type=Application
