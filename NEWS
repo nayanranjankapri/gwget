@@ -1,3 +1,21 @@
+0.14
+Fixed: 
+* Put the correct filename in recursive mode.
+* Porcentage column works in recursive mode.
+Change: 
+* Show recursive options with html, htm, php and asp extensions in the url
+
+
+0.13.1
+* Fix a critical bug about column order.
+
+0.13
+* GtkFileChooser support.
+* Drag and Drop fixed.
+* Support d&d to the notification icon.
+* UI fixed (Thanks to Miroslav Strugarevic)
+* Column with the image of the file mime type added.
+
 0.12
 Features:
 * One of the most recuested feature it's here at last: systray notification integration!

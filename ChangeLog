@@ -1,3 +1,29 @@
+2004-07-30  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Fix typo in popup window
+	* configure.in: update version.
+	* include/main_window_cb.h: Added two functions for
+	  limit speed option.
+	* include/main_window.h: Put correct order of IMAGE_COLUMN
+	* include/gwget.h: Added limit_speed and max_speed
+	  to preferences struct.
+	* src/main_window.c (gwget_get_defaults_from_gconf): Get
+	  limit speed pref from gconf.
+	  (show_prefered_columns): Set the buttons of limit 
+	  speed sensitive according to gconf pref.
+	* src/main_window_cb.c (on_pref_ok_button_clicked): Set
+	  the limit speed pref into gconf.
+	  (on_limit_speed_check_toggled): new function to set
+	  sensitive the spin button of the limit speed.
+	* data/preferences.glade: Added limit speed option
+
+2004-07-28  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Modify the main window title.
+	* data/preferences: Added limit speed option.
+	* include/main_window_cb.h: 
+	  on_limit_speed_check_toggled added.
+
 2004-07-22  David Sedeño <david@alderia.com>
 
 	* include/gwget_data.h: 
