@@ -2,24 +2,24 @@
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Filip Andonov <fandonov@iinf.bas.bg>, 2003.
 # Vladimir Petkov <vpetkov@i-space.org>, 2004.
-# Filip Andonov <fandonov@iinf.bas.bg>, 2004.
 # Alexander Shopov <ash@contact.bg>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-12 16:02+0200\n"
-"PO-Revision-Date: 2004-12-12 16:02+0200\n"
-"Last-Translator: Alexander Shopov <ash@contact.bg>\n"
+"POT-Creation-Date: 2005-01-08 13:00+0200\n"
+"PO-Revision-Date: 2005-01-08 12:59+0200\n"
+"Last-Translator: Vladimir Petkov <vpetkov@i-space.org>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
-msgstr "Приложението gwget"
+msgstr "Програмата gwget"
 
 #: data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
@@ -34,14 +34,14 @@ msgid "GNU GPL Version 2"
 msgstr "ОПЛ на ГНУ, версия 2"
 
 #: data/about.glade.h:3
-msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget: Програма за управление на изтеглянията за Gnome 2"
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Gwget: Програма за управление на изтеглянията към GNOME"
 
-#: data/about.glade.h:4
+#: data/about.glade.h:4 src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr ""
 "Филип Андонов <fandonov@iinf.bas.bg>\n"
-"Владимир Петков <vpetkov@i-space.org>\n"
+"Владимир \"Kaladan\" Петков <vpetkov@i-space.org>\n"
 "Александър Шопов <ash@contact.bg>"
 
 #: data/gwget.glade.h:1 data/preferences.glade.h:2
@@ -54,7 +54,7 @@ msgstr "<span weight=\"bold\">Изтегляне:</span>"
 
 #: data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">Свойства</span>"
+msgstr "<span weight=\"bold\">Настройки</span>"
 
 #: data/gwget.glade.h:4
 msgid "Cancel"
@@ -74,12 +74,12 @@ msgid "Information"
 msgstr "Информация"
 
 #: data/gwget.glade.h:8
-msgid "Local Directory: "
-msgstr "Локална директория: "
+msgid "Local Directory:"
+msgstr "Локална папка:"
 
 #: data/gwget.glade.h:9
-msgid "Local File: "
-msgstr "Локален файл: "
+msgid "Local File:"
+msgstr "Локален файл:"
 
 #: data/gwget.glade.h:10
 msgid "Multimedia files (Videos and images)"
@@ -107,7 +107,7 @@ msgstr "Пауза на изтеглянето"
 
 #: data/gwget.glade.h:16
 msgid "Properties"
-msgstr "Свойства"
+msgstr "Настройки"
 
 #: data/gwget.glade.h:17
 msgid "Question"
@@ -175,31 +175,99 @@ msgstr "Адрес:"
 
 #: data/gwget.glade.h:33
 msgid "_New"
-msgstr "_Нов"
+msgstr "_Ново"
 
 #: data/gwget.glade.h:34
 msgid "_Toolbar"
 msgstr "_Лента с инструменти"
 
-#: data/newdownload.glade.h:1
-msgid "*"
-msgstr "*"
+#: data/gwget.schemas.in.h:1
+msgid "Convert Links"
+msgstr "Конвертиране на връзки"
 
-#: data/newdownload.glade.h:2
+#: data/gwget.schemas.in.h:2
+msgid "Convert to relative links in recursive mode."
+msgstr "Конвертиране до релативни връзки в рекурсивен режим."
+
+#: data/gwget.schemas.in.h:3
+msgid "Default Download Directory"
+msgstr "Стандартна директория за запазване на изтегленото"
+
+#: data/gwget.schemas.in.h:4
+msgid "Download Page Requisites"
+msgstr "Страницата за изтегляне изисква"
+
+#: data/gwget.schemas.in.h:5
+msgid "Follow relative links"
+msgstr "Следване само на релативните връзки"
+
+#: data/gwget.schemas.in.h:6
+msgid "Limit maximum speed"
+msgstr "Ограничаване на максималната скорост"
+
+#: data/gwget.schemas.in.h:7
+msgid "Maximum depth in recursive mode"
+msgstr "Максимално ниво на дълбочина в рекурсивния режим"
+
+#: data/gwget.schemas.in.h:8
+msgid "Maximum speed limit"
+msgstr "Ограничаване на максималната скорост"
+
+#: data/gwget.schemas.in.h:9
+msgid "Number of downloads"
+msgstr "Брой изтегляния"
+
+#: data/gwget.schemas.in.h:10
+msgid "Number of retries"
+msgstr "Брой на повторните опитвания"
+
+#: data/gwget.schemas.in.h:11
+msgid "Open the file after download"
+msgstr "Отвяряне на файловете след изтеглянето им"
+
+#: data/gwget.schemas.in.h:12
+msgid "Resume downloads at startup"
+msgstr "Продължаване на изтеглянията след стартиране на програмата"
+
+#: data/gwget.schemas.in.h:13
+msgid "View download speed column"
+msgstr "Показване на колоната за скоростта на изтеглянията"
+
+#: data/gwget.schemas.in.h:14
+msgid "View elapsed time column"
+msgstr "Показване на колоната за изминалото време"
+
+#: data/gwget.schemas.in.h:15
+msgid "View percentage column"
+msgstr "Показване на колоната за процентите"
+
+#: data/gwget.schemas.in.h:16
+msgid "View remaining time column"
+msgstr "Показване на колоната за оставащото време"
+
+#: data/gwget.schemas.in.h:17
+msgid "View toolbar"
+msgstr "Лента с инструменти"
+
+#: data/gwget.schemas.in.h:18
+msgid "View total size column"
+msgstr "Показване на колоната за общия размер"
+
+#: data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Ново изтегляне</span>"
 
-#: data/newdownload.glade.h:3
+#: data/newdownload.glade.h:2
 msgid "New Download"
 msgstr "Ново изтегляне"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+#: data/newdownload.glade.h:3 data/preferences.glade.h:33
 msgid "Save in:"
 msgstr "Запазване в:"
 
-#: data/newdownload.glade.h:5
-msgid "URL: "
-msgstr "Адрес: "
+#: data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "Адрес:"
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -207,7 +275,7 @@ msgstr "   "
 
 #: data/preferences.glade.h:3
 msgid "  kB/sec"
-msgstr "  kB/sec"
+msgstr "  кб/сек"
 
 #: data/preferences.glade.h:4
 msgid "<b>General</b>"
@@ -241,7 +309,7 @@ msgstr "Продължаване на изтеглянията при старт
 msgid "Convert links"
 msgstr "Конвертиране на връзки"
 
-#: data/preferences.glade.h:12 src/main_window.c:284
+#: data/preferences.glade.h:12 src/main_window.c:294
 msgid "Current Size"
 msgstr "Текущ размер"
 
@@ -251,7 +319,7 @@ msgstr "Мрежовите настройки на GNOME по подразбир
 
 #: data/preferences.glade.h:14
 msgid "Direct Internet connection"
-msgstr "Пряка връзка с Интернет"
+msgstr "Пряка връзка с интернет"
 
 #: data/preferences.glade.h:15
 msgid "Don't create directories"
@@ -265,7 +333,7 @@ msgstr "Скорост на изтеглянето"
 msgid "Download page requisites"
 msgstr "Страницата за изтегляне изисква"
 
-#: data/preferences.glade.h:18 src/main_window.c:316
+#: data/preferences.glade.h:18 src/main_window.c:326
 msgid "Elapsed Time"
 msgstr "Изминало време"
 
@@ -278,16 +346,16 @@ msgid "General"
 msgstr "Основни"
 
 #: data/preferences.glade.h:21
-msgid "Limit download speed to: "
-msgstr "Ограничаване скоростта на изтегляне до: "
+msgid "Limit download speed to:"
+msgstr "Ограничаване скоростта на изтегляне до:"
 
 #: data/preferences.glade.h:22
 msgid "Manual proxy configuration"
 msgstr "Ръчна настройка на сървъра-посредник"
 
 #: data/preferences.glade.h:23
-msgid "Maximum depth level: "
-msgstr "Максимално ниво на дълбочина: "
+msgid "Maximum depth level:"
+msgstr "Максимално ниво на дълбочина:"
 
 #: data/preferences.glade.h:24
 msgid "Network"
@@ -301,7 +369,7 @@ msgstr "Брой повторни опита:"
 msgid "Open files automatically after download"
 msgstr "Отвяряне на файловете след изтегляне"
 
-#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
+#: data/preferences.glade.h:27 src/main_window.c:315 src/main_window.c:321
 msgid "Percentage"
 msgstr "Процент"
 
@@ -317,11 +385,11 @@ msgstr "Настройки"
 msgid "Proxy:"
 msgstr "Сървър-посредник:"
 
-#: data/preferences.glade.h:32 src/main_window.c:326
+#: data/preferences.glade.h:32 src/main_window.c:336
 msgid "Remaining Time"
 msgstr "Оставащо време"
 
-#: data/preferences.glade.h:34 src/main_window.c:295
+#: data/preferences.glade.h:34 src/main_window.c:305
 msgid "Total Size"
 msgstr "Общ размер"
 
@@ -335,7 +403,7 @@ msgstr "Неуспешно"
 
 #: src/gwget_data.c:177
 msgid "stalled"
-msgstr "замръзнало"
+msgstr "застинало"
 
 #: src/gwget_data.c:210
 msgid "Waiting"
@@ -378,39 +446,47 @@ msgstr ""
 msgid "Error"
 msgstr "Грешка"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:616
 msgid "Unable to add this download"
 msgstr "Невъзможно е да се добави това изтегляне"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:616
 msgid "This download is already added"
 msgstr "Това изтегляне вече е добавено"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:664 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Грешка при отварянето на файл"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:664 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Файлът не може да бъде отворен"
 
-#: src/main_window.c:266
+#: src/main_window.c:276
 msgid "File Name"
 msgstr "Име на файл"
 
-#: src/main_window.c:273
+#: src/main_window.c:283
 msgid "State"
 msgstr "Състояние"
 
-#: src/main_window.c:336
+#: src/main_window.c:346
 msgid "Speed"
 msgstr "Скорост"
 
-#: src/main_window.c:560
+#: src/main_window.c:385
+msgid "Error starting the download"
+msgstr "Грешка при започване на изтеглянето"
+
+#: src/main_window.c:385
+msgid "There was an unexpected error starting the download"
+msgstr "Получи се неочаквана грешка при започването на изтеглянето"
+
+#: src/main_window.c:576
 msgid "Cancel current downloads?"
 msgstr "Отказ на текущите изтегляния?"
 
-#: src/main_window.c:560
+#: src/main_window.c:576
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -423,21 +499,14 @@ msgid "Error in download"
 msgstr "Грешка при изтеглянето"
 
 #: src/main_window_cb.c:167
-msgid "Download Manager for Gnome2."
-msgstr "Програма за управление на изтеглянията за Gnome2."
-
-#: src/main_window_cb.c:174
-msgid "translator_credits"
-msgstr ""
-"Филип Андонов <fandonov@iinf.bas.bg>\n"
-"Владимир Петков <vpetkov@i-space.org>\n"
-"Александър Шопов <ash@contact.bg>"
+msgid "Download Manager for GNOME."
+msgstr "Програма за управление на изтеглянията към GNOME."
 
 #: src/main_window_cb.c:186
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:140
+#: src/main_window_cb.c:503 src/new_window.c:141
 msgid "Select Folder"
 msgstr "Избор на папка"
 
