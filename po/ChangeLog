@@ -1,5 +1,9 @@
 2004-08-13  Christian Rose  <menthos@menthos.com>
 
+	* POTFILES.in: Added [encoding: UTF-8] keyword.
+
+2004-08-13  Christian Rose  <menthos@menthos.com>
+
 	* gwget.po: Removed. This is a generated file and not
 	supposed to be stored in CVS.
 	* POTFILES.in: Sorted and added missing files.
