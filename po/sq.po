@@ -1,0 +1,601 @@
+# translation of gwget to Albanian
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
+# Elian Myftiu <elian@alblinux.net>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-04 14:10+0100\n"
+"PO-Revision-Date: 2005-02-04 20:25+0100\n"
+"Last-Translator: Elian Myftiu <elian@alblinux.net>\n"
+"Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "programi gwget"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "fabrikë automatizimi gwget"
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "Rreth Gwget"
+
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL Versioni 2"
+
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Organizues Shkarkimi për GNOME"
+
+#: data/about.glade.h:4 src/main_window_cb.c:174
+msgid "translator-credits"
+msgstr "Elian Myftiu  <elian@alblinux.net>"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Shkarko:</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Pronësitë</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Anullo"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Vazhdo"
+
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:576
+#: src/main_window_cb.c:672
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Organizues Shkarkimi"
+
+#: data/gwget.glade.h:7
+msgid "Information"
+msgstr "Të dhëna"
+
+#: data/gwget.glade.h:8
+msgid "Local Directory:"
+msgstr "Kartelë Lokale:"
+
+#: data/gwget.glade.h:9
+msgid "Local File:"
+msgstr "File Lokal:"
+
+#: data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "File Multimedialë (Video dhe pamje)"
+
+#: data/gwget.glade.h:11
+msgid "New download"
+msgstr "Shkarkim i ri"
+
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Pezullo"
+
+#: data/gwget.glade.h:13
+msgid "Pause all"
+msgstr "Pezullo gjithçka"
+
+#: data/gwget.glade.h:14
+msgid "Pause all downloads"
+msgstr "Pezullo të gjitha shkarkimet"
+
+#: data/gwget.glade.h:15
+msgid "Pause download"
+msgstr "Pezullo shkarkimin"
+
+#: data/gwget.glade.h:16
+msgid "Properties"
+msgstr "Pronësitë"
+
+#: data/gwget.glade.h:17
+msgid "Question"
+msgstr "Pyetje"
+
+#: data/gwget.glade.h:18 data/preferences.glade.h:32
+msgid "Recursive"
+msgstr "Ripërsëritëse"
+
+#: data/gwget.glade.h:19
+msgid "Recursive options"
+msgstr "Mundësi ripërsëritëse"
+
+#: data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Hiq"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:655
+msgid "Remove all"
+msgstr "Hiq gjithçka"
+
+#: data/gwget.glade.h:22
+msgid "Remove all downloads from list"
+msgstr "Hiq të gjitha shkarkimet nga lista"
+
+#: data/gwget.glade.h:23 src/main_window_cb.c:597
+msgid "Remove completed"
+msgstr "Hiq të përfunduarat"
+
+#: data/gwget.glade.h:24
+msgid "Remove completed downloads from list"
+msgstr "Hiq shkarkimet e përfunduara nga lista"
+
+#: data/gwget.glade.h:25 src/main_window_cb.c:626
+msgid "Remove inactive"
+msgstr "Hiq pasivet"
+
+#: data/gwget.glade.h:26
+msgid "Remove inactive downloads from list"
+msgstr "Hiq shkarkimet jo aktive nga lista"
+
+#: data/gwget.glade.h:27
+msgid "Resume all"
+msgstr "Rifillo gjithçka"
+
+#: data/gwget.glade.h:28
+msgid "Resume all downloads"
+msgstr "Rifillo të gjitha shkarkimet"
+
+#: data/gwget.glade.h:29
+msgid "Stop and delete downloaded file"
+msgstr "Ndalo dhe fshi file-t e shkarkuar"
+
+#: data/gwget.glade.h:30
+msgid "The index file only"
+msgstr "Vetëm treguesin"
+
+#: data/gwget.glade.h:31
+msgid "This site (mirror)"
+msgstr "Kjo vendndodhje (mirror)"
+
+#: data/gwget.glade.h:32
+msgid "Url:"
+msgstr "Url:"
+
+#: data/gwget.glade.h:33
+msgid "_New"
+msgstr "_I ri"
+
+#: data/gwget.glade.h:34
+msgid "_Toolbar"
+msgstr "_Paneli i veglave"
+
+#: data/gwget.schemas.in.h:1
+msgid "Ask save in for each new download"
+msgstr "Pyet ku të ruaj për çdo shkarkim të ri"
+
+#: data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "Shndërro Lidhjet"
+
+#: data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "Shndërro ripërsëritshëm në lidhje relative."
+
+#: data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Kartela e Parazgjedhur Shkarkimi"
+
+#: data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "Kushtet e Faqes së Shkarkimit"
+
+#: data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "Ndiq lidhjet relative"
+
+#: data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Nëse e vërtetë, pyet gjithmonë për një kartelë destinacioni kur fillon një "
+"shkarkim të ri. Nëse e rremë, ruaj gjithmonë në kartelën e parazgjedhur "
+"pa pyetur përdoruesin."
+
+#: data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Kufizo shpejtësinë maksimale"
+
+#: data/gwget.schemas.in.h:9
+msgid "Maximum depth in recursive mode"
+msgstr "Thellësia maksimale në mënyrën ripërsëritëse"
+
+#: data/gwget.schemas.in.h:10
+msgid "Maximum speed limit"
+msgstr "Kufiri i shpejtësisë maksimale"
+
+#: data/gwget.schemas.in.h:11
+msgid "Number of downloads"
+msgstr "Numri i shkarkimeve"
+
+#: data/gwget.schemas.in.h:12
+msgid "Number of retries"
+msgstr "Numri i përsëritjeve"
+
+#: data/gwget.schemas.in.h:13
+msgid "Open the file after download"
+msgstr "Hap file pas shkarkimit"
+
+#: data/gwget.schemas.in.h:14
+msgid "Resume downloads at startup"
+msgstr "Rifillo shkarkimin në nisjen e programit"
+
+#: data/gwget.schemas.in.h:15
+msgid "View download speed column"
+msgstr "Shfaq kolonën e shpejtësisë së shkarkimit"
+
+#: data/gwget.schemas.in.h:16
+msgid "View elapsed time column"
+msgstr "Shfaq kolonën e kohës që kaloi"
+
+#: data/gwget.schemas.in.h:17
+msgid "View percentage column"
+msgstr "Shfaq kolonën e përqindjes"
+
+#: data/gwget.schemas.in.h:18
+msgid "View remaining time column"
+msgstr "Shfaq kolonën e kohës së mbetur"
+
+#: data/gwget.schemas.in.h:19
+msgid "View toolbar"
+msgstr "Shfaq panelin e veglave"
+
+#: data/gwget.schemas.in.h:20
+msgid "View total size column"
+msgstr "Shfaq kolonën e madhësisë së përgjithshme"
+
+#: data/newdownload.glade.h:1
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Shkarkim i Ri</span>"
+
+#: data/newdownload.glade.h:2
+msgid "New Download"
+msgstr "Shkarkim i Ri"
+
+#: data/newdownload.glade.h:3 data/preferences.glade.h:34
+msgid "Save in:"
+msgstr "Ruaj në:"
+
+#: data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  kB/sec"
+msgstr "  kB/sec"
+
+#: data/preferences.glade.h:4
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Sjellja</span>"
+
+#: data/preferences.glade.h:5
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Lista e Kolonave</span>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Të përgjithshme</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Lidhje</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Proxy Konfigurimi</span>"
+
+#: data/preferences.glade.h:9
+msgid "Ask where to save for each download"
+msgstr "Pyet ku ta ruaj për çdo shkarkim"
+
+#: data/preferences.glade.h:10
+msgid "Column List"
+msgstr "Listë Kolonash"
+
+#: data/preferences.glade.h:11
+msgid "Continue downloads on startup"
+msgstr "Vazhdo shkarkimet kur nis programin"
+
+#: data/preferences.glade.h:12
+msgid "Convert links"
+msgstr "Shndërro lidhjet"
+
+#: data/preferences.glade.h:13 src/main_window.c:317
+msgid "Current Size"
+msgstr "Madhësia e Tanishme"
+
+#: data/preferences.glade.h:14
+msgid "Default GNOME network settings"
+msgstr "Rregullimet e parazgjedhura të rrjetit për GNOME"
+
+#: data/preferences.glade.h:15
+msgid "Direct Internet connection"
+msgstr "Lidhje e drejtpërdrejtë me Internetin"
+
+#: data/preferences.glade.h:16
+msgid "Don't create directories"
+msgstr "Mos krijo kartela"
+
+#: data/preferences.glade.h:17
+msgid "Download Speed"
+msgstr "Shpejtësia e Shkarkimit"
+
+#: data/preferences.glade.h:18
+msgid "Download page requisites"
+msgstr "Kushtet e faqes së shkarkimit"
+
+#: data/preferences.glade.h:19 src/main_window.c:349
+msgid "Elapsed Time"
+msgstr "Koha që kaloi"
+
+#: data/preferences.glade.h:20
+msgid "Follow relative links only"
+msgstr "Ndiq vetëm lidhjet relative"
+
+#: data/preferences.glade.h:21
+msgid "General"
+msgstr "Të përgjithshme"
+
+#: data/preferences.glade.h:22
+msgid "Limit download speed to:"
+msgstr "Kufizo shpejtësinë e shkarkimit në:"
+
+#: data/preferences.glade.h:23
+msgid "Manual proxy configuration"
+msgstr "Konfigurim manual proxy"
+
+#: data/preferences.glade.h:24
+msgid "Maximum depth level:"
+msgstr "Niveli i thellësisë maksimale:"
+
+#: data/preferences.glade.h:25
+msgid "Network"
+msgstr "Rrjeti"
+
+#: data/preferences.glade.h:26
+msgid "Number of retries:"
+msgstr "Numri i ripërpjekeve:"
+
+#: data/preferences.glade.h:27
+msgid "Open files automatically after download"
+msgstr "Hap file-t automatikisht pas shkarkimit"
+
+#: data/preferences.glade.h:28 src/main_window.c:338 src/main_window.c:344
+msgid "Percentage"
+msgstr "Përqindja"
+
+#: data/preferences.glade.h:29
+msgid "Port:"
+msgstr "Porta:"
+
+#: data/preferences.glade.h:30
+msgid "Preferences"
+msgstr "Preferimet"
+
+#: data/preferences.glade.h:31
+msgid "Proxy:"
+msgstr "Proxy:"
+
+#: data/preferences.glade.h:33 src/main_window.c:359
+msgid "Remaining Time"
+msgstr "Koha e Mbetur"
+
+#: data/preferences.glade.h:35 src/main_window.c:328
+msgid "Total Size"
+msgstr "Madhësia e Përgjithshme"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "E panjohur"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Dështoi"
+
+#: src/gwget_data.c:177
+msgid "stalled"
+msgstr "në pritje"
+
+#: src/gwget_data.c:210
+msgid "Waiting"
+msgstr "Në pritje"
+
+#: src/gwget_data.c:212
+msgid "Not Started"
+msgstr "Ndalur"
+
+#: src/gwget_data.c:214
+msgid "Not Running"
+msgstr "Jo në Ekzekutim"
+
+#: src/gwget_data.c:216
+msgid "Not Connected"
+msgstr "Shkëputur"
+
+#: src/gwget_data.c:218
+msgid "Connected"
+msgstr "Lidhur"
+
+#: src/gwget_data.c:220
+msgid "Retrieving"
+msgstr "Duke marrë"
+
+#: src/gwget_data.c:222
+msgid "Completed"
+msgstr "Përfunduar"
+
+#: src/gwget_data.c:226
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Shkarkimi Përfundoi\n"
+"(%s)"
+
+#: src/gwget_data.c:233
+msgid "Error"
+msgstr "Gabim"
+
+#: src/gwget_data.c:616
+msgid "Unable to add this download"
+msgstr "I pamundur shtimi i këtij shkarkimi"
+
+#: src/gwget_data.c:616
+msgid "This download is already added"
+msgstr "Ky shkarkim tashmë është shtuar"
+
+#: src/gwget_data.c:664 src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Gabim në hapjen e file-it"
+
+#: src/gwget_data.c:664 src/main_window_cb.c:99
+msgid "Couldn't open the file"
+msgstr "E pamundur hapja e file-it"
+
+#: src/main_window.c:299
+msgid "File Name"
+msgstr "Emri i File-it"
+
+#: src/main_window.c:306
+msgid "State"
+msgstr "Gjendja"
+
+#: src/main_window.c:369
+msgid "Speed"
+msgstr "Shpejtësia"
+
+#: src/main_window.c:415
+msgid "Error starting the download"
+msgstr "Gabim në fillimin e shkarkimit"
+
+#: src/main_window.c:415
+msgid "There was an unexpected error starting the download"
+msgstr "Ndodhi një gabim i papritur kur filloi shkarkimi"
+
+#: src/main_window.c:605
+msgid "Cancel current downloads?"
+msgstr "Ta anulloj shkarkimin e tanishëm?"
+
+#: src/main_window.c:605
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Ka ende të paktën një shkarkim aktiv. Vërtet ti anulloj të gjithë shkarkimet "
+"në ekzekutim e sipër?"
+
+#: src/main_window_cb.c:94
+msgid "Error in download"
+msgstr "Gabim në shkarkim"
+
+#: src/main_window_cb.c:167
+msgid "Download Manager for GNOME."
+msgstr "Organizues Shkarkimi për GNOME."
+
+#: src/main_window_cb.c:186
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:513 src/new_window.c:138
+msgid "Select Folder"
+msgstr "Zgjidh Kartelën"
+
+#: src/main_window_cb.c:568
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(Url: %s)"
+msgstr ""
+"Vërtet ta anulloj shkarkimin e tanishëm?\n"
+"(Url: %s)"
+
+#: src/main_window_cb.c:569
+msgid "Cancel download?"
+msgstr "Ta anulloj shkarkimin?"
+
+#: src/main_window_cb.c:597
+msgid "Really remove completed downloads from the list?"
+msgstr "Vërtet ti heq shkarkimet e përfunduara nga lista?"
+
+#: src/main_window_cb.c:626
+msgid "Really remove inactive downloads from the list?"
+msgstr "Vërtet ti heq shkarkimet pasive nga lista?"
+
+#: src/main_window_cb.c:655
+msgid "Really remove all downloads from the list?"
+msgstr "Vërtet ti heq të gjitha shkarkimet nga lista?"
+
+#: src/systray.c:135
+msgid "Nothing"
+msgstr "Asgjë"
+
+#: src/systray.c:142
+msgid "Downloads"
+msgstr "Shkarkimet"
+
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr "Gabim në socket"
+
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Lidhje e refuzuar\n"
+
+#: src/wget-log.c:87
+msgid "No route to host"
+msgstr "S'ka udhë për në strehë"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr "Lidhje e refuzuar ndërsa po shkarkoja URL:\n"
+
+#: src/wget-log.c:91
+msgid "Host not found\n"
+msgstr "Streha nuk u gjet\n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Protokoll i palejueshëm - të duhet wget >=1.7 për https:\n"
+
+#: src/wget-log.c:96
+msgid "Refusing to truncate existing file"
+msgstr "Duke refuzuar copëzimin e këtij file-i"
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Gabim i panjohur"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+msgid "File not found"
+msgstr "File nuk u gjet"
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "Shkarkimi nuk mundi të vazhdojë, file lokal bie në konflikt me atë në distancë"
+
+#: src/wget-log.c:180
+msgid "Can't write to target directory"
+msgstr "I pamundur shkrimi në kartelën e caktuar"
+
