@@ -8,3 +8,6 @@ gwget_pixmaps_DATA = \
 	gwget-large.png
 
 EXTRA_DIST = $(gwget_pixmaps_DATA)
+
+icondir = $(datadir)/pixmaps
+icon_DATA = gwget.png

@@ -1,3 +1,7 @@
+2004-08-31  David Sedeño <david@alderia.com>
+
+	* pixmaps/Makefile.am: Fix icon installation.
+ 
 2004-08-29  David Sedeño <david@alderia.com>
 
 	* configure.in: Added fr to ALL_LINGUAS.
