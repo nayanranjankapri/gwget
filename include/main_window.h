@@ -55,8 +55,10 @@ guint dnd_type;
 
 /* target types for dnd */
 static  GtkTargetEntry dragtypes[] = {
-        { "text/uri-list", 0, TARGET_URI_LIST },
-        { "text/plain", 0, TARGET_NETSCAPE_URL }
+        { "text/uri-list", 	0, TARGET_URI_LIST },
+		{ "x-url/http", 		0, TARGET_NETSCAPE_URL },
+        { "x-url/ftp", 		0, TARGET_NETSCAPE_URL },
+		{ "_NETSCAPE_URL", 	0, TARGET_NETSCAPE_URL }
 };
 
 GladeXML *xml;
