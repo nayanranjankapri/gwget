@@ -1,6 +1,6 @@
 # Catalan translation for gwget
 # Copyright (C) 2005, The Free Software Foundation, Inc.
-# This file is distributed under the same license as the gwgetpackage.
+# This file is distributed under the same license as the gwget package.
 # Josep Puigdemont i Casamajó <josep@imatge-sintetica.com>, 2005.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: tradgnome@softcatala.org\n"
 "POT-Creation-Date: 2005-03-27 03:01+0200\n"
-"PO-Revision-Date: 2005-03-27 03:30+0200\n"
+"PO-Revision-Date: 2005-03-31 16:03+0200\n"
 "Last-Translator: Josep Puigdemont i Casamajó <josep@imatge-sintetica.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -122,7 +122,7 @@ msgstr "Suprimeix"
 
 #: ../data/gwget.glade.h:21 ../src/main_window_cb.c:659
 msgid "Remove all"
-msgstr "Suprieix-les totes"
+msgstr "Suprimeix-les totes"
 
 #: ../data/gwget.glade.h:22
 msgid "Remove all downloads from list"
@@ -162,7 +162,7 @@ msgstr "Només el fitxer índex"
 
 #: ../data/gwget.glade.h:31
 msgid "This site (mirror)"
-msgstr "Aquest lloc (mirall)"
+msgstr "Aquest lloc (rèplica)"
 
 #: ../data/gwget.glade.h:32 ../data/newdownload.glade.h:4
 msgid "URL:"
@@ -178,7 +178,7 @@ msgstr "_Barra d'eines"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask save in for each new download"
-msgstr "Pregunta on desar per a cada descàrrega nova"
+msgstr "Pregunta on desar cada descàrrega nova"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -205,9 +205,9 @@ msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Si és cert, sempre es faci una descàrrega nova, es preguntarà el directori "
-"destí. Si és fals, sempre es desaran les descàrregues en el directori "
-"predeterminat sense pregunat a l'usuari."
+"Si és cert, sempre que es faci una descàrrega nova, es preguntarà el "
+"directori destí. Si és fals, sempre es desaran les descàrregues en el "
+"directori predeterminat sense pregunar a l'usuari."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -223,7 +223,7 @@ msgstr "Profunditat màxima en mode recursiu"
 
 #: ../data/gwget.schemas.in.h:11
 msgid "Maximum number of simultaneous downloads"
-msgstr "Nombre màxim de descàrregues simulàtnies"
+msgstr "Nombre màxim de descàrregues simultànies"
 
 #: ../data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
@@ -399,7 +399,7 @@ msgstr "_Limita la velocitat de descàrrega a:"
 
 #: ../data/preferences.glade.h:32
 msgid "_Manual proxy configuration"
-msgstr "Configuració manual del servidor intermediari"
+msgstr "Configuració _manual del servidor intermediari"
 
 #: ../data/preferences.glade.h:33
 msgid "_Maximum depth level:"
@@ -411,7 +411,7 @@ msgstr "_Nombre d'intents:"
 
 #: ../data/preferences.glade.h:35
 msgid "_Open files automatically after download"
-msgstr "_Obdre els fitxers automàticament després de descarregar-los"
+msgstr "_Obre els fitxers automàticament després de descarregar-los"
 
 #: ../data/preferences.glade.h:36
 msgid "_Percentage"
@@ -586,15 +586,15 @@ msgstr "Voleu cancel·lar les descàrregues?"
 #: ../src/main_window_cb.c:601
 msgid "Really remove completed downloads from the list?"
 msgstr ""
-"Esteu segur de voler suprimir les descàrregues finalitzades de la llista?"
+"Esteu segur de voler suprimir de la llista les descàrregues finalitzades?"
 
 #: ../src/main_window_cb.c:630
 msgid "Really remove inactive downloads from the list?"
-msgstr "Esteu segur de voler suprimir les descàrregues inactives de la llista?"
+msgstr "Esteu segur de voler suprimir de la llista les descàrregues inactives?"
 
 #: ../src/main_window_cb.c:659
 msgid "Really remove all downloads from the list?"
-msgstr "Esteu segur de voler suprimir totes les descàrregues de la llista?"
+msgstr "Esteu segur de voler suprimir de la llista totes les descàrregues?"
 
 #: ../src/systray.c:150
 msgid "Nothing"
