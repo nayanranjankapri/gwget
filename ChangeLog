@@ -1,3 +1,7 @@
+2005-03-07  Alessio Frusciante  <algol@firenze.linux.it>
+
+	* configure.in: Added "it" (Italian) to ALL_LINGUAS.
+
 2005-03-05 Julien Cegarra <JulienC@psychologie-fr.org>
 
 	* data/preferences.glade, data/gwget.schemas.in :
