@@ -1,3 +1,7 @@
+2005-03-26  Josep Puigdemont <josep@imatge-sintetica.com>
+
+	* configure.in: Added "ca" (Catalan) to ALL_LINGUAS
+
 2005-03-20  Pedro Villavicencio Garrido  <pvillavi@gnome.org>
 
 	* src/main_window_cb.c (on_about1_activate): use GtkAboutDialog instead
