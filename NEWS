@@ -1,3 +1,17 @@
+============
+Version 0.93
+============
+Features: 
+	* Gnome Session support (Ivan Yosifov).
+	* Added --trayicon option to command line (Ivan Yosifov).
+	* Option of asking where to save a file at each download (David Sedeño).
+
+Fixes: 
+	* Fix a crash (Thanks to Thorsten Leemhuis for the debbuging info).
+
+Translations:
+	* Update: cs (Miloslav Trmac),  pt_BR (Raphael Higino), sk (Marcel Telka), nl (Laurens Buhler), es (Francisco Javier F. Serrador), lt (Lech Jankowski), de (Hendrik Brandt), en_CA (Adam Weinberger), pt_BR (Raphael Higino)
+
 ==============
 Version 0.92.1
 ==============

@@ -1,5 +1,9 @@
 2005-01-24  David Sedeño <david@alderia.com>
 
+	* configure.in: Version 0.93
+
+2005-01-24  David Sedeño <david@alderia.com>
+
 	Patch from Ivan Yosifov for support --trayonly switch. See bug
 	#164699.
 	* src/main.c: Support for --trayonly switch in command line.
