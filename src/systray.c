@@ -117,6 +117,9 @@ systray_generate_menu(GdkEventButton *event)
 	gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
 	item = gtk_image_menu_item_new_from_stock(GTK_STOCK_QUIT, NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(menu), item);
+	gtk_signal_connect (GTK_OBJECT (item), "activate", 
+			    GTK_SIGNAL_FUNC(gwget_quit), 
+			    NULL);
 	/* show */
 	gtk_widget_show_all(GTK_WIDGET(menu));
 	gtk_menu_popup(GTK_MENU(menu), NULL, NULL, NULL, NULL, event->button, event->time);

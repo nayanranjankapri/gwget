@@ -90,4 +90,6 @@ void on_treeview_drag_received(GtkWidget * widget, GdkDragContext * context, int
                      int y, GtkSelectionData * seldata, guint info,
                      guint time, gpointer data);
 
+void gwget_quit(void);
+
 #endif

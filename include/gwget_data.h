@@ -36,6 +36,7 @@ typedef struct
 	gboolean view_rem_time;
 	gboolean view_down_speed;
 	gboolean view_toolbar;
+	gboolean docked;
 	
 } Preferences;
 

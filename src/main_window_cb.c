@@ -128,74 +128,7 @@ stop_all_downloads(void)
 void 
 on_quit1_activate(GtkWidget *widget, gpointer data) 
 {
-	gint response;
-	gchar *url,*key;
-	GwgetData *gwgetdata;
-	GtkTreeIter iter;
-	gint i,length,position_x,position_y;
-	gboolean running; 
-	GtkWidget *main_window;
-	GtkAllocation *allocation;
-	
-	/* calculate the number of items in the treeview */
-	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
-	
-	/* Save the number of current downloads in the treev */
-	/* When load again we can known the number of directories to load */
-	gconf_client_set_int(gconf_client,"/apps/gwget/n_downloads",length,NULL);
-		
-	gtk_tree_model_get_iter_root(model,&iter);
-	/* Safe current downloads in GConf */
-	/* Calculate if there are any dl in retriving state */
-	running = FALSE;
-	for (i=0;i<length;i++) {
-		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-		gwgetdata=g_object_get_data(G_OBJECT(model),url);
-	
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d",i);
-		gconf_client_add_dir(gconf_client,key,
-							 GCONF_CLIENT_PRELOAD_NONE,NULL);
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/url",i);
-		gconf_client_set_string(gconf_client,key,gwgetdata->url,NULL);
-		
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/filename",i);
-		gconf_client_set_string(gconf_client,key,gwgetdata->filename,NULL);	
-	
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/dir",i);
-		gconf_client_set_string(gconf_client,key,gwgetdata->dir,NULL);	
-		
-		key=g_strdup_printf("/apps/gwget/downloads_data/%d/state",i);
-		gconf_client_set_int(gconf_client,key,gwgetdata->state,NULL);	
-		
-		if (gwgetdata->state==DL_RETRIEVING) 
-		{
-			running=TRUE;
-		}
-		
-		gtk_tree_model_iter_next(model,&iter);
-	}
-	
-	/* Remember the size of the window */
-	main_window=glade_xml_get_widget(xml,"main_window");
-	allocation= &(GTK_WIDGET (main_window)->allocation);
-	gconf_client_set_int (gconf_client, "/apps/gwget/default_width",allocation->width,NULL);
-	gconf_client_set_int (gconf_client, "/apps/gwget/default_height",allocation->height,NULL);
-	
-	/* Remember the position */
-	gtk_window_get_position(GTK_WINDOW(main_window), &position_x,&position_y);
-	gconf_client_set_int (gconf_client,"/apps/gwget/position_x",position_x,NULL);
-	gconf_client_set_int (gconf_client,"/apps/gwget/position_y",position_y,NULL);
-	
-	
-	if (running) {
-		response = run_dialog(_("Cancel current downloads?"),_("There is at least one active download left. Really cancel all running transfers?"));
-		if (response == GTK_RESPONSE_OK) {
-			stop_all_downloads();
-			gtk_main_quit();
-		}
-	} else {
-		gtk_main_quit();
-	}
+	gwget_quit();
 }
 
 
