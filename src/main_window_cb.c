@@ -22,7 +22,7 @@
 #include <libgnome/gnome-url.h>
 #include <libgnome/gnome-program.h>
 #include <libgnome/gnome-init.h>
-#include <libgnomevfs/gnome-vfs.h>
+#include <libgnomevfs/gnome-vfs-utils.h>
 #include "main_window.h"
 #include "main_window_cb.h"
 #include "new_window.h"
@@ -187,7 +187,6 @@ on_button_new_clicked(GtkWidget *widget, gpointer data)
 void 
 new_download(GwgetData* gwgetdata) {
 	GtkTreeIter iter;
-	GtkTreePath *path;
 	GtkIconTheme *theme;
 	GtkIconInfo *icon_info;
 	GdkPixbuf *pixbuf;
@@ -367,36 +366,29 @@ void
 on_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *filesel = NULL;
-	
-	filesel= glade_xml_get_widget(xml_pref,"fileselection1");
-	gtk_widget_set_sensitive (GTK_WIDGET(GTK_FILE_SELECTION(filesel)->file_list),FALSE);
-	
-	gtk_widget_show(filesel);
-}
-	
-void
-on_fs_cancel_button_clicked(GtkWidget *widget, gpointer data) 
-{
-	GtkWidget *filesel=NULL;
-	filesel= glade_xml_get_widget(xml_pref,"fileselection1");
-	
-	gtk_widget_hide(filesel);
-}
-
-void 
-on_fs_ok_button_clicked(GtkWidget *widget, gpointer data)
-{
-	GtkWidget *filesel=NULL, *save_in = NULL;
-	
-	filesel= glade_xml_get_widget(xml_pref,"fileselection1");
+	GtkWidget *save_in;
 	save_in = glade_xml_get_widget(xml_pref,"save_in_entry");
 	
-	gtk_entry_set_text(GTK_ENTRY(save_in),gtk_file_selection_get_filename(GTK_FILE_SELECTION(filesel)));	
-	printf("%s\n",gtk_file_selection_get_filename(GTK_FILE_SELECTION(filesel)));
+	filesel = gtk_file_chooser_dialog_new  (_("Select Folder"),
+											NULL,
+											GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
+											GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+				      						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
+											NULL);
 	
-	gtk_widget_hide(filesel);
+	if (gtk_dialog_run (GTK_DIALOG (filesel)) == GTK_RESPONSE_ACCEPT) {
+		char *directory;
+		
+		directory = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(filesel));
+		gtk_entry_set_text(GTK_ENTRY(save_in),directory);
+		
+		g_free(directory);
+	}
+	
+	gtk_widget_destroy(filesel);
+
 }
-	
+
 void 
 on_popup_pause_button_clicked(GtkWidget *widget, gpointer data)
 {
