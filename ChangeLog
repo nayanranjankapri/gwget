@@ -1,3 +1,7 @@
+2005-02-21  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Set toolbar buttons important.
+
 2005-02-16  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Fix URL string.
