@@ -1,5 +1,10 @@
 2005-01-15  David Sedeño <david@alderia.com>
 
+	* src/new_window.c (create_new_window_with_url): New function.
+	* src/main_window.c (on_treeview_drag_received): Call create_new_window_with_url if ask_save_each_dl preference it's true.
+
+2005-01-15  David Sedeño <david@alderia.com>
+
 	* include/main_window.h: Put xml_new global since we need to manipulate widgets on startup
 	* src/main_window.c (main_window): Load the xml_new. 
 	* src/new_window.c (on_ok_button_clicked): Add the download dir if it not in the list of paths.

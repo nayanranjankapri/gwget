@@ -158,6 +158,23 @@ on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 
 }
 
+void 
+create_new_window_with_url (gchar *url) 
+{
+	GtkWidget *window;
+	GtkWidget *entry;
+	
+	window = glade_xml_get_widget (xml_new,"new_window");
+	entry = glade_xml_get_widget (xml_new, "url_entry");
+	gtk_entry_set_text (GTK_ENTRY(entry), url);
+	
+	gtk_list_store_clear (GTK_LIST_STORE(save_in_model));
+	g_list_foreach (save_in_paths, add_to_save_in_combobox, NULL);
+	
+	gtk_widget_show (window);
+
+}
+
 static void
 add_to_save_in_combobox (gpointer data1, gpointer data2)
 {

@@ -24,6 +24,7 @@
 #include "custom-cell-renderer-progressbar.h"
 #include "utils.h"
 #include "systray.h"
+#include "new_window.h"
 
 
 
@@ -399,7 +400,9 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 		gtk_drag_finish(context, FALSE, TRUE, time);
 	}
 
-	if (drop_ok) {
+	if (drop_ok && gwget_pref.ask_save_each_dl) {
+		create_new_window_with_url (file);
+	} else if (drop_ok && !gwget_pref.ask_save_each_dl) {
 		gwgetdata = gwget_data_create(file, gwget_pref.download_dir);
 		if (gwgetdata) {
 			new_download(gwgetdata);
