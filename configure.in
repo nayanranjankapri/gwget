@@ -31,7 +31,7 @@ GETTEXT_PACKAGE=gwget
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [The gettext package])
 dnl Languages which your application supports
-ALL_LINGUAS="bg ca cs da de el en_CA es eu fi fr hu it ja lt mk nl pa pl pt pt_BR ro ru sk sq sv tr zh_CN zh_TW"
+ALL_LINGUAS="bg ca cs da de el en_CA es eu fi fr hu it ja lt mk nl pa pl pt pt_BR ro ru rw sk sq sv tr zh_CN zh_TW"
 AM_GLIB_GNU_GETTEXT
 
 AC_SUBST(CFLAGS)

@@ -1,0 +1,788 @@
+# translation of gwget to Kinyarwanda.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gwget package.
+# Steve Murphy <murf@e-tools.com>, 2005
+# Steve performed initial rough translation from compendium built from translations provided by the following translators:
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
+# Carole Karema <karemacarole@hotmail.com>, 2005.
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
+# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-04-01 15:44-0700\n"
+"PO-Revision-Date: 2005-03-31 20:55-0700\n"
+"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
+"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"ULL NAME <EMAIL@ADDRESS>\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+#, fuzzy
+msgid "gwget application"
+msgstr "Porogaramu"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr ""
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr ""
+
+#: data/about.glade.h:2
+#, fuzzy
+msgid "GNU GPL Version 2"
+msgstr "2."
+
+#: data/about.glade.h:3
+#, fuzzy
+msgid "Gwget: Download Manager for GNOME"
+msgstr "kugirango"
+
+#: data/about.glade.h:4 src/main_window_cb.c:182
+#, fuzzy
+msgid "translator-credits"
+msgstr "Umusemuzi"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr ""
+
+#: data/gwget.glade.h:2
+#, fuzzy
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/gwget.glade.h:3
+#, fuzzy
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+# crashrep/source\all\crashrep.lng:%CANCEL_BUTTON%.text
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Kureka"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Gukomeza"
+
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:580
+#: src/main_window_cb.c:677
+msgid "Gwget - Download Manager"
+msgstr ""
+
+#: data/gwget.glade.h:7
+msgid "Information"
+msgstr "Ibisobanuro"
+
+#: data/gwget.glade.h:8
+#, fuzzy
+msgid "Local Directory:"
+msgstr "Ububiko bwo hafi:"
+
+#: data/gwget.glade.h:9
+#, fuzzy
+msgid "Local File:"
+msgstr "Idosiye"
+
+#: data/gwget.glade.h:10
+#, fuzzy
+msgid "Multimedia files (Videos and images)"
+msgstr "Idosiye Na Ishusho"
+
+#: data/gwget.glade.h:11
+#, fuzzy
+msgid "New download"
+msgstr "Gufungura"
+
+# 4630
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "akaruhuko"
+
+#: data/gwget.glade.h:13
+#, fuzzy
+msgid "Pause all"
+msgstr "Byose"
+
+#: data/gwget.glade.h:14
+#, fuzzy
+msgid "Pause all downloads"
+msgstr "Byose Iyimura"
+
+#: data/gwget.glade.h:15
+#, fuzzy
+msgid "Pause download"
+msgstr "Gufungura"
+
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\basidesh.src:RID_POPUP_BRKPROPS.text
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\tbxctl.src:RID_TOOLBOX.SID_SHOW_PROPERTYBROWSER.text
+#: data/gwget.glade.h:16
+msgid "Properties"
+msgstr "indangakintu"
+
+#: data/gwget.glade.h:17
+msgid "Question"
+msgstr ""
+
+#: data/gwget.glade.h:18 data/preferences.glade.h:21
+msgid "Recursive"
+msgstr ""
+
+#: data/gwget.glade.h:19
+#, fuzzy
+msgid "Recursive options"
+msgstr "Amahitamo"
+
+# sc/source\ui\dbgui\pivot.src:RID_SCDLG_PIVOT_LAYOUT.BTN_REMOVE.text
+#: data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Gukuraho"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:659
+#, fuzzy
+msgid "Remove all"
+msgstr "Gukuraho Byose"
+
+#: data/gwget.glade.h:22
+#, fuzzy
+msgid "Remove all downloads from list"
+msgstr "Byose Iyimura Bivuye Urutonde"
+
+#: data/gwget.glade.h:23 src/main_window_cb.c:601
+msgid "Remove completed"
+msgstr ""
+
+#: data/gwget.glade.h:24
+#, fuzzy
+msgid "Remove completed downloads from list"
+msgstr "Iyimura Bivuye Urutonde"
+
+#: data/gwget.glade.h:25 src/main_window_cb.c:630
+#, fuzzy
+msgid "Remove inactive"
+msgstr "kidakora"
+
+#: data/gwget.glade.h:26
+#, fuzzy
+msgid "Remove inactive downloads from list"
+msgstr "kidakora Iyimura Bivuye Urutonde"
+
+#: data/gwget.glade.h:27
+#, fuzzy
+msgid "Resume all"
+msgstr "Byose"
+
+#: data/gwget.glade.h:28
+#, fuzzy
+msgid "Resume all downloads"
+msgstr "Byose Iyimura"
+
+#: data/gwget.glade.h:29
+#, fuzzy
+msgid "Stop and delete downloaded file"
+msgstr "Na Gusiba Yimuwe IDOSIYE"
+
+#: data/gwget.glade.h:30
+#, fuzzy
+msgid "The index file only"
+msgstr "Umubarendanga IDOSIYE"
+
+#: data/gwget.glade.h:31
+#, fuzzy
+msgid "This site (mirror)"
+msgstr "Ipaji"
+
+# offmgr/source\offapp\dialog\hyprlink.src:RID_SVXDLG_HYPERLINK.FT_URL.text
+#: data/gwget.glade.h:32 data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
+
+# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_NEW.text
+#: data/gwget.glade.h:33
+#, fuzzy
+msgid "_New"
+msgstr "Gishya"
+
+#: data/gwget.glade.h:34
+#, fuzzy
+msgid "_Toolbar"
+msgstr "Umwanyabikoresho"
+
+#: data/gwget.schemas.in.h:1
+#, fuzzy
+msgid "Ask save in for each new download"
+msgstr "Kubika in kugirango Gishya Gufungura"
+
+#: data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr ""
+
+#: data/gwget.schemas.in.h:3
+#, fuzzy
+msgid "Convert to relative links in recursive mode."
+msgstr "Kuri Bifitanye isano amahuza in Ubwoko"
+
+#: data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr ""
+
+#: data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr ""
+
+#: data/gwget.schemas.in.h:6
+#, fuzzy
+msgid "Follow relative links"
+msgstr "Bifitanye isano amahuza"
+
+#: data/gwget.schemas.in.h:7
+#, fuzzy
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"NIBYO Buri gihe kugirango a Ishyika Ububiko Ryari: a Gishya Gufungura SIBYO "
+"Buri gihe Kubika in i Mburabuzi bushyinguro i Ukoresha:"
+
+#: data/gwget.schemas.in.h:8
+#, fuzzy
+msgid "Limit maximum speed"
+msgstr "Kinini Umuvuduko"
+
+#: data/gwget.schemas.in.h:9
+#, fuzzy
+msgid "Limit number of simultaneous downloads"
+msgstr "Umubare Bya Iyimura"
+
+#: data/gwget.schemas.in.h:10
+#, fuzzy
+msgid "Maximum depth in recursive mode"
+msgstr "Ubujyakuzimu in Ubwoko"
+
+#: data/gwget.schemas.in.h:11
+#, fuzzy
+msgid "Maximum number of simultaneous downloads"
+msgstr "Umubare Bya Iyimura"
+
+#: data/gwget.schemas.in.h:12
+#, fuzzy
+msgid "Maximum speed limit"
+msgstr "Umuvuduko"
+
+#: data/gwget.schemas.in.h:13
+#, fuzzy
+msgid "Number of downloads"
+msgstr "Bya Iyimura"
+
+#: data/gwget.schemas.in.h:14
+#, fuzzy
+msgid "Number of retries"
+msgstr "Bya"
+
+#: data/gwget.schemas.in.h:15
+#, fuzzy
+msgid "Open the file after download"
+msgstr "i IDOSIYE Nyuma Gufungura"
+
+#: data/gwget.schemas.in.h:16
+#, fuzzy
+msgid "Resume downloads at startup"
+msgstr "Iyimura ku"
+
+#: data/gwget.schemas.in.h:17
+#, fuzzy
+msgid "View download speed column"
+msgstr "Gufungura Umuvuduko Inkingi"
+
+#: data/gwget.schemas.in.h:18
+#, fuzzy
+msgid "View elapsed time column"
+msgstr "Igihe Inkingi"
+
+#: data/gwget.schemas.in.h:19
+#, fuzzy
+msgid "View percentage column"
+msgstr "Ijanisha Inkingi"
+
+#: data/gwget.schemas.in.h:20
+#, fuzzy
+msgid "View remaining time column"
+msgstr "Igihe Inkingi"
+
+#: data/gwget.schemas.in.h:21
+#, fuzzy
+msgid "View toolbar"
+msgstr "Umwanyabikoresho"
+
+#: data/gwget.schemas.in.h:22
+#, fuzzy
+msgid "View total size column"
+msgstr "Igiteranyo Ingano Inkingi"
+
+#: data/newdownload.glade.h:1
+#, fuzzy
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/newdownload.glade.h:2
+msgid "New Download"
+msgstr ""
+
+#: data/newdownload.glade.h:3
+#, fuzzy
+msgid "Save in:"
+msgstr "Kubika mu"
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr ""
+
+#: data/preferences.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: data/preferences.glade.h:4
+#, fuzzy
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/preferences.glade.h:5
+#, fuzzy
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/preferences.glade.h:6
+#, fuzzy
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/preferences.glade.h:7
+#, fuzzy
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/preferences.glade.h:8
+#, fuzzy
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<Uburemere UTSINDAGIYE"
+
+#: data/preferences.glade.h:9
+msgid "Column List"
+msgstr ""
+
+#: data/preferences.glade.h:10
+#, fuzzy
+msgid "Default _GNOME network settings"
+msgstr "urusobe Amagenamiterere"
+
+#: data/preferences.glade.h:11
+#, fuzzy
+msgid "Direct _Internet connection"
+msgstr "Ukwihuza"
+
+#: data/preferences.glade.h:12
+msgid "Do_wnload Speed"
+msgstr ""
+
+#: data/preferences.glade.h:13
+#, fuzzy
+msgid "Don't _create directories"
+msgstr "Kurema ububiko bw'amaderese"
+
+#: data/preferences.glade.h:14
+#, fuzzy
+msgid "Follow _relative links only"
+msgstr "Bifitanye isano amahuza"
+
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  dbaccess.pot (PACKAGE VERSION)  #-#-#-#-#
+#: data/preferences.glade.h:15
+msgid "General"
+msgstr "Rusange"
+
+#: data/preferences.glade.h:16
+#, fuzzy
+msgid "Limit _number of simultaneous download to:"
+msgstr "Umubare Bya Gufungura Kuri"
+
+# 4032
+#: data/preferences.glade.h:17
+msgid "Network"
+msgstr "urusobe"
+
+#: data/preferences.glade.h:18
+#, fuzzy
+msgid "P_ort:"
+msgstr "Impagikiro:"
+
+# extracted from content/PrefsWindow.xul
+# LOCALIZATION NOTE : FILE UI for the outer parts of the Prefs dialog
+#: data/preferences.glade.h:19
+msgid "Preferences"
+msgstr "Ibyahisemo"
+
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\inetdlg.src:RID_OFADLG_INTERNET.1.RID_SVXPAGE_INET_PROXY.text
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\treeopt.src:RID_OFADLG_OPTIONS_TREE_PAGES.SID_INET_DLG.2.text
+#: data/preferences.glade.h:20
+#, fuzzy
+msgid "Pro_xy:"
+msgstr "Porogisi"
+
+# sfx2/source\bastyp\bastyp.src:STR_DOWNLOAD_REMAININGTIME.text
+#: data/preferences.glade.h:22
+#, fuzzy
+msgid "Remaining _Time"
+msgstr "Igihe gisigaye"
+
+#: data/preferences.glade.h:23
+#, fuzzy
+msgid "Sa_ve in:"
+msgstr "Kubika mu"
+
+#: data/preferences.glade.h:24
+msgid "Total _Size"
+msgstr ""
+
+#: data/preferences.glade.h:25
+#, fuzzy
+msgid "_Ask where to save for each download"
+msgstr "Kuri Kubika kugirango Gufungura"
+
+#: data/preferences.glade.h:26
+#, fuzzy
+msgid "_Continue downloads on startup"
+msgstr "Dukomeza Iyimura ku"
+
+#: data/preferences.glade.h:27
+#, fuzzy
+msgid "_Convert links"
+msgstr "amahuza"
+
+#: data/preferences.glade.h:28
+msgid "_Current Size"
+msgstr ""
+
+#: data/preferences.glade.h:29
+#, fuzzy
+msgid "_Download page requisites"
+msgstr "Ipaji"
+
+#: data/preferences.glade.h:30
+msgid "_Elapsed Time"
+msgstr ""
+
+#: data/preferences.glade.h:31
+#, fuzzy
+msgid "_Limit download speed to:"
+msgstr "Gufungura Umuvuduko Kuri"
+
+# officecfg/registry\schema\org\openoffice\Inet.xcs:....Settings.ooInetProxyType..2.text
+#: data/preferences.glade.h:32
+#, fuzzy
+msgid "_Manual proxy configuration"
+msgstr "Iboneza n'intoki rya nyabubasha"
+
+#: data/preferences.glade.h:33
+#, fuzzy
+msgid "_Maximum depth level:"
+msgstr "Ubujyakuzimu urwego"
+
+#: data/preferences.glade.h:34
+#, fuzzy
+msgid "_Number of retries:"
+msgstr "Bya"
+
+#: data/preferences.glade.h:35
+#, fuzzy
+msgid "_Open files automatically after download"
+msgstr "Idosiye ku buryo bwikora Nyuma Gufungura"
+
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib4.src:TP_STAT.RBT_PERCENTVALUE.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\datstat.src:DLG_DATA_STAT.RBT_PERCENT.text
+#: data/preferences.glade.h:36
+#, fuzzy
+msgid "_Percentage"
+msgstr "Ijanisha"
+
+# scp/source\office\dir.lng:STR_DIR_DATEIEN.text
+#: data/preferences.glade.h:37
+#, fuzzy
+msgid "files"
+msgstr "Idosiye"
+
+#: data/preferences.glade.h:38
+#, fuzzy
+msgid "kB/sec"
+msgstr "isogonda"
+
+#: epiphany-extension/gwget.xml.in.in.h:1
+#, fuzzy
+msgid "Forward downloads to GWGet"
+msgstr "Iyimura Kuri"
+
+#: epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr ""
+
+# filter/source\xsltdialog\xmlfilterdialogstrings.src:STR_UNKNOWN_APPLICATION.text
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Kitazwi"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Byanze"
+
+#: src/gwget_data.c:179
+msgid "stalled"
+msgstr ""
+
+# so3/src\svuidlg.src:MD_UPDATE_BASELINKS.STR_WAITINGLINK.text
+#: src/gwget_data.c:214
+msgid "Waiting"
+msgstr "Tegereza"
+
+#: src/gwget_data.c:216
+msgid "Not Started"
+msgstr "Itaratangira"
+
+#: src/gwget_data.c:218
+msgid "Not Running"
+msgstr ""
+
+#: src/gwget_data.c:220
+msgid "Not Connected"
+msgstr ""
+
+#: src/gwget_data.c:222
+msgid "Connected"
+msgstr ""
+
+#: src/gwget_data.c:224
+msgid "Retrieving"
+msgstr ""
+
+#: src/gwget_data.c:226
+msgid "Completed"
+msgstr ""
+
+#: src/gwget_data.c:230
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+
+#: src/gwget_data.c:237
+msgid "Error"
+msgstr "Ikosa"
+
+#: src/gwget_data.c:657
+#, fuzzy
+msgid "Unable to add this download"
+msgstr "Kuri Kongeramo iyi Gufungura"
+
+#: src/gwget_data.c:658
+#, fuzzy
+msgid "This download is already added"
+msgstr "Gufungura ni Kyongewe"
+
+# basctl/source\basicide\basidesh.src:RID_STR_ERROROPENSTORAGE.text
+#: src/gwget_data.c:706 src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Hari ikibazo mu gufungura dosiye"
+
+#: src/gwget_data.c:706 src/main_window_cb.c:99
+#, fuzzy
+msgid "Couldn't open the file"
+msgstr "Gufungura i IDOSIYE"
+
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\pagedlg\hfedtdlg.src:RID_HFBASE.BTN_FILE.quickhelptext
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\pagedlg\hfedtdlg.src:RID_HFBASE.RID_POPUP_FCOMMAND.FILE_COMMAND_FILENAME.text
+#: src/main_window.c:367
+msgid "File Name"
+msgstr "Izina ry'idosiye"
+
+#: src/main_window.c:374
+msgid "State"
+msgstr "Leta"
+
+#: src/main_window.c:385
+msgid "Current Size"
+msgstr ""
+
+#: src/main_window.c:396
+msgid "Total Size"
+msgstr ""
+
+# 4643
+#: src/main_window.c:406 src/main_window.c:412
+msgid "Percentage"
+msgstr "ijanisha"
+
+#: src/main_window.c:417
+msgid "Elapsed Time"
+msgstr ""
+
+# sfx2/source\bastyp\bastyp.src:STR_DOWNLOAD_REMAININGTIME.text
+#: src/main_window.c:427
+msgid "Remaining Time"
+msgstr "Igihe gisigaye"
+
+#: src/main_window.c:437
+msgid "Speed"
+msgstr "Umuvuduko"
+
+#: src/main_window.c:483
+#, fuzzy
+msgid "Error starting the download"
+msgstr "i Gufungura"
+
+#: src/main_window.c:483
+#, fuzzy
+msgid "There was an unexpected error starting the download"
+msgstr "Ikosa i Gufungura"
+
+#: src/main_window.c:715
+#, fuzzy
+msgid "Cancel current downloads?"
+msgstr "KIGEZWEHO Iyimura"
+
+#: src/main_window.c:716
+#, fuzzy
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr "ni ku Gikora Gufungura Ibumoso: Kureka Byose"
+
+#: src/main_window_cb.c:94
+#, fuzzy
+msgid "Error in download"
+msgstr "in Gufungura"
+
+#: src/main_window_cb.c:177
+msgid "Gwget"
+msgstr ""
+
+#: src/main_window_cb.c:180
+#, fuzzy
+msgid "Download Manager for GNOME."
+msgstr "kugirango"
+
+#: src/main_window_cb.c:516 src/new_window.c:138
+msgid "Select Folder"
+msgstr ""
+
+#: src/main_window_cb.c:572
+#, fuzzy, c-format
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
+msgstr "Kureka KIGEZWEHO Gufungura"
+
+#: src/main_window_cb.c:573
+#, fuzzy
+msgid "Cancel download?"
+msgstr "Gufungura"
+
+#: src/main_window_cb.c:601
+#, fuzzy
+msgid "Really remove completed downloads from the list?"
+msgstr "Gukuraho... Iyimura Bivuye i Urutonde"
+
+#: src/main_window_cb.c:630
+#, fuzzy
+msgid "Really remove inactive downloads from the list?"
+msgstr "Gukuraho... kidakora Iyimura Bivuye i Urutonde"
+
+#: src/main_window_cb.c:659
+#, fuzzy
+msgid "Really remove all downloads from the list?"
+msgstr "Gukuraho... Byose Iyimura Bivuye i Urutonde"
+
+#: src/systray.c:150
+msgid "Nothing"
+msgstr ""
+
+#: src/systray.c:157
+msgid "Downloads"
+msgstr "Iyimura"
+
+#: src/wget-log.c:117
+#, fuzzy
+msgid "Socket error"
+msgstr "Ikosa"
+
+#: src/wget-log.c:119
+msgid "Connection refused\n"
+msgstr ""
+
+#: src/wget-log.c:121
+#, fuzzy
+msgid "No route to host"
+msgstr "Kuri Ubuturo"
+
+#: src/wget-log.c:123
+#, fuzzy
+msgid "Connection refused when downloading URL:\n"
+msgstr "Ryari: Iyimura..."
+
+#: src/wget-log.c:125
+#, fuzzy
+msgid "Host not found\n"
+msgstr "OYA"
+
+#: src/wget-log.c:127
+#, fuzzy
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Porotokole 1. 7 kugirango HTTPS"
+
+#: src/wget-log.c:130
+#, fuzzy
+msgid "Refusing to truncate existing file"
+msgstr "Kuri IDOSIYE"
+
+# # @name OTHER
+# # @loc none
+#: src/wget-log.c:132
+msgid "Unknown error"
+msgstr "Ikosa itazwi"
+
+#: src/wget-log.c:143 src/wget-log.c:149
+msgid "File not found"
+msgstr "Dosiye ntibonetse"
+
+#: src/wget-log.c:156
+#, fuzzy
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "urifuzagukomeza Gufungura IDOSIYE Na: IDOSIYE"
+
+#: src/wget-log.c:214
+#, fuzzy
+msgid "Can't write to target directory"
+msgstr "Kwandika Kuri Intego bushyinguro"
