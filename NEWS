@@ -1,4 +1,25 @@
 ============
+Version 0.94
+============
+General:
+	* Move the website to gnome.org: http://www.gnome.org/projects/gwget/
+Fixes:
+	* Toolbar style works again.
+	* Doesn't redownload a complete download on startup (Ivan Yosifov).
+	* Present the main window when pressing the docked icon (Ivan Yosifov).
+	* Save the current downloads when it's start not only when gwget quit (Ivan Yosifov).
+
+Features: 
+	* Firefox extension. Download: http://gnome.org/projects/gwget/download.html  (Dimitur Toshev).
+	* Maximun total parallel downloads pref added (Julien Cegarra)
+	* Improve Gnome Session support (Ivan Yosifov).
+	* New download item in systray menu.
+
+Translations:
+	* Update: es (Francisco Javier F. Serrador), el (Kostas Papadimas), da (Martin Willemoes Hansen), sk (Marcel Telka), hu (Gabor Kelemen), cs (Miloslav Trmac), pl (GNOME PL Team), de (Hendrik Brandt), en_CA (Adam Weinberger)
+	* New: it (Alessio Frusciante)
+
+============
 Version 0.93
 ============
 Features: 
