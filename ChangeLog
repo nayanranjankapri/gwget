@@ -1,6 +1,7 @@
 2005-02-16  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Fix URL string.
+	* data/preferences.glade: Put accelerators in strings.
 	* src/main_window_cb.c: Fix URL string.
 
 2005-02-16  Ivan Yosifov <ivan@yosifov.net>
