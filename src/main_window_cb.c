@@ -275,9 +275,11 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	}
 		
 	window = glade_xml_get_widget (xml_pref, "pref_window");
-	if (gwget_pref.download_dir!=NULL) {
-		entry = glade_xml_get_widget(xml_pref,"save_in_entry");
-		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.download_dir);
+	entry = glade_xml_get_widget(xml_pref,"save_in_entry");
+	if (strlen(gwget_pref.download_dir)!=0) {
+		gtk_entry_set_text(GTK_ENTRY(entry), gwget_pref.download_dir);
+	} else {
+		gtk_entry_set_text(GTK_ENTRY(entry), g_get_home_dir());
 	}
 	entry = glade_xml_get_widget(xml_pref,"num_retries_entry");
 	gtk_entry_set_text(GTK_ENTRY(entry),g_strdup_printf("%d",gwget_pref.num_retries));

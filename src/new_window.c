@@ -112,20 +112,18 @@ create_new_window(void)
 	}
 	
 	window = glade_xml_get_widget(xml_new,"new_window");
-	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
 
 	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
-	if( !check_url( "http://", url ) && !check_url( "ftp://", url ) )
+	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
+	if(!check_url( "http://", url ) && !check_url( "ftp://", url))
 		url = "";
 	gtk_entry_set_text(GTK_ENTRY(entry),url);
+
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
-	if (!gwget_pref.download_dir) 
-	{
-		gtk_entry_set_text(GTK_ENTRY(entry),g_get_home_dir());
-	}
-	else 
-	{
-		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.download_dir);
+	if (strlen(gwget_pref.download_dir)==0) {
+		gtk_entry_set_text(GTK_ENTRY(entry), g_get_home_dir());
+	} else {
+		gtk_entry_set_text(GTK_ENTRY(entry), gwget_pref.download_dir);
 	}
 	gtk_widget_show(window);
 }

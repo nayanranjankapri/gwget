@@ -1,3 +1,13 @@
+2004-11-08  Julien Cegarra <JulienC@psychologie-fr.org>
+
+	* data/gwget.glade: Replace icon's label "Stop" and "Resume" to
+	"Stop all" and "Resume all".
+	* src/main_window_cb.c (on_boton_pref_clicked): Default to home
+	directory for "savein" value.
+	* src/new_window.c (create_new_window): Fix a strange bug in default
+	to home directory (causing a 0 byte directory name; gwget was then
+	unable to capture file informations e.g. size).
+
 2004-11-07 David Sedeño <david@alderia.com>
 
 	* data/gwget.schemas.in: fix typo.

@@ -178,8 +178,8 @@
 	      <child>
 		<widget class="GtkToolButton" id="boton_pref">
 		  <property name="visible">True</property>
-		  <property name="tooltip" translatable="yes">Continue all downloads</property>
-		  <property name="label" translatable="yes">Resume</property>
+		  <property name="tooltip" translatable="yes">Resume all downloads</property>
+		  <property name="label" translatable="yes">Resume all</property>
 		  <property name="use_underline">True</property>
 		  <property name="stock_id">gtk-refresh</property>
 		  <property name="visible_horizontal">True</property>
@@ -196,7 +196,9 @@
 	      <child>
 		<widget class="GtkToolButton" id="stop_button">
 		  <property name="visible">True</property>
-		  <property name="tooltip" translatable="yes">Stop all downloads</property>
+		  <property name="tooltip" translatable="yes">Pause all downloads</property>
+		  <property name="label" translatable="yes">Pause all</property>
+		  <property name="use_underline">True</property>
 		  <property name="stock_id">gtk-stop</property>
 		  <property name="visible_horizontal">True</property>
 		  <property name="visible_vertical">True</property>
