@@ -468,7 +468,8 @@ show_prefered_columns(void)
 	} else {
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
-	gtk_spin_button_set_digits(GTK_TOGGLE_BUTTON(checkitem), gwget_pref.max_speed);
+	checkitem = glade_xml_get_widget(xml_pref,"limit_speed_spin");
+	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(checkitem), gwget_pref.max_speed);
 }
 
 
