@@ -6,8 +6,8 @@
 	 <applyto>/apps/gwget2/convert_links</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>Convert Links</short>
 	   <long>Convert to relative links in recursive mode.</long>
 	 </locale>
@@ -18,8 +18,8 @@
 	 <applyto>/apps/gwget2/default_height</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>200</default>
 	 <locale name="C">
-	   <default>200</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -30,8 +30,8 @@
 	 <applyto>/apps/gwget2/default_width</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>250</default>
 	 <locale name="C">
-	   <default>250</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -42,8 +42,8 @@
 	 <applyto>/apps/gwget2/dl_page_requisites</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>Download Page Requisites</short>
 	   <long></long>
 	 </locale>
@@ -54,8 +54,8 @@
 	 <applyto>/apps/gwget2/download_dir</applyto>
 	 <owner>gwget</owner>
 	 <type>string</type>
+	 <default></default>
 	 <locale name="C">
-	   <default></default>
 	   <short>Default Download Directory</short>
 	   <long></long>
 	 </locale>
@@ -66,8 +66,8 @@
 	 <applyto>/apps/gwget2/follow_relative</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>Follow relative links</short>
 	   <long></long>
 	 </locale>
@@ -78,8 +78,8 @@
 	 <applyto>/apps/gwget2/limit_speed</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>Limit maximum speed</short>
 	   <long></long>
 	 </locale>
@@ -90,8 +90,8 @@
 	 <applyto>/apps/gwget2/max_depth</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>0</default>
 	 <locale name="C">
-	   <default>0</default>
 	   <short>Max depth in recursive mode</short>
 	   <long></long>
 	 </locale>
@@ -102,8 +102,8 @@
 	 <applyto>/apps/gwget2/max_speed</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>0</default>
 	 <locale name="C">
-	   <default>0</default>
 	   <short>Max speed limit</short>
 	   <long></long>
 	 </locale>
@@ -114,8 +114,8 @@
 	 <applyto>/apps/gwget2/n_downloads</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>0</default>
 	 <locale name="C">
-	   <default>0</default>
 	   <short>Number of downloads</short>
 	   <long></long>
 	 </locale>
@@ -126,8 +126,8 @@
 	 <applyto>/apps/gwget2/no_create_directories</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -138,8 +138,8 @@
 	 <applyto>/apps/gwget2/num_retrys</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>3</default>
 	 <locale name="C">
-	   <default>3</default>
 	   <short>Number of retries</short>
 	   <long></long>
 	 </locale>
@@ -150,8 +150,8 @@
 	 <applyto>/apps/gwget2/position_x</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>0</default>
 	 <locale name="C">
-	   <default>0</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -162,8 +162,8 @@
 	 <applyto>/apps/gwget2/position_y</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>0</default>
 	 <locale name="C">
-	   <default>0</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -174,8 +174,8 @@
 	 <applyto>/apps/gwget2/resume_at_start</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>Resume downloads at startup</short>
 	   <long></long>
 	 </locale>
@@ -186,8 +186,8 @@
 	 <applyto>/apps/gwget2/open_after_dl</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>Open the file after download</short>
 	   <long></long>
 	 </locale>
@@ -198,8 +198,8 @@
 	 <applyto>/apps/gwget2/view_actual_size</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>true</default>
 	 <locale name="C">
-	   <default>true</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -210,8 +210,8 @@
 	 <applyto>/apps/gwget2/view_down_speed</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>true</default>
 	 <locale name="C">
-	   <default>true</default>
 	   <short>View download speed column</short>
 	   <long></long>
 	 </locale>
@@ -222,8 +222,8 @@
 	 <applyto>/apps/gwget2/view_elapse_time</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>false</default>
 	 <locale name="C">
-	   <default>false</default>
 	   <short>View elapse time column</short>
 	   <long></long>
 	 </locale>
@@ -234,8 +234,8 @@
 	 <applyto>/apps/gwget2/view_percentage</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>true</default>
 	 <locale name="C">
-	   <default>true</default>
 	   <short>View percentage column</short>
 	   <long></long>
 	 </locale>
@@ -246,8 +246,8 @@
 	 <applyto>/apps/gwget2/view_rem_time</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>true</default>
 	 <locale name="C">
-	   <default>true</default>
 	   <short>View Remain time column</short>
 	   <long></long>
 	 </locale>
@@ -258,8 +258,8 @@
 	 <applyto>/apps/gwget2/view_toolbar</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>true</default>
 	 <locale name="C">
-	   <default>true</default>
 	   <short>View toolbar</short>
 	   <long></long>
 	 </locale>
@@ -270,8 +270,8 @@
 	 <applyto>/apps/gwget2/view_total_size</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
+	 <default>true</default>
 	 <locale name="C">
-	   <default>true</default>
 	   <short>View total size column</short>
 	   <long></long>
 	 </locale>
@@ -282,8 +282,8 @@
 	 <applyto>/apps/gwget2/network_mode</applyto>
 	 <owner>gwget</owner>
 	 <type>string</type>
+	 <default>direct</default>
 	 <locale name="C">
-	   <default>direct</default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -294,8 +294,8 @@
 	 <applyto>/apps/gwget2/http_proxy</applyto>
 	 <owner>gwget</owner>
 	 <type>string</type>
+	 <default></default>
 	 <locale name="c">
-	   <default></default>
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -306,8 +306,8 @@
 	 <applyto>/apps/gwget2/http_proxy_port</applyto>
 	 <owner>gwget</owner>
 	 <type>int</type>
+	 <default>8080</default>
 	 <locale name="c">
-	   <default>8080</default>
 	   <short></short>
 	   <long></long>
 	 </locale>

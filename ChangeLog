@@ -1,5 +1,10 @@
 2005-01-03  David Sedeño <david@alderia.com>
 
+	* data/gwget.schemas.in: Put default values outside of locale tags.
+	Fix bug 162797.
+
+2005-01-03  David Sedeño <david@alderia.com>
+
 	* src/gwget_data.c (gwget_data_set_total_size): check values.
 	* src/main_window.c (gwget_get_defaults_from_gconf): More checks in
 	values from gconf.
