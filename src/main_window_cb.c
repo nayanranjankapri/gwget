@@ -253,7 +253,7 @@ new_download(GwgetData* gwgetdata) {
 	
 	pixbuf = gdk_pixbuf_new_from_file_at_size (icon_name, width, height, NULL);
 	gtk_list_store_set (GTK_LIST_STORE (model),
-						&iter, IMAGE_COLUMN, pixbuf, -1);
+				&iter, IMAGE_COLUMN, pixbuf, -1);
 
 	if (pixbuf)
 		g_object_unref (pixbuf);
@@ -460,10 +460,6 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	gconf_client_set_int(gconf_client,"/apps/gwget2/max_depth",gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth)), NULL);
 	
 	/* Column listing */
-	gwget_pref.view_file_type=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_file_type")));
-	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_file_type",
-						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_file_type"))),NULL);
-	
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_actual_size",
 	 					  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size"))),NULL);
@@ -700,19 +696,6 @@ on_properties_activate(GtkWidget *widget, gpointer data)
 	local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
 	gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
 	gtk_widget_show(properties);
-}
-
-void
-on_check_file_type_toggled(GtkWidget *widget, gpointer data)
-{
-	GtkWidget *treev, *column;
-	gboolean visible;
-	
-	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),IMAGE_COLUMN);
-	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
-	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     visible);
 }
 
 void 

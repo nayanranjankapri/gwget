@@ -1,3 +1,11 @@
+2004-11-27 David Sedeño <david@alderia.com>
+
+	* data/preferences.glade: Removed Image type column check from column
+	listing tab.
+	* data/gwget.schemas.in: Removed file type checkbox.
+	* main_window_cb.c: Remove on_check_file_type_toggled func.
+	(on_pref_ok_button_clicked): Removed file type from gconf.
+
 2004-11-26 David Sedeño <david@alderia.com>
 
 	* src/main_window.c (add_columns): Fix Column Name.
