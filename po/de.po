@@ -2,19 +2,20 @@
 # Copyright (C) 2004 David Sedeño Fernández <david@alderia.com>
 # This file is distributed under the same license as the gwget package.
 # Frank Arnold <frank@scirocco-5v-turbo.de>, 2004.
+# Hendrik Brandt <heb@gnome-de.org>, 2004.
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-04 10:42+0100\n"
-"PO-Revision-Date: 2004-12-04 10:41+0100\n"
-"Last-Translator: Frank Arnold <frank@scirocco-5v-turbo.de>\n"
+"POT-Creation-Date: 2004-12-19 14:05+0100\n"
+"PO-Revision-Date: 2004-12-19 14:07+0100\n"
+"Last-Translator: Hendrik Brandt <heb@gnome-de.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
@@ -60,7 +61,8 @@ msgstr "Abbrechen"
 msgid "Continue"
 msgstr "Fortsetzen"
 
-#: data/gwget.glade.h:6
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
+#: src/main_window_cb.c:662
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Download Manager"
 
@@ -120,7 +122,7 @@ msgstr "Optionen zum Folgen von Links"
 msgid "Remove"
 msgstr "Entfernen"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:641
+#: data/gwget.glade.h:21 src/main_window_cb.c:645
 msgid "Remove all"
 msgstr "Alles entfernen"
 
@@ -128,7 +130,7 @@ msgstr "Alles entfernen"
 msgid "Remove all downloads from list"
 msgstr "Alle Downloads aus der Liste entfernen"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:582
+#: data/gwget.glade.h:23 src/main_window_cb.c:587
 msgid "Remove completed"
 msgstr "Entferne fertige Downloads"
 
@@ -136,7 +138,7 @@ msgstr "Entferne fertige Downloads"
 msgid "Remove completed downloads from list"
 msgstr "Entferne fertige Downloads aus der Liste"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:611
+#: data/gwget.glade.h:25 src/main_window_cb.c:616
 msgid "Remove inactive"
 msgstr "Entferne nicht aktive Downloads"
 
@@ -166,7 +168,7 @@ msgstr "Diese Seite (Mirror)"
 
 #: data/gwget.glade.h:32
 msgid "Url:"
-msgstr "Url:"
+msgstr "Adresse:"
 
 #: data/gwget.glade.h:33
 msgid "_New"
@@ -194,7 +196,7 @@ msgstr "Speichern in:"
 
 #: data/newdownload.glade.h:5
 msgid "URL: "
-msgstr "URL:"
+msgstr "Adresse:"
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -328,35 +330,39 @@ msgstr "Unbekannt"
 msgid "Failed"
 msgstr "Fehlgeschlagen"
 
-#: src/gwget_data.c:175
+#: src/gwget_data.c:177
 msgid "stalled"
 msgstr "wartet"
 
-#: src/gwget_data.c:205
+#: src/gwget_data.c:210
+msgid "Waiting"
+msgstr "Wartend"
+
+#: src/gwget_data.c:212
 msgid "Not Started"
 msgstr "Nicht gestartet"
 
-#: src/gwget_data.c:207
+#: src/gwget_data.c:214
 msgid "Not Running"
 msgstr "Pause"
 
-#: src/gwget_data.c:209
+#: src/gwget_data.c:216
 msgid "Not Connected"
 msgstr "Nicht verbunden"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:218
 msgid "Connected"
 msgstr "Verbunden"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:220
 msgid "Retrieving"
 msgstr "Ladend"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:222
 msgid "Completed"
 msgstr "Vollständig"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:226
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -365,23 +371,23 @@ msgstr ""
 "Download abgeschlossen\n"
 "(%s)"
 
-#: src/gwget_data.c:226
+#: src/gwget_data.c:233
 msgid "Error"
 msgstr "Fehler"
 
-#: src/gwget_data.c:599
+#: src/gwget_data.c:611
 msgid "Unable to add this download"
 msgstr "Download konnte nicht hinzugefügt werden"
 
-#: src/gwget_data.c:599
+#: src/gwget_data.c:611
 msgid "This download is already added"
 msgstr "Dieser Download wurde bereits hinzugefügt"
 
-#: src/gwget_data.c:647 src/main_window_cb.c:99
+#: src/gwget_data.c:659 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Fehler beim Öffnen der Datei"
 
-#: src/gwget_data.c:647 src/main_window_cb.c:99
+#: src/gwget_data.c:659 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Datei konnte nicht geöffnet werden"
 
@@ -413,40 +419,43 @@ msgstr ""
 msgid "Error in download"
 msgstr "Fehler im Download"
 
-#: src/main_window_cb.c:165
+#: src/main_window_cb.c:167
 msgid "Download Manager for Gnome2."
 msgstr "Download Manager für Gnome2."
 
-#: src/main_window_cb.c:172
+#: src/main_window_cb.c:174
 msgid "translator_credits"
 msgstr "Frank Arnold <frank@scirocco-5v-turbo.de>"
 
-#: src/main_window_cb.c:184
+#: src/main_window_cb.c:186
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:498 src/new_window.c:140
+#: src/main_window_cb.c:503 src/new_window.c:140
 msgid "Select Folder"
 msgstr "Verzeichnis auswählen"
 
-#: src/main_window_cb.c:555
+#: src/main_window_cb.c:558
 #, c-format
-msgid "Really cancel current download? (Url: %s)"
-msgstr "Aktuellen Download abbrechen? (Url: %s)"
+msgid ""
+"Really cancel current download?\n"
+"(Url: %s)"
+msgstr "Aktuellen Download abbrechen?\n"
+"(Adresse: %s)"
 
-#: src/main_window_cb.c:556
+#: src/main_window_cb.c:559
 msgid "Cancel download?"
 msgstr "Download abbrechen?"
 
-#: src/main_window_cb.c:582
+#: src/main_window_cb.c:587
 msgid "Really remove completed downloads from the list?"
 msgstr "Alle fertigen Downloads aus der Liste entfernen?"
 
-#: src/main_window_cb.c:611
+#: src/main_window_cb.c:616
 msgid "Really remove inactive downloads from the list?"
 msgstr "Alle inaktiven Downloads aus der Liste entfernen?"
 
-#: src/main_window_cb.c:641
+#: src/main_window_cb.c:645
 msgid "Really remove all downloads from the list?"
 msgstr "Alle Downloads von der Liste entfernen?"
 
@@ -472,7 +481,7 @@ msgstr "Keine Route zum Rechner"
 
 #: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
-msgstr "Verbindung unterbrochen. URL:\n"
+msgstr "Verbindung unterbrochen. Adresse:\n"
 
 #: src/wget-log.c:91
 msgid "Host not found\n"
@@ -502,12 +511,7 @@ msgstr ""
 "Download kann nicht fortgesetzt werden. Eine existierende lokale Datei steht "
 "im Konflikt mit einer herunterzuladenden Datei."
 
-#: src/wget-log.c:169
+#: src/wget-log.c:180
 msgid "Can't write to target directory"
 msgstr "In das Zielverzeichnis kann nicht geschrieben werden."
 
-#~ msgid "File Type Image"
-#~ msgstr "Dateityp Symbol"
-
-#~ msgid "File Type"
-#~ msgstr "Dateityp"
