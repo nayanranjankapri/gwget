@@ -16,7 +16,7 @@ $(server_in_files:.server.in.in=.server.in): $(server_in_files)
 	sed -e "s|\@BONOBODIR\@|$(bonobodir)|" $< > $@
 @INTLTOOL_SERVER_RULE@
                                                                                                              
-schemasdir = $(sysconfdir)/gconf/schemas
+schemasdir = $(GCONF_SCHEMA_FILE_DIR)
 schemas_in_files = gwget.schemas.in
 schemas_DATA =  $(schemas_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
