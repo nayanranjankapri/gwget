@@ -32,6 +32,7 @@
 #include "gwget-application-server.h"
 #include "main_window.h"
 #include "GNOME_Gwget.h"
+#include "gwget_data.h"
 
 
 
@@ -94,6 +95,38 @@ impl_gwget_application_echo (PortableServer_Servant _servant,
 }
 
 static void
+impl_gwget_application_openURLSList (PortableServer_Servant _servant,
+									const GNOME_Gwget_URIList * urls,
+									CORBA_Environment * ev)
+{
+	GSList *list = NULL;
+	guint i;
+	gchar *url;
+	GwgetData *gwgetdata;
+	
+	/* convert from CORBA_sequence into GList */
+    for (i = 0; i < urls->_length; i++)
+	{
+    	list = g_slist_prepend (list, g_strdup (urls->_buffer[i]));
+	}
+
+	list = g_slist_reverse (list);
+
+	if (list != NULL)
+	{
+		while (list!=NULL) {
+			url = g_strdup((const gchar *)list->data);
+			gwgetdata = gwget_data_create (url, gwget_pref.download_dir);
+			gwget_data_start_download(gwgetdata);
+			list = g_slist_next(list);
+		}
+		g_slist_foreach (list, (GFunc)g_free, NULL);
+		g_slist_free (list);
+	}
+}
+	
+
+static void
 impl_gwget_application_server_quit (PortableServer_Servant _servant,
                                 CORBA_Environment * ev)
 {	
@@ -116,6 +149,7 @@ gwget_application_server_class_init (GwgetApplicationServerClass *klass)
 
 	epv->quit = impl_gwget_application_server_quit;
 	epv->echo = impl_gwget_application_echo;
+	epv->openURLSList = impl_gwget_application_openURLSList;
 }
 
 static void

@@ -28,12 +28,46 @@
 
 BonoboObject *gwget_app_server = NULL;
 
+
+GSList *
+gwget_get_command_line_data (GnomeProgram *program)
+{
+	GValue value = { 0, };
+	poptContext ctx;
+	char **args;
+	GSList *data = NULL;
+	int i;
+
+	g_value_init (&value, G_TYPE_POINTER);
+	g_object_get_property (G_OBJECT (program), GNOME_PARAM_POPT_CONTEXT, &value);
+	ctx = g_value_get_pointer (&value);
+	g_value_unset (&value);
+
+	args = (char**) poptGetArgs(ctx);
+
+	if (args) 
+	{	
+		for (i = 0; args[i]; i++) 
+		{
+			data = g_slist_append(data,args[i]);
+		}
+	}
+	
+	return data;
+	
+}
+
 static void
 gwget_handle_automation_cmdline (GnomeProgram *program)
 {
 	CORBA_Environment env;
 	GNOME_Gwget_Application server;
-	gchar *test;
+	GNOME_Gwget_URIList *urls_list;
+	/* List of urls to download pased in command line */
+	GSList *data, *list;
+	gint i;
+	
+
 		
 	CORBA_exception_init (&env);
 	
@@ -41,17 +75,35 @@ gwget_handle_automation_cmdline (GnomeProgram *program)
 												 0, NULL, &env);
 	
 	g_return_if_fail (server != NULL);
+	
+	data = gwget_get_command_line_data(program);
+	
+	if (data) 
+	{
+		urls_list = GNOME_Gwget_URIList__alloc ();
+		urls_list->_maximum = g_slist_length (data);
+		urls_list->_length = urls_list->_maximum;
+		urls_list->_buffer = CORBA_sequence_GNOME_Gwget_URI_allocbuf (urls_list->_length);
 		
-	test = GNOME_Gwget_Application_echo (server, &env);
-	
-	if (env._major != CORBA_NO_EXCEPTION) {
-		printf("Corba Error %s\n", env._id);
-	}
-	if (test)
-		g_message("Test: %s\n",test);
-	else
-		g_message("Test is NULL!");
-	
+		list = data;
+		i = 0;
+		while (list != NULL) 
+		{
+			urls_list->_buffer[i] = CORBA_string_dup ((gchar*)list->data);
+			list = list->next;
+			i++;
+		}
+
+		
+		CORBA_sequence_set_release (urls_list, CORBA_TRUE);
+		GNOME_Gwget_Application_openURLSList (server, urls_list, &env);
+		
+		g_slist_free (data); 
+	}	
+		
+		
+		
+
 }
 	
 int main(int argc,char *argv[])

@@ -16,6 +16,7 @@ module GNOME {
 
 		interface Application : Bonobo::Unknown {
 			string echo();
+			oneway void openURLSList (in URIList urls);
 			oneway void quit ();
 		};
 

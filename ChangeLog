@@ -1,6 +1,11 @@
 2004-09-19  David Sedeño <david@alderia.com>
 
-	* src/main.c: change Activation_ID
+	* src/main.c: change Activation_ID. Add function to get data from 
+	  command line. Send the urls list to the bonobo server.
+	* src/gwget-application-server.c
+	(impl_gwget_application_openURLSList): Function to manage the urls
+	passed from corba clients
+	* src/GNOME_Gwget.idl: Added openURLSList function
 
 2004-09-13  David Sedeño <david@alderia.com>
 
