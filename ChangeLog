@@ -1,3 +1,45 @@
+2004-07-22  David Sedeño <david@alderia.com>
+
+	* include/gwget_data.h: 
+	  Added gwget_data_set_filename_from_url.
+	* src/wget-log.c (wget_log_process_line):
+	  Set the correct filename in recurse mode.
+	  Set the correct local filename in recurse mode.
+	* src/gwget_data.c (gwget_data_start_download): 
+	  Check no_create_directory always in recurse mode.
+	  Added wmv to multimedia downloads.
+	* src/new_window.c (on_ok_button_clicked): 
+	  Show recursivity options dialog with html, htm, php and
+	  asp files.
+
+2004-07-21  David Sedeño <david@alderia.com>
+	
+	* src/main_window.c (create_model): Fix order of 
+	  creation of the file type column.
+
+2004-07-20  David Sedeño <david@alderia.com>
+
+	* include/main_window.h: Added drag types.
+	  Fixed IMAGE_COLUMN position.
+	* src/main_window.c: Fixed URI_LIST type drag.
+	  Get view_file_type from gconf.
+	* src/trayicon.c: Support D&D to the icon.
+	* src/main_window_cb.c: Support for file type
+	  in column listing preferences. Fixed getting the
+	  preferences from the ui.
+	* src/gwget_data.h: Added view_file_type (for column)
+	  to preferences struct.
+	* data/preferences.glade: Added check box for the file type
+	  column.
+
+2004-07-13  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (on_about1_activate): 
+	  Some cosmetic change to about dialog.
+	* data/gwget.glade, data/preferences.glade, 
+	  data/new_download.glade: UI Fixes. Thanks
+	  to Miroslav Strugarevic.
+
 2004-07-10  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_browse_save_in_button_clicked):
