@@ -171,7 +171,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 			NULL
 	};
 
-	gchar *translator_credits = _("translator_credits");
+	gchar *translator_credits = _("translator-credits");
 
 	if (about != NULL ) 
 	{

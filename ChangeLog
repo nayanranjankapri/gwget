@@ -1,7 +1,8 @@
 2005-01-03  David Sedeño <david@alderia.com>
 
 	* data/about.glade: Fix GNOME string.
-	* src/main_window_cb.c (on_about1_activate): Fix GNOME string.
+	* src/main_window_cb.c (on_about1_activate): Fix GNOME string. Use
+	translator-credits.
 	* data/gwget.glade: Remove trailing space.
 	* data/newdownload.glade: Remove trailing space.
 	* data/preferences.glade: Remove trailing space.
