@@ -254,42 +254,4 @@
   </child>
 </widget>
 
-<widget class="GtkFileSelection" id="new_fileselection1">
-  <property name="border_width">10</property>
-  <property name="title" translatable="yes">Select target directory</property>
-  <property name="type">GTK_WINDOW_TOPLEVEL</property>
-  <property name="window_position">GTK_WIN_POS_NONE</property>
-  <property name="modal">False</property>
-  <property name="resizable">True</property>
-  <property name="destroy_with_parent">False</property>
-  <property name="decorated">True</property>
-  <property name="skip_taskbar_hint">False</property>
-  <property name="skip_pager_hint">False</property>
-  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
-  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
-  <property name="show_fileops">False</property>
-
-  <child internal-child="cancel_button">
-    <widget class="GtkButton" id="new_fs_cancel_button">
-      <property name="visible">True</property>
-      <property name="can_default">True</property>
-      <property name="can_focus">True</property>
-      <property name="relief">GTK_RELIEF_NORMAL</property>
-      <property name="focus_on_click">True</property>
-      <signal name="clicked" handler="on_new_fs_cancel_button_clicked" last_modification_time="Mon, 24 Mar 2003 16:55:11 GMT"/>
-    </widget>
-  </child>
-
-  <child internal-child="ok_button">
-    <widget class="GtkButton" id="new_fs_ok_button">
-      <property name="visible">True</property>
-      <property name="can_default">True</property>
-      <property name="can_focus">True</property>
-      <property name="relief">GTK_RELIEF_NORMAL</property>
-      <property name="focus_on_click">True</property>
-      <signal name="clicked" handler="on_new_fs_ok_button_clicked" last_modification_time="Mon, 24 Mar 2003 16:55:24 GMT"/>
-    </widget>
-  </child>
-</widget>
-
 </glade-interface>
