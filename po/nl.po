@@ -1,139 +1,289 @@
-# translation of gwget2.
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gwget2 package.
-# Reinout van Schouwen <reinout@cs.vu.nl>, 2003
+# Alleyoop Dutch translation
+# Copyright (C) 2003 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Alleyoop package.
+# Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2003.
+# Tino Meinen <a.t.meinen@chello.nl>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget2 0.4\n"
+"Project-Id-Version: Alleyoop cvs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-12 20:41+0200\n"
-"PO-Revision-Date: 2002-01-30 21:36+0100\n"
-"Last-Translator: Reinout van Schouwen <reinout@cs.vu.nl>, 2003\n"
+"POT-Creation-Date: 2004-09-05 04:04+0200\n"
+"PO-Revision-Date: 2004-06-13 00:54+0200\n"
+"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:231
-#, fuzzy
-msgid "File Type"
-msgstr "Bestandsnaam"
-
-#: src/main_window.c:240
-msgid "File Name"
-msgstr "Bestandsnaam"
-
-#: src/main_window.c:250
-msgid "State"
-msgstr "Status"
-
-#: src/main_window.c:259
-msgid "Current Size"
-msgstr "Huidige grootte"
-
-#: src/main_window.c:269
-msgid "Total Size"
-msgstr "Totale grootte"
-
-#: src/main_window.c:279 src/main_window.c:284
-msgid "Percentage"
-msgstr "Percentage"
-
-# Elapse = Elapsed
-#: src/main_window.c:289
-msgid "Elapsed Time"
-msgstr "Verstreken tijd"
-
-# Remain = Remaining
-#: src/main_window.c:299
-msgid "Remaining Time"
-msgstr "Resterende tijd"
-
-#: src/main_window.c:309
-msgid "Speed"
+#: data/about.glade.h:1
+msgid "About Gwget"
 msgstr ""
 
-# currents = current
-#: src/main_window.c:539
-#, fuzzy
-msgid "Cancel current downloads?"
-msgstr "Huidige downloads annuleren?"
-
-#: src/main_window.c:539
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
 msgstr ""
 
-#: src/main_window_cb.c:95
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr ""
+
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "Elros Cyriatan"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr ""
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr ""
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Doorgaan"
+
+#: data/gwget.glade.h:6
+msgid "Gwget - Download Manager"
+msgstr ""
+
+#: data/gwget.glade.h:7
+msgid "Local Directory: "
+msgstr ""
+
+#: data/gwget.glade.h:8
+msgid "Local File: "
+msgstr ""
+
+#: data/gwget.glade.h:9
+msgid "Multimedia files (Videos and images)"
+msgstr ""
+
+#: data/gwget.glade.h:10
 #, fuzzy
-msgid "Error in download"
+msgid "New download"
 msgstr "Download annuleren?"
 
-#: src/main_window_cb.c:100
-msgid "Error opening file"
-msgstr ""
+#: data/gwget.glade.h:11
+msgid "Pause"
+msgstr "Pauzeren"
 
-#: src/main_window_cb.c:100
-msgid "Couldn't open the file"
-msgstr ""
-
-#: src/main_window_cb.c:143
-msgid "Download Manager for Gnome2."
-msgstr ""
-
-#: src/main_window_cb.c:149
-msgid "translator_credits"
-msgstr ""
-
-#: src/main_window_cb.c:161
-msgid "Gwget"
-msgstr ""
-
-#: src/main_window_cb.c:391 src/new_window.c:151
-msgid "Select Folder"
-msgstr ""
-
-# currente = current
-#: src/main_window_cb.c:448
-#, fuzzy, c-format
-msgid "Really cancel current download? (Url: %s)"
-msgstr "Weet u zeker dat u de huidige download wilt annuleren? (URL: %s)"
-
-#: src/main_window_cb.c:449
-msgid "Cancel download?"
+#: data/gwget.glade.h:12
+#, fuzzy
+msgid "Pause download"
 msgstr "Download annuleren?"
 
-#: src/main_window_cb.c:475
-#, fuzzy
-msgid "Remove completed"
-msgstr "Voltooide downloads weghalen"
+#: data/gwget.glade.h:13
+msgid "Properties"
+msgstr "Eigenschappen"
 
-#: src/main_window_cb.c:475
-#, fuzzy
-msgid "Really remove completed downloads from the list?"
-msgstr "Voltooide downloads weghalen"
+#: data/gwget.glade.h:14
+msgid "Question"
+msgstr "Vraag"
 
-#: src/main_window_cb.c:504
-#, fuzzy
-msgid "Remove not running"
-msgstr "Niet actief"
+#: data/gwget.glade.h:15 data/preferences.glade.h:25
+msgid "Recursive"
+msgstr "Recursief"
 
-#: src/main_window_cb.c:504
-#, fuzzy
-msgid "Really remove not running downloads from the list?"
-msgstr "Voltooide downloads weghalen"
+#: data/gwget.glade.h:16
+msgid "Recursive options"
+msgstr ""
 
-#: src/main_window_cb.c:534
+#: data/gwget.glade.h:17 src/main_window_cb.c:534
 #, fuzzy
 msgid "Remove all"
 msgstr "Voltooide downloads weghalen"
 
-#: src/main_window_cb.c:534
+#: data/gwget.glade.h:18
 #, fuzzy
-msgid "Really remove all downloads from the list?"
+msgid "Remove all downloads from list"
 msgstr "Voltooide downloads weghalen"
+
+#: data/gwget.glade.h:19 src/main_window_cb.c:475
+#, fuzzy
+msgid "Remove completed"
+msgstr "Voltooide downloads weghalen"
+
+#: data/gwget.glade.h:20
+#, fuzzy
+msgid "Remove completed downloads from list"
+msgstr "Voltooide downloads weghalen"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:504
+#, fuzzy
+msgid "Remove inactive"
+msgstr "Voltooide downloads weghalen"
+
+#: data/gwget.glade.h:22
+#, fuzzy
+msgid "Remove inactive downloads from list"
+msgstr "Voltooide downloads weghalen"
+
+#: data/gwget.glade.h:23
+msgid "Stop and delete downloaded file"
+msgstr ""
+
+#: data/gwget.glade.h:24
+msgid "The index file only"
+msgstr ""
+
+#: data/gwget.glade.h:25
+msgid "This site (mirror)"
+msgstr ""
+
+#: data/gwget.glade.h:26
+msgid "Url:"
+msgstr ""
+
+#: data/gwget.glade.h:27
+msgid "_New"
+msgstr "_Nieuw"
+
+#: data/gwget.glade.h:28
+msgid "_Toolbar"
+msgstr "_Werkbalk"
+
+#: data/newdownload.glade.h:1 data/preferences.glade.h:4
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr ""
+
+#: data/newdownload.glade.h:3
+#, fuzzy
+msgid "New Download"
+msgstr "Download annuleren?"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:27
+msgid "Save in:"
+msgstr "Opslaan in:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr ""
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  KB"
+msgstr ""
+
+#: data/preferences.glade.h:5
+msgid "<b>General</b>"
+msgstr "<b>Algemeen</b>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Gedrag</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr ""
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Links</span>"
+msgstr ""
+
+#: data/preferences.glade.h:9
+msgid "Column List"
+msgstr ""
+
+#: data/preferences.glade.h:10
+msgid "Continue downloads on startup"
+msgstr ""
+
+#: data/preferences.glade.h:11
+msgid "Convert links"
+msgstr ""
+
+#: data/preferences.glade.h:12 src/main_window.c:259
+msgid "Current Size"
+msgstr "Huidige grootte"
+
+#: data/preferences.glade.h:13
+#, fuzzy
+msgid "Don't create directories"
+msgstr "Kan niet schrijven naar doelmap:\n"
+
+#: data/preferences.glade.h:14
+#, fuzzy
+msgid "Download Speed"
+msgstr "Download annuleren?"
+
+#: data/preferences.glade.h:15
+msgid "Download page requisites"
+msgstr ""
+
+# Elapse = Elapsed
+#: data/preferences.glade.h:16 src/main_window.c:289
+msgid "Elapsed Time"
+msgstr "Verstreken tijd"
+
+#: data/preferences.glade.h:17
+#, fuzzy
+msgid "File Type Image"
+msgstr "Bestandsnaam"
+
+#: data/preferences.glade.h:18
+msgid "Follow relative links only"
+msgstr ""
+
+#: data/preferences.glade.h:19
+msgid "General"
+msgstr "Algemeen"
+
+#: data/preferences.glade.h:20
+msgid "Limit download speed to: "
+msgstr ""
+
+#: data/preferences.glade.h:21
+msgid "Maximum depth level: "
+msgstr ""
+
+#: data/preferences.glade.h:22
+msgid "Number of retries:"
+msgstr ""
+
+#: data/preferences.glade.h:23 src/main_window.c:279 src/main_window.c:284
+msgid "Percentage"
+msgstr "Percentage"
+
+#: data/preferences.glade.h:24
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+# Remain = Remaining
+#: data/preferences.glade.h:26 src/main_window.c:299
+msgid "Remaining Time"
+msgstr "Resterende tijd"
+
+#: data/preferences.glade.h:28 src/main_window.c:269
+msgid "Total Size"
+msgstr "Totale grootte"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Onbekend"
+
+# src/bookmarks_editor.c:941
+# src/bookmarks_editor.c:1148
+# src/menubar.c:565
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Mislukt"
 
 #: src/gwget_data.c:172
 msgid "stalled"
@@ -141,7 +291,7 @@ msgstr ""
 
 #: src/gwget_data.c:201
 msgid "Not Started"
-msgstr "Niet begonnen"
+msgstr "Niet gestart"
 
 #: src/gwget_data.c:203
 msgid "Not Running"
@@ -149,7 +299,7 @@ msgstr "Niet actief"
 
 #: src/gwget_data.c:205
 msgid "Not Connected"
-msgstr "Niet verbonden"
+msgstr "Niet Verbonden"
 
 #: src/gwget_data.c:207
 msgid "Connected"
@@ -172,7 +322,101 @@ msgstr ""
 
 #: src/gwget_data.c:222
 msgid "Error"
+msgstr "Fout"
+
+#: src/main_window.c:231
+msgid "File Type"
+msgstr "Bestandssoort"
+
+#: src/main_window.c:240
+msgid "File Name"
+msgstr "Bestandnaam"
+
+#: src/main_window.c:250
+msgid "State"
+msgstr "Status"
+
+#: src/main_window.c:309
+msgid "Speed"
+msgstr "Snelheid"
+
+# currents = current
+#: src/main_window.c:539
+#, fuzzy
+msgid "Cancel current downloads?"
+msgstr "Huidige downloads annuleren?"
+
+#: src/main_window.c:539
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
 msgstr ""
+
+#: src/main_window_cb.c:95
+#, fuzzy
+msgid "Error in download"
+msgstr "Download annuleren?"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr "Fout bij openen bestand"
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr ""
+
+#: src/main_window_cb.c:143
+msgid "Download Manager for Gnome2."
+msgstr ""
+
+#: src/main_window_cb.c:149
+msgid "translator_credits"
+msgstr "Vincent van Adrighem"
+
+#: src/main_window_cb.c:161
+msgid "Gwget"
+msgstr ""
+
+#: src/main_window_cb.c:391 src/new_window.c:151
+msgid "Select Folder"
+msgstr "Map selecteren"
+
+# currente = current
+#: src/main_window_cb.c:448
+#, fuzzy, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Weet u zeker dat u de huidige download wilt annuleren? (URL: %s)"
+
+#: src/main_window_cb.c:449
+msgid "Cancel download?"
+msgstr "Download annuleren?"
+
+#: src/main_window_cb.c:475
+#, fuzzy
+msgid "Really remove completed downloads from the list?"
+msgstr "Voltooide downloads weghalen"
+
+#: src/main_window_cb.c:504
+#, fuzzy
+msgid "Really remove inactive downloads from the list?"
+msgstr "Voltooide downloads weghalen"
+
+#: src/main_window_cb.c:534
+#, fuzzy
+msgid "Really remove all downloads from the list?"
+msgstr "Voltooide downloads weghalen"
+
+#: src/systray.c:133
+msgid "Nothing"
+msgstr "Niets"
+
+# Twijfelgeval: 'Gedownloade bestanden' beter?
+# src/context.c:62
+# src/history_callbacks.c:159
+# src/misc_callbacks.c:408
+#: src/systray.c:140
+msgid "Downloads"
+msgstr "Downloads"
 
 #: src/wget-log.c:83
 msgid "Socket error"
@@ -207,11 +451,11 @@ msgstr "Weigeren om bestaand bestand af te kappen\n"
 
 #: src/wget-log.c:98
 msgid "Unknown error"
-msgstr ""
+msgstr "Onbekende fout"
 
 #: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
-msgstr ""
+msgstr "Bestand niet gevonden"
 
 #: src/wget-log.c:122
 #, fuzzy
@@ -225,58 +469,40 @@ msgstr ""
 msgid "Can't write to target directory"
 msgstr "Kan niet schrijven naar doelmap:\n"
 
-#: src/custom-cell-renderer-progressbar.c:36
-msgid "Unknown"
-msgstr ""
-
-#: src/custom-cell-renderer-progressbar.c:99
-msgid "Failed"
-msgstr ""
-
-#: src/systray.c:133
 #, fuzzy
-msgid "Nothing"
+msgid "Remove not running"
 msgstr "Niet actief"
 
-#: src/systray.c:140
 #, fuzzy
-msgid "Downloads"
-msgstr "Download annuleren?"
+msgid "Really remove not running downloads from the list?"
+msgstr "Voltooide downloads weghalen"
 
 #, fuzzy
-#~ msgid "Pause download"
-#~ msgstr "Download annuleren?"
-
-#, fuzzy
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "Voltooide downloads weghalen"
-
-#, fuzzy
-#~ msgid "Select target directory"
-#~ msgstr "Kan niet schrijven naar doelmap:\n"
+msgid "Select target directory"
+msgstr "Kan niet schrijven naar doelmap:\n"
 
 # retriving = retrieving
 # What does this mean exactly??
-#~ msgid ""
-#~ "There are some downloads retriving information. Do you want to cancel it ?"
-#~ msgstr ""
-#~ "Er zijn enkele downloads actief met het ophalen van informatie. Wilt u "
-#~ "deze annuleren?"
+msgid ""
+"There are some downloads retriving information. Do you want to cancel it ?"
+msgstr ""
+"Er zijn enkele downloads actief met het ophalen van informatie. Wilt u deze "
+"annuleren?"
 
-#~ msgid "Remove completed downloads"
-#~ msgstr "Voltooide downloads weghalen"
+msgid "Remove completed downloads"
+msgstr "Voltooide downloads weghalen"
 
-#~ msgid "Are you sure to remove completed download from list?"
-#~ msgstr "Weet u zeker dat u de voltooide download van de lijst wilt halen?"
+msgid "Are you sure to remove completed download from list?"
+msgstr "Weet u zeker dat u de voltooide download van de lijst wilt halen?"
 
-#~ msgid "Socket error when downloading URL:\n"
-#~ msgstr "Er is een socket-fout opgetreden bij het ophalen van URL:\n"
+msgid "Socket error when downloading URL:\n"
+msgstr "Er is een socket-fout opgetreden bij het ophalen van URL:\n"
 
-#~ msgid "Host not found when downloading URL:\n"
-#~ msgstr "Host niet gevonden bij het downloaden van URL:\n"
+msgid "Host not found when downloading URL:\n"
+msgstr "Host niet gevonden bij het downloaden van URL:\n"
 
-#~ msgid "Unknown error when downloading URL:\n"
-#~ msgstr "Er is een onbekende fout opgetreden bij het downloaden van URL:\n"
+msgid "Unknown error when downloading URL:\n"
+msgstr "Er is een onbekende fout opgetreden bij het downloaden van URL:\n"
 
-#~ msgid "File not found when downloading URL:\n"
-#~ msgstr "Bestand niet gevonden bij het downloaden van URL:\n"
+msgid "File not found when downloading URL:\n"
+msgstr "Bestand niet gevonden bij het downloaden van URL:\n"
