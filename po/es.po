@@ -1,32 +1,32 @@
 # traducción de es.po al Spanish
 # translation of gwget2.
-# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget2 package.
 # <>, 2003.
 #  <>, 2003.
-# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004.
+# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-24 12:50+0100\n"
-"PO-Revision-Date: 2004-08-21 19:56+0200\n"
-"Last-Translator: David Sedeño Fernández <davidsf@cvs.gnome.org>\n"
+"POT-Creation-Date: 2005-01-01 14:57+0100\n"
+"PO-Revision-Date: 2005-01-01 14:59+0100\n"
+"Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.9.1\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
-msgstr ""
+msgstr "aplicación gwget"
 
 #: data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
-msgstr ""
+msgstr "fábrica de automatización gwget"
 
 #: data/about.glade.h:1
 msgid "About Gwget"
@@ -43,8 +43,8 @@ msgstr "Gwget: Gestor de descargas para Gnome2"
 #: data/about.glade.h:4
 msgid "translator-credits"
 msgstr ""
-"Francisco Javier F. Serrador <serrador@gnome.org>\nDavid Sedeño Fernández "
-"<david@alderia.com>"
+"Francisco Javier F. Serrador <serrador@gnome.org>\n"
+"David Sedeño Fernández <david@alderia.com>"
 
 #: data/gwget.glade.h:1 data/preferences.glade.h:2
 msgid "    "
@@ -285,7 +285,7 @@ msgstr "Limitar velocidad de descarga a:"
 
 #: data/preferences.glade.h:22
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "configuración manual del proxy"
 
 #: data/preferences.glade.h:23
 msgid "Maximum depth level: "
@@ -341,7 +341,7 @@ msgstr "parado"
 
 #: src/gwget_data.c:210
 msgid "Waiting"
-msgstr ""
+msgstr "Esperando"
 
 #: src/gwget_data.c:212
 msgid "Not Started"
@@ -380,19 +380,19 @@ msgstr ""
 msgid "Error"
 msgstr "Error"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:615
 msgid "Unable to add this download"
-msgstr ""
+msgstr "Imposible añadir esta descarga"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:615
 msgid "This download is already added"
-msgstr ""
+msgstr "Esta descarga ya está añadida"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:663 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Error al abrir el archivo"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:663 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "No se puede abrir el archivo"
 
@@ -408,11 +408,19 @@ msgstr "Estado"
 msgid "Speed"
 msgstr "Velocidad"
 
-#: src/main_window.c:560
+#: src/main_window.c:374
+msgid "Error starting the download"
+msgstr "Error al iniciar la descarga"
+
+#: src/main_window.c:374
+msgid "There is a unexpected error starting the download"
+msgstr "Hubo un error inesperado al iniciar la descarga"
+
+#: src/main_window.c:565
 msgid "Cancel current downloads?"
 msgstr "¿Desea cancelar las descargas actuales?"
 
-#: src/main_window.c:560
+#: src/main_window.c:565
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -438,7 +446,7 @@ msgstr ""
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:140
+#: src/main_window_cb.c:503 src/new_window.c:141
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
