@@ -5,6 +5,7 @@
 	  Object. Currently doesn't recive message :(
 	* src/Makefile.am: Added instructions for bonobo object
 	  compilation.
+	* configure.in: Check Bonobo stuff
 
 2004-09-11  David Sedeño <david@alderia.com>
 
