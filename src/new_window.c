@@ -34,9 +34,10 @@ This file creates the window for add new download and its callback
 #include "utils.h"
 
 
+static void add_to_save_in_combobox (gpointer data1, gpointer data2);
+
 /* xml of the new download window */
 GladeXML *xml_new = NULL;
-
 
 void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 {
@@ -98,7 +99,7 @@ void
 create_new_window(void)
 {
 	gchar *xml_file = NULL;
-	GtkWidget *window = NULL;
+	GtkWidget *window = NULL, *combo;
 	GtkEntry *entry = NULL;
 	gchar *url = ""; // URL in clipboard
 	GtkClipboard *clipboard = NULL;
@@ -123,13 +124,12 @@ create_new_window(void)
 	
 	gtk_entry_set_text(GTK_ENTRY(entry),url);
 
-	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
-	if ((gwget_pref.download_dir==NULL) || (strlen(gwget_pref.download_dir)==0)) {
-		gwget_pref.download_dir=g_strdup_printf("%s", g_get_home_dir());
-		gtk_entry_set_text(GTK_ENTRY(entry), g_get_home_dir());
-	} else {
-		gtk_entry_set_text(GTK_ENTRY(entry), gwget_pref.download_dir);
-	}
+	combo = glade_xml_get_widget (xml_new, "save_in_comboboxentry");
+	gtk_combo_box_set_model(GTK_COMBO_BOX(combo), save_in_model);
+	gtk_combo_box_entry_set_text_column (GTK_COMBO_BOX_ENTRY(combo), 0);
+	
+	g_list_foreach (save_in_paths, add_to_save_in_combobox, NULL);
+	
 	gtk_widget_show(window);
 }
 
@@ -157,4 +157,16 @@ on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 	
 	gtk_widget_destroy(filesel);
 
+}
+
+static void
+add_to_save_in_combobox (gpointer data1, gpointer data2)
+{
+	gchar *option = data1;
+	GtkTreeIter iter;
+		
+	printf("Op: %s\n", option);
+	gtk_list_store_append (GTK_LIST_STORE(save_in_model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE(save_in_model), &iter, 0, option, -1);
+	
 }

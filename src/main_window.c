@@ -123,6 +123,10 @@ main_window(void)
 	}
 	
 	systray_load();
+	
+	/* Create the model for the "save in" option in new download dialog */
+	save_in_model = (GtkTreeModel*)gtk_list_store_new (1, G_TYPE_STRING);
+		
 }
 
 void 
@@ -166,7 +170,8 @@ gwget_get_defaults_from_gconf(void)
 		gconf_client_set_string (gconf_client, "/apps/gwget2/download_dir", g_strdup(g_get_home_dir()), NULL);
 	}
 
-
+	save_in_paths = g_list_append (save_in_paths, gwget_pref.download_dir);
+	
 	num_dl=gconf_client_get_int(gconf_client,"/apps/gwget2/n_downloads",NULL);
 	for (i=0;i<num_dl;i++) {
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/url",i);

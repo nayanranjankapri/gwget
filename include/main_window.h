@@ -83,8 +83,11 @@ GtkTooltips *tray_tooltip;
 /* the options of the column list from Gconf on load */
 GladeXML *xml_pref;
 
-GList *donwloads;
+/* List of introduced path in save in dialogs */
+GList *save_in_paths;
 
+/* model for the combobox in the "save in" dialog */
+GtkTreeModel *save_in_model;
 
 void main_window(void);
 void on_main_window_delete_event(GtkWidget *widget, gpointer data);

@@ -1,5 +1,12 @@
 2005-01-15  David Sedeño <david@alderia.com>
 
+	* data/newdownload.glade: Replace the save in entry for a gtkcomboboxentry.
+	* include/main_window.h: Added a list of "save in" paths and a model for the new gtkcomboboxentry.
+	* src/main_window.c (main_window): Create the model for the gtkcomboboxentry. Added the default directory to the list of paths.
+	* src/new_window.c: Put the List paths in the gtkcomboboxentry.
+
+2005-01-15  David Sedeño <david@alderia.com>
+
 	* src/main_window.c (on_treeview_drag_received): Cleanup.
 	* data/preferences.glade: Added check button for ask save in for each download. Reallocation of widgets.
 	* include/gwget_data.h: Add ask_save_each_dl to preferences.
