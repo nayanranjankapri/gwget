@@ -1,20 +1,71 @@
-- Put more wget options in preferences window.
-- Write documentation.
-- Support gnome-session
-- Proxy support, global Gnome proxy and manual proxy. 
+VERSION 0.91
+============
+- gwget.schema for Gconf (in cvs).
+- Proxy support, global Gnome proxy and manual proxy (See #157462).  
+
+VERSION 0.95
+============
+- Check other Wget functions that are interesting for a 
+  download manager (without adding more options in preferences window).
+- Support gnome-session.
 - User / Password for ftp (with gnome-keyring integration? )
-- gwget.schema for Gconf.
-- Downloads history.
-- Maximun number of concurrent downloads.
 - Shutdown internet connection after last download have completed.
+- Manage maximun number of concurrent downloads.
+
+VERSION 1.0 
+===========
+- Code clean up. It will be required before starting Post 1.0 features
+  that require some architectural changes.
+- HIG control.
+- Write documentation.
+- Fix all typos
+
+VERSION 1.1
+===========
+- A download history (it requires discussions in order not to complexify
+  too much the main window).
+- Reduce number of preferences. Probably most current preferences
+  could be removed or moved (for example, some pref about webpage
+  download could be only displayed when the webpage dialog appear).
+  For most preferences we could detect the correct behavior.
+- Plugins management. It will allow to use Gwget as a central place to
+  manage all downloads. All downloads being done by Gwget or another
+  program (e.g. bittorrent, p2p, system update) will be shown in 
+  Gwget. Basic actions (pause, resume) will be enabled on these
+  downloads. Other tools will be able to set a priority (e.g. LOW for
+  a background system update, NORMAL for usual bittorent files, HIGH for
+  an important system update), this will require to code the scheduler
+  (see below).
+
+VERSION 1.2
+===========
+- A download scheduler. This will solve the problem of all files
+  downloading at the same time. For example with a "Shortest Processing
+  Time First" rule this will allow the download of little files
+  (e.g. Text files) to precede downloads of big files (e.g. ISO files).
+  At the end, users always need more immediatly little files than big
+  one (because the user know big files will take some time whereas
+  little files have an immediate use). **IT NEEDS MORE DISCUSSION**
+- When other functions are coded, it will be possible to combine Plugins
+  management and download scheduler (e.g. pause p2p when downloading
+  urgent system update).
+
+VERSION 1.3
+===========
+- Implement a default directory system. The idea is
+  to save each files in a specific directory (e.g. Movies in ~/Movies), and
+  if the file type is unknown, it could default to home directory.
+  **IT NEEDS MORE DISCUSSION**
 
 
-Done:
+DONE
+====
 - Clean the popup menu. Currently there are too much options.
 - Epiphany extension. 
-- Accept urls from the command line. This option it's more useful if gwget could detect if another instance of gwget it's already running and add the download to the current gwget (as gedit do for text file). Read gedit source for ideas. 
-
-
+- Accept urls from the command line. This option it's more useful if
+  gwget could detect if another instance of gwget it's already running 
+  and add the download to the current gwget (as gedit do for text file).
+  Read gedit source for ideas. 
 - Make it remember if you want or don't want a Toolbar (Done in 0.11).
 - Make it possible to choose what columns to have (Done in 0.11)
 - Drag&Drop Support (Done)
