@@ -1,3 +1,12 @@
+2004-07-10  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (on_browse_save_in_button_clicked):
+	Use filechooser. Removed callbacks from the old fileselection.
+	* src/new_window.c (on_new_browse_save_in_button_clicked):
+	Use filechooser. Removed callbacks from the old fileselection.
+	* data/newdownload.glade data/preferences.glade: 
+	Removed fileselections.
+
 2004-07-09  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: added IMAGE_COLUMN
