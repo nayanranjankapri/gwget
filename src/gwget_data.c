@@ -395,19 +395,23 @@ gwget_data_start_download(GwgetData *gwgetdata)
 			}
 			
 			if (gwget_pref.limit_speed) {
-				argv[arg] = g_strdup_printf("--limit-rate=%dk",gwget_pref.max_speed);
+				argv[arg] = g_strdup_printf("--limit-rate=%dk",
+						            gwget_pref.max_speed);
 				arg++;
 			}
 			
-			if ( strcmp (gwget_pref.network_mode, "manual") == 0 && gwget_pref.http_proxy) {
+			if ( strcmp (gwget_pref.network_mode, "manual") == 0 && 
+			     gwget_pref.http_proxy ) 
+			{
 				setenv("http_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
-	            argv[arg]="-Yon";
+		 	        argv[arg]="-Yon";
 				arg++;
 			}
 			
-			if ( strcmp (gwget_pref.network_mode, "default" ) == 0 && gwget_pref.gnome_http_proxy && gwget_pref.gnome_use_proxy) {
+			if ( strcmp (gwget_pref.network_mode, "default" ) == 0 && gwget_pref.gnome_http_proxy && gwget_pref.gnome_use_proxy) 
+			{
 				setenv("http_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.gnome_http_proxy),":",g_strdup_printf("%d",gwget_pref.gnome_http_proxy_port),NULL),1);
-	            argv[arg]="-Yon";
+	            		argv[arg]="-Yon";
 				arg++;
 			}
 			
@@ -444,6 +448,7 @@ gwget_data_start_download(GwgetData *gwgetdata)
                         	     gwgetdata);
 	}
 	
+	gwget_remember_downloads();
 }
 
 void
@@ -664,3 +669,11 @@ gwget_data_exec (GwgetData *gwgetdata)
 		run_dialog(_("Error opening file"),_("Couldn't open the file"));
 	}
 }
+
+void 
+gwget_init_pref(Preferences *pref)
+{
+	pref->trayonly = FALSE;
+	pref->docked   = FALSE;
+}
+

@@ -215,9 +215,7 @@ int main(int argc,char *argv[])
 	textdomain (GETTEXT_PACKAGE);
 	setlocale(LC_ALL, "");
 
-	gwget_pref.trayonly = FALSE;
-	gwget_pref.docked   = FALSE;
-	
+	gwget_init_pref(&gwget_pref);
 	gwget = gnome_program_init("Gwget", VERSION, LIBGNOMEUI_MODULE, argc, argv,
 			            GNOME_PARAM_POPT_TABLE,options,GNOME_PARAM_NONE);
 

@@ -102,7 +102,8 @@ void gwget_get_defaults_from_gconf(void);
 void on_gwget_drag_received(GtkWidget * widget, GdkDragContext * context, int x,
                      int y, GtkSelectionData * seldata, guint info,
                      guint time, gpointer data);
-
+gboolean gwget_remember_window_size_and_position(void);
+gboolean gwget_remember_downloads(void);
 void gwget_quit(void);
 
 #endif

@@ -1,3 +1,30 @@
+2005-02-11  Ivan Yosifov <ivan@yosifov.net>
+
+	* src/main_window_cb.c: minor tidying
+	
+	* src/main.c,
+	  src/gwget_data.c
+	  include/gwget_data.h : Moved gwget_pref initialziation code from main(),
+	  	        	 to a new function - gwget_init_pref , declared in
+			         gwget_data.h , defined in gwget_data.c , called in
+	  			 main()
+				 
+	* src/main_window.c,
+	  include/main_window.h: split gwget_quit() into two functions , namely:
+			         gwget_remember_window_size_and_position() and
+			         gwget_remember_downloads()
+				 
+	* src/gwget_data.c: call gwget_remember_downloads() in
+			    gwget_data_start_download(). This way we won't
+			    loose track of the downloads if gwget is
+			    terminated abnormally ( power surges , hardware
+			    failiures... )
+
+	* src/main_window.c: call gwget_remember_window_size_and_position on
+			     configure-events. 
+			     We update the download list on change , so why not update
+			     window size on resize (or move) ? :)
+
 2005-02-02  Ivan Yosifov <ivan@yosifov.net>
 
 	* src/systray.c: moved the main window popping code from systray_clicked

@@ -116,4 +116,6 @@ void gwget_data_set_filename_from_url(GwgetData *gwgetdata, gchar *url);
 void gwget_data_add_download(GwgetData *gwgetdata);
 void gwget_data_exec(GwgetData *gwgetdata);
 
+void gwget_init_pref(Preferences *pref);
+
 #endif

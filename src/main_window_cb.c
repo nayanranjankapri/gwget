@@ -210,7 +210,8 @@ on_button_new_clicked(GtkWidget *widget, gpointer data)
 }
 	
 void 
-new_download(GwgetData* gwgetdata) {
+new_download(GwgetData* gwgetdata) 
+{
 	GtkTreeIter iter;
 	GtkTreeSelection *select;
 	GtkIconTheme *theme;
@@ -511,11 +512,13 @@ on_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 	save_in = glade_xml_get_widget(xml_pref,"save_in_entry");
 	
 	filesel = gtk_file_chooser_dialog_new  (_("Select Folder"),
-											NULL,
-											GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-											GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-				      						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
-											NULL);
+						NULL,
+						GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
+						GTK_STOCK_CANCEL, 
+						GTK_RESPONSE_CANCEL,
+						GTK_STOCK_OPEN, 
+						GTK_RESPONSE_ACCEPT,
+						NULL);
 	
 	if (gtk_dialog_run (GTK_DIALOG (filesel)) == GTK_RESPONSE_ACCEPT) {
 		char *directory;
@@ -527,7 +530,6 @@ on_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 	}
 	
 	gtk_widget_destroy(filesel);
-
 }
 
 void 

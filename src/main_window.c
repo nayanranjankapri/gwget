@@ -26,8 +26,6 @@
 #include "systray.h"
 #include "new_window.h"
 
-
-
 /* Global Preferences */
 Preferences gwget_pref;
 
@@ -36,10 +34,9 @@ show_prefered_columns(void);
 
 static void 
 gwget_gconf_notify_toolbar(GConfClient *client,
-						   guint        cnxn_id,
-		   				   GConfEntry  *entry,
-		   				   gpointer     user_data);
-
+			   guint        cnxn_id,
+		   	   GConfEntry  *entry,
+		   	   gpointer     user_data);
 
 void 
 main_window(void) 
@@ -70,7 +67,12 @@ main_window(void)
 	gtk_tree_view_set_model(GTK_TREE_VIEW(treev),GTK_TREE_MODEL(model));
 	select = gtk_tree_view_get_selection (GTK_TREE_VIEW (treev));
 	gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
-                
+	
+	g_signal_connect(GTK_WIDGET(window),
+			 "configure-event",
+			 G_CALLBACK(gwget_remember_window_size_and_position),
+			 NULL);
+	
 	/* add the columns titles to the tree view */
 	add_columns (GTK_TREE_VIEW (treev));
 	
@@ -83,13 +85,15 @@ main_window(void)
 	
 	/* Drag and drop set up */
 	gtk_drag_dest_set(GTK_WIDGET(window), 
-					  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
-					  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
-                      GDK_ACTION_COPY);
+			  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
+			  dragtypes, 
+			  sizeof(dragtypes) / sizeof(dragtypes[0]),
+                          GDK_ACTION_COPY);
 						
-	g_signal_connect(G_OBJECT(window), "drag_data_received",
-					 G_CALLBACK(on_gwget_drag_received),
-					 GUINT_TO_POINTER(dnd_type));
+	g_signal_connect(G_OBJECT(window), 
+			 "drag_data_received",
+			 G_CALLBACK(on_gwget_drag_received),
+			 GUINT_TO_POINTER(dnd_type));	
 					 
 	/* Set the toolbar like gnome preferences */
 	toolbar = glade_xml_get_widget(xml,"toolbar1");
@@ -540,18 +544,48 @@ show_prefered_columns(void)
 	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(checkitem), gwget_pref.max_speed);
 }
 
-
-void
-gwget_quit(void)
+/*
+ * This is called as a GTK singal handler , so the return value tells
+ * the singal was not handled and should propagate further
+ */
+gboolean
+gwget_remember_window_size_and_position(void)
 {
-	gint response;
+	GtkWidget *main_window;
+	GtkAllocation *allocation;
+	gint position_x,position_y;
+
+	/* Remember the size of the window */
+	main_window=glade_xml_get_widget(xml,"main_window");
+	allocation= &(GTK_WIDGET (main_window)->allocation);
+	gconf_client_set_int (gconf_client, 
+			      "/apps/gwget2/default_width",
+			      allocation->width,
+			      NULL);
+	gconf_client_set_int (gconf_client, 
+			      "/apps/gwget2/default_height",
+			      allocation->height,
+			      NULL);
+	
+	/* Remember the position */
+	gtk_window_get_position(GTK_WINDOW(main_window), &position_x, &position_y);
+	gconf_client_set_int (gconf_client,"/apps/gwget2/position_x",position_x,NULL);
+	gconf_client_set_int (gconf_client,"/apps/gwget2/position_y",position_y,NULL);
+	
+	return FALSE;
+}
+
+/*
+ * The return value is used in gwget_quit
+ */
+gboolean 
+gwget_remember_downloads(void)
+{
 	gchar *url,*key;
 	GwgetData *gwgetdata;
 	GtkTreeIter iter;
-	gint i,length,position_x,position_y;
-	gboolean running; 
-	GtkWidget *main_window;
-	GtkAllocation *allocation;
+	gint i,length;
+	gboolean running = FALSE;
 	
 	/* calculate the number of items in the treeview */
 	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
@@ -561,16 +595,17 @@ gwget_quit(void)
 	gconf_client_set_int(gconf_client,"/apps/gwget2/n_downloads",length,NULL);
 		
 	gtk_tree_model_get_iter_root(model,&iter);
-	/* Safe current downloads in GConf */
+	/* Save current downloads in GConf */
 	/* Calculate if there are any dl in retriving state */
-	running = FALSE;
 	for (i=0;i<length;i++) {
 		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
 		gwgetdata=g_object_get_data(G_OBJECT(model),url);
 	
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d",i);
-		gconf_client_add_dir(gconf_client,key,
-							 GCONF_CLIENT_PRELOAD_NONE,NULL);
+		gconf_client_add_dir(gconf_client,
+				     key,
+				     GCONF_CLIENT_PRELOAD_NONE,
+				     NULL);
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/url",i);
 		gconf_client_set_string(gconf_client,key,gwgetdata->url,NULL);
 		
@@ -593,21 +628,22 @@ gwget_quit(void)
 		
 		gtk_tree_model_iter_next(model,&iter);
 	}
+
+	return running;
+}
+
+void
+gwget_quit(void)
+{
+	gboolean running;
+	gint response;
 	
-	/* Remember the size of the window */
-	main_window=glade_xml_get_widget(xml,"main_window");
-	allocation= &(GTK_WIDGET (main_window)->allocation);
-	gconf_client_set_int (gconf_client, "/apps/gwget2/default_width",allocation->width,NULL);
-	gconf_client_set_int (gconf_client, "/apps/gwget2/default_height",allocation->height,NULL);
-	
-	/* Remember the position */
-	gtk_window_get_position(GTK_WINDOW(main_window), &position_x,&position_y);
-	gconf_client_set_int (gconf_client,"/apps/gwget2/position_x",position_x,NULL);
-	gconf_client_set_int (gconf_client,"/apps/gwget2/position_y",position_y,NULL);
-	
+	gwget_remember_window_size_and_position();
+	running = gwget_remember_downloads();
 	
 	if (running) {
-		response = run_dialog(_("Cancel current downloads?"),_("There is at least one active download left. Really cancel all running transfers?"));
+		response = run_dialog(_("Cancel current downloads?"),
+				      _("There is at least one active download left. Really cancel all running transfers?"));
 		if (response == GTK_RESPONSE_OK) {
 			stop_all_downloads();
 			gtk_main_quit();
@@ -616,3 +652,4 @@ gwget_quit(void)
 		gtk_main_quit();
 	}
 }
+
