@@ -1,5 +1,6 @@
 2004-10-14 David Sedeño <david@alderia.com>
 
+	* Makefile.am: Fix SUBDIRS if epiphany-extension is enabled
 	* src/main.c: Added static to gwget_get_command_line_data function.
 	* src/systray.c: Use gwget.png and gwget-off.png for notification
 	icon.

@@ -3,7 +3,7 @@
 SUBDIRS = po include src pixmaps data 
 
 if ENABLE_EPIPHANY_EXTENSION
-	SUBDIRS += epiphany-extension
+SUBDIRS += epiphany-extension
 endif
 
 EXTRA_DIST = \
