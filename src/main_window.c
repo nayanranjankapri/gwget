@@ -79,7 +79,7 @@ main_window(void)
 					  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
                       GDK_ACTION_COPY);
 						
-	g_signal_connect(G_OBJECT(window), "drag-data-received",
+	g_signal_connect(G_OBJECT(window), "drag_data_received",
 					 G_CALLBACK(on_treeview_drag_received),
 					 GUINT_TO_POINTER(dnd_type));
 					 
@@ -318,13 +318,22 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 							guint time, gpointer data)
 {
 	gchar *file;
+	GList *files;
 	GwgetData *gwgetdata;
 	
 	dnd_type = GPOINTER_TO_UINT(data);
-	file=((gchar *) (seldata->data));
-      
-	if (dnd_type==TARGET_URI_LIST || dnd_type==TARGET_NETSCAPE_URL) {
+	  
+	if (dnd_type==TARGET_URI_LIST) {
+		files = gnome_vfs_uri_list_parse (seldata->data);
+		GnomeVFSURI *vfs_uri = files->data;
+		file = gnome_vfs_uri_to_string(vfs_uri,GNOME_VFS_URI_HIDE_NONE);
 		gwgetdata=gwget_data_create(file,gwget_pref.download_dir);
+		new_download(gwgetdata);
+		gwget_data_start_download(gwgetdata);
+		gtk_drag_finish(context, TRUE, FALSE, time);
+	} else if (dnd_type==TARGET_NETSCAPE_URL) {
+		file=((gchar *) (seldata->data));
+    	gwgetdata=gwget_data_create(file,gwget_pref.download_dir);
 		new_download(gwgetdata);
 		gwget_data_start_download(gwgetdata);
 		gtk_drag_finish(context, TRUE, FALSE, time);
@@ -347,7 +356,6 @@ gwget_gconf_notify_toolbar(GConfClient *client,
 	
 	toolbar = glade_xml_get_widget(xml,"toolbar1");
 	toolbar_setting = (gchar *)gconf_value_get_string(value);
-	
 	
 	if (!strcmp(toolbar_setting,"icons")) {
 		gtk_toolbar_set_style(GTK_TOOLBAR(toolbar),GTK_TOOLBAR_ICONS);

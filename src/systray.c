@@ -36,6 +36,15 @@ systray_load(void)
 	g_signal_connect(G_OBJECT(tray_icon), "embedded", G_CALLBACK(systray_embedded), NULL);
 	g_signal_connect(G_OBJECT(tray_icon), "destroy", G_CALLBACK(systray_destroyed), NULL);
 	g_signal_connect(G_OBJECT(eventbox), "button-press-event", G_CALLBACK(systray_clicked), NULL);
+	gtk_drag_dest_set(GTK_WIDGET(tray_icon), 
+					  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
+					  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
+                      GDK_ACTION_COPY);
+						
+	g_signal_connect(G_OBJECT(tray_icon), "drag_data_received",
+					 G_CALLBACK(on_treeview_drag_received),
+					 GUINT_TO_POINTER(dnd_type));
+
 	egg_tray_icon_send_message(tray_icon,1000,"gwget",7);
 }
 
