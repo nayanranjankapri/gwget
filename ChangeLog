@@ -1,3 +1,8 @@
+2004-09-13  David Sedeño <david@alderia.com>
+
+	* data/preferences.glade: connect delete_event with
+	  on_pref_cancel_button_clicked (Julien Cegarra)
+
 2004-09-11  David Sedeño <david@alderia.com>
 
 	* src/main.c: Check instance of bonobo
