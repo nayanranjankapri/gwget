@@ -1,5 +1,9 @@
 2004-09-21  David Sedeño <david@alderia.com>
 
+	* configure.in: Added mk to ALL_LINGUAS
+	
+2004-09-21  David Sedeño <david@alderia.com>
+
 	* include/Makefile.am: Remove install of include files (me).
 	* include/gwget_data.h: Add gwget_data_add_download (me).
 	* include/main_window_cb.h: Add check_download_in_progress 
@@ -289,5 +293,3 @@
 2004-06-12  David Sedeño <david@alderia.com>
                                                                                 
 	* systray.c, main_window.c:exit on delete event if not docked.
-                                                                                
-
