@@ -802,7 +802,7 @@
 	<widget class="GtkHBox" id="hbox7">
 	  <property name="visible">True</property>
 	  <property name="homogeneous">False</property>
-	  <property name="spacing">0</property>
+	  <property name="spacing">12</property>
 
 	  <child>
 	    <widget class="GtkLabel" id="label16">
@@ -855,7 +855,7 @@
 	      <child>
 		<widget class="GtkLabel" id="label12">
 		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Local File: </property>
+		  <property name="label" translatable="yes">Local File:</property>
 		  <property name="use_underline">False</property>
 		  <property name="use_markup">True</property>
 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -876,7 +876,7 @@
 	      <child>
 		<widget class="GtkLabel" id="label14">
 		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Local Directory: </property>
+		  <property name="label" translatable="yes">Local Directory:</property>
 		  <property name="use_underline">False</property>
 		  <property name="use_markup">True</property>
 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
