@@ -1,0 +1,716 @@
+# Swedish messages for gwget.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# Christian Rose <menthos@menthos.com>, 2005.
+#
+# $Id$
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-03 01:16+0100\n"
+"PO-Revision-Date: 2005-01-03 01:18+0100\n"
+"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "programmet gwget"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "automationsfabrik för gwget"
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "Om Gwget"
+
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL version 2"
+
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Hämtningshanterare för GNOME 2"
+
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr ""
+"Christian Rose\n"
+"Skicka synpunkter på översättningen till sv@li.org"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Hämta:</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Egenskaper</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
+#: src/main_window_cb.c:662
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Hämtningshanterare"
+
+#: data/gwget.glade.h:7
+msgid "Information"
+msgstr "Information"
+
+#: data/gwget.glade.h:8
+msgid "Local Directory: "
+msgstr "Lokal katalog: "
+
+#: data/gwget.glade.h:9
+msgid "Local File: "
+msgstr "Lokal fil: "
+
+#: data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimediafiler (videofilmer och bilder)"
+
+#: data/gwget.glade.h:11
+msgid "New download"
+msgstr "Ny hämtning"
+
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Gör paus"
+
+#: data/gwget.glade.h:13
+msgid "Pause all"
+msgstr "Gör paus i alla"
+
+#: data/gwget.glade.h:14
+msgid "Pause all downloads"
+msgstr "Gör paus i alla hämtningar"
+
+#: data/gwget.glade.h:15
+msgid "Pause download"
+msgstr "Gör paus i hämtning"
+
+#: data/gwget.glade.h:16
+msgid "Properties"
+msgstr "Egenskaper"
+
+#: data/gwget.glade.h:17
+msgid "Question"
+msgstr "Fråga"
+
+#: data/gwget.glade.h:18 data/preferences.glade.h:31
+msgid "Recursive"
+msgstr "Rekursivt"
+
+#: data/gwget.glade.h:19
+msgid "Recursive options"
+msgstr "Alternativ för rekursivitet"
+
+#: data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Ta bort"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:645
+msgid "Remove all"
+msgstr "Ta bort alla"
+
+#: data/gwget.glade.h:22
+#, fuzzy
+msgid "Remove all downloads from list"
+msgstr "Ta bort e-postadresser från listan"
+
+#: data/gwget.glade.h:23 src/main_window_cb.c:587
+#, fuzzy
+msgid "Remove completed"
+msgstr "Borttagning färdig"
+
+#: data/gwget.glade.h:24
+#, fuzzy
+msgid "Remove completed downloads from list"
+msgstr "Ta bort markerad mapp från favoriter"
+
+#: data/gwget.glade.h:25 src/main_window_cb.c:616
+#, fuzzy
+msgid "Remove inactive"
+msgstr "Ta bort åtgärd"
+
+#: data/gwget.glade.h:26
+#, fuzzy
+msgid "Remove inactive downloads from list"
+msgstr "Ta bort e-postadresser från listan"
+
+#: data/gwget.glade.h:27
+#, fuzzy
+msgid "Resume all"
+msgstr "Återuppta"
+
+#: data/gwget.glade.h:28
+#, fuzzy
+msgid "Resume all downloads"
+msgstr "Automatiska hämtningar"
+
+#: data/gwget.glade.h:29
+#, fuzzy
+msgid "Stop and delete downloaded file"
+msgstr "Välj mapp för hämtningar"
+
+#: data/gwget.glade.h:30
+#, fuzzy
+msgid "The index file only"
+msgstr "Indexeraren är upptagen."
+
+#: data/gwget.glade.h:31
+msgid "This site (mirror)"
+msgstr ""
+
+#: data/gwget.glade.h:32
+#, fuzzy
+msgid "Url:"
+msgstr "Url"
+
+#: data/gwget.glade.h:33
+msgid "_New"
+msgstr "_Ny"
+
+#: data/gwget.glade.h:34
+msgid "_Toolbar"
+msgstr "_Verktygsrad"
+
+#: data/gwget.schemas.in.h:1
+msgid "200"
+msgstr ""
+
+#: data/gwget.schemas.in.h:2
+msgid "250"
+msgstr ""
+
+#: data/gwget.schemas.in.h:3
+msgid "3"
+msgstr ""
+
+#: data/gwget.schemas.in.h:4
+#, fuzzy
+msgid "Convert Links"
+msgstr "Konventioner"
+
+#: data/gwget.schemas.in.h:5
+msgid "Convert to relative links in recursive mode."
+msgstr ""
+
+#: data/gwget.schemas.in.h:6
+msgid "Default Download Directory"
+msgstr ""
+
+#: data/gwget.schemas.in.h:7
+#, fuzzy
+msgid "Download Page Requisites"
+msgstr "Hämtningen pausad"
+
+#: data/gwget.schemas.in.h:8
+msgid "Follow relative links"
+msgstr ""
+
+#: data/gwget.schemas.in.h:9
+msgid "Limit maximum speed"
+msgstr ""
+
+#: data/gwget.schemas.in.h:10
+msgid "Max depth in recursive mode"
+msgstr ""
+
+#: data/gwget.schemas.in.h:11
+msgid "Max speed limit"
+msgstr ""
+
+#: data/gwget.schemas.in.h:12
+#, fuzzy
+msgid "Number of downloads"
+msgstr "Automatiska hämtningar"
+
+#: data/gwget.schemas.in.h:13
+#, fuzzy
+msgid "Number of retries"
+msgstr "Antal filer:"
+
+#: data/gwget.schemas.in.h:14
+#, fuzzy
+msgid "Open the file after download"
+msgstr "Uppdatera automatiskt"
+
+#: data/gwget.schemas.in.h:15
+#, fuzzy
+msgid "Resume downloads at startup"
+msgstr "Automatiska hämtningar"
+
+#: data/gwget.schemas.in.h:16
+msgid "View Remain time column"
+msgstr ""
+
+#: data/gwget.schemas.in.h:17
+#, fuzzy
+msgid "View download speed column"
+msgstr "Hämtningen pausad"
+
+#: data/gwget.schemas.in.h:18
+msgid "View elapse time column"
+msgstr ""
+
+#: data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr ""
+
+#: data/gwget.schemas.in.h:20
+#, fuzzy
+msgid "View toolbar"
+msgstr "_Verktygsrad"
+
+#: data/gwget.schemas.in.h:21
+msgid "View total size column"
+msgstr ""
+
+#: data/gwget.schemas.in.h:22
+msgid "direct"
+msgstr ""
+
+#: data/gwget.schemas.in.h:23
+#, fuzzy
+msgid "false"
+msgstr "Gör paus"
+
+#: data/gwget.schemas.in.h:24
+msgid "true"
+msgstr ""
+
+#: data/newdownload.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+#, fuzzy
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Datum</span>"
+
+#: data/newdownload.glade.h:3
+#, fuzzy
+msgid "New Download"
+msgstr "Hämta"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+#, fuzzy
+msgid "Save in:"
+msgstr "Sparalternativ"
+
+#: data/newdownload.glade.h:5
+#, fuzzy
+msgid "URL: "
+msgstr "URL:"
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  kB/sec"
+msgstr ""
+
+#: data/preferences.glade.h:4
+msgid "<b>General</b>"
+msgstr "<b>Allmänt</b>"
+
+#: data/preferences.glade.h:5
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Beteende</span>"
+
+#: data/preferences.glade.h:6
+#, fuzzy
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Listkolumner</span>"
+
+# Finns både med <b> och <span blah blah. Varför?
+# http://bugzilla.ximian.com/show_bug.cgi?id=61078
+#: data/preferences.glade.h:7
+#, fuzzy
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Grundläggande</span>"
+
+#: data/preferences.glade.h:8
+#, fuzzy
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Ikonrubriker</span>"
+
+#: data/preferences.glade.h:9
+#, fuzzy
+msgid "Column List"
+msgstr "Kolumnbredd"
+
+#: data/preferences.glade.h:10
+msgid "Continue downloads on startup"
+msgstr ""
+
+#: data/preferences.glade.h:11
+#, fuzzy
+msgid "Convert links"
+msgstr "Konventioner"
+
+#: data/preferences.glade.h:12 src/main_window.c:284
+#, fuzzy
+msgid "Current Size"
+msgstr "Aktuell vy"
+
+# Detta borde bero på lokalen?!
+# http://bugzilla.ximian.com/show_bug.cgi?id=61073
+#: data/preferences.glade.h:13
+#, fuzzy
+msgid "Default GNOME network settings"
+msgstr "Standardtidszon för sammanträden"
+
+#: data/preferences.glade.h:14
+#, fuzzy
+msgid "Direct Internet connection"
+msgstr "_Direkt anslutning"
+
+#: data/preferences.glade.h:15
+#, fuzzy
+msgid "Don't create directories"
+msgstr "Återskapa kataloger"
+
+#: data/preferences.glade.h:16
+#, fuzzy
+msgid "Download Speed"
+msgstr "Hämtningen pausad"
+
+#: data/preferences.glade.h:17
+#, fuzzy
+msgid "Download page requisites"
+msgstr "Hämtningen pausad"
+
+#: data/preferences.glade.h:18 src/main_window.c:316
+#, fuzzy
+msgid "Elapsed Time"
+msgstr "Exponeringstid"
+
+#: data/preferences.glade.h:19
+msgid "Follow relative links only"
+msgstr ""
+
+#: data/preferences.glade.h:20
+msgid "General"
+msgstr "Allmänt"
+
+#: data/preferences.glade.h:21
+msgid "Limit download speed to: "
+msgstr ""
+
+#: data/preferences.glade.h:22
+#, fuzzy
+msgid "Manual proxy configuration"
+msgstr "Använd manuell konfiguration av proxyserver"
+
+#: data/preferences.glade.h:23
+#, fuzzy
+msgid "Maximum depth level: "
+msgstr "Maximal storlek på filen"
+
+#: data/preferences.glade.h:24
+msgid "Network"
+msgstr "Nätverk"
+
+#: data/preferences.glade.h:25
+#, fuzzy
+msgid "Number of retries:"
+msgstr "Antal filer:"
+
+#: data/preferences.glade.h:26
+#, fuzzy
+msgid "Open files automatically after download"
+msgstr "Uppdatera automatiskt"
+
+#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
+#, fuzzy
+msgid "Percentage"
+msgstr "Utskriftsområde"
+
+#: data/preferences.glade.h:28
+msgid "Port:"
+msgstr "Port:"
+
+#: data/preferences.glade.h:29
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: data/preferences.glade.h:30
+#, fuzzy
+msgid "Proxy:"
+msgstr "_FTP-proxyserver:"
+
+#: data/preferences.glade.h:32 src/main_window.c:326
+#, fuzzy
+msgid "Remaining Time"
+msgstr "Återstår"
+
+#: data/preferences.glade.h:34 src/main_window.c:295
+#, fuzzy
+msgid "Total Size"
+msgstr "Normala storlek"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Okänd"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Misslyckades"
+
+#: src/gwget_data.c:177
+#, fuzzy
+msgid "stalled"
+msgstr "Inaktiverad"
+
+#: src/gwget_data.c:210
+#, fuzzy
+msgid "Waiting"
+msgstr "Väntar..."
+
+#: src/gwget_data.c:212
+msgid "Not Started"
+msgstr "Inte startad"
+
+#: src/gwget_data.c:214
+#, fuzzy
+msgid "Not Running"
+msgstr "Fort Benning"
+
+#: src/gwget_data.c:216
+#, fuzzy
+msgid "Not Connected"
+msgstr "Inte ansluten"
+
+#: src/gwget_data.c:218
+#, fuzzy
+msgid "Connected"
+msgstr "Anslut"
+
+#: src/gwget_data.c:220
+#, fuzzy
+msgid "Retrieving"
+msgstr "Hämtar \"%s\""
+
+#: src/gwget_data.c:222
+msgid "Completed"
+msgstr "Klart"
+
+#: src/gwget_data.c:226
+#, fuzzy, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr "Fla_gga färdig"
+
+#: src/gwget_data.c:233
+msgid "Error"
+msgstr "Fel"
+
+#: src/gwget_data.c:615
+#, fuzzy
+msgid "Unable to add this download"
+msgstr "_Spara till disk med Mozilla-hämtare"
+
+#: src/gwget_data.c:615
+#, fuzzy
+msgid "This download is already added"
+msgstr "Hämtningsmappen"
+
+#: src/gwget_data.c:663 src/main_window_cb.c:99
+#, fuzzy
+msgid "Error opening file"
+msgstr "Fel vid inläsning av filen: %s"
+
+#: src/gwget_data.c:663 src/main_window_cb.c:99
+#, fuzzy
+msgid "Couldn't open the file"
+msgstr "Kunde inte öppna fil"
+
+#: src/main_window.c:266
+#, fuzzy
+msgid "File Name"
+msgstr "Filnamn"
+
+#: src/main_window.c:273
+#, fuzzy
+msgid "State"
+msgstr "Start"
+
+#: src/main_window.c:336
+msgid "Speed"
+msgstr "Hastighet"
+
+#: src/main_window.c:374
+#, fuzzy
+msgid "Error starting the download"
+msgstr "Fel vid start av %s"
+
+#: src/main_window.c:374
+#, fuzzy
+msgid "There is a unexpected error starting the download"
+msgstr "Det inträffade ett fel vid visande av hjälp."
+
+#: src/main_window.c:565
+#, fuzzy
+msgid "Cancel current downloads?"
+msgstr "Avbryt alla återstående hämtningar?"
+
+#: src/main_window.c:565
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+
+#: src/main_window_cb.c:94
+#, fuzzy
+msgid "Error in download"
+msgstr "Fel vid hämtning av RDF"
+
+#: src/main_window_cb.c:167
+#, fuzzy
+msgid "Download Manager for Gnome2."
+msgstr "Hämtningshanterare"
+
+#: src/main_window_cb.c:174
+msgid "translator_credits"
+msgstr ""
+"Christian Rose\n"
+"Skicka synpunkter på översättningen till sv@li.org"
+
+#: src/main_window_cb.c:186
+#, fuzzy
+msgid "Gwget"
+msgstr "Gage"
+
+#: src/main_window_cb.c:503 src/new_window.c:141
+msgid "Select Folder"
+msgstr "Välj mapp"
+
+#: src/main_window_cb.c:558
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(Url: %s)"
+msgstr ""
+
+#: src/main_window_cb.c:559
+#, fuzzy
+msgid "Cancel download?"
+msgstr "Avbryt alla återstående hämtningar?"
+
+#: src/main_window_cb.c:587
+#, fuzzy
+msgid "Really remove completed downloads from the list?"
+msgstr "Ta bort e-postadresser från listan"
+
+#: src/main_window_cb.c:616
+#, fuzzy
+msgid "Really remove inactive downloads from the list?"
+msgstr "Ta bort e-postadresser från listan"
+
+#: src/main_window_cb.c:645
+#, fuzzy
+msgid "Really remove all downloads from the list?"
+msgstr "Ta bort e-postadresser från listan"
+
+#: src/systray.c:135
+#, fuzzy
+msgid "Nothing"
+msgstr "ingenting"
+
+#: src/systray.c:142
+msgid "Downloads"
+msgstr "Hämtningar"
+
+#: src/wget-log.c:83
+#, fuzzy
+msgid "Socket error"
+msgstr "Inga fel"
+
+#: src/wget-log.c:85
+#, fuzzy
+msgid "Connection refused\n"
+msgstr "Anslutning avbruten"
+
+#: src/wget-log.c:87
+#, fuzzy
+msgid "No route to host"
+msgstr "Gruppera efter värd"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr ""
+
+#: src/wget-log.c:91
+#, fuzzy
+msgid "Host not found\n"
+msgstr "%s kunde inte hittas\n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr ""
+
+#: src/wget-log.c:96
+#, fuzzy
+msgid "Refusing to truncate existing file"
+msgstr "Skriv _över befintliga filer"
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Okänt fel"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+#, fuzzy
+msgid "File not found"
+msgstr "Webbplatsen kunde inte hittas."
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+
+#: src/wget-log.c:180
+#, fuzzy
+msgid "Can't write to target directory"
+msgstr "Kunde inte skapa temporär katalog: %s"
+
+#~ msgid "Gwget: Download Manager for GNOME 2"
+#~ msgstr "Gwget: Hämtningshanterare för GNOME 2"
+
+#~ msgid "Download Manager for Gnome 2"
+#~ msgstr "Hämtningshanterare för GNOME 2"
+
+#~ msgid "Download Manager for GNOME 2"
+#~ msgstr "Hämtningshanterare för GNOME 2"
+
+#~ msgid "Download Manager"
+#~ msgstr "Hämtningshanterare"
+
+#~ msgid "Download:"
+#~ msgstr "Hämta:"
+
+#~ msgid "Local Directory:"
+#~ msgstr "Lokal katalog:"
+
+#~ msgid "Local File:"
+#~ msgstr "Lokal fil:"
+
+#~ msgid "_Recursive"
+#~ msgstr "_Rekursivt"

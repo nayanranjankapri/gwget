@@ -4,6 +4,7 @@
 data/GNOME_Gwget.server.in.in
 data/about.glade
 data/gwget.glade
+data/gwget.schemas.in
 data/newdownload.glade
 data/preferences.glade
 src/custom-cell-renderer-progressbar.c
