@@ -17,3 +17,4 @@ gwget2_include_DATA = \
 	eggtrayicon.h\
 	systray.h
 
+EXTRA_DIST = $(gwget2_include_DATA)
