@@ -577,6 +577,19 @@ on_propierties_activate(GtkWidget *widget, gpointer data)
 	gtk_widget_show(propierties);
 }
 
+void
+on_check_file_type_toggled(GtkWidget *widget, gpointer data)
+{
+	GtkWidget *treev, *column;
+	gboolean visible;
+	
+	treev = glade_xml_get_widget(xml,"treeview1");
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),IMAGE_COLUMN);
+	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
+	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
+                                     visible);
+}
+
 void 
 on_check_actual_size_toggled(GtkWidget *widget, gpointer data)
 {
