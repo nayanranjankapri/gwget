@@ -271,7 +271,7 @@
       <signal name="activate" handler="on_popup_pause_button_clicked" last_modification_time="Sat, 31 May 2003 17:45:21 GMT"/>
 
       <child internal-child="image">
-	<widget class="GtkImage" id="image23">
+	<widget class="GtkImage" id="image27">
 	  <property name="visible">True</property>
 	  <property name="stock">gtk-stop</property>
 	  <property name="icon_size">1</property>
@@ -292,7 +292,7 @@
       <signal name="activate" handler="on_popup_continue_activate" last_modification_time="Sat, 31 May 2003 17:45:21 GMT"/>
 
       <child internal-child="image">
-	<widget class="GtkImage" id="image24">
+	<widget class="GtkImage" id="image28">
 	  <property name="visible">True</property>
 	  <property name="stock">gtk-refresh</property>
 	  <property name="icon_size">1</property>
@@ -344,7 +344,7 @@
   <child>
     <widget class="GtkMenuItem" id="propierties">
       <property name="visible">True</property>
-      <property name="label" translatable="yes">Propierties</property>
+      <property name="label" translatable="yes">Properties</property>
       <property name="use_underline">True</property>
       <signal name="activate" handler="on_propierties_activate" last_modification_time="Sun, 25 Apr 2004 19:01:44 GMT"/>
     </widget>
@@ -365,7 +365,7 @@
       <signal name="activate" handler="on_cancel_download_activate" last_modification_time="Sat, 31 May 2003 17:47:45 GMT"/>
 
       <child internal-child="image">
-	<widget class="GtkImage" id="image25">
+	<widget class="GtkImage" id="image29">
 	  <property name="visible">True</property>
 	  <property name="stock">gtk-cancel</property>
 	  <property name="icon_size">1</property>
