@@ -18,6 +18,7 @@
 #include <config.h>
 
 #include <gnome.h>
+#include <string.h>
 #include <gconf/gconf-client.h>
 #include <locale.h>
 #include <libbonobo.h>
@@ -27,7 +28,7 @@
 #include "gwget-application-server.h"
 
 static const struct poptOption options[] = {
-	{"trayonly", '\0', POPT_ARG_NONE, &(gwget_pref.trayonly), 0, NULL, NULL},
+	{"force-tray-only", '\0', POPT_ARG_NONE, &(gwget_pref.trayonly), 0, NULL, NULL},
 	{NULL, '\0', 0, NULL, 0} 
 };
 
@@ -37,7 +38,6 @@ typedef struct {
 } Args;
 
 BonoboObject *gwget_app_server = NULL;
-
 
 static GSList *
 gwget_get_command_line_data (GnomeProgram *program)
@@ -77,8 +77,7 @@ gwget_handle_automation_cmdline (GnomeProgram *program)
 	GSList *data, *list;
 	gint i;
 
-
-		
+	
 	CORBA_exception_init (&env);
 	
 	server = bonobo_activation_activate_from_id ("OAFIID:GNOME_Gwget_Application",
@@ -125,15 +124,62 @@ save_yourself_handler (GnomeClient *client, gint phase, GnomeSaveStyle save_styl
 	int argc;
 	char **argv; 
 
-	if (gwget_pref.trayonly) {
-		argc = argc_original;
-		argv = argv_original;
+	if (gwget_pref.docked) {
+		/*
+		 * If we are docked , the tray is there , so pass --foce-tray-only
+		 */
+		if (gwget_pref.trayonly) {
+			/*
+			 * If we were called with --force-tray-only , 
+			 * just copy over the old argv , argc
+			 */
+			argc = argc_original;
+			argv = argv_original;
+		} else {
+			/*
+			 * Otherwise , append --force-tray-only to argv
+			 */
+			argc = argc_original + 2;
+			argv = g_malloc0(sizeof(char*)*argc);
+			g_memmove(argv, argv_original, argc_original*sizeof(char*));
+			argv[argc-2] = "--force-tray-only";
+			// argv[argc-1] = NULL;
+		}
 	} else {
-		argc = argc_original + 2;
-		argv = g_malloc(sizeof(char*)*argc);
-		g_memmove(argv, argv_original, argc_original*sizeof(char*));
-		argv[argc-2] = "--trayonly";
-		argv[argc-1] = NULL;
+		/*
+		 * If we are not docked on exit , the tray is not there ,
+		 * and --force-tray-only should NOT be passed
+		 */
+		if (!gwget_pref.trayonly) {
+			/*
+			 * If we were NOT called with --force-tray-only , 
+			 * just copy over the old argv , argc
+			 */
+			argc = argc_original;
+			argv = argv_original;
+		} else {	
+			/*
+			 * Otherwise copy arvg , option by option , filetring
+			 * --force-tray-only if present
+			 */
+			
+			argc = argc_original + 2;
+			argv = g_malloc0(sizeof(char*)*argc);
+			
+			int iPos = -1;
+			int i;
+			for (i=0;i<argc_original;i++)
+				if (strcmp(argv_original[i],"--force-tray-only") != 0) {
+					iPos++;
+					int iL    = strlen(argv_original[i]);
+					int iSize = sizeof(char)*iL;
+					argv[iPos] = g_malloc0(iSize);
+					strcpy(argv[iPos],argv_original[i]);
+				}
+
+			argc = iPos+1;
+			argv[argc] = NULL;
+		}
 	}
 	
 	gnome_client_set_clone_command(client, argc, argv);
@@ -170,6 +216,8 @@ int main(int argc,char *argv[])
 	setlocale(LC_ALL, "");
 
 	gwget_pref.trayonly = FALSE;
+	gwget_pref.docked   = FALSE;
+	
 	gwget = gnome_program_init("Gwget", VERSION, LIBGNOMEUI_MODULE, argc, argv,
 			            GNOME_PARAM_POPT_TABLE,options,GNOME_PARAM_NONE);
 
@@ -197,3 +245,4 @@ int main(int argc,char *argv[])
 	
 	return (0);
 }
+

@@ -21,7 +21,7 @@ static GdkPixbuf *icon_idle, *icon_downloading;
 static GtkWidget *image_icon;
 
 void 
-systray_load(void *windowToHide) 
+systray_load(void) 
 {
 	GtkWidget *eventbox;
 	
@@ -41,17 +41,26 @@ systray_load(void *windowToHide)
 	gtk_container_add(GTK_CONTAINER(tray_icon), eventbox);
 
 	gtk_widget_show_all(GTK_WIDGET(tray_icon));	
-	g_signal_connect(G_OBJECT(tray_icon), "embedded", G_CALLBACK(systray_embedded), windowToHide);
-	g_signal_connect(G_OBJECT(tray_icon), "destroy", G_CALLBACK(systray_destroyed), NULL);
-	g_signal_connect(G_OBJECT(eventbox), "button-press-event", G_CALLBACK(systray_clicked), NULL);
-	gtk_drag_dest_set(GTK_WIDGET(tray_icon), 
-					  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
-					  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
-                      GDK_ACTION_COPY);
-						
+	
+	g_signal_connect(G_OBJECT(tray_icon), 
+			 "embedded", 
+			 G_CALLBACK(systray_embedded), 
+			 NULL);
+	g_signal_connect(G_OBJECT(tray_icon), 
+			 "destroy", 
+			 G_CALLBACK(systray_destroyed), 
+			 NULL);
+	g_signal_connect(G_OBJECT(eventbox), 
+			 "button-press-event", 
+			 G_CALLBACK(systray_clicked), 
+			 NULL);						
 	g_signal_connect(G_OBJECT(tray_icon), "drag_data_received",
-					 G_CALLBACK(on_gwget_drag_received),
-					 GUINT_TO_POINTER(dnd_type));
+			 G_CALLBACK(on_gwget_drag_received),
+			 GUINT_TO_POINTER(dnd_type));	
+	gtk_drag_dest_set(GTK_WIDGET(tray_icon), 
+			  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
+			  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
+                          GDK_ACTION_COPY);
 
 	egg_tray_icon_send_message(tray_icon,1000,"gwget",7);
 }
@@ -171,34 +180,40 @@ systray_generate_menu(GdkEventButton *event)
 static void 
 systray_embedded(GtkWidget *widget, gpointer data)
 {
-	if (gwget_pref.trayonly)
-		gtk_widget_hide(GTK_WIDGET(data));
-	else 
-		gtk_widget_show(GTK_WIDGET(data));
 	gwget_pref.docked = TRUE;
+}
+
+static void 
+pop_main_window() 
+{
+	GtkWidget *window;
+	
+	window = glade_xml_get_widget(xml,"main_window");
+	if((gdk_window_get_state(GTK_WIDGET(window)->window) & 
+				 GDK_WINDOW_STATE_ICONIFIED) || 
+			         !GTK_WIDGET_VISIBLE(window)) 
+		gtk_widget_show(GTK_WIDGET(window));
+	else 
+		gtk_widget_hide(GTK_WIDGET(window));
 }
 
 static void 
 systray_destroyed(GtkWidget *widget, gpointer data)
 {
-	
+	g_message("systray destroyed\n");
+	gwget_pref.docked = FALSE;
+	pop_main_window();
 }
 
 static void 
 systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data)
 {
-	GtkWidget *window;
 	g_message("docket clicked");
-	
 	
 	if (event->button == 3) {
 		systray_generate_menu(event);
 	} else {
-		window = glade_xml_get_widget(xml,"main_window");
-		if((gdk_window_get_state(GTK_WIDGET(window)->window) & GDK_WINDOW_STATE_ICONIFIED) || !GTK_WIDGET_VISIBLE(window)) 
-			gtk_widget_show(GTK_WIDGET(window));
-		else 
-			gtk_widget_hide(GTK_WIDGET(window));
+		pop_main_window();
 	}
 }
 

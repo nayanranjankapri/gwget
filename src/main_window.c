@@ -129,7 +129,12 @@ main_window(void)
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}
 
-	systray_load(window);
+	if (gwget_pref.trayonly)
+		gtk_widget_hide(GTK_WIDGET(window));
+	else 
+		gtk_widget_show(GTK_WIDGET(window));
+	
+	systray_load();
 
 	/* Create the model for the "save in" option in new download dialog */
 	save_in_model = (GtkTreeModel*)gtk_list_store_new (1, G_TYPE_STRING);

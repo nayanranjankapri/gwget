@@ -1,3 +1,22 @@
+2005-02-02  Ivan Yosifov <ivan@yosifov.net>
+
+	* src/systray.c: moved the main window popping code from systray_clicked
+	to pop_main_window , which is called on docklet click and dockelt
+	destruction
+	* src/systray.c: if the tray is removed , docklet destroyed , while
+	running set gwget_pref.docked to FALSE , thus gwget_pref.docked always
+	reflects the current docking state.
+	* src/systray.c: no longer pass the main window to systray_load
+	* src/main_window.c: the main window is show in main_window() or not, depending on
+	the value of gwget_pref.trayonly
+	* src/main.c: renamed --trayonly to --force-tray-only , to emphasize that
+	no sanity checks are done , and if gwget is called --force-tray-only
+	with no tray , the window will NOT show up.
+	* src/main.c: reworked save_yourself_handler to pass --force-tray-only
+	ONLY if gwget_pref.docked == TRUE , which means the tray is present on
+	logout. If present on logout , it will be there on next login so it is
+	safe.
+
 2005-01-24  David Sedeño <david@alderia.com>
 
 	* configure.in: Version 0.93

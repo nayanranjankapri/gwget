@@ -6,7 +6,7 @@ extern "C"
 {
 #endif
 
-void systray_load(void *windowToHide);
+void systray_load(void);
 void set_icon_downloading(void);
 void set_icon_idle(void);
 
