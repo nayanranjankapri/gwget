@@ -2,6 +2,8 @@
 
 	* src/main_window.c: include gstdio.h. Declare static
 	gwget_destination_file_exists.
+	* src/wget-log.c: include utils.h. Declare static
+	wget_log_read_log_line.
 
 2005-03-19  Ivan Yosifov <ivan@yosifov.net>
 

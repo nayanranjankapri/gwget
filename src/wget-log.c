@@ -26,6 +26,7 @@
 #include "gwget_data.h"
 #include "wget-log.h"
 #include "main_window.h"
+#include "utils.h"
 
 
 /* Function to convert the wget notation of file size (55,449,600) */ 
@@ -270,7 +271,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 	return 0;
 }
 
-void
+static void
 wget_log_read_log_line(GwgetData *gwgetdata) {
 	g_free(gwgetdata->line);
 	gwgetdata->line = NULL;
