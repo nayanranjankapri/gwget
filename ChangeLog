@@ -1,3 +1,7 @@
+2004-10-15 David Sedeño <david@alderia.com>
+	
+	* configure.in: Correct epiphany detection.
+
 2004-10-14 David Sedeño <david@alderia.com>
 	
 	* include/Makefile.am: distribute *h files
