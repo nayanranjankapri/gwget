@@ -65,5 +65,7 @@ void on_limit_speed_check_toggled (GtkWidget *widget, gpointer data);
 
 void check_download_in_progress(void);
 void continue_all_downloads(void);
+void new_download(GwgetData* gwgetdata);
+void check_download_in_progress(void);
 
 #endif

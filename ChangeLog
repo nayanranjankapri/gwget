@@ -2,6 +2,9 @@
 
 	* configure.in: Try to autodetect Epiphany version (1.2, 1.4 or 1.6).
 	* Makefile.am: Check for epiphany extension compilation
+	* include/main_window_cb.h: Added continue_all_downloads,
+	new_download and check_download_in_progress.
+	* src/gwget_data.c: include main_window_cb.h
 
 2004-10-02  David Sedeño <david@alderia.com>
 

@@ -25,6 +25,7 @@
 #include "gwget_data.h"
 #include "wget-log.h"
 #include "main_window.h"
+#include "main_window_cb.h"
 
 #include <config.h>
 
