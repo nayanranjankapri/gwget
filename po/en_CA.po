@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-08 16:28-0500\n"
-"PO-Revision-Date: 2005-03-08 00:01-0400\n"
+"POT-Creation-Date: 2005-03-15 19:28-0500\n"
+"PO-Revision-Date: 2005-03-15 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -424,6 +424,14 @@ msgstr "files"
 #: ../data/preferences.glade.h:38
 msgid "kB/sec"
 msgstr "KB/sec"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Forward downloads to GWGet"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
 
 #: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
