@@ -23,6 +23,12 @@ typedef struct
 {
 	gchar *download_dir; /* Default download directory */
 	gint num_retries;    /* Number of Retries */
+	gchar *http_proxy; /* HTTP Proxy */
+	gint http_proxy_port; /* HTTP Proxy Port */
+	gchar *gnome_http_proxy; /* GNOME HTTP Proxy */
+	gint gnome_http_proxy_port; /* GNOME HTTP Proxy Port */
+	gboolean gnome_use_proxy;
+	gchar *network_mode;
 	gboolean resume_at_start;
 	gboolean no_create_directories;
 	gboolean follow_relative;	/* Follow relative links only */

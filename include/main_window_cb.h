@@ -59,6 +59,9 @@ void on_check_percentage_toggled(GtkWidget *widget, gpointer data);
 void on_check_elapse_time_toggled(GtkWidget *widget, gpointer data);
 void on_check_rem_time_toggled(GtkWidget *widget, gpointer data);
 void on_check_down_speed_toggled(GtkWidget *widget, gpointer data);
+void on_manual_radio_toggled (GtkWidget *widget, gpointer data);
+void on_direct_radio_toggled (GtkWidget *widget, gpointer data);
+void on_default_radio_toggled (GtkWidget *widget, gpointer data); 
 
 /* Preferences */
 void on_limit_speed_check_toggled (GtkWidget *widget, gpointer data);

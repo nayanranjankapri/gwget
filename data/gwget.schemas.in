@@ -276,6 +276,42 @@
 	   <long></long>
 	 </locale>
 	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/network_mode</key>
+	 <applyto>/apps/gwget2/network_mode</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <locale name="C">
+	   <default>direct</default>
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/http_proxy</key>
+	 <applyto>/apps/gwget2/http_proxy</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <locale name="c">
+	   <default></default>
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/http_proxy_port</key>
+	 <applyto>/apps/gwget2/http_proxy_port</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <locale name="c">
+	   <default>8080</default>
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
 	
  </schemalist>
 </gconfschemafile>

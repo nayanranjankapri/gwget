@@ -134,6 +134,12 @@ gwget_get_defaults_from_gconf(void)
 	DlState state;
 	gint default_width, default_height;
 	
+	gwget_pref.http_proxy=gconf_client_get_string(gconf_client,"/apps/gwget2/http_proxy",NULL);
+	gwget_pref.http_proxy_port=gconf_client_get_int(gconf_client,"/apps/gwget2/http_proxy_port",NULL);
+	gwget_pref.gnome_http_proxy=gconf_client_get_string(gconf_client,"/system/http_proxy/host",NULL);
+	gwget_pref.gnome_http_proxy_port=gconf_client_get_int(gconf_client,"/system/http_proxy/port",NULL);
+	gwget_pref.gnome_use_proxy=gconf_client_get_bool(gconf_client,"/system/http_proxy/use_http_proxy",NULL);
+	gwget_pref.network_mode=gconf_client_get_string(gconf_client,"/apps/gwget2/network_mode",NULL);
 	gwget_pref.download_dir=gconf_client_get_string(gconf_client,"/apps/gwget2/download_dir",NULL);
 	gwget_pref.num_retries=gconf_client_get_int(gconf_client,"/apps/gwget2/num_retries",NULL);
 	gwget_pref.resume_at_start=gconf_client_get_bool(gconf_client,"/apps/gwget2/resume_at_start",NULL);

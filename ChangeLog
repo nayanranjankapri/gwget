@@ -1,3 +1,21 @@
+2004-11-11  David Sedeño <david@alderia.com>
+
+	Proxy support, see http://bugzilla.gnome.org/show_bug.cgi?id=157462. 
+	Patch from Paulius Palevicius.
+	* data/gwget.schemas.in: Added network_mode, http_proxy and
+	http_proxy_port
+	* data/preferences.glade: Add a tab for proxy preferences. 
+	* include/gwget_data.h: Add proxy settings to preferences struct.
+	* include/main_window_cb.h: Added toggle callbacks for proxy
+	preferences checkboxes.
+	* src/gwget_data.c (gwget_data_start_download): Set proxy options to wget.
+	* src/main_window.c (gwget_get_defaults_from_gconf): Get proxy
+	settings from gconf.
+	* src/main_window_cb.c (on_pref_ok_button_clicked): Set proxy
+	preferences. Implement toggles callbacks for proxy preferences
+	checkboxes.
+	* src/new_window.c (create_new_window): check if clipboar is null.
+	
 2004-11-08  David Sedeño <david@alderia.com>
 
 	* configure.in: Added lt to ALL_LINGUAS

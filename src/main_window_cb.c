@@ -327,15 +327,47 @@ void
 on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 {
 	GtkWidget *save_in = NULL, *pref_window = NULL,*num_retries=NULL,*resume;
+	GtkWidget *http_proxy = NULL, *http_proxy_port_spin = NULL;
 	GtkWidget *no_create_directories = NULL;
 	GtkWidget *follow_relative = NULL;	
 	GtkWidget *convert_links = NULL;
 	GtkWidget *dl_page_requisites = NULL;
 	GtkWidget *max_depth=NULL, *limit_speed_check=NULL, *limit_speed_spin=NULL;
+	GtkWidget *manual_radio=NULL, *direct_radio=NULL, *default_radio=NULL;
 
 	save_in=glade_xml_get_widget(xml_pref,"save_in_entry");
 	gwget_pref.download_dir=g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in)));
 	
+	/* Set HTTP proxy values */
+	
+	http_proxy=glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	gwget_pref.http_proxy=g_strdup(gtk_entry_get_text(GTK_ENTRY(http_proxy)));
+	gconf_client_set_string(gconf_client,"/apps/gwget2/http_proxy",
+							g_strdup(gtk_entry_get_text(GTK_ENTRY(http_proxy))),NULL);
+	
+	http_proxy_port_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "http_proxy_port_spin");
+	gwget_pref.http_proxy_port = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(http_proxy_port_spin));
+	gconf_client_set_int(gconf_client,"/apps/gwget2/http_proxy_port",
+						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(http_proxy_port_spin)),NULL);
+	
+	manual_radio=glade_xml_get_widget(xml_pref,"manual_radio");
+	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(manual_radio))) {
+		gconf_client_set_string(gconf_client,"/apps/gwget2/network_mode","manual",NULL);
+		gwget_pref.network_mode="manual";
+	}
+			
+	direct_radio=glade_xml_get_widget(xml_pref,"direct_radio");
+	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(direct_radio))) {
+		gconf_client_set_string(gconf_client,"/apps/gwget2/network_mode","direct",NULL);
+		gwget_pref.network_mode="direct";
+	}	
+	
+	default_radio=glade_xml_get_widget(xml_pref,"default_radio");
+	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(default_radio))) {
+		gconf_client_set_string(gconf_client,"/apps/gwget2/network_mode","default",NULL);
+		gwget_pref.network_mode="default";
+	}	
+		
 	num_retries=glade_xml_get_widget(xml_pref,"num_retries_entry");
 	gwget_pref.num_retries=atoi(gtk_entry_get_text(GTK_ENTRY(num_retries)));
 	
@@ -740,6 +772,36 @@ on_limit_speed_check_toggled (GtkWidget *widget, gpointer data)
 	} else {
 		gtk_widget_set_sensitive (GTK_WIDGET(limit_speed_spin), FALSE);
 	}
+}
+
+void 
+on_manual_radio_toggled (GtkWidget *widget, gpointer data) 
+{
+	GtkWidget *entry;
+	entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	gtk_widget_set_sensitive(GTK_WIDGET(entry),TRUE);
+	entry = glade_xml_get_widget(xml_pref,"http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET(entry),TRUE);
+}
+
+void 
+on_direct_radio_toggled (GtkWidget *widget, gpointer data) 
+{
+	GtkWidget *entry;
+	entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
+	entry = glade_xml_get_widget(xml_pref,"http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
+}
+
+void 
+on_default_radio_toggled(GtkWidget *widget, gpointer data) 
+{	
+	GtkWidget *entry;
+	entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
+	entry = glade_xml_get_widget(xml_pref,"http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
 }
 
 void

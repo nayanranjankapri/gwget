@@ -102,9 +102,10 @@ create_new_window(void)
 	GtkClipboard *clipboard = NULL;
 
 	clipboard = gtk_clipboard_get (GDK_NONE);
-	url = gtk_clipboard_wait_for_text (clipboard);
-	
-	
+	if (clipboard!=NULL) {
+		url = gtk_clipboard_wait_for_text (clipboard);
+	}
+		
 	if (!xml_new) {
 		xml_file =g_build_filename(DATADIR,"newdownload.glade",NULL);
 		xml_new = glade_xml_new(xml_file,NULL,NULL);
@@ -117,6 +118,7 @@ create_new_window(void)
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
 	if(!check_url( "http://", url ) && !check_url( "ftp://", url))
 		url = "";
+	
 	gtk_entry_set_text(GTK_ENTRY(entry),url);
 
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
