@@ -20,14 +20,45 @@
 #include <gnome.h>
 #include <gconf/gconf-client.h>
 #include <locale.h>
+#include <libbonobo.h>
 #include "main_window_cb.h"
 #include "main_window.h"
+#include "gwget-application-server.h"
 
 
+BonoboObject *gwget_app_server = NULL;
+
+static void
+gwget_handle_automation_cmdline (GnomeProgram *program)
+{
+	CORBA_Environment env;
+	GNOME_Gwget_Application server;
+	gchar *test;
+		
+	CORBA_exception_init (&env);
+	
+	server = bonobo_activation_activate_from_id ("OAFIID:GNOME_Gwget_Factory",
+												 0, NULL, &env);
+	
+	g_return_if_fail (server != NULL);
+		
+	test = GNOME_Gwget_Application_echo (server, &env);
+	
+	if (env._major != CORBA_NO_EXCEPTION) {
+		printf("Corba Error %s\n", env._id);
+	}
+	if (test)
+		g_message("Test: %s\n",test);
+	else
+		g_message("Test is NULL!");
+	
+}
+	
 int main(int argc,char *argv[])
 {
 	
 	GnomeProgram *gwget;
+	CORBA_Object factory;
 	
 
 	bindtextdomain (GETTEXT_PACKAGE, GNOME_GWGET_LOCALEDIR);
@@ -37,8 +68,25 @@ int main(int argc,char *argv[])
 
 	
 	gwget = gnome_program_init("Gwget",VERSION,LIBGNOMEUI_MODULE,argc,argv,NULL);
+	
 		
+	/* check whether we are running already */
+	factory = bonobo_activation_activate_from_id
+			("OAFIID:GNOME_Gwget_Factory",
+			Bonobo_ACTIVATION_FLAG_EXISTING_ONLY,
+			NULL, NULL);
+	
+	
+	if (factory != NULL)
+	{
+		g_message("Already running\n");
+		gwget_handle_automation_cmdline(gwget);
+		exit(0);
+	}
+	
 	main_window();
+	
+	gwget_app_server = gwget_application_server_new (gdk_screen_get_default());
 	
 	gtk_main();
 		

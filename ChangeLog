@@ -1,9 +1,16 @@
 2004-09-11  David Sedeño <david@alderia.com>
 
-	* configure.in: Version 0.14.1
+	* src/main.c: Check instance of bonobo
+	* src/gwget-application.[ch]: bonobo gwget application
+	  Object. Currently doesn't recive message :(
+	* src/Makefile.am: Added instructions for bonobo object
+	  compilation.
 
 2004-09-11  David Sedeño <david@alderia.com>
 
+	* configure.in: Version 0.14.1
+
+2004-09-11  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_boton_pref_clicked):
 	Apply state of limit_speed_check and resume_at_start
