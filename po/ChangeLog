@@ -1,3 +1,10 @@
+2004-08-13  Christian Rose  <menthos@menthos.com>
+
+	* gwget.po: Removed. This is a generated file and not
+	supposed to be stored in CVS.
+	* POTFILES.in: Sorted and added missing files.
+	* .cvsignore: Added this.
+
 2004-08-13  David Sedeño <david@alderia.com>
 
 	* gwget2.pot: Removed
