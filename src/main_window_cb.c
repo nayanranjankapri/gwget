@@ -703,7 +703,7 @@ on_check_actual_size_toggled(GtkWidget *widget, gpointer data)
 	gboolean visible;
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-1);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-2);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
@@ -716,7 +716,7 @@ on_check_total_size_toggled(GtkWidget *widget, gpointer data)
 	gboolean visible;
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-1);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-2);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
@@ -730,7 +730,7 @@ on_check_percentage_toggled(GtkWidget *widget, gpointer data)
 	gboolean visible;
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-1);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-2);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
@@ -744,7 +744,7 @@ on_check_elapse_time_toggled(GtkWidget *widget, gpointer data)
 	gboolean visible;
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-2);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-3);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
@@ -758,7 +758,7 @@ on_check_rem_time_toggled(GtkWidget *widget, gpointer data)
 	gboolean visible;
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-4);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-5);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
@@ -772,7 +772,7 @@ on_check_down_speed_toggled(GtkWidget *widget, gpointer data)
 	gboolean visible;
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-6);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-7);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);

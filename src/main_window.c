@@ -215,23 +215,23 @@ create_model (void)
 	GtkListStore *model;
 
 	model = gtk_list_store_new (NUM_COLUMNS,
-								GDK_TYPE_PIXBUF,
-								G_TYPE_STRING, /* File name */
-								G_TYPE_STRING, /* URL */
-								G_TYPE_STRING, /* State */
-								G_TYPE_STRING, /* Current size */
-								G_TYPE_STRING, /* Total Size */
-								G_TYPE_INT,    /* Percentage */
-								G_TYPE_STRING, /* Percentage */
-								G_TYPE_STRING, /* Elapse Time */
-								G_TYPE_STRING, /* Current time  */
-								G_TYPE_STRING, /* Estimated time  */
-								G_TYPE_STRING, /* Remain Time */
-								/* Not viewable columns */ 
-								G_TYPE_INT,    /* Pid */
-								G_TYPE_INT,	   /* State int column */
-								G_TYPE_STRING  /* Speed */
-								);
+				    GDK_TYPE_PIXBUF,
+				    G_TYPE_STRING, /* File name */
+			 	    G_TYPE_STRING, /* URL */
+				    G_TYPE_STRING, /* State */
+				    G_TYPE_STRING, /* Current size */
+				    G_TYPE_STRING, /* Total Size */
+				    G_TYPE_INT,    /* Percentage */
+				    G_TYPE_STRING, /* Percentage */
+				    G_TYPE_STRING, /* Elapse Time */
+				    G_TYPE_STRING, /* Current time  */
+				    G_TYPE_STRING, /* Estimated time  */
+				    G_TYPE_STRING, /* Remain Time */
+				    /* Not viewable columns */ 
+				    G_TYPE_INT,    /* Pid */
+				    G_TYPE_INT,	   /* State int column */
+				    G_TYPE_STRING  /* Speed */
+				);
 				  
 	return GTK_TREE_MODEL (model);
 }
@@ -420,7 +420,7 @@ show_prefered_columns(void)
 	
 	treev = glade_xml_get_widget(xml,"treeview1");
 	
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-1);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-2);
 	checkitem=glade_xml_get_widget(xml_pref,"check_actual_size");
 	if (gwget_pref.view_actual_size) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),TRUE);
@@ -430,7 +430,7 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
 	
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-1);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-2);
 	checkitem=glade_xml_get_widget(xml_pref,"check_total_size");
 	if (gwget_pref.view_total_size) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),TRUE);
@@ -440,7 +440,7 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
 	
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-1);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-2);
 	checkitem=glade_xml_get_widget(xml_pref,"check_percentage");
 	if (gwget_pref.view_percentage) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -450,7 +450,7 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), FALSE);
 	}
 	
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-2);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-3);
 	checkitem=glade_xml_get_widget(xml_pref,"check_elapse_time");
 	if (gwget_pref.view_elapse_time) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -460,7 +460,7 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
 	
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-4);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-5);
 	checkitem=glade_xml_get_widget(xml_pref,"check_rem_time");
 	if (gwget_pref.view_rem_time) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -470,7 +470,7 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
 	}
 	
-	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-6);
+	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-7);
 	checkitem=glade_xml_get_widget(xml_pref,"check_down_speed");
 	if (gwget_pref.view_down_speed) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);

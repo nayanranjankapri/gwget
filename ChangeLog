@@ -1,5 +1,10 @@
 2004-12-05 David Sedeño <david@alderia.com>
 
+	* src/main_window.c (show_prefered_columns): Fix columns to show.
+	* src/main_window_cb.c (columns check callbacks): Fix columns order.
+
+2004-12-05 David Sedeño <david@alderia.com>
+
 	* data/gwget.glade: Rename labels from dialog3.
 	* src/utilcs.c (run_dialog_information): Use the renamed labels.
 	(check_server_already_exists): Unused filename variable.
