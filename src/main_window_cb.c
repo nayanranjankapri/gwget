@@ -335,28 +335,32 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	gconf_client_set_int(gconf_client,"/apps/gwget2/max_depth",gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth)), NULL);
 	
 	/* Column listing */
+	gwget_pref.view_file_type=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_file_type")));
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_file_type",
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_file_type"))),NULL);
+	
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_actual_size",
 	 					  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size"))),NULL);
 
-	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size")));
+	gwget_pref.view_total_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_total_size",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size"))),NULL);
 	
-	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage")));
+	gwget_pref.view_percentage=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_percentage",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage"))),NULL);
 
 
-	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time")));
+	gwget_pref.view_elapse_time=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_elapse_time",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time"))),NULL);
 
-	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time")));
+	gwget_pref.view_rem_time=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_rem_time",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time"))),NULL);
 
-	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed")));
+	gwget_pref.view_down_speed=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_down_speed",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed"))),NULL);
 
