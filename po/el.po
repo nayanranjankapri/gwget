@@ -9,15 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-14 04:35+0100\n"
-"PO-Revision-Date: 2004-12-14 11:46+0200\n"
-"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
+"POT-Creation-Date: 2005-02-03 18:22+0200\n"
+"PO-Revision-Date: 2005-02-03 11:45+0200\n"
+"Last-Translator: Kostas <pkst@gmx.net>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.3.1\n"
 
 #: data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
@@ -36,10 +34,10 @@ msgid "GNU GPL Version 2"
 msgstr "GNU GPL Version 2"
 
 #: data/about.glade.h:3
-msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget: Εφαρμογή διαχείρισης μεταφορτώσεων για το Gnome 2"
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Gwget: Εφαρμογή διαχείρισης μεταφορτώσεων για το Gnome"
 
-#: data/about.glade.h:4
+#: data/about.glade.h:4 src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr "Κώστας Παπαδήμας <pkst@gnome.org>"
 
@@ -63,8 +61,8 @@ msgstr "Ακύρωση"
 msgid "Continue"
 msgstr "Συνέχεια"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
-#: src/main_window_cb.c:662
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:576
+#: src/main_window_cb.c:672
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Διαχείριση μεταφορτώσεων"
 
@@ -73,11 +71,11 @@ msgid "Information"
 msgstr "Πληροφορίες"
 
 #: data/gwget.glade.h:8
-msgid "Local Directory: "
+msgid "Local Directory:"
 msgstr "Τοπικός κατάλογος:"
 
 #: data/gwget.glade.h:9
-msgid "Local File: "
+msgid "Local File:"
 msgstr "Τοπικό αρχείο:"
 
 #: data/gwget.glade.h:10
@@ -112,7 +110,7 @@ msgstr "Ιδιότητες"
 msgid "Question"
 msgstr "Ερώτηση"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:31
+#: data/gwget.glade.h:18 data/preferences.glade.h:32
 msgid "Recursive"
 msgstr "Recursive"
 
@@ -124,7 +122,7 @@ msgstr "Επιλογές Recursive"
 msgid "Remove"
 msgstr "Απομάκρυνση"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:645
+#: data/gwget.glade.h:21 src/main_window_cb.c:655
 msgid "Remove all"
 msgstr "Απομάκρυνση όλων"
 
@@ -132,7 +130,7 @@ msgstr "Απομάκρυνση όλων"
 msgid "Remove all downloads from list"
 msgstr "Απομάκρυνση όλων των μεταφορτώσεων από την λίστα"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:587
+#: data/gwget.glade.h:23 src/main_window_cb.c:597
 msgid "Remove completed"
 msgstr "Απομάκρυνση ολοκληρωμένων"
 
@@ -140,7 +138,7 @@ msgstr "Απομάκρυνση ολοκληρωμένων"
 msgid "Remove completed downloads from list"
 msgstr "Απομάκρυνση·ολοκληρωμένων μεταφορτώσεων από την λίστα"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:616
+#: data/gwget.glade.h:25 src/main_window_cb.c:626
 msgid "Remove inactive"
 msgstr "Απομάκρυνση·ανενεργών"
 
@@ -180,24 +178,105 @@ msgstr "_Νέο"
 msgid "_Toolbar"
 msgstr "_Εργαλειοθήκη"
 
-#: data/newdownload.glade.h:1
-msgid "*"
-msgstr "*"
+#: data/gwget.schemas.in.h:1
+msgid "Ask save in for each new download"
+msgstr "Ερώτηση για την αποθήκευση για κάθε μεταφόρτωση"
 
-#: data/newdownload.glade.h:2
+#: data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "Μετατροπή δεσμών"
+
+#: data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "Μετατροπή σχετικών δεσμών σε recursive mode."
+
+#: data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Προεπιλεγμένος κατάλογος μεταφορτώσεων"
+
+#: data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "Μεταφόρτωση απαιτούμενων σελίδας"
+
+#: data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "Ακολούθηση σχετικών δεσμών"
+
+#: data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Αν true, να γίνεται ππάντοτε ερώτηση για φάκελο μεταφόρτωσης κατά την "
+"εκκίνηση μιας νέας μεταφόρτωσης. Αν false, να γίνεται πάντα αποθήκευση στο "
+"προεπιλεγμένο φάκελο χωρίς να ερώταται ο χρήστης."
+
+#: data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Περιορισμός μέγιστης ταχύτητας"
+
+#: data/gwget.schemas.in.h:9
+msgid "Maximum depth in recursive mode"
+msgstr "Μέγιστο επίπεδο βάθους σε recursive mode"
+
+#: data/gwget.schemas.in.h:10
+msgid "Maximum speed limit"
+msgstr "Μέγιστο όριο ταχύτητας"
+
+#: data/gwget.schemas.in.h:11
+msgid "Number of downloads"
+msgstr "Αριθμός μεταφορτώσεων"
+
+#: data/gwget.schemas.in.h:12
+msgid "Number of retries"
+msgstr "Αριθμός επανάληψης προσπαθειών"
+
+#: data/gwget.schemas.in.h:13
+msgid "Open the file after download"
+msgstr "'Ανοιγμα του  μετά την μεταφόρτωση"
+
+#: data/gwget.schemas.in.h:14
+msgid "Resume downloads at startup"
+msgstr "Συνέχιση μεταφορτώσεων κατά την εκκίνηση"
+
+#: data/gwget.schemas.in.h:15
+msgid "View download speed column"
+msgstr "Προβολή στήλης περιορισμού ταχύτητας μεταφόρτωσης"
+
+#: data/gwget.schemas.in.h:16
+msgid "View elapsed time column"
+msgstr "Προβολή στήλης χρόνου που πέρασε"
+
+#: data/gwget.schemas.in.h:17
+msgid "View percentage column"
+msgstr "Προβολή στήλης ποσοστού"
+
+#: data/gwget.schemas.in.h:18
+msgid "View remaining time column"
+msgstr "Προβολή στήλης χρόνου που απομένει"
+
+#: data/gwget.schemas.in.h:19
+msgid "View toolbar"
+msgstr "Προβολή εργαλειοθήκης"
+
+#: data/gwget.schemas.in.h:20
+msgid "View total size column"
+msgstr "Προβολή στήλης συνολικού μεγέθους"
+
+#: data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\"> Νέα μεταφόρτωση</span>"
 
-#: data/newdownload.glade.h:3
+#: data/newdownload.glade.h:2
 msgid "New Download"
 msgstr "Νέα μεταφόρτωση"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+#: data/newdownload.glade.h:3 data/preferences.glade.h:34
 msgid "Save in:"
 msgstr "Αποθήκευση σε:"
 
-#: data/newdownload.glade.h:5
-msgid "URL: "
+#: data/newdownload.glade.h:4
+msgid "URL:"
 msgstr "URL: "
 
 #: data/preferences.glade.h:1
@@ -209,16 +288,16 @@ msgid "  kB/sec"
 msgstr "  kB/δευτ"
 
 #: data/preferences.glade.h:4
-msgid "<b>General</b>"
-msgstr "<b>Γενικά</b>"
-
-#: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Συμπεριφορά</span>"
 
-#: data/preferences.glade.h:6
+#: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\"> Στήλη λίστας</span>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Γενικά</span>"
 
 #: data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Links</span>"
@@ -229,98 +308,102 @@ msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\"> Ρύθμιση διαμεσολαβητή</span>"
 
 #: data/preferences.glade.h:9
+msgid "Ask where to save for each download"
+msgstr "Ερώτηση για την τοποθεσία αποθήκευσης για κάθε μεταφόρτωση"
+
+#: data/preferences.glade.h:10
 msgid "Column List"
 msgstr "Στήλη λίστας"
 
-#: data/preferences.glade.h:10
+#: data/preferences.glade.h:11
 msgid "Continue downloads on startup"
 msgstr "Συνέχιση μεταφορτώσεων κατά την εκκίνηση"
 
-#: data/preferences.glade.h:11
+#: data/preferences.glade.h:12
 msgid "Convert links"
 msgstr "Μετατροπή δεσμών"
 
-#: data/preferences.glade.h:12 src/main_window.c:284
+#: data/preferences.glade.h:13 src/main_window.c:317
 msgid "Current Size"
 msgstr "Τρέχον μέγεθος"
 
-#: data/preferences.glade.h:13
+#: data/preferences.glade.h:14
 msgid "Default GNOME network settings"
 msgstr "Προεπιλογμένες ρυθμίσεις δικτύου του GNOME"
 
-#: data/preferences.glade.h:14
+#: data/preferences.glade.h:15
 msgid "Direct Internet connection"
 msgstr "Απ'ευθείας σύνδεση στο διαδίκτυο"
 
-#: data/preferences.glade.h:15
+#: data/preferences.glade.h:16
 msgid "Don't create directories"
 msgstr "Να μην δημιουργούνται κατάλογοι"
 
-#: data/preferences.glade.h:16
+#: data/preferences.glade.h:17
 msgid "Download Speed"
 msgstr "Ταχύτητα μεταφόρτωσης"
 
-#: data/preferences.glade.h:17
+#: data/preferences.glade.h:18
 msgid "Download page requisites"
-msgstr ""
+msgstr "Μεταφόρτωση απαιτούμενων σελίδας"
 
-#: data/preferences.glade.h:18 src/main_window.c:316
+#: data/preferences.glade.h:19 src/main_window.c:349
 msgid "Elapsed Time"
 msgstr "Χρόνος που πέρασε"
 
-#: data/preferences.glade.h:19
+#: data/preferences.glade.h:20
 msgid "Follow relative links only"
 msgstr "Να ακολοθούνται σχετικοί δεσμοί μόνο"
 
-#: data/preferences.glade.h:20
+#: data/preferences.glade.h:21
 msgid "General"
 msgstr "Γενικά"
 
-#: data/preferences.glade.h:21
-msgid "Limit download speed to: "
+#: data/preferences.glade.h:22
+msgid "Limit download speed to:"
 msgstr "Περιορισμός ταχύτητας μεταφόρτωσης σε:"
 
-#: data/preferences.glade.h:22
+#: data/preferences.glade.h:23
 msgid "Manual proxy configuration"
 msgstr "Χειρωνακτική ρύθμιση διαμεσολαβητή"
 
-#: data/preferences.glade.h:23
-msgid "Maximum depth level: "
+#: data/preferences.glade.h:24
+msgid "Maximum depth level:"
 msgstr "Μέγιστο επίπεδο βάθους:"
 
-#: data/preferences.glade.h:24
+#: data/preferences.glade.h:25
 msgid "Network"
 msgstr "Δίκτυο"
 
-#: data/preferences.glade.h:25
+#: data/preferences.glade.h:26
 msgid "Number of retries:"
 msgstr "Αριθμός επανάληψης προσπαθειών:"
 
-#: data/preferences.glade.h:26
+#: data/preferences.glade.h:27
 msgid "Open files automatically after download"
 msgstr "Αυτόματα άνοιγμα αρχείων μετά την μεταφόρτωση"
 
-#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
+#: data/preferences.glade.h:28 src/main_window.c:338 src/main_window.c:344
 msgid "Percentage"
 msgstr "Ποσοστό"
 
-#: data/preferences.glade.h:28
+#: data/preferences.glade.h:29
 msgid "Port:"
 msgstr "Θύρα:"
 
-#: data/preferences.glade.h:29
+#: data/preferences.glade.h:30
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: data/preferences.glade.h:30
+#: data/preferences.glade.h:31
 msgid "Proxy:"
 msgstr "Διαμεσολαβητής:"
 
-#: data/preferences.glade.h:32 src/main_window.c:326
+#: data/preferences.glade.h:33 src/main_window.c:359
 msgid "Remaining Time"
 msgstr "Χρόνος που απομένει:"
 
-#: data/preferences.glade.h:34 src/main_window.c:295
+#: data/preferences.glade.h:35 src/main_window.c:328
 msgid "Total Size"
 msgstr "Συνολικό  μέγεθος"
 
@@ -377,39 +460,47 @@ msgstr ""
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:616
 msgid "Unable to add this download"
 msgstr "Αδυναμία προσθήκης αυτής της μεταφόρτωσης"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:616
 msgid "This download is already added"
 msgstr "Αυτή η μεταφόρτωση έχει ήδη προστεθεί"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:664 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Σφάλμα ανοίγματος αρχείου"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:664 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Αδυναμία ανοίγματος αρχείου"
 
-#: src/main_window.c:266
+#: src/main_window.c:299
 msgid "File Name"
 msgstr "Όνομα αρχείου"
 
-#: src/main_window.c:273
+#: src/main_window.c:306
 msgid "State"
 msgstr "Κατάσταση"
 
-#: src/main_window.c:336
+#: src/main_window.c:369
 msgid "Speed"
 msgstr "Ταχύτητα"
 
-#: src/main_window.c:560
+#: src/main_window.c:415
+msgid "Error starting the download"
+msgstr "Σφάλμα εκκίνησης της  μεταφόρτωσης"
+
+#: src/main_window.c:415
+msgid "There was an unexpected error starting the download"
+msgstr "Υπήρξε απρόσμενο σφάλμα κατά την εκκίνηση της μεταφόρτωσης"
+
+#: src/main_window.c:605
 msgid "Cancel current downloads?"
 msgstr "Ακύρωση τρεχουσών μεταφορτώσεων;"
 
-#: src/main_window.c:560
+#: src/main_window.c:605
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -422,22 +513,18 @@ msgid "Error in download"
 msgstr "Σφάλμα μεταφόρτωσης"
 
 #: src/main_window_cb.c:167
-msgid "Download Manager for Gnome2."
-msgstr "Εφαρμογή διαχείρισης μεταφορτώσεων για το Gnome2."
-
-#: src/main_window_cb.c:174
-msgid "translator_credits"
-msgstr "Κώστας Παπαδήμας <pkst@gnome.org>"
+msgid "Download Manager for GNOME."
+msgstr "Εφαρμογή διαχείρισης μεταφορτώσεων για το Gnome."
 
 #: src/main_window_cb.c:186
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:140
+#: src/main_window_cb.c:513 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Επιλογή φακέλου"
 
-#: src/main_window_cb.c:558
+#: src/main_window_cb.c:568
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -446,21 +533,27 @@ msgstr ""
 "Είστε σίγουροι ότι θέλετε να ακυρώσετε την τρέχουσα μεταφόρτωση;\n"
 "(Url: %s)"
 
-#: src/main_window_cb.c:559
+#: src/main_window_cb.c:569
 msgid "Cancel download?"
 msgstr "Ακύρωση μεταφόρτωσης;"
 
-#: src/main_window_cb.c:587
+#: src/main_window_cb.c:597
 msgid "Really remove completed downloads from the list?"
-msgstr "Είστε σίγουροι ότι θέλετε να απομακρυνθούν οι ολοκληρωμένες μεταφορτώσεις από την λίστα;"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να απομακρυνθούν οι ολοκληρωμένες μεταφορτώσεις "
+"από την λίστα;"
 
-#: src/main_window_cb.c:616
+#: src/main_window_cb.c:626
 msgid "Really remove inactive downloads from the list?"
-msgstr "Είστε σίγουροι ότι θέλετε να απομακρυνθούν οι ανενενεργές μεταφορτώσεις από την λίστα;"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να απομακρυνθούν οι ανενενεργές μεταφορτώσεις από "
+"την λίστα;"
 
-#: src/main_window_cb.c:645
+#: src/main_window_cb.c:655
 msgid "Really remove all downloads from the list?"
-msgstr "Είστε σίγουροι ότι θέλετε να απομακρυνθούν όλες οι μεταφορτώσεις από την λίστα;"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να απομακρυνθούν όλες οι μεταφορτώσεις από την "
+"λίστα;"
 
 #: src/systray.c:135
 msgid "Nothing"
@@ -492,7 +585,9 @@ msgstr "Το σύστημα δεν βρέθηκε\n"
 
 #: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Το πρωτόκολλο δεν υποστηρίζεται - χρειάζεστε μεγαλύτερη έκδοση από το ·wget·1.7 για https:\n"
+msgstr ""
+"Το πρωτόκολλο δεν υποστηρίζεται - χρειάζεστε μεγαλύτερη έκδοση από το "
+"·wget·1.7 για https:\n"
 
 #: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
@@ -508,9 +603,10 @@ msgstr "Το αρχείο δε βρέθηκε"
 
 #: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Αδυναμία συνέχισης μεταφόρτωσης, το υπάρχον τοπικό αρχείο είναι σε σύγκρουση με το απομακρυσμένο"
+msgstr ""
+"Αδυναμία συνέχισης μεταφόρτωσης, το υπάρχον τοπικό αρχείο είναι σε σύγκρουση "
+"με το απομακρυσμένο"
 
 #: src/wget-log.c:180
 msgid "Can't write to target directory"
 msgstr "Αδυναμία εγγραφής στον κατάλογο προορισμού"
-
