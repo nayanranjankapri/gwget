@@ -165,6 +165,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 	gchar *about_text = _("Download Manager for Gnome2.");
 	gchar *authors[] = { 
 			"David Sedeño Fernández <david@alderia.com>",
+			"Julien Cegarra <julienc@psychologie-fr.org>",
 			NULL
 	};
 

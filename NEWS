@@ -1,4 +1,26 @@
 =============
+Version 0.91 
+=============
+General:
+	* Install gconf schema
+
+Features: 
+	* In new download window, if there are a url in the clipboard, put that url in the entry (Lech Jankowski).
+	* Proxy support, both manual and general gnome proxy preference (Paulius Palevicius).
+	* Added option to open automatically the downloaded file (David Sedeño).
+
+Fixes:
+	* Set total size, current size and percentage of downloads at startup (David Sedeño).
+	* Some minor ui fixes (David Sedeño, Julien Cegarra).
+	* Stop and continue all downloads, not only the first (David Sedeño).
+	* Put image and name in the same column (David Sedeño).
+
+Translations:
+	* New: de (Frank Arnold), lt (Added Lithuanian)
+	* Updated: pt_BR (Raphael Higino), hu (Gabor Kelemen), cs (Miloslav Trmac), en_CA (Adam Weinberger).
+
+
+=============
 Version 0.90 
 =============
 Features
