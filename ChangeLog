@@ -1,4 +1,8 @@
 2004-10-14 David Sedeño <david@alderia.com>
+	
+	* configure.in: Put ENABLE_EPIPHANY_EXTENSION out of the if statment.
+
+2004-10-14 David Sedeño <david@alderia.com>
 
 	* epiphany-extension/Makefile.am: Fix extensiondir.
 	* configure.in: Informs if the are not epiphany installed. Add
