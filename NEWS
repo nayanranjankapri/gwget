@@ -3,7 +3,7 @@ Version 0.93
 ============
 Features: 
 	* Gnome Session support (Ivan Yosifov).
-	* Added --trayicon option to command line (Ivan Yosifov).
+	* Added --trayonly option to command line (Ivan Yosifov).
 	* Option of asking where to save a file at each download (David Sedeño).
 
 Fixes: 
