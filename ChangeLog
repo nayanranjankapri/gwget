@@ -1,3 +1,7 @@
+2004-11-01 David Sedeño <david@alderia.com>
+
+	* data/preferences.glade: replace "KB" with "kB/sec"
+
 2004-10-30 David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (new_download): Correct cur_size and total_size
