@@ -1,275 +1,651 @@
-# Polish translation of gwget2
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gwget2 package.
-# Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>, 2003
+# translation of gwget.po to Polish
+# Copyright (C) 2003-2005 Free Software Foundation, Inc.
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnome.pl
+# (:pserver:anonymous@cvs.gnome.pl:/gnomepl, puste hasło)
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas na adres:
+# translators@gnomepl.org
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>, 2003.
+# Bartosz Kosiorek <gang65@poczta.onet.pl>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget2\n"
+"Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-12 20:41+0200\n"
-"PO-Revision-Date: 2003-06-19 11:41+0100\n"
-"Last-Translator: Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"POT-Creation-Date: 2005-03-13 18:45+0100\n"
+"PO-Revision-Date: 2005-03-10 23:13+0100\n"
+"Last-Translator: Bartosz Kosiorek <gang65@poczta.onet.pl>\n"
+"Language-Team: Polish <translators@gnomepl.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
 
-#: src/main_window.c:231
-#, fuzzy
-msgid "File Type"
-msgstr "Nazwa pliku"
+#: ../data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "aplikacja gwget"
 
-#: src/main_window.c:240
-msgid "File Name"
-msgstr "Nazwa pliku"
+#: ../data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "automatyczna maszyna gwget"
 
-#: src/main_window.c:250
-msgid "State"
-msgstr "Stan"
+#: ../data/about.glade.h:1
+msgid "About Gwget"
+msgstr "O Gwget"
 
-#: src/main_window.c:259
-msgid "Current Size"
-msgstr "Aktualny rozmiar"
+#: ../data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL wersja 2"
 
-#: src/main_window.c:269
-msgid "Total Size"
-msgstr "Cakowity rozmiar"
+#: ../data/about.glade.h:3
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Gwget: Menedżer pobierania dla GNOME"
 
-#: src/main_window.c:279 src/main_window.c:284
-msgid "Percentage"
-msgstr "Procentowo"
-
-#: src/main_window.c:289
-msgid "Elapsed Time"
-msgstr "Czas do koca"
-
-#: src/main_window.c:299
-msgid "Remaining Time"
-msgstr "Pozostay czas"
-
-#: src/main_window.c:309
-msgid "Speed"
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
+msgid "translator-credits"
 msgstr ""
+"GNOME PL Team <translators@gnomepl.org>\n"
+"Bartosz Kosiorek"
 
-#: src/main_window.c:539
-#, fuzzy
-msgid "Cancel current downloads?"
-msgstr "Czy anulowa bieťce pobieranie?"
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
 
-#: src/main_window.c:539
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
-msgstr ""
+#: ../data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Pobieranie:</span>"
 
-#: src/main_window_cb.c:95
-#, fuzzy
-msgid "Error in download"
-msgstr "Czy anulowa pobieranie?"
+#: ../data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Właściwości</span>"
 
-#: src/main_window_cb.c:100
-msgid "Error opening file"
-msgstr ""
+#: ../data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Anuluj"
 
-#: src/main_window_cb.c:100
-msgid "Couldn't open the file"
-msgstr ""
+#: ../data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Ponów"
 
-#: src/main_window_cb.c:143
-msgid "Download Manager for Gnome2."
-msgstr ""
+#: ../data/gwget.glade.h:6 ../src/main_window_cb.c:129
+#: ../src/main_window_cb.c:594 ../src/main_window_cb.c:691
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Menadżer pobierania"
 
-#: src/main_window_cb.c:149
-msgid "translator_credits"
-msgstr ""
+#: ../data/gwget.glade.h:7
+msgid "Information"
+msgstr "Informacje"
 
-#: src/main_window_cb.c:161
-msgid "Gwget"
-msgstr ""
+#: ../data/gwget.glade.h:8
+msgid "Local Directory:"
+msgstr "Lokalny katalog:"
 
-#: src/main_window_cb.c:391 src/new_window.c:151
-msgid "Select Folder"
-msgstr ""
+#: ../data/gwget.glade.h:9
+msgid "Local File:"
+msgstr "Lokalny plik:"
 
-#: src/main_window_cb.c:448
-#, fuzzy, c-format
-msgid "Really cancel current download? (Url: %s)"
-msgstr "Czy chcesz anulowa aktualne pobieranie? (Url: %s)"
+#: ../data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "Pliki multimedialne (filmy i obrazy)"
 
-#: src/main_window_cb.c:449
-msgid "Cancel download?"
-msgstr "Czy anulowa pobieranie?"
+#: ../data/gwget.glade.h:11
+msgid "New download"
+msgstr "Nowe pobieranie"
 
-#: src/main_window_cb.c:475
-#, fuzzy
-msgid "Remove completed"
-msgstr "Usu zakoczone pobierania"
+#: ../data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Wstrzymaj"
 
-#: src/main_window_cb.c:475
-#, fuzzy
-msgid "Really remove completed downloads from the list?"
-msgstr "Usu zakoczone pobierania"
+#: ../data/gwget.glade.h:13
+msgid "Pause all"
+msgstr "Wstrzymaj wszystkie"
 
-#: src/main_window_cb.c:504
-#, fuzzy
-msgid "Remove not running"
-msgstr "Nie dziaa"
+#: ../data/gwget.glade.h:14
+msgid "Pause all downloads"
+msgstr "Wstrzymaj wszystkie pobierania"
 
-#: src/main_window_cb.c:504
-#, fuzzy
-msgid "Really remove not running downloads from the list?"
-msgstr "Usu zakoczone pobierania"
+#: ../data/gwget.glade.h:15
+msgid "Pause download"
+msgstr "Wstrzymaj pobieranie"
 
-#: src/main_window_cb.c:534
-#, fuzzy
+#: ../data/gwget.glade.h:16
+msgid "Properties"
+msgstr "Właściwości"
+
+#: ../data/gwget.glade.h:17
+msgid "Question"
+msgstr "Pytanie"
+
+#: ../data/gwget.glade.h:18 ../data/preferences.glade.h:21
+msgid "Recursive"
+msgstr "Rekursywność"
+
+#: ../data/gwget.glade.h:19
+msgid "Recursive options"
+msgstr "Opcje rekursywne"
+
+#: ../data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Usuń"
+
+#: ../data/gwget.glade.h:21 ../src/main_window_cb.c:673
 msgid "Remove all"
-msgstr "Usu zakoczone pobierania"
+msgstr "Usuń wszystkie"
 
-#: src/main_window_cb.c:534
-#, fuzzy
-msgid "Really remove all downloads from the list?"
-msgstr "Usu zakoczone pobierania"
+#: ../data/gwget.glade.h:22
+msgid "Remove all downloads from list"
+msgstr "Usuwa wszystkie pobierania z listy"
 
-#: src/gwget_data.c:172
-msgid "stalled"
+#: ../data/gwget.glade.h:23 ../src/main_window_cb.c:615
+msgid "Remove completed"
+msgstr "Usuń skończone"
+
+#: ../data/gwget.glade.h:24
+msgid "Remove completed downloads from list"
+msgstr "Usuwa skończone pobierania z listy"
+
+#: ../data/gwget.glade.h:25 ../src/main_window_cb.c:644
+msgid "Remove inactive"
+msgstr "Usuń nieaktywne"
+
+#: ../data/gwget.glade.h:26
+msgid "Remove inactive downloads from list"
+msgstr "Usuwa nieaktywne pobierania z listy"
+
+#: ../data/gwget.glade.h:27
+msgid "Resume all"
+msgstr "Ponów wszystkie"
+
+#: ../data/gwget.glade.h:28
+msgid "Resume all downloads"
+msgstr "Ponawia wszystkie pobierania"
+
+#: ../data/gwget.glade.h:29
+msgid "Stop and delete downloaded file"
+msgstr "Zatrzymuje i usuwa pobrany plik"
+
+#: ../data/gwget.glade.h:30
+msgid "The index file only"
+msgstr "Tylko plik index"
+
+#: ../data/gwget.glade.h:31
+msgid "This site (mirror)"
+msgstr "Bieżącą stronę (obraz)"
+
+#: ../data/gwget.glade.h:32 ../data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.glade.h:33
+msgid "_New"
+msgstr "_Nowy"
+
+#: ../data/gwget.glade.h:34
+msgid "_Toolbar"
+msgstr "_Pasek narzędziowy"
+
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask save in for each new download"
+msgstr "Pytanie gdzie zapisać, przy każdym nowym pobieraniu"
+
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "Konwersja odnośniki"
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "Konwersja na relatywne odnośniki w trybie rekursywnym."
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Domyślny katalog pobrań"
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "Pobieranie wymagań strony"
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "Podążanie za relatywnymi odnośnikami"
+
+#: ../data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
 msgstr ""
+"Jeżeli jest zaznaczone, wtedy pyta o katalog docelowy (gdzie rozpocząć "
+"pobieranie). Jeżeli jest odznaczone, zawsze zapisuje pliki w domyślnym "
+"katalogu, bez pytania się użytkownika."
 
-#: src/gwget_data.c:201
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Ograniczenie maksymalnej szybkości"
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Limit jednoczesnych pobrań"
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr "Maksymalna głębokość w trybie rekursywnym"
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "Maksymalna ilość jednoczesnych pobrań"
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr "Maksymalna szybkość pobierania"
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr "Ilość pobierań"
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr "Ilość powtórzeń"
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr "Otwieranie pliku po pobraniu"
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Resume downloads at startup"
+msgstr "Kontynuacja pobierania przy starcie"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr "Widok kolumny z szybkością pobierania"
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr "Widok kolumny z upłyniętym czasem"
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr "Widok kolumny procentów"
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr "Widok kolumny z pozostałym czasem"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View toolbar"
+msgstr "Widok paska narzędziowego"
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View total size column"
+msgstr "Widok kolumny z całkowitym rozmiarem"
+
+#: ../data/newdownload.glade.h:1
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Nowe pobieranie</span>"
+
+#: ../data/newdownload.glade.h:2
+msgid "New Download"
+msgstr "Nowe pobieranie"
+
+#: ../data/newdownload.glade.h:3
+msgid "Save in:"
+msgstr "Zapisz w:"
+
+#: ../data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: ../data/preferences.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: ../data/preferences.glade.h:4
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Zachowanie</span>"
+
+#: ../data/preferences.glade.h:5
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Kolumny</span>"
+
+#: ../data/preferences.glade.h:6
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Ogólne</span>"
+
+#: ../data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Odnośniki</span>"
+
+#: ../data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Konfiguracja Proxy</span>"
+
+#: ../data/preferences.glade.h:9
+msgid "Column List"
+msgstr "Kolumny"
+
+#: ../data/preferences.glade.h:10
+msgid "Default _GNOME network settings"
+msgstr "Domyślne ustawienia sieci _GNOME"
+
+#: ../data/preferences.glade.h:11
+msgid "Direct _Internet connection"
+msgstr "_Bezpośrednie połączenie sieciowe"
+
+#: ../data/preferences.glade.h:12
+msgid "Do_wnload Speed"
+msgstr "_Szybkość pobierania"
+
+#: ../data/preferences.glade.h:13
+msgid "Don't _create directories"
+msgstr "Nie _twórz katalogów"
+
+#: ../data/preferences.glade.h:14
+msgid "Follow _relative links only"
+msgstr "Podążaj tylko za pok_rewnymi odnośnikami"
+
+#: ../data/preferences.glade.h:15
+msgid "General"
+msgstr "Ogólne"
+
+#: ../data/preferences.glade.h:16
+msgid "Limit _number of simultaneous download to:"
+msgstr "Ogra_nicz ilość jednoczesnych pobierań do:"
+
+#: ../data/preferences.glade.h:17
+msgid "Network"
+msgstr "Sieć"
+
+#: ../data/preferences.glade.h:18
+msgid "P_ort:"
+msgstr "P_ort:"
+
+#: ../data/preferences.glade.h:19
+msgid "Preferences"
+msgstr "Preferencje"
+
+#: ../data/preferences.glade.h:20
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: ../data/preferences.glade.h:22
+msgid "Remaining _Time"
+msgstr "_Pozostały czas"
+
+#: ../data/preferences.glade.h:23
+msgid "Sa_ve in:"
+msgstr "Zapisz w:"
+
+#: ../data/preferences.glade.h:24
+msgid "Total _Size"
+msgstr "_Całkowity rozmiar"
+
+#: ../data/preferences.glade.h:25
+msgid "_Ask where to save for each download"
+msgstr "_Zapytaj gdzie zapisać przy każdym ściąganiu"
+
+#: ../data/preferences.glade.h:26
+msgid "_Continue downloads on startup"
+msgstr "_Kontynuuj pobieranie przy starcie"
+
+#: ../data/preferences.glade.h:27
+msgid "_Convert links"
+msgstr "_Konwertuj odnośniki"
+
+#: ../data/preferences.glade.h:28
+msgid "_Current Size"
+msgstr "_Aktualny rozmiar"
+
+#: ../data/preferences.glade.h:29
+msgid "_Download page requisites"
+msgstr "_Pobierz wymagane strony"
+
+#: ../data/preferences.glade.h:30
+msgid "_Elapsed Time"
+msgstr "_Bieżący czas"
+
+#: ../data/preferences.glade.h:31
+msgid "_Limit download speed to:"
+msgstr "_Ogranicz prędkość pobierania do:"
+
+#: ../data/preferences.glade.h:32
+msgid "_Manual proxy configuration"
+msgstr "_Ręczna konfiguracja proxy"
+
+#: ../data/preferences.glade.h:33
+msgid "_Maximum depth level:"
+msgstr "_Maksymalny głębokość"
+
+#: ../data/preferences.glade.h:34
+msgid "_Number of retries:"
+msgstr "_Ilość powtórzeń:"
+
+#: ../data/preferences.glade.h:35
+msgid "_Open files automatically after download"
+msgstr "_Otwórz pliki automatycznie po ściągnięciu"
+
+#: ../data/preferences.glade.h:36
+msgid "_Percentage"
+msgstr "_Procentowo"
+
+#: ../data/preferences.glade.h:37
+msgid "files"
+msgstr "plików"
+
+#: ../data/preferences.glade.h:38
+msgid "kB/sec"
+msgstr "kB/sek"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Nieznany"
+
+#: ../src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Niepowodzenie"
+
+#: ../src/gwget_data.c:178
+msgid "stalled"
+msgstr "zatrzymany"
+
+#: ../src/gwget_data.c:213
+msgid "Waiting"
+msgstr "Oczekuje"
+
+#: ../src/gwget_data.c:215
 msgid "Not Started"
 msgstr "Nie uruchomiono"
 
-#: src/gwget_data.c:203
+#: ../src/gwget_data.c:217
 msgid "Not Running"
-msgstr "Nie dziaa"
+msgstr "Nie działa"
 
-#: src/gwget_data.c:205
+#: ../src/gwget_data.c:219
 msgid "Not Connected"
-msgstr "Nie poczono"
+msgstr "Nie połączony"
 
-#: src/gwget_data.c:207
+#: ../src/gwget_data.c:221
 msgid "Connected"
-msgstr "Poczono"
+msgstr "Połączony"
 
-#: src/gwget_data.c:209
+#: ../src/gwget_data.c:223
 msgid "Retrieving"
 msgstr "Pobieranie"
 
-#: src/gwget_data.c:211
+#: ../src/gwget_data.c:225
 msgid "Completed"
 msgstr "Zakoczone"
 
-#: src/gwget_data.c:215
+#: ../src/gwget_data.c:229
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
+"Pobieranie zakończono\n"
+"(%s)"
 
-#: src/gwget_data.c:222
+#: ../src/gwget_data.c:236
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
 
-#: src/wget-log.c:83
+#: ../src/gwget_data.c:653
+msgid "Unable to add this download"
+msgstr "Nie można dodać tego pobierania"
+
+#: ../src/gwget_data.c:654
+msgid "This download is already added"
+msgstr "Plik jest już dodany do pobierania"
+
+#: ../src/gwget_data.c:702 ../src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Błąd przy otwieraniu pliku"
+
+#: ../src/gwget_data.c:702 ../src/main_window_cb.c:99
+msgid "Couldn't open the file"
+msgstr "Nie można otworzyć pliku"
+
+#: ../src/main_window.c:364
+msgid "File Name"
+msgstr "Nazwa pliku"
+
+#: ../src/main_window.c:371
+msgid "State"
+msgstr "Stan"
+
+#: ../src/main_window.c:382
+msgid "Current Size"
+msgstr "Aktualny rozmiar"
+
+#: ../src/main_window.c:393
+msgid "Total Size"
+msgstr "Całkowity rozmiar"
+
+#: ../src/main_window.c:403 ../src/main_window.c:409
+msgid "Percentage"
+msgstr "Procentowo"
+
+#: ../src/main_window.c:414
+msgid "Elapsed Time"
+msgstr "Bieżący czas"
+
+#: ../src/main_window.c:424
+msgid "Remaining Time"
+msgstr "Pozostały czas"
+
+#: ../src/main_window.c:434
+msgid "Speed"
+msgstr "Szybkość"
+
+#: ../src/main_window.c:480
+msgid "Error starting the download"
+msgstr "Błąd przy uruchamianiu pobierania"
+
+#: ../src/main_window.c:480
+msgid "There was an unexpected error starting the download"
+msgstr "Wystąpił nieoczekiwany błąd przy uruchamianiu pobierania"
+
+#: ../src/main_window.c:712
+msgid "Cancel current downloads?"
+msgstr "Czy anulować bieżące pobierania?"
+
+#: ../src/main_window.c:713
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Przynajmniej jeden plik nie został pobrany do końca. Czy naprawdę chcesz "
+"anulować wszystkie pobrania?"
+
+#: ../src/main_window_cb.c:94
+msgid "Error in download"
+msgstr "Błąd pobierania"
+
+#: ../src/main_window_cb.c:167
+msgid "Download Manager for GNOME."
+msgstr "Menedżer pobierania dla GNOME."
+
+#: ../src/main_window_cb.c:186
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main_window_cb.c:530 ../src/new_window.c:138
+msgid "Select Folder"
+msgstr "Wybieranie katalogu"
+
+#: ../src/main_window_cb.c:586
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
+msgstr ""
+"Czy chcesz anulować aktualne pobieranie?\n"
+"(URL: %s)"
+
+#: ../src/main_window_cb.c:587
+msgid "Cancel download?"
+msgstr "Czy anulować pobieranie?"
+
+#: ../src/main_window_cb.c:615
+msgid "Really remove completed downloads from the list?"
+msgstr "Czy chcesz usunąć zakończone pobrania z listy?"
+
+#: ../src/main_window_cb.c:644
+msgid "Really remove inactive downloads from the list?"
+msgstr "Czy chcesz usunąć nieaktywne pobrania z listy?"
+
+#: ../src/main_window_cb.c:673
+msgid "Really remove all downloads from the list?"
+msgstr "Czy chcesz usunąć wszystkie pobrania z listy?"
+
+#: ../src/systray.c:150
+msgid "Nothing"
+msgstr "Brak"
+
+#: ../src/systray.c:157
+msgid "Downloads"
+msgstr "Pobrania"
+
+#: ../src/wget-log.c:116
 msgid "Socket error"
-msgstr ""
+msgstr "Błąd gniazda"
 
-#: src/wget-log.c:85
-#, fuzzy
+#: ../src/wget-log.c:118
 msgid "Connection refused\n"
-msgstr "Poczono"
+msgstr "Połczenie odrzucono\n"
 
-#: src/wget-log.c:87
-#, fuzzy
+#: ../src/wget-log.c:120
 msgid "No route to host"
-msgstr "Brak cieťki routowania do komputera:\n"
+msgstr "Brak ścieżki do hosta"
 
-#: src/wget-log.c:89
+#: ../src/wget-log.c:122
 msgid "Connection refused when downloading URL:\n"
-msgstr "Poczenie odrzucone podczas pobierania adresu URL:\n"
+msgstr "Połączenie odrzucone podczas pobierania adresu URL:\n"
 
-#: src/wget-log.c:91
+#: ../src/wget-log.c:124
 msgid "Host not found\n"
-msgstr ""
+msgstr "Nie znaleziono hosta\n"
 
-#: src/wget-log.c:93
+#: ../src/wget-log.c:126
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Nieobsugiwany protokó - do https potrzeba wget >= 1.7:\n"
+msgstr "Nieobsługiwany protokół - do https potrzebny jest wget >= 1.7:\n"
 
-#: src/wget-log.c:96
-#, fuzzy
+#: ../src/wget-log.c:129
 msgid "Refusing to truncate existing file"
-msgstr "Odrzucanie obcicia istniejcego pliku\n"
+msgstr "Odrzucanie niekompletnego pliku"
 
-#: src/wget-log.c:98
+#: ../src/wget-log.c:131
 msgid "Unknown error"
-msgstr ""
+msgstr "Nieznany błąd"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: ../src/wget-log.c:142 ../src/wget-log.c:148
 msgid "File not found"
-msgstr ""
+msgstr "Nie znaleziono pliku"
 
-#: src/wget-log.c:122
-#, fuzzy
+#: ../src/wget-log.c:155
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
-"Nie moťna kontynuowa pobierania, istniejcy plik lokalny koliduje ze "
-"zdalnym:\n"
+"Nie można kontynuować pobierania, istniejący plik lokalny koliduje ze zdalnym"
 
-#: src/wget-log.c:169
-#, fuzzy
+#: ../src/wget-log.c:213
 msgid "Can't write to target directory"
-msgstr "Nie moťna zapisa do katalogu docelowego:\n"
-
-#: src/custom-cell-renderer-progressbar.c:36
-msgid "Unknown"
-msgstr ""
-
-#: src/custom-cell-renderer-progressbar.c:99
-msgid "Failed"
-msgstr ""
-
-#: src/systray.c:133
-#, fuzzy
-msgid "Nothing"
-msgstr "Nie dziaa"
-
-#: src/systray.c:140
-#, fuzzy
-msgid "Downloads"
-msgstr "Czy anulowa pobieranie?"
-
-#, fuzzy
-#~ msgid "Pause download"
-#~ msgstr "Czy anulowa pobieranie?"
-
-#, fuzzy
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "Usu zakoczone pobierania"
-
-#, fuzzy
-#~ msgid "Select target directory"
-#~ msgstr "Nie moťna zapisa do katalogu docelowego:\n"
-
-#~ msgid ""
-#~ "There are some downloads retriving information. Do you want to cancel it ?"
-#~ msgstr ""
-#~ "Istniej jakie informacje na temat pobierania. Czy chcesz je anulowa?"
-
-#~ msgid "Remove completed downloads"
-#~ msgstr "Usu zakoczone pobierania"
-
-#~ msgid "Are you sure to remove completed download from list?"
-#~ msgstr "Czy chcesz usun pobrane pozycje z listy?"
-
-#~ msgid "Socket error when downloading URL:\n"
-#~ msgstr "Bd gniazda podczas pobierania adresu URL:\n"
-
-#~ msgid "Host not found when downloading URL:\n"
-#~ msgstr "Nie znaleziono komputera podczas pobierania adresu URL:\n"
-
-#~ msgid "Unknown error when downloading URL:\n"
-#~ msgstr "Nieznany bd podczas pobierania adresu URL:\n"
-
-#~ msgid "File not found when downloading URL:\n"
-#~ msgstr "Nie znaleziono pliku podczas pobierania adresu URL:\n"
+msgstr "Nie można zapisać do katalogu docelowego"
