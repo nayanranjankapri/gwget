@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-08 19:18+0100\n"
-"PO-Revision-Date: 2005-03-08 19:21+0100\n"
+"POT-Creation-Date: 2005-03-17 06:02+0100\n"
+"PO-Revision-Date: 2005-03-17 06:03+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -426,6 +426,14 @@ msgstr "súbory"
 #: data/preferences.glade.h:38
 msgid "kB/sec"
 msgstr "kB/s"
+
+#: epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Preposlať sťahovania do GWGet"
+
+#: epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
