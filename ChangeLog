@@ -1,4 +1,10 @@
 2005-01-15  David Sedeño <david@alderia.com>
+	
+	* src/main_window_cb.c (on_pref_ok_button_clicked, on_boton_pref_clicked):
+	Replace num_retries_entry Entry for a GtkSpin button
+	* data/preferences.glade: Replace num_retries_entry Entry for a GtkSpin button
+
+2005-01-15  David Sedeño <david@alderia.com>
 
 	* configure.in: Added AM_GCONF_SOURCE_2
 	* data/Makefile.am: Use GCONF_SCHEMA_FILE_DIR for schemasdir
