@@ -1,0 +1,515 @@
+# Lithuanian translation of gwget.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gwget package.
+# Lech Jankovski <godgard@gmail.com>, 2004.
+# , fuzzy
+# god <EMAIL@ADDRESS>, 2004.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget cvs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-11-08 20:46+0200\n"
+"PO-Revision-Date: 2004-11-08 22:00+0200\n"
+"Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+#, fuzzy
+msgid "gwget application"
+msgstr "gwget taikomoji programa"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr ""
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "Apie Gwget"
+
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL Versija 2"
+
+#: data/about.glade.h:3
+#, fuzzy
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Gnome2 siuntimų tvarkyklė"
+
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "vertėjų sąrašas"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr ""
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span·weight=\"bold\">Nustatymai</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Tęsti"
+
+#: data/gwget.glade.h:6
+msgid "Continue all downloads"
+msgstr "Tęsti visus siuntimus"
+
+#: data/gwget.glade.h:7
+#, fuzzy
+msgid "Gwget - Download Manager"
+msgstr "Gwget - siuntimų tvarkyklė"
+
+#: data/gwget.glade.h:8
+msgid "Local Directory: "
+msgstr "Vietinė direktorija:"
+
+#: data/gwget.glade.h:9
+msgid "Local File: "
+msgstr "Vietinė byla:"
+
+#: data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimedijos bylos (filmai ir paveiksliukai)"
+
+#: data/gwget.glade.h:11
+#, fuzzy
+msgid "New download"
+msgstr "Naujas atsisiuntimas"
+
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Pauzė"
+
+#: data/gwget.glade.h:13
+msgid "Pause download"
+msgstr "Stabtelėti siuntimą"
+
+#: data/gwget.glade.h:14
+msgid "Properties"
+msgstr "Nustatymai"
+
+#: data/gwget.glade.h:15
+msgid "Question"
+msgstr "Klausimas"
+
+#: data/gwget.glade.h:16 data/preferences.glade.h:33
+msgid "Recursive"
+msgstr "Rekursinis"
+
+#: data/gwget.glade.h:17
+msgid "Recursive options"
+msgstr "Rekursijos nustatymai"
+
+#: data/gwget.glade.h:18
+msgid "Remove"
+msgstr "Pašalinti"
+
+#: data/gwget.glade.h:19 src/main_window_cb.c:650
+msgid "Remove all"
+msgstr "Pašalinti visus"
+
+#: data/gwget.glade.h:20
+msgid "Remove all downloads from list"
+msgstr "Pašalinti visus siuntimus iš sąrašo"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:591
+msgid "Remove completed"
+msgstr "Pašalinti užbaigtus"
+
+#: data/gwget.glade.h:22
+msgid "Remove completed downloads from list"
+msgstr "Pašalinti užbaigtus siuntimus iš sąrašo"
+
+#: data/gwget.glade.h:23 src/main_window_cb.c:620
+msgid "Remove inactive"
+msgstr "Pašalinti neveiksnų"
+
+#: data/gwget.glade.h:24
+msgid "Remove inactive downloads from list"
+msgstr "Pašalinti neveiksnius siuntimus iš sąrašo"
+
+#: data/gwget.glade.h:25
+msgid "Resume"
+msgstr "Tęsti"
+
+#: data/gwget.glade.h:26
+msgid "Stop all downloads"
+msgstr "Sustabdyti visus siuntimus"
+
+#: data/gwget.glade.h:27
+msgid "Stop and delete downloaded file"
+msgstr "Sustabdyti siuntimą ir pašalintį atsisiųstą bylą"
+
+#: data/gwget.glade.h:28
+msgid "The index file only"
+msgstr "Tik indekso bylą"
+
+#: data/gwget.glade.h:29
+msgid "This site (mirror)"
+msgstr ""
+
+#: data/gwget.glade.h:30
+msgid "Url:"
+msgstr "Adresas:"
+
+#: data/gwget.glade.h:31
+msgid "_New"
+msgstr ""
+
+#: data/gwget.glade.h:32
+msgid "_Toolbar"
+msgstr ""
+
+#: data/newdownload.glade.h:1 data/preferences.glade.h:4
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+#, fuzzy
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span·weight=\"bold\">Naujas atsisiuntimas</span>"
+
+#: data/newdownload.glade.h:3
+msgid "New Download"
+msgstr "Naujas atsisiuntimas"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:35
+msgid "Save in:"
+msgstr "Išsaugoti:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr "Adresas: "
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  kB/sec"
+msgstr "  kB/s"
+
+#: data/preferences.glade.h:5
+msgid "<b>General</b>"
+msgstr "<b>Bendri</b>"
+
+#: data/preferences.glade.h:6
+#, fuzzy
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span·weight=\"bold\">Funkcionavimas</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span·weight=\"bold\">Skilčių sąrašas</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span·weight=\"bold\">Nuorodos</span>"
+
+#: data/preferences.glade.h:9
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span·weight=\"bold\">Tarpinės stoties nustatymai</span>"
+
+#: data/preferences.glade.h:10
+#, fuzzy
+msgid "Column List"
+msgstr "Skilčių sąrašas"
+
+#: data/preferences.glade.h:11
+msgid "Continue downloads on startup"
+msgstr "Pratęsti siuntimus paleidus"
+
+#: data/preferences.glade.h:12
+msgid "Convert links"
+msgstr "Konvertuoti nuorodas"
+
+#: data/preferences.glade.h:13 src/main_window.c:274
+msgid "Current Size"
+msgstr "Esamas dydis"
+
+#: data/preferences.glade.h:14
+#, fuzzy
+msgid "Default GNOME network settings"
+msgstr "GNOME tinklo nustatymai esantys pagal nutylėjimą"
+
+#: data/preferences.glade.h:15
+msgid "Direct Internet connection"
+msgstr "Tiesioginis prisijungimas"
+
+#: data/preferences.glade.h:16
+msgid "Don't create directories"
+msgstr "Nekurti direktorijų"
+
+#: data/preferences.glade.h:17
+msgid "Download Speed"
+msgstr "Siuntimo greitis"
+
+#: data/preferences.glade.h:18
+msgid "Download page requisites"
+msgstr ""
+
+#: data/preferences.glade.h:19 src/main_window.c:304
+msgid "Elapsed Time"
+msgstr "Praslinkęs laikas"
+
+#: data/preferences.glade.h:20
+msgid "FTP proxy:"
+msgstr "FTP nuotolinė stotis:"
+
+#: data/preferences.glade.h:21
+msgid "File Type Image"
+msgstr "Bylos tipo paveikslėlis"
+
+#: data/preferences.glade.h:22
+#, fuzzy
+msgid "Follow relative links only"
+msgstr "Sekti tik paskui susijusias nuorodas"
+
+#: data/preferences.glade.h:23
+msgid "General"
+msgstr "Bendri"
+
+#: data/preferences.glade.h:24
+msgid "HTTP proxy:"
+msgstr "HTTP tarpinė stotis:"
+
+#: data/preferences.glade.h:25
+msgid "Limit download speed to: "
+msgstr "Apriboti siuntimo greitį iki: "
+
+#: data/preferences.glade.h:26
+msgid "Manual proxy configuration"
+msgstr "Savarankiškas tarpinės tinklo stoties konfigūravimas"
+
+#: data/preferences.glade.h:27
+msgid "Maximum depth level: "
+msgstr "Maksimalus gylio lygis: "
+
+#: data/preferences.glade.h:28
+msgid "Network"
+msgstr "Tinklas"
+
+#: data/preferences.glade.h:29
+msgid "Number of retries:"
+msgstr "Pakartojimų skaičius:"
+
+#: data/preferences.glade.h:30 src/main_window.c:294 src/main_window.c:299
+msgid "Percentage"
+msgstr "Procentai"
+
+#: data/preferences.glade.h:31
+msgid "Port:"
+msgstr "Portas:"
+
+#: data/preferences.glade.h:32
+msgid "Preferences"
+msgstr "Nustatymai"
+
+#: data/preferences.glade.h:34 src/main_window.c:314
+msgid "Remaining Time"
+msgstr "Likęs laikas"
+
+#: data/preferences.glade.h:36 src/main_window.c:284
+msgid "Total Size"
+msgstr "Bendras dydis"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Nežinomas"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Nepavyko"
+
+#: src/gwget_data.c:174
+msgid "stalled"
+msgstr "delsiama"
+
+#: src/gwget_data.c:204
+msgid "Not Started"
+msgstr "Nepradėtas"
+
+#: src/gwget_data.c:206
+msgid "Not Running"
+msgstr "Neveiksnus"
+
+#: src/gwget_data.c:208
+msgid "Not Connected"
+msgstr "Neprisijungęs"
+
+#: src/gwget_data.c:210
+#, fuzzy
+msgid "Connected"
+msgstr "Prisijungiau"
+
+#: src/gwget_data.c:212
+msgid "Retrieving"
+msgstr "Siunčiama"
+
+#: src/gwget_data.c:214
+msgid "Completed"
+msgstr "Užbaigta"
+
+#: src/gwget_data.c:218
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Atsisiuntimas baigtas\n"
+"(%s)"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr "Klaida"
+
+#: src/main_window.c:246
+msgid "File Type"
+msgstr "Bylos tipas"
+
+#: src/main_window.c:255
+msgid "File Name"
+msgstr "Bylos vardas"
+
+#: src/main_window.c:265
+msgid "State"
+msgstr "Padėtis"
+
+#: src/main_window.c:324
+msgid "Speed"
+msgstr "Greitis"
+
+#: src/main_window.c:558
+msgid "Cancel current downloads?"
+msgstr "Atšaukti einamuosius siuntimus?"
+
+#: src/main_window.c:558
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Liko dar mažiausiai vienas siuntimas. Ar tikrai atšaukti visus veikiančius siuntimus?"
+
+#: src/main_window_cb.c:94
+msgid "Error in download"
+msgstr "Klaida siunčiant"
+
+#: src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Įvyko klaida atidarant bylą"
+
+#: src/main_window_cb.c:99
+msgid "Couldn't open the file"
+msgstr "Negalėjau atidaryti bylos"
+
+#: src/main_window_cb.c:165
+#, fuzzy
+msgid "Download Manager for Gnome2."
+msgstr "Gnome2 siuntimų tvarkyklė."
+
+#: src/main_window_cb.c:171
+msgid "translator_credits"
+msgstr "vertėjų sąrašas"
+
+#: src/main_window_cb.c:183
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:507 src/new_window.c:140
+msgid "Select Folder"
+msgstr "Pasirinkti direktoriją"
+
+#: src/main_window_cb.c:564
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Ar tikrai atšaukti einamąjį atsisiuntimą? (Url: %s)"
+
+#: src/main_window_cb.c:565
+msgid "Cancel download?"
+msgstr "Atšaukti siuntimą?"
+
+#: src/main_window_cb.c:591
+msgid "Really remove completed downloads from the list?"
+msgstr "Ar tikrai pašalinti pabaigtus atsisiuntimus iš sąrašo?"
+
+#: src/main_window_cb.c:620
+msgid "Really remove inactive downloads from the list?"
+msgstr "Ar tikrai pašalinti neveiksnius siuntimus iš sąrašo?"
+
+#: src/main_window_cb.c:650
+msgid "Really remove all downloads from the list?"
+msgstr "Ar tikrai pašalinti visus siuntimus iš sąrašo?"
+
+#: src/systray.c:135
+msgid "Nothing"
+msgstr "Nieko"
+
+#: src/systray.c:142
+msgid "Downloads"
+msgstr "Atsisiuntimai"
+
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr ""
+
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Prisijungimas atmestas\n"
+
+#: src/wget-log.c:87
+#, fuzzy
+msgid "No route to host"
+msgstr "Nėra kelio iki hosto"
+
+#: src/wget-log.c:89
+#, fuzzy
+msgid "Connection refused when downloading URL:\n"
+msgstr "Prisijungimas atmestas siunčiantis URL:\n"
+
+#: src/wget-log.c:91
+#, fuzzy
+msgid "Host not found\n"
+msgstr "Hostas nerastas\n"
+
+#: src/wget-log.c:93
+#, fuzzy
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Nepalaikomas protokolas - jums reikia wget >= 1.7 https protokolui:\n"
+
+#: src/wget-log.c:96
+#, fuzzy
+msgid "Refusing to truncate existing file"
+msgstr "Atmetama nukirsti egzistuojančią bylą"
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Nežinoma klaida"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+msgid "File not found"
+msgstr "Byla nerasta"
+
+#: src/wget-log.c:122
+#, fuzzy
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "Negaliu tęsti siuntimo, egzistuojanti lokali byla konfliktuoja su nuotoline byla"
+
+#: src/wget-log.c:169
+#, fuzzy
+msgid "Can't write to target directory"
+msgstr "Negaliu rašyti į nurodytą direktoriją"
+

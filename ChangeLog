@@ -1,3 +1,7 @@
+2004-11-08  David Sedeño <david@alderia.com>
+
+	* configure.in: Added lt to ALL_LINGUAS
+
 2004-11-08  Julien Cegarra <JulienC@psychologie-fr.org>
 
 	* data/gwget.glade: Replace icon's label "Stop" and "Resume" to
