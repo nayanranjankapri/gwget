@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-03 13:15+0200\n"
+"POT-Creation-Date: 2004-07-09 19:22+0200\n"
 "PO-Revision-Date: 2004-07-03 13:10+0200\n"
 "Last-Translator: David Sedeño Fernández <david@alderia.com>\n"
 "Language-Team: \n"
@@ -16,43 +16,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:226
+#: src/main_window.c:227
+#, fuzzy
+msgid "File Type"
+msgstr "Tipo"
+
+#: src/main_window.c:236
 msgid "File Name"
 msgstr "Fichero"
 
-#: src/main_window.c:236
+#: src/main_window.c:246
 msgid "State"
 msgstr "Estado"
 
-#: src/main_window.c:245
+#: src/main_window.c:255
 msgid "Current Size"
 msgstr "Tamaño actual"
 
-#: src/main_window.c:255
+#: src/main_window.c:265
 msgid "Total Size"
 msgstr "Tamaño Total"
 
-#: src/main_window.c:265 src/main_window.c:270
+#: src/main_window.c:275 src/main_window.c:280
 msgid "Percentage"
 msgstr "Porcentaje"
 
-#: src/main_window.c:275
+#: src/main_window.c:285
 msgid "Elapsed Time"
 msgstr "Tiempo de descarga"
 
-#: src/main_window.c:285
+#: src/main_window.c:295
 msgid "Remaining Time"
 msgstr "Tiempo restante"
 
-#: src/main_window.c:295
+#: src/main_window.c:305
 msgid "Speed"
 msgstr "Velocidad"
 
-#: src/main_window.c:498
+#: src/main_window.c:508
 msgid "Cancel current downloads?"
 msgstr "¿ Cancelar las descargas actuales ?"
 
-#: src/main_window.c:498
+#: src/main_window.c:508
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -82,36 +87,36 @@ msgstr "David Sedeño <david@alderia.com>"
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:407
+#: src/main_window_cb.c:437
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "¿ Está seguro de cancelar la descarga ? (Url: %s)"
 
-#: src/main_window_cb.c:408
+#: src/main_window_cb.c:438
 msgid "Cancel download?"
 msgstr "¿ Cancelar descarga ?"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:464
 msgid "Remove completed"
 msgstr "Borrar descargas completadas"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:464
 msgid "Really remove completed downloads from the list?"
 msgstr "¿ Realmente desea borrar las descargas completas ?"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:493
 msgid "Remove not running"
 msgstr "Barrar las descargas que no están corriendo"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:493
 msgid "Really remove not running downloads from the list?"
 msgstr "¿ Desea borrar las descargas que no están corriendo ?"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:523
 msgid "Remove all"
 msgstr "Borrar todas las descargas"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:523
 msgid "Really remove all downloads from the list?"
 msgstr "¿ Borrar todas las descargas ?"
 
