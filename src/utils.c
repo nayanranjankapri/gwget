@@ -48,8 +48,8 @@ run_dialog_information(gchar *title, gchar *msg)
 	
 	dialog = glade_xml_get_widget(xml,"dialog3");
 	mark=g_strdup_printf("<span size=\"large\" weight=\"bold\">%s</span>",title);
-	gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml,"title_label")),mark);
-	gtk_label_set_text(GTK_LABEL(glade_xml_get_widget(xml,"msg_label")),msg);
+	gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml,"title_label_inf")),mark);
+	gtk_label_set_text(GTK_LABEL(glade_xml_get_widget(xml,"msg_label_inf")),msg);
 	
 	response=gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_hide(GTK_WIDGET(dialog));
@@ -81,7 +81,7 @@ gboolean check_server_already_exists(gchar *checkurl)
 	GwgetData* gwgetdata;
 	GtkTreeIter iter;
 	gint length,i;
-	gchar *url,*filename, *ptr, *ptrb;
+	gchar *url, *ptr, *ptrb;
 
 	/* extract server name from url */
 	ptr = strchr (checkurl, ':');
