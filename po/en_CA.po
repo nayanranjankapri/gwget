@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-15 17:20-0500\n"
-"PO-Revision-Date: 2005-01-15 00:01-0400\n"
+"POT-Creation-Date: 2005-01-17 15:59-0500\n"
+"PO-Revision-Date: 2005-01-17 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -202,64 +202,64 @@ msgid "Follow relative links"
 msgstr "Follow relative links"
 
 #: data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+
+#: data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
 msgstr "Limit maximum speed"
 
-#: data/gwget.schemas.in.h:8
+#: data/gwget.schemas.in.h:9
 msgid "Maximum depth in recursive mode"
 msgstr "Maximum depth in recursive mode"
 
-#: data/gwget.schemas.in.h:9
+#: data/gwget.schemas.in.h:10
 msgid "Maximum speed limit"
 msgstr "Maximum speed limit"
 
-#: data/gwget.schemas.in.h:10
+#: data/gwget.schemas.in.h:11
 msgid "Number of downloads"
 msgstr "Number of downloads"
 
-#: data/gwget.schemas.in.h:11
+#: data/gwget.schemas.in.h:12
 msgid "Number of retries"
 msgstr "Number of retries"
 
-#: data/gwget.schemas.in.h:12
+#: data/gwget.schemas.in.h:13
 msgid "Open the file after download"
 msgstr "Open the file after download"
 
-#: data/gwget.schemas.in.h:13
+#: data/gwget.schemas.in.h:14
 msgid "Resume downloads at startup"
 msgstr "Resume downloads at startup"
 
-#: data/gwget.schemas.in.h:14
+#: data/gwget.schemas.in.h:15
 msgid "View download speed column"
 msgstr "View download speed column"
 
-#: data/gwget.schemas.in.h:15
+#: data/gwget.schemas.in.h:16
 msgid "View elapsed time column"
 msgstr "View elapsed time column"
 
-#: data/gwget.schemas.in.h:16
+#: data/gwget.schemas.in.h:17
 msgid "View percentage column"
 msgstr "View percentage column"
 
-#: data/gwget.schemas.in.h:17
+#: data/gwget.schemas.in.h:18
 msgid "View remaining time column"
 msgstr "View remaining time column"
 
-#: data/gwget.schemas.in.h:18
+#: data/gwget.schemas.in.h:19
 msgid "View toolbar"
 msgstr "View toolbar"
 
-#: data/gwget.schemas.in.h:19
+#: data/gwget.schemas.in.h:20
 msgid "View total size column"
 msgstr "View total size column"
-
-#: data/gwget.schemas.in.h:20
-msgid ""
-"When new download it is added, ask for where to save in. If false, save "
-"always in default directory without asking the user."
-msgstr ""
-"When new download it is added, ask for where to save in. If false, save "
-"always in default directory without asking the user."
 
 #: data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
