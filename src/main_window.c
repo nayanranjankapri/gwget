@@ -182,6 +182,11 @@ gwget_get_defaults_from_gconf(void)
 		gconf_client_set_string (gconf_client, "/apps/gwget2/download_dir", g_strdup(g_get_home_dir()), NULL);
 	}
 
+	if (!gwget_pref.network_mode) {
+		gwget_pref.network_mode = g_strdup("direct");
+		gconf_client_set_string (gconf_client, "/apps/gwget2/network_mode", "direct", NULL);
+	}
+
 	/* Put in the list of save_in_paths (used by new dialog window) the initial download directory */
 	save_in_paths = g_list_append (save_in_paths, gwget_pref.download_dir);
 		

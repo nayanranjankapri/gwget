@@ -1,3 +1,8 @@
+2005-01-24  David Sedeño <david@alderia.com>
+
+	* src/main_window.c (gwget_get_defaults_from_gconf): Set network_mode
+	if nothing it's set in gconf.
+
 2005-01-20  David Sedeño <david@alderia.com>
 
 	* src/main.c: Gnome session support. Patch from Ivan Yosifov
