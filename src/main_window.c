@@ -382,7 +382,7 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 			new_download(gwgetdata);
 			gwget_data_start_download(gwgetdata);
 		} else {
-			run_dialog(_("Error starting the download"),_("There is a unexpected error starting the download"));
+			run_dialog(_("Error starting the download"), _("There was an unexpected error starting the download"));
 		}
 		gtk_drag_finish(context, TRUE, FALSE, time);
 	} else 	{

@@ -1,5 +1,10 @@
 2005-01-03  David Sedeño <david@alderia.com>
 
+	* src/main_window.c (on_treeview_drag_received): Correct message
+	string. Fix bug #162801.
+
+2005-01-03  David Sedeño <david@alderia.com>
+
 	* data/gwget.schemas.in: Don't use abbreviations. Fixed bug #162799
 	Corrected column titles. Fix bug #162800
 	
