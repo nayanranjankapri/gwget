@@ -209,9 +209,7 @@ msgstr "Tamaño actual"
 
 #: data/preferences.glade.h:13
 msgid "Download Speed"
-msgstr ""
-"Descarga completa\n"
-"(%s)"
+msgstr "Velocidad de descarga"
 
 #: data/preferences.glade.h:14
 msgid "Download page requisites"
