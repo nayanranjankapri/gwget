@@ -48,7 +48,6 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	window = glade_xml_get_widget(xml_new,"new_window");
 	url_entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
 	save_in_entry=GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
-	gtk_widget_hide(window);
 	
 	url=  (gchar *)(gtk_entry_get_text(GTK_ENTRY(url_entry)));
 	
@@ -63,12 +62,38 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 		if (!strcmp(save_in,"") && !gwget_pref.download_dir) {
 			save_in=g_strdup(getenv("HOME"));
 		}
-	
-		gwgetdata = gwget_data_create(url,save_in);
-		gwget_data_add_download(gwgetdata);
-		gwget_data_start_download(gwgetdata);
-		g_free(save_in);		
+
+		if (check_url_already_exists(url)) {
+			run_dialog_information(_("Unable to add this download"),_("This download is already added"));			
+		} else {
+			gwgetdata = gwget_data_create(url,save_in);
+			gwget_data_add_download(gwgetdata);
+			gwget_data_start_download(gwgetdata);
+			gtk_widget_hide(window);
+			g_free(save_in);
+		}			
 	}
+
+}
+
+gboolean check_url_already_exists(gchar *checkurl)
+{
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length,i;
+	gchar *url;
+	
+	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+	gtk_tree_model_get_iter_root(model,&iter);
+	for (i=0;i<length;i++) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model),url);
+		if (!strcmp(url, checkurl)) {
+			return TRUE;
+		}
+		gtk_tree_model_iter_next(model,&iter);
+	}
+	return FALSE;
 }
 
 void 
@@ -116,7 +141,7 @@ create_new_window(void)
 
 	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
-	if(!check_url( "http://", url ) && !check_url( "ftp://", url))
+	if ( (url!=NULL) && !check_url( "http://", url ) && !check_url( "ftp://", url))
 		url = "";
 	
 	gtk_entry_set_text(GTK_ENTRY(entry),url);
@@ -136,11 +161,11 @@ on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 	GtkWidget *filesel,*save_in_entry;
 	
 	filesel = gtk_file_chooser_dialog_new  (_("Select Folder"),
-											NULL,
-											GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-											GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-				      						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
-											NULL);
+						NULL,
+						GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
+						GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
+						NULL);
 	
 	save_in_entry = glade_xml_get_widget(xml_new,"save_in_entry");
 	if (gtk_dialog_run (GTK_DIALOG (filesel)) == GTK_RESPONSE_ACCEPT) {

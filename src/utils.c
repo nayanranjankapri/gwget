@@ -37,3 +37,20 @@ run_dialog(gchar *title, gchar *msg)
 	gtk_widget_hide(GTK_WIDGET(dialog));
 	return response;
 }
+
+gint 
+run_dialog_information(gchar *title, gchar *msg)
+{
+	GtkWidget *dialog;
+	gchar *mark;
+	gint response;
+	
+	dialog = glade_xml_get_widget(xml,"dialog3");
+	mark=g_strdup_printf("<span size=\"large\" weight=\"bold\">%s</span>",title);
+	gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml,"title_label")),mark);
+	gtk_label_set_text(GTK_LABEL(glade_xml_get_widget(xml,"msg_label")),msg);
+	
+	response=gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_widget_hide(GTK_WIDGET(dialog));
+	return response;
+}

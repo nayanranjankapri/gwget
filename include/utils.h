@@ -21,6 +21,8 @@
 
 
 gint run_dialog(gchar *title, gchar *msg);
+gint run_dialog_information(gchar *title, gchar *msg);
+
 
 
 #endif

@@ -1,3 +1,14 @@
+2004-11-11 David Sedeño <david@alderia.com>
+
+	Patch from: Julien Cegarra <JulienC@psychologie-fr.org>
+
+	* gwget.glade: Added dialog3 (information dialog)
+	* src/utils.c: Added run_dialog_information to display information
+	dialog using dialog3
+	* src/new_window.c: Added check_url_already_exits 
+	* src/new_window.c (on_ok_button_clicked): Call check_url_already_exists
+	before accepting a new download
+
 2004-11-11  David Sedeño <david@alderia.com>
 
 	Proxy support, see http://bugzilla.gnome.org/show_bug.cgi?id=157462. 
