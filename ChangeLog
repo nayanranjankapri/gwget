@@ -1,3 +1,8 @@
+2004-12-24 David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (on_boton_pref_clicked): Check if there are
+	download_dir in pref.
+
 2004-12-16  Marcel Telka  <marcel@telka.sk>
 
 	* configure.in (ALL_LINGUAS): Added sk.
