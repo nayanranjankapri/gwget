@@ -1,8 +1,20 @@
-- Accept urls from the command line. This option it's more useful if gwget could detect if another instance of gwget it's already running and add the download to the current gwget (as gedit do for text file). Read gedit source for ideas.
 - Put more wget options in preferences window.
 - Epiphany extension. I have implemented the skeleton (not yet committed to cvs).
+- Write documentation.
+- Support gnome-session
+- Proxy support, global Gnome proxy and manual proxy. 
+- User / Password for ftp (with gnome-keyring integration? )
+- Clean the popup menu. Currently there are too much options.
+- gwget.schema for Gconf.
+- Downloads history.
+- Maximun number of concurrent downloads.
+- Shutdown internet connection after last download have completed.
+
 
 Done:
+- Accept urls from the command line. This option it's more useful if gwget could detect if another instance of gwget it's already running and add the download to the current gwget (as gedit do for text file). Read gedit source for ideas. 
+
+
 - Make it remember if you want or don't want a Toolbar (Done in 0.11).
 - Make it possible to choose what columns to have (Done in 0.11)
 - Drag&Drop Support (Done)
