@@ -139,8 +139,8 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 	static GtkWidget *about = NULL;
 	GdkPixbuf *pixbuf = NULL;
 	gchar *logo_file;
-	gchar *copy_text = "GNU GPL 2.0";
-	gchar *about_text = _("A download manager for gnome2 using wget as backend.");
+	gchar *copy_text = "Copyright © 2004 David Sedeño Fernández";
+	gchar *about_text = _("Download Manager for Gnome2.");
 	gchar *authors[] = { 
 			"David Sedeño Fernández <david@alderia.com>",
 			NULL
