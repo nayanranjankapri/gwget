@@ -103,6 +103,6 @@ GwgetData* gwget_data_get_selected(void);
 void gwget_data_free(gpointer data);
 void gwget_data_stop_download(GwgetData *data);
 void gwget_data_set_filename_from_url(GwgetData *gwgetdata, gchar *url);
-
+void gwget_data_add_download(GwgetData *gwgetdata);
 
 #endif

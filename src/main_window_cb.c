@@ -30,7 +30,6 @@
 #include "utils.h"
 #include "systray.h"
 
-
 void 
 on_stop_button_clicked (GtkWidget *widget, gpointer data) 
 {
@@ -237,7 +236,6 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	gchar *xml_file = NULL;
 	GtkWidget *window = NULL,*entry=NULL, *checkbutton=NULL;
 	
-	
 	if (!xml_pref) {
 		xml_file=g_build_filename(DATADIR,"preferences.glade",NULL);
 		xml_pref = glade_xml_new(xml_file,NULL,NULL);
@@ -257,6 +255,7 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.no_create_directories);
+
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"follow_relative");
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.follow_relative);
 
@@ -289,7 +288,7 @@ on_pref_cancel_button_clicked(GtkWidget *widget,gpointer data)
 	pref_window = glade_xml_get_widget(xml_pref,"pref_window");
 	gtk_widget_hide(pref_window);
 }
-	
+
 void 
 on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 {
@@ -706,5 +705,35 @@ on_limit_speed_check_toggled (GtkWidget *widget, gpointer data)
 		gtk_widget_set_sensitive (GTK_WIDGET(limit_speed_spin), TRUE);
 	} else {
 		gtk_widget_set_sensitive (GTK_WIDGET(limit_speed_spin), FALSE);
+	}
+}
+
+void
+check_download_in_progress(void)
+{
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length,i;
+	gchar *url;
+	gboolean inprogress;
+
+	length = gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model), NULL);
+	gtk_tree_model_get_iter_root(model, &iter);
+
+	inprogress = FALSE;
+	for (i=0;i<length;i++) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model), url);
+			
+		if (gwgetdata->state==DL_RETRIEVING) {
+			inprogress = TRUE;
+			break;
+		}
+	}
+
+	if (inprogress==TRUE) {
+		set_icon_downloading();
+	} else {
+		set_icon_idle();
 	}
 }

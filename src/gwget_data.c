@@ -188,6 +188,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 					FILENAME_COLUMN,gwgetdata->filename,-1);
 	}
 	gwget_data_update_statistics_ui(gwgetdata);
+	check_download_in_progress();
 }
 
 static void

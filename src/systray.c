@@ -7,7 +7,7 @@
 #include "systray.h"
 #include "main_window_cb.h"
 
-static GtkWidget *systray_set_image(void);
+static GdkPixbuf *systray_load_icon (const gchar *filename);
 static GdkPixbuf *systray_pixbuf_new_from_file(const gchar *filename);
 static void systray_embedded(GtkWidget *widget, gpointer data);
 static void systray_destroyed(GtkWidget *widget, gpointer data);
@@ -16,22 +16,30 @@ static gboolean systray_generate_menu(GdkEventButton *event);
 static void systray_add_download(gpointer data1, gpointer data2);
 
 
+
+static GdkPixbuf *icon_idle, *icon_downloading;
+static GtkWidget *image_icon;
+
 void 
 systray_load(void) 
 {
-	GtkWidget *eventbox,*image;
-		
+	GtkWidget *eventbox;
+	
 	/* tray icon */
+	image_icon = gtk_image_new();
 	tray_icon = egg_tray_icon_new("gwget");
 	eventbox = gtk_event_box_new();
 	tray_tooltip = gtk_tooltips_new();
+
+	/* icon list */
+	icon_idle = systray_load_icon("waiting32x32.xpm");
+	icon_downloading = systray_load_icon("download32x32.xpm");
 	
-	
-	image=systray_set_image();
-	
-	gtk_container_add(GTK_CONTAINER(eventbox),image);
-	gtk_container_add(GTK_CONTAINER(tray_icon),eventbox);
-	
+	set_icon_idle();
+
+	gtk_container_add(GTK_CONTAINER(eventbox), GTK_WIDGET(image_icon));
+	gtk_container_add(GTK_CONTAINER(tray_icon), eventbox);
+
 	gtk_widget_show_all(GTK_WIDGET(tray_icon));	
 	g_signal_connect(G_OBJECT(tray_icon), "embedded", G_CALLBACK(systray_embedded), NULL);
 	g_signal_connect(G_OBJECT(tray_icon), "destroy", G_CALLBACK(systray_destroyed), NULL);
@@ -48,8 +56,8 @@ systray_load(void)
 	egg_tray_icon_send_message(tray_icon,1000,"gwget",7);
 }
 
-static GtkWidget *
-systray_set_image(void) 
+static
+GdkPixbuf *systray_load_icon (const gchar *filename)
 {
 	gint w = 0;
   	gint h = 0;
@@ -57,31 +65,25 @@ systray_set_image(void)
   	GdkPixbuf *pb = NULL;
   	GdkPixbuf *pb_scaled = NULL;
 	gchar *file;
-	GtkWidget *image;
 	
-	file = g_strdup_printf("%s/%s",DATADIR,"gwget.xpm");
+	file = g_strdup_printf("%s/%s", DATADIR, filename);
 	
 	if((pb = systray_pixbuf_new_from_file(file)) == NULL) {
-		g_warning("systray_set_image: pixbuf was NULL\n");
+		g_warning("systray_load_icon: pixbuf was NULL\n");
 		return NULL;
 	}
-    
-	image = gtk_image_new();
-  	/* get size */
+
+ 	/* get size */
 	gtk_icon_size_lookup(GTK_ICON_SIZE_LARGE_TOOLBAR, &w, &h);
 
 	/* scale the image */
 	pb_scaled = gdk_pixbuf_scale_simple(pb, w, h, GDK_INTERP_BILINEAR);
 
-	/* set the image */
-	gtk_image_set_from_pixbuf(GTK_IMAGE(image), pb_scaled);
-
 	/* clean up */
  	g_object_unref(G_OBJECT(pb));
-
-	return image;
+	
+return pb_scaled;
 }
-
 
 static GdkPixbuf *
 systray_pixbuf_new_from_file(const gchar *filename)
@@ -208,4 +210,14 @@ systray_add_download(gpointer data1,gpointer data2)
 	item = gtk_menu_item_new_with_label(title);
 	gtk_menu_shell_append(GTK_MENU_SHELL(menu),item);
 	
+}
+void
+set_icon_downloading()
+{
+	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_downloading);
+}
+void
+set_icon_idle()
+{
+	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_idle);
 }

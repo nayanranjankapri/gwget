@@ -63,4 +63,6 @@ void on_check_down_speed_toggled(GtkWidget *widget, gpointer data);
 /* Preferences */
 void on_limit_speed_check_toggled (GtkWidget *widget, gpointer data);
 
+void check_download_in_progress(void);
+
 #endif

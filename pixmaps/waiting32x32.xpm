@@ -1,5 +1,5 @@
 /* XPM */
-static char * gwget_xpm[] = {
+static char * waiting32x32_xpm[] = {
 "32 32 459 2",
 "  	c None",
 ". 	c #1A252E",

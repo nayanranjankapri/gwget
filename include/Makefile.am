@@ -6,15 +6,3 @@
 
 gwget2_includedir = $(pkgincludedir)
 
-gwget2_include_DATA = \
-	main_window.h\
-	main_window_cb.h\
-	gwget_data.h\
-	wget-log.h\
-	utils.h\
-	custom-cell-renderer-progressbar.h\
-	new_window.h\
-	eggtrayicon.h\
-	systray.h
-
-EXTRA_DIST = $(gwget2_include_DATA)

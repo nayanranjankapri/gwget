@@ -1,4 +1,28 @@
-2004-09-19  David SedeÃ±o <david@alderia.com>
+2004-09-21  David Sedeño <david@alderia.com>
+
+	* include/Makefile.am: Remove install of include files (me).
+	* include/gwget_data.h: Add gwget_data_add_download (me).
+	* include/main_window_cb.h: Add check_download_in_progress 
+	(Julien Cegarra).
+	* include/systray.h: Add set_icon_downloading and set_icon_idle
+	(Julien Cegarra)
+	* gwget_data.c (gwget_data_update_statistics):
+	check_download_in_progress (Julien Cegarra).
+	* main_window_cb.c (check_download_in_progress): New function that
+	checks if there are any download in progress and set the icon type 
+	(Julien Cegarra).
+	* systray.c (systray_load): Add a eventbox to the systray icon.
+	(systray_load_icon): New function that returns a gdkpixbuf image
+	based in the filename.
+	(set_icon_downloading): New function that set the icon of type
+	downloading.
+	(set_icon_idle): New function that set the icon idle.
+	All of this by Julien Cegarra.
+	* pixmaps/gwget.xpm: Change icon (Julien Cegarra).
+	* pixmaps/download32x32.xpm: New file (Julien Cegarra).
+	* pixmaps/waiting32x32.xpm: New file (Julien Cegarra).
+	
+2004-09-19  David Sedeño <david@alderia.com>
 
 	* src/gwget_data.c (gwget_data_add_download): New function
 	  that get a gwgetdata struct and add to the main window.
@@ -7,7 +31,7 @@
 	* src/new_window.c (on_ok_button_clicked): Call
 	gwget_data_add_download instead of do it ourself in this function.
 
-2004-09-19  David SedeÃ±o <david@alderia.com>
+2004-09-19  David Sedeño <david@alderia.com>
 
 	* src/main.c: change Activation_ID. Add function to get data from 
 	  command line. Send the urls list to the bonobo server.
@@ -16,12 +40,12 @@
 	passed from corba clients
 	* src/GNOME_Gwget.idl: Added openURLSList function
 
-2004-09-13  David SedeÃ±o <david@alderia.com>
+2004-09-13  David Sedeño <david@alderia.com>
 
 	* data/preferences.glade: connect delete_event with
 	  on_pref_cancel_button_clicked (Julien Cegarra)
 
-2004-09-11  David SedeÃ±o <david@alderia.com>
+2004-09-11  David Sedeño <david@alderia.com>
 
 	* src/main.c: Check instance of bonobo
 	* src/gwget-application.[ch]: bonobo gwget application
@@ -30,39 +54,39 @@
 	  compilation.
 	* configure.in: Check Bonobo stuff
 
-2004-09-11  David SedeÃ±o <david@alderia.com>
+2004-09-11  David Sedeño <david@alderia.com>
 
 	* configure.in: Version 0.14.1
 
-2004-09-11  David SedeÃ±o <david@alderia.com>
+2004-09-11  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_boton_pref_clicked):
 	Apply state of limit_speed_check and resume_at_start
 	(Julien.Cegarra).
 
-2004-09-10  David SedeÃ±o <david@alderia.com>
+2004-09-10  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_treeview1_button_press_event):
 	  return False if can open the default application in double click.
 
-2004-09-08  David SedeÃ±o <david@alderia.com>
+2004-09-08  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (new_download):
 	  Dont free mime var. This fix a crash.
 	  Dont add the download to the download list 
 	  (already added).
 
-2004-09-05  David SedeÃ±o <david@alderia.com>
+2004-09-05  David Sedeño <david@alderia.com>
 
 	* src/main_window.c (on_treeview_drag_received): 
 	  Fix compilation build with gcc 2.95 (Jens Granseuer).
 
-2004-08-31  David SedeÃ±o <david@alderia.com>
+2004-08-31  David Sedeño <david@alderia.com>
 
 	* pixmaps/Makefile.am: Fix icon installation.
 	* gwget.desktop.in: Icon gwget.png instead of gwget/gwget.png.
  
-2004-08-29  David SedeÃ±o <david@alderia.com>
+2004-08-29  David Sedeño <david@alderia.com>
 
 	* configure.in: Added fr to ALL_LINGUAS.
 
@@ -74,7 +98,7 @@
 
 	* configure.in: Added cs to ALL_LINGUAS.
 
-2004-08-20  David SedeÃ±o <david@alderia.com>
+2004-08-20  David Sedeño <david@alderia.com>
 
 	* configure.in: Version 0.14
 
@@ -83,23 +107,23 @@
 	* configure.in: Added pt_BR to ALL_LINGUAS.
 	* ChangeLog: Converted from ISO-8859 to UTF-8.
 
-2004-08-17  David SedeÃ±o <david@alderia.com>
+2004-08-17  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: some UI fixes. 
 	* src/utils.c (run_dialog): Set title in bold.
 	Thanks to Pedro Villavicencio for both patches.
 
-2004-08-16  David SedeÃ±o <david@alderia.com>
+2004-08-16  David Sedeño <david@alderia.com>
 
 	* data/preferences.glade: Change "No create directories" 
 	 to "Don't create directories"
 
-2004-08-14  David SedeÃ±o <david@alderia.com>
+2004-08-14  David Sedeño <david@alderia.com>
 
 	* src/systray.c (systray_clicked): Hide main window
 	  when clicked if main window is visble.
 
-2004-08-14  David SedeÃ±o <david@alderia.com>
+2004-08-14  David Sedeño <david@alderia.com>
 
 	* data/about.glade, data/gwget.glade, 
 	  data/preferences.glade: Fix some translations
@@ -116,14 +140,14 @@
 2004-08-13  Amanpreet Singh Alam <aalam@redhat.com>
 
 	* configure.in: pa(Punjabi) locale is added
-2004-08-06  David SedeÃ±o <david@alderia.com>
+2004-08-06  David Sedeño <david@alderia.com>
 
 	* src/main_window.c: include <locale.h> to compile
 	  in Freebsd systems. Fix #149378.
 	  (gwget_get_defaults_from_gconf): Put initial state to 
 	  not running.
 
-2004-08-05  David SedeÃ±o <david@alderia.com>
+2004-08-05  David Sedeño <david@alderia.com>
 	
 	* src/main_window_cb.c: Fix wrong gconf type for max_speed.
 	  Fixed #149038. Thanks to Baris Cicek. 
@@ -135,7 +159,7 @@
 	
 	* data/preferences.glade: Fixed a typo
 
-2004-07-30  David SedeÃ±o <david@alderia.com>
+2004-07-30  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Fix typo in popup window
 	* configure.in: update version.
@@ -154,14 +178,14 @@
 	  sensitive the spin button of the limit speed.
 	* data/preferences.glade: Added limit speed option
 
-2004-07-28  David SedeÃ±o <david@alderia.com>
+2004-07-28  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Modify the main window title.
 	* data/preferences: Added limit speed option.
 	* include/main_window_cb.h: 
 	  on_limit_speed_check_toggled added.
 
-2004-07-22  David SedeÃ±o <david@alderia.com>
+2004-07-22  David Sedeño <david@alderia.com>
 
 	* include/gwget_data.h: 
 	  Added gwget_data_set_filename_from_url.
@@ -175,12 +199,12 @@
 	  Show recursivity options dialog with html, htm, php and
 	  asp files.
 
-2004-07-21  David SedeÃ±o <david@alderia.com>
+2004-07-21  David Sedeño <david@alderia.com>
 	
 	* src/main_window.c (create_model): Fix order of 
 	  creation of the file type column.
 
-2004-07-20  David SedeÃ±o <david@alderia.com>
+2004-07-20  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: Added drag types.
 	  Fixed IMAGE_COLUMN position.
@@ -195,7 +219,7 @@
 	* data/preferences.glade: Added check box for the file type
 	  column.
 
-2004-07-13  David SedeÃ±o <david@alderia.com>
+2004-07-13  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_about1_activate): 
 	  Some cosmetic change to about dialog.
@@ -203,7 +227,7 @@
 	  data/new_download.glade: UI Fixes. Thanks
 	  to Miroslav Strugarevic.
 
-2004-07-10  David SedeÃ±o <david@alderia.com>
+2004-07-10  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_browse_save_in_button_clicked):
 	Use filechooser. Removed callbacks from the old fileselection.
@@ -212,14 +236,14 @@
 	* data/newdownload.glade data/preferences.glade: 
 	Removed fileselections.
 
-2004-07-09  David SedeÃ±o <david@alderia.com>
+2004-07-09  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: added IMAGE_COLUMN
 	* src/main_window_cb.c (new_download): 
 	Put the icon of the file mime type in the column.
 	* src/main_window.c (add_column): Create the image column.
 
-2004-07-03  David SedeÃ±o <david@alderia.com>
+2004-07-03  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: downloads Glist
 	* src/main_window_cb.c (on_about1_activate): 
@@ -237,23 +261,23 @@
 	* po/es.po: Updated
 	* data/newdonwload.glade: window icon
 
-2004-06-25  David SedeÃ±o <david@alderia.com>
+2004-06-25  David Sedeño <david@alderia.com>
 
 	* include/main_window.h: Added tray_tooltip var.
 	* src/gwget_data.c (gwget_data_update_statistics_ui): Set
 	  tray_icon tooltip if download completed.
 	* src/systray.c: Create the tray_tooltip
 
-2004-06-21  David SedeÃ±o <david@alderia.com>
+2004-06-21  David Sedeño <david@alderia.com>
 
 	* configure.in: Added tr to ALL_LINGUAS
 	* po/tr.po: Added turkish translation (Thanks to Mark R. Pariente)
 
-2004-06-13  David SedeÃ±o <david@alderia.com>
+2004-06-13  David Sedeño <david@alderia.com>
                                                                                 
 	* systray.c (systray_generate_menu): Add a separator item.
 
-2004-06-12  David SedeÃ±o <david@alderia.com>
+2004-06-12  David Sedeño <david@alderia.com>
                                                                                 
 	* data/newdownload.glade: Changed name of callback of ok button.
 	* include/gwget_data.h: Added docked to Preferences struct.
@@ -262,7 +286,7 @@
 	* src/main_window.c: call gwget_quit on delete event if not docked.
 	* src/main_window_cb.c (on_quit1_activate): call gwget_quit.
 
-2004-06-12  David SedeÃ±o <david@alderia.com>
+2004-06-12  David Sedeño <david@alderia.com>
                                                                                 
 	* systray.c, main_window.c:exit on delete event if not docked.
                                                                                 
