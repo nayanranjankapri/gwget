@@ -1,3 +1,13 @@
+2005-02-21  Ivan Yosifov <ivan@yosifov.net>
+
+	* src/main_window.c (gwget_get_defaults_from_gconf) : 
+	Currently if a download completes and the user simply takes
+	the downloaded file and moves it, the next time gwget is started the
+	download will restart. In gwget_get_defaults_from_gconf we
+	stat the destination file before adding a completed download
+	to the list , and if the stat fails - we forget about the
+	download.
+		
 2005-02-21  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Set toolbar buttons important.

@@ -18,6 +18,10 @@
 #include <glade/glade.h>
 #include <gnome.h>
 #include <gconf/gconf-client.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include "main_window.h"
 #include "main_window_cb.h"
 #include "gwget_data.h"
@@ -67,7 +71,10 @@ main_window(void)
 	gtk_tree_view_set_model(GTK_TREE_VIEW(treev),GTK_TREE_MODEL(model));
 	select = gtk_tree_view_get_selection (GTK_TREE_VIEW (treev));
 	gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
-	
+
+	/*
+	 * Update window size in gconf on resize 
+	 */
 	g_signal_connect(GTK_WIDGET(window),
 			 "configure-event",
 			 G_CALLBACK(gwget_remember_window_size_and_position),
@@ -77,8 +84,10 @@ main_window(void)
 	add_columns (GTK_TREE_VIEW (treev));
 	
 	gconf_client = gconf_client_get_default();
-	gconf_client_add_dir (gconf_client, "/apps/gwget2", GCONF_CLIENT_PRELOAD_NONE,
-                        NULL);
+	gconf_client_add_dir (gconf_client, 
+			      "/apps/gwget2", 
+			      GCONF_CLIENT_PRELOAD_NONE,
+                              NULL);
 	
 	/* gwget_pref.download_dir=NULL; */
 	gwget_get_defaults_from_gconf();
@@ -149,6 +158,35 @@ main_window(void)
 		
 }
 
+gboolean
+gwget_destination_file_exists(int i)
+{
+	gchar *key; 
+	gchar *dir;
+	gint  iDirL;
+	gchar *file;
+	gint  iFileL;
+	gchar *path_name;
+	gint  iPathNameL;
+	struct stat s;
+
+	key = g_strdup_printf("/apps/gwget2/downloads_data/%d/dir",i);
+	dir = gconf_client_get_string(gconf_client,key,NULL);	
+	iDirL = strlen(dir) + 1;
+	
+	key = g_strdup_printf("/apps/gwget2/downloads_data/%d/filename",i);
+	file = gconf_client_get_string(gconf_client,key,NULL);	
+	iFileL = strlen(file) + 1;
+
+	iPathNameL = iDirL + iFileL + 1;
+	path_name = g_malloc0(sizeof(gchar)*iPathNameL);
+	strcat(path_name,dir);
+	strcat(path_name,file);
+
+	//g_print("%s %d\n",path_name, g_stat(path_name,&s));	
+	return ( g_stat(path_name,&s) == 0 );
+}
+
 void 
 gwget_get_defaults_from_gconf(void)
 {
@@ -215,17 +253,47 @@ gwget_get_defaults_from_gconf(void)
 		} else { 
 			gwget_data_set_total_size (data, 0);
 		}
-		
-		new_download(data);
+
+		if ( state != DL_COMPLETED ) {
+			/*
+			 * If the download is not completed - add it , no questions
+			 */	
+			new_download(data);
+		} else {
+			/* 
+			 * If the download is completed , then:
+			 * if the file we want to write to is missing , the user
+			 * has (re)moved it , so quietly forget download , otherwise
+			 * add it
+		 	 */
+			if ( !gwget_destination_file_exists(i) ) {
+				/*
+				 * We do not add download, the gwget_remember_downloads
+				 * call after the cycle will flush gconf
+				 */
+				continue;
+			} else {
+				new_download(data);
+				gwget_data_set_state(data,DL_COMPLETED);
+				continue;
+			}
+		}
+		    		
 		gwget_data_set_state(data,DL_NOT_RUNNING); 
 		if (gwget_pref.resume_at_start && data->state!=DL_COMPLETED) {
 			gwget_data_start_download(data);
 		} 
 		/* FIXME: put all the cases (error, retriving...) */
+		
 		if (state==DL_COMPLETED) {
 			gwget_data_set_state(data, state);
 		}
 	}
+	/*
+	 * We may have altered the download list so we sync gconf
+	 */
+	gwget_remember_downloads();
+	
 	show_prefered_columns();
 
 	/* Default width and height */

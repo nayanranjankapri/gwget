@@ -448,6 +448,9 @@ gwget_data_start_download(GwgetData *gwgetdata)
                         	     gwgetdata);
 	}
 	
+	/*
+	 * Update download list in gconf
+	 */
 	gwget_remember_downloads();
 }
 
