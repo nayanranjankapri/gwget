@@ -1,0 +1,327 @@
+# translation of gwget2.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gwget2 package.
+# <>, 2003.
+#  <>, 2003.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget2 0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: 2002-01-30 21:36+0100\n"
+"Last-Translator: David Sedeño Fernández <david@alderia.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
+"\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr "Fichero"
+
+#: src/main_window.c:233
+msgid "State"
+msgstr "Estado"
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr "Tamaño actual"
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr "Tamaño Total"
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr "Tiempo de descarga"
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr "Tiempo restante"
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr "Velocidad"
+
+#: src/main_window_cb.c:108
+#, fuzzy
+msgid "Error in download"
+msgstr "Nueva descarga"
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr ""
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr ""
+
+#: src/main_window_cb.c:212
+#, fuzzy
+msgid "Cancel current downloads?"
+msgstr "¿ Cancelar las descargas actuales ?"
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr "Hay descargas activas. ¿Desea cancelarlas?"
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr "Agente de descarga para gnome2 usando wget."
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr "David Sedeño <david@alderia.com>"
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr "Gwget2"
+
+#: src/main_window_cb.c:523
+#, fuzzy, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "¿ Está seguro de cancelar la descarga ? (Url: %s)"
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr "¿ Cancelar descarga ?"
+
+#: src/main_window_cb.c:546
+msgid "Remove completed"
+msgstr "Borrar descargas completadas"
+
+#: src/main_window_cb.c:546
+msgid "Really remove completed downloads from the list?"
+msgstr "¿ Realmente desea borrar las descargas completas ?"
+
+#: src/main_window_cb.c:576
+msgid "Remove not running"
+msgstr "Barrar las descargas que no están corriendo"
+
+#: src/main_window_cb.c:576
+#, fuzzy
+msgid "Really remove not running downloads from the list?"
+msgstr "¿ Desea borrar las descargas que no están corriendo ?"
+
+#: src/main_window_cb.c:606
+msgid "Remove all"
+msgstr "Borrar todas las descargas"
+
+#: src/main_window_cb.c:606
+#, fuzzy
+msgid "Really remove all downloads from the list?"
+msgstr "¿ Borrar todas las descargas ?"
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr "parado"
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr "No iniciado"
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr "No ejecutado"
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr "No conectado"
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr "Conectado"
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr "Descargando"
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr "Completado"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr ""
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr "Error de socket"
+
+#: src/wget-log.c:96
+#, fuzzy
+msgid "Connection refused\n"
+msgstr "Conexión rechazada"
+
+#: src/wget-log.c:99
+#, fuzzy
+msgid "No route to host"
+msgstr "Sin ruta hasta el host"
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr "Conexión reusada\n"
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr "Host no encontrado\n"
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Protocolo no soportado - necesita wget >= 1.7 para https:\n"
+
+#: src/wget-log.c:112
+#, fuzzy
+msgid "Refusing to truncate existing file"
+msgstr "Reusando a truncar fichero existente\n"
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr ""
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr "Fichero no encontrado"
+
+#: src/wget-log.c:142
+#, fuzzy
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"No se puede continuar la descarga, fichero local entra en conflicto con "
+"fichero remoto.\n"
+
+#: src/wget-log.c:190
+#, fuzzy
+msgid "Can't write to target directory"
+msgstr "No puedo escribir en directorio destino:\n"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr ""
+
+#: src/custom-cell-renderer-progressbar.c:99
+#, fuzzy
+msgid "Failed"
+msgstr "parado"
+
+#~ msgid "Recurse into the Url ?"
+#~ msgstr "¿ Activar recursividad ?"
+
+#~ msgid ""
+#~ "The url it's not a file. \n"
+#~ " Do you like to recurse into the url ?\n"
+#~ "Otherwise only the index file will be downloaded."
+#~ msgstr ""
+#~ "La url no es un fichero. \n"
+#~ "¿ Desea activar la recursivad ?\n"
+#~ "En otro caso solo el fichero índice será descargado."
+
+#~ msgid "_New"
+#~ msgstr "_Nuevo"
+
+#~ msgid "Pause download"
+#~ msgstr "Detener descarga"
+
+#~ msgid "Pause"
+#~ msgstr "Pausa"
+
+#~ msgid "Continue"
+#~ msgstr "Continuar"
+
+#~ msgid "Remove completed downloads from list"
+#~ msgstr "Borrar descargas completadas"
+
+#~ msgid "Stop and delete downloaded file"
+#~ msgstr "Parar y borrar el fichero descargado"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "Question"
+#~ msgstr "Pregunta"
+
+#~ msgid "New Download"
+#~ msgstr "Nueva descarga"
+
+#~ msgid "URL: "
+#~ msgstr "Url: "
+
+#~ msgid "Save in:"
+#~ msgstr "Grabar en:"
+
+#~ msgid "Select target directory"
+#~ msgstr "Seleccione directorio destino"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferencias"
+
+#~ msgid "Save in: "
+#~ msgstr "Grabar en: "
+
+#~ msgid "Default directory for downloaded data"
+#~ msgstr "Directorio por defecto para las descargas"
+
+#~ msgid "Number of retries: "
+#~ msgstr "Número de intentos: "
+
+#, fuzzy
+#~ msgid "Continue downloads on startup?"
+#~ msgstr "¿ Continuar descargas al iniciar ?"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Download page requisites"
+#~ msgstr "Descargar requisitos de la pagina"
+
+#~ msgid "Do not create a hierarchy of directories when retrieving recursively"
+#~ msgstr "No crear jerarquia de directorios cuando se descarga recursivamente"
+
+#~ msgid "No create directories"
+#~ msgstr "No crear directorios"
+
+#~ msgid "Maximum depth level: "
+#~ msgstr "Maximo nivel de profundidad:"
+
+#~ msgid "Follow relative links only"
+#~ msgstr "Seguir solo enlaces relativos"
+
+#~ msgid "Convert links"
+#~ msgstr "Convertir enlaces"
+
+#~ msgid "Recursivity"
+#~ msgstr "Recursividad"
+
+#~ msgid ""
+#~ "There are some downloads retriving information. Do you want to cancel it ?"
+#~ msgstr ""
+#~ "Hay algunas descargas descargando informaciÃ³n. Â¿ Desea cancelarlas ?"
+
+#~ msgid "Remove completed downloads"
+#~ msgstr "Borrar descargas completadas"
+
+#~ msgid "Are you sure to remove completed download from list?"
+#~ msgstr "Â¿ EstÃ¡ seguro de borrar las descargas completas de la lista ?"
+
+#~ msgid "Socket error when downloading URL:\n"
+#~ msgstr "Error de socket cuando descragaba URL:\n"
+
+#~ msgid "Host not found when downloading URL:\n"
+#~ msgstr "Host no encontrado cuando descargaba URL:\n"
+
+#~ msgid "Unknown error when downloading URL:\n"
+#~ msgstr "Error desconocido cuando descargaba URL:\n"
+
+#~ msgid "File not found when downloading URL:\n"
+#~ msgstr "Fichero no encontrado cuando descargaba URL:\n"

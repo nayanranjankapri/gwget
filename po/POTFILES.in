@@ -1,0 +1,19 @@
+# List of source files containing translatable strings.
+
+## Created by Anjuta - will be overwritten
+## If you don't want it to overwrite it,
+## 	Please disable it in the Anjuta project configuration
+
+# Source files
+src/main.c
+src/main_window.c
+src/main_window_cb.c
+src/gwget_data.c
+src/wget-log.c
+src/utils.c
+src/custom-cell-renderer-progressbar.c
+src/new_window.c
+src/eggtrayicon.c
+src/systray.c
+
+

@@ -1,0 +1,248 @@
+# Bulgarian translation of gwget2.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Filip Andonov <fandonov@iinf.bas.bg>, 2003.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: 2003-06-19 11:41+0100\n"
+"Last-Translator: Filip Andonov <fandonov@iinf.bas.bg>\n"
+"Language-Team: bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr "Име·на·файл"
+
+#: src/main_window.c:233
+msgid "State"
+msgstr "СТАТУС"
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr "Текущ·размер"
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr "Общ·размер"
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr "Процент"
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr "Изминало·време"
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr "Оставащо·време"
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr ""
+
+#: src/main_window_cb.c:108
+#, fuzzy
+msgid "Error in download"
+msgstr "Отказ·на·изтегляне?"
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr ""
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr ""
+
+#: src/main_window_cb.c:212
+#, fuzzy
+msgid "Cancel current downloads?"
+msgstr "Отказ·на·текущите·изтегляния?"
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr ""
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr "Filip Andonov <fandonov@iinf.bas.bg>"
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr ""
+
+#: src/main_window_cb.c:523
+#, fuzzy, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Сигурни·ли·сте,·че·искате·отказ·на·текущото·изтегляне?·(Url: %s)"
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr "Отказ·на·изтегляне?"
+
+#: src/main_window_cb.c:546
+#, fuzzy
+msgid "Remove completed"
+msgstr "Премахване·на·завършените·изтегляния"
+
+#: src/main_window_cb.c:546
+#, fuzzy
+msgid "Really remove completed downloads from the list?"
+msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
+
+#: src/main_window_cb.c:576
+#, fuzzy
+msgid "Remove not running"
+msgstr "Не·работи"
+
+#: src/main_window_cb.c:576
+#, fuzzy
+msgid "Really remove not running downloads from the list?"
+msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
+
+#: src/main_window_cb.c:606
+#, fuzzy
+msgid "Remove all"
+msgstr "Премахване·на·завършените·изтегляния"
+
+#: src/main_window_cb.c:606
+#, fuzzy
+msgid "Really remove all downloads from the list?"
+msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr ""
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr "Не·е·стартиран"
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr "Не·работи"
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr "Не·е·свързан"
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr "Свързан"
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr "Получава"
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr "Завършен"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr ""
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr ""
+
+#: src/wget-log.c:96
+#, fuzzy
+msgid "Connection refused\n"
+msgstr "Свързан"
+
+#: src/wget-log.c:99
+#, fuzzy
+msgid "No route to host"
+msgstr "Няма·път·до·хост:\n"
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr "Връзката·отказана·при·изтегляне·на·URL:\n"
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr ""
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Неподдържан·протокол·-·нуждаете·се·от·wget>=1.7·за·https:\n"
+
+#: src/wget-log.c:112
+#, fuzzy
+msgid "Refusing to truncate existing file"
+msgstr "Отказ·за·отрязване·на·текущия·файл\n"
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr ""
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr ""
+
+#: src/wget-log.c:142
+#, fuzzy
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"Не·е·възможно·продължаване·на·изтеглянето,"
+"·защото·локалният·файл·е·конфликтен·с·отдалечения:\n"
+
+#: src/wget-log.c:190
+#, fuzzy
+msgid "Can't write to target directory"
+msgstr "Записът·в·целевата·директория·е·немъзможен:\n"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr ""
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Pause download"
+#~ msgstr "Отказ·на·изтегляне?"
+
+#, fuzzy
+#~ msgid "Remove completed downloads from list"
+#~ msgstr "Премахване·на·завършените·изтегляния"
+
+#, fuzzy
+#~ msgid "New Download"
+#~ msgstr "Отказ·на·изтегляне?"
+
+#, fuzzy
+#~ msgid "Select target directory"
+#~ msgstr "Записът·в·целевата·директория·е·немъзможен:\n"
+
+#~ msgid ""
+#~ "There are some downloads retriving information. Do you want to cancel it ?"
+#~ msgstr "Някои·изтегляния·получават·информация.·Искате·ли·да·ги·откажете?"
+
+#~ msgid "Socket error when downloading URL:\n"
+#~ msgstr "Сокет·грешка·при·изтегляне·на·URL:\n"
+
+#~ msgid "Host not found when downloading URL:\n"
+#~ msgstr "Хостът·не·е·намерен·при·изтегляне·на·URL:\n"
+
+#~ msgid "Unknown error when downloading URL:\n"
+#~ msgstr "Неизвестна·грешка·при·изтегляне·на·URL:\n"
+
+#~ msgid "File not found when downloading URL:\n"
+#~ msgstr "Файлът·не·е·намерен·при·изтеглянето·на·URL:\n"

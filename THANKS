@@ -1,0 +1,4 @@
+If you see the code, there are parts that it's taken from the gtm project, 
+specially all the code for the fork of wget. In the original gwget, this part
+really sucks :), so I have take the code from gtm. So, thanks to gtm for this 
+piece of my program. 

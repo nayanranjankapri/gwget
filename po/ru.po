@@ -1,0 +1,312 @@
+# Translation of Wget2.pot to Russian.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Pavlo Bohmat <bohm@ukr.net>, 2004.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wget2-0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: 2004-02-19 12:53+0200\n"
+"Last-Translator: Pavlo Bohmat <bohm@ukr.net>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr "Имя файла"
+
+#: src/main_window.c:233
+msgid "State"
+msgstr "Состояние"
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr "Текущий размер"
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr "Общий размер"
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr "Процент"
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr "Прошло времени"
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr "Осталось времени"
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr "Скорость"
+
+#: src/main_window_cb.c:108
+#, fuzzy
+msgid "Error in download"
+msgstr "Новая закачка"
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr "Ошибка открытия файла"
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr "Невозможно открыть файл"
+
+#: src/main_window_cb.c:212
+msgid "Cancel current downloads?"
+msgstr "Отменить текущие закачки?"
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Осталась, по крайней мере, одна активная закачка. Отменить все запущенные "
+"передачи?"
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr "Менеджер закачек для Гном2, использующий движок wget'а."
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr "Павел и Алёна Богмат"
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr "Gwget2"
+
+#: src/main_window_cb.c:523
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Действительно отменить текущую закачку? (Url: %s)"
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr "Отменить закачку?"
+
+#: src/main_window_cb.c:546
+msgid "Remove completed"
+msgstr "Удалить завершённые"
+
+#: src/main_window_cb.c:546
+msgid "Really remove completed downloads from the list?"
+msgstr "Действительно удалить завершённые закачки из списка?"
+
+#: src/main_window_cb.c:576
+msgid "Remove not running"
+msgstr "Удалить не запуская"
+
+#: src/main_window_cb.c:576
+msgid "Really remove not running downloads from the list?"
+msgstr "Действительно удалить не запущенные закачки из списка?"
+
+#: src/main_window_cb.c:606
+msgid "Remove all"
+msgstr "Удалить все"
+
+#: src/main_window_cb.c:606
+msgid "Really remove all downloads from the list?"
+msgstr "Действительно удалить все закачки из списка?"
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr ""
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr "Не стартовать"
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr "Не запускать"
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr "Нет соединения"
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr "Соединение"
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr "Закачка"
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr "Завершена"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr "Ошибка"
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr "Ошибка сокета"
+
+#: src/wget-log.c:96
+msgid "Connection refused\n"
+msgstr "Соединение отклонено\n"
+
+#: src/wget-log.c:99
+msgid "No route to host"
+msgstr "Нет маршрута к узлу"
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr "Соединение отклонено при закачивании URL:\n"
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr "Узел не найден\n"
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Неподдерживаемый протокол - вам нужен wget >= 1.7 для https:\n"
+
+#: src/wget-log.c:112
+msgid "Refusing to truncate existing file"
+msgstr "Отклонено для сокращения существующего файла"
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr "Файл не найден"
+
+#: src/wget-log.c:142
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"Невозможно продолжить закачку, существующий локальный файл конфликтует с "
+"удалённым файлом"
+
+#: src/wget-log.c:190
+msgid "Can't write to target directory"
+msgstr "Невозможно записать в указанный каталог"
+
+#: src/custom-cell-renderer-progressbar.c:36
+#, fuzzy
+msgid "Unknown"
+msgstr "Неизвестная ошибка"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr ""
+
+#~ msgid "Recurse into the Url ?"
+#~ msgstr "Рекурсировать в Url ?"
+
+#~ msgid ""
+#~ "The url it's not a file. \n"
+#~ " Do you like to recurse into the url ?\n"
+#~ "Otherwise only the index file will be downloaded."
+#~ msgstr ""
+#~ "Url не является файлом. \n"
+#~ " Хотите ли вы рекурсировать в url ?\n"
+#~ "Иначе будет загружен только индексный файл."
+
+#~ msgid "_New"
+#~ msgstr "_Новая"
+
+#~ msgid "Pause download"
+#~ msgstr "Остановить закачку"
+
+#~ msgid "Pause"
+#~ msgstr "Остановить"
+
+#~ msgid "Continue"
+#~ msgstr "Продолжить"
+
+#~ msgid "Remove completed downloads from list"
+#~ msgstr "Удалить завершенные закачки из списка"
+
+#~ msgid "Stop and delete downloaded file"
+#~ msgstr "Остановить и удалить закачанный файл"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Question"
+#~ msgstr "Вопрос"
+
+#~ msgid "New Download"
+#~ msgstr "Новая закачка"
+
+#~ msgid "URL: "
+#~ msgstr "URL: "
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Save in:"
+#~ msgstr "Сохранить в:"
+
+#~ msgid "Select target directory"
+#~ msgstr "Выбрать каталог"
+
+#~ msgid "Preferences"
+#~ msgstr "Настройки"
+
+#~ msgid "<span weight=\"bold\">General</span>"
+#~ msgstr "<span weight=\"bold\">Общие</span>"
+
+#~ msgid "    "
+#~ msgstr "    "
+
+#~ msgid "Save in: "
+#~ msgstr "Сохранить в: "
+
+#~ msgid "Default directory for downloaded data"
+#~ msgstr "Каталог по умолчанию для данных закачек"
+
+#~ msgid "Number of retries: "
+#~ msgstr "Количество попыток: "
+
+#~ msgid "Continue downloads on startup?"
+#~ msgstr "Продолжить закачки при запуске?"
+
+#~ msgid "General"
+#~ msgstr "Общие"
+
+#~ msgid "<span weight=\"bold\">Behaviour </span>"
+#~ msgstr "<span weight=\"bold\">Поведение </span>"
+
+#~ msgid "Download page requisites"
+#~ msgstr "Закачивать страницу со всем необходимым"
+
+#~ msgid "Do not create a hierarchy of directories when retrieving recursively"
+#~ msgstr "Не создавать иерархию каталогов при рекурсивном закачивании"
+
+#~ msgid "No create directories"
+#~ msgstr "Не создавать каталоги"
+
+#~ msgid "Maximum depth level: "
+#~ msgstr "Максимальный уровень глубины: "
+
+#~ msgid "<span weight=\"bold\">Links</span>"
+#~ msgstr "<span weight=\"bold\">Ссылки</span>"
+
+#~ msgid "Follow relative links only"
+#~ msgstr "Следовать только за связанными ссылками"
+
+#~ msgid "Convert links"
+#~ msgstr "Конвертировать ссылки"
+
+#~ msgid "Recursivity"
+#~ msgstr "Рекурсивность"
+
+#~ msgid "_Toolbar"
+#~ msgstr "_Панель инструментов"

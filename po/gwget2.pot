@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr ""
+
+#: src/main_window.c:233
+msgid "State"
+msgstr ""
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr ""
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr ""
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr ""
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr ""
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr ""
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr ""
+
+#: src/main_window_cb.c:108
+msgid "Error in download"
+msgstr ""
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr ""
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr ""
+
+#: src/main_window_cb.c:212
+msgid "Cancel current downloads?"
+msgstr ""
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr ""
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr ""
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr ""
+
+#: src/main_window_cb.c:523
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr ""
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr ""
+
+#: src/main_window_cb.c:546
+msgid "Remove completed"
+msgstr ""
+
+#: src/main_window_cb.c:546
+msgid "Really remove completed downloads from the list?"
+msgstr ""
+
+#: src/main_window_cb.c:576
+msgid "Remove not running"
+msgstr ""
+
+#: src/main_window_cb.c:576
+msgid "Really remove not running downloads from the list?"
+msgstr ""
+
+#: src/main_window_cb.c:606
+msgid "Remove all"
+msgstr ""
+
+#: src/main_window_cb.c:606
+msgid "Really remove all downloads from the list?"
+msgstr ""
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr ""
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr ""
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr ""
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr ""
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr ""
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr ""
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr ""
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr ""
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr ""
+
+#: src/wget-log.c:96
+msgid "Connection refused\n"
+msgstr ""
+
+#: src/wget-log.c:99
+msgid "No route to host"
+msgstr ""
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr ""
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr ""
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr ""
+
+#: src/wget-log.c:112
+msgid "Refusing to truncate existing file"
+msgstr ""
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr ""
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr ""
+
+#: src/wget-log.c:142
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+
+#: src/wget-log.c:190
+msgid "Can't write to target directory"
+msgstr ""
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr ""
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr ""

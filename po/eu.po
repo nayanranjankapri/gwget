@@ -1,0 +1,207 @@
+# Basque translation of gwget2.
+# Copyright (C) 2004 Mikel Olasagasti
+# This file is distributed under the same license as the gwget2 package.
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget2 0.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: 2004-04-22 21:31+0200\n"
+"Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
+"Language-Team: Basque <gnome@euskalgnu.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr "Fitxategiaren izena"
+
+#: src/main_window.c:233
+msgid "State"
+msgstr "Egoera"
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr "Uneko tamainua"
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr "Tamainu totala"
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr "Portzentaia"
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr "Igarotako denbora"
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr "Geratzen den denbora"
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr "Abiadura"
+
+#: src/main_window_cb.c:108
+msgid "Error in download"
+msgstr "Errorea jaisterakoan"
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr "Errorea fitxategia irekitzerakoan"
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr "Ezin izan da fitxategia ireki"
+
+#: src/main_window_cb.c:212
+msgid "Cancel current downloads?"
+msgstr "Utzi une hontan jaisten hari den guztia?"
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Gutxienez fitxategi bat jaisten ari da orain. Benetan utzi abian diren "
+"transferentziak guztiak?"
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr "Jaitsiera kudeatzailea bat gnome2-rako wget erabiltzen atzealdean."
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr "Mikel Olasagasti <hey_neken@mundurat.net>"
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr "Gwget2"
+
+#: src/main_window_cb.c:523
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Benetan utzi jaisten ari zaren fitxategia? (URL %s)"
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr "Utzi jaisten hari zaren fitxategia?"
+
+#: src/main_window_cb.c:546
+msgid "Remove completed"
+msgstr "Kendu amaitutakoak"
+
+#: src/main_window_cb.c:546
+msgid "Really remove completed downloads from the list?"
+msgstr "Benetan kendu zerrendatik amaitutakoak?"
+
+#: src/main_window_cb.c:576
+msgid "Remove not running"
+msgstr "Kendu abian ez daudenak"
+
+#: src/main_window_cb.c:576
+msgid "Really remove not running downloads from the list?"
+msgstr "Benetan kendu geldi dauden jaisteko fitxategiak zerrendatik?"
+
+#: src/main_window_cb.c:606
+msgid "Remove all"
+msgstr "Kendu guztiak"
+
+#: src/main_window_cb.c:606
+msgid "Really remove all downloads from the list?"
+msgstr "Benetan kendu zerrendatik guztiak?"
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr "trabatuta"
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr "Hasi gabe"
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr "Geldirik"
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr "Konektatu gabe"
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr "Konektatua"
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr "Jasotzen"
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr "Amaitua"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr "Errorea"
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr "Socket errorea"
+
+#: src/wget-log.c:96
+msgid "Connection refused\n"
+msgstr "Konexioa ukatua\n"
+
+#: src/wget-log.c:99
+msgid "No route to host"
+msgstr "Ez dago biderik hostalariarentzat"
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr "Konexioa ukatua URL jaisterakoan:\n"
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr "Ez da hostalaria aurkitu\n"
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr ""
+"Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
+
+#: src/wget-log.c:112
+msgid "Refusing to truncate existing file"
+msgstr "Fitxategia mozteari uko egiten"
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr "Errore ezezaguna"
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr "Ez da fitxategia aurkitu"
+
+#: src/wget-log.c:142
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"Ezin jarraitu jaisten, fittxategi lokal batek urrunekoarekin konflikoak ditu"
+
+#: src/wget-log.c:190
+msgid "Can't write to target directory"
+msgstr "Ezin da objetibo direktorioan idatzi"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Huts egin da"

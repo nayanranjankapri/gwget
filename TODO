@@ -1,0 +1,7 @@
+A lot of stuff:
+
+- Make it remember if you want or don't want a Toolbar (Done in 0.11).
+- Make it possible to choose what columns to have (Done in 0.11)
+- Put all of wget options in preferences window.
+- Drag&Drop Support (Done)
+- GdkPixBuf in main Gtktreeview

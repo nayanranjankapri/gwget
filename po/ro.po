@@ -1,0 +1,209 @@
+# translation of PACKAGE.
+# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# <>, 2004.
+# , fuzzy
+# <>, 2004.
+# Spoialã Cristian <s_cristian@ezrs.com>, 2004.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: 2004-06-01 13:47+0300\n"
+"Last-Translator: SpoialÄƒ Cristianã Cristian <s_cristian@ezrs.com>\n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr "Numele fiºierului"
+
+#: src/main_window.c:233
+msgid "State"
+msgstr "Stare"
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr "Mãrimea curentã"
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr "Mãrimea totalã"
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr "Procent"
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr "Timpul trecut"
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr "Timpul Rãmas"
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr "Vitezã"
+
+#: src/main_window_cb.c:108
+msgid "Error in download"
+msgstr "Eroare la download"
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr "Eroare la deschiderea fiºierului"
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr "Nu s-a putut deschide fiºierul"
+
+#: src/main_window_cb.c:212
+msgid "Cancel current downloads?"
+msgstr "Anulaþi download-urile curente?"
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Mai este un download activ rãmas. Chiar doriþi sã anulaþi toate "
+"transferurile care ruleazã?"
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr "Download manager pentru gnome2 având ca bazã wget."
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr "credite pentru traducãtor"
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr "Gwget2"
+
+#: src/main_window_cb.c:523
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Chiar doriþi sã anulaþi download-ul? (Url: %s)"
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr "Anulaþi download-ul ?"
+
+#: src/main_window_cb.c:546
+msgid "Remove completed"
+msgstr "ªtergere terminatã"
+
+#: src/main_window_cb.c:546
+msgid "Really remove completed downloads from the list?"
+msgstr "Chiar doriþi sã ºtergeþi download-urile terminate din listã?"
+
+#: src/main_window_cb.c:576
+msgid "Remove not running"
+msgstr "ªtergere care nu ruleazã"
+
+#: src/main_window_cb.c:576
+msgid "Really remove not running downloads from the list?"
+msgstr "Chiar doriþi sã ºtergeþi din listã download-urile care n-au rulat?"
+
+#: src/main_window_cb.c:606
+msgid "Remove all"
+msgstr "Scoateþi toate"
+
+#: src/main_window_cb.c:606
+msgid "Really remove all downloads from the list?"
+msgstr "Scoateþi toate download-urile din listã ?"
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr "blocat"
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr "Nu a pornit"
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr "Nu ruleazã"
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr "Nu s-a conectat"
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr "Conectat"
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr "Se downloadeazã"
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr "Gata"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr "Eroare"
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr "Eroare la socket"
+
+#: src/wget-log.c:96
+msgid "Connection refused\n"
+msgstr "Conexiune refuzatã\n"
+
+#: src/wget-log.c:99
+msgid "No route to host"
+msgstr "Nu este rutã cu destinaþia"
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr "Conexiunea refuzatã în timp ce se downloada URL-ul:\n"
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr "Destinaþia nu s-a gãsit\n"
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Protocol nesuportat-aveþi nevoie de wget>= 1.7 pentur https:\n"
+
+#: src/wget-log.c:112
+msgid "Refusing to truncate existing file"
+msgstr "Se refuzã trunchierea fiºierului existent"
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr "Eroare necunoscutã"
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr "Fiºierul nu s-a gãsit"
+
+#: src/wget-log.c:142
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"Nu se poate continua download-ul, fiºierul de scris este în conflict cu "
+"fiºierul local"
+
+#: src/wget-log.c:190
+msgid "Can't write to target directory"
+msgstr "Nu se poate scrie în directorul specificat"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Eºuare"

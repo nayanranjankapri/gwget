@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
+
+<glade-interface>
+<requires lib="gnome"/>
+
+<widget class="GnomeAbout" id="about1">
+  <property name="border_width">5</property>
+  <property name="visible">True</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="icon">gwget.xpm</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="logo">gwget-large.png</property>
+  <property name="copyright" translatable="yes">GNU GPL Versión 2</property>
+  <property name="comments" translatable="yes">Gwget2: Download Manager for Gnome 2</property>
+  <property name="authors">David Sedeño Fernández
+&lt;david@alderia.com&gt;</property>
+  <property name="translator_credits" translatable="yes">translator_credits</property>
+  <accessibility>
+    <atkproperty name="AtkObject::accessible_name" translatable="yes">Acerca de gwget</atkproperty>
+  </accessibility>
+  <signal name="response" handler="on_about1_close" last_modification_time="Tue, 01 Apr 2003 17:19:35 GMT"/>
+</widget>
+
+</glade-interface>
