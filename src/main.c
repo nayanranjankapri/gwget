@@ -37,7 +37,7 @@ gwget_handle_automation_cmdline (GnomeProgram *program)
 		
 	CORBA_exception_init (&env);
 	
-	server = bonobo_activation_activate_from_id ("OAFIID:GNOME_Gwget_Factory",
+	server = bonobo_activation_activate_from_id ("OAFIID:GNOME_Gwget_Application",
 												 0, NULL, &env);
 	
 	g_return_if_fail (server != NULL);

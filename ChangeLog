@@ -1,3 +1,7 @@
+2004-09-19  David Sedeño <david@alderia.com>
+
+	* src/main.c: change Activation_ID
+
 2004-09-13  David Sedeño <david@alderia.com>
 
 	* data/preferences.glade: connect delete_event with
