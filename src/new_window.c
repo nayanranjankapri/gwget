@@ -63,37 +63,14 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 			save_in=g_strdup(getenv("HOME"));
 		}
 
-		if (check_url_already_exists(url)) {
-			run_dialog_information(_("Unable to add this download"),_("This download is already added"));			
-		} else {
-			gwgetdata = gwget_data_create(url,save_in);
-			gwget_data_add_download(gwgetdata);
-			gwget_data_start_download(gwgetdata);
-			gtk_widget_hide(window);
-			g_free(save_in);
-		}			
+		gwgetdata = gwget_data_create(url,save_in);
+		gwget_data_add_download(gwgetdata);
+		gwget_data_start_download(gwgetdata);
+		gtk_widget_hide(window);
+		g_free(save_in);
+					
 	}
 
-}
-
-gboolean check_url_already_exists(gchar *checkurl)
-{
-	GwgetData* gwgetdata;
-	GtkTreeIter iter;
-	gint length,i;
-	gchar *url;
-	
-	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
-	gtk_tree_model_get_iter_root(model,&iter);
-	for (i=0;i<length;i++) {
-		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-		gwgetdata=g_object_get_data(G_OBJECT(model),url);
-		if (!strcmp(url, checkurl)) {
-			return TRUE;
-		}
-		gtk_tree_model_iter_next(model,&iter);
-	}
-	return FALSE;
 }
 
 void 

@@ -18,6 +18,7 @@
 #include <glade/glade.h>
 #include "main_window.h"
 #include "utils.h"
+#include "gwget_data.h"
 
 
 
@@ -54,3 +55,24 @@ run_dialog_information(gchar *title, gchar *msg)
 	gtk_widget_hide(GTK_WIDGET(dialog));
 	return response;
 }
+
+gboolean check_url_already_exists(gchar *checkurl)
+{
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length,i;
+	gchar *url;
+
+	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+	gtk_tree_model_get_iter_root(model,&iter);
+	for (i=0;i<length;i++) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model),url);
+		if (!strcmp(url, checkurl)) {
+			return TRUE;
+		}
+		gtk_tree_model_iter_next(model,&iter);
+	}
+	return FALSE;
+}
+

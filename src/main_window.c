@@ -239,40 +239,49 @@ add_columns (GtkTreeView *treeview)
 	GtkTreeViewColumn *column;
 	
 	
-	renderer = gtk_cell_renderer_pixbuf_new ();
-	column = gtk_tree_view_column_new_with_attributes (_("File Type"),
-														renderer,
-														"pixbuf", 
-														IMAGE_COLUMN,
-														NULL);
-	gtk_tree_view_append_column (treeview, column);
-	
 	/* File Name Column */
+	renderer = gtk_cell_renderer_pixbuf_new ();
+	column = gtk_tree_view_column_new();
+	gtk_tree_view_column_set_title (GTK_TREE_VIEW_COLUMN(column),_("File Type"));
+	gtk_tree_view_column_pack_start (column,
+					renderer,
+					FALSE);
+	gtk_tree_view_column_add_attribute(column,
+					  renderer,
+					  "pixbuf", 
+					  IMAGE_COLUMN);
 	renderer = gtk_cell_renderer_text_new ();
-	column = gtk_tree_view_column_new_with_attributes (_("File Name"),
-													     renderer,
-						     							"text",
-						     							FILENAME_COLUMN,
-						     							NULL);
-	gtk_tree_view_column_set_sort_column_id (column, FILENAME_COLUMN);
+	gtk_tree_view_column_pack_start (column,
+					renderer,
+					FALSE);
+	gtk_tree_view_column_add_attribute(column,
+					  renderer, 
+					  "text",
+					  FILENAME_COLUMN);
+	
+	
+	gtk_tree_view_column_set_resizable(column, TRUE);
 	gtk_tree_view_append_column (treeview, column);
 
 	/* State Column */
 	renderer = gtk_cell_renderer_text_new ();
 	column = gtk_tree_view_column_new_with_attributes (_("State"),
-														renderer,
-						     							"text",
-														STATE_COLUMN,
-														NULL);
+							  renderer,
+							  "text",
+							  STATE_COLUMN,
+							  NULL);
+	gtk_tree_view_column_set_resizable(column, TRUE);
+	gtk_tree_view_column_set_sizing (column, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Current Size */
 	renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Current Size"),
-														renderer,
-						     							"text",
-														CURRENTSIZE_COLUMN,
-														NULL);
+	column = gtk_tree_view_column_new_with_attributes (_("Current Size"),
+							renderer,
+						     	"text",
+							CURRENTSIZE_COLUMN,
+							NULL);
+
 	gtk_tree_view_column_set_sort_column_id (column, CURRENTSIZE_COLUMN);
   	gtk_tree_view_append_column (treeview, column);
 	

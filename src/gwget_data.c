@@ -27,6 +27,7 @@
 #include "wget-log.h"
 #include "main_window.h"
 #include "main_window_cb.h"
+#include "utils.h"
 
 #include <config.h>
 
@@ -594,6 +595,11 @@ gwget_data_add_download(GwgetData *gwgetdata)
 	gchar *reverse_filename;
 	GtkWidget *radio, *recursive_window;
 	
+	if (check_url_already_exists(gwgetdata->url)) {
+		run_dialog_information(_("Unable to add this download"),_("This download is already added"));
+		return;
+	}
+
 	/* if the url it's not a file drop a dialog to recurse into the url */
 	reverse_filename = g_strdup(gwgetdata->filename);
 	reverse_filename = g_strreverse(reverse_filename);

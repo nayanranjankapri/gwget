@@ -28,6 +28,5 @@ void on_cancel_button_clicked(GtkWidget *widget,gpointer data);
 void on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data);
 void on_new_fs_ok_button_clicked(GtkWidget *widget, gpointer data);
 void on_new_fs_cancel_button_clicked(GtkWidget *widget, gpointer data);
-gboolean check_url_already_exists(gchar *checkurl);
 
 #endif
