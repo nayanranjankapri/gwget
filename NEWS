@@ -3,12 +3,13 @@ Version 0.90
 =============
 Features
 	* Pass urls in the command line (me).
+	* Open only one instance of gwget. The seconds calls pass the url to download to the first gwget instance (me).
 	* Epiphany extension. You must install gwget in the same prefix as epiphany (me).
-	* Set notification icon highlight when a download is active. (Julien)
-	* The stop and continue button of the toolbar now affect all downloads (Julien).
+	* Set notification icon highlight when a download is active. (Julien Cegarra)
+	* The stop and continue button of the toolbar now affect all downloads (Julien Cegarra).
 
 Bugfixes
-	* Fix a crash in the preferences window (Julien).
+	* Fix a crash in the preferences window (Julien Cegarra).
 
 Translations
 	* New zh_TW (GNOME HK Team), mk (Arangel Angov).
