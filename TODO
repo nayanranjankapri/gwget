@@ -14,6 +14,10 @@ VERSION 0.95
 
 VERSION 1.0 
 ===========
+- Reduce number of preferences. Probably most current preferences
+  could be removed or moved (for example, some pref about webpage
+  download could be only displayed when the webpage dialog appear).
+  For most preferences we could detect the correct behavior.
 - Code clean up. It will be required before starting Post 1.0 features
   that require some architectural changes.
 - HIG control.
@@ -24,10 +28,6 @@ VERSION 1.1
 ===========
 - A download history (it requires discussions in order not to complexify
   too much the main window).
-- Reduce number of preferences. Probably most current preferences
-  could be removed or moved (for example, some pref about webpage
-  download could be only displayed when the webpage dialog appear).
-  For most preferences we could detect the correct behavior.
 - Plugins management. It will allow to use Gwget as a central place to
   manage all downloads. All downloads being done by Gwget or another
   program (e.g. bittorrent, p2p, system update) will be shown in 
