@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-11 04:20+0100\n"
-"PO-Revision-Date: 2005-03-11 15:34+0100\n"
+"POT-Creation-Date: 2005-03-22 04:20+0100\n"
+"PO-Revision-Date: 2005-03-22 09:39+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "GNU GPL verze 2"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Správce stahování pro GNOME"
 
-#: data/about.glade.h:4 src/main_window_cb.c:174
+#: data/about.glade.h:4 src/main_window_cb.c:182
 msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
@@ -60,8 +60,8 @@ msgstr "Zrušit"
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:594
-#: src/main_window_cb.c:691
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:580
+#: src/main_window_cb.c:677
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správce stahování"
 
@@ -121,7 +121,7 @@ msgstr "Možnosti rekurze"
 msgid "Remove"
 msgstr "Odstranit"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:673
+#: data/gwget.glade.h:21 src/main_window_cb.c:659
 msgid "Remove all"
 msgstr "Odstranit vše"
 
@@ -129,7 +129,7 @@ msgstr "Odstranit vše"
 msgid "Remove all downloads from list"
 msgstr "Odstranit ze seznamu všechna stahování"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:615
+#: data/gwget.glade.h:23 src/main_window_cb.c:601
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
@@ -137,7 +137,7 @@ msgstr "Odstranit dokončená"
 msgid "Remove completed downloads from list"
 msgstr "Odstranit ze seznamu dokončená stahování"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:644
+#: data/gwget.glade.h:25 src/main_window_cb.c:630
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
@@ -425,6 +425,14 @@ msgstr "souborů"
 msgid "kB/sec"
 msgstr "kB/s"
 
+#: epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Přesměrovávát stahování na GWGet"
+
+#: epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
+
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
 msgstr "Neznámé"
@@ -433,39 +441,39 @@ msgstr "Neznámé"
 msgid "Failed"
 msgstr "Selhalo"
 
-#: src/gwget_data.c:178
+#: src/gwget_data.c:179
 msgid "stalled"
 msgstr "vynechává"
 
-#: src/gwget_data.c:213
+#: src/gwget_data.c:214
 msgid "Waiting"
 msgstr "Čeká"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:216
 msgid "Not Started"
 msgstr "Nespuštěno"
 
-#: src/gwget_data.c:217
+#: src/gwget_data.c:218
 msgid "Not Running"
 msgstr "Neběží"
 
-#: src/gwget_data.c:219
+#: src/gwget_data.c:220
 msgid "Not Connected"
 msgstr "Nepřipojeno"
 
-#: src/gwget_data.c:221
+#: src/gwget_data.c:222
 msgid "Connected"
 msgstr "Připojeno"
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:224
 msgid "Retrieving"
 msgstr "Stahuji"
 
-#: src/gwget_data.c:225
+#: src/gwget_data.c:226
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: src/gwget_data.c:229
+#: src/gwget_data.c:230
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -474,71 +482,71 @@ msgstr ""
 "Stahování dokončeno\n"
 "(%s)"
 
-#: src/gwget_data.c:236
+#: src/gwget_data.c:237
 msgid "Error"
 msgstr "Chyba"
 
-#: src/gwget_data.c:653
+#: src/gwget_data.c:657
 msgid "Unable to add this download"
 msgstr "Nemohu přidat toto stahování"
 
-#: src/gwget_data.c:654
+#: src/gwget_data.c:658
 msgid "This download is already added"
 msgstr "Toto stahování již bylo přidáno"
 
-#: src/gwget_data.c:702 src/main_window_cb.c:99
+#: src/gwget_data.c:706 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Chyba při otevírání souboru"
 
-#: src/gwget_data.c:702 src/main_window_cb.c:99
+#: src/gwget_data.c:706 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nemohu otevřít soubor"
 
-#: src/main_window.c:364
+#: src/main_window.c:367
 msgid "File Name"
 msgstr "Název souboru"
 
-#: src/main_window.c:371
+#: src/main_window.c:374
 msgid "State"
 msgstr "Stav"
 
-#: src/main_window.c:382
+#: src/main_window.c:385
 msgid "Current Size"
 msgstr "Momentální velikost"
 
-#: src/main_window.c:393
+#: src/main_window.c:396
 msgid "Total Size"
 msgstr "Celková velikost"
 
-#: src/main_window.c:403 src/main_window.c:409
+#: src/main_window.c:406 src/main_window.c:412
 msgid "Percentage"
 msgstr "Procenta"
 
-#: src/main_window.c:414
+#: src/main_window.c:417
 msgid "Elapsed Time"
 msgstr "Uplynulý čas"
 
-#: src/main_window.c:424
+#: src/main_window.c:427
 msgid "Remaining Time"
 msgstr "Zbývající čas"
 
-#: src/main_window.c:434
+#: src/main_window.c:437
 msgid "Speed"
 msgstr "Rychlost"
 
-#: src/main_window.c:480
+#: src/main_window.c:483
 msgid "Error starting the download"
 msgstr "Chyba při spouštění stahování"
 
-#: src/main_window.c:480
+#: src/main_window.c:483
 msgid "There was an unexpected error starting the download"
 msgstr "Při spouštění stahování došlo k neočekávané chybě"
 
-#: src/main_window.c:712
+#: src/main_window.c:715
 msgid "Cancel current downloads?"
 msgstr "Zrušit atktuální stahování?"
 
-#: src/main_window.c:713
+#: src/main_window.c:716
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -550,19 +558,19 @@ msgstr ""
 msgid "Error in download"
 msgstr "Chyba při stahování"
 
-#: src/main_window_cb.c:167
-msgid "Download Manager for GNOME."
-msgstr "Správce stahování pro GNOME."
-
-#: src/main_window_cb.c:186
+#: src/main_window_cb.c:177
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:530 src/new_window.c:138
+#: src/main_window_cb.c:180
+msgid "Download Manager for GNOME."
+msgstr "Správce stahování pro GNOME."
+
+#: src/main_window_cb.c:516 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Zvolte adresář"
 
-#: src/main_window_cb.c:586
+#: src/main_window_cb.c:572
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -571,19 +579,19 @@ msgstr ""
 "Opravdu zrušit aktuální stahování?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:587
+#: src/main_window_cb.c:573
 msgid "Cancel download?"
 msgstr "Zrušit stahování?"
 
-#: src/main_window_cb.c:615
+#: src/main_window_cb.c:601
 msgid "Really remove completed downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu dokončená stahování?"
 
-#: src/main_window_cb.c:644
+#: src/main_window_cb.c:630
 msgid "Really remove inactive downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu neaktivní stahování?"
 
-#: src/main_window_cb.c:673
+#: src/main_window_cb.c:659
 msgid "Really remove all downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu všechna stahování?"
 
@@ -595,49 +603,49 @@ msgstr "Nic"
 msgid "Downloads"
 msgstr "Stahování"
 
-#: src/wget-log.c:116
+#: src/wget-log.c:117
 msgid "Socket error"
 msgstr "Chyba socketu"
 
-#: src/wget-log.c:118
+#: src/wget-log.c:119
 msgid "Connection refused\n"
 msgstr "Spojení odmítnuto\n"
 
-#: src/wget-log.c:120
+#: src/wget-log.c:121
 msgid "No route to host"
 msgstr "K počítači nevede cesta"
 
-#: src/wget-log.c:122
+#: src/wget-log.c:123
 msgid "Connection refused when downloading URL:\n"
 msgstr "Spojení odmítnuto při stahování URL:\n"
 
-#: src/wget-log.c:124
+#: src/wget-log.c:125
 msgid "Host not found\n"
 msgstr "Počítač nenalezen\n"
 
-#: src/wget-log.c:126
+#: src/wget-log.c:127
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Nepodporovaný protokol - pro https: potřebujete wget >= 1.7\n"
 
-#: src/wget-log.c:129
+#: src/wget-log.c:130
 msgid "Refusing to truncate existing file"
 msgstr "Odmítám přepsat existující soubor"
 
-#: src/wget-log.c:131
+#: src/wget-log.c:132
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: src/wget-log.c:142 src/wget-log.c:148
+#: src/wget-log.c:143 src/wget-log.c:149
 msgid "File not found"
 msgstr "Soubor nenalezen"
 
-#: src/wget-log.c:155
+#: src/wget-log.c:156
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nemohu pokračovat ve stahování, existující místní soubor koliduje se "
 "vzdáleným souborem"
 
-#: src/wget-log.c:213
+#: src/wget-log.c:214
 msgid "Can't write to target directory"
 msgstr "Nemohu zapisovat do cílového adresáře"
 
