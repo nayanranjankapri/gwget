@@ -71,13 +71,14 @@ AC_ARG_WITH([epiphany-version],
 
 dnl try to autodetect Epiphany 1.2, 1.4 or 1.6
 EPHY_AUTODETECT="(autodetect)"
-if pkg-config --exists epiphany-1.2; then
-        EPHY_VER=1.2
+if pkg-config --exists epiphany-1.6; then
+       	EPHY_VER=1.6
 elif pkg-config --exists epiphany-1.4; then
 	EPHY_VER=1.4
-elif pkg-config --exists epiphany-1.6; then
-        EPHY_VER=1.6
+elif pkg-config --exists epiphany-1.2; then
+       	EPHY_VER=1.2
 fi
+
 
 EPIPHANY_REQUIRED=
 EPIPHANY_PKGCONFIG=
