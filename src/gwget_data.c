@@ -50,6 +50,7 @@ gwget_data_set_state (GwgetData *gwgetdata, DlState state)
 {
 	gwgetdata->state=state;
 	gwget_data_update_statistics_ui(gwgetdata);
+	gwget_remember_downloads();
 }
 
 void 
@@ -546,6 +547,7 @@ gwget_data_set_filename(GwgetData* gwgetdata,gchar *str)
 	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, 
 			                         str,
 						 NULL);
+	gwget_remember_downloads();
 }
 
 /* Return the gwgetdata that is selected in the treeview */
@@ -639,6 +641,8 @@ gwget_data_set_filename_from_url(GwgetData *gwgetdata,gchar *url)
 	} else {
 		gwgetdata->filename = g_strdup(filename);
 	}
+
+	gwget_remember_downloads();
 }
 
 /* Add a gwgetdata to the main window */

@@ -1,3 +1,10 @@
+2005-03-19  Ivan Yosifov <ivan@yosifov.net>
+
+	* gwget_data.c: call gwget_remember_downloads in
+	gwget_data_set_state,
+	gwget_data_set_filename,
+	gwget_data_set_filename_from_url
+
 2005-03-16  Christian Persch  <chpe@cvs.gnome.org>
 
 	* epiphany-extension/Makefile.am:
