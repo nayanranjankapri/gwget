@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-11 12:33+0100\n"
-"PO-Revision-Date: 2005-01-11 13:55+0100\n"
+"POT-Creation-Date: 2005-02-26 13:50+0100\n"
+"PO-Revision-Date: 2005-02-26 16:45+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -59,8 +59,8 @@ msgstr "Mégsem"
 msgid "Continue"
 msgstr "Folytatás"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
-#: src/main_window_cb.c:662
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:578
+#: src/main_window_cb.c:674
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Letöltéskezelő"
 
@@ -108,7 +108,7 @@ msgstr "Tulajdonságok"
 msgid "Question"
 msgstr "Kérdés"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:31
+#: data/gwget.glade.h:18 data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Rekurzió"
 
@@ -120,7 +120,7 @@ msgstr "Rekurzív opciók"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:645
+#: data/gwget.glade.h:21 src/main_window_cb.c:657
 msgid "Remove all"
 msgstr "Összes eltávolítása"
 
@@ -128,7 +128,7 @@ msgstr "Összes eltávolítása"
 msgid "Remove all downloads from list"
 msgstr "Összes letöltés eltávolítása a listából"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:587
+#: data/gwget.glade.h:23 src/main_window_cb.c:599
 msgid "Remove completed"
 msgstr "Befejezettek eltávolítása"
 
@@ -136,7 +136,7 @@ msgstr "Befejezettek eltávolítása"
 msgid "Remove completed downloads from list"
 msgstr "Befejezett letöltések eltávolítása a listából"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:616
+#: data/gwget.glade.h:25 src/main_window_cb.c:628
 msgid "Remove inactive"
 msgstr "Inaktívak eltávolítása"
 
@@ -164,9 +164,9 @@ msgstr "Csak az indexfájlt"
 msgid "This site (mirror)"
 msgstr "Ezt az oldalt (tükrözés)"
 
-#: data/gwget.glade.h:32
-msgid "Url:"
-msgstr "Url:"
+#: data/gwget.glade.h:32 data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
 
 #: data/gwget.glade.h:33
 msgid "_New"
@@ -177,74 +177,86 @@ msgid "_Toolbar"
 msgstr "_Eszköztár"
 
 #: data/gwget.schemas.in.h:1
+msgid "Ask save in for each new download"
+msgstr "Letöltés helyére minden új letöltéshez rákérdez"
+
+#: data/gwget.schemas.in.h:2
 msgid "Convert Links"
 msgstr "Hivatkozások átalakítása"
 
-#: data/gwget.schemas.in.h:2
+#: data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
 msgstr "Relatív hivatkozásokká alakítás rekurzív módban."
 
-#: data/gwget.schemas.in.h:3
+#: data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
 msgstr "Alapértelmezett letöltési könyvtár"
 
-#: data/gwget.schemas.in.h:4
+#: data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
 msgstr "Oldal kellékeinek letöltése"
 
-#: data/gwget.schemas.in.h:5
+#: data/gwget.schemas.in.h:6
 msgid "Follow relative links"
 msgstr "Relatív hivatkozások követése"
 
-#: data/gwget.schemas.in.h:6
+#: data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Ha ez igaz, minden új letöltés indításakor rákérdez a célmappára. Ha hamis, "
+"kérdés nélkül mindig az alapértelmezett könyvtárba ment."
+
+#: data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
 msgstr "Legnagyobb sebesség korlátozása"
 
-#: data/gwget.schemas.in.h:7
+#: data/gwget.schemas.in.h:9
 msgid "Maximum depth in recursive mode"
 msgstr "Legnagyobb mélység rekurzív módban"
 
-#: data/gwget.schemas.in.h:8
+#: data/gwget.schemas.in.h:10
 msgid "Maximum speed limit"
 msgstr "Legnagyobb sebesség"
 
-#: data/gwget.schemas.in.h:9
+#: data/gwget.schemas.in.h:11
 msgid "Number of downloads"
 msgstr "Letöltések száma"
 
-#: data/gwget.schemas.in.h:10
+#: data/gwget.schemas.in.h:12
 msgid "Number of retries"
 msgstr "Újrapróbálkozások száma"
 
-#: data/gwget.schemas.in.h:11
+#: data/gwget.schemas.in.h:13
 msgid "Open the file after download"
 msgstr "Fájl megnyitása letöltés után"
 
-#: data/gwget.schemas.in.h:12
+#: data/gwget.schemas.in.h:14
 msgid "Resume downloads at startup"
 msgstr "Letöltések folytatása induláskor"
 
-#: data/gwget.schemas.in.h:13
+#: data/gwget.schemas.in.h:15
 msgid "View download speed column"
 msgstr "Letöltés sebessége oszlop mutatása"
 
-#: data/gwget.schemas.in.h:14
+#: data/gwget.schemas.in.h:16
 msgid "View elapsed time column"
 msgstr "Eltelt idő oszlop mutatása"
 
-#: data/gwget.schemas.in.h:15
+#: data/gwget.schemas.in.h:17
 msgid "View percentage column"
 msgstr "Százalék oszlop mutatása"
 
-#: data/gwget.schemas.in.h:16
+#: data/gwget.schemas.in.h:18
 msgid "View remaining time column"
 msgstr "Hátralévő idő oszlop mutatása"
 
-#: data/gwget.schemas.in.h:17
+#: data/gwget.schemas.in.h:19
 msgid "View toolbar"
 msgstr "Eszköztár mutatása"
 
-#: data/gwget.schemas.in.h:18
+#: data/gwget.schemas.in.h:20
 msgid "View total size column"
 msgstr "Teljes méret oszlop mutatása"
 
@@ -256,13 +268,9 @@ msgstr "<span weight=\"bold\">Új letöltés</span>"
 msgid "New Download"
 msgstr "Új letöltés"
 
-#: data/newdownload.glade.h:3 data/preferences.glade.h:33
+#: data/newdownload.glade.h:3
 msgid "Save in:"
 msgstr "Mentés ide:"
-
-#: data/newdownload.glade.h:4
-msgid "URL:"
-msgstr "URL:"
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -273,16 +281,16 @@ msgid "  kB/sec"
 msgstr "  kB/mp"
 
 #: data/preferences.glade.h:4
-msgid "<b>General</b>"
-msgstr "<b>Általános</b>"
-
-#: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Viselkedés</span>"
 
-#: data/preferences.glade.h:6
+#: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Oszloplista</span>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Általános</span>"
 
 #: data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Links</span>"
@@ -297,96 +305,104 @@ msgid "Column List"
 msgstr "Oszloplista"
 
 #: data/preferences.glade.h:10
-msgid "Continue downloads on startup"
-msgstr "Letöltések folytatása induláskor"
+msgid "Default _GNOME network settings"
+msgstr "Alapértelmezett _GNOME hálózati beállítások"
 
 #: data/preferences.glade.h:11
-msgid "Convert links"
-msgstr "Hivatkozások átalakítása"
+msgid "Direct _Internet connection"
+msgstr "Közvetlen _internetkapcsolat"
 
-#: data/preferences.glade.h:12 src/main_window.c:294
-msgid "Current Size"
-msgstr "Jelenlegi méret"
+#: data/preferences.glade.h:12
+msgid "Do_wnload Speed"
+msgstr "_Letöltési sebesség"
 
 #: data/preferences.glade.h:13
-msgid "Default GNOME network settings"
-msgstr "Alapértelmezett GNOME hálózati beállítások"
+msgid "Don't _create directories"
+msgstr "Ne _hozzon létre könyvtárakat"
 
 #: data/preferences.glade.h:14
-msgid "Direct Internet connection"
-msgstr "Közvetlen internetkapcsolat"
+msgid "Follow _relative links only"
+msgstr "Csak _relatív hivatkozások követése"
 
 #: data/preferences.glade.h:15
-msgid "Don't create directories"
-msgstr "Ne hozzon létre könyvtárakat"
-
-#: data/preferences.glade.h:16
-msgid "Download Speed"
-msgstr "Letöltési sebesség"
-
-#: data/preferences.glade.h:17
-msgid "Download page requisites"
-msgstr "Oldal kellékeinek letöltése"
-
-#: data/preferences.glade.h:18 src/main_window.c:326
-msgid "Elapsed Time"
-msgstr "Eltelt idő"
-
-#: data/preferences.glade.h:19
-msgid "Follow relative links only"
-msgstr "Csak relatív hivatkozások követése"
-
-#: data/preferences.glade.h:20
 msgid "General"
 msgstr "Általános"
 
-#: data/preferences.glade.h:21
-msgid "Limit download speed to:"
-msgstr "Letöltés sebességének korlátozása:"
-
-#: data/preferences.glade.h:22
-msgid "Manual proxy configuration"
-msgstr "Kézi proxybeállítás"
-
-#: data/preferences.glade.h:23
-msgid "Maximum depth level:"
-msgstr "Legnagyobb mélység szintje:"
-
-#: data/preferences.glade.h:24
+#: data/preferences.glade.h:16
 msgid "Network"
 msgstr "Hálózat"
 
-#: data/preferences.glade.h:25
-msgid "Number of retries:"
-msgstr "Újrapróbálkozások száma:"
+#: data/preferences.glade.h:17
+msgid "P_ort:"
+msgstr "_Port:"
 
-#: data/preferences.glade.h:26
-msgid "Open files automatically after download"
-msgstr "Fájlok automatikus megnyitása letöltés után"
-
-#: data/preferences.glade.h:27 src/main_window.c:315 src/main_window.c:321
-msgid "Percentage"
-msgstr "Százalék"
-
-#: data/preferences.glade.h:28
-msgid "Port:"
-msgstr "Port:"
-
-#: data/preferences.glade.h:29
+#: data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "Beállítások"
 
+#: data/preferences.glade.h:19
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: data/preferences.glade.h:21
+msgid "Remaining _Time"
+msgstr "Hátralévő i_dő"
+
+#: data/preferences.glade.h:22
+msgid "Sa_ve in:"
+msgstr "Mentés _helye:"
+
+#: data/preferences.glade.h:23
+msgid "Total _Size"
+msgstr "Teljes _méret"
+
+#: data/preferences.glade.h:24
+msgid "_Ask where to save for each download"
+msgstr "_Minden letöltésnél kérdezzen rá a célmappára"
+
+#: data/preferences.glade.h:25
+msgid "_Continue downloads on startup"
+msgstr "_Letöltések folytatása induláskor"
+
+#: data/preferences.glade.h:26
+msgid "_Convert links"
+msgstr "Hivatkozások át_alakítása"
+
+#: data/preferences.glade.h:27
+msgid "_Current Size"
+msgstr "_Jelenlegi méret"
+
+#: data/preferences.glade.h:28
+msgid "_Download page requisites"
+msgstr "_Oldal kellékeinek letöltése"
+
+#: data/preferences.glade.h:29
+msgid "_Elapsed Time"
+msgstr "_Eltelt idő"
+
 #: data/preferences.glade.h:30
-msgid "Proxy:"
-msgstr "Proxy:"
+msgid "_Limit download speed to:"
+msgstr "Letöltés sebességének _korlátozása:"
 
-#: data/preferences.glade.h:32 src/main_window.c:336
-msgid "Remaining Time"
-msgstr "Hátralévő idő"
+#: data/preferences.glade.h:31
+msgid "_Manual proxy configuration"
+msgstr "Ké_zi proxybeállítás"
 
-#: data/preferences.glade.h:34 src/main_window.c:305
-msgid "Total Size"
-msgstr "Teljes méret"
+#: data/preferences.glade.h:32
+msgid "_Maximum depth level:"
+msgstr "Le_gnagyobb mélység szintje:"
+
+#: data/preferences.glade.h:33
+msgid "_Number of retries:"
+msgstr "Újra_próbálkozások száma:"
+
+#: data/preferences.glade.h:34
+msgid "_Open files automatically after download"
+msgstr "Fájlok a_utomatikus megnyitása letöltés után"
+
+#: data/preferences.glade.h:35
+msgid "_Percentage"
+msgstr "S_zázalék"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
@@ -441,47 +457,67 @@ msgstr ""
 msgid "Error"
 msgstr "Hiba"
 
-#: src/gwget_data.c:616
+#: src/gwget_data.c:624
 msgid "Unable to add this download"
 msgstr "Ezt a letöltést nem lehet hozzáadni"
 
-#: src/gwget_data.c:616
+#: src/gwget_data.c:624
 msgid "This download is already added"
 msgstr "Ez a letöltés már hozzá van adva"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: src/gwget_data.c:672 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Hiba a fájl megnyitásakor"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: src/gwget_data.c:672 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nem lehet megnyitni a fájlt"
 
-#: src/main_window.c:276
+#: src/main_window.c:376
 msgid "File Name"
 msgstr "Fájlnév"
 
-#: src/main_window.c:283
+#: src/main_window.c:383
 msgid "State"
 msgstr "Állapot"
 
-#: src/main_window.c:346
+#: src/main_window.c:394
+msgid "Current Size"
+msgstr "Jelenlegi méret"
+
+#: src/main_window.c:405
+msgid "Total Size"
+msgstr "Teljes méret"
+
+#: src/main_window.c:415 src/main_window.c:421
+msgid "Percentage"
+msgstr "Százalék"
+
+#: src/main_window.c:426
+msgid "Elapsed Time"
+msgstr "Eltelt idő"
+
+#: src/main_window.c:436
+msgid "Remaining Time"
+msgstr "Hátralévő idő"
+
+#: src/main_window.c:446
 msgid "Speed"
 msgstr "Sebesség"
 
-#: src/main_window.c:385
+#: src/main_window.c:492
 msgid "Error starting the download"
 msgstr "Hiba a letöltés elkezdése közben"
 
-#: src/main_window.c:385
+#: src/main_window.c:492
 msgid "There was an unexpected error starting the download"
 msgstr "Váratlan hiba lépett fel a letöltés megkezdésekor"
 
-#: src/main_window.c:576
+#: src/main_window.c:713
 msgid "Cancel current downloads?"
 msgstr "Megszakítja a jelenlegi letöltéseket?"
 
-#: src/main_window.c:576
+#: src/main_window.c:714
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -501,40 +537,40 @@ msgstr "Letöltéskezelő a GNOME-hoz."
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:141
+#: src/main_window_cb.c:514 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Mappa kiválasztása"
 
-#: src/main_window_cb.c:558
+#: src/main_window_cb.c:570
 #, c-format
 msgid ""
 "Really cancel current download?\n"
-"(Url: %s)"
+"(URL: %s)"
 msgstr ""
 "Valóban megszakítja a jelenlegi letöltést?\n"
-"(Url: %s)"
+"(URL: %s)"
 
-#: src/main_window_cb.c:559
+#: src/main_window_cb.c:571
 msgid "Cancel download?"
 msgstr "Megszakítja a letöltést?"
 
-#: src/main_window_cb.c:587
+#: src/main_window_cb.c:599
 msgid "Really remove completed downloads from the list?"
 msgstr "Valóban eltávolítja a befejeződött letöltéseket a listából?"
 
-#: src/main_window_cb.c:616
+#: src/main_window_cb.c:628
 msgid "Really remove inactive downloads from the list?"
 msgstr "Valóban eltávolítja az inaktív letöltéseket a listából?"
 
-#: src/main_window_cb.c:645
+#: src/main_window_cb.c:657
 msgid "Really remove all downloads from the list?"
 msgstr "Valóban eltávolítja az összes letöltést a listából?"
 
-#: src/systray.c:135
+#: src/systray.c:150
 msgid "Nothing"
 msgstr "Semmi"
 
-#: src/systray.c:142
+#: src/systray.c:157
 msgid "Downloads"
 msgstr "Letöltések"
 
