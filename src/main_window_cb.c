@@ -193,7 +193,7 @@ new_download(GwgetData* gwgetdata) {
 	char *mime, *icon_name;
 	int width = 16, height = 16;
 	
-	gtk_list_store_append (GTK_LIST_STORE(model), &iter);
+	gtk_list_store_append (GTK_LIST_STORE(model), &iter); 
 	gtk_list_store_set (GTK_LIST_STORE(model), &iter,URL_COLUMN,gwgetdata->url,
 						CURRENTSIZE_COLUMN,gwgetdata->cur_size, 
 						FILENAME_COLUMN, gwgetdata->filename,
@@ -224,6 +224,7 @@ new_download(GwgetData* gwgetdata) {
 	pixbuf = gdk_pixbuf_new_from_file_at_size (icon_name, width, height, NULL);
 	gtk_list_store_set (GTK_LIST_STORE (model),
 						&iter, IMAGE_COLUMN, pixbuf, -1);
+
 	if (pixbuf)
 		g_object_unref (pixbuf);
 	
@@ -265,6 +266,9 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"max_depth");
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_depth);
+
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_speed_spin");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_speed);
 
 	gtk_widget_show(window);
 		
@@ -317,7 +321,7 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)),NULL);
 	limit_speed_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_spin");
 	gwget_pref.max_speed = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin));
-	gconf_client_set_bool(gconf_client,"/apps/gwget2/max_speed",
+	gconf_client_set_int(gconf_client,"/apps/gwget2/max_speed",
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)),NULL);
 	
 	
