@@ -375,6 +375,12 @@ gwget_data_start_download(GwgetData *gwgetdata)
 					arg++;
 				}
 			}
+			
+			if (gwget_pref.limit_speed) {
+				argv[arg] = g_strdup_printf("--limit-rate=%dk",gwget_pref.max_speed);
+				arg++;
+			}
+			
 			argv[arg] = NULL;
 			
 			/* Set Language to C. This must be done or we will not be able */
