@@ -6,3 +6,9 @@ EXTRA_DIST = \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
+
+desktop_files=gwget.desktop
+
+Applicationsdir = $(datadir)/applications
+Applications_DATA = $(desktop_files)
+
