@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-14 00:01-0400\n"
+"POT-Creation-Date: 2004-08-14 11:14-0400\n"
 "PO-Revision-Date: 2004-08-14 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/about.glade.h:1
-msgid "Acerca de gwget"
-msgstr "About gwget"
+msgid "About Gwget"
+msgstr "About Gwget"
 
 #: data/about.glade.h:2
-msgid "GNU GPL Versión 2"
+msgid "GNU GPL Version 2"
 msgstr "GNU GPL Version 2"
 
 #: data/about.glade.h:3
-msgid "Gwget2: Download Manager for Gnome 2"
-msgstr "Gwget2: Download Manager for Gnome 2"
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Download Manager for Gnome 2"
 
-#: data/about.glade.h:4 src/main_window_cb.c:149
-msgid "translator_credits"
+#: data/about.glade.h:4
+msgid "translator-credits"
 msgstr "Adam Weinberger <adamw@gnome.org>"
 
 #: data/gwget.glade.h:1 data/preferences.glade.h:2
@@ -87,7 +87,7 @@ msgstr "Properties"
 msgid "Question"
 msgstr "Question"
 
-#: data/gwget.glade.h:15
+#: data/gwget.glade.h:15 data/preferences.glade.h:25
 msgid "Recursive"
 msgstr "Recursive"
 
@@ -112,11 +112,11 @@ msgid "Remove completed downloads from list"
 msgstr "Remove completed downloads from list"
 
 #: data/gwget.glade.h:21 src/main_window_cb.c:504
-msgid "Remove not running"
+msgid "Remove inactive"
 msgstr "Remove inactive"
 
 #: data/gwget.glade.h:22
-msgid "Remove not running downloads from list"
+msgid "Remove inactive downloads from list"
 msgstr "Remove inactive downloads from list"
 
 #: data/gwget.glade.h:23
@@ -176,7 +176,7 @@ msgid "<b>General</b>"
 msgstr "<b>General</b>"
 
 #: data/preferences.glade.h:6
-msgid "<span weight=\"bold\">Behaviour</span>"
+msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Behaviour</span>"
 
 #: data/preferences.glade.h:7
@@ -250,10 +250,6 @@ msgstr "Percent"
 #: data/preferences.glade.h:24
 msgid "Preferences"
 msgstr "Preferences"
-
-#: data/preferences.glade.h:25
-msgid "Recursivity"
-msgstr "Recursive"
 
 #: data/preferences.glade.h:26 src/main_window.c:299
 msgid "Remaining Time"
@@ -356,6 +352,10 @@ msgstr "Could not open the file"
 msgid "Download Manager for Gnome2."
 msgstr "Download Manager for GNOME 2."
 
+#: src/main_window_cb.c:149
+msgid "translator_credits"
+msgstr "Adam Weinberger <adamw@gnome.org>"
+
 #: src/main_window_cb.c:161
 msgid "Gwget"
 msgstr "Gwget"
@@ -378,7 +378,7 @@ msgid "Really remove completed downloads from the list?"
 msgstr "Really remove completed downloads from the list?"
 
 #: src/main_window_cb.c:504
-msgid "Really remove not running downloads from the list?"
+msgid "Really remove inactive downloads from the list?"
 msgstr "Really remove inactive downloads from the list?"
 
 #: src/main_window_cb.c:534
