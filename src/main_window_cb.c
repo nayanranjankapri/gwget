@@ -212,6 +212,7 @@ new_download(GwgetData* gwgetdata) {
 	GdkPixbuf *pixbuf;
 	char *mime, *icon_name, *size;
 	int width = 16, height = 16;
+	gdouble perc;
 	
 	gtk_list_store_append (GTK_LIST_STORE(model), &iter); 
 	size = g_strdup_printf ("%d kB", (gwgetdata->cur_size + 512) / 1024);
@@ -220,6 +221,14 @@ new_download(GwgetData* gwgetdata) {
 						FILENAME_COLUMN, gwgetdata->filename,
 	    				-1);
 	
+	
+	size = g_strdup_printf ("%d kB", (gwgetdata->total_size + 512) / 1024);
+	gtk_list_store_set (GTK_LIST_STORE(model), &iter, TOTALSIZE_COLUMN, size, -1);
+	
+	perc = gwgetdata->total_size==0?0:((gdouble)gwgetdata->cur_size*100)/(gdouble)gwgetdata->total_size ;
+	gtk_list_store_set(GTK_LIST_STORE(model),&iter,
+			PERCENTAGE_COLUMN,(gint)perc,-1);
+		
 	gwgetdata->file_list=iter; 
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
