@@ -141,7 +141,7 @@ continue_all_downloads(void)
 		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
 		gwgetdata=g_object_get_data(G_OBJECT(model),url);
 			
-		if (!gwget_data_run(gwgetdata)) {
+		if (!gwget_data_run(gwgetdata) && gwgetdata->state != DL_COMPLETED) {
 				gwget_data_start_download(gwgetdata);
 		}
 		gtk_tree_model_iter_next(model,&iter);
@@ -687,16 +687,18 @@ on_properties_activate(GtkWidget *widget, gpointer data)
 
 	gwgetdata = gwget_data_get_selected();	
 	
-	main_window=glade_xml_get_widget(GLADE_XML(xml),"main_window");
-	properties=glade_xml_get_widget(GLADE_XML(xml),"properties_window");
-	gtk_window_set_transient_for(GTK_WINDOW(properties),GTK_WINDOW(main_window));
-	url_txt=glade_xml_get_widget(GLADE_XML(xml),"url_text");
-	gtk_label_set_text(GTK_LABEL(url_txt),gwgetdata->url);
-	local_file=glade_xml_get_widget(GLADE_XML(xml),"local_file_text");
-	gtk_label_set_text(GTK_LABEL(local_file),gwgetdata->filename);
-	local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
-	gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
-	gtk_widget_show(properties);
+	if (gwgetdata) {
+		main_window=glade_xml_get_widget(GLADE_XML(xml),"main_window");
+		properties=glade_xml_get_widget(GLADE_XML(xml),"properties_window");
+		gtk_window_set_transient_for(GTK_WINDOW(properties),GTK_WINDOW(main_window));
+		url_txt=glade_xml_get_widget(GLADE_XML(xml),"url_text");
+		gtk_label_set_text(GTK_LABEL(url_txt),gwgetdata->url);
+		local_file=glade_xml_get_widget(GLADE_XML(xml),"local_file_text");
+		gtk_label_set_text(GTK_LABEL(local_file),gwgetdata->filename);
+		local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
+		gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
+		gtk_widget_show(properties);
+	}
 }
 
 void 
