@@ -1,7 +1,7 @@
 2004-10-02  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Use gwget.png instead of gwget.xpm for
-	application icon.
+	application icon. Put all remove options of the popup in a submenu.
 
 2004-10-01  David Sedeño <david@alderia.com>
 

@@ -271,7 +271,7 @@
       <signal name="activate" handler="on_popup_pause_button_clicked" last_modification_time="Sat, 31 May 2003 17:45:21 GMT"/>
 
       <child internal-child="image">
-	<widget class="GtkImage" id="image27">
+	<widget class="GtkImage" id="image31">
 	  <property name="visible">True</property>
 	  <property name="stock">gtk-stop</property>
 	  <property name="icon_size">1</property>
@@ -292,7 +292,7 @@
       <signal name="activate" handler="on_popup_continue_activate" last_modification_time="Sat, 31 May 2003 17:45:21 GMT"/>
 
       <child internal-child="image">
-	<widget class="GtkImage" id="image28">
+	<widget class="GtkImage" id="image32">
 	  <property name="visible">True</property>
 	  <property name="stock">gtk-refresh</property>
 	  <property name="icon_size">1</property>
@@ -312,32 +312,45 @@
   </child>
 
   <child>
-    <widget class="GtkMenuItem" id="remove_completed">
+    <widget class="GtkMenuItem" id="remove1">
       <property name="visible">True</property>
-      <property name="tooltip" translatable="yes">Remove completed downloads from list</property>
-      <property name="label" translatable="yes">Remove completed</property>
+      <property name="label" translatable="yes">Remove</property>
       <property name="use_underline">True</property>
-      <signal name="activate" handler="on_remove_completed_activate" last_modification_time="Wed, 18 Jun 2003 15:00:28 GMT"/>
-    </widget>
-  </child>
 
-  <child>
-    <widget class="GtkMenuItem" id="remove_notrunning">
-      <property name="visible">True</property>
-      <property name="tooltip" translatable="yes">Remove inactive downloads from list</property>
-      <property name="label" translatable="yes">Remove inactive</property>
-      <property name="use_underline">True</property>
-      <signal name="activate" handler="on_remove_notrunning_activate" last_modification_time="Wed, 18 Jun 2003 15:00:28 GMT"/>
-    </widget>
-  </child>
+      <child>
+	<widget class="GtkMenu" id="remove1_menu">
 
-  <child>
-    <widget class="GtkMenuItem" id="remove_all">
-      <property name="visible">True</property>
-      <property name="tooltip" translatable="yes">Remove all downloads from list</property>
-      <property name="label" translatable="yes">Remove all</property>
-      <property name="use_underline">True</property>
-      <signal name="activate" handler="on_remove_all_activate" last_modification_time="Wed, 18 Jun 2003 15:00:28 GMT"/>
+	  <child>
+	    <widget class="GtkMenuItem" id="remove_completed">
+	      <property name="visible">True</property>
+	      <property name="tooltip" translatable="yes">Remove completed downloads from list</property>
+	      <property name="label" translatable="yes">Remove completed</property>
+	      <property name="use_underline">True</property>
+	      <signal name="activate" handler="on_remove_completed_activate" last_modification_time="Wed, 18 Jun 2003 15:00:28 GMT"/>
+	    </widget>
+	  </child>
+
+	  <child>
+	    <widget class="GtkMenuItem" id="remove_notrunning">
+	      <property name="visible">True</property>
+	      <property name="tooltip" translatable="yes">Remove inactive downloads from list</property>
+	      <property name="label" translatable="yes">Remove inactive</property>
+	      <property name="use_underline">True</property>
+	      <signal name="activate" handler="on_remove_notrunning_activate" last_modification_time="Wed, 18 Jun 2003 15:00:28 GMT"/>
+	    </widget>
+	  </child>
+
+	  <child>
+	    <widget class="GtkMenuItem" id="remove_all">
+	      <property name="visible">True</property>
+	      <property name="tooltip" translatable="yes">Remove all downloads from list</property>
+	      <property name="label" translatable="yes">Remove all</property>
+	      <property name="use_underline">True</property>
+	      <signal name="activate" handler="on_remove_all_activate" last_modification_time="Wed, 18 Jun 2003 15:00:28 GMT"/>
+	    </widget>
+	  </child>
+	</widget>
+      </child>
     </widget>
   </child>
 
@@ -365,7 +378,7 @@
       <signal name="activate" handler="on_cancel_download_activate" last_modification_time="Sat, 31 May 2003 17:47:45 GMT"/>
 
       <child internal-child="image">
-	<widget class="GtkImage" id="image29">
+	<widget class="GtkImage" id="image33">
 	  <property name="visible">True</property>
 	  <property name="stock">gtk-cancel</property>
 	  <property name="icon_size">1</property>
