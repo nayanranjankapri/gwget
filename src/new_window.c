@@ -81,12 +81,29 @@ on_cancel_button_clicked(GtkWidget *widget,gpointer data)
 	gtk_widget_hide(window);
 }
 
+/* checks for data in clipboard: URL or not */
+int check_url( char *str1, char *str2 ) 
+{
+	int i;
+	for( i = 0; str1[i] != '\0'; i++ ) 
+	{
+		if( str1[i] != str2[i] ) return(0);
+	}
+	return(1);
+}
+
 void 
 create_new_window(void)
 {
 	gchar *xml_file = NULL;
 	GtkWidget *window = NULL;
 	GtkEntry *entry = NULL;
+	gchar *url = ""; // URL in clipboard
+	GtkClipboard *clipboard = NULL;
+
+	clipboard = gtk_clipboard_get (GDK_NONE);
+	url = gtk_clipboard_wait_for_text (clipboard);
+	
 	
 	if (!xml_new) {
 		xml_file =g_build_filename(DATADIR,"newdownload.glade",NULL);
@@ -96,7 +113,11 @@ create_new_window(void)
 	
 	window = glade_xml_get_widget(xml_new,"new_window");
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
-	gtk_entry_set_text(GTK_ENTRY(entry),"");
+
+	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
+	if( !check_url( "http://", url ) && !check_url( "ftp://", url ) )
+		url = "";
+	gtk_entry_set_text(GTK_ENTRY(entry),url);
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
 	if (!gwget_pref.download_dir) 
 	{
