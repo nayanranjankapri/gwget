@@ -29,7 +29,7 @@
 BonoboObject *gwget_app_server = NULL;
 
 
-GSList *
+static GSList *
 gwget_get_command_line_data (GnomeProgram *program)
 {
 	GValue value = { 0, };

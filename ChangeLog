@@ -1,5 +1,6 @@
 2004-10-14 David Sedeño <david@alderia.com>
 
+	* src/main.c: Added static to gwget_get_command_line_data function.
 	* src/systray.c: Use gwget.png and gwget-off.png for notification
 	icon.
 	* data/gwget.glade: Change label of Resume toolbar button. Added
