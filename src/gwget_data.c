@@ -255,9 +255,12 @@ gwget_data_process_information (GwgetData *gwgetdata)
 		if (gwgetdata->error) 
 			gwget_data_set_state (gwgetdata, DL_ERROR);
 		else if (WIFEXITED (status)) {
-            if (WEXITSTATUS (status) == 0)
+            if (WEXITSTATUS (status) == 0) {
                 gwget_data_set_state (gwgetdata, DL_COMPLETED);
-            else if (WEXITSTATUS (status) == 255) {
+				if (gwget_pref.open_after_dl) {
+					gwget_data_exec(gwgetdata);
+				} 
+	    	} else if (WEXITSTATUS (status) == 255) {
                 /* Only reaches here if wget is not found */
                 gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
                 g_warning ("couldn't find program wget to exec\n");
@@ -542,6 +545,9 @@ void gwget_data_stop_download(GwgetData *data)
 			/* Set the appropriate state after stopping */
 			if (WIFEXITED (status) && (WEXITSTATUS (status) == 0)) {
 				gwget_data_set_state (data, DL_COMPLETED);
+				if (gwget_pref.open_after_dl) {
+					gwget_data_exec(data);
+				}
 			} else {
 				gwget_data_set_state (data, DL_NOT_RUNNING);
 			}
@@ -621,4 +627,17 @@ gwget_data_add_download(GwgetData *gwgetdata)
 	downloads = g_list_append(downloads,gwgetdata);
 	gwget_data_set_state(gwgetdata,DL_NOT_CONNECTED);
 	new_download(gwgetdata);
+}
+
+void
+gwget_data_exec (GwgetData *gwgetdata)
+{
+	gchar *uri;
+	GError *err = NULL; 
+
+	uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
+							GNOME_VFS_MAKE_URI_DIR_CURRENT);
+	if (!gnome_url_show (uri, &err)) {
+		run_dialog(_("Error opening file"),_("Couldn't open the file"));
+	}
 }

@@ -1,4 +1,21 @@
 2004-11-20 David Sedeño <david@alderia.com>
+	
+	Added open after download feature.
+	* data/preferences.glade: Added the checkbox in General tab
+	* include/gwget_data.h: Added open_after_dl to pref struct.
+	* src/gwget_data.c (gwget_data_exec): new function to exec the
+	prefererred gnome app for downloaded file.
+	(gwget_data_stop_download, gwget_data_process_information): Exec if
+	the preference if true.
+	* src/main_window.c (gwget_get_defaults_from_gconf): Get option from
+	gconf.
+	* src/main_window_cb.c (on_boton_pref_clicked): Put checkbox in the
+	correct state. 
+	(on_pref_ok_button_clicked): Get the checkbox state and put it in
+	gconf.
+	* data/gwget.schemas.in: Added open_after_dl option, default to false.
+
+2004-11-20 David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_boton_pref_clicked): Put proxy settings
 	* data/Makefile.am: Fix installation of gwget.schemas file

@@ -143,6 +143,7 @@ gwget_get_defaults_from_gconf(void)
 	gwget_pref.download_dir=gconf_client_get_string(gconf_client,"/apps/gwget2/download_dir",NULL);
 	gwget_pref.num_retries=gconf_client_get_int(gconf_client,"/apps/gwget2/num_retries",NULL);
 	gwget_pref.resume_at_start=gconf_client_get_bool(gconf_client,"/apps/gwget2/resume_at_start",NULL);
+	gwget_pref.open_after_dl=gconf_client_get_bool(gconf_client,"/apps/gwget2/open_after_dl",NULL);
 	gwget_pref.no_create_directories=gconf_client_get_bool(gconf_client,"/apps/gwget2/no_create_directories",NULL);
 	gwget_pref.follow_relative=gconf_client_get_bool(gconf_client,"/apps/gwget2/follow_relative",NULL);
 	gwget_pref.convert_links = gconf_client_get_bool(gconf_client,"/apps/gwget2/convert_links",NULL);	

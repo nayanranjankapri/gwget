@@ -311,12 +311,17 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.http_proxy_port);
 
 	
+	/* General */
 	entry = glade_xml_get_widget(xml_pref,"num_retries_entry");
 	gtk_entry_set_text(GTK_ENTRY(entry),g_strdup_printf("%d",gwget_pref.num_retries));
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"resume_at_start");
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref), "resume_at_start");
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.resume_at_start);
+
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref), "open_after_dl");
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.open_after_dl);
 	
+	/* Recursive */
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.no_create_directories);
 
@@ -356,7 +361,7 @@ on_pref_cancel_button_clicked(GtkWidget *widget,gpointer data)
 void 
 on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 {
-	GtkWidget *save_in = NULL, *pref_window = NULL,*num_retries=NULL,*resume;
+	GtkWidget *save_in = NULL, *pref_window = NULL,*num_retries=NULL,*resume = NULL, *open_after_dl = NULL;
 	GtkWidget *http_proxy = NULL, *http_proxy_port_spin = NULL;
 	GtkWidget *no_create_directories = NULL;
 	GtkWidget *follow_relative = NULL;	
@@ -403,6 +408,11 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	
 	resume=glade_xml_get_widget(xml_pref,"resume_at_start");
 	gwget_pref.resume_at_start=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume));
+
+	open_after_dl = glade_xml_get_widget(xml_pref, "open_after_dl");
+	gwget_pref.open_after_dl = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(open_after_dl));
+	gconf_client_set_bool(gconf_client, "/apps/gwget2/open_after_dl",
+					gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(open_after_dl)), NULL);
 	
 	pref_window = glade_xml_get_widget(xml_pref,"pref_window");
 	gtk_widget_hide(pref_window);

@@ -30,6 +30,7 @@ typedef struct
 	gboolean gnome_use_proxy;
 	gchar *network_mode;
 	gboolean resume_at_start;
+	gboolean open_after_dl; /* Open the file after Download */
 	gboolean no_create_directories;
 	gboolean follow_relative;	/* Follow relative links only */
 	gboolean convert_links;		/* Converts to relative links */
@@ -110,5 +111,6 @@ void gwget_data_free(gpointer data);
 void gwget_data_stop_download(GwgetData *data);
 void gwget_data_set_filename_from_url(GwgetData *gwgetdata, gchar *url);
 void gwget_data_add_download(GwgetData *gwgetdata);
+void gwget_data_exec(GwgetData *gwgetdata);
 
 #endif
