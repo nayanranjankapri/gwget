@@ -21,7 +21,8 @@
 
 
 
-gint run_dialog(gchar *title, gchar *msg)
+gint 
+run_dialog(gchar *title, gchar *msg)
 {
 	GtkWidget *dialog;
 	gchar *mark;

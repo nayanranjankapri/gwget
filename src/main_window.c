@@ -29,15 +29,18 @@
 /* Global Preferences */
 Preferences gwget_pref;
 
-static void show_prefered_columns(void);
+static void 
+show_prefered_columns(void);
 
-static void gwget_gconf_notify_toolbar(GConfClient *client,
-		   			guint        cnxn_id,
-		   			GConfEntry  *entry,
-		   			gpointer     user_data);
+static void 
+gwget_gconf_notify_toolbar(GConfClient *client,
+						   guint        cnxn_id,
+		   				   GConfEntry  *entry,
+		   				   gpointer     user_data);
 
 
-void main_window(void) 
+void 
+main_window(void) 
 {
 	GtkWidget * window = NULL;
 	gchar *xml_file = NULL,*toolbar_setting;
@@ -45,7 +48,6 @@ void main_window(void)
 	GtkTreeSelection *select;
 	
 
-	
 	if (!xml) {
 		xml_file=g_build_filename(DATADIR,"gwget.glade",NULL);
 		xml = glade_xml_new(xml_file,NULL,NULL);
@@ -61,7 +63,7 @@ void main_window(void)
 	gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
                 
 	/* add the columns titles to the tree view */
-    	add_columns (GTK_TREE_VIEW (treev));
+    add_columns (GTK_TREE_VIEW (treev));
 	
 	gconf_client = gconf_client_get_default();
 	gconf_client_add_dir (gconf_client, "/apps/gwget", GCONF_CLIENT_PRELOAD_NONE,
@@ -72,13 +74,14 @@ void main_window(void)
 	
 	/* Drag and drop set up */
 	gtk_drag_dest_set(GTK_WIDGET(window), 
-						GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
-						dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
-                        GDK_ACTION_COPY);
+					  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
+					  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
+                      GDK_ACTION_COPY);
 						
 	g_signal_connect(G_OBJECT(window), "drag-data-received",
-                         G_CALLBACK(on_treeview_drag_received),
-                         GUINT_TO_POINTER(dnd_type));
+					 G_CALLBACK(on_treeview_drag_received),
+					 GUINT_TO_POINTER(dnd_type));
+					 
 	/* Set the toolbar like gnome preferences */
 	toolbar = glade_xml_get_widget(xml,"toolbar1");
 	toolbar_setting = gconf_client_get_string(gconf_client,"/desktop/gnome/interface/toolbar_style",NULL);
@@ -101,11 +104,12 @@ void main_window(void)
 	
 	/* Listen to changes to the key. */
 	gconf_client_notify_add (gconf_client,
-				 "/desktop/gnome/interface/toolbar_style",
-				 gwget_gconf_notify_toolbar,
-				 NULL,
-				 NULL,
-				 NULL);
+							"/desktop/gnome/interface/toolbar_style",
+				 			gwget_gconf_notify_toolbar,
+				 			NULL,
+				 			NULL,
+				 			NULL);
+	
 	/* Show the toolbar ? */
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_toolbar")),gwget_pref.view_toolbar);
 	gtk_widget_show(window);
@@ -113,15 +117,15 @@ void main_window(void)
 	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
 	if (!gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(menu_item))) {
 		gtk_widget_hide(GTK_WIDGET(toolbar));
-	}
-	else {
+	} else {
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}
 	
 	systray_load();
 }
 
-void gwget_get_defaults_from_gconf(void)
+void 
+gwget_get_defaults_from_gconf(void)
 {
 	gint num_dl,i;
 	GwgetData *data;
@@ -160,9 +164,7 @@ void gwget_get_defaults_from_gconf(void)
 		}
 	}
 	show_prefered_columns();
-	
-	
-	
+		
 	/* Default width and height */
 	default_width=gconf_client_get_int (gconf_client,"/apps/gwget/default_width",NULL);
 	default_height=gconf_client_get_int (gconf_client,"/apps/gwget/default_height",NULL);
@@ -170,40 +172,40 @@ void gwget_get_defaults_from_gconf(void)
 	
 	/* Default position */
 	gtk_window_move(GTK_WINDOW(glade_xml_get_widget(xml,"main_window")),
-			gconf_client_get_int (gconf_client,"/apps/gwget/position_x",NULL),
-			gconf_client_get_int (gconf_client,"/apps/gwget/position_y",NULL));
-			
+					gconf_client_get_int (gconf_client,"/apps/gwget/position_x",NULL),
+					gconf_client_get_int (gconf_client,"/apps/gwget/position_y",NULL)
+					);
 }			
 
 
-void on_main_window_delete_event(GtkWidget *widget, gpointer data)
+void 
+on_main_window_delete_event(GtkWidget *widget, gpointer data)
 {
 	gtk_widget_hide(widget);
-	/* on_quit1_activate(widget, data); */
 }
 
 GtkTreeModel *
 create_model (void)
 {
-  GtkListStore *model;
+	GtkListStore *model;
 
 	model = gtk_list_store_new (NUM_COLUMNS,
-				    G_TYPE_STRING, /* File name */
-			      	    G_TYPE_STRING, /* URL */
-			            G_TYPE_STRING, /* State */
-				    G_TYPE_STRING, /* Current size */
-				    G_TYPE_STRING, /* Total Size */
-				    G_TYPE_INT,    /* Percentage */
-				    G_TYPE_STRING, /* Percentage */
-				    G_TYPE_STRING, /* Elapse Time */
-			            G_TYPE_STRING, /* Current time  */
-				    G_TYPE_STRING, /* Estimated time  */
-				    G_TYPE_STRING, /* Remain Time */
-				/* Not viewable columns */ 
-				    G_TYPE_INT,    /* Pid */
-				    G_TYPE_INT,	   /* State int column */
-				    G_TYPE_STRING  /* Speed */
-				);
+								G_TYPE_STRING, /* File name */
+								G_TYPE_STRING, /* URL */
+								G_TYPE_STRING, /* State */
+								G_TYPE_STRING, /* Current size */
+								G_TYPE_STRING, /* Total Size */
+								G_TYPE_INT,    /* Percentage */
+								G_TYPE_STRING, /* Percentage */
+								G_TYPE_STRING, /* Elapse Time */
+								G_TYPE_STRING, /* Current time  */
+								G_TYPE_STRING, /* Estimated time  */
+								G_TYPE_STRING, /* Remain Time */
+								/* Not viewable columns */ 
+								G_TYPE_INT,    /* Pid */
+								G_TYPE_INT,	   /* State int column */
+								G_TYPE_STRING  /* Speed */
+								);
 				  
 	return GTK_TREE_MODEL (model);
 }
@@ -211,169 +213,116 @@ create_model (void)
 void
 add_columns (GtkTreeView *treeview)
 {
-  GtkCellRenderer *renderer;
-  GtkTreeViewColumn *column;
-
- 
+	GtkCellRenderer *renderer;
+	GtkTreeViewColumn *column;
 	
-   /* File Name Column */
-  renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes (_("File Name"),
-						     renderer,
-						     "text",
-						     FILENAME_COLUMN,
-						     NULL);
-  gtk_tree_view_column_set_sort_column_id (column, FILENAME_COLUMN);
-  gtk_tree_view_append_column (treeview, column);
+	/* File Name Column */
+	renderer = gtk_cell_renderer_text_new ();
+	column = gtk_tree_view_column_new_with_attributes (_("File Name"),
+													     renderer,
+						     							"text",
+						     							FILENAME_COLUMN,
+						     							NULL);
+	gtk_tree_view_column_set_sort_column_id (column, FILENAME_COLUMN);
+	gtk_tree_view_append_column (treeview, column);
 
 	/* State Column */
-   renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes (_("State"),
-							renderer,
-						     "text",
-							STATE_COLUMN,
-							NULL);
+	renderer = gtk_cell_renderer_text_new ();
+	column = gtk_tree_view_column_new_with_attributes (_("State"),
+														renderer,
+						     							"text",
+														STATE_COLUMN,
+														NULL);
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Current Size */
 	renderer = gtk_cell_renderer_text_new ();
     column = gtk_tree_view_column_new_with_attributes (_("Current Size"),
-							renderer,
-						     "text",
-							CURRENTSIZE_COLUMN,
-							NULL);
+														renderer,
+						     							"text",
+														CURRENTSIZE_COLUMN,
+														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, CURRENTSIZE_COLUMN);
   	gtk_tree_view_append_column (treeview, column);
 	
 	/* Total Size */
 	renderer = gtk_cell_renderer_text_new ();
     column = gtk_tree_view_column_new_with_attributes (_("Total Size"),
-							renderer,
-						     "text",
-							TOTALSIZE_COLUMN,
-							NULL);
+														renderer,
+						     							"text",
+														TOTALSIZE_COLUMN,
+														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, TOTALSIZE_COLUMN);
   	gtk_tree_view_append_column (treeview, column);
 	
 	/* Percentage */
-	/* renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Percentage"),
-							renderer,
-						     "text",
-							PERCENTAGE_COLUMN,
-							NULL);
-	gtk_tree_view_column_set_sort_column_id (column, PERCENTAGE_COLUMN);
-  	gtk_tree_view_append_column (treeview, column); */
 	renderer = ephy_cell_renderer_progress_new();
 	column = gtk_tree_view_column_new_with_attributes (_("Percentage"),
-						     renderer,
-						     "value", 
-							 PERCENTAGE_COLUMN,
-						     NULL);
-	
-	/* column = gtk_tree_view_column_new(); */
-	
-	/* gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN); */
+														renderer,
+														"value", 
+														PERCENTAGE_COLUMN,
+														NULL);
 	gtk_tree_view_column_set_title (column, (_("Percentage"))); 
     gtk_tree_view_append_column(GTK_TREE_VIEW(treeview),column); 
-	
-	
-	/* Total Time */
-	/* renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Total Time"),
-							renderer,
-						     "text",
-							TOTALTIME_COLUMN,
-							NULL);
-	gtk_tree_view_column_set_sort_column_id (column, TOTALTIME_COLUMN);
-  	gtk_tree_view_append_column (treeview, column);
-	*/
-	
+		
 	/* Elapse Time */
-	 renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Elapsed Time"),
-							renderer,
-						     "text",
-							ELAPSETIME_COLUMN,
-							NULL);
-	gtk_tree_view_column_set_sort_column_id (column, ELAPSETIME_COLUMN);
-  	gtk_tree_view_append_column (treeview, column);
-	
-	/* Current Time */
-	/*
 	renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Current Time"),
-							renderer,
-						     "text",
-							CURRENTTIME_COLUMN,
-							NULL);
-	gtk_tree_view_column_set_sort_column_id (column, CURRENTTIME_COLUMN);
-  	gtk_tree_view_append_column (treeview, column);
-	*/
+	column = gtk_tree_view_column_new_with_attributes (_("Elapsed Time"),
+														renderer,
+														"text",
+														ELAPSETIME_COLUMN,
+														NULL);
+	gtk_tree_view_column_set_sort_column_id (column, ELAPSETIME_COLUMN);
+	gtk_tree_view_append_column (treeview, column);
 	
-	/* Estimated Time */
-	/* renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Estimated Time"),
-							renderer,
-						     "text",
-							ESTIMATEDTIME_COLUMN,
-							NULL);
-	gtk_tree_view_column_set_sort_column_id (column, ESTIMATEDTIME_COLUMN);
-  	gtk_tree_view_append_column (treeview, column);
-	*/
 	/* REMAINTIME_COLUMN */
 	renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Remaining Time"),
-							renderer,
-						     "text",
-							REMAINTIME_COLUMN,
-							NULL);
+	column = gtk_tree_view_column_new_with_attributes (_("Remaining Time"),
+														renderer,
+														"text",
+														REMAINTIME_COLUMN,
+														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, REMAINTIME_COLUMN);
-  	gtk_tree_view_append_column (treeview, column);
+	gtk_tree_view_append_column (treeview, column);
 	
 	/* Speed */
 	renderer = gtk_cell_renderer_text_new ();
-    column = gtk_tree_view_column_new_with_attributes (_("Speed"),
-							renderer,
-						     "text",
-							SPEED_COLUMN,
-							NULL);
+	column = gtk_tree_view_column_new_with_attributes (_("Speed"),
+														renderer,
+														"text",
+														SPEED_COLUMN,
+														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, SPEED_COLUMN);
-  	gtk_tree_view_append_column (treeview, column);
+	gtk_tree_view_append_column (treeview, column);
 	
-	  	
 }
 
-void on_treeview_drag_received(GtkWidget * widget, GdkDragContext * context, int x,
-                     int y, GtkSelectionData * seldata, guint info,
-                     guint time, gpointer data)
+void 
+on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
+							int y, GtkSelectionData * seldata, guint info,	
+							guint time, gpointer data)
 {
 	gchar *file;
 	GwgetData *gwgetdata;
 	
 	dnd_type = GPOINTER_TO_UINT(data);
-    file=((gchar *) (seldata->data));
+	file=((gchar *) (seldata->data));
       
-	printf("URL1: %s\ntype: %d\n", file,dnd_type);	
-    if(dnd_type==TARGET_URI_LIST || dnd_type==TARGET_NETSCAPE_URL)
-    {
+	if (dnd_type==TARGET_URI_LIST || dnd_type==TARGET_NETSCAPE_URL) {
 		gwgetdata=gwget_data_create(file,gwget_pref.download_dir);
 		new_download(gwgetdata);
 		gwget_data_start_download(gwgetdata);
-		
 		gtk_drag_finish(context, TRUE, FALSE, time);
-	}
-	else
-	{
+	} else 	{
 		gtk_drag_finish(context, FALSE, TRUE, time);
-    }
+	}
 }
 
 static void
 gwget_gconf_notify_toolbar(GConfClient *client,
-		   			guint        cnxn_id,
-		   			GConfEntry  *entry,
-		   			gpointer     user_data)
+				   			guint        cnxn_id,
+		   					GConfEntry  *entry,
+		   					gpointer     user_data)
 {
 	GConfValue  *value;
 	GtkWidget *toolbar;
@@ -402,7 +351,8 @@ gwget_gconf_notify_toolbar(GConfClient *client,
 	}
 }
 
-static void show_prefered_columns(void)
+static void 
+show_prefered_columns(void)
 {	
 	GtkWidget *treev,*column,*checkitem;
 	gchar *xml_file=NULL;
@@ -413,85 +363,65 @@ static void show_prefered_columns(void)
 		glade_xml_signal_autoconnect(xml_pref);
 	}
 	
-	
-	
 	treev = glade_xml_get_widget(xml,"treeview1");
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-1);
 	checkitem=glade_xml_get_widget(xml_pref,"check_actual_size");
 	if (gwget_pref.view_actual_size) {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     TRUE);
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
-	}
-	else {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     FALSE);
+	} else {
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),FALSE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-1);
 	checkitem=glade_xml_get_widget(xml_pref,"check_total_size");
 	if (gwget_pref.view_total_size) {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     TRUE);
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
-	}
-	else {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     FALSE);
+	} else {
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), FALSE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-1);
 	checkitem=glade_xml_get_widget(xml_pref,"check_percentage");
 	if (gwget_pref.view_percentage) {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     TRUE);
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
-	}
-	else {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     FALSE);
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), TRUE);
+	} else {
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), FALSE);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), FALSE);
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-2);
 	checkitem=glade_xml_get_widget(xml_pref,"check_elapse_time");
 	if (gwget_pref.view_elapse_time) {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     TRUE);
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
-	}
-	else {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     FALSE);
+	} else {
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), FALSE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-4);
 	checkitem=glade_xml_get_widget(xml_pref,"check_rem_time");
 	if (gwget_pref.view_rem_time) {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     TRUE);
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
-	}
-	else {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     FALSE);
+	} else {
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), FALSE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-6);
 	checkitem=glade_xml_get_widget(xml_pref,"check_down_speed");
 	if (gwget_pref.view_down_speed) {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     TRUE);
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
-	}
-	else {
-		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
-                                     FALSE);
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), TRUE);
+	} else {
+		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), FALSE);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), FALSE);
 	}
 	
 }

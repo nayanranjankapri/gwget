@@ -19,8 +19,6 @@
 #include <glade/glade.h>
 #include <gconf/gconf-client.h>
 #include <signal.h>
-/* This 4 includes it's for open the file with the */
-/*  default gnome application */
 #include <libgnome/gnome-url.h>
 #include <libgnome/gnome-program.h>
 #include <libgnome/gnome-init.h>
@@ -32,25 +30,17 @@
 #include "utils.h"
 
 
-
-
-
-void on_stop_button_clicked (GtkWidget *widget, gpointer data) 
+void 
+on_stop_button_clicked (GtkWidget *widget, gpointer data) 
 {
 	GwgetData* gwgetdata;
-	
-	
-	
+		
 	gwgetdata = gwget_data_get_selected();
+	
 	if (gwgetdata) {
 		gwget_data_stop_download(gwgetdata);
 	}
-	
 }
-
-
-
-
 
 gboolean
 on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointer user_data)
@@ -75,25 +65,21 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),TRUE);
 				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
 				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),TRUE);
-			}
-			else {
+			} else {
 				if (gwgetdata->state==DL_COMPLETED) {
 					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
 					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
 					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),FALSE);
-				}
-				else {
+				} else {
 					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),TRUE);
 					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
-				
 				}
 			}
 			popup=glade_xml_get_widget(xml,"popup1");
 			gtk_menu_popup (GTK_MENU(popup), NULL, NULL, NULL, NULL, 
-					event_button->button, event_button->time);
+							event_button->button, event_button->time);
 			return TRUE;
 		}
-		
 	}
 	
 	/* Double click */
@@ -106,23 +92,21 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 			/* If the download is in error state, show the error message in a dialog */
 			if (gwgetdata->error) {
 				run_dialog(_("Error in download"),gwgetdata->error_msg);
-			}
-			else {
+			} else {
 				uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
                                                  GNOME_VFS_MAKE_URI_DIR_CURRENT);
 				if (!gnome_url_show (uri, &err)) {
 					run_dialog(_("Error opening file"),_("Couldn't open the file"));
 				}
 				return TRUE;
-			}
-			
+			}	
 		}
 	}
 	return FALSE;			   
-
 }
 
-void stop_all_downloads(void)
+void 
+stop_all_downloads(void)
 {
 	GwgetData* gwgetdata;
 	GtkTreeIter iter;
@@ -139,17 +123,17 @@ void stop_all_downloads(void)
 				kill(gwgetdata->wget_pid,SIGINT);
 		}
 	}
-
 }
 
-void on_quit1_activate(GtkWidget *widget, gpointer data) 
+void 
+on_quit1_activate(GtkWidget *widget, gpointer data) 
 {
 	gint response;
 	gchar *url,*key;
 	GwgetData *gwgetdata;
 	GtkTreeIter iter;
 	gint i,length,position_x,position_y;
-	gboolean running; /* There are any download retriving? */
+	gboolean running; 
 	GtkWidget *main_window;
 	GtkAllocation *allocation;
 	
@@ -165,28 +149,23 @@ void on_quit1_activate(GtkWidget *widget, gpointer data)
 	/* Calculate if there are any dl in retriving state */
 	running = FALSE;
 	for (i=0;i<length;i++) {
-		
 		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
 		gwgetdata=g_object_get_data(G_OBJECT(model),url);
 	
 		key=g_strdup_printf("/apps/gwget/downloads_data/%d",i);
 		gconf_client_add_dir(gconf_client,key,
-						GCONF_CLIENT_PRELOAD_NONE,NULL);
+							 GCONF_CLIENT_PRELOAD_NONE,NULL);
 		key=g_strdup_printf("/apps/gwget/downloads_data/%d/url",i);
-		gconf_client_set_string(gconf_client,key,
-					gwgetdata->url,NULL);
+		gconf_client_set_string(gconf_client,key,gwgetdata->url,NULL);
 		
 		key=g_strdup_printf("/apps/gwget/downloads_data/%d/filename",i);
-		gconf_client_set_string(gconf_client,key,
-					gwgetdata->filename,NULL);	
+		gconf_client_set_string(gconf_client,key,gwgetdata->filename,NULL);	
 	
 		key=g_strdup_printf("/apps/gwget/downloads_data/%d/dir",i);
-		gconf_client_set_string(gconf_client,key,
-					gwgetdata->dir,NULL);	
+		gconf_client_set_string(gconf_client,key,gwgetdata->dir,NULL);	
 		
 		key=g_strdup_printf("/apps/gwget/downloads_data/%d/state",i);
-		gconf_client_set_int(gconf_client,key,
-					gwgetdata->state,NULL);	
+		gconf_client_set_int(gconf_client,key,gwgetdata->state,NULL);	
 		
 		if (gwgetdata->state==DL_RETRIEVING) 
 		{
@@ -214,16 +193,14 @@ void on_quit1_activate(GtkWidget *widget, gpointer data)
 			stop_all_downloads();
 			gtk_main_quit();
 		}
-	}
-	else {
+	} else {
 		gtk_main_quit();
 	}
-	
-	
 }
 
 
-void on_about1_activate(GtkWidget *widget, gpointer data)
+void 
+on_about1_activate(GtkWidget *widget, gpointer data)
 {
 	static GtkWidget *about = NULL;
 	GdkPixbuf *pixbuf = NULL;
@@ -236,8 +213,8 @@ void on_about1_activate(GtkWidget *widget, gpointer data)
 	};
 
 	gchar  *documenters[] = {
-		                "",
-		NULL
+			"",
+			NULL
 	};
 
 	gchar *translator_credits = _("translator_credits");
@@ -253,48 +230,49 @@ void on_about1_activate(GtkWidget *widget, gpointer data)
 	pixbuf = gdk_pixbuf_new_from_file (logo_file, NULL);
 
 	about = gnome_about_new (_("Gwget"), VERSION,
-			     	copy_text,
-				about_text,
-				(const char **)authors,
-				(const char **)NULL,
-				(const char *)translator_credits,
-				pixbuf);
+							copy_text,
+							about_text,
+							(const char **)authors,
+							(const char **)NULL,
+							(const char *)translator_credits,
+							pixbuf);
 
-	if (pixbuf != NULL)
+	if (pixbuf != NULL) {
 		g_object_unref (pixbuf);
+	}
 	
-	g_signal_connect (G_OBJECT (about), "destroy",
-			G_CALLBACK (gtk_widget_destroyed), &about);
+	g_signal_connect (G_OBJECT (about), "destroy", 
+						G_CALLBACK (gtk_widget_destroyed), &about);
 	                                                                                                                             
 	gtk_widget_show (about);
 
-
-
-	
 }
 
 
-void on_button_new_clicked(GtkWidget *widget, gpointer data) 
+void 
+on_button_new_clicked(GtkWidget *widget, gpointer data) 
 {
 	create_new_window();
 }
 	
-void new_download(GwgetData* gwgetdata) {
+void 
+new_download(GwgetData* gwgetdata) {
 	GtkTreeIter iter;
 	
 	gtk_list_store_append (GTK_LIST_STORE(model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE(model), &iter,URL_COLUMN,gwgetdata->url,
-		CURRENTSIZE_COLUMN,gwgetdata->cur_size, FILENAME_COLUMN, gwgetdata->filename,
-	    -1);
+						CURRENTSIZE_COLUMN,gwgetdata->cur_size, 
+						FILENAME_COLUMN, gwgetdata->filename,
+	    				-1);
 	
 	gwgetdata->file_list=iter; 
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
-		
 }
 
 
-void on_boton_pref_clicked(GtkWidget *widget, gpointer data)
+void 
+on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 {
 	gchar *xml_file = NULL;
 	GtkWidget *window = NULL,*entry=NULL, *checkbutton=NULL;
@@ -341,8 +319,6 @@ on_pref_cancel_button_clicked(GtkWidget *widget,gpointer data)
 	
 	pref_window = glade_xml_get_widget(xml_pref,"pref_window");
 	gtk_widget_hide(pref_window);
-	
-	
 }
 	
 void 
@@ -368,17 +344,17 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	gtk_widget_hide(pref_window);
 	
 	gconf_client_set_string(gconf_client,"/apps/gwget/download_dir",
-					g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in))),NULL);
+							g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in))),NULL);
 	gconf_client_set_int(gconf_client,"/apps/gwget/num_retries",
-					atoi(gtk_entry_get_text(GTK_ENTRY(num_retries))),NULL);
+						atoi(gtk_entry_get_text(GTK_ENTRY(num_retries))),NULL);
 	gconf_client_set_bool(gconf_client,"/apps/gwget/resume_at_start",
-					gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume)),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume)),NULL);
 	
 	/* Recursivity */
 	no_create_directories  = glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
 	gwget_pref.no_create_directories = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/no_create_directories",
-				gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories)),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories)),NULL);
 	
 	/* Follow relative links only */
 	follow_relative = glade_xml_get_widget(GLADE_XML(xml_pref),"follow_relative");
@@ -401,28 +377,28 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	/* Column listing */
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_actual_size",
-						gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size"))),NULL);
+	 					  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size"))),NULL);
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_total_size",
-						gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size"))),NULL);
 	
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_percentage",
-						gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage"))),NULL);
 
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_elapse_time",
-						gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time"))),NULL);
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_rem_time",
-						gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time"))),NULL);
 
 	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed")));
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_down_speed",
-						gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed"))),NULL);
 
 }
 
@@ -470,31 +446,24 @@ on_popup_pause_button_clicked(GtkWidget *widget, gpointer data)
 	if (gwgetdata) {
 		gwget_data_stop_download(gwgetdata);
 	}
-	
 }
 
-void on_popup_continue_activate(GtkWidget *widget, gpointer data)
+void 
+on_popup_continue_activate(GtkWidget *widget, gpointer data)
 {
 	GwgetData *gwgetdata;
 	
-	
-	
-	
-	/* gwget_data_get_selected doen't work :(  */
 	gwgetdata = gwget_data_get_selected();
 	
-	
 	if (gwgetdata) {
-		printf("Iniciando...\n");
 		gwget_data_start_download(gwgetdata);
+	} else {
+		printf("NULL\n");
 	}
-	else {
-		printf("NULO\n");
-	}
-	
 }
 
-void on_cancel_download_activate(GtkWidget *widget,gpointer data)
+void 
+on_cancel_download_activate(GtkWidget *widget,gpointer data)
 {
 	gint response;
 	GwgetData *gwgetdata;
@@ -502,7 +471,6 @@ void on_cancel_download_activate(GtkWidget *widget,gpointer data)
 	
 	gwgetdata = gwget_data_get_selected();
 	
-	/* if (gwgetdata && (gwgetdata->state==DL_RETRIEVING)) */
 	if (gwgetdata) 
 	{
 		msg = g_strdup_printf(_("Really cancel current download? (Url: %s)"),gwgetdata->url);
@@ -520,7 +488,8 @@ void on_cancel_download_activate(GtkWidget *widget,gpointer data)
 
 
 /* Remove completed downloads (popup) */
-void on_remove_completed_activate(GtkWidget *widget, gpointer data)
+void 
+on_remove_completed_activate(GtkWidget *widget, gpointer data)
 {
 	gint response;
 	GwgetData *gwgetdata;
@@ -534,14 +503,11 @@ void on_remove_completed_activate(GtkWidget *widget, gpointer data)
 		gtk_tree_model_get_iter_root(model,&iter);
 		for (i=0;i<length;i++) {
 			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-			printf("URL:%s\n",url);
 			gwgetdata=g_object_get_data(G_OBJECT(model),url);
 			
 			if (gwgetdata->state==DL_COMPLETED) {
 				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
-				printf("Remove: %s\n",url);
-			}
-			else {
+			} else {
 				gtk_tree_model_iter_next(model,&iter);
 			}
 		}
@@ -550,7 +516,8 @@ void on_remove_completed_activate(GtkWidget *widget, gpointer data)
 }
 
 /* Remove not running downloads (popup) */
-void on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
+void 
+on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 {
 	gint response;
 	GwgetData *gwgetdata;
@@ -570,8 +537,7 @@ void on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 			if (gwgetdata->state!=DL_RETRIEVING) {
 				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
 				printf("Remove: %s\n",url);
-			}
-			else {
+			} else {
 				gtk_tree_model_iter_next(model,&iter);
 			}
 		}
@@ -580,7 +546,8 @@ void on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 }
 
 /* Remove all downloads (popup) */
-void on_remove_all_activate(GtkWidget *widget, gpointer data)
+void 
+on_remove_all_activate(GtkWidget *widget, gpointer data)
 {
 	gint response;
 	GwgetData *gwgetdata;
@@ -592,7 +559,6 @@ void on_remove_all_activate(GtkWidget *widget, gpointer data)
 	if (response == GTK_RESPONSE_OK) {
 		length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 		gtk_tree_model_get_iter_root(model,&iter);
-		printf("Length: %d\n",length);
 		for (i=0;i<length;i++) {
 			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
 			printf("URL:%s\n",url);
@@ -605,14 +571,13 @@ void on_remove_all_activate(GtkWidget *widget, gpointer data)
 			}
 			
 			gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
-			printf("Remove: %s\n",url);
-			
 		}
 	}
 				
 }
 
-void on_view_toolbar_activate(GtkWidget *widget,gpointer data)
+void 
+on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 {
 	GtkWidget *toolbar,*menu_item;
 	gboolean state;
@@ -624,16 +589,14 @@ void on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 	if (!state) 
 	{
 		gtk_widget_hide(GTK_WIDGET(toolbar));	
-	}
-	else 
-	{
+	} else {
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}		
 	gconf_client_set_bool(gconf_client,"/apps/gwget/view_toolbar",state,NULL);
-	
 }
 
-void on_propierties_activate(GtkWidget *widget, gpointer data)
+void 
+on_propierties_activate(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *main_window,*propierties,*url_txt,*local_file,*local_dir;
 	GwgetData *gwgetdata;
@@ -650,10 +613,10 @@ void on_propierties_activate(GtkWidget *widget, gpointer data)
 	local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
 	gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
 	gtk_widget_show(propierties);
-	
 }
 
-void on_check_actual_size_toggled(GtkWidget *widget, gpointer data)
+void 
+on_check_actual_size_toggled(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *treev,*column;
 	gboolean visible;
@@ -663,10 +626,10 @@ void on_check_actual_size_toggled(GtkWidget *widget, gpointer data)
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
-	
 }
 
-void on_check_total_size_toggled(GtkWidget *widget, gpointer data)
+void 
+on_check_total_size_toggled(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *treev,*column;
 	gboolean visible;
@@ -679,7 +642,8 @@ void on_check_total_size_toggled(GtkWidget *widget, gpointer data)
 	
 }
 
-void on_check_percentage_toggled(GtkWidget *widget, gpointer data)
+void 
+on_check_percentage_toggled(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *treev,*column;
 	gboolean visible;
@@ -692,7 +656,8 @@ void on_check_percentage_toggled(GtkWidget *widget, gpointer data)
 	
 }
 
-void on_check_elapse_time_toggled(GtkWidget *widget, gpointer data)
+void 
+on_check_elapse_time_toggled(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *treev,*column;
 	gboolean visible;
@@ -705,7 +670,8 @@ void on_check_elapse_time_toggled(GtkWidget *widget, gpointer data)
 	
 }
 
-void on_check_rem_time_toggled(GtkWidget *widget, gpointer data)
+void 
+on_check_rem_time_toggled(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *treev,*column;
 	gboolean visible;
@@ -718,7 +684,8 @@ void on_check_rem_time_toggled(GtkWidget *widget, gpointer data)
 	
 }
 
-void on_check_down_speed_toggled(GtkWidget *widget, gpointer data)
+void 
+on_check_down_speed_toggled(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *treev,*column;
 	gboolean visible;

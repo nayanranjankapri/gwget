@@ -38,8 +38,6 @@ This file creates the window for add new download and its callback
 GladeXML *xml_new = NULL;
 
 
-	
-
 void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *window=NULL,*recursive_window=NULL,*radio=NULL;
@@ -65,17 +63,12 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 		}
 	
 		if (!strcmp(save_in,"") && !gwget_pref.download_dir) {
-		    save_in=g_strdup(getenv("HOME"));
+			save_in=g_strdup(getenv("HOME"));
 		}
 	
 		gwgetdata = gwget_data_create(url,save_in);
 		/* if the url it's not a file drop a dialog to recurse into the url */
 		if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url)) {
-			/* response=run_dialog(_("Recurse into the Url ?"),_("The url it's not a file. \n Do you like to recurse into the url ?\nOtherwise only the index file will be downloaded."));
-			if (response == GTK_RESPONSE_OK) {
-				gwgetdata->recursive=TRUE;
-			}
-			*/
 			recursive_window=glade_xml_get_widget(xml,"dialog2");
 			response=gtk_dialog_run(GTK_DIALOG(recursive_window));
 			gtk_widget_hide(GTK_WIDGET(recursive_window));
@@ -86,13 +79,11 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 				}
 				radio=glade_xml_get_widget(xml,"radio_multimedia");
 				if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
-					printf("Multimedia\n");
 					gwgetdata->recursive=TRUE;
 					gwgetdata->multimedia=TRUE;
 				}
 				radio=glade_xml_get_widget(xml,"radio_mirror");
 				if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
-					printf("mirror\n");
 					gwgetdata->recursive=TRUE;
 					gwgetdata->mirror=TRUE;
 				}
@@ -108,12 +99,10 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 		gwget_data_start_download(gwgetdata);
 		g_free(save_in);		
 	}
-	
-	
-	
 }
 
-void on_cancel_button_clicked(GtkWidget *widget,gpointer data) 
+void 
+on_cancel_button_clicked(GtkWidget *widget,gpointer data) 
 {
 	GtkWidget *window = NULL;
 	
@@ -123,7 +112,8 @@ void on_cancel_button_clicked(GtkWidget *widget,gpointer data)
 }
 	
 
-void create_new_window(void)
+void 
+create_new_window(void)
 {
 	gchar *xml_file = NULL;
 	GtkWidget *window = NULL;
