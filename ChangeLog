@@ -1,0 +1,23 @@
+2004-06-21  David Sedeño <david@alderia.com>
+
+	* configure.in: Added tr to ALL_LINGUAS
+	* po/tr.po: Added turkish translation (Thanks to Mark R. Pariente)
+
+2004-06-13  David Sedeño <david@alderia.com>
+                                                                                
+	* systray.c (systray_generate_menu): Add a separator item.
+
+2004-06-12  David Sedeño <david@alderia.com>
+                                                                                
+	* data/newdownload.glade: Changed name of callback of ok button.
+	* include/gwget_data.h: Added docked to Preferences struct.
+	* include/main_window.h: Added gwget_quit function.
+	* src/systray.c: Connect Quit menu item to gwget_quit function.
+	* src/main_window.c: call gwget_quit on delete event if not docked.
+	* src/main_window_cb.c (on_quit1_activate): call gwget_quit.
+
+2004-06-12  David Sedeño <david@alderia.com>
+                                                                                
+	* systray.c, main_window.c:exit on delete event if not docked.
+                                                                                
+
