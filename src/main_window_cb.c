@@ -98,6 +98,7 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
                                                  GNOME_VFS_MAKE_URI_DIR_CURRENT);
 				if (!gnome_url_show (uri, &err)) {
 					run_dialog(_("Error opening file"),_("Couldn't open the file"));
+					return FALSE;
 				}
 				return TRUE;
 			}	

@@ -1,3 +1,8 @@
+2004-09-10  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (on_treeview1_button_press_event):
+	  return False if can open the default application in double click.
+
 2004-09-08  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (new_download):
