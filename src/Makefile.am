@@ -52,7 +52,8 @@ gwget_SOURCES = \
 	new_window.c\
 	eggtrayicon.c\
 	systray.c \
-	gwget-application-server.c 
+	gwget-application-server.c \
+	gwget-application-server.h 
 
 gwget-marshal.h: gwget-marshal.list $(GLIB_GENMARSHAL)
 	        $(GLIB_GENMARSHAL) $< --header --prefix=gwget_marshal > $@

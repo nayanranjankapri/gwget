@@ -1,5 +1,6 @@
 2004-10-14 David Sedeño <david@alderia.com>
 	
+	* src/Makefile.am: Put gwget-application-server.h in BUILD_SOURCES
 	* configure.in: Put ENABLE_EPIPHANY_EXTENSION out of the if statment.
 
 2004-10-14 David Sedeño <david@alderia.com>
