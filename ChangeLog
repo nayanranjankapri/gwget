@@ -1,3 +1,6 @@
+2004-08-13  Amanpreet Singh Alsm <aalam@redhat.com>
+
+	* configure.in: pa(Punjabi) locale is added
 2004-08-06  David Sedeño <david@alderia.com>
 
 	* src/main_window.c: include <locale.h> to compile
