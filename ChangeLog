@@ -1,3 +1,10 @@
+2004-06-25  David Sedeño <david@alderia.com>
+
+	* include/main_window.h: Added tray_tooltip var.
+	* src/gwget_data.c (gwget_data_update_statistics_ui): Set
+	  tray_icon tooltip if download completed.
+	* src/systray.c: Create the tray_tooltip
+
 2004-06-21  David Sedeño <david@alderia.com>
 
 	* configure.in: Added tr to ALL_LINGUAS

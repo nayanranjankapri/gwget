@@ -194,6 +194,7 @@ static void
 gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 {
 	gchar *state;
+	gchar *tooltip_message;
 	
 	state=g_new(char,20);
 	
@@ -211,6 +212,12 @@ gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 		case DL_COMPLETED: strcpy(state,_("Completed"));
 				   gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 							      PERCENTAGE_COLUMN,100,-1);
+				   if (gwget_pref.docked) {
+					   tooltip_message=g_strdup_printf(_("Download Completed\n(%s)"), 
+							   gwgetdata->url);
+					   gtk_tooltips_set_tip (GTK_TOOLTIPS(tray_tooltip), GTK_WIDGET(tray_icon),tooltip_message,NULL);
+				   }
+					   
 				   break;
 		case DL_ERROR: 	state = g_strdup_printf("%s: %s",_("Error"),gwgetdata->error_msg);
 				break;

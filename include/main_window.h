@@ -72,6 +72,7 @@ GList *downloads;
 
 /* Tray icon */
 EggTrayIcon *tray_icon;
+GtkTooltips *tray_tooltip;
 
 /* XML for the preferences gui */
 /* It's here because we must load it from main_window.c to put */

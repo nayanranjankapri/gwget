@@ -19,8 +19,9 @@ systray_load(void)
 	GtkWidget *eventbox,*image;
 		
 	/* tray icon */
-	tray_icon = egg_tray_icon_new("fite");
+	tray_icon = egg_tray_icon_new("gwget");
 	eventbox = gtk_event_box_new();
+	tray_tooltip = gtk_tooltips_new();
 	
 	
 	image=systray_set_image();
@@ -32,7 +33,7 @@ systray_load(void)
 	g_signal_connect(G_OBJECT(tray_icon), "embedded", G_CALLBACK(systray_embedded), NULL);
 	g_signal_connect(G_OBJECT(tray_icon), "destroy", G_CALLBACK(systray_destroyed), NULL);
 	g_signal_connect(G_OBJECT(eventbox), "button-press-event", G_CALLBACK(systray_clicked), NULL);
-	egg_tray_icon_send_message(tray_icon,1000,"Fite tu",7);
+	egg_tray_icon_send_message(tray_icon,1000,"gwget",7);
 }
 
 static GtkWidget *
