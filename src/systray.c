@@ -137,6 +137,12 @@ systray_generate_menu(GdkEventButton *event)
 	}
 	
 	systray_menu = gtk_menu_new();
+
+	item = gtk_image_menu_item_new_from_stock(GTK_STOCK_NEW, NULL);
+	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu), item);
+	gtk_signal_connect (GTK_OBJECT (item), "activate",
+			    GTK_SIGNAL_FUNC(on_button_new_clicked),
+			    NULL);
 		
 	downloads_menu = gtk_menu_new();
 	

@@ -1,3 +1,7 @@
+2005-02-21  David Sedeño <david@alderia.com>
+
+	* src/systray.c: Add a new download item.
+
 2005-02-21  Ivan Yosifov <ivan@yosifov.net>
 
 	* src/main_window.c (gwget_get_defaults_from_gconf) : 
