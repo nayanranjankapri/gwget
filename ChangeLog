@@ -1,3 +1,7 @@
+2004-08-02  Baris Cicek <baris@teamforce.name.tr>
+	
+	* data/preferences.glade: Fixed a typo
+
 2004-07-30  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Fix typo in popup window
