@@ -8,13 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-21 12:05+0200\n"
-"PO-Revision-Date: 2004-08-21 19:32+0200\n"
+"POT-Creation-Date: 2004-09-27 20:26+0200\n"
+"PO-Revision-Date: 2004-09-28 03:29+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "aplikace gwget"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "generátor automatizace gwget"
 
 #: data/about.glade.h:1
 msgid "About Gwget"
@@ -96,7 +104,7 @@ msgstr "Rekurzivně"
 msgid "Recursive options"
 msgstr "Možnosti rekurze"
 
-#: data/gwget.glade.h:17 src/main_window_cb.c:534
+#: data/gwget.glade.h:17 src/main_window_cb.c:558
 msgid "Remove all"
 msgstr "Odstranit vše"
 
@@ -104,7 +112,7 @@ msgstr "Odstranit vše"
 msgid "Remove all downloads from list"
 msgstr "Odstranit ze seznamu všechna stahování"
 
-#: data/gwget.glade.h:19 src/main_window_cb.c:475
+#: data/gwget.glade.h:19 src/main_window_cb.c:499
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
@@ -112,7 +120,7 @@ msgstr "Odstranit dokončená"
 msgid "Remove completed downloads from list"
 msgstr "Odstranit ze seznamu dokončená stahování"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:504
+#: data/gwget.glade.h:21 src/main_window_cb.c:528
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
@@ -272,31 +280,31 @@ msgstr "Selhalo"
 msgid "stalled"
 msgstr "vynechává"
 
-#: src/gwget_data.c:201
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "Nespuštěno"
 
-#: src/gwget_data.c:203
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "Neběží"
 
-#: src/gwget_data.c:205
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "Nepřipojeno"
 
-#: src/gwget_data.c:207
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Připojeno"
 
-#: src/gwget_data.c:209
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "Stahuji"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:216
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -305,7 +313,7 @@ msgstr ""
 "Stahování dokončeno\n"
 "(%s)"
 
-#: src/gwget_data.c:222
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr "Chyba"
 
@@ -325,70 +333,72 @@ msgstr "Stav"
 msgid "Speed"
 msgstr "Rychlost"
 
-#: src/main_window.c:539
+#: src/main_window.c:540
 msgid "Cancel current downloads?"
 msgstr "Zrušit atktuální stahování?"
 
-#: src/main_window.c:539
+#: src/main_window.c:540
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
-msgstr "Zbývá alespoň jedno neaktivní atahování. Opravdu přerušit všechny běžící přenosy?"
+msgstr ""
+"Zbývá alespoň jedno neaktivní atahování. Opravdu přerušit všechny běžící "
+"přenosy?"
 
-#: src/main_window_cb.c:95
+#: src/main_window_cb.c:94
 msgid "Error in download"
 msgstr "Chyba při stahování"
 
-#: src/main_window_cb.c:100
+#: src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Chyba při otevírání souboru"
 
-#: src/main_window_cb.c:100
+#: src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nemohu otevřít soubor"
 
-#: src/main_window_cb.c:143
+#: src/main_window_cb.c:163
 msgid "Download Manager for Gnome2."
 msgstr "Správce stahování pro Gnome2."
 
-#: src/main_window_cb.c:149
+#: src/main_window_cb.c:169
 msgid "translator_credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
-#: src/main_window_cb.c:161
+#: src/main_window_cb.c:181
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:391 src/new_window.c:151
+#: src/main_window_cb.c:415 src/new_window.c:117
 msgid "Select Folder"
 msgstr "Zvolte adresář"
 
-#: src/main_window_cb.c:448
+#: src/main_window_cb.c:472
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Opravdu zrušit aktuální stahování? (Url: %s)"
 
-#: src/main_window_cb.c:449
+#: src/main_window_cb.c:473
 msgid "Cancel download?"
 msgstr "Zrušit stahování?"
 
-#: src/main_window_cb.c:475
+#: src/main_window_cb.c:499
 msgid "Really remove completed downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu dokončená stahování?"
 
-#: src/main_window_cb.c:504
+#: src/main_window_cb.c:528
 msgid "Really remove inactive downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu neaktivní stahování?"
 
-#: src/main_window_cb.c:534
+#: src/main_window_cb.c:558
 msgid "Really remove all downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu všechna stahování?"
 
-#: src/systray.c:133
+#: src/systray.c:135
 msgid "Nothing"
 msgstr "Nic"
 
-#: src/systray.c:140
+#: src/systray.c:142
 msgid "Downloads"
 msgstr "Stahování"
 
@@ -430,7 +440,9 @@ msgstr "Soubor nenalezen"
 
 #: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Nemohu pokračovat ve stahování, existující místní soubor koliduje se vzdáleným souborem"
+msgstr ""
+"Nemohu pokračovat ve stahování, existující místní soubor koliduje se "
+"vzdáleným souborem"
 
 #: src/wget-log.c:169
 msgid "Can't write to target directory"
