@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-27 20:26+0200\n"
-"PO-Revision-Date: 2004-09-28 03:29+0200\n"
+"POT-Creation-Date: 2004-10-02 20:00+0200\n"
+"PO-Revision-Date: 2004-10-03 02:39+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -104,51 +104,55 @@ msgstr "Rekurzivně"
 msgid "Recursive options"
 msgstr "Možnosti rekurze"
 
-#: data/gwget.glade.h:17 src/main_window_cb.c:558
+#: data/gwget.glade.h:17
+msgid "Remove"
+msgstr "Odstranit"
+
+#: data/gwget.glade.h:18 src/main_window_cb.c:558
 msgid "Remove all"
 msgstr "Odstranit vše"
 
-#: data/gwget.glade.h:18
+#: data/gwget.glade.h:19
 msgid "Remove all downloads from list"
 msgstr "Odstranit ze seznamu všechna stahování"
 
-#: data/gwget.glade.h:19 src/main_window_cb.c:499
+#: data/gwget.glade.h:20 src/main_window_cb.c:499
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
-#: data/gwget.glade.h:20
+#: data/gwget.glade.h:21
 msgid "Remove completed downloads from list"
 msgstr "Odstranit ze seznamu dokončená stahování"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:528
+#: data/gwget.glade.h:22 src/main_window_cb.c:528
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
-#: data/gwget.glade.h:22
+#: data/gwget.glade.h:23
 msgid "Remove inactive downloads from list"
 msgstr "Odstranit ze seznamu neaktivní stahování"
 
-#: data/gwget.glade.h:23
+#: data/gwget.glade.h:24
 msgid "Stop and delete downloaded file"
 msgstr "Zastavit a odstranit stažený soubor"
 
-#: data/gwget.glade.h:24
+#: data/gwget.glade.h:25
 msgid "The index file only"
 msgstr "Jen soubor index"
 
-#: data/gwget.glade.h:25
+#: data/gwget.glade.h:26
 msgid "This site (mirror)"
 msgstr "Tento server (zrcadlo)"
 
-#: data/gwget.glade.h:26
+#: data/gwget.glade.h:27
 msgid "Url:"
 msgstr "Url:"
 
-#: data/gwget.glade.h:27
+#: data/gwget.glade.h:28
 msgid "_New"
 msgstr "_Nové"
 
-#: data/gwget.glade.h:28
+#: data/gwget.glade.h:29
 msgid "_Toolbar"
 msgstr "_Lišta nástrojů"
 
