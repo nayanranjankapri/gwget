@@ -2,7 +2,7 @@
 
 	Patch from Ivan Yosifov for support --trayonly switch. See bug
 	#164699.
-	* src/main.c: Support for --trayicon switch in command line.
+	* src/main.c: Support for --trayonly switch in command line.
 	* src/main_window.c (main_window): Not show main window here. Passed
 	to systray_load.
 	* src/systray.c (systray_embedded): Show or Hide the main window if
