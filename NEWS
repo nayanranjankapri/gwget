@@ -1,3 +1,14 @@
+==============
+Version 0.92.1
+==============
+
+Fixes: 
+	* Various critical bugs related with gconf was fixed. 
+
+Translations:
+	* New: sk (Marcel Telka), el (Kostas Papadimas), da (Martin Willemoes Hansen), sv (Christian Rose)
+	* Update:  zh_CN (Funda Wang), de (Hendrik Brandt), eu (Iñaki Larrañaga), bg (Alexander Shopov), pt (Duarte Loreto), es (David Sedeño, Francisco Javier F. Serrador), en_CA (Adam Weinberger), cs (Miloslav Trmac), zh_CN (Funda Wang)
+
 =============
 Version 0.92
 =============
