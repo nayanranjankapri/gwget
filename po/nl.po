@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-03 13:15+0200\n"
+"POT-Creation-Date: 2004-07-21 20:01+0200\n"
 "PO-Revision-Date: 2002-01-30 21:36+0100\n"
 "Last-Translator: Reinout van Schouwen <reinout@cs.vu.nl>, 2003\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -15,47 +15,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:226
+#: src/main_window.c:228
+#, fuzzy
+msgid "File Type"
+msgstr "Bestandsnaam"
+
+#: src/main_window.c:237
 msgid "File Name"
 msgstr "Bestandsnaam"
 
-#: src/main_window.c:236
+#: src/main_window.c:247
 msgid "State"
 msgstr "Status"
 
-#: src/main_window.c:245
+#: src/main_window.c:256
 msgid "Current Size"
 msgstr "Huidige grootte"
 
-#: src/main_window.c:255
+#: src/main_window.c:266
 msgid "Total Size"
 msgstr "Totale grootte"
 
-#: src/main_window.c:265 src/main_window.c:270
+#: src/main_window.c:276 src/main_window.c:281
 msgid "Percentage"
 msgstr "Percentage"
 
 # Elapse = Elapsed
-#: src/main_window.c:275
+#: src/main_window.c:286
 msgid "Elapsed Time"
 msgstr "Verstreken tijd"
 
 # Remain = Remaining
-#: src/main_window.c:285
+#: src/main_window.c:296
 msgid "Remaining Time"
 msgstr "Resterende tijd"
 
-#: src/main_window.c:295
+#: src/main_window.c:306
 msgid "Speed"
 msgstr ""
 
 # currents = current
-#: src/main_window.c:498
+#: src/main_window.c:528
 #, fuzzy
 msgid "Cancel current downloads?"
 msgstr "Huidige downloads annuleren?"
 
-#: src/main_window.c:498
+#: src/main_window.c:528
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -75,7 +80,7 @@ msgid "Couldn't open the file"
 msgstr ""
 
 #: src/main_window_cb.c:143
-msgid "A download manager for gnome2 using wget as backend."
+msgid "Download Manager for Gnome2."
 msgstr ""
 
 #: src/main_window_cb.c:149
@@ -86,42 +91,46 @@ msgstr ""
 msgid "Gwget"
 msgstr ""
 
+#: src/main_window_cb.c:376 src/new_window.c:147
+msgid "Select Folder"
+msgstr ""
+
 # currente = current
-#: src/main_window_cb.c:407
+#: src/main_window_cb.c:433
 #, fuzzy, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Weet u zeker dat u de huidige download wilt annuleren? (URL: %s)"
 
-#: src/main_window_cb.c:408
+#: src/main_window_cb.c:434
 msgid "Cancel download?"
 msgstr "Download annuleren?"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:460
 #, fuzzy
 msgid "Remove completed"
 msgstr "Voltooide downloads weghalen"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:460
 #, fuzzy
 msgid "Really remove completed downloads from the list?"
 msgstr "Voltooide downloads weghalen"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:489
 #, fuzzy
 msgid "Remove not running"
 msgstr "Niet actief"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:489
 #, fuzzy
 msgid "Really remove not running downloads from the list?"
 msgstr "Voltooide downloads weghalen"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:519
 #, fuzzy
 msgid "Remove all"
 msgstr "Voltooide downloads weghalen"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:519
 #, fuzzy
 msgid "Really remove all downloads from the list?"
 msgstr "Voltooide downloads weghalen"
@@ -224,12 +233,12 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#: src/systray.c:124
+#: src/systray.c:133
 #, fuzzy
 msgid "Nothing"
 msgstr "Niet actief"
 
-#: src/systray.c:131
+#: src/systray.c:140
 #, fuzzy
 msgid "Downloads"
 msgstr "Download annuleren?"

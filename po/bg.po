@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-03 13:15+0200\n"
+"POT-Creation-Date: 2004-07-21 20:01+0200\n"
 "PO-Revision-Date: 2003-06-19 11:41+0100\n"
 "Last-Translator: Filip Andonov <fandonov@iinf.bas.bg>\n"
 "Language-Team: bulgarian <bg@li.org>\n"
@@ -15,44 +15,49 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:226
+#: src/main_window.c:228
+#, fuzzy
+msgid "File Type"
+msgstr "Име·на·файл"
+
+#: src/main_window.c:237
 msgid "File Name"
 msgstr "Име·на·файл"
 
-#: src/main_window.c:236
+#: src/main_window.c:247
 msgid "State"
 msgstr "СТАТУС"
 
-#: src/main_window.c:245
+#: src/main_window.c:256
 msgid "Current Size"
 msgstr "Текущ·размер"
 
-#: src/main_window.c:255
+#: src/main_window.c:266
 msgid "Total Size"
 msgstr "Общ·размер"
 
-#: src/main_window.c:265 src/main_window.c:270
+#: src/main_window.c:276 src/main_window.c:281
 msgid "Percentage"
 msgstr "Процент"
 
-#: src/main_window.c:275
+#: src/main_window.c:286
 msgid "Elapsed Time"
 msgstr "Изминало·време"
 
-#: src/main_window.c:285
+#: src/main_window.c:296
 msgid "Remaining Time"
 msgstr "Оставащо·време"
 
-#: src/main_window.c:295
+#: src/main_window.c:306
 msgid "Speed"
 msgstr ""
 
-#: src/main_window.c:498
+#: src/main_window.c:528
 #, fuzzy
 msgid "Cancel current downloads?"
 msgstr "Отказ·на·текущите·изтегляния?"
 
-#: src/main_window.c:498
+#: src/main_window.c:528
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -72,7 +77,7 @@ msgid "Couldn't open the file"
 msgstr ""
 
 #: src/main_window_cb.c:143
-msgid "A download manager for gnome2 using wget as backend."
+msgid "Download Manager for Gnome2."
 msgstr ""
 
 #: src/main_window_cb.c:149
@@ -83,41 +88,45 @@ msgstr "Filip Andonov <fandonov@iinf.bas.bg>"
 msgid "Gwget"
 msgstr ""
 
-#: src/main_window_cb.c:407
+#: src/main_window_cb.c:376 src/new_window.c:147
+msgid "Select Folder"
+msgstr ""
+
+#: src/main_window_cb.c:433
 #, fuzzy, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Сигурни·ли·сте,·че·искате·отказ·на·текущото·изтегляне?·(Url: %s)"
 
-#: src/main_window_cb.c:408
+#: src/main_window_cb.c:434
 msgid "Cancel download?"
 msgstr "Отказ·на·изтегляне?"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:460
 #, fuzzy
 msgid "Remove completed"
 msgstr "Премахване·на·завършените·изтегляния"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:460
 #, fuzzy
 msgid "Really remove completed downloads from the list?"
 msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:489
 #, fuzzy
 msgid "Remove not running"
 msgstr "Не·работи"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:489
 #, fuzzy
 msgid "Really remove not running downloads from the list?"
 msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:519
 #, fuzzy
 msgid "Remove all"
 msgstr "Премахване·на·завършените·изтегляния"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:519
 #, fuzzy
 msgid "Really remove all downloads from the list?"
 msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
@@ -220,12 +229,12 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#: src/systray.c:124
+#: src/systray.c:133
 #, fuzzy
 msgid "Nothing"
 msgstr "Не·работи"
 
-#: src/systray.c:131
+#: src/systray.c:140
 #, fuzzy
 msgid "Downloads"
 msgstr "Отказ·на·изтегляне?"

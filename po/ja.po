@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-03 13:15+0200\n"
+"POT-Creation-Date: 2004-07-21 20:01+0200\n"
 "PO-Revision-Date: 2003-09-30 17:22+0200\n"
 "Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -15,43 +15,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:226
+#: src/main_window.c:228
+#, fuzzy
+msgid "File Type"
+msgstr "ファイル名"
+
+#: src/main_window.c:237
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/main_window.c:236
+#: src/main_window.c:247
 msgid "State"
 msgstr "状態"
 
-#: src/main_window.c:245
+#: src/main_window.c:256
 msgid "Current Size"
 msgstr "現在のサイズ"
 
-#: src/main_window.c:255
+#: src/main_window.c:266
 msgid "Total Size"
 msgstr "トータルサイズ"
 
-#: src/main_window.c:265 src/main_window.c:270
+#: src/main_window.c:276 src/main_window.c:281
 msgid "Percentage"
 msgstr "パーセンテージ"
 
-#: src/main_window.c:275
+#: src/main_window.c:286
 msgid "Elapsed Time"
 msgstr "経過時間"
 
-#: src/main_window.c:285
+#: src/main_window.c:296
 msgid "Remaining Time"
 msgstr "残り時間"
 
-#: src/main_window.c:295
+#: src/main_window.c:306
 msgid "Speed"
 msgstr "速度"
 
-#: src/main_window.c:498
+#: src/main_window.c:528
 msgid "Cancel current downloads?"
 msgstr "現在のダウンロードをキャンセルしますか?"
 
-#: src/main_window.c:498
+#: src/main_window.c:528
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -73,7 +78,8 @@ msgid "Couldn't open the file"
 msgstr ""
 
 #: src/main_window_cb.c:143
-msgid "A download manager for gnome2 using wget as backend."
+#, fuzzy
+msgid "Download Manager for Gnome2."
 msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャ。"
 
 #: src/main_window_cb.c:149
@@ -85,36 +91,40 @@ msgstr "中井 幸博 <nakai@gnome.gr.jp>"
 msgid "Gwget"
 msgstr "Gwget2"
 
-#: src/main_window_cb.c:407
+#: src/main_window_cb.c:376 src/new_window.c:147
+msgid "Select Folder"
+msgstr ""
+
+#: src/main_window_cb.c:433
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "現在のダウンロードを本当にキャンセルしますか? (URL: %s)"
 
-#: src/main_window_cb.c:408
+#: src/main_window_cb.c:434
 msgid "Cancel download?"
 msgstr "ダウンロードをキャンセルしますか?"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:460
 msgid "Remove completed"
 msgstr "完了したものを削除"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:460
 msgid "Really remove completed downloads from the list?"
 msgstr "完了したダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:489
 msgid "Remove not running"
 msgstr "実行していないものを削除"
 
-#: src/main_window_cb.c:463
+#: src/main_window_cb.c:489
 msgid "Really remove not running downloads from the list?"
 msgstr "実行していないダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:519
 msgid "Remove all"
 msgstr "すべて削除"
 
-#: src/main_window_cb.c:493
+#: src/main_window_cb.c:519
 msgid "Really remove all downloads from the list?"
 msgstr "すべてのダウンロードを本当に一覧から削除しますか?"
 
@@ -213,12 +223,12 @@ msgstr "不明なエラー"
 msgid "Failed"
 msgstr "停止"
 
-#: src/systray.c:124
+#: src/systray.c:133
 #, fuzzy
 msgid "Nothing"
 msgstr "実行していません"
 
-#: src/systray.c:131
+#: src/systray.c:140
 #, fuzzy
 msgid "Downloads"
 msgstr "新規ダウンロード"
