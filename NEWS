@@ -1,4 +1,18 @@
 =============
+Version 0.14.1
+=============
+
+Bugfixes
+        * Fix icon installation in gwget.desktop.
+        * Fix a crash (See bug #152014).
+        * Fix compilation issue with gcc 2.95
+
+Translations
+        * Added cs (Miloslav Trmac), fi (Sini Ruohomaa) and fr (Julien Cegarra).
+        * Updated eu (Iñaki Larrañaga), ru (Pavlo Bohmat), bg (Vladimir Petkov), nl (Vincent van Adrighem), pt_BR (Raphael Higino)
+
+
+=============
 Version 0.14
 =============
 General 
