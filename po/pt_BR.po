@@ -1,14 +1,14 @@
 # Brazilian Portuguese translation of gwget.
-# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
-# Raphael Higino <raphaelh@uai.com.br>, 2004, 2005.
+# Raphael Higino <raphaelh@uai.com.br>, 2004-2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-04 12:29+0100\n"
-"PO-Revision-Date: 2005-01-04 22:16-0200\n"
+"POT-Creation-Date: 2005-01-15 20:34+0100\n"
+"PO-Revision-Date: 2005-01-15 22:16-0200\n"
 "Last-Translator: Raphael Higino <raphaelh@uai.com.br>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
@@ -59,8 +59,8 @@ msgstr "Cancelar"
 msgid "Continue"
 msgstr "Continuar"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
-#: src/main_window_cb.c:662
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:576
+#: src/main_window_cb.c:672
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gerenciador de Downloads"
 
@@ -108,7 +108,7 @@ msgstr "Propriedades"
 msgid "Question"
 msgstr "Pergunta"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:31
+#: data/gwget.glade.h:18 data/preferences.glade.h:32
 msgid "Recursive"
 msgstr "Recursivo"
 
@@ -120,7 +120,7 @@ msgstr "Opções recursivas"
 msgid "Remove"
 msgstr "Remover"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:645
+#: data/gwget.glade.h:21 src/main_window_cb.c:655
 msgid "Remove all"
 msgstr "Remover todos"
 
@@ -128,7 +128,7 @@ msgstr "Remover todos"
 msgid "Remove all downloads from list"
 msgstr "Remove da lista todos os downloads"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:587
+#: data/gwget.glade.h:23 src/main_window_cb.c:597
 msgid "Remove completed"
 msgstr "Remover completos"
 
@@ -136,7 +136,7 @@ msgstr "Remover completos"
 msgid "Remove completed downloads from list"
 msgstr "Remove da lista os downloads completos"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:616
+#: data/gwget.glade.h:25 src/main_window_cb.c:626
 msgid "Remove inactive"
 msgstr "Remover inativos"
 
@@ -177,76 +177,88 @@ msgid "_Toolbar"
 msgstr "_Barra de Ferramentas"
 
 #: data/gwget.schemas.in.h:1
+msgid "Ask save in for each new download"
+msgstr "Perguntar onde salvar pra cada novo download"
+
+#: data/gwget.schemas.in.h:2
 msgid "Convert Links"
 msgstr "Converter Links"
 
-#: data/gwget.schemas.in.h:2
+#: data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
 msgstr "Converte para links relativos em modo recursivo."
 
-#: data/gwget.schemas.in.h:3
+#: data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
 msgstr "Diretório de Download Padrão"
 
-#: data/gwget.schemas.in.h:4
+#: data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
 msgstr "Requisitos da Página de Download"
 
-#: data/gwget.schemas.in.h:5
+#: data/gwget.schemas.in.h:6
 msgid "Follow relative links"
 msgstr "Seguir links relativos"
 
-#: data/gwget.schemas.in.h:6
+#: data/gwget.schemas.in.h:7
 msgid "Limit maximum speed"
 msgstr "Limitar velocidade máxima"
 
-#: data/gwget.schemas.in.h:7
+#: data/gwget.schemas.in.h:8
 msgid "Maximum depth in recursive mode"
 msgstr "Profundidade máxima em modo recursivo"
 
-#: data/gwget.schemas.in.h:8
+#: data/gwget.schemas.in.h:9
 msgid "Maximum speed limit"
 msgstr "Limite máximo de velocidade"
 
-#: data/gwget.schemas.in.h:9
+#: data/gwget.schemas.in.h:10
 msgid "Number of downloads"
 msgstr "Número de downloads"
 
-#: data/gwget.schemas.in.h:10
+#: data/gwget.schemas.in.h:11
 msgid "Number of retries"
 msgstr "Número de novas tentativas"
 
-#: data/gwget.schemas.in.h:11
+#: data/gwget.schemas.in.h:12
 msgid "Open the file after download"
 msgstr "Abrir o arquivo após o download"
 
-#: data/gwget.schemas.in.h:12
+#: data/gwget.schemas.in.h:13
 msgid "Resume downloads at startup"
 msgstr "Continuar downloads ao iniciar"
 
-#: data/gwget.schemas.in.h:13
+#: data/gwget.schemas.in.h:14
 msgid "View download speed column"
 msgstr "Exibir a coluna de velocidade do download"
 
-#: data/gwget.schemas.in.h:14
+#: data/gwget.schemas.in.h:15
 msgid "View elapsed time column"
 msgstr "Exibir a coluna de tempo decorrido"
 
-#: data/gwget.schemas.in.h:15
+#: data/gwget.schemas.in.h:16
 msgid "View percentage column"
 msgstr "Exibir a coluna de porcentagem"
 
-#: data/gwget.schemas.in.h:16
+#: data/gwget.schemas.in.h:17
 msgid "View remaining time column"
 msgstr "Exibir a coluna de tempo restante"
 
-#: data/gwget.schemas.in.h:17
+#: data/gwget.schemas.in.h:18
 msgid "View toolbar"
 msgstr "Exibir barra de ferramentas"
 
-#: data/gwget.schemas.in.h:18
+#: data/gwget.schemas.in.h:19
 msgid "View total size column"
 msgstr "Exibir a coluna de tamanho total"
+
+#: data/gwget.schemas.in.h:20
+msgid ""
+"When new download it is added, ask for where to save in. If false, save "
+"always in default directory without asking the user."
+msgstr ""
+"Quando um novo download é adicionado, perguntar onde salvar. Se "
+"falso, salva sempre no diretório padrão sem perguntar ao usuário."
 
 #: data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
@@ -256,7 +268,7 @@ msgstr "<span weight=\"bold\">Novo Download</span>"
 msgid "New Download"
 msgstr "Novo Download"
 
-#: data/newdownload.glade.h:3 data/preferences.glade.h:33
+#: data/newdownload.glade.h:3 data/preferences.glade.h:34
 msgid "Save in:"
 msgstr "Salvar em:"
 
@@ -273,16 +285,16 @@ msgid "  kB/sec"
 msgstr "  kB/seg"
 
 #: data/preferences.glade.h:4
-msgid "<b>General</b>"
-msgstr "<b>Geral</b>"
-
-#: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Comportamento</span>"
 
-#: data/preferences.glade.h:6
+#: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Lista de Colunas</span>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Geral</span>"
 
 #: data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Links</span>"
@@ -293,98 +305,102 @@ msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Configurações de Proxy</span>"
 
 #: data/preferences.glade.h:9
+msgid "Ask where to save for each download"
+msgstr "Perguntar onde salvar pra cada download"
+
+#: data/preferences.glade.h:10
 msgid "Column List"
 msgstr "Lista de Colunas"
 
-#: data/preferences.glade.h:10
+#: data/preferences.glade.h:11
 msgid "Continue downloads on startup"
 msgstr "Continuar downloads ao iniciar"
 
-#: data/preferences.glade.h:11
+#: data/preferences.glade.h:12
 msgid "Convert links"
 msgstr "Converter links"
 
-#: data/preferences.glade.h:12 src/main_window.c:294
+#: data/preferences.glade.h:13 src/main_window.c:313
 msgid "Current Size"
 msgstr "Tamanho Atual"
 
-#: data/preferences.glade.h:13
+#: data/preferences.glade.h:14
 msgid "Default GNOME network settings"
 msgstr "Configurações de rede padrão do GNOME"
 
-#: data/preferences.glade.h:14
+#: data/preferences.glade.h:15
 msgid "Direct Internet connection"
 msgstr "Conexão direta com a Internet"
 
-#: data/preferences.glade.h:15
+#: data/preferences.glade.h:16
 msgid "Don't create directories"
 msgstr "Não criar diretórios"
 
-#: data/preferences.glade.h:16
+#: data/preferences.glade.h:17
 msgid "Download Speed"
 msgstr "Velocidade do Download"
 
-#: data/preferences.glade.h:17
+#: data/preferences.glade.h:18
 msgid "Download page requisites"
 msgstr "Requisitos da página de download"
 
-#: data/preferences.glade.h:18 src/main_window.c:326
+#: data/preferences.glade.h:19 src/main_window.c:345
 msgid "Elapsed Time"
 msgstr "Tempo Decorrido"
 
-#: data/preferences.glade.h:19
+#: data/preferences.glade.h:20
 msgid "Follow relative links only"
 msgstr "Seguir apenas links relativos"
 
-#: data/preferences.glade.h:20
+#: data/preferences.glade.h:21
 msgid "General"
 msgstr "Geral"
 
-#: data/preferences.glade.h:21
+#: data/preferences.glade.h:22
 msgid "Limit download speed to:"
 msgstr "Limitar velocidade de download a:"
 
-#: data/preferences.glade.h:22
+#: data/preferences.glade.h:23
 msgid "Manual proxy configuration"
 msgstr "Configurações manuais de proxy"
 
-#: data/preferences.glade.h:23
+#: data/preferences.glade.h:24
 msgid "Maximum depth level:"
 msgstr "Nível máximo de profundidade:"
 
-#: data/preferences.glade.h:24
+#: data/preferences.glade.h:25
 msgid "Network"
 msgstr "Rede"
 
-#: data/preferences.glade.h:25
+#: data/preferences.glade.h:26
 msgid "Number of retries:"
 msgstr "Número de novas tentativas:"
 
-#: data/preferences.glade.h:26
+#: data/preferences.glade.h:27
 msgid "Open files automatically after download"
 msgstr "Abrir os arquivos automaticamente após o download"
 
-#: data/preferences.glade.h:27 src/main_window.c:315 src/main_window.c:321
+#: data/preferences.glade.h:28 src/main_window.c:334 src/main_window.c:340
 msgid "Percentage"
 msgstr "Porcentagem"
 
-#: data/preferences.glade.h:28
+#: data/preferences.glade.h:29
 msgid "Port:"
 msgstr "Porta:"
 
-#: data/preferences.glade.h:29
+#: data/preferences.glade.h:30
 msgid "Preferences"
 msgstr "Preferências"
 
-#: data/preferences.glade.h:30
+#: data/preferences.glade.h:31
 msgid "Proxy:"
 msgstr "Proxy:"
 
-#: data/preferences.glade.h:32 src/main_window.c:336
+#: data/preferences.glade.h:33 src/main_window.c:355
 msgid "Remaining Time"
 msgstr "Tempo Restante"
 
-#: data/preferences.glade.h:34 src/main_window.c:305
+#: data/preferences.glade.h:35 src/main_window.c:324
 msgid "Total Size"
 msgstr "Tamanho Total"
 
@@ -457,31 +473,31 @@ msgstr "Erro ao abrir o arquivo"
 msgid "Couldn't open the file"
 msgstr "Não foi possível abrir o arquivo"
 
-#: src/main_window.c:276
+#: src/main_window.c:295
 msgid "File Name"
 msgstr "Nome do Arquivo"
 
-#: src/main_window.c:283
+#: src/main_window.c:302
 msgid "State"
 msgstr "Estado"
 
-#: src/main_window.c:346
+#: src/main_window.c:365
 msgid "Speed"
 msgstr "Velocidade"
 
-#: src/main_window.c:385
+#: src/main_window.c:411
 msgid "Error starting the download"
 msgstr "Erro ao iniciar o download"
 
-#: src/main_window.c:385
+#: src/main_window.c:411
 msgid "There was an unexpected error starting the download"
 msgstr "Houve um erro inesperado ao iniciar o download"
 
-#: src/main_window.c:576
+#: src/main_window.c:601
 msgid "Cancel current downloads?"
 msgstr "Cancelar os downloads atuais?"
 
-#: src/main_window.c:576
+#: src/main_window.c:601
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -501,11 +517,11 @@ msgstr "Gerenciador de Downloads para o GNOME."
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:141
+#: src/main_window_cb.c:513 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Selecionar Pasta"
 
-#: src/main_window_cb.c:558
+#: src/main_window_cb.c:568
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -514,19 +530,19 @@ msgstr ""
 "Deseja mesmo cancelar o download atual?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:559
+#: src/main_window_cb.c:569
 msgid "Cancel download?"
 msgstr "Cancelar o download?"
 
-#: src/main_window_cb.c:587
+#: src/main_window_cb.c:597
 msgid "Really remove completed downloads from the list?"
 msgstr "Deseja mesmo remover da lista os downloads completos?"
 
-#: src/main_window_cb.c:616
+#: src/main_window_cb.c:626
 msgid "Really remove inactive downloads from the list?"
 msgstr "Deseja mesmo remover da lista os downloads inativos?"
 
-#: src/main_window_cb.c:645
+#: src/main_window_cb.c:655
 msgid "Really remove all downloads from the list?"
 msgstr "Deseja mesmo remover da lista todos os downloads?"
 
@@ -583,6 +599,9 @@ msgstr ""
 #: src/wget-log.c:180
 msgid "Can't write to target directory"
 msgstr "Não é possível gravar no diretório de destino"
+
+#~ msgid "<b>General</b>"
+#~ msgstr "<b>Geral</b>"
 
 #~ msgid "Resume"
 #~ msgstr "Reiniciar"
