@@ -70,7 +70,6 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 		/* if the url it's not a file drop a dialog to recurse into the url */
 		reverse_filename = g_strdup(gwgetdata->filename);
 		reverse_filename = g_strreverse(reverse_filename);
-		printf("Reverse: %s\nNormal: %s\n",reverse_filename, gwgetdata->filename);
 		if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url) ||
 			!strncmp(reverse_filename,"lmth",4) || !strncmp(reverse_filename,"mth",3)) {
 			recursive_window=glade_xml_get_widget(xml,"dialog2");

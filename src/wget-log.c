@@ -46,19 +46,10 @@ convert_wget_size (char *size)
 static void
 show_error (GwgetData *gwgetdata, gchar *error_msg)
 {
-    /* gchar *message; */
-
-    /* Before showing the error message disable auto-download. If we don't do
-     * this auto download retries to download the file again and with an error.
-     */
-    /* gwget_data_set_use_auto_dl (gwgetdata, FALSE); */
-    /* message = g_strconcat (error_msg, "\t", gwgetdata->url, NULL); */
-    /* log_insert_entry (message); */
-    /* g_print("%s\n",message);    */
-	gwget_data_set_state(gwgetdata,DL_ERROR);
+    gwget_data_set_state(gwgetdata,DL_ERROR);
 	gwgetdata->error=TRUE;
 	gwgetdata->error_msg=g_strdup(error_msg);
-    /* g_free (message); */
+    
 }
 
 
@@ -138,7 +129,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 		if (p != NULL) {
 			p += 8;
             /* Only set the total size of we don't have one yet. */
-            if (gwgetdata->total_size == 0) {
+            if (gwgetdata->total_size == 0) { 
             	gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
 			}
 			gwget_data_set_state (gwgetdata, DL_RETRIEVING);
@@ -180,10 +171,12 @@ wget_log_process_line (GwgetData *gwgetdata)
 			return 1;
 			break;
 			}
+			
 			if (gwgetdata->recursive) {
 				/* Get the leght of file being downloaded */
 				p = strstr (gwgetdata->line, "Length: ");
 				if (p != NULL) {
+					printf("DETECTADO Lenght!: %s\n",p);
 					p += 8;
 					gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
 					/* Get session start time and session file start size */
@@ -195,24 +188,26 @@ wget_log_process_line (GwgetData *gwgetdata)
 						gwgetdata->session_start_size = 0;
 					}
 					gwgetdata->session_elapsed = 0;
-			} else {
-                /* We didn't get a length so, probably it's unspecified size
+					printf("DETECTADO Lenght!: %s\n",p);
+					
+				} else {
+                	/* We didn't get a length so, probably it's unspecified size
                    so get the start of download by trying to catch the
                    string "K ->" */
-				p = strstr (gwgetdata->line, "K -> ");
-				if (p != NULL) {
-					/* Unspecified size, so set total_size to 0 */
-					gwget_data_set_total_size (gwgetdata, 0);
-					if (stat (gwgetdata->local_filename, &file_stat) != -1) {
-						gwgetdata->session_start_time = file_stat.st_ctime;
-						gwgetdata->session_start_size = file_stat.st_size;
-					} else {
-						gwgetdata->session_start_time = 0;
-						gwgetdata->session_start_size = 0;
+					p = strstr (gwgetdata->line, "K -> ");
+					if (p != NULL) {
+						/* Unspecified size, so set total_size to 0 */
+						gwget_data_set_total_size (gwgetdata, 0);
+						if (stat (gwgetdata->local_filename, &file_stat) != -1) {
+							gwgetdata->session_start_time = file_stat.st_ctime;
+							gwgetdata->session_start_size = file_stat.st_size;
+						} else {
+							gwgetdata->session_start_time = 0;
+							gwgetdata->session_start_size = 0;
+						}
 					}
+					gwgetdata->session_elapsed = 0;
 				}
-				gwgetdata->session_elapsed = 0;
-			}
 				
 			if (strstr (gwgetdata->line,"-- ") != NULL) {
 				gchar *tmp=NULL;
@@ -224,7 +219,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 					j++;
 				}
 				tmp[j]='\0';
-				gwgetdata->filename=g_strdup(tmp);
+				gwget_data_set_filename_from_url(gwgetdata,tmp);
 			}
 		}
 		break;

@@ -193,7 +193,6 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 static void
 gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 {
-	gchar *state;
 	gchar *tooltip_message;
 	
 	
@@ -250,9 +249,9 @@ gwget_data_process_information (GwgetData *gwgetdata)
 		gwgetdata->line = NULL;
 
         /* Set the appropriate state after stopping */
-	if (gwgetdata->error) 
-		gwget_data_set_state (gwgetdata, DL_ERROR);
-	else if (WIFEXITED (status)) {
+		if (gwgetdata->error) 
+			gwget_data_set_state (gwgetdata, DL_ERROR);
+		else if (WIFEXITED (status)) {
             if (WEXITSTATUS (status) == 0)
                 gwget_data_set_state (gwgetdata, DL_COMPLETED);
             else if (WEXITSTATUS (status) == 255) {
@@ -261,11 +260,10 @@ gwget_data_process_information (GwgetData *gwgetdata)
                 g_warning ("couldn't find program wget to exec\n");
             } else
                 gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
-	} 
-	else  {
-		gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
-	}
-	gwget_data_update_statistics (gwgetdata);
+		} else {
+			gwget_data_set_state (gwgetdata, DL_NOT_RUNNING);
+		}
+		gwget_data_update_statistics (gwgetdata);
 
         /* Decrease the number of current downloads */
         if (num_of_download > 0)
@@ -274,7 +272,7 @@ gwget_data_process_information (GwgetData *gwgetdata)
         /* All done this download can be started again */
         gwgetdata->log_tag = -1;
 
-	return FALSE;
+		return FALSE;
     }
     return TRUE;
 }
@@ -444,21 +442,9 @@ gwget_data_create(gchar *url, gchar *dir)
 	else
 		gwgetdata->dir = g_strconcat (dir, "/", NULL);
 	
-	/* Get the filename from the URL */
-	filename = &gwgetdata->url[strlen (gwgetdata->url)];
-	while (*filename != '/' && filename != gwgetdata->url)
-		filename--;
-	filename++;
-
-	/* Figure out if the url it's from the form: http://www.domain.com                 */
-	/* If it's in the form: http://www.domain.com/ or http://www.domain.com/directory/ */
-	/* it's detected in the function on_ok_button_clicked in new_window.c file         */
-	filename2 = g_strdup_printf("http://%s",filename);
-	if (!strcmp(filename2,gwgetdata->url)) {
-		gwgetdata->filename=g_strdup(filename2);
-	} else {
-		gwgetdata->filename = g_strdup (filename);
-	}
+	gwget_data_set_filename_from_url(gwgetdata,gwgetdata->url);
+	
+	printf ("FILENAME: %s\n",gwgetdata->filename);
 	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
 	
 	gwgetdata->line = NULL;
@@ -539,4 +525,27 @@ void gwget_data_stop_download(GwgetData *data)
 			data->log_tag = -1;
 		}
 	}
+}
+
+void 
+gwget_data_set_filename_from_url(GwgetData *gwgetdata,gchar *url)
+{
+	gchar *filename,*filename2;
+	
+	/* Get the filename from the URL */
+	filename = &url[strlen (url)];
+	while (*filename != '/' && filename != url)
+		filename--;
+	filename++;
+
+	/* Figure out if the url it's from the form: http://www.domain.com                 */
+	/* If it's in the form: http://www.domain.com/ or http://www.domain.com/directory/ */
+	/* it's detected in the function on_ok_button_clicked in new_window.c file         */
+	filename2 = g_strdup_printf("http://%s",filename);
+	if (!strcmp(filename2,url)) {
+		gwgetdata->filename=g_strdup(filename2);
+	} else {
+		gwgetdata->filename = g_strdup (filename);
+	}
+	
 }
