@@ -130,7 +130,7 @@ void create_new_window(void)
 	GtkEntry *entry = NULL;
 	
 	if (!xml_new) {
-		xml_file =g_build_filename(DATADIR,"nuevo.glade",NULL);
+		xml_file =g_build_filename(DATADIR,"newdownload.glade",NULL);
 		xml_new = glade_xml_new(xml_file,NULL,NULL);
 		glade_xml_signal_autoconnect(xml_new);
 	}
