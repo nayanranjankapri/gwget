@@ -1,3 +1,8 @@
+2004-12-27 David Sedeño <david@alderia.com>
+
+	* src/new_window.c (create_new_window): More checks about
+	download_dir.
+
 2004-12-24 David Sedeño <david@alderia.com>
 
 	* src/gwget_data.c (gwget_data_create): Check that are corrects values

@@ -124,7 +124,8 @@ create_new_window(void)
 	gtk_entry_set_text(GTK_ENTRY(entry),url);
 
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"save_in_entry"));
-	if (strlen(gwget_pref.download_dir)==0) {
+	if ((gwget_pref.download_dir==NULL) || (strlen(gwget_pref.download_dir)==0)) {
+		gwget_pref.download_dir=g_strdup_printf("%s", g_get_home_dir());
 		gtk_entry_set_text(GTK_ENTRY(entry), g_get_home_dir());
 	} else {
 		gtk_entry_set_text(GTK_ENTRY(entry), gwget_pref.download_dir);
