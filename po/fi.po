@@ -1,0 +1,229 @@
+# gwget's Finnish translation
+# Suomennos: http://gnome-fi.sourceforge.net/
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Sini Ruohomaa <sini.ruohomaa@iki.fi>, 2004
+# This file is distributed under the same license as the gwget package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget 0.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-13 22:16+0300\n"
+"PO-Revision-Date: 2004-08-21 22:35+0300\n"
+"Last-Translator: Sini Ruohomaa <sini.ruohomaa@iki.fi>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/main_window.c:231
+msgid "File Type"
+msgstr "Tiedostotyyppi"
+
+#: src/main_window.c:240
+msgid "File Name"
+msgstr "Tiedostonimi"
+
+#: src/main_window.c:250
+msgid "State"
+msgstr "Tila"
+
+#: src/main_window.c:259
+msgid "Current Size"
+msgstr "Nykyinen koko"
+
+#: src/main_window.c:269
+msgid "Total Size"
+msgstr "Koko"
+
+#: src/main_window.c:279 src/main_window.c:284
+msgid "Percentage"
+msgstr "Prosenttia"
+
+#: src/main_window.c:289
+msgid "Elapsed Time"
+msgstr "Kulunut aika"
+
+#: src/main_window.c:299
+msgid "Remaining Time"
+msgstr "Aikaa jäljellä"
+
+#: src/main_window.c:309
+msgid "Speed"
+msgstr "Nopeus"
+
+#: src/main_window.c:539
+msgid "Cancel current downloads?"
+msgstr "Peru käynnissä olevat siirrot?"
+
+#: src/main_window.c:539
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr "Ainakin yksi tiedostonsiirto on vielä kesken. Haluatko perua kaikki käynnissä olevat siirrot?"
+
+#: src/main_window_cb.c:95
+msgid "Error in download"
+msgstr "Virhe tiedostonsiirrossa"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr "Virhe tiedostoa avattaessa"
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr "Tiedostoa ei voinut avata"
+
+#: src/main_window_cb.c:143
+msgid "Download Manager for Gnome2."
+msgstr "Tiedostojen noudon hallinta Gnome2:lle."
+
+#: src/main_window_cb.c:149
+msgid "translator_credits"
+msgstr ""
+"Sini Ruohomaa, 2004\n"
+"\n"
+"http://gnome-fi.org/"
+
+#: src/main_window_cb.c:161
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:391 src/new_window.c:151
+msgid "Select Folder"
+msgstr "Valitse kansio"
+
+#: src/main_window_cb.c:448
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Haluatko perua käynnissä olevan siirron? (URL: %s)"
+
+#: src/main_window_cb.c:449
+msgid "Cancel download?"
+msgstr "Peru siirto?"
+
+#: src/main_window_cb.c:475
+msgid "Remove completed"
+msgstr "Poisto valmis"
+
+#: src/main_window_cb.c:475
+msgid "Really remove completed downloads from the list?"
+msgstr "Haluatko poistaa valmiit tiedostonsiirrot luettelosta?"
+
+#: src/main_window_cb.c:504
+msgid "Remove not running"
+msgstr "Poista ellei käynnissä"
+
+#: src/main_window_cb.c:504
+msgid "Really remove not running downloads from the list?"
+msgstr "Haluatko poistaa luettelosta tiedostonsiirrot, jotka eivät ole käynnissä?"
+
+#: src/main_window_cb.c:534
+msgid "Remove all"
+msgstr "Poista kaikki"
+
+#: src/main_window_cb.c:534
+msgid "Really remove all downloads from the list?"
+msgstr "Haluatko poistaa kaikki tiedostonsiirrot luettelosta?"
+
+#: src/gwget_data.c:172
+msgid "stalled"
+msgstr "pysähtynyt"
+
+#: src/gwget_data.c:201
+msgid "Not Started"
+msgstr "Aloittamatta"
+
+#: src/gwget_data.c:203
+msgid "Not Running"
+msgstr "Ei käynnissä"
+
+#: src/gwget_data.c:205
+msgid "Not Connected"
+msgstr "Ei yhteyttä"
+
+#: src/gwget_data.c:207
+msgid "Connected"
+msgstr "Yhdistetty"
+
+#: src/gwget_data.c:209
+msgid "Retrieving"
+msgstr "Noutaa"
+
+#: src/gwget_data.c:211
+msgid "Completed"
+msgstr "Valmis"
+
+#: src/gwget_data.c:215
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Tiedostonsiirto valmis\n"
+"(%s)"
+
+#: src/gwget_data.c:222
+msgid "Error"
+msgstr "Virhe"
+
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr "Pistokevirhe"
+
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Yhteyspyyntö evätty\n"
+
+#: src/wget-log.c:87
+msgid "No route to host"
+msgstr "Ei reittiä palvelimelle"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr "Yhteyspyyntö evättiin noudettaessa URLia:\n"
+
+#: src/wget-log.c:91
+msgid "Host not found\n"
+msgstr "Palvelinta ei löytynyt\n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Yhteyskäytäntöä ei tueta - tarvitset wget-version >= 1.7 https:ää varten:\n"
+
+#: src/wget-log.c:96
+msgid "Refusing to truncate existing file"
+msgstr "Olemassaolevaa tiedostoa ei typistetä"
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Tuntematon virhe"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+msgid "File not found"
+msgstr "Tiedostoa ei löytynyt"
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "Tiedostonsiirtoa ei voi jatkaa. Olemassaoleva paikallinen tiedosto ei sovi yhteen noudettavan kanssa."
+
+#: src/wget-log.c:169
+msgid "Can't write to target directory"
+msgstr "Kohdekansioon ei voi kirjoittaa"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Epäonnistui"
+
+#: src/systray.c:133
+msgid "Nothing"
+msgstr "Ei mitään"
+
+#: src/systray.c:140
+msgid "Downloads"
+msgstr "Siirrot"
