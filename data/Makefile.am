@@ -12,4 +12,15 @@ gwget_data_DATA = \
 	preferences.glade\
 	gwget.glade
 
-EXTRA_DIST = $(gwget_data_DATA)
+bonobodir = $(libdir)/bonobo
+serverdir = $(libdir)/bonobo/servers
+server_in_files = GNOME_Gwget.server.in.in
+server_DATA = $(server_in_files:.server.in.in=.server)
+$(server_in_files:.server.in.in=.server.in): $(server_in_files)
+	sed -e "s|\@BONOBODIR\@|$(bonobodir)|" $< > $@
+@INTLTOOL_SERVER_RULE@
+                                                                                                             
+
+
+EXTRA_DIST = $(gwget_data_DATA) \
+	     $(server_in_files)
