@@ -23,6 +23,7 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <string.h>
 #include "gwget_data.h"
 #include "wget-log.h"
 #include "main_window.h"
@@ -187,11 +188,13 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 			   SPEED_COLUMN,buffer,-1);
 	
-	/* If is recursive, then update the filename */
-	if (gwgetdata->recursive) {
-		gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
-					FILENAME_COLUMN,gwgetdata->filename,-1);
-	}
+	/* Update the filename */
+	gtk_list_store_set(GTK_LIST_STORE(model),
+			   &gwgetdata->file_list,
+			   FILENAME_COLUMN,
+			   gwgetdata->filename,
+			   -1);
+		
 	gwget_data_update_statistics_ui(gwgetdata);
 	if (gwgetdata == gwget_data_get_selected()) {
 		gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), title);
@@ -254,6 +257,11 @@ gwget_data_process_information (GwgetData *gwgetdata)
 	/* Check that wget process is still running */
 	child_pid = waitpid (gwgetdata->wget_pid, &status, WNOHANG | WUNTRACED);
  	if (child_pid == gwgetdata->wget_pid) {
+		/*
+		 * Use any information wget logged and we did not read
+		 */
+		wget_drain_remaining_log(gwgetdata);
+		
 		/* Wget process stopped so we must register its exit */
 		close (gwgetdata->log_fd);
 		g_free (gwgetdata->line);
@@ -441,8 +449,6 @@ gwget_data_start_download(GwgetData *gwgetdata)
 		
 		gwgetdata->log_fd = pipe_fd[0];
 		fcntl (gwgetdata->log_fd, F_SETFL, O_NONBLOCK);
-		gwgetdata->line = g_new (gchar, MAX_WGET_LINE_SIZE + 1);
-		gwgetdata->line_pos = 0;
 		gwgetdata->log_tag = gtk_timeout_add (1000, 
                 	             (GtkFunction) gwget_data_process_information,
                         	     gwgetdata);
@@ -493,13 +499,15 @@ gwget_data_create(gchar *url, gchar *dir)
 	
 	gwget_data_set_filename_from_url(gwgetdata,gwgetdata->url);
 	
-	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
+	gwget_data_set_filename(gwgetdata,gwgetdata->filename);
 	
 	localfile_uri = gnome_vfs_uri_new (gwgetdata->local_filename);
 	if (gnome_vfs_uri_exists (localfile_uri) ) {
 		GnomeVFSFileInfo *info;
 		info = gnome_vfs_file_info_new();
-		gnome_vfs_get_file_info (gwgetdata->local_filename, info, GNOME_VFS_FILE_INFO_DEFAULT);
+		gnome_vfs_get_file_info (gwgetdata->local_filename, 
+				         info, 
+					 GNOME_VFS_FILE_INFO_DEFAULT);
 		gwgetdata->cur_size = (guint32)info->size;
 	} else {
 		gwgetdata->cur_size = 0;
@@ -519,6 +527,16 @@ gwget_data_create(gchar *url, gchar *dir)
 	num_of_download++;
 	return gwgetdata;
 	
+}
+
+/* Keeps filename and local_filename in sync */
+void
+gwget_data_set_filename(GwgetData* gwgetdata,gchar *str) 
+{
+	gwgetdata->filename = g_strdup(str);
+	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, 
+			                         str,
+						 NULL);
 }
 
 /* Return the gwgetdata that is selected in the treeview */
@@ -600,16 +618,18 @@ gwget_data_set_filename_from_url(GwgetData *gwgetdata,gchar *url)
 		filename--;
 	filename++;
 
-	/* Figure out if the url it's from the form: http://www.domain.com                 */
-	/* If it's in the form: http://www.domain.com/ or http://www.domain.com/directory/ */
-	/* it's detected in the function on_ok_button_clicked in new_window.c file         */
+	/* 
+	 * Figure out if the url it's from the form: http://www.domain.com         
+	 * If it's in the form: http://www.domain.com/ or 
+	 *                      http://www.domain.com/directory/ 
+	 * it's detected in the function on_ok_button_clicked in new_window.c file 
+	 */
 	filename2 = g_strdup_printf("http://%s",filename);
 	if (!strcmp(filename2,url)) {
-		gwgetdata->filename=g_strdup(filename2);
+		gwgetdata->filename = g_strdup(filename2);
 	} else {
-		gwgetdata->filename = g_strdup (filename);
+		gwgetdata->filename = g_strdup(filename);
 	}
-	
 }
 
 /* Add a gwgetdata to the main window */
@@ -621,7 +641,8 @@ gwget_data_add_download(GwgetData *gwgetdata)
 	GtkWidget *radio, *recursive_window;
 	
 	if (check_url_already_exists(gwgetdata->url)) {
-		run_dialog_information(_("Unable to add this download"),_("This download is already added"));
+		run_dialog_information(_("Unable to add this download"),
+				       _("This download is already added"));
 		return;
 	}
 

@@ -22,8 +22,10 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <signal.h>
+#include <fcntl.h>
 #include "gwget_data.h"
 #include "wget-log.h"
+#include "main_window.h"
 
 
 /* Function to convert the wget notation of file size (55,449,600) */ 
@@ -56,11 +58,42 @@ show_error (GwgetData *gwgetdata, gchar *error_msg)
 static int
 wget_log_process_line (GwgetData *gwgetdata)
 {
+	if (gwgetdata->line == NULL)
+		return 0;
+
 	gchar *p;
 	struct stat file_stat;
 
 	switch (gwgetdata->state) {
 	case DL_NOT_CONNECTED:
+		/* 
+		 * If gwgetdata->filename does not match the filesystem filename,
+		 * bad things can happen. We intecept the line that prints the 
+		 * filesystem filename and set gwgetdata->filename
+		 */
+		if (strstr(gwgetdata->line,"           => `")) {
+			int iL = strlen(gwgetdata->line);
+			gwgetdata->line[iL-1] = 0; // Chop the final ' 
+
+			char *sName = gwgetdata->line;
+			/*
+			 * Now sName contains the whole pathname. No filename can
+			 * contain '/' so the following search for the last component
+			 * is sane
+			 */
+			sName += strlen(sName) - 1;
+			while (*sName != '/' && sName != gwgetdata->line)
+				sName--;
+			if (*sName == '/')
+				sName++;
+
+			//g_print("NAME: %s\n",sName);
+			gwget_data_set_filename(gwgetdata,sName);
+			gwget_data_update_statistics(gwgetdata);
+			gwget_remember_downloads();
+			break;
+		}
+		  
 		/* First check to see if connected to the host correctly */
 		/* Wget 1.8.1 says "connected." rather than "connected!" */
 		if (strstr (gwgetdata->line, "connected!") != NULL ||
@@ -238,32 +271,76 @@ wget_log_process_line (GwgetData *gwgetdata)
 }
 
 void
+wget_log_read_log_line(GwgetData *gwgetdata) {
+	g_free(gwgetdata->line);
+	gwgetdata->line = NULL;
+
+	char c;
+	int iRes = read(gwgetdata->log_fd,&c,1);
+
+	if (iRes < 1) {
+		/*
+		 * No input available
+		 */
+		gwgetdata->line = NULL;
+		return;
+	}
+
+	int iBlockCount = 1;
+	gchar *buffer = g_malloc(sizeof(gchar)*(iBlockCount*BLOCK_SIZE));
+	int iWritePos = 0;
+		
+	buffer[iWritePos++] = c;
+	while (c != '\n') {
+		iRes = read(gwgetdata->log_fd,&c,1);
+		if (iRes < 1) {
+			/*
+			 * There is currently no more data to read. Return what we have.
+			 */
+			buffer[iWritePos++] = 0;
+			break;
+		}
+		buffer[iWritePos++] = c;
+
+		if (iWritePos == iBlockCount*BLOCK_SIZE && c != '\n') {
+			/*
+			 * The buffer is full , expanding
+			 */
+			iBlockCount++;
+			buffer = g_realloc(buffer,
+					   sizeof(gchar)*(iBlockCount*BLOCK_SIZE));
+		}
+	} 
+	buffer[iWritePos-1] = 0;
+	//g_print("LOG: %s\n",buffer);
+	
+	gwgetdata->line = buffer;
+}
+
+void
+wget_drain_remaining_log(GwgetData *gwgetdata) 
+{
+	wget_log_read_log_line(gwgetdata);
+	while (gwgetdata->line != NULL) {
+		wget_log_process_line(gwgetdata);
+		wget_log_read_log_line(gwgetdata);
+	}
+	gwget_data_update_statistics(gwgetdata);
+}
+
+void
 wget_log_process (GwgetData *gwgetdata)
 {
-	gchar buffer[MAX_WGET_LINE_SIZE * 2 + 1];
-	gint total_read, pos, res;
-
+	/*
+	 * Read and process two lines of log
+	 */
+	wget_log_read_log_line(gwgetdata);
+	wget_log_process_line(gwgetdata);
 	
-	do {
-		total_read = read (gwgetdata->log_fd, buffer, MAX_WGET_LINE_SIZE * 2);
-		pos = 0;
-		while (pos < total_read) {
-			if (buffer[pos] != '\n') {
-				if (gwgetdata->line_pos < MAX_WGET_LINE_SIZE)
-					gwgetdata->line[gwgetdata->line_pos++] = buffer[pos++];
-				else
-					pos++;
-			} else {
-				gwgetdata->line[gwgetdata->line_pos] = '\0';
-			
-				res = wget_log_process_line (gwgetdata);
-				if (res == 1)
-					break;
-				gwgetdata->line_pos = 0;
-				pos++;
-			}
-		}
-		if (gwgetdata->state == DL_RETRIEVING)
-			gwget_data_update_statistics (gwgetdata);
-	} while (total_read == MAX_WGET_LINE_SIZE * 2);
+	wget_log_read_log_line(gwgetdata);
+	wget_log_process_line(gwgetdata);
+
+	if (gwgetdata->state == DL_RETRIEVING)
+		gwget_data_update_statistics(gwgetdata);
 }
+

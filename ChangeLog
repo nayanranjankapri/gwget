@@ -1,3 +1,33 @@
+2005-02-26  Ivan Yosifov <ivan@yosifov.net>
+
+	* include/gwget_data.h: Remove line_pos from GwgetData , it is no
+				longer needed.
+
+	* include/wget-log.h: Remove constant MAX_WGET_LINE_SIZE and define
+			      BLOCK_SIZE , which is referanced in 
+			      wget_drain_remaining_log. Declare the function
+
+	* src/gwget_data.c: Update filename even for non-recursive downloads.
+			    Process pendind log on wget process termination.
+
+	* src/gwget_data.c: Created a function gwget_data_set_filename that
+			    updates filename and local_filename.
+
+	* src/main_window.c: Reworked gwget_destination_file_exists to use
+			     local_filename. Much simpler now :)
+
+	* src/main_window.c: In gwget_get_defaults_from_gconf we also get
+		      	     local_filename from gconf.
+
+	* src/wget-log.c: Rewrite the log capturing around the new function
+			  wget_log_read_log_line. The new function reads
+			  at most one line of log and does not truncate very
+			  long lines like the old code did.
+	
+	* src/wget-log.c: In wget_log_process_line we intercept the line where
+			  wget tells what filename is it saving under, and
+			  update data structures,GUI,Gconf.
+	
 2005-02-22  David Sedeño <david@alderia.com>
 
 	* src/systray.c: Present the main window. Thanks to Ivan for the

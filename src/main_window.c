@@ -159,32 +159,12 @@ main_window(void)
 }
 
 gboolean
-gwget_destination_file_exists(int i)
+gwget_destination_file_exists(GwgetData *data)
 {
-	gchar *key; 
-	gchar *dir;
-	gint  iDirL;
-	gchar *file;
-	gint  iFileL;
-	gchar *path_name;
-	gint  iPathNameL;
 	struct stat s;
-
-	key = g_strdup_printf("/apps/gwget2/downloads_data/%d/dir",i);
-	dir = gconf_client_get_string(gconf_client,key,NULL);	
-	iDirL = strlen(dir) + 1;
 	
-	key = g_strdup_printf("/apps/gwget2/downloads_data/%d/filename",i);
-	file = gconf_client_get_string(gconf_client,key,NULL);	
-	iFileL = strlen(file) + 1;
-
-	iPathNameL = iDirL + iFileL + 1;
-	path_name = g_malloc0(sizeof(gchar)*iPathNameL);
-	strcat(path_name,dir);
-	strcat(path_name,file);
-
-	//g_print("%s %d\n",path_name, g_stat(path_name,&s));	
-	return ( g_stat(path_name,&s) == 0 );
+	//g_print("%s %d\n",data->local_filename , g_stat(data->local_filename,&s));	
+	return ( g_stat(data->local_filename,&s) == 0 );
 }
 
 void 
@@ -192,7 +172,7 @@ gwget_get_defaults_from_gconf(void)
 {
 	gint num_dl, i, total_size;
 	GwgetData *data;
-	gchar *key,*url,*dir;
+	gchar *key,*url,*dir,*name;
 	DlState state;
 	gint default_width, default_height;
 	GError *error = NULL;
@@ -242,7 +222,13 @@ gwget_get_defaults_from_gconf(void)
 		url=gconf_client_get_string(gconf_client,key,NULL);
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/dir",i);
 		dir=gconf_client_get_string(gconf_client,key,NULL);
+		
 		data=gwget_data_create(url,dir);
+		
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/filename",i);
+		name=gconf_client_get_string(gconf_client,key,NULL);
+		gwget_data_set_filename(data,name);
+		
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		state=gconf_client_get_int(gconf_client,key,NULL); 
 		
@@ -266,7 +252,7 @@ gwget_get_defaults_from_gconf(void)
 			 * has (re)moved it , so quietly forget download , otherwise
 			 * add it
 		 	 */
-			if ( !gwget_destination_file_exists(i) ) {
+			if ( !gwget_destination_file_exists(data) ) {
 				/*
 				 * We do not add download, the gwget_remember_downloads
 				 * call after the cycle will flush gconf

@@ -79,7 +79,6 @@ typedef struct
     gboolean use_proxy;         /* Used to use proxy */
     gboolean use_auto_dl;       /* Used to use auto download */
     gchar *line;                /* Used to process the wget output */
-    gint line_pos;              /* Used to process the wget output */
     guint32 total_size;         /* Total file size in bytes */
     guint32 total_time;         /* Total time spent in seconds */
     time_t session_start_time;  /* Time at start of this download session */
@@ -105,6 +104,7 @@ gint num_of_download;
 #define gwget_data_run(gwgetdata) ((gwgetdata->log_tag != -1) ? TRUE : FALSE)
 
 GwgetData * gwget_data_create(gchar *url, gchar *dir);
+void gwget_data_set_filename(GwgetData* gwgetdata,gchar *str);
 void gwget_data_start_download(GwgetData *gwgetdata);
 void gwget_data_set_state (GwgetData *gwgetdata, DlState state);
 void gwget_data_update_statistics (GwgetData *gwgetdata);

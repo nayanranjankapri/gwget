@@ -19,9 +19,9 @@
 #ifndef _WGET_LOG_H
 #define _WGET_LOG_H
 
-/* Max size for the wget output line */
-#define MAX_WGET_LINE_SIZE 80
+#define BLOCK_SIZE 80
 
 void wget_log_process (GwgetData *gwgetdata);
+void wget_drain_remaining_log(GwgetData *gwgetdata);
 
 #endif /* _WGET_LOG_H */
