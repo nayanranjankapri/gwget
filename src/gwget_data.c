@@ -459,6 +459,10 @@ gwget_data_create(gchar *url, gchar *dir)
 	GwgetData *gwgetdata;
 	GnomeVFSURI *localfile_uri;
 	gint length;
+
+	g_return_val_if_fail(url != NULL, NULL);
+	g_return_val_if_fail(dir != NULL, NULL);
+	g_return_val_if_fail(gwget_pref.download_dir != NULL, NULL);
 		
 	gwgetdata = g_new0(GwgetData,1);
 	

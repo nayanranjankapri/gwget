@@ -1,5 +1,11 @@
 2004-12-24 David Sedeño <david@alderia.com>
 
+	* src/gwget_data.c (gwget_data_create): Check that are corrects values
+	to create the gwget_data. 
+	* main_window.c (on_treeview_drag_received): Var checks.
+
+2004-12-24 David Sedeño <david@alderia.com>
+
 	* src/main_window_cb.c (on_boton_pref_clicked): Check if there are
 	download_dir in pref.
 

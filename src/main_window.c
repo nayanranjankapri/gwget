@@ -352,6 +352,8 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 	GList *files;
 	GwgetData *gwgetdata;
 	
+	g_return_if_fail(gwget_pref.download_dir != NULL);
+
 	dnd_type = GPOINTER_TO_UINT(data);
 	  
 	if (dnd_type==TARGET_URI_LIST) {
@@ -365,9 +367,12 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 		gtk_drag_finish(context, TRUE, FALSE, time);
 	} else if (dnd_type==TARGET_NETSCAPE_URL) {
 		file=((gchar *) (seldata->data));
-    	gwgetdata=gwget_data_create(file,gwget_pref.download_dir);
-		new_download(gwgetdata);
-		gwget_data_start_download(gwgetdata);
+    		if (gwgetdata=gwget_data_create(file,gwget_pref.download_dir)) {
+			new_download(gwgetdata);
+			gwget_data_start_download(gwgetdata);
+		} else {
+			run_dialog(_("Error starting the download"),_("There is a unexpected error starting the download"));
+		}
 		gtk_drag_finish(context, TRUE, FALSE, time);
 	} else 	{
 		gtk_drag_finish(context, FALSE, TRUE, time);
