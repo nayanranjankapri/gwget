@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Alleyoop cvs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-19 04:27+0100\n"
-"PO-Revision-Date: 2005-01-19 13:00+0100\n"
+"POT-Creation-Date: 2005-02-17 14:21+0100\n"
+"PO-Revision-Date: 2005-02-17 22:16+0100\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,9 @@ msgstr ""
 "Laurens Buhler\n"
 "Vincent van Adrighem\n"
 "Jan-Willem Harmanny\n"
-"Elros Cyriatan"
+"Elros Cyriatan\n"
+"\n"
+"voor meer info: nl.gnome.org"
 
 #: data/gwget.glade.h:1 data/preferences.glade.h:2
 msgid "    "
@@ -65,8 +67,8 @@ msgstr "Annuleren"
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:576
-#: src/main_window_cb.c:672
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:578
+#: src/main_window_cb.c:674
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Downloadbeheer"
 
@@ -115,7 +117,7 @@ msgstr "Eigenschappen"
 msgid "Question"
 msgstr "Vraag"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:32
+#: data/gwget.glade.h:18 data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Recursief"
 
@@ -127,7 +129,7 @@ msgstr "Recursieve opties"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:655
+#: data/gwget.glade.h:21 src/main_window_cb.c:657
 msgid "Remove all"
 msgstr "Alles verwijderen"
 
@@ -136,7 +138,7 @@ msgstr "Alles verwijderen"
 msgid "Remove all downloads from list"
 msgstr "Alle downloads van de lijst afhalen"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:597
+#: data/gwget.glade.h:23 src/main_window_cb.c:599
 msgid "Remove completed"
 msgstr "Voltooide weghalen"
 
@@ -144,7 +146,7 @@ msgstr "Voltooide weghalen"
 msgid "Remove completed downloads from list"
 msgstr "Voltooide downloads van de lijst halen"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:626
+#: data/gwget.glade.h:25 src/main_window_cb.c:628
 msgid "Remove inactive"
 msgstr "Inactieve weghalen"
 
@@ -173,10 +175,9 @@ msgstr "Alleen het indexbestand"
 msgid "This site (mirror)"
 msgstr "Deze site (mirror)"
 
-# lokatie
-#: data/gwget.glade.h:32
-msgid "Url:"
-msgstr "Url:"
+#: data/gwget.glade.h:32 data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
 
 #: data/gwget.glade.h:33
 msgid "_New"
@@ -216,7 +217,10 @@ msgstr "Relatieve links volgen"
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
-msgstr "Indien waar, altijd vragen naar een doelmap bij het starten van een nieuwe download.  Indien onwaar, altijd opslaan in de standaard map zonder eerst de gebruiker te vragen."
+msgstr ""
+"Indien waar, altijd vragen naar een doelmap bij het starten van een nieuwe "
+"download.  Indien onwaar, altijd opslaan in de standaard map zonder eerst de "
+"gebruiker te vragen."
 
 #: data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -281,13 +285,9 @@ msgstr "<span weight=\"bold\">Nieuwe download</span>"
 msgid "New Download"
 msgstr "Nieuwe download"
 
-#: data/newdownload.glade.h:3 data/preferences.glade.h:34
+#: data/newdownload.glade.h:3
 msgid "Save in:"
 msgstr "Opslaan in:"
-
-#: data/newdownload.glade.h:4
-msgid "URL:"
-msgstr "URL:"
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -320,107 +320,112 @@ msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Proxy configuratie</span>"
 
 #: data/preferences.glade.h:9
-msgid "Ask where to save for each download"
-msgstr "Bij elke download vragen waarin op te slaan"
-
-#: data/preferences.glade.h:10
 msgid "Column List"
 msgstr "Kolomlijst"
 
+#: data/preferences.glade.h:10
+msgid "Default _GNOME network settings"
+msgstr "Standaard _GNOME netwerkinstellingen"
+
 #: data/preferences.glade.h:11
-msgid "Continue downloads on startup"
-msgstr "Downloads hervatten bij opstarten"
+msgid "Direct _Internet connection"
+msgstr "Directe _internetverbinding"
 
-# verwijzingen/links
 #: data/preferences.glade.h:12
-msgid "Convert links"
-msgstr "links omzetten"
+msgid "Do_wnload Speed"
+msgstr "Do_wnloadsnelheid"
 
-#: data/preferences.glade.h:13 src/main_window.c:313
-msgid "Current Size"
-msgstr "Huidige grootte"
+#: data/preferences.glade.h:13
+msgid "Don't _create directories"
+msgstr "_Geen mappen aanmaken"
 
 #: data/preferences.glade.h:14
-msgid "Default GNOME network settings"
-msgstr "Standaard GNOME netwerk instellingen"
+msgid "Follow _relative links only"
+msgstr "Alleen _relatieve links volgen"
 
 #: data/preferences.glade.h:15
-msgid "Direct Internet connection"
-msgstr "Directe internetverbinding"
-
-#: data/preferences.glade.h:16
-msgid "Don't create directories"
-msgstr "Geen mappen aanmaken"
-
-#: data/preferences.glade.h:17
-msgid "Download Speed"
-msgstr "Downloadsnelheid"
-
-# vereisten/benodigdheden
-#: data/preferences.glade.h:18
-msgid "Download page requisites"
-msgstr "Downloadpagina vereisten"
-
-# Elapse = Elapsed
-#: data/preferences.glade.h:19 src/main_window.c:345
-msgid "Elapsed Time"
-msgstr "Verstreken tijd"
-
-#: data/preferences.glade.h:20
-msgid "Follow relative links only"
-msgstr "Alleen relatieve links volgen"
-
-#: data/preferences.glade.h:21
 msgid "General"
 msgstr "Algemeen"
 
-#: data/preferences.glade.h:22
-msgid "Limit download speed to:"
-msgstr "Downloadsnelheid beperken tot:"
-
-#: data/preferences.glade.h:23
-msgid "Manual proxy configuration"
-msgstr "Handmatige proxy configuratie"
-
-#: data/preferences.glade.h:24
-msgid "Maximum depth level:"
-msgstr "Maximale diepte:"
-
-#: data/preferences.glade.h:25
+#: data/preferences.glade.h:16
 msgid "Network"
 msgstr "Netwerk"
 
-#: data/preferences.glade.h:26
-msgid "Number of retries:"
-msgstr "Aantal pogingen:"
+#: data/preferences.glade.h:17
+msgid "P_ort:"
+msgstr "P_oort:"
 
-#: data/preferences.glade.h:27
-msgid "Open files automatically after download"
-msgstr "Bestanden automatisch openen na downloaden"
-
-#: data/preferences.glade.h:28 src/main_window.c:334 src/main_window.c:340
-msgid "Percentage"
-msgstr "Percentage"
-
-#: data/preferences.glade.h:29
-msgid "Port:"
-msgstr "Poort:"
-
-#: data/preferences.glade.h:30
+#: data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "Voorkeuren"
 
+#: data/preferences.glade.h:19
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: data/preferences.glade.h:21
+msgid "Remaining _Time"
+msgstr "_Resterende tijd"
+
+#: data/preferences.glade.h:22
+msgid "Sa_ve in:"
+msgstr "Op_slaan in:"
+
+#: data/preferences.glade.h:23
+msgid "Total _Size"
+msgstr "_Totale grootte"
+
+#: data/preferences.glade.h:24
+msgid "_Ask where to save for each download"
+msgstr "Bij elke download _vragen waarin op te slaan"
+
+#: data/preferences.glade.h:25
+msgid "_Continue downloads on startup"
+msgstr "Downloads _hervatten bij opstarten"
+
+# verwijzingen/links
+#: data/preferences.glade.h:26
+msgid "_Convert links"
+msgstr "links _omzetten"
+
+#: data/preferences.glade.h:27
+msgid "_Current Size"
+msgstr "_Huidige grootte"
+
+# vereisten/benodigdheden
+#: data/preferences.glade.h:28
+msgid "_Download page requisites"
+msgstr "_Downloadpagina vereisten"
+
+# Elapse = Elapsed
+#: data/preferences.glade.h:29
+msgid "_Elapsed Time"
+msgstr "_Verstreken tijd"
+
+# limiteren/beperken
+#: data/preferences.glade.h:30
+msgid "_Limit download speed to:"
+msgstr "Downloadsnelheid _beperken tot:"
+
 #: data/preferences.glade.h:31
-msgid "Proxy:"
-msgstr "Proxy:"
+msgid "_Manual proxy configuration"
+msgstr "_Handmatige proxy configuratie"
 
-#: data/preferences.glade.h:33 src/main_window.c:355
-msgid "Remaining Time"
-msgstr "Resterende tijd"
+#: data/preferences.glade.h:32
+msgid "_Maximum depth level:"
+msgstr "_Maximale diepte:"
 
-#: data/preferences.glade.h:35 src/main_window.c:324
-msgid "Total Size"
-msgstr "Totale grootte"
+#: data/preferences.glade.h:33
+msgid "_Number of retries:"
+msgstr "_Aantal pogingen:"
+
+#: data/preferences.glade.h:34
+msgid "_Open files automatically after download"
+msgstr "Bestanden automatisch _openen na downloaden"
+
+#: data/preferences.glade.h:35
+msgid "_Percentage"
+msgstr "_Percentage"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
@@ -480,47 +485,68 @@ msgstr ""
 msgid "Error"
 msgstr "Fout"
 
-#: src/gwget_data.c:616
+#: src/gwget_data.c:621
 msgid "Unable to add this download"
 msgstr "Niet in staat deze download toe te voegen"
 
-#: src/gwget_data.c:616
+#: src/gwget_data.c:621
 msgid "This download is already added"
 msgstr "Deze download is al aanwezig"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: src/gwget_data.c:669 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Fout bij bestand openen"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: src/gwget_data.c:669 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Kon het bestand niet openen"
 
-#: src/main_window.c:295
+#: src/main_window.c:308
 msgid "File Name"
 msgstr "Bestandnaam"
 
-#: src/main_window.c:302
+#: src/main_window.c:315
 msgid "State"
 msgstr "Status"
 
-#: src/main_window.c:365
+#: src/main_window.c:326
+msgid "Current Size"
+msgstr "Huidige grootte"
+
+#: src/main_window.c:337
+msgid "Total Size"
+msgstr "Totale grootte"
+
+#: src/main_window.c:347 src/main_window.c:353
+msgid "Percentage"
+msgstr "Percentage"
+
+# Elapse = Elapsed
+#: src/main_window.c:358
+msgid "Elapsed Time"
+msgstr "Verstreken tijd"
+
+#: src/main_window.c:368
+msgid "Remaining Time"
+msgstr "Resterende tijd"
+
+#: src/main_window.c:378
 msgid "Speed"
 msgstr "Snelheid"
 
-#: src/main_window.c:411
+#: src/main_window.c:424
 msgid "Error starting the download"
 msgstr "Fout bij starten van download"
 
-#: src/main_window.c:411
+#: src/main_window.c:424
 msgid "There was an unexpected error starting the download"
 msgstr "Er was een onverwachte fout bij het starten van de download"
 
-#: src/main_window.c:601
+#: src/main_window.c:645
 msgid "Cancel current downloads?"
 msgstr "Huidige downloads annuleren?"
 
-#: src/main_window.c:601
+#: src/main_window.c:646
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -540,36 +566,36 @@ msgstr "Downloadbeheer voor GNOME."
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:513 src/new_window.c:138
+#: src/main_window_cb.c:514 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Map selecteren"
 
-#: src/main_window_cb.c:568
+#: src/main_window_cb.c:570
 #, c-format
 msgid ""
 "Really cancel current download?\n"
-"(Url: %s)"
+"(URL: %s)"
 msgstr ""
 "De huidige download echt annuleren?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:569
+#: src/main_window_cb.c:571
 msgid "Cancel download?"
 msgstr "Download annuleren?"
 
-#: src/main_window_cb.c:597
+#: src/main_window_cb.c:599
 msgid "Really remove completed downloads from the list?"
 msgstr "De voltooide downloads echt van de lijst afhalen?"
 
-#: src/main_window_cb.c:626
+#: src/main_window_cb.c:628
 msgid "Really remove inactive downloads from the list?"
 msgstr "De inactieve downloads echt van de lijst afhalen?"
 
-#: src/main_window_cb.c:655
+#: src/main_window_cb.c:657
 msgid "Really remove all downloads from the list?"
 msgstr "De voltooide downloads echt allemaal van de lijst afhalen?"
 
-#: src/systray.c:135
+#: src/systray.c:144
 msgid "Nothing"
 msgstr "Niets"
 
@@ -577,7 +603,7 @@ msgstr "Niets"
 # src/context.c:62
 # src/history_callbacks.c:159
 # src/misc_callbacks.c:408
-#: src/systray.c:142
+#: src/systray.c:151
 msgid "Downloads"
 msgstr "Downloads"
 
@@ -627,6 +653,10 @@ msgstr ""
 #: src/wget-log.c:180
 msgid "Can't write to target directory"
 msgstr "Kan niet schrijven naar doelmap"
+
+# lokatie
+#~ msgid "Url:"
+#~ msgstr "Url:"
 
 #~ msgid "<b>General</b>"
 #~ msgstr "<b>Algemeen</b>"
