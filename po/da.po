@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-31 13:00+0100\n"
-"PO-Revision-Date: 2005-01-31 12:57+0100\n"
+"POT-Creation-Date: 2005-02-01 11:58+0100\n"
+"PO-Revision-Date: 2005-02-01 11:58+0100\n"
 "Last-Translator: Martin Willemoes Hansen <mwh@sysrq.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -184,7 +184,7 @@ msgstr "_Værktøjslinje"
 
 #: data/gwget.schemas.in.h:1
 msgid "Ask save in for each new download"
-msgstr "Spørg gem i for hver ny overførsel"
+msgstr "Spørg om der skal gemmes og hvorhenne for hver ny overførsel"
 
 #: data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -312,7 +312,7 @@ msgstr "<span weight=\"bold\">Konfiguration af proxy</span>"
 
 #: data/preferences.glade.h:9
 msgid "Ask where to save for each download"
-msgstr "Spørg hvor henne der skal gemmes for hver overførsel"
+msgstr "Spørg hvor der skal gemmes for hver overførsel"
 
 #: data/preferences.glade.h:10
 msgid "Column List"
