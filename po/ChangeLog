@@ -1,3 +1,7 @@
+2004-11-29  Vincent van Adrighem  <adrighem@gnome.org>
+
+	* nl.po: Translation updated by Laurens Buhler.
+
 2004-11-21  Miloslav Trmac  <mitr@volny.cz>
 
 	* cs.po: Updated Czech translation.
@@ -27,7 +31,7 @@
 
 	* en_CA.po: Updated Canadian English translation.
 
-2004-11-08  David Sede�o <david@alderia.com>
+2004-11-08  David Sedeño <david@alderia.com>
 
 	* lt.po: Added Lithuanian translation by Lech Jankowski.
 
@@ -96,11 +100,11 @@
 
 	* en_CA.po: Updated Canadian English translation.
 
-2004-09-26  David Sedeño <david@alderia.com>
+2004-09-26  David SedeÃ±o <david@alderia.com>
 
 	* POTFILES.in: Added data/GNOME_Gwget.server.in.in
 
-2004-09-21  David Sedeño <david@alderia.com>
+2004-09-21  David SedeÃ±o <david@alderia.com>
 
 	* mk.po: Added Macedonian translation
 
@@ -121,15 +125,15 @@
 	* bg.po: Updated Bulgarian translation by
 	Vladimir Petkov <vpetkov@i-space.org>
 
-2004-08-29  David Sedeño <david@alderia.com>
+2004-08-29  David SedeÃ±o <david@alderia.com>
 
 	* fr.po: Added French translatio by Julien Cegarra.
 
-2004-08-27  David Sedeño <david@alderia.com>
+2004-08-27  David SedeÃ±o <david@alderia.com>
 
 	* ru.po: Update Russian translation by Pavlo Bohmat.
 
-2004-08-24  Iñaki Larrañaga  <dooteo@euskalgnu.org>
+2004-08-24  IÃ±aki LarraÃ±aga  <dooteo@euskalgnu.org>
 
 	* eu.po: Updated Basque translation.
 
@@ -149,12 +153,12 @@
 
 	* en_CA.po: Updated Canadian English translation.
 
-2004-08-18  Estêvão Samuel Procópio  <tevaum@cvs.gnome.org>
+2004-08-18  EstÃªvÃ£o Samuel ProcÃ³pio  <tevaum@cvs.gnome.org>
 
 	* pt_BR.po: Added Brazilian Portuguese translation by Raphael Higino <raphaelh@uai.com.br>.
 	* ChangeLog: Converted from ISO-8859 to UTF-8.
 
-2004-08-18  David Sedeño <david@alderia.com>
+2004-08-18  David SedeÃ±o <david@alderia.com>
 
 	* ru.po: Update Russian translation by Pavlo Bohmat.
 
@@ -185,7 +189,7 @@
 	* POTFILES.in: Sorted and added missing files.
 	* .cvsignore: Added this.
 
-2004-08-13  David Sedeño <david@alderia.com>
+2004-08-13  David SedeÃ±o <david@alderia.com>
 
 	* gwget2.pot: Removed
 	* gwget.pot: Added
