@@ -1,3 +1,8 @@
+2005-02-17 Alexander Shopov  <ash@contact.bg>
+
+	* bg.po: Updated Bulgarian translation by
+	Rostislav Raykov <zbrox@i-space.org>
+
 2005-02-17  Frank Arnold  <farnold@cvs.gnome.org>
 
 	* de.po: Updated German translation.
@@ -7,9 +12,9 @@
 	* en_CA.po: Updated Canadian English translation.
 
 2005-02-13  David Lodge <dave@cirt.net>
-                                                                                
-        * en_GB.po: Updated British translation.
-                                                                                
+
+	* en_GB.po: Updated British translation.
+
 2005-02-07  Laurent Dhima  <laurenti@alblinux.net>
 
 	* sq.po: Added Albanian translation by Elian Myftiu.
