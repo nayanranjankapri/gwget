@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-17 20:04+0100\n"
-"PO-Revision-Date: 2005-02-17 20:09+0100\n"
+"POT-Creation-Date: 2005-03-08 19:18+0100\n"
+"PO-Revision-Date: 2005-03-08 19:21+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -61,8 +61,8 @@ msgstr "Zrušiť"
 msgid "Continue"
 msgstr "Pokračovať"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:578
-#: src/main_window_cb.c:674
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:594
+#: src/main_window_cb.c:691
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správca sťahovania"
 
@@ -110,7 +110,7 @@ msgstr "Vlastnosti"
 msgid "Question"
 msgstr "Otázka"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:20
+#: data/gwget.glade.h:18 data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekurzívne"
 
@@ -122,7 +122,7 @@ msgstr "Rekurzívne voľby"
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:657
+#: data/gwget.glade.h:21 src/main_window_cb.c:673
 msgid "Remove all"
 msgstr "Odstrániť všetko"
 
@@ -130,7 +130,7 @@ msgstr "Odstrániť všetko"
 msgid "Remove all downloads from list"
 msgstr "Odstrániť všetky sťahovania zo zoznamu"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:599
+#: data/gwget.glade.h:23 src/main_window_cb.c:615
 msgid "Remove completed"
 msgstr "Odstránenie dokončené"
 
@@ -138,7 +138,7 @@ msgstr "Odstránenie dokončené"
 msgid "Remove completed downloads from list"
 msgstr "Odstrániť dokončené sťahovania zo zoznamu"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:628
+#: data/gwget.glade.h:25 src/main_window_cb.c:644
 msgid "Remove inactive"
 msgstr "Odstrániť neaktívne"
 
@@ -216,50 +216,58 @@ msgid "Limit maximum speed"
 msgstr "Obmedziť najvyššiu rýchlosť"
 
 #: data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Obmedziť počet simultánnych sťahovaní"
+
+#: data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
 msgstr "Maximálna hĺbka v rekurzívnom režime"
 
-#: data/gwget.schemas.in.h:10
+#: data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "Maximálny počet simultánnych sťahovaní"
+
+#: data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
 msgstr "Obmedzenie najvyššej rýchlosti"
 
-#: data/gwget.schemas.in.h:11
+#: data/gwget.schemas.in.h:13
 msgid "Number of downloads"
 msgstr "Počet sťahovaní"
 
-#: data/gwget.schemas.in.h:12
+#: data/gwget.schemas.in.h:14
 msgid "Number of retries"
 msgstr "Počet opakovaní"
 
-#: data/gwget.schemas.in.h:13
+#: data/gwget.schemas.in.h:15
 msgid "Open the file after download"
 msgstr "Otvoriť súbor po stiahnutí"
 
-#: data/gwget.schemas.in.h:14
+#: data/gwget.schemas.in.h:16
 msgid "Resume downloads at startup"
 msgstr "Pokračovať v sťahovaní pri spustení"
 
-#: data/gwget.schemas.in.h:15
+#: data/gwget.schemas.in.h:17
 msgid "View download speed column"
 msgstr "Zobraziť stĺpec s rýchlosťou sťahovania"
 
-#: data/gwget.schemas.in.h:16
+#: data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
 msgstr "Zobraziť stĺpec s uplynulým časom"
 
-#: data/gwget.schemas.in.h:17
+#: data/gwget.schemas.in.h:19
 msgid "View percentage column"
 msgstr "Zobraziť stĺpec s percentami"
 
-#: data/gwget.schemas.in.h:18
+#: data/gwget.schemas.in.h:20
 msgid "View remaining time column"
 msgstr "Zobraziť stĺpec so zostávajúcim časom"
 
-#: data/gwget.schemas.in.h:19
+#: data/gwget.schemas.in.h:21
 msgid "View toolbar"
 msgstr "Zobraziť nástrojovú lištu"
 
-#: data/gwget.schemas.in.h:20
+#: data/gwget.schemas.in.h:22
 msgid "View total size column"
 msgstr "Zobraziť stĺpec s celkovou veľkosťou"
 
@@ -280,8 +288,8 @@ msgid "   "
 msgstr "   "
 
 #: data/preferences.glade.h:3
-msgid "  kB/sec"
-msgstr "  kB/s"
+msgid "*"
+msgstr "*"
 
 #: data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Behavior</span>"
@@ -332,80 +340,92 @@ msgid "General"
 msgstr "Všeobecné"
 
 #: data/preferences.glade.h:16
+msgid "Limit _number of simultaneous download to:"
+msgstr "Obmedziť _počet simultánnych sťahovaní na:"
+
+#: data/preferences.glade.h:17
 msgid "Network"
 msgstr "Sieť"
 
-#: data/preferences.glade.h:17
+#: data/preferences.glade.h:18
 msgid "P_ort:"
 msgstr "P_ort:"
 
-#: data/preferences.glade.h:18
+#: data/preferences.glade.h:19
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: data/preferences.glade.h:19
+#: data/preferences.glade.h:20
 msgid "Pro_xy:"
 msgstr "Pro_xy:"
 
-#: data/preferences.glade.h:21
+#: data/preferences.glade.h:22
 msgid "Remaining _Time"
 msgstr "Zostávajúci č_as"
 
-#: data/preferences.glade.h:22
+#: data/preferences.glade.h:23
 msgid "Sa_ve in:"
 msgstr "_Uložiť do:"
 
-#: data/preferences.glade.h:23
+#: data/preferences.glade.h:24
 msgid "Total _Size"
 msgstr "Celková _veľkosť"
 
-#: data/preferences.glade.h:24
+#: data/preferences.glade.h:25
 msgid "_Ask where to save for each download"
 msgstr "_Opýtať sa kde uložiť pre každé sťahovanie"
 
-#: data/preferences.glade.h:25
+#: data/preferences.glade.h:26
 msgid "_Continue downloads on startup"
 msgstr "_Pokračovať v sťahovaniach pri spustení"
 
-#: data/preferences.glade.h:26
+#: data/preferences.glade.h:27
 msgid "_Convert links"
 msgstr "_Konvertovať odkazy"
 
-#: data/preferences.glade.h:27
+#: data/preferences.glade.h:28
 msgid "_Current Size"
 msgstr "_Aktuálna veľkosť"
 
-#: data/preferences.glade.h:28
+#: data/preferences.glade.h:29
 msgid "_Download page requisites"
 msgstr "_Stiahnuť to, čo stránka potrebuje"
 
-#: data/preferences.glade.h:29
+#: data/preferences.glade.h:30
 msgid "_Elapsed Time"
 msgstr "_Uplynutý čas"
 
-#: data/preferences.glade.h:30
+#: data/preferences.glade.h:31
 msgid "_Limit download speed to:"
 msgstr "_Obmedziť rýchlosť sťahovania na:"
 
-#: data/preferences.glade.h:31
+#: data/preferences.glade.h:32
 msgid "_Manual proxy configuration"
 msgstr "_Ručná konfigurácia proxy"
 
-#: data/preferences.glade.h:32
+#: data/preferences.glade.h:33
 msgid "_Maximum depth level:"
 msgstr "_Maximálna hĺbka:"
 
-#: data/preferences.glade.h:33
+#: data/preferences.glade.h:34
 msgid "_Number of retries:"
 msgstr "_Počet opakovaní:"
 
-#: data/preferences.glade.h:34
+#: data/preferences.glade.h:35
 msgid "_Open files automatically after download"
 msgstr "_Otvoriť súbory automaticky po stiahnutí"
 
-#: data/preferences.glade.h:35
+#: data/preferences.glade.h:36
 msgid "_Percentage"
 msgstr "_Percentá"
+
+#: data/preferences.glade.h:37
+msgid "files"
+msgstr "súbory"
+
+#: data/preferences.glade.h:38
+msgid "kB/sec"
+msgstr "kB/s"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
@@ -415,39 +435,39 @@ msgstr "Neznámy"
 msgid "Failed"
 msgstr "Zlyhalo"
 
-#: src/gwget_data.c:177
+#: src/gwget_data.c:178
 msgid "stalled"
 msgstr "zastavené"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:213
 msgid "Waiting"
 msgstr "Čakanie"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:215
 msgid "Not Started"
 msgstr "Nezačaté"
 
-#: src/gwget_data.c:214
+#: src/gwget_data.c:217
 msgid "Not Running"
 msgstr "Nebežiace"
 
-#: src/gwget_data.c:216
+#: src/gwget_data.c:219
 msgid "Not Connected"
 msgstr "Nepripojené"
 
-#: src/gwget_data.c:218
+#: src/gwget_data.c:221
 msgid "Connected"
 msgstr "Pripojené"
 
-#: src/gwget_data.c:220
+#: src/gwget_data.c:223
 msgid "Retrieving"
 msgstr "Sťahovanie"
 
-#: src/gwget_data.c:222
+#: src/gwget_data.c:225
 msgid "Completed"
 msgstr "Dokončené"
 
-#: src/gwget_data.c:226
+#: src/gwget_data.c:229
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -456,71 +476,71 @@ msgstr ""
 "Sťahovanie dokončené\n"
 "(%s)"
 
-#: src/gwget_data.c:233
+#: src/gwget_data.c:236
 msgid "Error"
 msgstr "Chyba"
 
-#: src/gwget_data.c:621
+#: src/gwget_data.c:653
 msgid "Unable to add this download"
 msgstr "Nepodarilo sa pridať toto sťahovanie"
 
-#: src/gwget_data.c:621
+#: src/gwget_data.c:654
 msgid "This download is already added"
 msgstr "Toto sťahovanie je už pridané"
 
-#: src/gwget_data.c:669 src/main_window_cb.c:99
+#: src/gwget_data.c:702 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Chyba pri otváraní súboru"
 
-#: src/gwget_data.c:669 src/main_window_cb.c:99
+#: src/gwget_data.c:702 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
-#: src/main_window.c:308
+#: src/main_window.c:364
 msgid "File Name"
 msgstr "Názov súboru"
 
-#: src/main_window.c:315
+#: src/main_window.c:371
 msgid "State"
 msgstr "Stav"
 
-#: src/main_window.c:326
+#: src/main_window.c:382
 msgid "Current Size"
 msgstr "Aktuálna veľkosť"
 
-#: src/main_window.c:337
+#: src/main_window.c:393
 msgid "Total Size"
 msgstr "Celková veľkosť"
 
-#: src/main_window.c:347 src/main_window.c:353
+#: src/main_window.c:403 src/main_window.c:409
 msgid "Percentage"
 msgstr "Percentá"
 
-#: src/main_window.c:358
+#: src/main_window.c:414
 msgid "Elapsed Time"
 msgstr "Uplynutý čas"
 
-#: src/main_window.c:368
+#: src/main_window.c:424
 msgid "Remaining Time"
 msgstr "Zostávajúci čas"
 
-#: src/main_window.c:378
+#: src/main_window.c:434
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: src/main_window.c:424
+#: src/main_window.c:480
 msgid "Error starting the download"
 msgstr "Chyba pri štarte sťahovania"
 
-#: src/main_window.c:424
+#: src/main_window.c:480
 msgid "There was an unexpected error starting the download"
 msgstr "Vyskytla sa neočakávaná chyba pri štarte sťahovania"
 
-#: src/main_window.c:645
+#: src/main_window.c:712
 msgid "Cancel current downloads?"
 msgstr "Zrušiť aktuálne sťahovania?"
 
-#: src/main_window.c:646
+#: src/main_window.c:713
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -539,11 +559,11 @@ msgstr "Správca sťahovania pre GNOME."
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:514 src/new_window.c:138
+#: src/main_window_cb.c:530 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Vybrať priečinok"
 
-#: src/main_window_cb.c:570
+#: src/main_window_cb.c:586
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -552,72 +572,72 @@ msgstr ""
 "Naozaj zrušiť aktuálne sťahovanie?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:571
+#: src/main_window_cb.c:587
 msgid "Cancel download?"
 msgstr "Zrušiť sťahovanie?"
 
-#: src/main_window_cb.c:599
+#: src/main_window_cb.c:615
 msgid "Really remove completed downloads from the list?"
 msgstr "Naozaj odstrániť dokončené sťahovania zo zoznamu?"
 
-#: src/main_window_cb.c:628
+#: src/main_window_cb.c:644
 msgid "Really remove inactive downloads from the list?"
 msgstr "Naozaj odstrániť neaktívne sťahovania zo zoznamu?"
 
-#: src/main_window_cb.c:657
+#: src/main_window_cb.c:673
 msgid "Really remove all downloads from the list?"
 msgstr "Naozaj odstrániť všetky sťahovania zo zoznamu?"
 
-#: src/systray.c:144
+#: src/systray.c:150
 msgid "Nothing"
 msgstr "Nič"
 
-#: src/systray.c:151
+#: src/systray.c:157
 msgid "Downloads"
 msgstr "Sťahovania"
 
-#: src/wget-log.c:83
+#: src/wget-log.c:116
 msgid "Socket error"
 msgstr "Chyba zásuvky"
 
-#: src/wget-log.c:85
+#: src/wget-log.c:118
 msgid "Connection refused\n"
 msgstr "Spojenie odmietnuté\n"
 
-#: src/wget-log.c:87
+#: src/wget-log.c:120
 msgid "No route to host"
 msgstr "Nie je cesta k hostiteľovi"
 
-#: src/wget-log.c:89
+#: src/wget-log.c:122
 msgid "Connection refused when downloading URL:\n"
 msgstr "Spojenie odmietnuté pri sťahovaní URL:\n"
 
-#: src/wget-log.c:91
+#: src/wget-log.c:124
 msgid "Host not found\n"
 msgstr "Hostiteľ nebol nájdený\n"
 
-#: src/wget-log.c:93
+#: src/wget-log.c:126
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Nepodporovaný protokol - pre https potrebujete wget >= 1.7:\n"
 
-#: src/wget-log.c:96
+#: src/wget-log.c:129
 msgid "Refusing to truncate existing file"
 msgstr "Odmietam orezať existujúci súbor"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:131
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: src/wget-log.c:142 src/wget-log.c:148
 msgid "File not found"
 msgstr "Súbor nebol nájdený"
 
-#: src/wget-log.c:122
+#: src/wget-log.c:155
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nemôžem pokračovať v sťahovaní, existujúci lokálny súbor je v konflikte so "
 "vzdialeným súborom"
 
-#: src/wget-log.c:180
+#: src/wget-log.c:213
 msgid "Can't write to target directory"
 msgstr "Nepodarilo sa zapísať do cieľového priečinka"
