@@ -1,0 +1,511 @@
+# German translation of Gwget
+# Copyright (C) 2004 David Sedeño Fernández <david@alderia.com>
+# This file is distributed under the same license as the gwget package.
+# Frank Arnold <frank@scirocco-5v-turbo.de>, 2004.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-11-13 12:25+0100\n"
+"PO-Revision-Date: 2004-11-12 15:44+0100\n"
+"Last-Translator: Frank Arnold <frank@scirocco-5v-turbo.de>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "Gwget Anwendung"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "gwget automation factory"
+
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "Info zu Gwget"
+
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL Version 2"
+
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Download Manager für Gnome 2"
+
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "Frank Arnold <frank@scirocco-5v-turbo.de>"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Download:</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Eigenschaften</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: data/gwget.glade.h:6
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Download Manager"
+
+#: data/gwget.glade.h:7
+msgid "Information"
+msgstr "Information"
+
+#: data/gwget.glade.h:8
+msgid "Local Directory: "
+msgstr "Lokales Verzeichnis: "
+
+#: data/gwget.glade.h:9
+msgid "Local File: "
+msgstr "Lokale Datei: "
+
+#: data/gwget.glade.h:10
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimedia-Dateien (Videos und Bilder)"
+
+#: data/gwget.glade.h:11
+msgid "New download"
+msgstr "Neuer Download"
+
+#: data/gwget.glade.h:12
+msgid "Pause"
+msgstr "Anhalten"
+
+#: data/gwget.glade.h:13
+msgid "Pause all"
+msgstr "Alles anhalten"
+
+#: data/gwget.glade.h:14
+msgid "Pause all downloads"
+msgstr "Alle Downloads anhalten"
+
+#: data/gwget.glade.h:15
+msgid "Pause download"
+msgstr "Download anhalten"
+
+#: data/gwget.glade.h:16
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#: data/gwget.glade.h:17
+msgid "Question"
+msgstr "Frage"
+
+#: data/gwget.glade.h:18 data/preferences.glade.h:32
+msgid "Recursive"
+msgstr "Links folgen"
+
+#: data/gwget.glade.h:19
+msgid "Recursive options"
+msgstr "Optionen zum Folgen von Links"
+
+#: data/gwget.glade.h:20
+msgid "Remove"
+msgstr "Entfernen"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:604
+msgid "Remove all"
+msgstr "Alles entfernen"
+
+#: data/gwget.glade.h:22
+msgid "Remove all downloads from list"
+msgstr "Alle Downloads aus der Liste entfernen"
+
+#: data/gwget.glade.h:23 src/main_window_cb.c:545
+msgid "Remove completed"
+msgstr "Entferne fertige Downloads"
+
+#: data/gwget.glade.h:24
+msgid "Remove completed downloads from list"
+msgstr "Entferne fertige Downloads aus der Liste"
+
+#: data/gwget.glade.h:25 src/main_window_cb.c:574
+msgid "Remove inactive"
+msgstr "Entferne nicht aktive Downloads"
+
+#: data/gwget.glade.h:26
+msgid "Remove inactive downloads from list"
+msgstr "Nicht aktive Downloads aus der Liste entfernen"
+
+#: data/gwget.glade.h:27
+msgid "Resume all"
+msgstr "Alles fortsetzen"
+
+#: data/gwget.glade.h:28
+msgid "Resume all downloads"
+msgstr "Alle Downloads fortsetzen"
+
+#: data/gwget.glade.h:29
+msgid "Stop and delete downloaded file"
+msgstr "Download abbrechen und Datei löschen"
+
+#: data/gwget.glade.h:30
+msgid "The index file only"
+msgstr "Nur die Index-Datei"
+
+#: data/gwget.glade.h:31
+msgid "This site (mirror)"
+msgstr "Diese Seite (Mirror)"
+
+#: data/gwget.glade.h:32
+msgid "Url:"
+msgstr "Url:"
+
+#: data/gwget.glade.h:33
+msgid "_New"
+msgstr "_Neu"
+
+#: data/gwget.glade.h:34
+msgid "_Toolbar"
+msgstr "_Werkzeugleiste"
+
+#: data/newdownload.glade.h:1 data/preferences.glade.h:4
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Neuer Download</span>"
+
+#: data/newdownload.glade.h:3
+msgid "New Download"
+msgstr "Neuer Download"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:34
+msgid "Save in:"
+msgstr "Speichern in:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr "URL:"
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  kB/sec"
+msgstr "  kB/sek"
+
+#: data/preferences.glade.h:5
+msgid "<b>General</b>"
+msgstr "<b>Allgemein</b>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Verhalten</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Spaltenliste</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Links</span>"
+
+#: data/preferences.glade.h:9
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Proxy Konfiguration</span>"
+
+#: data/preferences.glade.h:10
+msgid "Column List"
+msgstr "Spaltenliste"
+
+#: data/preferences.glade.h:11
+msgid "Continue downloads on startup"
+msgstr "Downloads nach Neustart fortsetzen"
+
+#: data/preferences.glade.h:12
+msgid "Convert links"
+msgstr "Links konvertieren"
+
+#: data/preferences.glade.h:13 src/main_window.c:270
+msgid "Current Size"
+msgstr "Aktuelle Größe"
+
+#: data/preferences.glade.h:14
+msgid "Default GNOME network settings"
+msgstr "Netzwerkeinstellungen nach GNOME-Vorgabe"
+
+#: data/preferences.glade.h:15
+msgid "Direct Internet connection"
+msgstr "Direkte Internet-Verbindung"
+
+#: data/preferences.glade.h:16
+msgid "Don't create directories"
+msgstr "Keine Verzeichnisse anlegen"
+
+#: data/preferences.glade.h:17
+msgid "Download Speed"
+msgstr "Download-Geschwindigkeit"
+
+#: data/preferences.glade.h:18
+msgid "Download page requisites"
+msgstr "Seiteninhalte mit herunterladen"
+
+#: data/preferences.glade.h:19 src/main_window.c:300
+msgid "Elapsed Time"
+msgstr "Abgelaufene Zeit"
+
+#: data/preferences.glade.h:20
+msgid "File Type Image"
+msgstr "Dateityp Symbol"
+
+#: data/preferences.glade.h:21
+msgid "Follow relative links only"
+msgstr "Nur relativen Links folgen"
+
+#: data/preferences.glade.h:22
+msgid "General"
+msgstr "Allgemein"
+
+#: data/preferences.glade.h:23
+msgid "Limit download speed to: "
+msgstr "Download-Geschwindigkeit begrenzen auf: "
+
+#: data/preferences.glade.h:24
+msgid "Manual proxy configuration"
+msgstr "Manuelle Proxy-Konfiguration"
+
+#: data/preferences.glade.h:25
+msgid "Maximum depth level: "
+msgstr "Maximale Tiefe:"
+
+#: data/preferences.glade.h:26
+msgid "Network"
+msgstr "Netzwerk"
+
+#: data/preferences.glade.h:27
+msgid "Number of retries:"
+msgstr "Anzahl der Wiederholungsversuche:"
+
+#: data/preferences.glade.h:28 src/main_window.c:290 src/main_window.c:295
+msgid "Percentage"
+msgstr "Prozent"
+
+#: data/preferences.glade.h:29
+msgid "Port:"
+msgstr "Port:"
+
+#: data/preferences.glade.h:30
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: data/preferences.glade.h:31
+msgid "Proxy:"
+msgstr "Proxy:"
+
+#: data/preferences.glade.h:33 src/main_window.c:310
+msgid "Remaining Time"
+msgstr "Verbleibende Zeit"
+
+#: data/preferences.glade.h:35 src/main_window.c:280
+msgid "Total Size"
+msgstr "Größe insgesamt"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: src/gwget_data.c:174
+msgid "stalled"
+msgstr "wartet"
+
+#: src/gwget_data.c:204
+msgid "Not Started"
+msgstr "Nicht gestartet"
+
+#: src/gwget_data.c:206
+msgid "Not Running"
+msgstr "Pause"
+
+#: src/gwget_data.c:208
+msgid "Not Connected"
+msgstr "Nicht verbunden"
+
+#: src/gwget_data.c:210
+msgid "Connected"
+msgstr "Verbunden"
+
+#: src/gwget_data.c:212
+msgid "Retrieving"
+msgstr "Ladend"
+
+#: src/gwget_data.c:214
+msgid "Completed"
+msgstr "Vollständig"
+
+#: src/gwget_data.c:218
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Download abgeschlossen\n"
+"(%s)"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr "Fehler"
+
+#: src/main_window.c:242
+msgid "File Type"
+msgstr "Dateityp"
+
+#: src/main_window.c:251
+msgid "File Name"
+msgstr "Dateiname"
+
+#: src/main_window.c:261
+msgid "State"
+msgstr "Status"
+
+#: src/main_window.c:320
+msgid "Speed"
+msgstr "Geschwindigkeit"
+
+#: src/main_window.c:554
+msgid "Cancel current downloads?"
+msgstr "Aktuelle Downloads abbrechen?"
+
+#: src/main_window.c:554
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Es gibt noch mindestens einen aktiven Download. Wollen Sie wirklich alle "
+"laufenden Übertragungen abbrechen?"
+
+#: src/main_window_cb.c:94
+msgid "Error in download"
+msgstr "Fehler im Download"
+
+#: src/main_window_cb.c:99
+msgid "Error opening file"
+msgstr "Fehler beim Öffnen der Datei"
+
+#: src/main_window_cb.c:99
+msgid "Couldn't open the file"
+msgstr "Datei konnte nicht geöffnet werden"
+
+#: src/main_window_cb.c:165
+msgid "Download Manager for Gnome2."
+msgstr "Download Manager für Gnome2."
+
+#: src/main_window_cb.c:171
+msgid "translator_credits"
+msgstr "Frank Arnold <frank@scirocco-5v-turbo.de>"
+
+#: src/main_window_cb.c:183
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:461 src/new_window.c:163
+msgid "Select Folder"
+msgstr "Verzeichnis auswählen"
+
+#: src/main_window_cb.c:518
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Aktuellen Download abbrechen? (Url: %s)"
+
+#: src/main_window_cb.c:519
+msgid "Cancel download?"
+msgstr "Download abbrechen?"
+
+#: src/main_window_cb.c:545
+msgid "Really remove completed downloads from the list?"
+msgstr "Alle fertigen Downloads aus der Liste entfernen?"
+
+#: src/main_window_cb.c:574
+msgid "Really remove inactive downloads from the list?"
+msgstr "Alle inaktiven Downloads aus der Liste entfernen?"
+
+#: src/main_window_cb.c:604
+msgid "Really remove all downloads from the list?"
+msgstr "Alle Downloads von der Liste entfernen?"
+
+#: src/new_window.c:67
+msgid "Unable to add this download"
+msgstr "Download konnte nicht hinzugefügt werden"
+
+#: src/new_window.c:67
+msgid "This download is already added"
+msgstr "Dieser Download wurde bereits hinzugefügt"
+
+#: src/systray.c:135
+msgid "Nothing"
+msgstr "Nichts"
+
+#: src/systray.c:142
+msgid "Downloads"
+msgstr "Downloads"
+
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr "Socket Fehler"
+
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Verbindung abgelehnt\n"
+
+#: src/wget-log.c:87
+msgid "No route to host"
+msgstr "Keine Route zum Rechner"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr "Verbindung unterbrochen. URL:\n"
+
+#: src/wget-log.c:91
+msgid "Host not found\n"
+msgstr "Rechner nicht gefunden \n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr ""
+"Protokoll wird nicht unterstützt. Sie benötigen »wget« ab Version 1.7 für "
+"https:\n"
+
+#: src/wget-log.c:96
+msgid "Refusing to truncate existing file"
+msgstr "Die vorhandene Datei wird nicht abgeschnitten."
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Unbekannter Fehler"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+msgid "File not found"
+msgstr "Datei nicht gefunden"
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"Download kann nicht fortgesetzt werden. Eine existierende lokale Datei steht "
+"im Konflikt mit einer herunterzuladenden Datei."
+
+#: src/wget-log.c:169
+msgid "Can't write to target directory"
+msgstr "In das Zielverzeichnis kann nicht geschrieben werden."
