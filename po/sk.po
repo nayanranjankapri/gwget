@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-29 14:06+0100\n"
-"PO-Revision-Date: 2005-01-29 14:09+0100\n"
+"POT-Creation-Date: 2005-02-17 20:04+0100\n"
+"PO-Revision-Date: 2005-02-17 20:09+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -61,8 +61,8 @@ msgstr "Zrušiť"
 msgid "Continue"
 msgstr "Pokračovať"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:576
-#: src/main_window_cb.c:672
+#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:578
+#: src/main_window_cb.c:674
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správca sťahovania"
 
@@ -110,7 +110,7 @@ msgstr "Vlastnosti"
 msgid "Question"
 msgstr "Otázka"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:32
+#: data/gwget.glade.h:18 data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Rekurzívne"
 
@@ -122,7 +122,7 @@ msgstr "Rekurzívne voľby"
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:655
+#: data/gwget.glade.h:21 src/main_window_cb.c:657
 msgid "Remove all"
 msgstr "Odstrániť všetko"
 
@@ -130,7 +130,7 @@ msgstr "Odstrániť všetko"
 msgid "Remove all downloads from list"
 msgstr "Odstrániť všetky sťahovania zo zoznamu"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:597
+#: data/gwget.glade.h:23 src/main_window_cb.c:599
 msgid "Remove completed"
 msgstr "Odstránenie dokončené"
 
@@ -138,7 +138,7 @@ msgstr "Odstránenie dokončené"
 msgid "Remove completed downloads from list"
 msgstr "Odstrániť dokončené sťahovania zo zoznamu"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:626
+#: data/gwget.glade.h:25 src/main_window_cb.c:628
 msgid "Remove inactive"
 msgstr "Odstrániť neaktívne"
 
@@ -166,9 +166,9 @@ msgstr "Len indexový súbor"
 msgid "This site (mirror)"
 msgstr "Tento server (zrkadlo)"
 
-#: data/gwget.glade.h:32
-msgid "Url:"
-msgstr "Url:"
+#: data/gwget.glade.h:32 data/newdownload.glade.h:4
+msgid "URL:"
+msgstr "URL:"
 
 #: data/gwget.glade.h:33
 msgid "_New"
@@ -208,7 +208,8 @@ msgid ""
 "If false, always save in the default directory without asking the user."
 msgstr ""
 "Ak je true, vždy vyžiadať cieľový priečinok pri začiatku nového sťahovania. "
-"Ak je false, vždy uložiť do predvoleného priečinka bez pýtania sa používateľa."
+"Ak je false, vždy uložiť do predvoleného priečinka bez pýtania sa "
+"používateľa."
 
 #: data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -270,13 +271,9 @@ msgstr "<span weight=\"bold\">Nové sťahovanie</span>"
 msgid "New Download"
 msgstr "Nové sťahovanie"
 
-#: data/newdownload.glade.h:3 data/preferences.glade.h:34
+#: data/newdownload.glade.h:3
 msgid "Save in:"
 msgstr "Uložiť do:"
-
-#: data/newdownload.glade.h:4
-msgid "URL:"
-msgstr "URL:"
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -307,104 +304,108 @@ msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Konfigurácia proxy</span>"
 
 #: data/preferences.glade.h:9
-msgid "Ask where to save for each download"
-msgstr "Opýtať sa kde uložiť pre každé stiahnutie"
-
-#: data/preferences.glade.h:10
 msgid "Column List"
 msgstr "Zoznam stĺpcov"
 
+#: data/preferences.glade.h:10
+msgid "Default _GNOME network settings"
+msgstr "Štandardné nastavenia siete _GNOME"
+
 #: data/preferences.glade.h:11
-msgid "Continue downloads on startup"
-msgstr "Pokračovať v sťahovaní pri spustení"
+msgid "Direct _Internet connection"
+msgstr "Priame pripojenie k _internetu"
 
 #: data/preferences.glade.h:12
-msgid "Convert links"
-msgstr "Konvertovať odkazy"
+msgid "Do_wnload Speed"
+msgstr "Rýchlosť sťah_ovania"
 
-#: data/preferences.glade.h:13 src/main_window.c:317
-msgid "Current Size"
-msgstr "Aktuálna veľkosť"
+#: data/preferences.glade.h:13
+msgid "Don't _create directories"
+msgstr "Ne_vytvárať priečinky"
 
 #: data/preferences.glade.h:14
-msgid "Default GNOME network settings"
-msgstr "Štandardné nastavenia siete GNOME"
+msgid "Follow _relative links only"
+msgstr "Nasledovať len _relatívne odkazy"
 
 #: data/preferences.glade.h:15
-msgid "Direct Internet connection"
-msgstr "Priame pripojenie k internetu"
-
-#: data/preferences.glade.h:16
-msgid "Don't create directories"
-msgstr "Nevytvárať priečinky"
-
-#: data/preferences.glade.h:17
-msgid "Download Speed"
-msgstr "Rýchlosť sťahovania"
-
-#: data/preferences.glade.h:18
-msgid "Download page requisites"
-msgstr "Stiahnuť to, čo stránka potrebuje"
-
-#: data/preferences.glade.h:19 src/main_window.c:349
-msgid "Elapsed Time"
-msgstr "Uplynutý čas"
-
-#: data/preferences.glade.h:20
-msgid "Follow relative links only"
-msgstr "Nasledovať len relatívne odkazy"
-
-#: data/preferences.glade.h:21
 msgid "General"
 msgstr "Všeobecné"
 
-#: data/preferences.glade.h:22
-msgid "Limit download speed to:"
-msgstr "Obmedziť rýchlosť sťahovania na:"
-
-#: data/preferences.glade.h:23
-msgid "Manual proxy configuration"
-msgstr "Ručná konfigurácia proxy"
-
-#: data/preferences.glade.h:24
-msgid "Maximum depth level:"
-msgstr "Maximálna hĺbka:"
-
-#: data/preferences.glade.h:25
+#: data/preferences.glade.h:16
 msgid "Network"
 msgstr "Sieť"
 
-#: data/preferences.glade.h:26
-msgid "Number of retries:"
-msgstr "Počet opakovaní:"
+#: data/preferences.glade.h:17
+msgid "P_ort:"
+msgstr "P_ort:"
 
-#: data/preferences.glade.h:27
-msgid "Open files automatically after download"
-msgstr "Otvoriť súbory automaticky po stiahnutí"
-
-#: data/preferences.glade.h:28 src/main_window.c:338 src/main_window.c:344
-msgid "Percentage"
-msgstr "Percentá"
-
-#: data/preferences.glade.h:29
-msgid "Port:"
-msgstr "Port:"
-
-#: data/preferences.glade.h:30
+#: data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "Predvoľby"
 
+#: data/preferences.glade.h:19
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: data/preferences.glade.h:21
+msgid "Remaining _Time"
+msgstr "Zostávajúci č_as"
+
+#: data/preferences.glade.h:22
+msgid "Sa_ve in:"
+msgstr "_Uložiť do:"
+
+#: data/preferences.glade.h:23
+msgid "Total _Size"
+msgstr "Celková _veľkosť"
+
+#: data/preferences.glade.h:24
+msgid "_Ask where to save for each download"
+msgstr "_Opýtať sa kde uložiť pre každé sťahovanie"
+
+#: data/preferences.glade.h:25
+msgid "_Continue downloads on startup"
+msgstr "_Pokračovať v sťahovaniach pri spustení"
+
+#: data/preferences.glade.h:26
+msgid "_Convert links"
+msgstr "_Konvertovať odkazy"
+
+#: data/preferences.glade.h:27
+msgid "_Current Size"
+msgstr "_Aktuálna veľkosť"
+
+#: data/preferences.glade.h:28
+msgid "_Download page requisites"
+msgstr "_Stiahnuť to, čo stránka potrebuje"
+
+#: data/preferences.glade.h:29
+msgid "_Elapsed Time"
+msgstr "_Uplynutý čas"
+
+#: data/preferences.glade.h:30
+msgid "_Limit download speed to:"
+msgstr "_Obmedziť rýchlosť sťahovania na:"
+
 #: data/preferences.glade.h:31
-msgid "Proxy:"
-msgstr "Proxy:"
+msgid "_Manual proxy configuration"
+msgstr "_Ručná konfigurácia proxy"
 
-#: data/preferences.glade.h:33 src/main_window.c:359
-msgid "Remaining Time"
-msgstr "Zostávajúci čas"
+#: data/preferences.glade.h:32
+msgid "_Maximum depth level:"
+msgstr "_Maximálna hĺbka:"
 
-#: data/preferences.glade.h:35 src/main_window.c:328
-msgid "Total Size"
-msgstr "Celková veľkosť"
+#: data/preferences.glade.h:33
+msgid "_Number of retries:"
+msgstr "_Počet opakovaní:"
+
+#: data/preferences.glade.h:34
+msgid "_Open files automatically after download"
+msgstr "_Otvoriť súbory automaticky po stiahnutí"
+
+#: data/preferences.glade.h:35
+msgid "_Percentage"
+msgstr "_Percentá"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
@@ -459,47 +460,67 @@ msgstr ""
 msgid "Error"
 msgstr "Chyba"
 
-#: src/gwget_data.c:616
+#: src/gwget_data.c:621
 msgid "Unable to add this download"
 msgstr "Nepodarilo sa pridať toto sťahovanie"
 
-#: src/gwget_data.c:616
+#: src/gwget_data.c:621
 msgid "This download is already added"
 msgstr "Toto sťahovanie je už pridané"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: src/gwget_data.c:669 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Chyba pri otváraní súboru"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: src/gwget_data.c:669 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
-#: src/main_window.c:299
+#: src/main_window.c:308
 msgid "File Name"
 msgstr "Názov súboru"
 
-#: src/main_window.c:306
+#: src/main_window.c:315
 msgid "State"
 msgstr "Stav"
 
-#: src/main_window.c:369
+#: src/main_window.c:326
+msgid "Current Size"
+msgstr "Aktuálna veľkosť"
+
+#: src/main_window.c:337
+msgid "Total Size"
+msgstr "Celková veľkosť"
+
+#: src/main_window.c:347 src/main_window.c:353
+msgid "Percentage"
+msgstr "Percentá"
+
+#: src/main_window.c:358
+msgid "Elapsed Time"
+msgstr "Uplynutý čas"
+
+#: src/main_window.c:368
+msgid "Remaining Time"
+msgstr "Zostávajúci čas"
+
+#: src/main_window.c:378
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: src/main_window.c:415
+#: src/main_window.c:424
 msgid "Error starting the download"
 msgstr "Chyba pri štarte sťahovania"
 
-#: src/main_window.c:415
+#: src/main_window.c:424
 msgid "There was an unexpected error starting the download"
 msgstr "Vyskytla sa neočakávaná chyba pri štarte sťahovania"
 
-#: src/main_window.c:605
+#: src/main_window.c:645
 msgid "Cancel current downloads?"
 msgstr "Zrušiť aktuálne sťahovania?"
 
-#: src/main_window.c:605
+#: src/main_window.c:646
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -518,40 +539,40 @@ msgstr "Správca sťahovania pre GNOME."
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:513 src/new_window.c:138
+#: src/main_window_cb.c:514 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Vybrať priečinok"
 
-#: src/main_window_cb.c:568
+#: src/main_window_cb.c:570
 #, c-format
 msgid ""
 "Really cancel current download?\n"
-"(Url: %s)"
+"(URL: %s)"
 msgstr ""
 "Naozaj zrušiť aktuálne sťahovanie?\n"
-"(Url: %s)"
+"(URL: %s)"
 
-#: src/main_window_cb.c:569
+#: src/main_window_cb.c:571
 msgid "Cancel download?"
 msgstr "Zrušiť sťahovanie?"
 
-#: src/main_window_cb.c:597
+#: src/main_window_cb.c:599
 msgid "Really remove completed downloads from the list?"
 msgstr "Naozaj odstrániť dokončené sťahovania zo zoznamu?"
 
-#: src/main_window_cb.c:626
+#: src/main_window_cb.c:628
 msgid "Really remove inactive downloads from the list?"
 msgstr "Naozaj odstrániť neaktívne sťahovania zo zoznamu?"
 
-#: src/main_window_cb.c:655
+#: src/main_window_cb.c:657
 msgid "Really remove all downloads from the list?"
 msgstr "Naozaj odstrániť všetky sťahovania zo zoznamu?"
 
-#: src/systray.c:135
+#: src/systray.c:144
 msgid "Nothing"
 msgstr "Nič"
 
-#: src/systray.c:142
+#: src/systray.c:151
 msgid "Downloads"
 msgstr "Sťahovania"
 
