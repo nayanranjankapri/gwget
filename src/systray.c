@@ -3,6 +3,7 @@
 #include <gnome.h>
 #include "main_window.h"
 #include "eggtrayicon.h"
+#include "gwget_data.h"
 #include "systray.h"
 
 static GtkWidget *systray_set_image(void);
@@ -16,7 +17,7 @@ void
 systray_load(void) 
 {
 	GtkWidget *eventbox,*image;
-	
+		
 	/* tray icon */
 	tray_icon = egg_tray_icon_new("fite");
 	eventbox = gtk_event_box_new();
@@ -131,6 +132,7 @@ systray_generate_menu(GdkEventButton *event)
 static void 
 systray_embedded(GtkWidget *widget, gpointer data)
 {
+	gwget_pref.docked = TRUE;
 	g_message("docket embedded");
 }
 

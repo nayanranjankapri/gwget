@@ -181,7 +181,11 @@ gwget_get_defaults_from_gconf(void)
 void 
 on_main_window_delete_event(GtkWidget *widget, gpointer data)
 {
-	gtk_widget_hide(widget);
+	if (gwget_pref.docked) {
+		gtk_widget_hide(widget);
+	} else {
+		gtk_main_quit();
+	}
 }
 
 GtkTreeModel *
