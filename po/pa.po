@@ -1,0 +1,206 @@
+# translation of gwget2.po to Punjabi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-06 23:52+0200\n"
+"PO-Revision-Date: 2004-08-13 10:24+0530\n"
+"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
+"Language-Team: Punjabi <pa@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+
+#: src/main_window.c:223
+msgid "File Name"
+msgstr "ਫਾਇਲ ਨਾਂ"
+
+#: src/main_window.c:233
+msgid "State"
+msgstr "ਸਥਿਤੀ"
+
+#: src/main_window.c:242
+msgid "Current Size"
+msgstr "ਮੌਜੂਦਾ ਆਕਾਰ"
+
+#: src/main_window.c:252
+msgid "Total Size"
+msgstr "ਕੁੱਲ ਆਕਾਰ"
+
+#. column = gtk_tree_view_column_new();
+#. gtk_tree_view_column_add_attribute (column,renderer, "percentage", PERCENTAGE_COLUMN);
+#: src/main_window.c:270 src/main_window.c:279
+msgid "Percentage"
+msgstr "ਪ੍ਰਤੀਸ਼ਤ"
+
+#: src/main_window.c:296
+msgid "Elapsed Time"
+msgstr "ਲੱਗਿਆ ਸਮਾਂ"
+
+#: src/main_window.c:328
+msgid "Remaining Time"
+msgstr "ਬਕਾਇਆ ਸਮਾਂ"
+
+#: src/main_window.c:338
+msgid "Speed"
+msgstr "ਗਤੀ"
+
+#: src/main_window_cb.c:108
+msgid "Error in download"
+msgstr "ਡਾਊਨਲੋਡ ਵਿੱਚ ਗਲਤੀ ਹੈ"
+
+#: src/main_window_cb.c:114
+msgid "Error opening file"
+msgstr "ਫਾਇਲ ਖੋਲ ਦੌਰਾਨ ਗਲਤੀ"
+
+#: src/main_window_cb.c:114
+msgid "Couldn't open the file"
+msgstr "ਫਾਇਲ ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ"
+
+#: src/main_window_cb.c:212
+msgid "Cancel current downloads?"
+msgstr "ਮੌਜੂਦਾ ਡਾਊਨਲੋਡ ਨੂੰ ਰੱਦ ਕਰਨਾ ਹੈ?"
+
+#: src/main_window_cb.c:212
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"ਇਸ ਸਮੇਂ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਸਰਗਰਮ ਡਾਊਨਲੋਡ ਜਾਰੀ ਹੈ| ਕੀ ਸਭ ਜਾਰੀ ਤਬਦੀਲੀਆਂ "
+"ਨੂੰ ਰੱਦ ਕਰਨਾ ਹੈ?"
+
+#: src/main_window_cb.c:247
+msgid "A download manager for gnome2 using wget as backend."
+msgstr "ਗਨੋਮ੨ ਲਈ ਇੱਕ ਡਾਊਨਲੋਡ ਪ੍ਰਬੰਧਕ, ਜੋ ਕਿ wget ਨੂੰ ਪਿੱਠਵਰਤੀ ਦੇ ਤੌਰ ਤੇ ਵਰਤਦਾ ਹੈ"
+
+#: src/main_window_cb.c:258
+msgid "translator_credits"
+msgstr "ਅਮਨਪ੍ਰੀਤ ਸਿੰਘ ਆਲਮ<aalam@redhat.com>"
+
+#: src/main_window_cb.c:270
+msgid "Gwget2"
+msgstr "Gwget2"
+
+#: src/main_window_cb.c:523
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "ਕੀ ਮੌਜੂਦਾ ਡਾਊਨਲੋਡ ਰੱਦ ਕਰਨਾ ਹੈ? (Url: %s)"
+
+#: src/main_window_cb.c:524
+msgid "Cancel download?"
+msgstr "ਡਾਊਨਲੋਡ ਰੱਦ"
+
+#: src/main_window_cb.c:546
+msgid "Remove completed"
+msgstr "ਸੰਪੂਰਨ ਹਟਾਉ"
+
+#: src/main_window_cb.c:546
+msgid "Really remove completed downloads from the list?"
+msgstr "ਕੀ ਸੂਚੀ ਵਿੱਚੋਂ ਸੰਪੂਰਨ ਹੋਏ ਡਾਊਨਲੋਡ ਹਟਾਉਣੇ ਹਨ?"
+
+#: src/main_window_cb.c:576
+msgid "Remove not running"
+msgstr "ਨਾ-ਚੱਲ ਰਹੇ ਹਟਾਓ"
+
+#: src/main_window_cb.c:576
+msgid "Really remove not running downloads from the list?"
+msgstr "ਕੀ ਸੂਚੀ ਵਿੱਚੋਂ ਨਾ-ਚੱਲ ਰਹੇ ਡਾਊਨਲੋਡ ਹਟਾਉਣੇ ਹਨ?"
+
+#: src/main_window_cb.c:606
+msgid "Remove all"
+msgstr "ਸਭ ਹਟਾਓ"
+
+#: src/main_window_cb.c:606
+msgid "Really remove all downloads from the list?"
+msgstr "ਕੀ ਸੂਚੀ ਵਿੱਚੋਂ ਸਭ ਡਾਊਨਲੋਡ ਹਟਾਉਣੇ ਹਨ?"
+
+#: src/gwget_data.c:180
+msgid "stalled"
+msgstr "ਸਥਾਪਿਤ"
+
+#: src/gwget_data.c:211
+msgid "Not Started"
+msgstr "ਸ਼ੁਰੂ ਨਹੀਂ"
+
+#: src/gwget_data.c:213
+msgid "Not Running"
+msgstr "ਚੱਲ ਨਹੀਂ ਰਿਹਾ "
+
+#: src/gwget_data.c:215
+msgid "Not Connected"
+msgstr "ਜੁੜਿਆ ਨਹੀਂ"
+
+#: src/gwget_data.c:217
+msgid "Connected"
+msgstr "ਜੁੜਿਆ"
+
+#: src/gwget_data.c:219
+msgid "Retrieving"
+msgstr "ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: src/gwget_data.c:221
+msgid "Completed"
+msgstr "ਸਮਾਪਤ"
+
+#: src/gwget_data.c:225
+msgid "Error"
+msgstr "ਗਲਤੀ"
+
+#: src/wget-log.c:93
+msgid "Socket error"
+msgstr "ਸਾਕਟ ਗਲਤੀ"
+
+#: src/wget-log.c:96
+msgid "Connection refused\n"
+msgstr "ਕੁਨੈਕਸ਼ਨ ਤੋਂ ਇਨਕਾਰ\n"
+
+#: src/wget-log.c:99
+msgid "No route to host"
+msgstr "ਮੇਜ਼ਬਾਨ ਲਈ ਕੋਈ ਰਸਤਾ ਨਹੀਂ"
+
+#: src/wget-log.c:102
+msgid "Connection refused when downloading URL:\n"
+msgstr "URL ਡਾਊਨਲੋਡ ਕਰਨ ਸਮੇਂ ਕੁਨੈਕਸ਼ਨ ਤੋਂ ਇਨਕਾਰ:\n"
+
+#: src/wget-log.c:105
+msgid "Host not found\n"
+msgstr "ਮੇਜ਼ਬਾਨ ਨਹੀਂ ਲੱਭਾ ਹੈ\n"
+
+#: src/wget-log.c:108
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "ਨਾ-ਸਹਾਇਕ ਪਰੋਟੋਕੋਲ - ਤੁਹਾਨੂੰ https ਲਈ wget >= 1.7 ਲੋੜੀਦਾ ਹੈ:\n"
+
+#: src/wget-log.c:112
+msgid "Refusing to truncate existing file"
+msgstr "ਮੌਜੂਦਾ ਫਾਇਲ ਨੂੰ ਵੱਖ ਕਰਨ ਤੋਂ ਇਨਕਾਰ"
+
+#: src/wget-log.c:115
+msgid "Unknown error"
+msgstr "ਅਣਜਾਣੀ ਗਲਤੀ"
+
+#: src/wget-log.c:127 src/wget-log.c:135
+msgid "File not found"
+msgstr "ਫਾਇਲ਼ ਨਹੀਂ ਲੱਭੀ"
+
+#: src/wget-log.c:142
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "ਡਾਊਨਲੋਡ ਨੂੰ ਜਾਰੀ ਨਹੀਂ ਰੱਖਿਆ ਜਾ ਸਕਦਾ, ਮੌਜੂਦਾ ਸਥਾਨਿਕ ਫਾਇਲ ਰਿਮੋਟ ਫਾਇਲ ਨਾ ਮੇਲ ਨਹੀਂ ਖਾ ਰਹੀ ਹੈ"
+
+#: src/wget-log.c:190
+msgid "Can't write to target directory"
+msgstr "ਨਿਯਤ ਡਾਇਰੈਕਟਰੀ ਤੇ ਲਿਖਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "ਅਣਜਾਣਾ"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "ਅਸਫਲ"
+
