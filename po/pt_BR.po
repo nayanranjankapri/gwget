@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-19 04:04+0200\n"
-"PO-Revision-Date: 2004-08-18 23:29+0000\n"
+"POT-Creation-Date: 2004-09-05 12:07+0200\n"
+"PO-Revision-Date: 2004-09-05 12:29+0300\n"
 "Last-Translator: Raphael Higino <raphaelh@uai.com.br>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
@@ -220,9 +220,8 @@ msgid "Elapsed Time"
 msgstr "Tempo Decorrido"
 
 #: data/preferences.glade.h:17
-#, fuzzy
 msgid "File Type Image"
-msgstr "Tipo de Arquivo"
+msgstr "Imagem do Tipo de Arquivo"
 
 #: data/preferences.glade.h:18
 msgid "Follow relative links only"
