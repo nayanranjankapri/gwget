@@ -1,40 +1,38 @@
-# translation of eu.po to Basque
-# Basque translation of gwget2.
-# Copyright (C) 2004 Mikel Olasagasti
-# This file is distributed under the same license as the gwget2 package.
-# Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004.
+# traditional Chinese translation of gwget.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Abel Cheung <maddog@linuxhall.org>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
-"POT-Creation-Date: 2004-08-24 21:24+0200\n"
-"PO-Revision-Date: 2004-08-24 21:50+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
-"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"Project-Id-Version: gwget 0.14.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-09-19 18:06+0800\n"
+"PO-Revision-Date: 2004-09-29 03:17+0800\n"
+"Last-Translator: Abel Cheung <maddog@linuxhall.org>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.0.2\n"
 
 #: data/about.glade.h:1
 msgid "About Gwget"
-msgstr "Gwget-i buruz"
+msgstr "關於 Gwget"
 
 #: data/about.glade.h:2
 msgid "GNU GPL Version 2"
-msgstr "GNU GPLren 2. bertsioa"
+msgstr "GNU GPL 授權條款第 2 版"
 
 #: data/about.glade.h:3
 msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget: Deskarga-kudeatzaile bat Gnome2-rako"
+msgstr "Gwget：GNOME 2 下載管理員"
 
 #: data/about.glade.h:4
 msgid "translator-credits"
 msgstr ""
-"Mikel Olasagasti <hey_neken@mundurat.net>\n"
-"Iñaki Larrañaga <dooteo@euskalgnu.org>"
+"i18n 程式中文化計劃\n"
+"http://i18n.linux.org.tw/\n"
+"\n"
+"Abel Cheung <maddog@linuxhall.org>, 2004"
 
 #: data/gwget.glade.h:1 data/preferences.glade.h:2
 msgid "    "
@@ -42,111 +40,111 @@ msgstr "    "
 
 #: data/gwget.glade.h:2
 msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">Deskarga:</span>"
+msgstr "<span weight=\"bold\">下載：</span>"
 
 #: data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">Propietateak</span>"
+msgstr "<span weight=\"bold\">屬性</span>"
 
 #: data/gwget.glade.h:4
 msgid "Cancel"
-msgstr "Utzi"
+msgstr "取消"
 
 #: data/gwget.glade.h:5
 msgid "Continue"
-msgstr "Jarraitu"
+msgstr "繼續"
 
 #: data/gwget.glade.h:6
 msgid "Gwget - Download Manager"
-msgstr "Gwget - Deskarga-kudeatzailea"
+msgstr "Gwget - 下載管理員"
 
 #: data/gwget.glade.h:7
 msgid "Local Directory: "
-msgstr "Direktorio lokala: "
+msgstr "本地目錄："
 
 #: data/gwget.glade.h:8
 msgid "Local File: "
-msgstr "Fitxategi lokala: "
+msgstr "本地檔案："
 
 #: data/gwget.glade.h:9
 msgid "Multimedia files (Videos and images)"
-msgstr "Multimedia fitxategiak (Bideo eta irudiak)"
+msgstr "多媒體檔案 (視訊檔或影像)"
 
 #: data/gwget.glade.h:10
 msgid "New download"
-msgstr "Deskarga berria"
+msgstr "新增下載項目"
 
 #: data/gwget.glade.h:11
 msgid "Pause"
-msgstr "Pausatu"
+msgstr "暫停"
 
 #: data/gwget.glade.h:12
 msgid "Pause download"
-msgstr "Pausatu deskarga"
+msgstr "暫停下載"
 
 #: data/gwget.glade.h:13
 msgid "Properties"
-msgstr "Propietateak"
+msgstr "屬性"
 
 #: data/gwget.glade.h:14
 msgid "Question"
-msgstr "Galdera"
+msgstr "問題"
 
 #: data/gwget.glade.h:15 data/preferences.glade.h:25
 msgid "Recursive"
-msgstr "Errekurtsiboa"
+msgstr ""
 
 #: data/gwget.glade.h:16
 msgid "Recursive options"
-msgstr "Errekurtsibitate aukerak"
+msgstr ""
 
-#: data/gwget.glade.h:17 src/main_window_cb.c:534
+#: data/gwget.glade.h:17 src/main_window_cb.c:539
 msgid "Remove all"
-msgstr "Kendu guztiak"
+msgstr "全部移除"
 
 #: data/gwget.glade.h:18
 msgid "Remove all downloads from list"
-msgstr "Kendu deskarga guztiak zerrendatik"
+msgstr "從清單中移除所有項目"
 
-#: data/gwget.glade.h:19 src/main_window_cb.c:475
+#: data/gwget.glade.h:19 src/main_window_cb.c:480
 msgid "Remove completed"
-msgstr "Kendu burututakoak"
+msgstr "移除已下載的項目"
 
 #: data/gwget.glade.h:20
 msgid "Remove completed downloads from list"
-msgstr "Kendu burututako deskargak zerrendatik"
+msgstr "從清單中移除已經成功下載的項目"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:504
+#: data/gwget.glade.h:21 src/main_window_cb.c:509
 msgid "Remove inactive"
-msgstr "Kendu aktibitaterik gabekoak"
+msgstr ""
 
 #: data/gwget.glade.h:22
 msgid "Remove inactive downloads from list"
-msgstr "Kendu aktibitaterik gabeko deskargak zerrendatik"
+msgstr "從清單中移除已經停止下載的檔案"
 
 #: data/gwget.glade.h:23
 msgid "Stop and delete downloaded file"
-msgstr "Gelditu eta ezabatu deskargatutako fitxategia"
+msgstr "停止並刪除已下載的檔案"
 
 #: data/gwget.glade.h:24
 msgid "The index file only"
-msgstr "Index fitxategia soilik"
+msgstr ""
 
 #: data/gwget.glade.h:25
 msgid "This site (mirror)"
-msgstr "Gune hau (ispilua)"
+msgstr ""
 
 #: data/gwget.glade.h:26
 msgid "Url:"
-msgstr "Urla:"
+msgstr "URL："
 
 #: data/gwget.glade.h:27
 msgid "_New"
-msgstr "_Berria"
+msgstr "新增(_N)"
 
 #: data/gwget.glade.h:28
 msgid "_Toolbar"
-msgstr "_Tresna-barra"
+msgstr "工具列(_T)"
 
 #: data/newdownload.glade.h:1 data/preferences.glade.h:4
 msgid "*"
@@ -154,19 +152,19 @@ msgstr "*"
 
 #: data/newdownload.glade.h:2
 msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Deskarga berria</span>"
+msgstr "<span weight=\"bold\">新增下載項目</span>"
 
 #: data/newdownload.glade.h:3
 msgid "New Download"
-msgstr "Deskarga berria"
+msgstr "新增下載項目"
 
 #: data/newdownload.glade.h:4 data/preferences.glade.h:27
 msgid "Save in:"
-msgstr "Gorde hemen:"
+msgstr "儲存於："
 
 #: data/newdownload.glade.h:5
 msgid "URL: "
-msgstr "URLa: "
+msgstr "網址："
 
 #: data/preferences.glade.h:1
 msgid "   "
@@ -178,127 +176,128 @@ msgstr "  KB"
 
 #: data/preferences.glade.h:5
 msgid "<b>General</b>"
-msgstr "<b>Orokorra</b>"
+msgstr "<b>一般</b>"
 
 #: data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Behavior</span>"
-msgstr "<span weight=\"bold\">Portaera</span>"
+msgstr "<span weight=\"bold\">運作方式</span>"
 
+# this means "column list shown" -- Abel
 #: data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">Zutabe zerrenda</span>"
+msgstr "<span weight=\"bold\">顯示欄位</span>"
 
 #: data/preferences.glade.h:8
 msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">Estekak</span>"
+msgstr "<span weight=\"bold\">連結</span>"
 
 #: data/preferences.glade.h:9
 msgid "Column List"
-msgstr "Zutabe zerrenda"
+msgstr "顯示欄位"
 
 #: data/preferences.glade.h:10
 msgid "Continue downloads on startup"
-msgstr "Jarraitu deskargatzen abiaraztean"
+msgstr "程式啟動時繼續下載未完成的檔案"
 
 #: data/preferences.glade.h:11
 msgid "Convert links"
-msgstr "Bihurtu estekak"
+msgstr ""
 
 #: data/preferences.glade.h:12 src/main_window.c:259
 msgid "Current Size"
-msgstr "Uneko tamaina"
+msgstr "目前大小"
 
 #: data/preferences.glade.h:13
 msgid "Don't create directories"
-msgstr "Ez sortu direktorio berriak"
+msgstr "不建立資料夾"
 
 #: data/preferences.glade.h:14
 msgid "Download Speed"
-msgstr "Deskargaren abiadura"
+msgstr "下載速度"
 
 #: data/preferences.glade.h:15
 msgid "Download page requisites"
-msgstr "Deskargatu orriaren nahitaezkoak"
+msgstr "下載一頁完整網頁所需的資料"
 
 #: data/preferences.glade.h:16 src/main_window.c:289
 msgid "Elapsed Time"
-msgstr "Igarotako denbora"
+msgstr "經過時間"
 
 #: data/preferences.glade.h:17
 msgid "File Type Image"
-msgstr "Fitxategi motaren irudia"
+msgstr "代表檔案格式的圖示"
 
 #: data/preferences.glade.h:18
 msgid "Follow relative links only"
-msgstr "Jarraitu esteka erlatiboei soilik"
+msgstr "只跟隨相對連結"
 
 #: data/preferences.glade.h:19
 msgid "General"
-msgstr "Orokorra"
+msgstr "一般"
 
 #: data/preferences.glade.h:20
 msgid "Limit download speed to: "
-msgstr "Mugatu deskargaren abiadura: "
+msgstr "限制下載速度為："
 
 #: data/preferences.glade.h:21
 msgid "Maximum depth level: "
-msgstr "Sakonera maila handiena: "
+msgstr "目錄深度上限："
 
 #: data/preferences.glade.h:22
 msgid "Number of retries:"
-msgstr "Saiakera kopurua:"
+msgstr "重試次數："
 
 #: data/preferences.glade.h:23 src/main_window.c:279 src/main_window.c:284
 msgid "Percentage"
-msgstr "Ehunekoa"
+msgstr "百分比"
 
 #: data/preferences.glade.h:24
 msgid "Preferences"
-msgstr "Hobespenak"
+msgstr "偏好設定"
 
 #: data/preferences.glade.h:26 src/main_window.c:299
 msgid "Remaining Time"
-msgstr "Geratzen den denbora"
+msgstr "剩餘時間"
 
 #: data/preferences.glade.h:28 src/main_window.c:269
 msgid "Total Size"
-msgstr "Tamaina osoa"
+msgstr "原來大小"
 
 #: src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
-msgstr "Ezezaguna"
+msgstr "未知"
 
 #: src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
-msgstr "Huts egin du"
+msgstr "失敗"
 
 #: src/gwget_data.c:172
 msgid "stalled"
-msgstr "trabatuta"
+msgstr ""
 
 #: src/gwget_data.c:201
 msgid "Not Started"
-msgstr "Hasi gabe"
+msgstr "未開始"
 
 #: src/gwget_data.c:203
 msgid "Not Running"
-msgstr "Geldirik"
+msgstr ""
 
 #: src/gwget_data.c:205
 msgid "Not Connected"
-msgstr "Konektatu gabe"
+msgstr "未連線"
 
 #: src/gwget_data.c:207
 msgid "Connected"
-msgstr "Konektatua"
+msgstr "已連線"
 
 #: src/gwget_data.c:209
 msgid "Retrieving"
-msgstr "Eskuratzen"
+msgstr "下載中"
 
 #: src/gwget_data.c:211
 msgid "Completed"
-msgstr "Burutua"
+msgstr "完成"
 
 #: src/gwget_data.c:215
 #, c-format
@@ -306,149 +305,140 @@ msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
-"Deskarga burutua\n"
+"完成下載\n"
 "(%s)"
 
 #: src/gwget_data.c:222
 msgid "Error"
-msgstr "Errorea"
+msgstr "錯誤"
 
 #: src/main_window.c:231
 msgid "File Type"
-msgstr "Fitxategi mota"
+msgstr "檔案類型"
 
 #: src/main_window.c:240
 msgid "File Name"
-msgstr "Fitxategiaren izena"
+msgstr "檔案名稱"
 
 #: src/main_window.c:250
 msgid "State"
-msgstr "Egoera"
+msgstr "狀態"
 
 #: src/main_window.c:309
 msgid "Speed"
-msgstr "Abiadura"
+msgstr "速度"
 
-#: src/main_window.c:539
+#: src/main_window.c:540
 msgid "Cancel current downloads?"
-msgstr "Utzi uneko deskargak?"
+msgstr "是否取消下載目前的檔案"
 
-#: src/main_window.c:539
+#: src/main_window.c:540
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
-msgstr ""
-"Gutxienez fitxategi bat deskargatzen ari da. Abian diren transferentziak "
-"guztiak utzi nahi dituzu?"
+msgstr "目前至少仍有一個檔案在下載中，是否確定取消下載檔案？"
 
 #: src/main_window_cb.c:95
 msgid "Error in download"
-msgstr "Errorea deskargatzean"
+msgstr "下載時發生錯誤"
 
 #: src/main_window_cb.c:100
 msgid "Error opening file"
-msgstr "Errorea fitxategia irekitzean"
+msgstr "開啟檔案時發生錯誤"
 
 #: src/main_window_cb.c:100
 msgid "Couldn't open the file"
-msgstr "Ezin izan da fitxategia ireki"
+msgstr "無法開啟檔案"
 
-#: src/main_window_cb.c:143
+#: src/main_window_cb.c:144
 msgid "Download Manager for Gnome2."
-msgstr "Deskarga-kudeatzaile bat Gnome2-rako"
+msgstr "適用於 GNOME 2 的下載管理員。"
 
-#: src/main_window_cb.c:149
+#: src/main_window_cb.c:150
 msgid "translator_credits"
 msgstr ""
-"Mikel Olasagasti <hey_neken@mundurat.net>\n"
-"Iñaki Larrañaga <dooteo@euskalgnu.org>"
+"i18n 程式中文化計劃\n"
+"http://i18n.linux.org.tw/\n"
+"\n"
+"Abel Cheung <maddog@linuxhall.org>, 2004"
 
-#: src/main_window_cb.c:161
+#: src/main_window_cb.c:162
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:391 src/new_window.c:151
+#: src/main_window_cb.c:396 src/new_window.c:151
 msgid "Select Folder"
-msgstr "Hautatu karpeta"
+msgstr "選取資料夾"
 
-#: src/main_window_cb.c:448
+#: src/main_window_cb.c:453
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
-msgstr "Deskargatzen ari den fitxategia bertan behera utzi? (URL %s)"
+msgstr "是否取消下載目前的檔案？ (URL：%s)"
 
-#: src/main_window_cb.c:449
+#: src/main_window_cb.c:454
 msgid "Cancel download?"
-msgstr "Utzi deskarga?"
+msgstr "是否取消下載？"
 
-#: src/main_window_cb.c:475
+#: src/main_window_cb.c:480
 msgid "Really remove completed downloads from the list?"
-msgstr "Burututakoak zerrendatik kentzea nahi duzu?"
+msgstr "是否確定從清單中移除已經成功下載的項目？"
 
-#: src/main_window_cb.c:504
+#: src/main_window_cb.c:509
 msgid "Really remove inactive downloads from the list?"
-msgstr "Aktibitaterik gabeko deskarga guztiak zerrendatik kentzea nahi duzu?"
+msgstr "是否確定從清單中移除已經停止下載的項目？"
 
-#: src/main_window_cb.c:534
+#: src/main_window_cb.c:539
 msgid "Really remove all downloads from the list?"
-msgstr "Deskarga guztiak zerrendatik kentzea nahi duzu?"
+msgstr "是否確定從清單中移除所有項目？"
 
 #: src/systray.c:133
 msgid "Nothing"
-msgstr "Ezer ez"
+msgstr ""
 
 #: src/systray.c:140
 msgid "Downloads"
-msgstr "Deskargak"
+msgstr ""
 
 #: src/wget-log.c:83
 msgid "Socket error"
-msgstr "Socket errorea"
+msgstr "Socket 錯誤"
 
 #: src/wget-log.c:85
 msgid "Connection refused\n"
-msgstr "Konexioa ukatua\n"
+msgstr "連線被拒\n"
 
 #: src/wget-log.c:87
 msgid "No route to host"
-msgstr "Ez dago biderik hostalariarentzat"
+msgstr "無法連繫主機"
 
 #: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
-msgstr "Konexioa ukatua URLa deskargatzean:\n"
+msgstr "下載 URL 時被拒絕連線：\n"
 
 #: src/wget-log.c:91
 msgid "Host not found\n"
-msgstr "Ez da hostalaria aurkitu\n"
+msgstr "找不到主機\n"
 
 #: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr ""
-"Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
+msgstr "不支援這種協定 - https: 協定需要 wget >= 1.7\n"
 
 #: src/wget-log.c:96
 msgid "Refusing to truncate existing file"
-msgstr "Fitxategia mozteari uko egiten"
+msgstr "拒絕截斷現有的檔案"
 
 #: src/wget-log.c:98
 msgid "Unknown error"
-msgstr "Errore ezezaguna"
+msgstr "錯誤原因不明"
 
 #: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
-msgstr "Ez da fitxategia aurkitu"
+msgstr "找不到檔案"
 
 #: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Ezin jarraitu deskargatzen, fitxategi lokal batek urrunekoarekin gatazkak "
-"ditu"
+msgstr "無法繼續下載，因為已經存在的本機檔案和遠端的檔案有衝突"
 
 #: src/wget-log.c:169
 msgid "Can't write to target directory"
-msgstr "Ezin da helburuko direktorioan idatzi"
-
-#~ msgid "Remove not running"
-#~ msgstr "Kendu abian ez daudenak"
-
-#~ msgid "Really remove not running downloads from the list?"
-#~ msgstr "Benetan kendu geldi dauden jaisteko fitxategiak zerrendatik?"
+msgstr "無法將資料寫入目的地資料夾"
