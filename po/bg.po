@@ -1,151 +1,290 @@
 # Bulgarian translation of gwget2.
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Filip Andonov <fandonov@iinf.bas.bg>, 2003.
+# Vladimir Petkov <vpetkov@i-space.org>, 2004.
+# Filip Andonov <fandonov@iinf.bas.bg>, 2004.
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-12 20:41+0200\n"
-"PO-Revision-Date: 2003-06-19 11:41+0100\n"
-"Last-Translator: Filip Andonov <fandonov@iinf.bas.bg>\n"
-"Language-Team: bulgarian <bg@li.org>\n"
+"POT-Creation-Date: 2004-09-03 20:09+0200\n"
+"PO-Revision-Date: 2004-09-03 21:46+0300\n"
+"Last-Translator: Vladimir Petkov <vpetkov@i-space.org>\n"
+"Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
-#: src/main_window.c:231
-#, fuzzy
-msgid "File Type"
-msgstr "Име·на·файл"
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "Относно Gwget"
 
-#: src/main_window.c:240
-msgid "File Name"
-msgstr "Име·на·файл"
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "Гну ОПЛ Версия 2"
 
-#: src/main_window.c:250
-msgid "State"
-msgstr "СТАТУС"
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Програма за управление на изтеглянията за Gnome 2"
 
-#: src/main_window.c:259
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "Филип Андонов <fandonov@iinf.bas.bg>\n"
+"Владимир Петков <vpetkov@i-space.org>"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Изтегляне:</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Свойства</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Отказване"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Продължаване"
+
+#: data/gwget.glade.h:6
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Програма за управление на изтеглянията"
+
+#: data/gwget.glade.h:7
+msgid "Local Directory: "
+msgstr "Локална директория: "
+
+#: data/gwget.glade.h:8
+msgid "Local File: "
+msgstr "Локален файл: "
+
+#: data/gwget.glade.h:9
+msgid "Multimedia files (Videos and images)"
+msgstr "Мултимедийни файлове (видео и изображения)"
+
+#: data/gwget.glade.h:10
+msgid "New download"
+msgstr "Ново изтегляне"
+
+#: data/gwget.glade.h:11
+msgid "Pause"
+msgstr "Пауза"
+
+#: data/gwget.glade.h:12
+msgid "Pause download"
+msgstr "Пауза на изтеглянето"
+
+#: data/gwget.glade.h:13
+msgid "Properties"
+msgstr "Свойства"
+
+#: data/gwget.glade.h:14
+msgid "Question"
+msgstr "Въпрос"
+
+#: data/gwget.glade.h:15 data/preferences.glade.h:25
+msgid "Recursive"
+msgstr "Рекурсивно"
+
+#: data/gwget.glade.h:16
+msgid "Recursive options"
+msgstr "Рекурсивни опции"
+
+#: data/gwget.glade.h:17 src/main_window_cb.c:534
+msgid "Remove all"
+msgstr "Премахване на всички"
+
+#: data/gwget.glade.h:18
+msgid "Remove all downloads from list"
+msgstr "Премахване на всички изтегляния от списъка"
+
+#: data/gwget.glade.h:19 src/main_window_cb.c:475
+msgid "Remove completed"
+msgstr "Премахване на завършените изтегляния"
+
+#: data/gwget.glade.h:20
+msgid "Remove completed downloads from list"
+msgstr "Премахване на завършените изтегляния от списъка"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:504
+msgid "Remove inactive"
+msgstr "Премахване на не активните"
+
+#: data/gwget.glade.h:22
+msgid "Remove inactive downloads from list"
+msgstr "Премахване на не активните изтегляния от списъка"
+
+#: data/gwget.glade.h:23
+msgid "Stop and delete downloaded file"
+msgstr "Спиране и изтриване на изтегления файл"
+
+#: data/gwget.glade.h:24
+msgid "The index file only"
+msgstr "Само индексния файл"
+
+#: data/gwget.glade.h:25
+msgid "This site (mirror)"
+msgstr "Този сайт (огледало)"
+
+#: data/gwget.glade.h:26
+msgid "Url:"
+msgstr "Адрес:"
+
+#: data/gwget.glade.h:27
+msgid "_New"
+msgstr "_Нов"
+
+#: data/gwget.glade.h:28
+msgid "_Toolbar"
+msgstr "_Лента с инструменти"
+
+#: data/newdownload.glade.h:1 data/preferences.glade.h:4
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Ново изтегляне</span>"
+
+#: data/newdownload.glade.h:3
+msgid "New Download"
+msgstr "Ново изтегляне"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:27
+msgid "Save in:"
+msgstr "Запазване в:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr "Адрес: "
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "   "
+
+#: data/preferences.glade.h:3
+msgid "  KB"
+msgstr "  КБ"
+
+#: data/preferences.glade.h:5
+msgid "<b>General</b>"
+msgstr "<b>Основни</b>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Поведение</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Колонен списък</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Връзки</span>"
+
+#: data/preferences.glade.h:9
+msgid "Column List"
+msgstr "Колонен списък"
+
+#: data/preferences.glade.h:10
+msgid "Continue downloads on startup"
+msgstr "Продължаване на изтеглянията при стартиране"
+
+#: data/preferences.glade.h:11
+msgid "Convert links"
+msgstr "Конвертиране на връзки"
+
+#: data/preferences.glade.h:12 src/main_window.c:259
 msgid "Current Size"
-msgstr "Текущ·размер"
+msgstr "Текущ размер"
 
-#: src/main_window.c:269
-msgid "Total Size"
-msgstr "Общ·размер"
+#: data/preferences.glade.h:13
+msgid "Don't create directories"
+msgstr "Да не се създават директории"
 
-#: src/main_window.c:279 src/main_window.c:284
+#: data/preferences.glade.h:14
+msgid "Download Speed"
+msgstr "Скорост на изтеглянето"
+
+#: data/preferences.glade.h:15
+msgid "Download page requisites"
+msgstr "Страницата за изтегляне изисква"
+
+#: data/preferences.glade.h:16 src/main_window.c:289
+msgid "Elapsed Time"
+msgstr "Изминало време"
+
+#: data/preferences.glade.h:17
+msgid "File Type Image"
+msgstr "Файлов тип на изображение"
+
+#: data/preferences.glade.h:18
+msgid "Follow relative links only"
+msgstr "Следване само на релативните връзки"
+
+#: data/preferences.glade.h:19
+msgid "General"
+msgstr "Основни"
+
+#: data/preferences.glade.h:20
+msgid "Limit download speed to: "
+msgstr "Ограничаване скоростта на изтегляне до: "
+
+#: data/preferences.glade.h:21
+msgid "Maximum depth level: "
+msgstr "Максимално ниво на дълбочина: "
+
+#: data/preferences.glade.h:22
+msgid "Number of retries:"
+msgstr "Брой повторни опита:"
+
+#: data/preferences.glade.h:23 src/main_window.c:279 src/main_window.c:284
 msgid "Percentage"
 msgstr "Процент"
 
-#: src/main_window.c:289
-msgid "Elapsed Time"
-msgstr "Изминало·време"
+#: data/preferences.glade.h:24
+msgid "Preferences"
+msgstr "Настройки"
 
-#: src/main_window.c:299
+#: data/preferences.glade.h:26 src/main_window.c:299
 msgid "Remaining Time"
-msgstr "Оставащо·време"
+msgstr "Оставащо време"
 
-#: src/main_window.c:309
-msgid "Speed"
-msgstr ""
+#: data/preferences.glade.h:28 src/main_window.c:269
+msgid "Total Size"
+msgstr "Общ размер"
 
-#: src/main_window.c:539
-#, fuzzy
-msgid "Cancel current downloads?"
-msgstr "Отказ·на·текущите·изтегляния?"
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Неизвестно"
 
-#: src/main_window.c:539
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
-msgstr ""
-
-#: src/main_window_cb.c:95
-#, fuzzy
-msgid "Error in download"
-msgstr "Отказ·на·изтегляне?"
-
-#: src/main_window_cb.c:100
-msgid "Error opening file"
-msgstr ""
-
-#: src/main_window_cb.c:100
-msgid "Couldn't open the file"
-msgstr ""
-
-#: src/main_window_cb.c:143
-msgid "Download Manager for Gnome2."
-msgstr ""
-
-#: src/main_window_cb.c:149
-msgid "translator_credits"
-msgstr "Filip Andonov <fandonov@iinf.bas.bg>"
-
-#: src/main_window_cb.c:161
-msgid "Gwget"
-msgstr ""
-
-#: src/main_window_cb.c:391 src/new_window.c:151
-msgid "Select Folder"
-msgstr ""
-
-#: src/main_window_cb.c:448
-#, fuzzy, c-format
-msgid "Really cancel current download? (Url: %s)"
-msgstr "Сигурни·ли·сте,·че·искате·отказ·на·текущото·изтегляне?·(Url: %s)"
-
-#: src/main_window_cb.c:449
-msgid "Cancel download?"
-msgstr "Отказ·на·изтегляне?"
-
-#: src/main_window_cb.c:475
-#, fuzzy
-msgid "Remove completed"
-msgstr "Премахване·на·завършените·изтегляния"
-
-#: src/main_window_cb.c:475
-#, fuzzy
-msgid "Really remove completed downloads from the list?"
-msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
-
-#: src/main_window_cb.c:504
-#, fuzzy
-msgid "Remove not running"
-msgstr "Не·работи"
-
-#: src/main_window_cb.c:504
-#, fuzzy
-msgid "Really remove not running downloads from the list?"
-msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
-
-#: src/main_window_cb.c:534
-#, fuzzy
-msgid "Remove all"
-msgstr "Премахване·на·завършените·изтегляния"
-
-#: src/main_window_cb.c:534
-#, fuzzy
-msgid "Really remove all downloads from the list?"
-msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Неуспешно"
 
 #: src/gwget_data.c:172
 msgid "stalled"
-msgstr ""
+msgstr "замръзнало"
 
 #: src/gwget_data.c:201
 msgid "Not Started"
-msgstr "Не·е·стартиран"
+msgstr "Не е стартиран"
 
 #: src/gwget_data.c:203
 msgid "Not Running"
-msgstr "Не·работи"
+msgstr "Не работи"
 
 #: src/gwget_data.c:205
 msgid "Not Connected"
-msgstr "Не·е·свързан"
+msgstr "Не е свързан"
 
 #: src/gwget_data.c:207
 msgid "Connected"
@@ -153,7 +292,7 @@ msgstr "Свързан"
 
 #: src/gwget_data.c:209
 msgid "Retrieving"
-msgstr "Получава"
+msgstr "Получаване"
 
 #: src/gwget_data.c:211
 msgid "Completed"
@@ -165,87 +304,150 @@ msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
+"Изтеглянето е завършено\n"
+"(%s)"
 
 #: src/gwget_data.c:222
 msgid "Error"
+msgstr "Грешка"
+
+#: src/main_window.c:231
+msgid "File Type"
+msgstr "Тип на файла"
+
+#: src/main_window.c:240
+msgid "File Name"
+msgstr "Име на файл"
+
+#: src/main_window.c:250
+msgid "State"
+msgstr "Състояние"
+
+#: src/main_window.c:309
+msgid "Speed"
+msgstr "Скорост"
+
+#: src/main_window.c:539
+msgid "Cancel current downloads?"
+msgstr "Отказ на текущите изтегляния?"
+
+#: src/main_window.c:539
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
 msgstr ""
+"Има поне едно активно изтегляне. Наистина ли искате да откажете "
+"всички започнати трансфери?"
+
+#: src/main_window_cb.c:95
+msgid "Error in download"
+msgstr "Грешка при изтегл	янето"
+
+#: src/main_window_cb.c:100
+msgid "Error opening file"
+msgstr "Грешка при отварянето на файл"
+
+#: src/main_window_cb.c:100
+msgid "Couldn't open the file"
+msgstr "Файлът не може да бъде отворен"
+
+#: src/main_window_cb.c:143
+msgid "Download Manager for Gnome2."
+msgstr "Програма за управление на изтеглянията за Gnome2."
+
+#: src/main_window_cb.c:149
+msgid "translator_credits"
+msgstr "Филип Андонов <fandonov@iinf.bas.bg>\n"
+"Владимир Петков <vpetkov@i-space.org>"
+
+#: src/main_window_cb.c:161
+msgid "Gwget"
+msgstr "Gwget"
+
+#: src/main_window_cb.c:391 src/new_window.c:151
+msgid "Select Folder"
+msgstr "Избор на папка"
+
+#: src/main_window_cb.c:448
+#, c-format
+msgid "Really cancel current download? (Url: %s)"
+msgstr "Сигурни ли сте, че искате да откажете текущото изтегляне? (адрес: %s)"
+
+#: src/main_window_cb.c:449
+msgid "Cancel download?"
+msgstr "Отказ на изтеглянето?"
+
+#: src/main_window_cb.c:475
+msgid "Really remove completed downloads from the list?"
+msgstr "Сигурни ли сте за премахването на изтеглянията от списъка?"
+
+#: src/main_window_cb.c:504
+msgid "Really remove inactive downloads from the list?"
+msgstr "Сигурни ли сте за премахването на неактивните изтегляния от списъка?"
+
+#: src/main_window_cb.c:534
+msgid "Really remove all downloads from the list?"
+msgstr "Сигурни ли сте за премахването на всички изтегляния от списъка?"
+
+#: src/systray.c:133
+msgid "Nothing"
+msgstr "Нищо"
+
+#: src/systray.c:140
+msgid "Downloads"
+msgstr "Изтегляния"
 
 #: src/wget-log.c:83
 msgid "Socket error"
-msgstr ""
+msgstr "Грешка в Socket"
 
 #: src/wget-log.c:85
-#, fuzzy
 msgid "Connection refused\n"
-msgstr "Свързан"
+msgstr "Свързването е отказано\n"
 
 #: src/wget-log.c:87
-#, fuzzy
 msgid "No route to host"
-msgstr "Няма·път·до·хост:\n"
+msgstr "Няма път до хоста"
 
 #: src/wget-log.c:89
 msgid "Connection refused when downloading URL:\n"
-msgstr "Връзката·отказана·при·изтегляне·на·URL:\n"
+msgstr "Връзката отказана при изтегляне на URL:\n"
 
 #: src/wget-log.c:91
 msgid "Host not found\n"
-msgstr ""
+msgstr "Хостът не е намерен\n"
 
 #: src/wget-log.c:93
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Неподдържан·протокол·-·нуждаете·се·от·wget>=1.7·за·https:\n"
+msgstr "Неподдържан протокол - нуждаете се от wget>=1.7 за https:\n"
 
 #: src/wget-log.c:96
-#, fuzzy
 msgid "Refusing to truncate existing file"
-msgstr "Отказ·за·отрязване·на·текущия·файл\n"
+msgstr "Отказ за отрязване на текущия файл"
 
 #: src/wget-log.c:98
 msgid "Unknown error"
-msgstr ""
+msgstr "Неизвестна грешка"
 
 #: src/wget-log.c:109 src/wget-log.c:115
 msgid "File not found"
-msgstr ""
+msgstr "Файлът не е намерен"
 
 #: src/wget-log.c:122
-#, fuzzy
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Не·е·възможно·продължаване·на·изтеглянето,"
-"·защото·локалният·файл·е·конфликтен·с·отдалечения:\n"
+msgstr "Продължаване на изтеглянето е невъзможно, защото локалният файл е в конфлик с отдалечения"
 
 #: src/wget-log.c:169
-#, fuzzy
 msgid "Can't write to target directory"
-msgstr "Записът·в·целевата·директория·е·немъзможен:\n"
-
-#: src/custom-cell-renderer-progressbar.c:36
-msgid "Unknown"
-msgstr ""
-
-#: src/custom-cell-renderer-progressbar.c:99
-msgid "Failed"
-msgstr ""
-
-#: src/systray.c:133
-#, fuzzy
-msgid "Nothing"
-msgstr "Не·работи"
-
-#: src/systray.c:140
-#, fuzzy
-msgid "Downloads"
-msgstr "Отказ·на·изтегляне?"
+msgstr "Записът в целевата директория е невъзможен"
 
 #, fuzzy
-#~ msgid "Pause download"
-#~ msgstr "Отказ·на·изтегляне?"
+#~ msgid "Remove not running"
+#~ msgstr "Не·работи"
 
 #, fuzzy
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "Премахване·на·завършените·изтегляния"
+#~ msgid "Really remove not running downloads from the list?"
+#~ msgstr "Сигурни·ли·сте·за·премахването·на·изтеглянията·от·списъка?"
 
 #, fuzzy
 #~ msgid "Select target directory"
