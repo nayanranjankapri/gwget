@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-02 20:00+0200\n"
-"PO-Revision-Date: 2004-10-03 02:39+0200\n"
+"POT-Creation-Date: 2004-10-15 03:55+0200\n"
+"PO-Revision-Date: 2004-10-16 01:18+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -61,98 +61,110 @@ msgid "Continue"
 msgstr "Pokračovat"
 
 #: data/gwget.glade.h:6
+msgid "Continue all downloads"
+msgstr "Pokračovat všechna stahování"
+
+#: data/gwget.glade.h:7
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správce stahování"
 
-#: data/gwget.glade.h:7
+#: data/gwget.glade.h:8
 msgid "Local Directory: "
 msgstr "Místní adresář: "
 
-#: data/gwget.glade.h:8
+#: data/gwget.glade.h:9
 msgid "Local File: "
 msgstr "Místní soubor: "
 
-#: data/gwget.glade.h:9
+#: data/gwget.glade.h:10
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediální soubory (videa a obrázky)"
 
-#: data/gwget.glade.h:10
+#: data/gwget.glade.h:11
 msgid "New download"
 msgstr "Nové stahování"
 
-#: data/gwget.glade.h:11
+#: data/gwget.glade.h:12
 msgid "Pause"
 msgstr "Pozastavit"
 
-#: data/gwget.glade.h:12
+#: data/gwget.glade.h:13
 msgid "Pause download"
 msgstr "Pozastavit stahování"
 
-#: data/gwget.glade.h:13
+#: data/gwget.glade.h:14
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: data/gwget.glade.h:14
+#: data/gwget.glade.h:15
 msgid "Question"
 msgstr "Otázka"
 
-#: data/gwget.glade.h:15 data/preferences.glade.h:25
+#: data/gwget.glade.h:16 data/preferences.glade.h:25
 msgid "Recursive"
 msgstr "Rekurzivně"
 
-#: data/gwget.glade.h:16
+#: data/gwget.glade.h:17
 msgid "Recursive options"
 msgstr "Možnosti rekurze"
 
-#: data/gwget.glade.h:17
+#: data/gwget.glade.h:18
 msgid "Remove"
 msgstr "Odstranit"
 
-#: data/gwget.glade.h:18 src/main_window_cb.c:558
+#: data/gwget.glade.h:19 src/main_window_cb.c:558
 msgid "Remove all"
 msgstr "Odstranit vše"
 
-#: data/gwget.glade.h:19
+#: data/gwget.glade.h:20
 msgid "Remove all downloads from list"
 msgstr "Odstranit ze seznamu všechna stahování"
 
-#: data/gwget.glade.h:20 src/main_window_cb.c:499
+#: data/gwget.glade.h:21 src/main_window_cb.c:499
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
-#: data/gwget.glade.h:21
+#: data/gwget.glade.h:22
 msgid "Remove completed downloads from list"
 msgstr "Odstranit ze seznamu dokončená stahování"
 
-#: data/gwget.glade.h:22 src/main_window_cb.c:528
+#: data/gwget.glade.h:23 src/main_window_cb.c:528
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
-#: data/gwget.glade.h:23
+#: data/gwget.glade.h:24
 msgid "Remove inactive downloads from list"
 msgstr "Odstranit ze seznamu neaktivní stahování"
 
-#: data/gwget.glade.h:24
+#: data/gwget.glade.h:25
+msgid "Resume"
+msgstr "Obnovit"
+
+#: data/gwget.glade.h:26
+msgid "Stop all downloads"
+msgstr "Zastavit všechna stahování"
+
+#: data/gwget.glade.h:27
 msgid "Stop and delete downloaded file"
 msgstr "Zastavit a odstranit stažený soubor"
 
-#: data/gwget.glade.h:25
+#: data/gwget.glade.h:28
 msgid "The index file only"
 msgstr "Jen soubor index"
 
-#: data/gwget.glade.h:26
+#: data/gwget.glade.h:29
 msgid "This site (mirror)"
 msgstr "Tento server (zrcadlo)"
 
-#: data/gwget.glade.h:27
+#: data/gwget.glade.h:30
 msgid "Url:"
 msgstr "Url:"
 
-#: data/gwget.glade.h:28
+#: data/gwget.glade.h:31
 msgid "_New"
 msgstr "_Nové"
 
-#: data/gwget.glade.h:29
+#: data/gwget.glade.h:32
 msgid "_Toolbar"
 msgstr "_Lišta nástrojů"
 
@@ -280,35 +292,35 @@ msgstr "Neznámé"
 msgid "Failed"
 msgstr "Selhalo"
 
-#: src/gwget_data.c:172
+#: src/gwget_data.c:173
 msgid "stalled"
 msgstr "vynechává"
 
-#: src/gwget_data.c:202
+#: src/gwget_data.c:203
 msgid "Not Started"
 msgstr "Nespuštěno"
 
-#: src/gwget_data.c:204
+#: src/gwget_data.c:205
 msgid "Not Running"
 msgstr "Neběží"
 
-#: src/gwget_data.c:206
+#: src/gwget_data.c:207
 msgid "Not Connected"
 msgstr "Nepřipojeno"
 
-#: src/gwget_data.c:208
+#: src/gwget_data.c:209
 msgid "Connected"
 msgstr "Připojeno"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:211
 msgid "Retrieving"
 msgstr "Stahuji"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:213
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: src/gwget_data.c:216
+#: src/gwget_data.c:217
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -317,7 +329,7 @@ msgstr ""
 "Stahování dokončeno\n"
 "(%s)"
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:224
 msgid "Error"
 msgstr "Chyba"
 
