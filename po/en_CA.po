@@ -1,14 +1,14 @@
 # Canadian English translation for gwget
 # Copyright (C) 2004 Adam Weinberger and the GNOME Foundation
-# This file is distributed under the same license as the gwget package.
+# This file is distributed under the same licence as the gwget package.
 # Adam Weinberger <adamw@gnome.org>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-14 11:14-0400\n"
-"PO-Revision-Date: 2004-08-14 00:01-0400\n"
+"POT-Creation-Date: 2004-08-19 13:12-0400\n"
+"PO-Revision-Date: 2004-08-19 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -204,40 +204,40 @@ msgid "Current Size"
 msgstr "Current Size"
 
 #: data/preferences.glade.h:13
+msgid "Don't create directories"
+msgstr "Do not create directories"
+
+#: data/preferences.glade.h:14
 msgid "Download Speed"
 msgstr "Download Speed"
 
-#: data/preferences.glade.h:14
+#: data/preferences.glade.h:15
 msgid "Download page requisites"
 msgstr "Download page requisites"
 
-#: data/preferences.glade.h:15 src/main_window.c:289
+#: data/preferences.glade.h:16 src/main_window.c:289
 msgid "Elapsed Time"
 msgstr "Elapsed Time"
 
-#: data/preferences.glade.h:16
+#: data/preferences.glade.h:17
 msgid "File Type Image"
 msgstr "File Type Image"
 
-#: data/preferences.glade.h:17
+#: data/preferences.glade.h:18
 msgid "Follow relative links only"
 msgstr "Follow relative links only"
 
-#: data/preferences.glade.h:18
+#: data/preferences.glade.h:19
 msgid "General"
 msgstr "General"
 
-#: data/preferences.glade.h:19
+#: data/preferences.glade.h:20
 msgid "Limit download speed to: "
 msgstr "Limit download speed to: "
 
-#: data/preferences.glade.h:20
+#: data/preferences.glade.h:21
 msgid "Maximum depth level: "
 msgstr "Maximum depth level: "
-
-#: data/preferences.glade.h:21
-msgid "No create directories"
-msgstr "Do not create directories"
 
 #: data/preferences.glade.h:22
 msgid "Number of retries:"
