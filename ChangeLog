@@ -1,5 +1,11 @@
 2004-11-26 David Sedeño <david@alderia.com>
 
+	* src/main_window.c (add_columns): Fix Column Name.
+	  (gwget_get_defaults_from_gconf): Set state if the download is
+	  completed.
+
+2004-11-26 David Sedeño <david@alderia.com>
+
 	* src/gwget_data.c (gwget_data_add_download): Check here if the url is
 	already in our queue.
 	* src/main_window.c (add_columns): Put the image and name column in

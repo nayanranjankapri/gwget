@@ -178,6 +178,10 @@ gwget_get_defaults_from_gconf(void)
 		gwget_data_set_state(data,DL_NOT_RUNNING); 
 		if (gwget_pref.resume_at_start && data->state!=DL_COMPLETED) {
 			gwget_data_start_download(data);
+		} 
+		/* FIXME: put all the cases (error, retriving...) */
+		if (state==DL_COMPLETED) {
+			gwget_data_set_state(data, state);
 		}
 	}
 	show_prefered_columns();
@@ -242,7 +246,7 @@ add_columns (GtkTreeView *treeview)
 	/* File Name Column */
 	renderer = gtk_cell_renderer_pixbuf_new ();
 	column = gtk_tree_view_column_new();
-	gtk_tree_view_column_set_title (GTK_TREE_VIEW_COLUMN(column),_("File Type"));
+	gtk_tree_view_column_set_title (GTK_TREE_VIEW_COLUMN(column),_("File Name"));
 	gtk_tree_view_column_pack_start (column,
 					renderer,
 					FALSE);
