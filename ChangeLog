@@ -1,4 +1,9 @@
-2004-09-28  David Sedeño <david@alderia.com>
+2004-10-02  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Use gwget.png instead of gwget.xpm for
+	application icon.
+
+2004-10-01  David Sedeño <david@alderia.com>
 
 	* src/main.c (main): Process urls from command line in the first
 	instance of gwget.
