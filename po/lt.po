@@ -2,8 +2,6 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
 # Lech Jankovski <godgard@gmail.com>, 2004.
-# , fuzzy
-# god <godgard@gmail.com>, 2004.
 # 
 # 
 msgid ""
@@ -11,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gwget cvs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-11-27 19:32+0100\n"
-"PO-Revision-Date: 2004-11-28 01:19+0200\n"
-"Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
+"PO-Revision-Date: 2004-12-10 03:45+0200\n"
+"Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +22,7 @@ msgstr "gwget taikomoji programa"
 
 #: data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
-msgstr ""
+msgstr "gwget automatizavimo gamykla"
 
 #: data/about.glade.h:1
 msgid "About Gwget"
@@ -164,7 +162,7 @@ msgstr "Tik indekso bylą"
 
 #: data/gwget.glade.h:31
 msgid "This site (mirror)"
-msgstr ""
+msgstr "Ši svetainė (atvaizdis)"
 
 #: data/gwget.glade.h:32
 msgid "Url:"
@@ -184,7 +182,7 @@ msgstr "*"
 
 #: data/newdownload.glade.h:2
 msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<b>Naujas atsisiuntimas</b>"
+msgstr "<span weight=\"bold\">Naujas atsisiuntimas</span>"
 
 #: data/newdownload.glade.h:3
 msgid "New Download"
@@ -212,19 +210,19 @@ msgstr "<b>Bendri</b>"
 
 #: data/preferences.glade.h:5
 msgid "<span weight=\"bold\">Behavior</span>"
-msgstr "<b>Funkcionavimas</b>"
+msgstr "<span weight=\"bold\">Funkcionavimas</span>"
 
 #: data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<b>Skilčių sąrašas</b>"
+msgstr "<span weight=\"bold\">Skilčių sąrašas</span>"
 
 #: data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Links</span>"
-msgstr "<b>Nuorodos</b>"
+msgstr "<span weight=\"bold\">Nuorodos</span>"
 
 #: data/preferences.glade.h:8
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
-msgstr "<b>Tarpinės stoties nustatymai</b>"
+msgstr "<span weight=\"bold\">Tarpinės stoties nustatymai</span>"
 
 #: data/preferences.glade.h:9
 msgid "Column List"
@@ -421,7 +419,9 @@ msgstr "Gnome2 siuntimų tvarkyklė."
 
 #: src/main_window_cb.c:172
 msgid "translator_credits"
-msgstr "vertėjų sąrašas"
+msgstr ""
+"Lech Jankovski <godgard@gmail.com>,\n"
+"Žygimantas Beručka <uid0@akl.lt>"
 
 #: src/main_window_cb.c:184
 msgid "Gwget"
@@ -429,7 +429,7 @@ msgstr "Gwget"
 
 #: src/main_window_cb.c:498 src/new_window.c:140
 msgid "Select Folder"
-msgstr "Pasirinkti direktoriją"
+msgstr "Pasirinkit aplanką"
 
 #: src/main_window_cb.c:555
 #, c-format
@@ -462,14 +462,13 @@ msgstr "Atsisiuntimai"
 
 #: src/wget-log.c:83
 msgid "Socket error"
-msgstr ""
+msgstr "Lizdo klaida"
 
 #: src/wget-log.c:85
 msgid "Connection refused\n"
 msgstr "Prisijungimas atmestas\n"
 
 #: src/wget-log.c:87
-#, fuzzy
 msgid "No route to host"
 msgstr "Nėra maršruto iki hosto"
 
@@ -478,7 +477,6 @@ msgid "Connection refused when downloading URL:\n"
 msgstr "Prisijungimas atmestas siunčiantis URL:\n"
 
 #: src/wget-log.c:91
-#, fuzzy
 msgid "Host not found\n"
 msgstr "Hostas nerastas\n"
 
