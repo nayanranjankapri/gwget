@@ -5,9 +5,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: wget-0.13.1\n"
+"Project-Id-Version: wget-0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-21 20:01+0200\n"
+"POT-Creation-Date: 2004-08-20 01:41+0200\n"
 "PO-Revision-Date: 2004-07-15 20:20+0200\n"
 "Last-Translator: Pavlo Bohmat <bohm@ukr.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -15,47 +15,320 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:228
-msgid "File Type"
-msgstr "Тип файла"
+#: data/about.glade.h:1
+msgid "About Gwget"
+msgstr "О программе Gwget"
 
-#: src/main_window.c:237
-msgid "File Name"
-msgstr "Имя файла"
+#: data/about.glade.h:2
+msgid "GNU GPL Version 2"
+msgstr "GNU GPL версии 2"
 
-#: src/main_window.c:247
-msgid "State"
-msgstr "Состояние"
+#: data/about.glade.h:3
+msgid "Gwget: Download Manager for Gnome 2"
+msgstr "Gwget: Менеджер закачек для Гном 2"
 
-#: src/main_window.c:256
+#: data/about.glade.h:4
+msgid "translator-credits"
+msgstr "Павел Богмат"
+
+#: data/gwget.glade.h:1 data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: data/gwget.glade.h:2
+msgid "<span weight=\"bold\">Download:</span>"
+msgstr "<span weight=\"bold\">Новая закачка</span>"
+
+#: data/gwget.glade.h:3
+msgid "<span weight=\"bold\">Properties</span>"
+msgstr "<span weight=\"bold\">Свойства</span>"
+
+#: data/gwget.glade.h:4
+msgid "Cancel"
+msgstr "Отмена"
+
+#: data/gwget.glade.h:5
+msgid "Continue"
+msgstr "Продолжить"
+
+#: data/gwget.glade.h:6
+msgid "Gwget - Download Manager"
+msgstr "Gwget - менеджер закачек"
+
+#: data/gwget.glade.h:7
+msgid "Local Directory: "
+msgstr "Локальный каталог: "
+
+#: data/gwget.glade.h:8
+msgid "Local File: "
+msgstr "Локальный файл: "
+
+#: data/gwget.glade.h:9
+msgid "Multimedia files (Videos and images)"
+msgstr "Мультимедиа файлы (видео и изображения"
+
+#: data/gwget.glade.h:10
+msgid "New download"
+msgstr "Новая закачка"
+
+#: data/gwget.glade.h:11
+msgid "Pause"
+msgstr "Остановить"
+
+#: data/gwget.glade.h:12
+msgid "Pause download"
+msgstr "Остановить закачку"
+
+#: data/gwget.glade.h:13
+msgid "Properties"
+msgstr "Свойства"
+
+#: data/gwget.glade.h:14
+msgid "Question"
+msgstr "Вопрос"
+
+#: data/gwget.glade.h:15 data/preferences.glade.h:25
+msgid "Recursive"
+msgstr "Рекурсивность"
+
+#: data/gwget.glade.h:16
+msgid "Recursive options"
+msgstr "Рекурсивность"
+
+#: data/gwget.glade.h:17 src/main_window_cb.c:534
+msgid "Remove all"
+msgstr "Удалить все"
+
+#: data/gwget.glade.h:18
+msgid "Remove all downloads from list"
+msgstr "Удалить все закачки из списка"
+
+#: data/gwget.glade.h:19 src/main_window_cb.c:475
+msgid "Remove completed"
+msgstr "Удалить завершённые"
+
+#: data/gwget.glade.h:20
+msgid "Remove completed downloads from list"
+msgstr "Удалить завершенные закачки из списка"
+
+#: data/gwget.glade.h:21 src/main_window_cb.c:504
+msgid "Remove inactive"
+msgstr "Удалить неактивные"
+
+#: data/gwget.glade.h:22
+msgid "Remove inactive downloads from list"
+msgstr "Удалить неактивные закачки из списка"
+
+#: data/gwget.glade.h:23
+msgid "Stop and delete downloaded file"
+msgstr "Остановить и удалить закачанный файл"
+
+#: data/gwget.glade.h:24
+msgid "The index file only"
+msgstr "Только индекс-файл"
+
+#: data/gwget.glade.h:25
+msgid "This site (mirror)"
+msgstr "Этот сайт (зеркало)"
+
+#: data/gwget.glade.h:26
+msgid "Url:"
+msgstr ""
+
+#: data/gwget.glade.h:27
+msgid "_New"
+msgstr "_Новая"
+
+#: data/gwget.glade.h:28
+msgid "_Toolbar"
+msgstr "_Панель инструментов"
+
+#: data/newdownload.glade.h:1 data/preferences.glade.h:4
+msgid "*"
+msgstr "*"
+
+#: data/newdownload.glade.h:2
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Новая закачка</span>"
+
+#: data/newdownload.glade.h:3
+msgid "New Download"
+msgstr "Новая закачка"
+
+#: data/newdownload.glade.h:4 data/preferences.glade.h:27
+msgid "Save in:"
+msgstr "Сохранить в:"
+
+#: data/newdownload.glade.h:5
+msgid "URL: "
+msgstr "URL: "
+
+#: data/preferences.glade.h:1
+msgid "   "
+msgstr "    "
+
+#: data/preferences.glade.h:3
+msgid "  KB"
+msgstr " Кб"
+
+#: data/preferences.glade.h:5
+msgid "<b>General</b>"
+msgstr "<b>Общие</b>"
+
+#: data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Поведение</span>"
+
+#: data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Список колонок</span>"
+
+#: data/preferences.glade.h:8
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Ссылки</span>"
+
+#: data/preferences.glade.h:9
+msgid "Column List"
+msgstr "Список колонок"
+
+#: data/preferences.glade.h:10
+msgid "Continue downloads on startup"
+msgstr "Продолжить закачки при запуске"
+
+#: data/preferences.glade.h:11
+msgid "Convert links"
+msgstr "Конвертировать ссылки"
+
+#: data/preferences.glade.h:12 src/main_window.c:259
 msgid "Current Size"
 msgstr "Текущий размер"
 
-#: src/main_window.c:266
-msgid "Total Size"
-msgstr "Общий размер"
+#: data/preferences.glade.h:13
+msgid "Don't create directories"
+msgstr "Не создавать каталоги"
 
-#: src/main_window.c:276 src/main_window.c:281
-msgid "Percentage"
-msgstr "Процент"
+#: data/preferences.glade.h:14
+msgid "Download Speed"
+msgstr "Скорость закачки"
 
-#: src/main_window.c:286
+#: data/preferences.glade.h:15
+msgid "Download page requisites"
+msgstr "Закачивать страницу со всем необходимым"
+
+#: data/preferences.glade.h:16 src/main_window.c:289
 msgid "Elapsed Time"
 msgstr "Прошло времени"
 
-#: src/main_window.c:296
+#: data/preferences.glade.h:17
+msgid "File Type Image"
+msgstr "Пиктограмма соответствующего типа"
+
+#: data/preferences.glade.h:18
+msgid "Follow relative links only"
+msgstr "Следовать только за связанными ссылками"
+
+#: data/preferences.glade.h:19
+msgid "General"
+msgstr "Общие"
+
+#: data/preferences.glade.h:20
+msgid "Limit download speed to: "
+msgstr "Ограничение скорости закачки: "
+
+#: data/preferences.glade.h:21
+msgid "Maximum depth level: "
+msgstr "Максимальный уровень глубины: "
+
+#: data/preferences.glade.h:22
+msgid "Number of retries:"
+msgstr "Количество попыток:"
+
+#: data/preferences.glade.h:23 src/main_window.c:279 src/main_window.c:284
+msgid "Percentage"
+msgstr "Процент"
+
+#: data/preferences.glade.h:24
+msgid "Preferences"
+msgstr "Настройки"
+
+#: data/preferences.glade.h:26 src/main_window.c:299
 msgid "Remaining Time"
 msgstr "Осталось времени"
 
-#: src/main_window.c:306
+#: data/preferences.glade.h:28 src/main_window.c:269
+msgid "Total Size"
+msgstr "Общий размер"
+
+#: src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Неизвестная ошибка"
+
+#: src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Неудачно"
+
+#: src/gwget_data.c:172
+msgid "stalled"
+msgstr "срыв потока"
+
+#: src/gwget_data.c:201
+msgid "Not Started"
+msgstr "Не стартовать"
+
+#: src/gwget_data.c:203
+msgid "Not Running"
+msgstr "Не запускать"
+
+#: src/gwget_data.c:205
+msgid "Not Connected"
+msgstr "Нет соединения"
+
+#: src/gwget_data.c:207
+msgid "Connected"
+msgstr "Соединение"
+
+#: src/gwget_data.c:209
+msgid "Retrieving"
+msgstr "Закачка"
+
+#: src/gwget_data.c:211
+msgid "Completed"
+msgstr "Завершена"
+
+#: src/gwget_data.c:215
+#, c-format
+msgid ""
+"Download Completed\n"
+"(%s)"
+msgstr ""
+"Закачка завершена\n"
+"(%s)"
+
+#: src/gwget_data.c:222
+msgid "Error"
+msgstr "Ошибка"
+
+#: src/main_window.c:231
+msgid "File Type"
+msgstr "Тип файла"
+
+#: src/main_window.c:240
+msgid "File Name"
+msgstr "Имя файла"
+
+#: src/main_window.c:250
+msgid "State"
+msgstr "Состояние"
+
+#: src/main_window.c:309
 msgid "Speed"
 msgstr "Скорость"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid "Cancel current downloads?"
 msgstr "Отменить текущие закачки?"
 
-#: src/main_window.c:528
+#: src/main_window.c:539
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -87,137 +360,30 @@ msgstr "Павел Богмат"
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:376 src/new_window.c:147
+#: src/main_window_cb.c:391 src/new_window.c:151
 msgid "Select Folder"
 msgstr "Выбрать папку"
 
-#: src/main_window_cb.c:433
+#: src/main_window_cb.c:448
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "Действительно отменить текущую закачку? (Url: %s)"
 
-#: src/main_window_cb.c:434
+#: src/main_window_cb.c:449
 msgid "Cancel download?"
 msgstr "Отменить закачку?"
 
-#: src/main_window_cb.c:460
-msgid "Remove completed"
-msgstr "Удалить завершённые"
-
-#: src/main_window_cb.c:460
+#: src/main_window_cb.c:475
 msgid "Really remove completed downloads from the list?"
 msgstr "Действительно удалить завершённые закачки из списка?"
 
-#: src/main_window_cb.c:489
-msgid "Remove not running"
-msgstr "Удалить не запуская"
-
-#: src/main_window_cb.c:489
-msgid "Really remove not running downloads from the list?"
-msgstr "Действительно удалить не запущенные закачки из списка?"
-
-#: src/main_window_cb.c:519
-msgid "Remove all"
-msgstr "Удалить все"
-
-#: src/main_window_cb.c:519
-msgid "Really remove all downloads from the list?"
+#: src/main_window_cb.c:504
+msgid "Really remove inactive downloads from the list?"
 msgstr "Действительно удалить все закачки из списка?"
 
-#: src/gwget_data.c:172
-msgid "stalled"
-msgstr "срыв потока"
-
-#: src/gwget_data.c:202
-msgid "Not Started"
-msgstr "Не стартовать"
-
-#: src/gwget_data.c:204
-msgid "Not Running"
-msgstr "Не запускать"
-
-#: src/gwget_data.c:206
-msgid "Not Connected"
-msgstr "Нет соединения"
-
-#: src/gwget_data.c:208
-msgid "Connected"
-msgstr "Соединение"
-
-#: src/gwget_data.c:210
-msgid "Retrieving"
-msgstr "Закачка"
-
-#: src/gwget_data.c:212
-msgid "Completed"
-msgstr "Завершена"
-
-#: src/gwget_data.c:216
-#, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
-msgstr ""
-"Закачка завершена\n"
-"(%s)"
-
-#: src/gwget_data.c:223
-msgid "Error"
-msgstr "Ошибка"
-
-#: src/wget-log.c:92
-msgid "Socket error"
-msgstr "Ошибка сокета"
-
-#: src/wget-log.c:94
-msgid "Connection refused\n"
-msgstr "Соединение отклонено\n"
-
-#: src/wget-log.c:96
-msgid "No route to host"
-msgstr "Нет маршрута к узлу"
-
-#: src/wget-log.c:98
-msgid "Connection refused when downloading URL:\n"
-msgstr "Соединение отклонено при закачивании URL:\n"
-
-#: src/wget-log.c:100
-msgid "Host not found\n"
-msgstr "Узел не найден\n"
-
-#: src/wget-log.c:102
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Неподдерживаемый протокол - вам нужен wget >= 1.7 для https:\n"
-
-#: src/wget-log.c:105
-msgid "Refusing to truncate existing file"
-msgstr "Отклонено для сокращения существующего файла"
-
-#: src/wget-log.c:107
-msgid "Unknown error"
-msgstr "Неизвестная ошибка"
-
-#: src/wget-log.c:118 src/wget-log.c:124
-msgid "File not found"
-msgstr "Файл не найден"
-
-#: src/wget-log.c:131
-msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Невозможно продолжить закачку, существующий локальный файл конфликтует с "
-"удалённым файлом"
-
-#: src/wget-log.c:178
-msgid "Can't write to target directory"
-msgstr "Невозможно записать в указанный каталог"
-
-#: src/custom-cell-renderer-progressbar.c:36
-msgid "Unknown"
-msgstr "Неизвестная ошибка"
-
-#: src/custom-cell-renderer-progressbar.c:99
-msgid "Failed"
-msgstr "Неудачно"
+#: src/main_window_cb.c:534
+msgid "Really remove all downloads from the list?"
+msgstr "Действительно удалить все закачки из списка?"
 
 #: src/systray.c:133
 msgid "Nothing"
@@ -227,141 +393,50 @@ msgstr "Ничего"
 msgid "Downloads"
 msgstr "Закачки"
 
-msgid "Recurse into the Url ?"
-msgstr "Рекурсировать в Url ?"
+#: src/wget-log.c:83
+msgid "Socket error"
+msgstr "Ошибка сокета"
 
-msgid ""
-"The url it's not a file. \n"
-" Do you like to recurse into the url ?\n"
-"Otherwise only the index file will be downloaded."
+#: src/wget-log.c:85
+msgid "Connection refused\n"
+msgstr "Соединение отклонено\n"
+
+#: src/wget-log.c:87
+msgid "No route to host"
+msgstr "Нет маршрута к узлу"
+
+#: src/wget-log.c:89
+msgid "Connection refused when downloading URL:\n"
+msgstr "Соединение отклонено при закачивании URL:\n"
+
+#: src/wget-log.c:91
+msgid "Host not found\n"
+msgstr "Узел не найден\n"
+
+#: src/wget-log.c:93
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Неподдерживаемый протокол - вам нужен wget >= 1.7 для https:\n"
+
+#: src/wget-log.c:96
+msgid "Refusing to truncate existing file"
+msgstr "Отклонено для сокращения существующего файла"
+
+#: src/wget-log.c:98
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+#: src/wget-log.c:109 src/wget-log.c:115
+msgid "File not found"
+msgstr "Файл не найден"
+
+#: src/wget-log.c:122
+msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
-"Url не является файлом. \n"
-" Хотите ли вы рекурсировать в url ?\n"
-"Иначе будет загружен только индексный файл."
+"Невозможно продолжить закачку, существующий локальный файл конфликтует с "
+"удалённым файлом"
 
-msgid "_New"
-msgstr "_Новая"
+#: src/wget-log.c:169
+msgid "Can't write to target directory"
+msgstr "Невозможно записать в указанный каталог"
 
-msgid "Pause download"
-msgstr "Остановить закачку"
-
-msgid "Pause"
-msgstr "Остановить"
-
-msgid "Continue"
-msgstr "Продолжить"
-
-msgid "Remove completed downloads from list"
-msgstr "Удалить завершенные закачки из списка"
-
-msgid "Stop and delete downloaded file"
-msgstr "Остановить и удалить закачанный файл"
-
-msgid "Cancel"
-msgstr "Отмена"
-
-msgid "Question"
-msgstr "Вопрос"
-
-msgid "URL: "
-msgstr "URL: "
-
-msgid "*"
-msgstr "*"
-
-msgid "Save in:"
-msgstr "Сохранить в:"
-
-msgid "Select target directory"
-msgstr "Выбрать каталог"
-
-msgid "Preferences"
-msgstr "Настройки"
-
-msgid "    "
-msgstr "    "
-
-msgid "Save in: "
-msgstr "Сохранить в: "
-
-msgid "Default directory for downloaded data"
-msgstr "Каталог по умолчанию для данных закачек"
-
-msgid "Number of retries:"
-msgstr "Количество попыток:"
-
-msgid "Continue downloads on startup"
-msgstr "Продолжить закачки при запуске"
-
-msgid "General"
-msgstr "Общие"
-
-msgid "<span weight=\"bold\">Behaviour</span>"
-msgstr "<span weight=\"bold\">Поведение</span>"
-
-msgid "Download page requisites"
-msgstr "Закачивать страницу со всем необходимым"
-
-msgid "Do not create a hierarchy of directories when retrieving recursively"
-msgstr "Не создавать иерархию каталогов при рекурсивном закачивании"
-
-msgid "No create directories"
-msgstr "Не создавать каталоги"
-
-msgid "Maximum depth level: "
-msgstr "Максимальный уровень глубины: "
-
-msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">Ссылки</span>"
-
-msgid "Follow relative links only"
-msgstr "Следовать только за связанными ссылками"
-
-msgid "Convert links"
-msgstr "Конвертировать ссылки"
-
-msgid "Recursivity"
-msgstr "Рекурсивность"
-
-msgid "_Toolbar"
-msgstr "_Панель инструментов"
-
-msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">Список колонок</span>"
-
-msgid "Column List"
-msgstr "Список колонок"
-
-msgid "Download Speed"
-msgstr "Скорость закачки"
-
-msgid "Fite Type Image"
-msgstr "Пиктограмма соответствующего типа"
-
-msgid "Propierties"
-msgstr "Свойства"
-
-msgid "<span weight=\"bold\">Propierties</span>"
-msgstr "<span weight=\"bold\">Свойства</span>"
-
-msgid "Local File: "
-msgstr "Локальный файл: "
-
-msgid "Local Directory: "
-msgstr "Локальный каталог: "
-
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Новая закачка</span>"
-
-msgid "New Download"
-msgstr "Новая закачка"
-
-msgid "Remove not running downloads from list"
-msgstr "Удалить не запущенные закачки из списка"
-
-msgid "Remove all downloads from list"
-msgstr "Удалить все закачки из списка"
-
-msgid "<span weight=\"bold\">General</span>"
-msgstr "<span weight=\"bold\">Общие</span>"
 
