@@ -1,10 +1,8 @@
 - Put more wget options in preferences window.
-- Epiphany extension. I have implemented the skeleton (not yet committed to cvs).
 - Write documentation.
 - Support gnome-session
 - Proxy support, global Gnome proxy and manual proxy. 
 - User / Password for ftp (with gnome-keyring integration? )
-- Clean the popup menu. Currently there are too much options.
 - gwget.schema for Gconf.
 - Downloads history.
 - Maximun number of concurrent downloads.
@@ -12,6 +10,8 @@
 
 
 Done:
+- Clean the popup menu. Currently there are too much options.
+- Epiphany extension. 
 - Accept urls from the command line. This option it's more useful if gwget could detect if another instance of gwget it's already running and add the download to the current gwget (as gedit do for text file). Read gedit source for ideas. 
 
 
