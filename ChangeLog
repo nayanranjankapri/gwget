@@ -1,5 +1,13 @@
 2005-01-15  David Sedeño <david@alderia.com>
 
+	* include/main_window.h: Put xml_new global since we need to manipulate widgets on startup
+	* src/main_window.c (main_window): Load the xml_new. 
+	* src/new_window.c (on_ok_button_clicked): Add the download dir if it not in the list of paths.
+	(on_new_browse_save_in_button_clicked): Replace the entry reference with the gtkcomboboxentry.
+	* data/newdownload.glade: New window no visible on load.
+
+2005-01-15  David Sedeño <david@alderia.com>
+
 	* data/newdownload.glade: Replace the save in entry for a gtkcomboboxentry.
 	* include/main_window.h: Added a list of "save in" paths and a model for the new gtkcomboboxentry.
 	* src/main_window.c (main_window): Create the model for the gtkcomboboxentry. Added the default directory to the list of paths.

@@ -64,6 +64,10 @@ static  GtkTargetEntry dragtypes[] = {
 
 GladeXML *xml;
 
+/* xml of the new download window */
+GladeXML *xml_new;
+
+
 /* the model of the GtkTreeView */
 /* declared here for be used to add by main_window_cb */
 GtkTreeModel *model;
