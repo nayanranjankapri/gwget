@@ -1,3 +1,9 @@
+2004-08-14  David Sedeño <david@alderia.com>
+
+	* data/about.glade, data/gwget.glade, 
+	  data/preferences.glade: Fix some translations
+	* main_window_cb_c: "inactive" instead of "not running"
+
 2004-08-14  Duarte Loreto <happyguy_pt@hotmail.com>
 
 	* configure.in: Added Portuguese (pt) to ALL_LINGUAS.

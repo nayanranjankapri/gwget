@@ -501,7 +501,7 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	response = run_dialog(_("Remove not running"),_("Really remove not running downloads from the list?"));
+	response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"));
 	if (response == GTK_RESPONSE_OK) {
 		length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 		gtk_tree_model_get_iter_root(model,&iter);

@@ -15,13 +15,13 @@
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="logo">gwget-large.png</property>
-  <property name="copyright" translatable="yes">GNU GPL Versión 2</property>
-  <property name="comments" translatable="yes">Gwget2: Download Manager for Gnome 2</property>
+  <property name="copyright" translatable="yes">GNU GPL Version 2</property>
+  <property name="comments" translatable="yes">Gwget: Download Manager for Gnome 2</property>
   <property name="authors">David Sedeño Fernández
 &lt;david@alderia.com&gt;</property>
   <property name="translator_credits" translatable="yes">translator_credits</property>
   <accessibility>
-    <atkproperty name="AtkObject::accessible_name" translatable="yes">Acerca de gwget</atkproperty>
+    <atkproperty name="AtkObject::accessible_name" translatable="yes">About Gwget</atkproperty>
   </accessibility>
   <signal name="response" handler="on_about1_close" last_modification_time="Tue, 01 Apr 2003 17:19:35 GMT"/>
 </widget>
