@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-18 09:52+0100\n"
-"PO-Revision-Date: 2004-12-18 10:34+0100\n"
+"POT-Creation-Date: 2004-12-28 01:02+0100\n"
+"PO-Revision-Date: 2004-12-28 01:03+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -375,19 +375,19 @@ msgstr ""
 msgid "Error"
 msgstr "Chyba"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:615
 msgid "Unable to add this download"
 msgstr "Nepodarilo sa pridať toto sťahovanie"
 
-#: src/gwget_data.c:611
+#: src/gwget_data.c:615
 msgid "This download is already added"
 msgstr "Toto sťahovanie je už pridané"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:663 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Chyba pri otváraní súboru"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: src/gwget_data.c:663 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
@@ -403,17 +403,24 @@ msgstr "Stav"
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: src/main_window.c:560
+#: src/main_window.c:374
+msgid "Error starting the download"
+msgstr "Chyba pri štarte sťahovania"
+
+#: src/main_window.c:374
+msgid "There is a unexpected error starting the download"
+msgstr "Vyskytla sa neočakávaná chyba pri štarte sťahovania"
+
+#: src/main_window.c:565
 msgid "Cancel current downloads?"
 msgstr "Zrušiť aktuálne sťahovania?"
 
-#: src/main_window.c:560
+#: src/main_window.c:565
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
-"Ostalo aspoň jedno aktívne sťahovanie. Naozaj zrušiť všetky bežiace "
-"prenosy?"
+"Ostalo aspoň jedno aktívne sťahovanie. Naozaj zrušiť všetky bežiace prenosy?"
 
 #: src/main_window_cb.c:94
 msgid "Error in download"
@@ -431,7 +438,7 @@ msgstr "Marcel Telka <marcel@telka.sk>"
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:140
+#: src/main_window_cb.c:503 src/new_window.c:141
 msgid "Select Folder"
 msgstr "Vybrať priečinok"
 
