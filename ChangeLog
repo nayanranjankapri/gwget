@@ -1,3 +1,8 @@
+2004-08-16  David Sedeño <david@alderia.com>
+
+	* data/preferences.glade: Change "No create directories" 
+	 to "Don't create directories"
+
 2004-08-14  David Sedeño <david@alderia.com>
 
 	* src/systray.c (systray_clicked): Hide main window
