@@ -128,7 +128,7 @@ main_window(void)
 void 
 gwget_get_defaults_from_gconf(void)
 {
-	gint num_dl,i;
+	gint num_dl, i, total_size;
 	GwgetData *data;
 	gchar *key,*url,*dir;
 	DlState state;
@@ -162,6 +162,11 @@ gwget_get_defaults_from_gconf(void)
 		data=gwget_data_create(url,dir);
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		state=gconf_client_get_int(gconf_client,key,NULL); 
+		
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/total_size",i);
+		total_size = gconf_client_get_int (gconf_client, key, NULL); 
+		gwget_data_set_total_size (data, total_size);
+		
 		new_download(data);
 		gwget_data_set_state(data,DL_NOT_RUNNING); 
 		if (gwget_pref.resume_at_start && data->state!=DL_COMPLETED) {
@@ -514,7 +519,10 @@ gwget_quit(void)
 		gconf_client_set_string(gconf_client,key,gwgetdata->dir,NULL);	
 		
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
-		gconf_client_set_int(gconf_client,key,gwgetdata->state,NULL);	
+		gconf_client_set_int(gconf_client,key,gwgetdata->state,NULL);
+
+		key=g_strdup_printf ("/apps/gwget2/downloads_data/%d/total_size",i);
+		gconf_client_set_int (gconf_client,key,gwgetdata->total_size,NULL);		
 		
 		if (gwgetdata->state==DL_RETRIEVING) 
 		{

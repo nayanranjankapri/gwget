@@ -1,5 +1,14 @@
 2004-10-30 David Sedeño <david@alderia.com>
 
+	* src/main_window_cb.c (new_download): Correct cur_size in the
+	treeview.
+	* src/main_window.c (gwget_get_defaults_from_gconf): Get total_size
+	from gconf.
+	* src/gwget_data.c (gwget_data_create): Check if the file exists an
+	put the current size in gwgetdata struct.
+
+2004-10-30 David Sedeño <david@alderia.com>
+
 	* configure.in: Check for gconftool
 	* data/Makefile.am: Install schema.
 	* data/gwget.schemas.in: new file

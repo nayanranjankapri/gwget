@@ -22,7 +22,7 @@
 #include <libgnome/gnome-url.h>
 #include <libgnome/gnome-program.h>
 #include <libgnome/gnome-init.h>
-#include <libgnomevfs/gnome-vfs-utils.h>
+#include <libgnomevfs/gnome-vfs.h>
 #include "main_window.h"
 #include "main_window_cb.h"
 #include "new_window.h"
@@ -210,12 +210,13 @@ new_download(GwgetData* gwgetdata) {
 	GtkIconTheme *theme;
 	GtkIconInfo *icon_info;
 	GdkPixbuf *pixbuf;
-	char *mime, *icon_name;
+	char *mime, *icon_name, *size;
 	int width = 16, height = 16;
 	
 	gtk_list_store_append (GTK_LIST_STORE(model), &iter); 
+	size = g_strdup_printf ("%d kB", (gwgetdata->cur_size + 512) / 1024);
 	gtk_list_store_set (GTK_LIST_STORE(model), &iter,URL_COLUMN,gwgetdata->url,
-						CURRENTSIZE_COLUMN,gwgetdata->cur_size, 
+						CURRENTSIZE_COLUMN, size, 
 						FILENAME_COLUMN, gwgetdata->filename,
 	    				-1);
 	

@@ -15,6 +15,7 @@
  */
  
 #include <gnome.h>
+#include <libgnomevfs/gnome-vfs.h>
 #include <fcntl.h>
 #include <signal.h>
 #include <stdlib.h>
@@ -428,6 +429,7 @@ GwgetData *
 gwget_data_create(gchar *url, gchar *dir)
 {
 	GwgetData *gwgetdata;
+	GnomeVFSURI *localfile_uri;
 	gint length;
 		
 	gwgetdata = g_new0(GwgetData,1);
@@ -452,11 +454,21 @@ gwget_data_create(gchar *url, gchar *dir)
 	
 	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
 	
+	localfile_uri = gnome_vfs_uri_new (gwgetdata->local_filename);
+	if (gnome_vfs_uri_exists (localfile_uri) ) {
+		GnomeVFSFileInfo *info;
+		info = gnome_vfs_file_info_new();
+		gnome_vfs_get_file_info (gwgetdata->local_filename, info, GNOME_VFS_FILE_INFO_DEFAULT);
+		gwgetdata->cur_size = (guint32)info->size;
+	} else {
+		gwgetdata->cur_size = 0;
+	}
+	
 	gwgetdata->line = NULL;
 	gwgetdata->session_start_time = 0;
 	gwgetdata->session_start_size = 0;
 	gwgetdata->session_elapsed = 0;
-	gwgetdata->cur_size = 0;
+	/* gwgetdata->cur_size = 0; */
 	gwgetdata->state = DL_NOT_STARTED;
 	gwgetdata->total_size = 0;
 	gwgetdata->total_time = 0;
