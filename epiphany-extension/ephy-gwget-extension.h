@@ -22,30 +22,32 @@
 
 G_BEGIN_DECLS
 
-#define EPHY_TYPE_GWGET_EXTENSION (ephy_gwget_extension_get_type ())
-#define EPHY_GWGET_EXTENSION(o) (G_TYPE_CHECK_INSTANCE_CAST ((o, EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtension))
-#define EPHY_GWGET_EXTENSION_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionClass))
-#define EPHY_IS_GWGET_EXTENSION(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EPHY_TYPE_GWGET_EXTENSION))
-#define EPHY_IS_GWGET_EXTENSION_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EPHY_TYPE_GWGET_EXTENSION))
-#define EPHY_GWGET_EXTENSION_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionClass))
+#define EPHY_TYPE_GWGET_EXTENSION		(ephy_gwget_extension_get_type ())
+#define EPHY_GWGET_EXTENSION(o)			(G_TYPE_CHECK_INSTANCE_CAST ((o), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtension))
+#define EPHY_GWGET_EXTENSION_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionClass))
+#define EPHY_IS_GWGET_EXTENSION(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), EPHY_TYPE_GWGET_EXTENSION))
+#define EPHY_IS_GWGET_EXTENSION_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), EPHY_TYPE_GWGET_EXTENSION))
+#define EPHY_GWGET_EXTENSION_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionClass))
 
-typedef struct EphyGwgetExtension EphyGwgetExtension;
-typedef struct EphyGwgetExtensionClass EphyGwgetExtensionClass;
-typedef struct EphyGwgetExtensionPrivate EphyGwgetExtensionPrivate;
+typedef struct _EphyGwgetExtension		EphyGwgetExtension;
+typedef struct _EphyGwgetExtensionClass		EphyGwgetExtensionClass;
+typedef struct _EphyGwgetExtensionPrivate	EphyGwgetExtensionPrivate;
 	
-struct EphyGwgetExtensionClass
+struct _EphyGwgetExtensionClass
 {
-  GObjectClass parent_class;
+	GObjectClass parent_class;
 };
 
-struct EphyGwgetExtension
+struct _EphyGwgetExtension
 {
-  GObject parent_instance;
+	GObject parent_instance;
 
-  EphyGwgetExtensionPrivate *priv;
+	/*< private >*/
+	EphyGwgetExtensionPrivate *priv;
 };
 
-GType ephy_gwget_extension_get_type (void);
+GType ephy_gwget_extension_get_type	 (void);
+
 GType ephy_gwget_extension_register_type (GTypeModule *module);
 
 G_END_DECLS

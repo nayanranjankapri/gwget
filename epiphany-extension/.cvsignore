@@ -1,0 +1,6 @@
+*.o
+*.lo
+*~
+gwget.xml
+Makefile
+Makefile.in
