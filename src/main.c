@@ -100,34 +100,26 @@ gwget_handle_automation_cmdline (GnomeProgram *program)
 		
 		g_slist_free (data); 
 	}	
-		
-		
-		
-
 }
-	
+
 int main(int argc,char *argv[])
 {
 	
 	GnomeProgram *gwget;
 	CORBA_Object factory;
 	
-
 	bindtextdomain (GETTEXT_PACKAGE, GNOME_GWGET_LOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 	setlocale(LC_ALL, "");
-
 	
 	gwget = gnome_program_init("Gwget",VERSION,LIBGNOMEUI_MODULE,argc,argv,NULL);
-	
-		
+
 	/* check whether we are running already */
 	factory = bonobo_activation_activate_from_id
 			("OAFIID:GNOME_Gwget_Factory",
 			Bonobo_ACTIVATION_FLAG_EXISTING_ONLY,
 			NULL, NULL);
-	
 	
 	if (factory != NULL)
 	{
@@ -139,6 +131,7 @@ int main(int argc,char *argv[])
 	main_window();
 	
 	gwget_app_server = gwget_application_server_new (gdk_screen_get_default());
+	gwget_handle_automation_cmdline(gwget);
 	
 	gtk_main();
 		

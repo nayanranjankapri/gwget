@@ -1,3 +1,8 @@
+2004-09-28  David Sedeño <david@alderia.com>
+
+	* src/main.c (main): Process urls from command line in the first
+	instance of gwget.
+	
 2004-09-28  Abel Cheung  <maddog@linuxhall.org>
 
 	* configure.in: Added "zh_TW" to ALL_LINGUAS.
