@@ -1,6 +1,7 @@
 2005-01-03  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	* configure.in: Added Danish (da) to ALL_LINGUAS.
+	* AUTHORS: Converted from iso-8859-1 to utf-8
 
 2005-01-03  David Sedeño <david@alderia.com>
 
