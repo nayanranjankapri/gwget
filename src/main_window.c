@@ -149,7 +149,10 @@ gwget_get_defaults_from_gconf(void)
 	gwget_pref.view_down_speed=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_down_speed",NULL);
 	gwget_pref.view_toolbar=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_toolbar",NULL);
 	gwget_pref.view_file_type=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_file_type",NULL);
-		
+	gwget_pref.limit_speed = gconf_client_get_bool (gconf_client,"/apps/gwget2/limit_speed", NULL);
+	gwget_pref.max_speed=gconf_client_get_int(gconf_client,"/apps/gwget2/max_speed",NULL);
+	
+
 	num_dl=gconf_client_get_int(gconf_client,"/apps/gwget2/n_downloads",NULL);
 	for (i=0;i<num_dl;i++) {
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/url",i);
@@ -166,7 +169,7 @@ gwget_get_defaults_from_gconf(void)
 		}
 	}
 	show_prefered_columns();
-		
+
 	/* Default width and height */
 	default_width=gconf_client_get_int (gconf_client,"/apps/gwget2/default_width",NULL);
 	default_height=gconf_client_get_int (gconf_client,"/apps/gwget2/default_height",NULL);
@@ -459,6 +462,13 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), FALSE);
 	}
 	
+	checkitem = glade_xml_get_widget(xml_pref,"limit_speed_check");
+	if (gwget_pref.limit_speed) {
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
+	} else {
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
+	}
+	gtk_spin_button_set_digits(GTK_TOGGLE_BUTTON(checkitem), gwget_pref.max_speed);
 }
 
 

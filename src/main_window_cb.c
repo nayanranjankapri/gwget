@@ -289,7 +289,7 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	GtkWidget *follow_relative = NULL;	
 	GtkWidget *convert_links = NULL;
 	GtkWidget *dl_page_requisites = NULL;
-	GtkWidget *max_depth=NULL;
+	GtkWidget *max_depth=NULL, *limit_speed_check=NULL, *limit_speed_spin=NULL;
 
 	save_in=glade_xml_get_widget(xml_pref,"save_in_entry");
 	gwget_pref.download_dir=g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in)));
@@ -309,6 +309,17 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 						atoi(gtk_entry_get_text(GTK_ENTRY(num_retries))),NULL);
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/resume_at_start",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume)),NULL);
+	
+	/* Limit Speed */
+	limit_speed_check = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_check");
+	gwget_pref.limit_speed = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check));
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/limit_speed",
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)),NULL);
+	limit_speed_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_spin");
+	gwget_pref.max_speed = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin));
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/max_speed",
+						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)),NULL);
+	
 	
 	/* Recursivity */
 	no_create_directories  = glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
@@ -671,4 +682,20 @@ on_check_down_speed_toggled(GtkWidget *widget, gpointer data)
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
                                      visible);
 	
+}
+
+void
+on_limit_speed_check_toggled (GtkWidget *widget, gpointer data)
+{
+	GtkWidget *limit_speed_spin;
+	gboolean limit_speed;
+	
+	limit_speed_spin = glade_xml_get_widget (xml_pref, "limit_speed_spin");
+	limit_speed = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget));
+	
+	if (limit_speed) {
+		gtk_widget_set_sensitive (GTK_WIDGET(limit_speed_spin), TRUE);
+	} else {
+		gtk_widget_set_sensitive (GTK_WIDGET(limit_speed_spin), FALSE);
+	}
 }
