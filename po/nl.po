@@ -8,13 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Alleyoop cvs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-14 04:09+0200\n"
-"PO-Revision-Date: 2004-09-14 05:47+0200\n"
+"POT-Creation-Date: 2004-09-29 12:22+0200\n"
+"PO-Revision-Date: 2004-09-29 16:04+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: data/GNOME_Gwget.server.in.in.h:1
+msgid "gwget application"
+msgstr "gwget toepassing"
+
+#: data/GNOME_Gwget.server.in.in.h:2
+msgid "gwget automation factory"
+msgstr "gwget automatiseringsfabriek"
 
 #: data/about.glade.h:1
 msgid "About Gwget"
@@ -101,7 +109,7 @@ msgstr "Recursief"
 msgid "Recursive options"
 msgstr "Recursieve opties"
 
-#: data/gwget.glade.h:17 src/main_window_cb.c:539
+#: data/gwget.glade.h:17 src/main_window_cb.c:558
 msgid "Remove all"
 msgstr "Alles verwijderen"
 
@@ -110,7 +118,7 @@ msgstr "Alles verwijderen"
 msgid "Remove all downloads from list"
 msgstr "Alle downloads van de lijst afhalen"
 
-#: data/gwget.glade.h:19 src/main_window_cb.c:480
+#: data/gwget.glade.h:19 src/main_window_cb.c:499
 msgid "Remove completed"
 msgstr "Voltooide weghalen"
 
@@ -118,7 +126,7 @@ msgstr "Voltooide weghalen"
 msgid "Remove completed downloads from list"
 msgstr "Voltooide downloads van de lijst afhalen"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:509
+#: data/gwget.glade.h:21 src/main_window_cb.c:528
 msgid "Remove inactive"
 msgstr "Inactieve weghalen"
 
@@ -287,31 +295,31 @@ msgstr "Mislukt"
 msgid "stalled"
 msgstr "vastgelopen"
 
-#: src/gwget_data.c:201
+#: src/gwget_data.c:202
 msgid "Not Started"
 msgstr "Niet gestart"
 
-#: src/gwget_data.c:203
+#: src/gwget_data.c:204
 msgid "Not Running"
 msgstr "Niet actief"
 
-#: src/gwget_data.c:205
+#: src/gwget_data.c:206
 msgid "Not Connected"
 msgstr "Niet Verbonden"
 
-#: src/gwget_data.c:207
+#: src/gwget_data.c:208
 msgid "Connected"
 msgstr "Verbonden"
 
-#: src/gwget_data.c:209
+#: src/gwget_data.c:210
 msgid "Retrieving"
 msgstr "Bezig met ophalen"
 
-#: src/gwget_data.c:211
+#: src/gwget_data.c:212
 msgid "Completed"
 msgstr "Voltooid"
 
-#: src/gwget_data.c:215
+#: src/gwget_data.c:216
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -320,7 +328,7 @@ msgstr ""
 "Download voltooid\n"
 "(%s)"
 
-#: src/gwget_data.c:222
+#: src/gwget_data.c:223
 msgid "Error"
 msgstr "Fout"
 
@@ -348,25 +356,27 @@ msgstr "Huidige downloads annuleren?"
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
-msgstr "Er is nog tenminste één download actief. Echt alle lopende downloads annuleren?"
+msgstr ""
+"Er is nog tenminste één download actief. Echt alle lopende downloads "
+"annuleren?"
 
-#: src/main_window_cb.c:95
+#: src/main_window_cb.c:94
 msgid "Error in download"
 msgstr "Fout in download"
 
-#: src/main_window_cb.c:100
+#: src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Fout bij openen bestand"
 
-#: src/main_window_cb.c:100
+#: src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Kon het bestand niet openen"
 
-#: src/main_window_cb.c:144
+#: src/main_window_cb.c:163
 msgid "Download Manager for Gnome2."
 msgstr "Downloadbeheer voor Gnome2."
 
-#: src/main_window_cb.c:150
+#: src/main_window_cb.c:169
 msgid "translator_credits"
 msgstr ""
 "Vincent van Adrighem\n"
@@ -374,37 +384,37 @@ msgstr ""
 "Jan-Willem Harmanny\n"
 "Elros Cyriatan"
 
-#: src/main_window_cb.c:162
+#: src/main_window_cb.c:181
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:396 src/new_window.c:151
+#: src/main_window_cb.c:415 src/new_window.c:117
 msgid "Select Folder"
 msgstr "Map selecteren"
 
 # currente = current
-#: src/main_window_cb.c:453
+#: src/main_window_cb.c:472
 #, c-format
 msgid "Really cancel current download? (Url: %s)"
 msgstr "De huidige download echt annuleren? (URL: %s)"
 
-#: src/main_window_cb.c:454
+#: src/main_window_cb.c:473
 msgid "Cancel download?"
 msgstr "Download annuleren?"
 
-#: src/main_window_cb.c:480
+#: src/main_window_cb.c:499
 msgid "Really remove completed downloads from the list?"
 msgstr "De voltooide downloads echt van de lijst afhalen?"
 
-#: src/main_window_cb.c:509
+#: src/main_window_cb.c:528
 msgid "Really remove inactive downloads from the list?"
 msgstr "De inactieve downloads echt van de lijst afhalen?"
 
-#: src/main_window_cb.c:539
+#: src/main_window_cb.c:558
 msgid "Really remove all downloads from the list?"
 msgstr "De voltooide downloads echt allemaal van de lijst afhalen?"
 
-#: src/systray.c:133
+#: src/systray.c:135
 msgid "Nothing"
 msgstr "Niets"
 
@@ -412,7 +422,7 @@ msgstr "Niets"
 # src/context.c:62
 # src/history_callbacks.c:159
 # src/misc_callbacks.c:408
-#: src/systray.c:140
+#: src/systray.c:142
 msgid "Downloads"
 msgstr "Downloads"
 
@@ -455,7 +465,9 @@ msgstr "Bestand niet gevonden"
 
 #: src/wget-log.c:122
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Kan download niet voortzetten, bestaand lokaal bestand conflicteert met bestand op afstand"
+msgstr ""
+"Kan download niet voortzetten, bestaand lokaal bestand conflicteert met "
+"bestand op afstand"
 
 #: src/wget-log.c:169
 msgid "Can't write to target directory"
