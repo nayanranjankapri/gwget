@@ -2,7 +2,7 @@
 
 	* configure.in: Added en_CA to ALL_LINGUAS.
 
-2004-08-13  Amanpreet Singh Alsm <aalam@redhat.com>
+2004-08-13  Amanpreet Singh Alam <aalam@redhat.com>
 
 	* configure.in: pa(Punjabi) locale is added
 2004-08-06  David Sedeño <david@alderia.com>
