@@ -6,6 +6,7 @@
 	* epiphany-extension/ephy-gwget-extension.c:
 	* epiphany-extension/ephy-gwget-extension.h:
 	* epiphany-extension/Makefile.am: New epiphany-extension.
+	* configure.in: Check Epiphany for epiphany-extension compilation.
 
 2004-10-01  David Sedeño <david@alderia.com>
 
