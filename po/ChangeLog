@@ -1,3 +1,7 @@
+2004-09-26  David Sedeño <david@alderia.com>
+
+	* POTFILES.in: Added data/GNOME_Gwget.server.in.in
+
 2004-09-21  David Sedeño <david@alderia.com>
 
 	* mk.po: Added Macedonian translation
