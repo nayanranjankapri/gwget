@@ -99,7 +99,7 @@ GtkTreeModel* create_model(void);
 void add_columns (GtkTreeView *treeview);
 void gwget_get_defaults_from_gconf(void);
 /* Drag received callback */
-void on_treeview_drag_received(GtkWidget * widget, GdkDragContext * context, int x,
+void on_gwget_drag_received(GtkWidget * widget, GdkDragContext * context, int x,
                      int y, GtkSelectionData * seldata, guint info,
                      guint time, gpointer data);
 

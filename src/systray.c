@@ -50,7 +50,7 @@ systray_load(void)
                       GDK_ACTION_COPY);
 						
 	g_signal_connect(G_OBJECT(tray_icon), "drag_data_received",
-					 G_CALLBACK(on_treeview_drag_received),
+					 G_CALLBACK(on_gwget_drag_received),
 					 GUINT_TO_POINTER(dnd_type));
 
 	egg_tray_icon_send_message(tray_icon,1000,"gwget",7);

@@ -88,7 +88,7 @@ main_window(void)
                       GDK_ACTION_COPY);
 						
 	g_signal_connect(G_OBJECT(window), "drag_data_received",
-					 G_CALLBACK(on_treeview_drag_received),
+					 G_CALLBACK(on_gwget_drag_received),
 					 GUINT_TO_POINTER(dnd_type));
 					 
 	/* Set the toolbar like gnome preferences */
@@ -373,7 +373,7 @@ add_columns (GtkTreeView *treeview)
 }
 
 void 
-on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
+on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 							int y, GtkSelectionData * seldata, guint info,	
 							guint time, gpointer data)
 {

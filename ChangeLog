@@ -1,5 +1,9 @@
 2005-01-15  David Sedeño <david@alderia.com>
 
+	* include/main_window.h, src/main_window.c, systray.c: Rename on_treeview_drag_received to on_gwget_drag_received.
+
+2005-01-15  David Sedeño <david@alderia.com>
+
 	* src/new_window.c (create_new_window_with_url): New function.
 	* src/main_window.c (on_treeview_drag_received): Call create_new_window_with_url if ask_save_each_dl preference it's true.
 
