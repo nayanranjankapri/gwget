@@ -449,6 +449,7 @@ gwget_data_start_download(GwgetData *gwgetdata)
 void
 gwget_data_set_total_size (GwgetData *gwgetdata,guint32 total_size)
 {
+	g_return_if_fail (gwgetdata != NULL);
 	gwgetdata->total_size = total_size;
 }
 

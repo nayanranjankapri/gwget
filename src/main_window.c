@@ -133,6 +133,7 @@ gwget_get_defaults_from_gconf(void)
 	gchar *key,*url,*dir;
 	DlState state;
 	gint default_width, default_height;
+	GError *error = NULL;
 	
 	gwget_pref.http_proxy=gconf_client_get_string(gconf_client,"/apps/gwget2/http_proxy",NULL);
 	gwget_pref.http_proxy_port=gconf_client_get_int(gconf_client,"/apps/gwget2/http_proxy_port",NULL);
@@ -159,6 +160,11 @@ gwget_get_defaults_from_gconf(void)
 	gwget_pref.limit_speed = gconf_client_get_bool (gconf_client,"/apps/gwget2/limit_speed", NULL);
 	gwget_pref.max_speed=gconf_client_get_int(gconf_client,"/apps/gwget2/max_speed",NULL);
 	
+	if (!gwget_pref.download_dir) {
+		gwget_pref.download_dir = g_strdup(g_get_home_dir());
+		gconf_client_set_string (gconf_client, "/apps/gwget2/download_dir", g_strdup(g_get_home_dir()), NULL);
+	}
+
 
 	num_dl=gconf_client_get_int(gconf_client,"/apps/gwget2/n_downloads",NULL);
 	for (i=0;i<num_dl;i++) {
@@ -171,8 +177,12 @@ gwget_get_defaults_from_gconf(void)
 		state=gconf_client_get_int(gconf_client,key,NULL); 
 		
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/total_size",i);
-		total_size = gconf_client_get_int (gconf_client, key, NULL); 
-		gwget_data_set_total_size (data, total_size);
+		total_size = gconf_client_get_int (gconf_client, key, &error);
+		if (!error) {		
+			gwget_data_set_total_size (data, total_size);
+		} else { 
+			gwget_data_set_total_size (data, 0);
+		}
 		
 		new_download(data);
 		gwget_data_set_state(data,DL_NOT_RUNNING); 
@@ -367,7 +377,8 @@ on_treeview_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 		gtk_drag_finish(context, TRUE, FALSE, time);
 	} else if (dnd_type==TARGET_NETSCAPE_URL) {
 		file=((gchar *) (seldata->data));
-    		if (gwgetdata=gwget_data_create(file,gwget_pref.download_dir)) {
+		gwgetdata = gwget_data_create(file, gwget_pref.download_dir);
+    		if (gwgetdata) {
 			new_download(gwgetdata);
 			gwget_data_start_download(gwgetdata);
 		} else {

@@ -1,5 +1,11 @@
 2005-01-03  David Sedeño <david@alderia.com>
 
+	* src/gwget_data.c (gwget_data_set_total_size): check values.
+	* src/main_window.c (gwget_get_defaults_from_gconf): More checks in
+	values from gconf.
+
+2005-01-03  David Sedeño <david@alderia.com>
+
 	* data/about.glade: Fix GNOME string.
 	* src/main_window_cb.c (on_about1_activate): Fix GNOME string. Use
 	translator-credits.
