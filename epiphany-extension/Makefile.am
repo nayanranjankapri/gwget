@@ -1,7 +1,7 @@
 # The extension needs to installed into Epiphany's prefix,
 # not gwget's prefix.  
 # ...but that causes problems w/ make distcheck.
-extensiondir = $(libdir)/epiphany-1.4/extensions
+extensiondir = $(libdir)/epiphany/extensions
 
 INCLUDES =				\
  	$(EPIPHANY_DEPENDENCY_CFLAGS)	\
