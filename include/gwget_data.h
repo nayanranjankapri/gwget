@@ -47,7 +47,9 @@ typedef struct
 	gboolean view_file_type;
 	gboolean docked;
 	gboolean limit_speed;
+	gboolean limit_simultaneousdownloads;
 	gint max_speed;
+	gint max_simultaneousdownloads;
 	gboolean trayonly;
 } Preferences;
 

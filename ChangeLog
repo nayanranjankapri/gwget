@@ -1,3 +1,14 @@
+2005-03-05 Julien Cegarra <JulienC@psychologie-fr.org>
+
+	* data/preferences.glade, data/gwget.schemas.in :
+	Modified glade and schema to include options to limit max number 
+	of downloads
+	* src/main_window_cb.c : Manage new additions in the schema file
+	* src/gwget_data.c (gwget_data_start_download) : 
+	Check max number of downloads
+	* src/main_window.c : Add a function to count max number of 
+	downloads (count_download_in_progress)
+
 2005-02-26  Ivan Yosifov <ivan@yosifov.net>
 
 	* include/gwget_data.h: Remove line_pos from GwgetData , it is no

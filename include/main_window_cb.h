@@ -65,11 +65,13 @@ void on_default_radio_toggled (GtkWidget *widget, gpointer data);
 
 /* Preferences */
 void on_limit_speed_check_toggled (GtkWidget *widget, gpointer data);
+void on_limit_simultaneousdownloads_check_toggled (GtkWidget *widget, gpointer data);
 
 void check_download_in_progress(void);
 void continue_all_downloads(void);
 void new_download(GwgetData* gwgetdata);
 void check_download_in_progress(void);
 void start_first_waiting_download(void);
+gint count_download_in_progress(void);
 
 #endif

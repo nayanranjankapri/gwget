@@ -201,6 +201,8 @@ gwget_get_defaults_from_gconf(void)
 	gwget_pref.view_file_type=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_file_type",NULL);
 	gwget_pref.limit_speed = gconf_client_get_bool (gconf_client,"/apps/gwget2/limit_speed", NULL);
 	gwget_pref.max_speed=gconf_client_get_int(gconf_client,"/apps/gwget2/max_speed",NULL);
+	gwget_pref.limit_simultaneousdownloads = gconf_client_get_bool (gconf_client,"/apps/gwget2/limit_simultaneousdownloads", NULL);
+	gwget_pref.max_simultaneousdownloads=gconf_client_get_int(gconf_client,"/apps/gwget2/max_simultaneousdownloads",NULL);
 	gwget_pref.ask_save_each_dl = gconf_client_get_bool (gconf_client,"/apps/gwget2/ask_save_each_dl", NULL);
 	
 	if (!gwget_pref.download_dir) {
@@ -596,6 +598,17 @@ show_prefered_columns(void)
 	}
 	checkitem = glade_xml_get_widget(xml_pref,"limit_speed_spin");
 	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(checkitem), gwget_pref.max_speed);
+
+
+	checkitem = glade_xml_get_widget(xml_pref,"limit_simultaneousdownloads_check");
+	if (gwget_pref.limit_simultaneousdownloads) {
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
+	} else {
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
+	}
+	checkitem = glade_xml_get_widget(xml_pref,"limit_simultaneousdownloads_spin");
+	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(checkitem), gwget_pref.max_simultaneousdownloads);
+
 }
 
 /*

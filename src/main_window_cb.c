@@ -354,6 +354,12 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_speed_spin");
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_speed);
 
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_simultaneousdownloads_check");
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.limit_simultaneousdownloads);
+
+	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_simultaneousdownloads_spin");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_simultaneousdownloads);
+
 	gtk_widget_show(window);
 		
 	return;
@@ -380,6 +386,7 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	GtkWidget *dl_page_requisites = NULL;
 	GtkWidget *max_depth=NULL, *limit_speed_check=NULL, *limit_speed_spin=NULL;
 	GtkWidget *manual_radio=NULL, *direct_radio=NULL, *default_radio=NULL;
+	GtkWidget *limit_simultaneousdownloads_check=NULL, *limit_simultaneousdownloads_spin=NULL;
 
 	save_in=glade_xml_get_widget(xml_pref,"save_in_entry");
 	gwget_pref.download_dir=g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in)));
@@ -451,6 +458,15 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	gconf_client_set_int(gconf_client,"/apps/gwget2/max_speed",
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)),NULL);
 	
+	/* Limit Simultaneous downloads */
+	limit_simultaneousdownloads_check = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_simultaneousdownloads_check");
+	gwget_pref.limit_simultaneousdownloads = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_simultaneousdownloads_check));
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/limit_simultaneousdownloads",
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_simultaneousdownloads_check)),NULL);
+	limit_simultaneousdownloads_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_simultaneousdownloads_spin");
+	gwget_pref.max_simultaneousdownloads = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_simultaneousdownloads_spin));
+	gconf_client_set_int(gconf_client,"/apps/gwget2/max_simultaneousdownloads",
+						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_simultaneousdownloads_spin)),NULL);
 	
 	/* Recursivity */
 	no_create_directories  = glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
@@ -603,7 +619,7 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 		for (i=0;i<length;i++) {
 			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
 			gwgetdata=g_object_get_data(G_OBJECT(model),url);
-			
+
 			if (gwgetdata->state==DL_COMPLETED) {
 				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
 				downloads=g_list_remove(downloads,gwgetdata);
@@ -664,6 +680,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 			/* If it's running we must stop it */
 			/* because the function that update the info will */
 			/* be continue trying to update the info, so segfault! */
+
 			if (gwgetdata->state==DL_RETRIEVING) {
 				gwget_data_stop_download(gwgetdata);
 			}
@@ -816,6 +833,21 @@ on_limit_speed_check_toggled (GtkWidget *widget, gpointer data)
 	}
 }
 
+void
+on_limit_simultaneousdownloads_check_toggled (GtkWidget *widget, gpointer data)
+{
+	GtkWidget *limit_simultaneousdownloads_spin;
+	gboolean limit_simultaneousdownloads;
+	
+	limit_simultaneousdownloads_spin = glade_xml_get_widget (xml_pref, "limit_simultaneousdownloads_spin");
+	limit_simultaneousdownloads = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget));
+	
+	if (limit_simultaneousdownloads) {
+		gtk_widget_set_sensitive (GTK_WIDGET(limit_simultaneousdownloads_spin), TRUE);
+	} else {
+		gtk_widget_set_sensitive (GTK_WIDGET(limit_simultaneousdownloads_spin), FALSE);
+	}
+}
 void 
 on_manual_radio_toggled (GtkWidget *widget, gpointer data) 
 {
@@ -896,4 +928,26 @@ start_first_waiting_download(void)
 		}
 	gtk_tree_model_iter_next(model,&iter);
 	}
+}
+
+/* Count active downloads */
+gint count_download_in_progress(void) {
+	GwgetData* gwgetdata;
+	GtkTreeIter iter;
+	gint length, i, number;
+	gchar *url;
+	gboolean iter_valid;
+
+	number=0;
+	for (iter_valid = gtk_tree_model_get_iter_first (model, &iter);iter_valid;iter_valid = gtk_tree_model_iter_next (model, &iter)) {
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		gwgetdata=g_object_get_data(G_OBJECT(model), url);
+		if ((gwgetdata->state != DL_NOT_STARTED) && 
+		    (gwgetdata->state != DL_WAITING) && 
+		    (gwgetdata->state != DL_NOT_RUNNING) && 
+		    (gwgetdata->state != DL_COMPLETED)) {
+			number++;
+		}
+	}
+	return number;
 }

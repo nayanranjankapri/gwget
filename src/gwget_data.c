@@ -314,7 +314,16 @@ gwget_data_start_download(GwgetData *gwgetdata)
 {
 	pid_t pid;
 	gint pipe_fd[2];
-	
+	gint number;
+
+	/* Control the number of download allowed */
+	number=count_download_in_progress();
+
+	if (gwget_pref.limit_simultaneousdownloads==TRUE && number>=gwget_pref.max_simultaneousdownloads) {
+		gwget_data_set_state(gwgetdata,DL_WAITING);
+		return;
+	}
+
 	/* Put the not connected state before */
 	gwget_data_set_state(gwgetdata,DL_NOT_CONNECTED);
 	gwget_data_update_statistics_ui(gwgetdata);
@@ -483,7 +492,7 @@ gwget_data_create(gchar *url, gchar *dir)
 	
 	gwgetdata->url = g_strdup(url);
 	gwgetdata->log_tag = -1;
-	
+
 	/* Figure out a directory to use if none given */
 	length = strlen (dir);
 	if (length == 0) {

@@ -97,6 +97,18 @@
 	   <long></long>
 	 </locale>
 	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/limit_simultaneousdownloads</key>
+	 <applyto>/apps/gwget2/limit_simultaneousdownloads</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Limit number of simultaneous downloads</short>
+	   <long></long>
+	 </locale>
+	</schema>
 	  
  	<schema>
 	 <key>/schemas/apps/gwget2/max_depth</key>
@@ -118,6 +130,18 @@
 	 <default>0</default>
 	 <locale name="C">
 	   <short>Maximum speed limit</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_simultaneousdownloads</key>
+	 <applyto>/apps/gwget2/max_simultaneousdownloads</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum number of simultaneous downloads</short>
 	   <long></long>
 	 </locale>
 	</schema>
