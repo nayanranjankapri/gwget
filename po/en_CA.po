@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-20 15:48-0500\n"
-"PO-Revision-Date: 2004-11-20 00:01-0400\n"
+"POT-Creation-Date: 2004-12-06 19:19-0500\n"
+"PO-Revision-Date: 2004-12-06 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Properties"
 msgid "Question"
 msgstr "Question"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:32
+#: data/gwget.glade.h:18 data/preferences.glade.h:31
 msgid "Recursive"
 msgstr "Recursive"
 
@@ -120,7 +120,7 @@ msgstr "Recursive options"
 msgid "Remove"
 msgstr "Remove"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:644
+#: data/gwget.glade.h:21 src/main_window_cb.c:637
 msgid "Remove all"
 msgstr "Remove all"
 
@@ -128,7 +128,7 @@ msgstr "Remove all"
 msgid "Remove all downloads from list"
 msgstr "Remove all downloads from list"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:585
+#: data/gwget.glade.h:23 src/main_window_cb.c:579
 msgid "Remove completed"
 msgstr "Remove completed"
 
@@ -136,7 +136,7 @@ msgstr "Remove completed"
 msgid "Remove completed downloads from list"
 msgstr "Remove completed downloads from list"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:614
+#: data/gwget.glade.h:25 src/main_window_cb.c:608
 msgid "Remove inactive"
 msgstr "Remove inactive"
 
@@ -188,7 +188,7 @@ msgstr "<span weight=\"bold\">New Download</span>"
 msgid "New Download"
 msgstr "New Download"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:34
+#: data/newdownload.glade.h:4 data/preferences.glade.h:33
 msgid "Save in:"
 msgstr "Save in:"
 
@@ -236,7 +236,7 @@ msgstr "Continue downloads on startup"
 msgid "Convert links"
 msgstr "Convert links"
 
-#: data/preferences.glade.h:12 src/main_window.c:271
+#: data/preferences.glade.h:12 src/main_window.c:284
 msgid "Current Size"
 msgstr "Current Size"
 
@@ -260,67 +260,63 @@ msgstr "Download Speed"
 msgid "Download page requisites"
 msgstr "Download page requisites"
 
-#: data/preferences.glade.h:18 src/main_window.c:301
+#: data/preferences.glade.h:18 src/main_window.c:316
 msgid "Elapsed Time"
 msgstr "Elapsed Time"
 
 #: data/preferences.glade.h:19
-msgid "File Type Image"
-msgstr "File Type Image"
-
-#: data/preferences.glade.h:20
 msgid "Follow relative links only"
 msgstr "Follow relative links only"
 
-#: data/preferences.glade.h:21
+#: data/preferences.glade.h:20
 msgid "General"
 msgstr "General"
 
-#: data/preferences.glade.h:22
+#: data/preferences.glade.h:21
 msgid "Limit download speed to: "
 msgstr "Limit download speed to: "
 
-#: data/preferences.glade.h:23
+#: data/preferences.glade.h:22
 msgid "Manual proxy configuration"
 msgstr "Manual proxy configuration"
 
-#: data/preferences.glade.h:24
+#: data/preferences.glade.h:23
 msgid "Maximum depth level: "
 msgstr "Maximum depth level: "
 
-#: data/preferences.glade.h:25
+#: data/preferences.glade.h:24
 msgid "Network"
 msgstr "Network"
 
-#: data/preferences.glade.h:26
+#: data/preferences.glade.h:25
 msgid "Number of retries:"
 msgstr "Number of retries:"
 
-#: data/preferences.glade.h:27
+#: data/preferences.glade.h:26
 msgid "Open files automatically after download"
 msgstr "Open files automatically after download"
 
-#: data/preferences.glade.h:28 src/main_window.c:291 src/main_window.c:296
+#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
 msgid "Percentage"
 msgstr "Percent"
 
-#: data/preferences.glade.h:29
+#: data/preferences.glade.h:28
 msgid "Port:"
 msgstr "Port:"
 
-#: data/preferences.glade.h:30
+#: data/preferences.glade.h:29
 msgid "Preferences"
 msgstr "Preferences"
 
-#: data/preferences.glade.h:31
+#: data/preferences.glade.h:30
 msgid "Proxy:"
 msgstr "Proxy:"
 
-#: data/preferences.glade.h:33 src/main_window.c:311
+#: data/preferences.glade.h:32 src/main_window.c:326
 msgid "Remaining Time"
 msgstr "Remaining Time"
 
-#: data/preferences.glade.h:35 src/main_window.c:281
+#: data/preferences.glade.h:34 src/main_window.c:295
 msgid "Total Size"
 msgstr "Total Size"
 
@@ -332,35 +328,39 @@ msgstr "Unknown"
 msgid "Failed"
 msgstr "Failed"
 
-#: src/gwget_data.c:174
+#: src/gwget_data.c:175
 msgid "stalled"
 msgstr "stalled"
 
-#: src/gwget_data.c:204
+#: src/gwget_data.c:203
+msgid "Waiting"
+msgstr "Waiting"
+
+#: src/gwget_data.c:205
 msgid "Not Started"
 msgstr "Not Started"
 
-#: src/gwget_data.c:206
+#: src/gwget_data.c:207
 msgid "Not Running"
 msgstr "Not Running"
 
-#: src/gwget_data.c:208
+#: src/gwget_data.c:209
 msgid "Not Connected"
 msgstr "Not Connected"
 
-#: src/gwget_data.c:210
+#: src/gwget_data.c:211
 msgid "Connected"
 msgstr "Connected"
 
-#: src/gwget_data.c:212
+#: src/gwget_data.c:213
 msgid "Retrieving"
 msgstr "Retrieving"
 
-#: src/gwget_data.c:214
+#: src/gwget_data.c:215
 msgid "Completed"
 msgstr "Completed"
 
-#: src/gwget_data.c:218
+#: src/gwget_data.c:219
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -369,39 +369,43 @@ msgstr ""
 "Download Completed\n"
 "(%s)"
 
-#: src/gwget_data.c:225
+#: src/gwget_data.c:226
 msgid "Error"
 msgstr "Error"
 
-#: src/gwget_data.c:641 src/main_window_cb.c:99
+#: src/gwget_data.c:604
+msgid "Unable to add this download"
+msgstr "Unable to add this download"
+
+#: src/gwget_data.c:604
+msgid "This download is already added"
+msgstr "This download is already added"
+
+#: src/gwget_data.c:652 src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: src/gwget_data.c:641 src/main_window_cb.c:99
+#: src/gwget_data.c:652 src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Could not open the file"
 
-#: src/main_window.c:243
-msgid "File Type"
-msgstr "File Type"
-
-#: src/main_window.c:252
+#: src/main_window.c:266
 msgid "File Name"
 msgstr "File Name"
 
-#: src/main_window.c:262
+#: src/main_window.c:273
 msgid "State"
 msgstr "State"
 
-#: src/main_window.c:321
+#: src/main_window.c:336
 msgid "Speed"
 msgstr "Speed"
 
-#: src/main_window.c:555
+#: src/main_window.c:560
 msgid "Cancel current downloads?"
 msgstr "Cancel current downloads?"
 
-#: src/main_window.c:555
+#: src/main_window.c:560
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -417,46 +421,42 @@ msgstr "Error in download"
 msgid "Download Manager for Gnome2."
 msgstr "Download Manager for GNOME 2."
 
-#: src/main_window_cb.c:171
+#: src/main_window_cb.c:172
 msgid "translator_credits"
 msgstr "Adam Weinberger <adamw@gnome.org>"
 
-#: src/main_window_cb.c:183
+#: src/main_window_cb.c:184
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:501 src/new_window.c:163
+#: src/main_window_cb.c:498 src/new_window.c:140
 msgid "Select Folder"
 msgstr "Select Folder"
 
-#: src/main_window_cb.c:558
+#: src/main_window_cb.c:553
 #, c-format
-msgid "Really cancel current download? (Url: %s)"
-msgstr "Really cancel current download? (Url: %s)"
+msgid ""
+"Really cancel current download?\n"
+"(Url: %s)"
+msgstr ""
+"Really cancel current download?\n"
+"(URL: %s)"
 
-#: src/main_window_cb.c:559
+#: src/main_window_cb.c:554
 msgid "Cancel download?"
 msgstr "Cancel download?"
 
-#: src/main_window_cb.c:585
+#: src/main_window_cb.c:579
 msgid "Really remove completed downloads from the list?"
 msgstr "Really remove completed downloads from the list?"
 
-#: src/main_window_cb.c:614
+#: src/main_window_cb.c:608
 msgid "Really remove inactive downloads from the list?"
 msgstr "Really remove inactive downloads from the list?"
 
-#: src/main_window_cb.c:644
+#: src/main_window_cb.c:637
 msgid "Really remove all downloads from the list?"
 msgstr "Really remove all downloads from the list?"
-
-#: src/new_window.c:67
-msgid "Unable to add this download"
-msgstr "Unable to add this download"
-
-#: src/new_window.c:67
-msgid "This download is already added"
-msgstr "This download is already added"
 
 #: src/systray.c:135
 msgid "Nothing"
@@ -507,6 +507,6 @@ msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Cannot continue download; existing local file conflicts with remote file"
 
-#: src/wget-log.c:169
+#: src/wget-log.c:180
 msgid "Can't write to target directory"
 msgstr "Cannot write to target directory"
