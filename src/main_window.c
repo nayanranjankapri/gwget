@@ -140,8 +140,10 @@ main_window(void)
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_toolbar")),gwget_pref.view_toolbar);
 	toolbar = glade_xml_get_widget(xml,"bonobotoolbar"); 
 	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
-	if (gwget_pref.trayonly)
+	if (gwget_pref.trayonly) {
+		gtk_widget_show(GTK_WIDGET(window));
 		gtk_widget_hide(GTK_WIDGET(window));
+	}
 	else 
 		gtk_widget_show(GTK_WIDGET(window));
 
