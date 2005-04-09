@@ -1,3 +1,8 @@
+2005-04-09  David Sedeño <david@alderia.com>
+
+	* src/main_window.c: Show/Hide main_window before the toolbar. See
+	#173082.
+
 2005-04-01  Steve Murphy  <murf@e-tools.com>
 
         * configure.in: Added "rw" to ALL_LINGUAS.
