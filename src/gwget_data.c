@@ -422,6 +422,7 @@ gwget_data_start_download(GwgetData *gwgetdata)
 			     gwget_pref.http_proxy ) 
 			{
 				setenv("http_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
+				setenv("ftp_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
 		 	        argv[arg]="-Yon";
 				arg++;
 			}
