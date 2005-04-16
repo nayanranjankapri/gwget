@@ -138,6 +138,13 @@ fi
 
 AM_CONDITIONAL(ENABLE_EPIPHANY_EXTENSION, test "x$enable_epiphany_extension" = "xyes")
 
+AC_ARG_WITH([extension-prefix],
+    [  --with-extension-prefix=path              Epiphany extension prefix],    
+    [extension_prefix=$withval],
+    [extension_prefix=/]
+)
+EXTENSION_PREFIX="$extension_prefix"
+AC_SUBST([EXTENSION_PREFIX])
 
 dnl Stuff for the CORBA interface
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)

@@ -1,3 +1,8 @@
+2005-04-16  Ivan Yosifov <ivan@yosifov.net>
+
+	* configure.in, epiphany-extension/Makefile.am: added 
+	--with-extension-prefix configure option.
+
 2005-04-09  David Sedeño <david@alderia.com>
 
 	* src/gwget_data.c: Set ftp proxy environment variable when the proxy

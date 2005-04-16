@@ -2,7 +2,7 @@
 # not gwget's prefix.  
 # ...but that causes problems w/ make distcheck.
 
-extensiondir = $(EPIPHANY_EXTENSIONS_DIR)
+extensiondir = $(EXTENSION_PREFIX)/$(EPIPHANY_EXTENSIONS_DIR)
 extension_LTLIBRARIES = libgwgetextension.la
 
 INCLUDES =				\
