@@ -14,10 +14,11 @@ static void systray_destroyed(GtkWidget *widget, gpointer data);
 static void systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data);
 static gboolean systray_generate_menu(GdkEventButton *event);
 static void systray_add_download(gpointer data1, gpointer data2);
+static gboolean put_icon_downloading(gpointer data);
 
 
 
-static GdkPixbuf *icon_idle, *icon_downloading;
+static GdkPixbuf *icon_idle, *icon_downloading, *icon_newdownload;
 static GtkWidget *image_icon;
 
 void 
@@ -34,6 +35,7 @@ systray_load(void)
 	/* icon list */
 	icon_idle = systray_load_icon("gwget-off.png");
 	icon_downloading = systray_load_icon("gwget.png");
+	icon_newdownload = systray_load_icon("newdownload.png");
 	
 	set_icon_idle();
 
@@ -236,11 +238,26 @@ systray_add_download(gpointer data1,gpointer data2)
 	gtk_menu_shell_append(GTK_MENU_SHELL(menu),item);
 	
 }
+void 
+set_icon_newdownload()
+{
+	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_newdownload);
+	g_timeout_add (1500, put_icon_downloading, NULL);
+}
+
 void
 set_icon_downloading()
 {
 	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_downloading);
 }
+
+static gboolean
+put_icon_downloading (gpointer data)
+{
+	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_downloading);
+	return FALSE;
+}
+
 void
 set_icon_idle()
 {

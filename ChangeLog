@@ -1,5 +1,10 @@
 2005-04-18  David Sedeño <david@alderia.com>
 
+	* include/systray.c: set_icon_newdownload new function.
+	* src/systray.c: Put new download icon 1.5 seconds when new download
+	it is added.
+	* src/main_window_cb.c: Set the new download icon.
+	* pixmaps/newdownload.png: New icon for new donwload.
 	* pixmaps/gwget.png, pixmaps/gwget-off.png: Change gwget icons.
 	
 2005-04-16  Ivan Yosifov <ivan@yosifov.net>

@@ -251,6 +251,7 @@ new_download(GwgetData* gwgetdata)
 	if (pixbuf)
 		g_object_unref (pixbuf);
 	
+	set_icon_newdownload();
 	
 }
 
@@ -920,7 +921,7 @@ start_first_waiting_download(void)
 gint count_download_in_progress(void) {
 	GwgetData* gwgetdata;
 	GtkTreeIter iter;
-	gint length, i, number;
+	gint number;
 	gchar *url;
 	gboolean iter_valid;
 

@@ -7,6 +7,7 @@ extern "C"
 #endif
 
 void systray_load(void);
+void set_icon_newdownload(void);
 void set_icon_downloading(void);
 void set_icon_idle(void);
 
