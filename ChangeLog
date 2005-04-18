@@ -1,3 +1,7 @@
+2005-04-18  David Sedeño <david@alderia.com>
+
+	* pixmaps/gwget.png, pixmaps/gwget-off.png: Change gwget icons.
+	
 2005-04-16  Ivan Yosifov <ivan@yosifov.net>
 
 	* configure.in, epiphany-extension/Makefile.am: added 
