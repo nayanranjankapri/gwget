@@ -29,6 +29,7 @@
 #include "main_window.h"
 #include "main_window_cb.h"
 #include "utils.h"
+#include "systray.h"
 
 #include <config.h>
 
@@ -231,6 +232,7 @@ gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 							   gwgetdata->url);
 					   gtk_tooltips_set_tip (GTK_TOOLTIPS(tray_tooltip), GTK_WIDGET(tray_icon),tooltip_message,NULL);
 					   egg_tray_icon_send_message(tray_icon,100000,tooltip_message,strlen(tooltip_message));
+					   set_icon_idle();
 				   }
 					   
 				   break;

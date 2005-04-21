@@ -520,6 +520,8 @@ gwget_gconf_notify_toolbar(GConfClient *client,
 	if (!strcmp(toolbar_setting,"text")) {
 		gtk_toolbar_set_style(GTK_TOOLBAR(toolbar),GTK_TOOLBAR_TEXT);
 	}
+
+	g_free(toolbar_setting);
 }
 
 static void 

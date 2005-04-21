@@ -251,8 +251,6 @@ new_download(GwgetData* gwgetdata)
 	if (pixbuf)
 		g_object_unref (pixbuf);
 	
-	set_icon_newdownload();
-	
 }
 
 
@@ -886,9 +884,10 @@ check_download_in_progress(void)
 			inprogress = TRUE;
 			break;
 		}
+		gtk_tree_model_iter_next(model,&iter);
 	}
 
-	if (inprogress==TRUE) {
+	if (inprogress) {
 		set_icon_downloading();
 	} else {
 		set_icon_idle();

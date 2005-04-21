@@ -26,6 +26,7 @@
 #include "gwget_data.h"
 #include "wget-log.h"
 #include "main_window.h"
+#include "systray.h"
 #include "utils.h"
 
 
@@ -178,6 +179,7 @@ wget_log_process_line (GwgetData *gwgetdata)
             	gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
 			}
 			gwget_data_set_state (gwgetdata, DL_RETRIEVING);
+			set_icon_newdownload();
 			/* Get session start time and session file start size */
 			if (stat (gwgetdata->local_filename, &file_stat) != -1) {
 		    	gwgetdata->session_start_time = file_stat.st_ctime;

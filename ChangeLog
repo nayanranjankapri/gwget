@@ -1,3 +1,10 @@
+2005-04-21  David Sedeño <david@alderia.com>
+
+	* src/main_window.c: Free toolbar_setting.
+	* src/main_window_cb.c: Only set the icon in download state where it
+	is in RETRIVING state.
+	* src/wget-log.c: Set the icon download when in retrive state.
+
 2005-04-18  David Sedeño <david@alderia.com>
 
 	* include/systray.c: set_icon_newdownload new function.
