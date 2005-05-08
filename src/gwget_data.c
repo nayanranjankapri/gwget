@@ -84,9 +84,13 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 				-1);
 	
 	/* Set the total and session time */
-	if ( (gwgetdata->state != DL_NOT_STARTED) && 
-	     (gwgetdata->state != DL_NOT_RUNNING) && 
-	     (gwgetdata->state != DL_COMPLETED)) {
+	if ((gwgetdata->state != DL_NOT_STARTED) && 			
+            (gwgetdata->state != DL_NOT_RUNNING) &&
+	    (gwgetdata->state != DL_NOT_CONNECTED) &&
+	    (gwgetdata->state != DL_ERROR) &&
+	    (gwgetdata->state != DL_WAITING) &&
+	    (gwgetdata->state != DL_COMPLETED))
+	{
 		elapsed_time = cur_time - gwgetdata->session_start_time;
 		gwgetdata->total_time += elapsed_time - gwgetdata->session_elapsed;
 		gwgetdata->session_elapsed = elapsed_time;
@@ -130,24 +134,21 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	
 	
 	/* Update estimated and remain times */
-	if ((gwgetdata->state != DL_NOT_STARTED) &&
-            (gwgetdata->state != DL_NOT_RUNNING) && 
-            (gwgetdata->state != DL_COMPLETED)) {
+	if ((gwgetdata->state != DL_NOT_STARTED) && 			
+            (gwgetdata->state != DL_NOT_RUNNING) &&
+	    (gwgetdata->state != DL_NOT_CONNECTED) &&
+	    (gwgetdata->state != DL_ERROR) &&
+	    (gwgetdata->state != DL_WAITING) &&
+	    (gwgetdata->state != DL_COMPLETED)) 
+	{	
         	if (gwgetdata->total_size != 0 && retr_size != 0) { 
 			estimated = (((gfloat) (gwgetdata->total_size - gwgetdata->session_start_size)
                   			* gwgetdata->session_elapsed) / retr_size)
                 			+ ((gfloat) (gwgetdata->total_time
                              		- gwgetdata->session_elapsed)); 
-		} else {
-            		estimated = 0;
 		}
 	} else {
-        	if ((gwgetdata->total_size != 0) && (gwgetdata->cur_size != 0) &&
-            		(gwgetdata->state != DL_COMPLETED)) {
-			estimated = ((gfloat) gwgetdata->total_size * gwgetdata->total_time) / gwgetdata->cur_size;
-		} else {
-            		estimated = 0;
-		}
+		estimated = 0;
 	}
 	if (estimated == 0)
 		strcpy (buffer, "");
@@ -174,21 +175,24 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 			PERCENTAGE_COLUMN,(gint)perc,-1);
 	title = g_strdup_printf("%s %d %%", gwgetdata->filename, (gint)perc);
 	/* Speed column */
-	if ((gwgetdata->state != DL_NOT_STARTED) &&
-		(gwgetdata->state != DL_NOT_RUNNING) &&
-		(gwgetdata->state != DL_COMPLETED)) {
-        		if (gwgetdata->session_elapsed != 0) {
-            			if (retr_size == 0) {
-					strcpy (buffer, _ ("stalled"));
-				} else {
-                			sprintf (buffer, "%.2f kB/s",
-                         			((gfloat) retr_size / gwgetdata->session_elapsed) / 1024);
-				}
+	if ((gwgetdata->state != DL_NOT_STARTED) && 			
+            (gwgetdata->state != DL_NOT_RUNNING) &&
+	    (gwgetdata->state != DL_NOT_CONNECTED) &&
+	    (gwgetdata->state != DL_ERROR) &&
+	    (gwgetdata->state != DL_WAITING) &&
+	    (gwgetdata->state != DL_COMPLETED) &&
+	    (gwgetdata->session_elapsed != 0))
+	{
+            		if (retr_size == 0) {
+				strcpy (buffer, _("stalled"));
+			} else {
+                		sprintf (buffer, "%.2f kB/s",
+                        			((gfloat) retr_size / gwgetdata->session_elapsed) / 1024);
 			}
 	} else {
 		strcpy (buffer, "");
 	}
-	
+
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 			   SPEED_COLUMN,buffer,-1);
 	

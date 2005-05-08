@@ -696,7 +696,7 @@ gwget_remember_downloads(void)
 		key=g_strdup_printf ("/apps/gwget2/downloads_data/%d/total_size",i);
 		gconf_client_set_int (gconf_client,key,gwgetdata->total_size,NULL);		
 		
-		if (gwgetdata->state==DL_RETRIEVING) 
+		if (gwgetdata->log_tag != -1) 
 		{
 			running=TRUE;
 		}

@@ -1,3 +1,10 @@
+2005-05-08  Ivan Yosifov <ivan@yosifov.net>
+
+	* src/gwget_data.c: Don't show the downloaded percentage in the speed
+	column on startup, don't show huge numbers on paused downloads.
+	* src/main_window.c: If gwget is launched, then closed fast,
+	wget processes won't get killed. Fixed.
+
 2005-05-08  David Sedeño <david@alderia.com>
 	
 	Support fot gnotify. Patch from Edward Duffy. See #302768
