@@ -203,7 +203,7 @@ new_download(GwgetData* gwgetdata)
 	GtkIconTheme *theme;
 	GtkIconInfo *icon_info;
 	GdkPixbuf *pixbuf;
-	char *mime, *icon_name, *size;
+	char *mime, *size;
 	int width = 16, height = 16;
 	gdouble perc;
 	
@@ -231,20 +231,19 @@ new_download(GwgetData* gwgetdata)
 	
 	mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
 	theme = gtk_icon_theme_get_default ();
-	icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
+	gwgetdata->icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
 									mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
 	gtk_icon_size_lookup (GTK_ICON_SIZE_MENU, &width, &height);
 	width *= 2;
 	height *= 2;
 	
-	icon_info = gtk_icon_theme_lookup_icon (theme, icon_name, width, height);
-	g_free (icon_name);
+	icon_info = gtk_icon_theme_lookup_icon (theme, gwgetdata->icon_name, width, height);
 	if (icon_info == NULL) return;
 	
-	icon_name = g_strdup (gtk_icon_info_get_filename (icon_info));
+	gwgetdata->icon_name = g_strdup (gtk_icon_info_get_filename (icon_info));
 	gtk_icon_info_free (icon_info);
 	
-	pixbuf = gdk_pixbuf_new_from_file_at_size (icon_name, width, height, NULL);
+	pixbuf = gdk_pixbuf_new_from_file_at_size (gwgetdata->icon_name, width, height, NULL);
 	gtk_list_store_set (GTK_LIST_STORE (model),
 				&iter, IMAGE_COLUMN, pixbuf, -1);
 

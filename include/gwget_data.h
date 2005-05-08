@@ -96,7 +96,7 @@ typedef struct
 	gboolean multimedia;	/* Only download multimedia files in recursive mode */
 	gboolean mirror;		/* Mirror the site in recursive mode */
 	gchar *state_str;
-    
+   gchar *icon_name; 
 } GwgetData;
 
 

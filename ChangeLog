@@ -1,3 +1,10 @@
+2005-05-08  David Sedeño <david@alderia.com>
+	
+	Support fot gnotify. Patch from Edward Duffy. See #302768
+	* include/gwget_data.h: Add icon_name to gwgetdata struct.
+	* src/gwget_data.c: New gwget_gnotify_finished function. 
+	* src/main_window_cb.c: Use icon_name from gwgetdata struct.
+
 2005-04-21  David Sedeño <david@alderia.com>
 
 	* src/main_window.c: Free toolbar_setting.

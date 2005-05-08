@@ -22,6 +22,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <sys/socket.h>
 #include <unistd.h>
 #include <string.h>
 #include "gwget_data.h"
@@ -36,6 +37,7 @@
 static gint gwget_data_process_information (GwgetData *gwgetdata);
 static void gwget_data_update_statistics_ui(GwgetData *gwgetdata);
 static void convert_time2str(gchar *buffer, guint32 time);
+static void gwget_gnotify_finished(GwgetData *gwgetdata);
 
 static void
 convert_time2str (gchar *buffer, guint32 time)
@@ -276,6 +278,7 @@ gwget_data_process_information (GwgetData *gwgetdata)
 		else if (WIFEXITED (status)) {
             		if (WEXITSTATUS (status) == 0) {
                 		gwget_data_set_state (gwgetdata, DL_COMPLETED);
+                     gwget_gnotify_finished(gwgetdata);
 				start_first_waiting_download();
 				if (gwget_pref.open_after_dl) {
 					gwget_data_exec(gwgetdata);
@@ -717,3 +720,35 @@ gwget_init_pref(Preferences *pref)
 	pref->docked   = FALSE;
 }
 
+static void
+gwget_gnotify_finished(GwgetData *gwgetdata) {
+   gchar *app_msg, *icon_msg, *fn_msg;
+   int sock;
+   char buf[8];
+
+   app_msg = g_strdup("APP:Download Finished");
+   icon_msg = g_strdup_printf("ICON:%s", gwgetdata->icon_name);
+   fn_msg = g_strdup_printf("MSG:%s", gwgetdata->filename);
+
+   sock = socket(AF_INET, SOCK_STREAM, 6);
+   if(sock > 0) {
+      struct sockaddr_in sa;
+
+      bzero(&sa, sizeof(sa));
+      sa.sin_family = AF_INET;
+      sa.sin_addr.s_addr = inet_addr("127.0.0.1");
+      sa.sin_port = htons(7206);
+      connect(sock, (struct sockaddr *)&sa, sizeof(sa));
+      send(sock, app_msg, strlen(app_msg) + 1, 0);
+      recv(sock, buf, 8, 0);
+      send(sock, icon_msg, strlen(icon_msg) + 1, 0);
+      recv(sock, buf, 8, 0);
+      send(sock, fn_msg, strlen(fn_msg) + 1, 0);
+      close(sock);
+   }
+
+   g_free(app_msg);
+   g_free(icon_msg);
+   g_free(fn_msg);
+	g_free(gwgetdata->icon_name);
+}
