@@ -7,6 +7,7 @@ gwget_pixmaps_DATA = \
 	gwget.png\
 	gwget-off.png\
 	gwget-large.png \
+	downloading.png \
 	newdownload.png
 
 EXTRA_DIST = $(gwget_pixmaps_DATA)

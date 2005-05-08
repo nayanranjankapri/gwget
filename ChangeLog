@@ -1,3 +1,10 @@
+2005-05-08  David Sedeño <david@alderia.com>
+
+	* src/systray.c: Use icon from Julien for downloading.
+	* pixmaps/gwget-off.png, pixmaps/downloading.png: New icons from
+	Julien Cegarra.
+	* pixmaps/Makefile.am: Add downloading.png 
+
 2005-05-08  Ivan Yosifov <ivan@yosifov.net>
 
 	* src/gwget_data.c: Don't show the downloaded percentage in the speed

@@ -34,7 +34,7 @@ systray_load(void)
 
 	/* icon list */
 	icon_idle = systray_load_icon("gwget-off.png");
-	icon_downloading = systray_load_icon("gwget.png");
+	icon_downloading = systray_load_icon("downloading.png");
 	icon_newdownload = systray_load_icon("newdownload.png");
 	
 	set_icon_idle();
