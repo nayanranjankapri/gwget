@@ -1,3 +1,20 @@
+==============
+Version 0.95
+==============
+
+Features: 
+	* Added Gnotify support (Edward Duffy)
+	* New icons for systray (Julien Cegarra)
+Fixes:
+	* Improve epiphany version detection and communication with gwget (Christian Persch).
+	* Use GtkAbout instead of GnomeAbout (Pedro Villavicencio Garrido)
+	* Fix shown of the toolbar at startup (bug #173082).
+	* Fix ftp handle with proxy (bug #173084).
+
+Translations:
+	* Update: el (Kostas Papadimas), de (Hendrik Brandt), es (Francisco Javier F. Serrador), en_CA (Adam Weinberger), sk (Marcel Telka), cs (Miloslav Trmac), hu (Gabor Kelemen), en_GB (David Lodge), nl (Tino Meinen).
+	* New: ca (Josep Puigdemont), rw (Steve Murphy) 
+
 ============
 Version 0.94
 ============
