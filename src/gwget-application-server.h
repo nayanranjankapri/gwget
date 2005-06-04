@@ -2,7 +2,7 @@
 #ifndef __GWGET_APPLICATION_SERVER_H
 #define __GWGET_APPLICATION_SERVER_H
 
-#include <src/GNOME_Gwget.h>
+#include <GNOME_Gwget.h>
 #include <bonobo/bonobo-control.h>
 #include <bonobo/bonobo-object.h>
 

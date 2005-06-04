@@ -7,7 +7,7 @@ extension_LTLIBRARIES = libgwgetextension.la
 
 INCLUDES =				\
  	$(EPIPHANY_DEPENDENCY_CFLAGS)	\
-	-I$(top_builddir)/src		\
+	-I$(top_srcdir)/src		\
  	-DSHARE_DIR=\"pkgdatadir\"	\
  	-DG_DISABLE_DEPRECATED		\
  	-DGDK_DISABLE_DEPRECATED	\

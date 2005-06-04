@@ -5,7 +5,7 @@ gladedir = $(datadir)/$(PACKAGE)
 INCLUDES = \
 	 -DGNOME_GWGET_LOCALEDIR=\""$(datadir)/locale"\" \
 	 -DDATADIR=\""$(gladedir)/"\" \
-	 -I../include \
+	 -I$(srcdir)/../include \
 	 @GNOME_CFLAGS@
 
 AM_CFLAGS =\
