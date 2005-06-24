@@ -175,7 +175,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 		if (p != NULL) {
 			p += 8;
             /* Only set the total size if we don't have one yet. */
-            if (gwgetdata->total_size == 0) { 
+            if (gwgetdata->total_size == 0 && !gwgetdata->recursive) { 
             	gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
 			}
 			gwget_data_set_state (gwgetdata, DL_RETRIEVING);
@@ -235,9 +235,9 @@ wget_log_process_line (GwgetData *gwgetdata)
 					}
 					gwgetdata->session_elapsed = 0;
 				} else {
-                	/* We didn't get a length so, probably it's unspecified size
-                   so get the start of download by trying to catch the
-                   string "K ->" */
+		                	/* We didn't get a length so, probably it's unspecified size
+                			   so get the start of download by trying to catch the
+			                   string "K ->" */
 					p = strstr (gwgetdata->line, "K -> ");
 					if (p != NULL) {
 						/* Unspecified size, so set total_size to 0 */
@@ -252,20 +252,34 @@ wget_log_process_line (GwgetData *gwgetdata)
 					}
 					gwgetdata->session_elapsed = 0;
 				}
-			if (strstr (gwgetdata->line,"-- ") != NULL) {
-				gchar *tmp=NULL;
-				gint i,j;
-				j=0;
-				tmp = g_new(gchar,strlen(gwgetdata->line));
-				for (i=14;i<strlen(gwgetdata->line);i++) {
-					tmp[j]=gwgetdata->line[i];
-					j++;
+				if (strstr (gwgetdata->line,"-- ") != NULL) {
+					gchar *tmp=NULL;
+					gint i,j;
+					j=0;
+					tmp = g_new(gchar,strlen(gwgetdata->line));
+					for (i=14;i<strlen(gwgetdata->line);i++) {
+						tmp[j]=gwgetdata->line[i];
+						j++;
+					}
+					tmp[j]='\0';
+					gwget_data_set_filename_from_url(gwgetdata,tmp);
+					gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
 				}
-				tmp[j]='\0';
-				gwget_data_set_filename_from_url(gwgetdata,tmp);
-				gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
+
+				if (strstr (gwgetdata->line, "           =>") != NULL) {
+					gchar *tmp=NULL;
+					gint i,j;
+					j=0;
+					tmp = g_new(gchar,strlen(gwgetdata->line));
+					for (i=15;i<strlen(gwgetdata->line);i++) {
+						tmp[j]=gwgetdata->line[i];
+						j++;
+					}
+					/* Remove the las ' character */
+					tmp[j-1]='\0';
+					gwgetdata->local_filename = g_strdup (tmp);
+				}
 			}
-		}
 		break;
 		default:
 		break;

@@ -1,7 +1,20 @@
+2005-06-24  David Sedeño <david@alderia.com>
+
+	* src/wget-log.c: Set the correct local filename in recursive mode so
+	the porcentage columns works.
+
 2005-06-06  Maxim Dziumanenko <mvd@mylinux.ua>
 
 	* configure.in: Added "uk" to ALL_LINGUAS.
 
+2005-06-04  David Sedeño <david@alderia.com>
+
+	Patch from Mike Castle to fix bug #306332
+	* epiphany-extension/Makefile.am: search in srcdir instead of topdir.
+	* src/Makefile.am: search in srcdir instead of topdir.
+	* src/gwget-application-server.h: remove src/ for include
+	GNOME_Gwget.h
+	
 2005-06-02  David Sedeño <david@alderia.com>
 
 	* data/preferencies.glade: Limit the max speed spin button to 1000
