@@ -1,373 +1,483 @@
-# translation of eu.po to 
+# translation of gwget.HEAD.eu.po to 
+# translation of eu.po to
 # translation of gwget.HEAD.eu.po to
 # translation of eu.po to Basque
 # Basque translation of gwget2.
 # Copyright (C) 2004 Mikel Olasagasti
 # This file is distributed under the same license as the gwget2 package.
 # Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004, 2005.
+#
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
+"Project-Id-Version: gwget.HEAD.eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-13 22:57+0100\n"
-"PO-Revision-Date: 2004-12-13 22:59+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"POT-Creation-Date: 2005-07-06 18:59+0200\n"
+"PO-Revision-Date: 2005-07-06 18:58+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team:  <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: data/GNOME_Gwget.server.in.in.h:1
+#: ../data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
 msgstr "gwget aplikazioa"
 
-#: data/GNOME_Gwget.server.in.in.h:2
+#: ../data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
 msgstr "gwget automatizazio fabrika"
 
-#: data/about.glade.h:1
+#: ../data/about.glade.h:1
 msgid "About Gwget"
 msgstr "Gwget-i buruz"
 
-#: data/about.glade.h:2
+#: ../data/about.glade.h:2
 msgid "GNU GPL Version 2"
 msgstr "GNU GPLren 2. bertsioa"
 
-#: data/about.glade.h:3
-msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget: deskarga-kudeatzaile bat Gnome 2-rako"
+#: ../data/about.glade.h:3
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Gwget: deskarga-kudeatzaile bat GNOMErako"
 
-#: data/about.glade.h:4
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:182
 msgid "translator-credits"
 msgstr ""
 "Mikel Olasagasti <hey_neken@mundurat.net>\n"
 "Iñaki Larrañaga <dooteo@euskalgnu.org>"
 
-#: data/gwget.glade.h:1 data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
-#: data/gwget.glade.h:2
+#: ../data/gwget.glade.h:2
 msgid "<span weight=\"bold\">Download:</span>"
 msgstr "<span weight=\"bold\">Deskarga:</span>"
 
-#: data/gwget.glade.h:3
+#: ../data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">Propietateak</span>"
 
-#: data/gwget.glade.h:4
+#: ../data/gwget.glade.h:4
 msgid "Cancel"
 msgstr "Utzi"
 
-#: data/gwget.glade.h:5
+#: ../data/gwget.glade.h:5
 msgid "Continue"
 msgstr "Jarraitu"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
-#: src/main_window_cb.c:662
+#: ../data/gwget.glade.h:6 ../src/main_window_cb.c:129
+#: ../src/main_window_cb.c:578 ../src/main_window_cb.c:675
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Deskarga-kudeatzailea"
 
-#: data/gwget.glade.h:7
+#: ../data/gwget.glade.h:7
 msgid "Information"
 msgstr "Informazioa"
 
-#: data/gwget.glade.h:8
-msgid "Local Directory: "
-msgstr "Direktorio lokala: "
+#: ../data/gwget.glade.h:8
+msgid "Local Directory:"
+msgstr "Direktorio lokala:"
 
-#: data/gwget.glade.h:9
-msgid "Local File: "
-msgstr "Fitxategi lokala: "
+#: ../data/gwget.glade.h:9
+msgid "Local File:"
+msgstr "Fitxategi lokala:"
 
-#: data/gwget.glade.h:10
+#: ../data/gwget.glade.h:10
 msgid "Multimedia files (Videos and images)"
-msgstr "Multimedia fitxategiak (bideo eta irudiak)"
+msgstr "Multimedia fitxategiak (bideoak eta irudiak)"
 
-#: data/gwget.glade.h:11
+#: ../data/gwget.glade.h:11
 msgid "New download"
 msgstr "Deskarga berria"
 
-#: data/gwget.glade.h:12
+#: ../data/gwget.glade.h:12
 msgid "Pause"
 msgstr "Pausatu"
 
-#: data/gwget.glade.h:13
+#: ../data/gwget.glade.h:13
 msgid "Pause all"
 msgstr "Pausatu guztiak"
 
-#: data/gwget.glade.h:14
+#: ../data/gwget.glade.h:14
 msgid "Pause all downloads"
 msgstr "Pausatu deskarga guztiak"
 
-#: data/gwget.glade.h:15
+#: ../data/gwget.glade.h:15
 msgid "Pause download"
 msgstr "Pausatu deskarga"
 
-#: data/gwget.glade.h:16
+#: ../data/gwget.glade.h:16
 msgid "Properties"
 msgstr "Propietateak"
 
-#: data/gwget.glade.h:17
+#: ../data/gwget.glade.h:17
 msgid "Question"
 msgstr "Galdera"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:31
+#: ../data/gwget.glade.h:18 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Errekurtsiboa"
 
-#: data/gwget.glade.h:19
+#: ../data/gwget.glade.h:19
 msgid "Recursive options"
 msgstr "Errekurtsibitate aukerak"
 
-#: data/gwget.glade.h:20
+#: ../data/gwget.glade.h:20
 msgid "Remove"
 msgstr "Kendu"
 
-#: data/gwget.glade.h:21 src/main_window_cb.c:645
+#: ../data/gwget.glade.h:21 ../src/main_window_cb.c:657
 msgid "Remove all"
 msgstr "Kendu guztiak"
 
-#: data/gwget.glade.h:22
+#: ../data/gwget.glade.h:22
 msgid "Remove all downloads from list"
 msgstr "Kendu deskarga guztiak zerrendatik"
 
-#: data/gwget.glade.h:23 src/main_window_cb.c:587
+#: ../data/gwget.glade.h:23 ../src/main_window_cb.c:599
 msgid "Remove completed"
 msgstr "Kendu burututakoak"
 
-#: data/gwget.glade.h:24
+#: ../data/gwget.glade.h:24
 msgid "Remove completed downloads from list"
 msgstr "Kendu burututako deskargak zerrendatik"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:616
+#: ../data/gwget.glade.h:25 ../src/main_window_cb.c:628
 msgid "Remove inactive"
 msgstr "Kendu aktibitaterik gabekoak"
 
-#: data/gwget.glade.h:26
+#: ../data/gwget.glade.h:26
 msgid "Remove inactive downloads from list"
 msgstr "Kendu aktibitaterik gabeko deskargak zerrendatik"
 
-#: data/gwget.glade.h:27
+#: ../data/gwget.glade.h:27
 msgid "Resume all"
 msgstr "Jarraitu guztiekin"
 
-#: data/gwget.glade.h:28
+#: ../data/gwget.glade.h:28
 msgid "Resume all downloads"
 msgstr "Jarraitu deskarga guztiekin"
 
-#: data/gwget.glade.h:29
+#: ../data/gwget.glade.h:29
 msgid "Stop and delete downloaded file"
 msgstr "Gelditu eta ezabatu deskargatutako fitxategia"
 
-#: data/gwget.glade.h:30
+#: ../data/gwget.glade.h:30
 msgid "The index file only"
-msgstr "Index fitxategia soilik"
+msgstr "Indize fitxategia soilik"
 
-#: data/gwget.glade.h:31
+#: ../data/gwget.glade.h:31
 msgid "This site (mirror)"
 msgstr "Gune hau (ispilua)"
 
-#: data/gwget.glade.h:32
-msgid "Url:"
+#: ../data/gwget.glade.h:32 ../data/newdownload.glade.h:4
+msgid "URL:"
 msgstr "URLa:"
 
-#: data/gwget.glade.h:33
+#: ../data/gwget.glade.h:33
 msgid "_New"
 msgstr "_Berria"
 
-#: data/gwget.glade.h:34
+#: ../data/gwget.glade.h:34
 msgid "_Toolbar"
 msgstr "_Tresna-barra"
 
-#: data/newdownload.glade.h:1
-msgid "*"
-msgstr "*"
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask save in for each new download"
+msgstr "Galdetu non gorde deskarga bakoitzean"
 
-#: data/newdownload.glade.h:2
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "Bihurtu estekak"
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "Bihurtu esteka erlatiboak modu errekurtsiboan."
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Lehenetsitako deskarga-direktorioa"
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "Deskargatu orriaren nahitaezkoak"
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "Jarraitu esteka erlatiboak"
+
+#: ../data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Egia bada, deskarga berri bakoitzean galdetu non gorde. Gezurra bada, gorde "
+"beti lehenetsitako direktorioan erabiltzaileari galdetu gabe."
+
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Mugatu gehiengo deskarga-abiadura"
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Mugatu uneko deskarga kopurua"
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr "Sakonera maila handiena modu errekurtsiboan"
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "Gehienezko uneko deskarga kopurua"
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr "Gehiengo deskarga-abiadura"
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr "Deskarga kopurua"
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr "Saiakera kopurua"
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr "Ireki automatikoki fitxategiak deskargatu ostean"
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Resume downloads at startup"
+msgstr "Jarraitu deskargatzen abiatzean"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr "Ikusi deskarga-abiaduraren zutabea"
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr "Ikusi igarotako denboraren zutabea"
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr "Ikusi ehunekoaren zutabea"
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr "Ikusi falta den denboraren zutabea"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View toolbar"
+msgstr "Ikusi tresna-barra"
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View total size column"
+msgstr "Ikusi tamaina guztiaren zutabea"
+
+#: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Deskarga berria</span>"
 
-#: data/newdownload.glade.h:3
+#: ../data/newdownload.glade.h:2
 msgid "New Download"
 msgstr "Deskarga berria"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+#: ../data/newdownload.glade.h:3
 msgid "Save in:"
 msgstr "Gorde hemen:"
 
-#: data/newdownload.glade.h:5
-msgid "URL: "
-msgstr "URLa: "
-
-#: data/preferences.glade.h:1
+#: ../data/preferences.glade.h:1
 msgid "   "
 msgstr "   "
 
-#: data/preferences.glade.h:3
-msgid "  kB/sec"
-msgstr "  kB/seg"
-
-#: data/preferences.glade.h:4
-msgid "<b>General</b>"
-msgstr "<b>Orokorra</b>"
-
-#: data/preferences.glade.h:5
+#: ../data/preferences.glade.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Portaera</span>"
 
-#: data/preferences.glade.h:6
+#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Zutabe zerrenda</span>"
 
-#: data/preferences.glade.h:7
+#: ../data/preferences.glade.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Orokorra</span>"
+
+#: ../data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Estekak</span>"
 
-#: data/preferences.glade.h:8
+#: ../data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Proxy konfigurazioa</span>"
 
-#: data/preferences.glade.h:9
+#: ../data/preferences.glade.h:8
 msgid "Column List"
 msgstr "Zutabe zerrenda"
 
-#: data/preferences.glade.h:10
-msgid "Continue downloads on startup"
-msgstr "Jarraitu deskargatzen abiatzean"
+#: ../data/preferences.glade.h:9
+msgid "Default _GNOME network settings"
+msgstr "Lehenetsitako _GNOMEren sareko ezarpenak"
 
-#: data/preferences.glade.h:11
-msgid "Convert links"
-msgstr "Bihurtu estekak"
+#: ../data/preferences.glade.h:10
+msgid "Direct _Internet connection"
+msgstr "Zuzeneko _internet konexioa"
 
-#: data/preferences.glade.h:12 src/main_window.c:284
-msgid "Current Size"
-msgstr "Uneko tamaina"
+#: ../data/preferences.glade.h:11
+msgid "Do_wnload Speed"
+msgstr "D_eskargaren abiadura"
 
-#: data/preferences.glade.h:13
-msgid "Default GNOME network settings"
-msgstr "Lehenetsitako GNOMEren sareko ezarpenak"
+#: ../data/preferences.glade.h:12
+msgid "Don't _create directories"
+msgstr "E_z sortu direktorio berriak"
 
-#: data/preferences.glade.h:14
-msgid "Direct Internet connection"
-msgstr "Zuzeneko internet konexioa"
+#: ../data/preferences.glade.h:13
+msgid "Follow _relative links only"
+msgstr "Ja_rraitu esteka erlatiboei soilik"
 
-#: data/preferences.glade.h:15
-msgid "Don't create directories"
-msgstr "Ez sortu direktorio berriak"
-
-#: data/preferences.glade.h:16
-msgid "Download Speed"
-msgstr "Deskargaren abiadura"
-
-#: data/preferences.glade.h:17
-msgid "Download page requisites"
-msgstr "Deskargatu orriaren nahitaezkoak"
-
-#: data/preferences.glade.h:18 src/main_window.c:316
-msgid "Elapsed Time"
-msgstr "Igarotako denbora"
-
-#: data/preferences.glade.h:19
-msgid "Follow relative links only"
-msgstr "Jarraitu esteka erlatiboei soilik"
-
-#: data/preferences.glade.h:20
+#: ../data/preferences.glade.h:14
 msgid "General"
 msgstr "Orokorra"
 
-#: data/preferences.glade.h:21
-msgid "Limit download speed to: "
-msgstr "Mugatu deskargaren abiadura: "
+#: ../data/preferences.glade.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr "Mugatu u_ne bakotizeko deskarga kopurua:"
 
-#: data/preferences.glade.h:22
-msgid "Manual proxy configuration"
-msgstr "Eskuzko proxy konfigurazioa"
-
-#: data/preferences.glade.h:23
-msgid "Maximum depth level: "
-msgstr "Sakonera maila handiena: "
-
-#: data/preferences.glade.h:24
+#: ../data/preferences.glade.h:16
 msgid "Network"
 msgstr "Sarea"
 
-#: data/preferences.glade.h:25
-msgid "Number of retries:"
-msgstr "Saiakera kopurua:"
+#: ../data/preferences.glade.h:17
+msgid "P_ort:"
+msgstr "A_taka:"
 
-#: data/preferences.glade.h:26
-msgid "Open files automatically after download"
-msgstr "Ireki automatikoki fitxategiak deskargatu ostean"
-
-#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
-msgid "Percentage"
-msgstr "Ehunekoa"
-
-#: data/preferences.glade.h:28
-msgid "Port:"
-msgstr "Ataka:"
-
-#: data/preferences.glade.h:29
+#: ../data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "Hobespenak"
 
-#: data/preferences.glade.h:30
-msgid "Proxy:"
-msgstr "Proxy-a:"
+#: ../data/preferences.glade.h:19
+msgid "Pro_xy:"
+msgstr "Pro_xy-a:"
 
-#: data/preferences.glade.h:32 src/main_window.c:326
-msgid "Remaining Time"
-msgstr "Geratzen den denbora"
+#: ../data/preferences.glade.h:21
+msgid "Remaining _Time"
+msgstr "_Geratzen den denbora"
 
-#: data/preferences.glade.h:34 src/main_window.c:295
-msgid "Total Size"
-msgstr "Tamaina osoa"
+#: ../data/preferences.glade.h:22
+msgid "Sa_ve in:"
+msgstr "G_orde hemen:"
 
-#: src/custom-cell-renderer-progressbar.c:36
+#: ../data/preferences.glade.h:23
+msgid "Total _Size"
+msgstr "Tamaina o_soa"
+
+#: ../data/preferences.glade.h:24
+msgid "_Ask where to save for each download"
+msgstr "_Galdetu non gorde deskarga bakoitzean"
+
+#: ../data/preferences.glade.h:25
+msgid "_Continue downloads on startup"
+msgstr "J_arraitu deskargatzen abiatzean"
+
+#: ../data/preferences.glade.h:26
+msgid "_Convert links"
+msgstr "_Bihurtu estekak"
+
+#: ../data/preferences.glade.h:27
+msgid "_Current Size"
+msgstr "_Uneko tamaina"
+
+#: ../data/preferences.glade.h:28
+msgid "_Download page requisites"
+msgstr "_Deskargatu orriaren nahitaezkoak"
+
+#: ../data/preferences.glade.h:29
+msgid "_Elapsed Time"
+msgstr "_Igarotako denbora"
+
+#: ../data/preferences.glade.h:30
+msgid "_Limit download speed to:"
+msgstr "_Mugatu deskargaren abiadura:"
+
+#: ../data/preferences.glade.h:31
+msgid "_Manual proxy configuration"
+msgstr "_Eskuzko proxy konfigurazioa"
+
+#: ../data/preferences.glade.h:32
+msgid "_Maximum depth level:"
+msgstr "Sakonera _maila handiena:"
+
+#: ../data/preferences.glade.h:33
+msgid "_Number of retries:"
+msgstr "_Saiakera kopurua:"
+
+#: ../data/preferences.glade.h:34
+msgid "_Open files automatically after download"
+msgstr "_Ireki automatikoki fitxategiak deskargatu ostean"
+
+#: ../data/preferences.glade.h:35
+msgid "_Percentage"
+msgstr "_Ehunekoa"
+
+#: ../data/preferences.glade.h:36
+msgid "files"
+msgstr "fitxategiak"
+
+#: ../data/preferences.glade.h:37
+msgid "kB/sec"
+msgstr "kB/seg"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Bidali deskargak GWGet-era"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: src/custom-cell-renderer-progressbar.c:99
+#: ../src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
 msgstr "Huts egin du"
 
-#: src/gwget_data.c:177
+#: ../src/gwget_data.c:187
 msgid "stalled"
 msgstr "trabatuta"
 
-#: src/gwget_data.c:210
+#: ../src/gwget_data.c:221
 msgid "Waiting"
 msgstr "Itxoiten"
 
-#: src/gwget_data.c:212
+#: ../src/gwget_data.c:223
 msgid "Not Started"
 msgstr "Hasi gabe"
 
-#: src/gwget_data.c:214
+#: ../src/gwget_data.c:225
 msgid "Not Running"
 msgstr "Geldirik"
 
-#: src/gwget_data.c:216
+#: ../src/gwget_data.c:227
 msgid "Not Connected"
 msgstr "Konektatu gabe"
 
-#: src/gwget_data.c:218
+#: ../src/gwget_data.c:229
 msgid "Connected"
 msgstr "Konektatua"
 
-#: src/gwget_data.c:220
+#: ../src/gwget_data.c:231
 msgid "Retrieving"
 msgstr "Eskuratzen"
 
-#: src/gwget_data.c:222
+#: ../src/gwget_data.c:233
 msgid "Completed"
 msgstr "Burutua"
 
-#: src/gwget_data.c:226
+#: ../src/gwget_data.c:237
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -376,43 +486,71 @@ msgstr ""
 "Deskarga burutua\n"
 "(%s)"
 
-#: src/gwget_data.c:233
+#: ../src/gwget_data.c:245
 msgid "Error"
 msgstr "Errorea"
 
-#: src/gwget_data.c:611
+#: ../src/gwget_data.c:667
 msgid "Unable to add this download"
-msgstr "Ezin da hau geitu jeisteko"
+msgstr "Ezin da deskarga hau geitu"
 
-#: src/gwget_data.c:611
+#: ../src/gwget_data.c:668
 msgid "This download is already added"
 msgstr "Deskarga hau dagoeneko jarrita dago"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: ../src/gwget_data.c:716 ../src/main_window_cb.c:99
 msgid "Error opening file"
 msgstr "Errorea fitxategia irekitzean"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: ../src/gwget_data.c:716 ../src/main_window_cb.c:99
 msgid "Couldn't open the file"
 msgstr "Ezin izan da fitxategia ireki"
 
-#: src/main_window.c:266
+#: ../src/main_window.c:370
 msgid "File Name"
 msgstr "Fitxategiaren izena"
 
-#: src/main_window.c:273
+#: ../src/main_window.c:377
 msgid "State"
 msgstr "Egoera"
 
-#: src/main_window.c:336
+#: ../src/main_window.c:388
+msgid "Current Size"
+msgstr "Uneko tamaina"
+
+#: ../src/main_window.c:399
+msgid "Total Size"
+msgstr "Tamaina osoa"
+
+#: ../src/main_window.c:409 ../src/main_window.c:415
+msgid "Percentage"
+msgstr "Ehunekoa"
+
+#: ../src/main_window.c:420
+msgid "Elapsed Time"
+msgstr "Igarotako denbora"
+
+#: ../src/main_window.c:430
+msgid "Remaining Time"
+msgstr "Geratzen den denbora"
+
+#: ../src/main_window.c:440
 msgid "Speed"
 msgstr "Abiadura"
 
-#: src/main_window.c:560
+#: ../src/main_window.c:486
+msgid "Error starting the download"
+msgstr "Errorea deskarga abiarazten"
+
+#: ../src/main_window.c:486
+msgid "There was an unexpected error starting the download"
+msgstr "Espero ez zen errore bat gertatu da deskarga abiaraztean"
+
+#: ../src/main_window.c:720
 msgid "Cancel current downloads?"
 msgstr "Bertan behera utzi uneko deskargak?"
 
-#: src/main_window.c:560
+#: ../src/main_window.c:721
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -420,104 +558,98 @@ msgstr ""
 "Gutxienez fitxategi bat deskargatzen ari da. Deskargatzen ari diren "
 "transfrentzia guztiak bertan behera uztea nahi duzu?"
 
-#: src/main_window_cb.c:94
+#: ../src/main_window_cb.c:94
 msgid "Error in download"
 msgstr "Errorea deskargatzean"
 
-#: src/main_window_cb.c:167
-msgid "Download Manager for Gnome2."
-msgstr "Deskarga-kudeatzaile bat Gnome2-rako."
-
-#: src/main_window_cb.c:174
-msgid "translator_credits"
-msgstr ""
-"Mikel Olasagasti <hey_neken@mundurat.net>\n"
-"Iñaki Larrañaga <dooteo@euskalgnu.org>"
-
-#: src/main_window_cb.c:186
+#: ../src/main_window_cb.c:177
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:140
+#: ../src/main_window_cb.c:180
+msgid "Download Manager for GNOME."
+msgstr "Deskarga-kudeatzaile bat GNOMErako."
+
+#: ../src/main_window_cb.c:514 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "Hautatu karpeta"
 
-#: src/main_window_cb.c:558
+#: ../src/main_window_cb.c:570
 #, c-format
 msgid ""
 "Really cancel current download?\n"
-"(Url: %s)"
+"(URL: %s)"
 msgstr ""
 "Uneko deskarga bertan behera utzi?\n"
 "(URLa: %s)"
 
-#: src/main_window_cb.c:559
+#: ../src/main_window_cb.c:571
 msgid "Cancel download?"
 msgstr "Utzi deskarga?"
 
-#: src/main_window_cb.c:587
+#: ../src/main_window_cb.c:599
 msgid "Really remove completed downloads from the list?"
 msgstr "Burututakoak zerrendatik kentzea nahi duzu?"
 
-#: src/main_window_cb.c:616
+#: ../src/main_window_cb.c:628
 msgid "Really remove inactive downloads from the list?"
 msgstr "Aktibitaterik gabeko deskarga guztiak zerrendatik kentzea nahi duzu?"
 
-#: src/main_window_cb.c:645
+#: ../src/main_window_cb.c:657
 msgid "Really remove all downloads from the list?"
 msgstr "Deskarga guztiak zerrendatik kentzea nahi duzu?"
 
-#: src/systray.c:135
+#: ../src/systray.c:152
 msgid "Nothing"
 msgstr "Ezer ez"
 
-#: src/systray.c:142
+#: ../src/systray.c:159
 msgid "Downloads"
 msgstr "Deskargak"
 
-#: src/wget-log.c:83
+#: ../src/wget-log.c:118
 msgid "Socket error"
 msgstr "Socket errorea"
 
-#: src/wget-log.c:85
+#: ../src/wget-log.c:120
 msgid "Connection refused\n"
 msgstr "Konexioa ukatua\n"
 
-#: src/wget-log.c:87
+#: ../src/wget-log.c:122
 msgid "No route to host"
 msgstr "Ez dago ate-biderik ostalariarentzat"
 
-#: src/wget-log.c:89
+#: ../src/wget-log.c:124
 msgid "Connection refused when downloading URL:\n"
 msgstr "Konexioa ukatua URLa deskargatzean:\n"
 
-#: src/wget-log.c:91
+#: ../src/wget-log.c:126
 msgid "Host not found\n"
 msgstr "Ez da ostalaria aurkitu\n"
 
-#: src/wget-log.c:93
+#: ../src/wget-log.c:128
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
+msgstr ""
+"Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
 
-#: src/wget-log.c:96
+#: ../src/wget-log.c:131
 msgid "Refusing to truncate existing file"
 msgstr "Fitxategia mozteari uko egiten"
 
-#: src/wget-log.c:98
+#: ../src/wget-log.c:133
 msgid "Unknown error"
 msgstr "Errore ezezaguna"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: ../src/wget-log.c:144 ../src/wget-log.c:150
 msgid "File not found"
 msgstr "Ez da fitxategia aurkitu"
 
-#: src/wget-log.c:122
+#: ../src/wget-log.c:157
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Ezin da deskargatzen jarraitu, fitxategi lokal batek urrunekoarekin gatazkak "
 "ditu"
 
-#: src/wget-log.c:180
+#: ../src/wget-log.c:216
 msgid "Can't write to target directory"
 msgstr "Ezin da helburuko direktorioan idatzi"
-
