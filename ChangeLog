@@ -1,3 +1,15 @@
+2005-07-22  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c: Open the parent folder if the download is
+	recursive when double click. 
+	(on_view_statusbar_activate): New func to hide or show the statusbar.
+	* include/main_window_cb.h: on_view_statusbar_activate.	
+	* src/main_window.c: Set the state of statusbar at startup.
+	* include/gwget_data.h: Add view_statusbar to preferences struct.
+	* data/gwget.glade: Remove progressbar from status bar. Add view
+	statusbar option to view menu.
+	* data/gwget.schemas.in: Add view_statusbar bool key.
+
 2005-06-24  David Sedeño <david@alderia.com>
 
 	* src/wget-log.c: Set the correct local filename in recursive mode so

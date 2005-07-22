@@ -44,6 +44,7 @@ typedef struct
 	gboolean view_rem_time;
 	gboolean view_down_speed;
 	gboolean view_toolbar;
+	gboolean view_statusbar;
 	gboolean view_file_type;
 	gboolean docked;
 	gboolean limit_speed;

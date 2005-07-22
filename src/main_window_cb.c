@@ -93,8 +93,12 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 			if (gwgetdata->error) {
 				run_dialog(_("Error in download"),gwgetdata->error_msg);
 			} else {
-				uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
+				if (gwgetdata->recursive) {
+					uri = gnome_vfs_make_uri_from_input(gwgetdata->dir);
+				} else {
+					uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
                                                  GNOME_VFS_MAKE_URI_DIR_CURRENT);
+				}
 				if (!gnome_url_show (uri, &err)) {
 					run_dialog(_("Error opening file"),_("Couldn't open the file"));
 					return FALSE;
@@ -694,6 +698,25 @@ on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}		
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_toolbar",state,NULL);
+}
+
+void
+on_view_statusbar_activate(GtkWidget *widget, gpointer data)
+{
+	GtkWidget *statusbar, *menu_item;
+	gboolean state;
+
+	statusbar = glade_xml_get_widget (GLADE_XML(xml), "statusbar");
+	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_statusbar");
+	state = gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(menu_item));
+	
+	if (!state) 
+	{
+		gtk_widget_hide(GTK_WIDGET(statusbar));
+	} else {
+		gtk_widget_show(GTK_WIDGET(statusbar));
+	}
+	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_statusbar",state,NULL);
 }
 
 void 

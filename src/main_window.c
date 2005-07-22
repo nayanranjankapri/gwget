@@ -153,6 +153,17 @@ main_window(void)
 		gtk_widget_show(GTK_WIDGET(toolbar));
 	}
 
+	/* Show the statusbar ? */
+	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_statusbar")), gwget_pref.view_statusbar);
+	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_statusbar");
+	if (gwget_pref.view_statusbar)
+	{
+		gtk_widget_show (GTK_WIDGET(glade_xml_get_widget(xml, "statusbar")));
+	} else {
+		gtk_widget_hide (GTK_WIDGET(glade_xml_get_widget(xml, "statusbar")));
+	}
+		
+
 	
 	systray_load();
 
@@ -204,6 +215,7 @@ gwget_get_defaults_from_gconf(void)
 	gwget_pref.view_elapse_time=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_elapse_time",NULL);
 	gwget_pref.view_down_speed=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_down_speed",NULL);
 	gwget_pref.view_toolbar=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_toolbar",NULL);
+	gwget_pref.view_statusbar=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_statusbar",NULL);
 	gwget_pref.view_file_type=gconf_client_get_bool(gconf_client,"/apps/gwget2/view_file_type",NULL);
 	gwget_pref.limit_speed = gconf_client_get_bool (gconf_client,"/apps/gwget2/limit_speed", NULL);
 	gwget_pref.max_speed=gconf_client_get_int(gconf_client,"/apps/gwget2/max_speed",NULL);

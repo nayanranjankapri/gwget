@@ -298,7 +298,19 @@
 	 <default>true</default>
 	 <locale name="C">
 	   <short>View toolbar</short>
-	   <long></long>
+	   <long>Whether to display the toolbar.</long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/view_statusbar</key>
+	 <applyto>/apps/gwget2/view_statusbar</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View statusbar</short>
+	   <long>Whether to display the statusbar.</long>
 	 </locale>
 	</schema>
 	
