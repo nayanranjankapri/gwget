@@ -1,5 +1,9 @@
 2005-07-23  David Sedeño <david@alderia.com>
 
+	* src/gwget_data.c: Set ftp_proxy env var when use gnome proxy.
+
+2005-07-23  David Sedeño <david@alderia.com>
+
 	Add a download menu to the top menu bar:
 	* data/gwget.glade: Added a Download menu for the options of the
 	current selected download.
