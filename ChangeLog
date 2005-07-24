@@ -1,3 +1,18 @@
+2005-07-23  David Sedeño <david@alderia.com>
+
+	Add a download menu to the top menu bar:
+	* data/gwget.glade: Added a Download menu for the options of the
+	current selected download.
+	* include/gwget_data.h, src/gwget_data.c (gwget_data_set_menus):
+	Function to set the correct state of the menu items in the menubar and
+	in the popup.
+	* src/main_window.c (view_selection_func): Callback for when a
+	download it's selected to set the correct state of the menus.
+	* src/main_window_cb.c: Use gwget_data_set_menus when activate the
+	popup. 
+	(on_download_menu_activate): Update the menus when the download menu 
+	it's activate.
+
 2005-07-22  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c: Open the parent folder if the download is

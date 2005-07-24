@@ -74,5 +74,6 @@ void new_download(GwgetData* gwgetdata);
 void check_download_in_progress(void);
 void start_first_waiting_download(void);
 gint count_download_in_progress(void);
+void on_download_menu_activate(void);
 
 #endif

@@ -60,21 +60,7 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 	if (event->type == GDK_BUTTON_PRESS) {
 		event_button = (GdkEventButton *) event;
 		if (event->button==3 && gtk_tree_selection_get_selected (select, &model, &iter)) {
-			gwgetdata=gwget_data_get_selected();
-			if (gwget_data_run(gwgetdata)) {
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),TRUE);
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),TRUE);
-			} else {
-				if (gwgetdata->state==DL_COMPLETED) {
-					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
-					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
-					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),FALSE);
-				} else {
-					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),TRUE);
-					gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
-				}
-			}
+			gwget_data_set_menus(gwget_data_get_selected());
 			popup=glade_xml_get_widget(xml,"popup1");
 			gtk_menu_popup (GTK_MENU(popup), NULL, NULL, NULL, NULL, 
 							event_button->button, event_button->time);
@@ -959,3 +945,10 @@ gint count_download_in_progress(void) {
 	}
 	return number;
 }
+
+void
+on_download_menu_activate(void) 
+{
+	gwget_data_set_menus (gwget_data_get_selected());
+}
+	

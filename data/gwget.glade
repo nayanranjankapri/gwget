@@ -95,6 +95,107 @@
 	      </child>
 
 	      <child>
+		<widget class="GtkMenuItem" id="download1">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">_Download</property>
+		  <property name="use_underline">True</property>
+		  <signal name="activate" handler="on_download_menu_activate" last_modification_time="Sun, 24 Jul 2005 11:20:19 GMT"/>
+
+		  <child>
+		    <widget class="GtkMenu" id="download1_menu">
+
+		      <child>
+			<widget class="GtkMenuItem" id="pause_menuitem">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Pause</property>
+			  <property name="use_underline">True</property>
+			  <signal name="activate" handler="on_popup_pause_button_clicked" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkMenuItem" id="continue_menuitem">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Continue</property>
+			  <property name="use_underline">True</property>
+			  <signal name="activate" handler="on_popup_continue_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkMenuItem" id="cancel_menuitem">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Cancel</property>
+			  <property name="use_underline">True</property>
+			  <signal name="activate" handler="on_cancel_download_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkSeparatorMenuItem" id="separador4">
+			  <property name="visible">True</property>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkMenuItem" id="remove2">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Remove from List</property>
+			  <property name="use_underline">True</property>
+
+			  <child>
+			    <widget class="GtkMenu" id="remove2_menu">
+
+			      <child>
+				<widget class="GtkMenuItem" id="remove_completed1">
+				  <property name="visible">True</property>
+				  <property name="label" translatable="yes">Remove completed</property>
+				  <property name="use_underline">True</property>
+				  <signal name="activate" handler="on_remove_completed_activate" last_modification_time="Sun, 24 Jul 2005 11:00:04 GMT"/>
+				</widget>
+			      </child>
+
+			      <child>
+				<widget class="GtkMenuItem" id="remove_inactive1">
+				  <property name="visible">True</property>
+				  <property name="label" translatable="yes">Remove inactive</property>
+				  <property name="use_underline">True</property>
+				  <signal name="activate" handler="on_remove_notrunning_activate" last_modification_time="Sun, 24 Jul 2005 11:00:25 GMT"/>
+				</widget>
+			      </child>
+
+			      <child>
+				<widget class="GtkMenuItem" id="remove_all1">
+				  <property name="visible">True</property>
+				  <property name="label" translatable="yes">Remove all</property>
+				  <property name="use_underline">True</property>
+				  <signal name="activate" handler="on_remove_all_activate" last_modification_time="Sun, 24 Jul 2005 11:00:25 GMT"/>
+				</widget>
+			      </child>
+			    </widget>
+			  </child>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkSeparatorMenuItem" id="separador3">
+			  <property name="visible">True</property>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkImageMenuItem" id="propiedades1">
+			  <property name="visible">True</property>
+			  <property name="stock_item">GNOMEUIINFO_MENU_PROPERTIES_ITEM</property>
+			  <signal name="activate" handler="on_properties_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
+			</widget>
+		      </child>
+		    </widget>
+		  </child>
+		</widget>
+	      </child>
+
+	      <child>
 		<widget class="GtkMenuItem" id="ver">
 		  <property name="visible">True</property>
 		  <property name="stock_item">GNOMEUIINFO_MENU_VIEW_TREE</property>

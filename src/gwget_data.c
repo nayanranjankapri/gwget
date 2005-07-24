@@ -756,3 +756,33 @@ gwget_gnotify_finished(GwgetData *gwgetdata) {
    g_free(fn_msg);
 	g_free(gwgetdata->icon_name);
 }
+
+void
+gwget_data_set_menus (GwgetData *gwgetdata)
+{
+	
+	if (gwget_data_run(gwgetdata)) {
+		/* Menu items */
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),TRUE);
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),FALSE);
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_menuitem"),TRUE);
+		/* popup */
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),TRUE);
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),TRUE);
+	} else {
+		if (gwgetdata->state==DL_COMPLETED) {
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),FALSE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),FALSE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_menuitem"),FALSE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),FALSE);
+		} else {
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),TRUE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),FALSE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),TRUE);
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
+		}
+	}
+}

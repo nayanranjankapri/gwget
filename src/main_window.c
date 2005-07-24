@@ -46,6 +46,13 @@ gwget_gconf_notify_toolbar(GConfClient *client,
 		   	   GConfEntry  *entry,
 		   	   gpointer     user_data);
 
+static gboolean
+view_selection_func (GtkTreeSelection *selection,
+                        GtkTreeModel     *model,
+                        GtkTreePath      *path,
+                        gboolean          path_currently_selected,
+                        gpointer          userdata);
+
 void 
 main_window(void) 
 {
@@ -75,6 +82,8 @@ main_window(void)
 	gtk_tree_view_set_model(GTK_TREE_VIEW(treev),GTK_TREE_MODEL(model));
 	select = gtk_tree_view_get_selection (GTK_TREE_VIEW (treev));
 	gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
+	/* Set a callback when a selection is made for update the menu Download */
+	gtk_tree_selection_set_select_function(select, view_selection_func, NULL, NULL);
 
 	/*
 	 * Update window size in gconf on resize 
@@ -86,7 +95,7 @@ main_window(void)
 	
 	/* add the columns titles to the tree view */
 	add_columns (GTK_TREE_VIEW (treev));
-	
+
 	gconf_client = gconf_client_get_default();
 	gconf_client_add_dir (gconf_client, 
 			      "/apps/gwget2", 
@@ -175,6 +184,37 @@ main_window(void)
 	gtk_entry_set_text(GTK_ENTRY(GTK_BIN(combo)->child), gwget_pref.download_dir);
 		
 }
+
+static 
+gboolean view_selection_func (GtkTreeSelection *selection,
+			GtkTreeModel     *model,
+			GtkTreePath      *path,
+			gboolean          path_currently_selected,
+			gpointer          userdata)
+{
+	GtkTreeIter iter;
+
+	g_return_val_if_fail(gwget_data_get_selected()!=NULL, TRUE);
+
+	if (gtk_tree_model_get_iter(model, &iter, path))
+	{
+		gchar *name;
+
+		gtk_tree_model_get(model, &iter, FILENAME_COLUMN, &name, -1);
+
+		if (!path_currently_selected)
+		{
+			printf("Paf\n");
+			gwget_data_set_menus (gwget_data_get_selected());
+		}
+		g_free(name);
+	}
+
+	return TRUE; /* allow selection state to change */
+}
+
+
+
 
 static gboolean
 gwget_destination_file_exists(GwgetData *data)
