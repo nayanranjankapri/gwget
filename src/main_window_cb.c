@@ -30,6 +30,8 @@
 #include "utils.h"
 #include "systray.h"
 
+static void inform_limit_speed_change(void);
+
 void 
 on_stop_button_clicked (GtkWidget *widget, gpointer data) 
 {
@@ -424,10 +426,18 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	
 	/* Limit Speed */
 	limit_speed_check = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_check");
+	limit_speed_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_spin");
+
+	if ( (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)) &&
+	    (gwget_pref.max_speed!=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)))) ||
+	    ( gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)) && 
+	      gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check))!=gwget_pref.limit_speed))
+	{
+		inform_limit_speed_change();
+	}	
 	gwget_pref.limit_speed = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/limit_speed",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)),NULL);
-	limit_speed_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_spin");
 	gwget_pref.max_speed = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin));
 	gconf_client_set_int(gconf_client,"/apps/gwget2/max_speed",
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)),NULL);
@@ -951,4 +961,17 @@ on_download_menu_activate(void)
 {
 	gwget_data_set_menus (gwget_data_get_selected());
 }
-	
+
+static
+void inform_limit_speed_change(void)
+{
+	GtkWidget *dialog;
+
+	dialog = gtk_message_dialog_new (NULL,
+					GTK_DIALOG_MODAL,
+					GTK_MESSAGE_INFO,
+					GTK_BUTTONS_OK,
+					_("The speed limit only affects to new downloads."));
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	gtk_widget_destroy (dialog);
+}
