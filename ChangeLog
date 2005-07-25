@@ -1,7 +1,8 @@
 2005-07-25  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c: Informs the user that the limit speed
-	preference only apply to newer downloads. 
+	preference only apply to newer downloads. Only informs if there are
+	current downloads in progress
 
 2005-07-23  David Sedeño <david@alderia.com>
 

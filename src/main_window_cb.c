@@ -428,7 +428,8 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	limit_speed_check = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_check");
 	limit_speed_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_spin");
 
-	if ( (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)) &&
+	if ( (count_download_in_progress()>0) && 
+	    (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)) &&
 	    (gwget_pref.max_speed!=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)))) ||
 	    ( gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)) && 
 	      gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check))!=gwget_pref.limit_speed))
