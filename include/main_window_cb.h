@@ -75,5 +75,8 @@ void check_download_in_progress(void);
 void start_first_waiting_download(void);
 gint count_download_in_progress(void);
 void on_download_menu_activate(void);
+void on_open_download_activate(GtkWidget *widget, gpointer data);
+void on_remove_download_activate(GtkWidget *widget, gpointer data);
+void on_open_directory_activate (GtkWidget *widget, gpointer data);
 
 #endif

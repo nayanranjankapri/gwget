@@ -1,3 +1,12 @@
+2005-07-26  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Put icon in open directory popup option. More
+	icons in menu options. 
+	* include/main_window_cb.c: Declare new functions.
+	* src/main_window_cb.c (on_remove_download_activate,
+	on_open_download_activate, on_open_directory_activate): New functions
+	to remove, open and open directory options for a download.
+
 2005-07-25  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c: Informs the user that the limit speed

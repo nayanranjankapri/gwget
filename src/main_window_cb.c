@@ -976,3 +976,61 @@ void inform_limit_speed_change(void)
 	gtk_dialog_run (GTK_DIALOG (dialog));
 	gtk_widget_destroy (dialog);
 }
+
+void
+on_remove_download_activate (GtkWidget *widget, gpointer data)
+{
+	GwgetData *gwgetdata;
+	GtkTreeIter iter;
+	gchar *url;
+        gboolean iter_valid;
+	
+	gwgetdata = gwget_data_get_selected();
+	for (iter_valid = gtk_tree_model_get_iter_first (model, &iter);iter_valid;iter_valid = gtk_tree_model_iter_next (model, &iter)) 
+	{
+		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+		if (gwgetdata == g_object_get_data(G_OBJECT(model), url)) 
+		{
+			gtk_list_store_remove (GTK_LIST_STORE(model), &gwgetdata->file_list);
+                        downloads=g_list_remove (downloads,gwgetdata);
+		}
+	}
+}
+
+void
+on_open_download_activate (GtkWidget *widget, gpointer data)
+{
+	GwgetData *gwgetdata;
+	gchar *uri;
+	GError *err = NULL;
+
+	gwgetdata=gwget_data_get_selected();
+	g_return_if_fail (gwgetdata!=NULL);
+
+	uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
+							GNOME_VFS_MAKE_URI_DIR_CURRENT);
+
+	if (!gnome_url_show (uri, &err)) {
+		run_dialog(_("Error opening file"),_("Couldn't open the file"));
+		return;
+	}
+}
+
+void
+on_open_directory_activate (GtkWidget *widget, gpointer data)
+{
+	GwgetData *gwgetdata;
+	gchar *uri;
+	GError *err = NULL;
+
+	gwgetdata=gwget_data_get_selected();
+	g_return_if_fail (gwgetdata!=NULL);
+
+
+	uri = gnome_vfs_make_uri_from_input(gwgetdata->dir);
+
+	if (!gnome_url_show (uri, &err)) {
+		run_dialog(_("Error opening file"),_("Couldn't open the folder"));
+		return;
+	}
+}
