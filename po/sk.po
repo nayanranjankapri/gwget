@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-26 06:58+0200\n"
-"PO-Revision-Date: 2005-07-26 07:01+0100\n"
+"POT-Creation-Date: 2005-07-27 05:54+0200\n"
+"PO-Revision-Date: 2005-07-26 05:55+0200\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -58,135 +58,151 @@ msgid "Cancel"
 msgstr "Zrušiť"
 
 #: ../data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "Zrušiť sťahovanie"
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "Zrušiť sťahovanie"
+
+#: ../data/gwget.glade.h:7
 msgid "Continue"
 msgstr "Pokračovať"
 
-#: ../data/gwget.glade.h:6 ../src/main_window_cb.c:121
+#: ../data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "Pokračovať v sťahovaní"
+
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
 #: ../src/main_window_cb.c:579 ../src/main_window_cb.c:676
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správca sťahovania"
 
-#: ../data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
 msgid "Information"
 msgstr "Informácie"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:11
 msgid "Local Directory:"
 msgstr "Miestny priečinok:"
 
-#: ../data/gwget.glade.h:9
+#: ../data/gwget.glade.h:12
 msgid "Local File:"
 msgstr "Miestny súbor:"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediálne súbory (videá a obrázky)"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:14
 msgid "New download"
 msgstr "Nové sťahovanie"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:15
+msgid "Open"
+msgstr "Otvoriť"
+
+#: ../data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "Otvoriť priečinok"
+
+#: ../data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "Otvoriť cieľový priečinok"
+
+#: ../data/gwget.glade.h:18
 msgid "Pause"
 msgstr "Pozastaviť"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "Pozastaviť všetko"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "Pozastaviť všetky sťahovania"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "Pozastaviť sťahovania"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "Pozastaviť sťahovanie"
+
+#: ../data/gwget.glade.h:23
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:24
 msgid "Question"
 msgstr "Otázka"
 
-#: ../data/gwget.glade.h:18 ../data/preferences.glade.h:20
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Rekurzívne"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "Rekurzívne voľby"
 
-#: ../data/gwget.glade.h:20
-msgid "Remove"
-msgstr "Odstrániť"
-
-#: ../data/gwget.glade.h:21 ../src/main_window_cb.c:658
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:658
 msgid "Remove all"
 msgstr "Odstrániť všetko"
 
-#: ../data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "Odstrániť všetky sťahovania zo zoznamu"
-
-#: ../data/gwget.glade.h:23 ../src/main_window_cb.c:600
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:600
 msgid "Remove completed"
 msgstr "Odstránenie dokončené"
 
-#: ../data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "Odstrániť dokončené sťahovania zo zoznamu"
-
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:29
 msgid "Remove from List"
 msgstr "Odstrániť zo zoznamu"
 
-#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:629
+#: ../data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "Odstrániť zo zoznamu"
+
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:629
 msgid "Remove inactive"
 msgstr "Odstrániť neaktívne"
 
-#: ../data/gwget.glade.h:27
-msgid "Remove inactive downloads from list"
-msgstr "Odstrániť neaktívne sťahovania zo zoznamu"
-
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:32
 msgid "Resume all"
 msgstr "Obnoviť všetko"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:33
 msgid "Resume all downloads"
 msgstr "Obnoviť všetky sťahovania"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:34
 msgid "Stat_ubar"
 msgstr "Stav_ová lišta"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
 msgstr "Zastaviť a odstrániť stiahnutý súbor"
 
-#: ../data/gwget.glade.h:32
+#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "Len indexový súbor"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "Tento server (zrkadlo)"
 
-#: ../data/gwget.glade.h:34 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:39
 msgid "_Download"
 msgstr "_Sťahovanie"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:40
 msgid "_New"
 msgstr "_Nový"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "_Nástrojová lišta"
 
@@ -517,10 +533,12 @@ msgid "This download is already added"
 msgstr "Toto sťahovanie je už pridané"
 
 #: ../src/gwget_data.c:717 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1014 ../src/main_window_cb.c:1033
 msgid "Error opening file"
 msgstr "Chyba pri otváraní súboru"
 
 #: ../src/gwget_data.c:717 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1014
 msgid "Couldn't open the file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
@@ -618,7 +636,13 @@ msgstr "Naozaj odstrániť všetky sťahovania zo zoznamu?"
 
 #: ../src/main_window_cb.c:975
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr "Nová rýchlosť sťahovania bude použitá len na nové alebo reštartované sťahovania"
+msgstr ""
+"Nová rýchlosť sťahovania bude použitá len na nové alebo reštartované "
+"sťahovania"
+
+#: ../src/main_window_cb.c:1033
+msgid "Couldn't open the folder"
+msgstr "Nepodarilo sa otvoriť priečinok"
 
 #: ../src/systray.c:152
 msgid "Nothing"
@@ -673,6 +697,3 @@ msgstr ""
 #: ../src/wget-log.c:216
 msgid "Can't write to target directory"
 msgstr "Nepodarilo sa zapísať do cieľového priečinka"
-
-#~ msgid "*"
-#~ msgstr "*"
