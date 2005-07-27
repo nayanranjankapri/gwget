@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-26 04:08-0400\n"
-"PO-Revision-Date: 2005-07-26 00:01-0400\n"
+"POT-Creation-Date: 2005-07-27 07:25-0400\n"
+"PO-Revision-Date: 2005-07-27 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -57,135 +57,151 @@ msgid "Cancel"
 msgstr "Cancel"
 
 #: data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "Cancel download"
+
+#: data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "Cancel the download"
+
+#: data/gwget.glade.h:7
 msgid "Continue"
 msgstr "Continue"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:121 src/main_window_cb.c:579
+#: data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "Continue with the download"
+
+#: data/gwget.glade.h:9 src/main_window_cb.c:121 src/main_window_cb.c:579
 #: src/main_window_cb.c:676
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Download Manager"
 
-#: data/gwget.glade.h:7
+#: data/gwget.glade.h:10
 msgid "Information"
 msgstr "Information"
 
-#: data/gwget.glade.h:8
+#: data/gwget.glade.h:11
 msgid "Local Directory:"
 msgstr "Local Directory:"
 
-#: data/gwget.glade.h:9
+#: data/gwget.glade.h:12
 msgid "Local File:"
 msgstr "Local File:"
 
-#: data/gwget.glade.h:10
+#: data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimedia files (Videos and images)"
 
-#: data/gwget.glade.h:11
+#: data/gwget.glade.h:14
 msgid "New download"
 msgstr "New download"
 
-#: data/gwget.glade.h:12
+#: data/gwget.glade.h:15
+msgid "Open"
+msgstr "Open"
+
+#: data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "Open directory"
+
+#: data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "Open the target directory"
+
+#: data/gwget.glade.h:18
 msgid "Pause"
 msgstr "Pause"
 
-#: data/gwget.glade.h:13
+#: data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "Pause all"
 
-#: data/gwget.glade.h:14
+#: data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "Pause all downloads"
 
-#: data/gwget.glade.h:15
+#: data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "Pause download"
 
-#: data/gwget.glade.h:16
+#: data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "Pause the download"
+
+#: data/gwget.glade.h:23
 msgid "Properties"
 msgstr "Properties"
 
-#: data/gwget.glade.h:17
+#: data/gwget.glade.h:24
 msgid "Question"
 msgstr "Question"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:20
+#: data/gwget.glade.h:25 data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Recursive"
 
-#: data/gwget.glade.h:19
+#: data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "Recursive options"
 
-#: data/gwget.glade.h:20
-msgid "Remove"
-msgstr "Remove"
-
-#: data/gwget.glade.h:21 src/main_window_cb.c:658
+#: data/gwget.glade.h:27 src/main_window_cb.c:658
 msgid "Remove all"
 msgstr "Remove all"
 
-#: data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "Remove all downloads from list"
-
-#: data/gwget.glade.h:23 src/main_window_cb.c:600
+#: data/gwget.glade.h:28 src/main_window_cb.c:600
 msgid "Remove completed"
 msgstr "Remove completed"
 
-#: data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "Remove completed downloads from list"
-
-#: data/gwget.glade.h:25
+#: data/gwget.glade.h:29
 msgid "Remove from List"
 msgstr "Remove from List"
 
-#: data/gwget.glade.h:26 src/main_window_cb.c:629
+#: data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "Remove from list"
+
+#: data/gwget.glade.h:31 src/main_window_cb.c:629
 msgid "Remove inactive"
 msgstr "Remove inactive"
 
-#: data/gwget.glade.h:27
-msgid "Remove inactive downloads from list"
-msgstr "Remove inactive downloads from list"
-
-#: data/gwget.glade.h:28
+#: data/gwget.glade.h:32
 msgid "Resume all"
 msgstr "Resume all"
 
-#: data/gwget.glade.h:29
+#: data/gwget.glade.h:33
 msgid "Resume all downloads"
 msgstr "Resume all downloads"
 
-#: data/gwget.glade.h:30
+#: data/gwget.glade.h:34
 msgid "Stat_ubar"
 msgstr "Stat_usbar"
 
-#: data/gwget.glade.h:31
+#: data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
 msgstr "Stop and delete downloaded file"
 
-#: data/gwget.glade.h:32
+#: data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "The index file only"
 
-#: data/gwget.glade.h:33
+#: data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "This site (mirror)"
 
-#: data/gwget.glade.h:34 data/newdownload.glade.h:4
+#: data/gwget.glade.h:38 data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: data/gwget.glade.h:35
+#: data/gwget.glade.h:39
 msgid "_Download"
 msgstr "_Download"
 
-#: data/gwget.glade.h:36
+#: data/gwget.glade.h:40
 msgid "_New"
 msgstr "_New"
 
-#: data/gwget.glade.h:37
+#: data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "_Toolbar"
 
@@ -514,11 +530,12 @@ msgstr "Unable to add this download"
 msgid "This download is already added"
 msgstr "This download is already added"
 
-#: src/gwget_data.c:717 src/main_window_cb.c:91
+#: src/gwget_data.c:717 src/main_window_cb.c:91 src/main_window_cb.c:1014
+#: src/main_window_cb.c:1033
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: src/gwget_data.c:717 src/main_window_cb.c:91
+#: src/gwget_data.c:717 src/main_window_cb.c:91 src/main_window_cb.c:1014
 msgid "Couldn't open the file"
 msgstr "Could not open the file"
 
@@ -618,6 +635,10 @@ msgstr "Really remove all downloads from the list?"
 #: src/main_window_cb.c:975
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "New download speed limit will apply only to new or restarted downloads"
+
+#: src/main_window_cb.c:1033
+msgid "Couldn't open the folder"
+msgstr "Could not open the folder"
 
 #: src/systray.c:152
 msgid "Nothing"
