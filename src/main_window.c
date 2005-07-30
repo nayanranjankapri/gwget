@@ -204,7 +204,6 @@ gboolean view_selection_func (GtkTreeSelection *selection,
 
 		if (!path_currently_selected)
 		{
-			printf("Paf\n");
 			gwget_data_set_menus (gwget_data_get_selected());
 		}
 		g_free(name);

@@ -146,14 +146,18 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
                   			* gwgetdata->session_elapsed) / retr_size)
                 			+ ((gfloat) (gwgetdata->total_time
                              		- gwgetdata->session_elapsed)); 
+		} else {
+			estimated=0;
 		}
 	} else {
 		estimated = 0;
 	}
+
 	if (estimated == 0)
 		strcpy (buffer, "");
 	else
 		convert_time2str (buffer, estimated);
+
 	
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 						ESTIMATEDTIME_COLUMN,buffer,

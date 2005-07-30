@@ -278,6 +278,10 @@ wget_log_process_line (GwgetData *gwgetdata)
 					/* Remove the las ' character */
 					tmp[j-1]='\0';
 					gwgetdata->local_filename = g_strdup (tmp);
+					gwgetdata->cur_size=0; 
+					gwgetdata->total_size=0; 
+					gwgetdata->session_start_time = 0;
+					gwgetdata->session_start_size = 0;
 				}
 			}
 		break;

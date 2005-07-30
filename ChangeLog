@@ -1,3 +1,10 @@
+2005-07-30  David Sedeño <david@alderia.com>
+
+	* src/wget-log.c: Reset some counts when a new file start downloading
+	in recursive mode.
+	* src/gwget_data.c: Set correct estimated time.
+	* src/main_window.c: Remove debug output.
+
 2005-07-26  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Put icon in open directory popup option. More
