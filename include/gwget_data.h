@@ -82,12 +82,12 @@ typedef struct
     gboolean use_proxy;         /* Used to use proxy */
     gboolean use_auto_dl;       /* Used to use auto download */
     gchar *line;                /* Used to process the wget output */
-    guint32 total_size;         /* Total file size in bytes */
+    guint64 total_size;         /* Total file size in bytes */
     guint32 total_time;         /* Total time spent in seconds */
     time_t session_start_time;  /* Time at start of this download session */
-    guint32 session_start_size; /* Size at start of this download session */
+    guint64 session_start_size; /* Size at start of this download session */
     guint32 session_elapsed;    /* Time spent in seconds on this session */
-    guint32 cur_size;           /* Current downloaded file size */
+    guint64 cur_size;           /* Current downloaded file size */
     DlState state;              /* State of the download */
     GtkTreeIter file_list;       /* GtkTreeIter where this file is inserted */
     guint id;                   /* File data id */
@@ -111,7 +111,7 @@ void gwget_data_set_filename(GwgetData* gwgetdata,gchar *str);
 void gwget_data_start_download(GwgetData *gwgetdata);
 void gwget_data_set_state (GwgetData *gwgetdata, DlState state);
 void gwget_data_update_statistics (GwgetData *gwgetdata);
-void gwget_data_set_total_size (GwgetData *gwgetdata,guint32 total_size);
+void gwget_data_set_total_size (GwgetData *gwgetdata,guint64 total_size);
 GwgetData* gwget_data_get_selected(void);
 void gwget_data_free(gpointer data);
 void gwget_data_stop_download(GwgetData *data);

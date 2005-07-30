@@ -226,7 +226,8 @@ gwget_destination_file_exists(GwgetData *data)
 void 
 gwget_get_defaults_from_gconf(void)
 {
-	gint num_dl, i, total_size;
+	gint num_dl, i;
+	gint64 total_size;
 	GwgetData *data;
 	gchar *key,*url,*dir,*name;
 	DlState state;
@@ -291,8 +292,8 @@ gwget_get_defaults_from_gconf(void)
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		state=gconf_client_get_int(gconf_client,key,NULL); 
 		
-		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/total_size",i);
-		total_size = gconf_client_get_int (gconf_client, key, &error);
+		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/file_size",i);
+		total_size = atoll(gconf_client_get_string (gconf_client, key, &error));
 		if (!error) {		
 			gwget_data_set_total_size (data, total_size);
 		} else { 
@@ -721,6 +722,7 @@ gwget_remember_downloads(void)
 	GtkTreeIter iter;
 	gint i,length;
 	gboolean running = FALSE;
+	gchar down_size[2048];
 	
 	/* calculate the number of items in the treeview */
 	length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
@@ -753,8 +755,10 @@ gwget_remember_downloads(void)
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
 		gconf_client_set_int(gconf_client,key,gwgetdata->state,NULL);
 
-		key=g_strdup_printf ("/apps/gwget2/downloads_data/%d/total_size",i);
-		gconf_client_set_int (gconf_client,key,gwgetdata->total_size,NULL);		
+		key=g_strdup_printf ("/apps/gwget2/downloads_data/%d/file_size",i);
+		
+		g_snprintf(down_size,2047, "%" G_GINT64_FORMAT,gwgetdata->total_size);
+		gconf_client_set_string (gconf_client,key,down_size,NULL);		
 		
 		if (gwgetdata->log_tag != -1) 
 		{

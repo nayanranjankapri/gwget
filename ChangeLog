@@ -1,5 +1,17 @@
 2005-07-30  David Sedeño <david@alderia.com>
 
+	* configure.in: Require Gtk 2.6.
+
+2005-07-30  David Sedeño <david@alderia.com>
+
+	Patch Adel Gadllah <adel.gadllah@gmx.net> to support files >2GB:
+	* include/gwget_data.h, src/gwget_data.c, src/wget-log.c: Set guint64 instead of
+	guint32 to current and total size vars.
+	* src/main_window.c: Use file_size string var in gconf instead of
+	total_size (gconf can't store int64).
+	* src/main_window_cb.c: Cast to guint32.
+
+2005-07-30  David Sedeño <david@alderia.com>
 	* src/main_window.c (add_columns): Set all the columns resizables and
 	sortables.
 	* src/main_window_cb.c (on_remove_download_activate): Rework this

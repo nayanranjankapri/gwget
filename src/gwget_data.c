@@ -13,7 +13,9 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
- 
+
+#define _FILE_OFFSET_BITS  64
+#include <config.h>
 #include <gnome.h>
 #include <libgnomevfs/gnome-vfs.h>
 #include <fcntl.h>
@@ -23,6 +25,8 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 #include <unistd.h>
 #include <string.h>
 #include "gwget_data.h"
@@ -32,7 +36,7 @@
 #include "utils.h"
 #include "systray.h"
 
-#include <config.h>
+
 
 static gint gwget_data_process_information (GwgetData *gwgetdata);
 static void gwget_data_update_statistics_ui(GwgetData *gwgetdata);
@@ -59,11 +63,11 @@ gwget_data_set_state (GwgetData *gwgetdata, DlState state)
 void 
 gwget_data_update_statistics (GwgetData *gwgetdata) 
 {   
-	guint32 cur_size;
+	guint64 cur_size;
 	time_t cur_time, elapsed_time;
 	struct stat file_stat;
 	gchar buffer[20];
-	guint32 retr_size, remain_size;
+	guint64 retr_size, remain_size;
 	time_t estimated;
 	gdouble perc;
 	gchar *title;
@@ -71,7 +75,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	
 	/* Get time and size of the file being retrieved */
 	if (stat (gwgetdata->local_filename, &file_stat) != -1) {
-		cur_size = file_stat.st_size;
+		cur_size = (guint64) file_stat.st_size;
 		cur_time = file_stat.st_ctime;
 	} else {
 		cur_size = 0;
@@ -116,7 +120,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	if (gwgetdata->state == DL_NOT_STARTED)
 		strcpy (buffer, "");
 	else
-		sprintf (buffer, "%d kB", (gwgetdata->total_size + 512) / 1024);
+		sprintf (buffer, "%d kB", (guint32)(gwgetdata->total_size + 512) / 1024);
 	
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 						TOTALSIZE_COLUMN,buffer,
@@ -127,7 +131,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	if (gwgetdata->state == DL_NOT_STARTED || gwgetdata->state == DL_COMPLETED)
 		strcpy (buffer, "");
 	else
-		sprintf (buffer, "%d kB", (gwgetdata->cur_size + 512) / 1024);
+		sprintf (buffer, "%d kB",(guint32) (gwgetdata->cur_size + 512) / 1024);
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
 						CURRENTSIZE_COLUMN,buffer,
 						-1);
@@ -486,7 +490,7 @@ gwget_data_start_download(GwgetData *gwgetdata)
 }
 
 void
-gwget_data_set_total_size (GwgetData *gwgetdata,guint32 total_size)
+gwget_data_set_total_size (GwgetData *gwgetdata, guint64 total_size)
 {
 	g_return_if_fail (gwgetdata != NULL);
 	gwgetdata->total_size = total_size;
@@ -533,7 +537,7 @@ gwget_data_create(gchar *url, gchar *dir)
 		gnome_vfs_get_file_info (gwgetdata->local_filename, 
 				         info, 
 					 GNOME_VFS_FILE_INFO_DEFAULT);
-		gwgetdata->cur_size = (guint32)info->size;
+		gwgetdata->cur_size = (guint64)info->size;
 	} else {
 		gwgetdata->cur_size = 0;
 	}

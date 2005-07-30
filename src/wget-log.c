@@ -16,6 +16,8 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
+#define _FILE_OFFSET_BITS 64
+
 #include <config.h>
 #include <gnome.h>
 #include <string.h>
@@ -31,7 +33,7 @@
 
 
 /* Function to convert the wget notation of file size (55,449,600) */ 
-static guint32 
+static guint64
 convert_wget_size (char *size)
 {
 	char *p = size;
@@ -44,7 +46,7 @@ convert_wget_size (char *size)
 		} else
 			p++;
    }
-   return atoi (size);
+   return atoll (size);
 }
 
 static void
