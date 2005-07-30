@@ -983,16 +983,23 @@ on_remove_download_activate (GtkWidget *widget, gpointer data)
 	GwgetData *gwgetdata;
 	GtkTreeIter iter;
 	gchar *url;
-        gboolean iter_valid;
-	
+	gint response, length, i;
+
 	gwgetdata = gwget_data_get_selected();
-	for (iter_valid = gtk_tree_model_get_iter_first (model, &iter);iter_valid;iter_valid = gtk_tree_model_iter_next (model, &iter)) 
-	{
-		gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-		if (gwgetdata == g_object_get_data(G_OBJECT(model), url)) 
-		{
-			gtk_list_store_remove (GTK_LIST_STORE(model), &gwgetdata->file_list);
-                        downloads=g_list_remove (downloads,gwgetdata);
+	if (gwgetdata != NULL) {
+		response = run_dialog(_("Remove this download ?"),_("Really remove this download from the list?"));
+		if (response == GTK_RESPONSE_OK) {
+			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+			gtk_tree_model_get_iter_root(model,&iter);
+			for (i=0;i<length;i++) {
+				gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+				if (gwgetdata==g_object_get_data(G_OBJECT(model),url)) {
+					gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
+					downloads=g_list_remove(downloads,gwgetdata);
+				} else {
+					gtk_tree_model_iter_next(model,&iter);
+				}
+			}
 		}
 	}
 }

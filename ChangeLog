@@ -1,5 +1,7 @@
 2005-07-30  David Sedeño <david@alderia.com>
 
+	* src/main_window_cb.c (on_remove_download_activate): Rework this
+	function.
 	* src/wget-log.c: Reset some counts when a new file start downloading
 	in recursive mode.
 	* src/gwget_data.c: Set correct estimated time.
