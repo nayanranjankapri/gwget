@@ -420,6 +420,7 @@ add_columns (GtkTreeView *treeview)
 	
 	gtk_tree_view_column_set_title (GTK_TREE_VIEW_COLUMN(column),_("File Name"));
 	
+	gtk_tree_view_column_set_sort_column_id (column, FILENAME_COLUMN);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
 	gtk_tree_view_append_column (treeview, column);
 	
@@ -431,6 +432,7 @@ add_columns (GtkTreeView *treeview)
 							  STATE_COLUMN,
 							  NULL);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
+	gtk_tree_view_column_set_sort_column_id (column, STATE_COLUMN);
 	gtk_tree_view_column_set_sizing (column, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
 	gtk_tree_view_append_column (treeview, column);
 	
@@ -467,6 +469,7 @@ add_columns (GtkTreeView *treeview)
 
 	gtk_tree_view_column_set_title (column, (_("Percentage"))); 
 	gtk_tree_view_column_set_resizable(column, TRUE); 
+	gtk_tree_view_column_set_sort_column_id (column, PERCENTAGE_COLUMN);
     	gtk_tree_view_append_column(GTK_TREE_VIEW(treeview),column); 
 		
 	/* Elapse Time */
