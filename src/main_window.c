@@ -443,6 +443,7 @@ add_columns (GtkTreeView *treeview)
 							NULL);
 
 	gtk_tree_view_column_set_sort_column_id (column, CURRENTSIZE_COLUMN);
+	gtk_tree_view_column_set_resizable(column, TRUE); 
   	gtk_tree_view_append_column (treeview, column);
 	
 	/* Total Size */
@@ -453,6 +454,7 @@ add_columns (GtkTreeView *treeview)
 							TOTALSIZE_COLUMN,
 							NULL);
 	gtk_tree_view_column_set_sort_column_id (column, TOTALSIZE_COLUMN);
+	gtk_tree_view_column_set_resizable(column, TRUE); 
   	gtk_tree_view_append_column (treeview, column);
 	
 	/* Percentage */
@@ -464,6 +466,7 @@ add_columns (GtkTreeView *treeview)
 							NULL);
 
 	gtk_tree_view_column_set_title (column, (_("Percentage"))); 
+	gtk_tree_view_column_set_resizable(column, TRUE); 
     	gtk_tree_view_append_column(GTK_TREE_VIEW(treeview),column); 
 		
 	/* Elapse Time */
@@ -474,6 +477,7 @@ add_columns (GtkTreeView *treeview)
 							ELAPSETIME_COLUMN,
 							NULL);
 	gtk_tree_view_column_set_sort_column_id (column, ELAPSETIME_COLUMN);
+	gtk_tree_view_column_set_resizable(column, TRUE); 
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* REMAINTIME_COLUMN */
@@ -484,6 +488,7 @@ add_columns (GtkTreeView *treeview)
 														REMAINTIME_COLUMN,
 														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, REMAINTIME_COLUMN);
+	gtk_tree_view_column_set_resizable(column, TRUE); 
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Speed */
@@ -494,6 +499,7 @@ add_columns (GtkTreeView *treeview)
 														SPEED_COLUMN,
 														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, SPEED_COLUMN);
+	gtk_tree_view_column_set_resizable(column, TRUE); 
 	gtk_tree_view_append_column (treeview, column);
 	
 }
