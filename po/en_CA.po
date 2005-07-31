@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-27 07:25-0400\n"
-"PO-Revision-Date: 2005-07-27 00:01-0400\n"
+"POT-Creation-Date: 2005-07-31 00:55-0400\n"
+"PO-Revision-Date: 2005-07-31 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -477,39 +477,39 @@ msgstr "Unknown"
 msgid "Failed"
 msgstr "Failed"
 
-#: src/gwget_data.c:187
+#: src/gwget_data.c:195
 msgid "stalled"
 msgstr "stalled"
 
-#: src/gwget_data.c:221
+#: src/gwget_data.c:229
 msgid "Waiting"
 msgstr "Waiting"
 
-#: src/gwget_data.c:223
+#: src/gwget_data.c:231
 msgid "Not Started"
 msgstr "Not Started"
 
-#: src/gwget_data.c:225
+#: src/gwget_data.c:233
 msgid "Not Running"
 msgstr "Not Running"
 
-#: src/gwget_data.c:227
+#: src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "Not Connected"
 
-#: src/gwget_data.c:229
+#: src/gwget_data.c:237
 msgid "Connected"
 msgstr "Connected"
 
-#: src/gwget_data.c:231
+#: src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "Retrieving"
 
-#: src/gwget_data.c:233
+#: src/gwget_data.c:241
 msgid "Completed"
 msgstr "Completed"
 
-#: src/gwget_data.c:237
+#: src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -518,24 +518,24 @@ msgstr ""
 "Download Completed\n"
 "(%s)"
 
-#: src/gwget_data.c:245
+#: src/gwget_data.c:253
 msgid "Error"
 msgstr "Error"
 
-#: src/gwget_data.c:668
+#: src/gwget_data.c:676
 msgid "Unable to add this download"
 msgstr "Unable to add this download"
 
-#: src/gwget_data.c:669
+#: src/gwget_data.c:677
 msgid "This download is already added"
 msgstr "This download is already added"
 
-#: src/gwget_data.c:717 src/main_window_cb.c:91 src/main_window_cb.c:1014
-#: src/main_window_cb.c:1033
+#: src/gwget_data.c:725 src/main_window_cb.c:91 src/main_window_cb.c:1021
+#: src/main_window_cb.c:1040
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: src/gwget_data.c:717 src/main_window_cb.c:91 src/main_window_cb.c:1014
+#: src/gwget_data.c:725 src/main_window_cb.c:91 src/main_window_cb.c:1021
 msgid "Couldn't open the file"
 msgstr "Could not open the file"
 
@@ -543,47 +543,47 @@ msgstr "Could not open the file"
 msgid "File Name"
 msgstr "File Name"
 
-#: src/main_window.c:429
+#: src/main_window.c:430
 msgid "State"
 msgstr "State"
 
-#: src/main_window.c:440
+#: src/main_window.c:442
 msgid "Current Size"
 msgstr "Current Size"
 
-#: src/main_window.c:451
+#: src/main_window.c:454
 msgid "Total Size"
 msgstr "Total Size"
 
-#: src/main_window.c:461 src/main_window.c:467
+#: src/main_window.c:465 src/main_window.c:471
 msgid "Percentage"
 msgstr "Percent"
 
-#: src/main_window.c:472
+#: src/main_window.c:478
 msgid "Elapsed Time"
 msgstr "Elapsed Time"
 
-#: src/main_window.c:482
+#: src/main_window.c:489
 msgid "Remaining Time"
 msgstr "Remaining Time"
 
-#: src/main_window.c:492
+#: src/main_window.c:500
 msgid "Speed"
 msgstr "Speed"
 
-#: src/main_window.c:538
+#: src/main_window.c:547
 msgid "Error starting the download"
 msgstr "Error starting the download"
 
-#: src/main_window.c:538
+#: src/main_window.c:547
 msgid "There was an unexpected error starting the download"
 msgstr "There was an unexpected error starting the download"
 
-#: src/main_window.c:772
+#: src/main_window.c:784
 msgid "Cancel current downloads?"
 msgstr "Cancel current downloads?"
 
-#: src/main_window.c:773
+#: src/main_window.c:785
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -636,7 +636,15 @@ msgstr "Really remove all downloads from the list?"
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "New download speed limit will apply only to new or restarted downloads"
 
-#: src/main_window_cb.c:1033
+#: src/main_window_cb.c:990
+msgid "Remove this download ?"
+msgstr "Remove this download?"
+
+#: src/main_window_cb.c:990
+msgid "Really remove this download from the list?"
+msgstr "Really remove this download from the list?"
+
+#: src/main_window_cb.c:1040
 msgid "Couldn't open the folder"
 msgstr "Could not open the folder"
 
@@ -648,47 +656,47 @@ msgstr "Nothing"
 msgid "Downloads"
 msgstr "Downloads"
 
-#: src/wget-log.c:118
+#: src/wget-log.c:120
 msgid "Socket error"
 msgstr "Socket error"
 
-#: src/wget-log.c:120
+#: src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "Connection refused\n"
 
-#: src/wget-log.c:122
+#: src/wget-log.c:124
 msgid "No route to host"
 msgstr "No route to host"
 
-#: src/wget-log.c:124
+#: src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "Connection refused when downloading URL:\n"
 
-#: src/wget-log.c:126
+#: src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "Host not found\n"
 
-#: src/wget-log.c:128
+#: src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Unsupported protocol - you need wget >= 1.7 for https:\n"
 
-#: src/wget-log.c:131
+#: src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "Refusing to truncate existing file"
 
-#: src/wget-log.c:133
+#: src/wget-log.c:135
 msgid "Unknown error"
 msgstr "Unknown error"
 
-#: src/wget-log.c:144 src/wget-log.c:150
+#: src/wget-log.c:146 src/wget-log.c:152
 msgid "File not found"
 msgstr "File not found"
 
-#: src/wget-log.c:157
+#: src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Cannot continue download; existing local file conflicts with remote file"
 
-#: src/wget-log.c:216
+#: src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "Cannot write to target directory"
