@@ -84,7 +84,7 @@ msgid "translator_credits"
 msgstr ""
 "Sini Ruohomaa, 2004\n"
 "\n"
-"http://gnome-fi.org/"
+"http://gnome.fi/"
 
 #: src/main_window_cb.c:161
 msgid "Gwget"
