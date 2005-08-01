@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-27 05:54+0200\n"
-"PO-Revision-Date: 2005-07-26 05:55+0200\n"
+"POT-Creation-Date: 2005-08-01 22:06+0200\n"
+"PO-Revision-Date: 2005-08-01 22:07+0200\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -175,7 +175,7 @@ msgid "Resume all downloads"
 msgstr "Obnoviť všetky sťahovania"
 
 #: ../data/gwget.glade.h:34
-msgid "Stat_ubar"
+msgid "Stat_usbar"
 msgstr "Stav_ová lišta"
 
 #: ../data/gwget.glade.h:35
@@ -479,39 +479,39 @@ msgstr "Neznámy"
 msgid "Failed"
 msgstr "Zlyhalo"
 
-#: ../src/gwget_data.c:187
+#: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "zastavené"
 
-#: ../src/gwget_data.c:221
+#: ../src/gwget_data.c:229
 msgid "Waiting"
 msgstr "Čakanie"
 
-#: ../src/gwget_data.c:223
+#: ../src/gwget_data.c:231
 msgid "Not Started"
 msgstr "Nezačaté"
 
-#: ../src/gwget_data.c:225
+#: ../src/gwget_data.c:233
 msgid "Not Running"
 msgstr "Nebežiace"
 
-#: ../src/gwget_data.c:227
+#: ../src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "Nepripojené"
 
-#: ../src/gwget_data.c:229
+#: ../src/gwget_data.c:237
 msgid "Connected"
 msgstr "Pripojené"
 
-#: ../src/gwget_data.c:231
+#: ../src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "Sťahovanie"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:241
 msgid "Completed"
 msgstr "Dokončené"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -520,25 +520,25 @@ msgstr ""
 "Sťahovanie dokončené\n"
 "(%s)"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:253
 msgid "Error"
 msgstr "Chyba"
 
-#: ../src/gwget_data.c:668
+#: ../src/gwget_data.c:676
 msgid "Unable to add this download"
 msgstr "Nepodarilo sa pridať toto sťahovanie"
 
-#: ../src/gwget_data.c:669
+#: ../src/gwget_data.c:677
 msgid "This download is already added"
 msgstr "Toto sťahovanie je už pridané"
 
-#: ../src/gwget_data.c:717 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1014 ../src/main_window_cb.c:1033
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1021 ../src/main_window_cb.c:1040
 msgid "Error opening file"
 msgstr "Chyba pri otváraní súboru"
 
-#: ../src/gwget_data.c:717 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1014
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1021
 msgid "Couldn't open the file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
@@ -546,47 +546,47 @@ msgstr "Nepodarilo sa otvoriť súbor"
 msgid "File Name"
 msgstr "Názov súboru"
 
-#: ../src/main_window.c:429
+#: ../src/main_window.c:430
 msgid "State"
 msgstr "Stav"
 
-#: ../src/main_window.c:440
+#: ../src/main_window.c:442
 msgid "Current Size"
 msgstr "Aktuálna veľkosť"
 
-#: ../src/main_window.c:451
+#: ../src/main_window.c:454
 msgid "Total Size"
 msgstr "Celková veľkosť"
 
-#: ../src/main_window.c:461 ../src/main_window.c:467
+#: ../src/main_window.c:465 ../src/main_window.c:471
 msgid "Percentage"
 msgstr "Percentá"
 
-#: ../src/main_window.c:472
+#: ../src/main_window.c:478
 msgid "Elapsed Time"
 msgstr "Uplynutý čas"
 
-#: ../src/main_window.c:482
+#: ../src/main_window.c:489
 msgid "Remaining Time"
 msgstr "Zostávajúci čas"
 
-#: ../src/main_window.c:492
+#: ../src/main_window.c:500
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: ../src/main_window.c:538
+#: ../src/main_window.c:547
 msgid "Error starting the download"
 msgstr "Chyba pri štarte sťahovania"
 
-#: ../src/main_window.c:538
+#: ../src/main_window.c:547
 msgid "There was an unexpected error starting the download"
 msgstr "Vyskytla sa neočakávaná chyba pri štarte sťahovania"
 
-#: ../src/main_window.c:772
+#: ../src/main_window.c:784
 msgid "Cancel current downloads?"
 msgstr "Zrušiť aktuálne sťahovania?"
 
-#: ../src/main_window.c:773
+#: ../src/main_window.c:785
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -640,7 +640,15 @@ msgstr ""
 "Nová rýchlosť sťahovania bude použitá len na nové alebo reštartované "
 "sťahovania"
 
-#: ../src/main_window_cb.c:1033
+#: ../src/main_window_cb.c:990
+msgid "Remove this download ?"
+msgstr "Odstrániť toto sťahovania?"
+
+#: ../src/main_window_cb.c:990
+msgid "Really remove this download from the list?"
+msgstr "Naozaj odstrániť toto sťahovanie zo zoznamu?"
+
+#: ../src/main_window_cb.c:1040
 msgid "Couldn't open the folder"
 msgstr "Nepodarilo sa otvoriť priečinok"
 
@@ -652,48 +660,48 @@ msgstr "Nič"
 msgid "Downloads"
 msgstr "Sťahovania"
 
-#: ../src/wget-log.c:118
+#: ../src/wget-log.c:120
 msgid "Socket error"
 msgstr "Chyba zásuvky"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "Spojenie odmietnuté\n"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:124
 msgid "No route to host"
 msgstr "Nie je cesta k hostiteľovi"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "Spojenie odmietnuté pri sťahovaní URL:\n"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "Hostiteľ nebol nájdený\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Nepodporovaný protokol - pre https potrebujete wget >= 1.7:\n"
 
-#: ../src/wget-log.c:131
+#: ../src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "Odmietam orezať existujúci súbor"
 
-#: ../src/wget-log.c:133
+#: ../src/wget-log.c:135
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: ../src/wget-log.c:144 ../src/wget-log.c:150
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "Súbor nebol nájdený"
 
-#: ../src/wget-log.c:157
+#: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nemôžem pokračovať v sťahovaní, existujúci lokálny súbor je v konflikte so "
 "vzdialeným súborom"
 
-#: ../src/wget-log.c:216
+#: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "Nepodarilo sa zapísať do cieľového priečinka"
