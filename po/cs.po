@@ -8,200 +8,228 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-22 04:20+0100\n"
-"PO-Revision-Date: 2005-03-22 09:39+0100\n"
+"POT-Creation-Date: 2005-08-05 04:10+0000\n"
+"PO-Revision-Date: 2005-08-05 12:29+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/GNOME_Gwget.server.in.in.h:1
+#: ../data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
 msgstr "aplikace gwget"
 
-#: data/GNOME_Gwget.server.in.in.h:2
+#: ../data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
 msgstr "generátor automatizace gwget"
 
-#: data/about.glade.h:1
+#: ../data/about.glade.h:1
 msgid "About Gwget"
 msgstr "O Gwget"
 
-#: data/about.glade.h:2
+#: ../data/about.glade.h:2
 msgid "GNU GPL Version 2"
 msgstr "GNU GPL verze 2"
 
-#: data/about.glade.h:3
+#: ../data/about.glade.h:3
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Správce stahování pro GNOME"
 
-#: data/about.glade.h:4 src/main_window_cb.c:182
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
-#: data/gwget.glade.h:1 data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
-#: data/gwget.glade.h:2
+#: ../data/gwget.glade.h:2
 msgid "<span weight=\"bold\">Download:</span>"
 msgstr "<span weight=\"bold\">Stahování:</span>"
 
-#: data/gwget.glade.h:3
+#: ../data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">Vlastnosti</span>"
 
-#: data/gwget.glade.h:4
+#: ../data/gwget.glade.h:4
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: data/gwget.glade.h:5
+#: ../data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "Zrušit stahování"
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "Zrušit stahování"
+
+#: ../data/gwget.glade.h:7
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:580
-#: src/main_window_cb.c:677
+#: ../data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "Pokračovat se stahováním"
+
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
+#: ../src/main_window_cb.c:579 ../src/main_window_cb.c:676
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správce stahování"
 
-#: data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
 msgid "Information"
 msgstr "Informace"
 
-#: data/gwget.glade.h:8
+#: ../data/gwget.glade.h:11
 msgid "Local Directory:"
 msgstr "Místní adresář:"
 
-#: data/gwget.glade.h:9
+#: ../data/gwget.glade.h:12
 msgid "Local File:"
 msgstr "Místní soubor:"
 
-#: data/gwget.glade.h:10
+#: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediální soubory (videa a obrázky)"
 
-#: data/gwget.glade.h:11
+#: ../data/gwget.glade.h:14
 msgid "New download"
 msgstr "Nové stahování"
 
-#: data/gwget.glade.h:12
+#: ../data/gwget.glade.h:15
+msgid "Open"
+msgstr "Otevřít"
+
+#: ../data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "Otevřít adresář"
+
+#: ../data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "Otevřít cílový adresář"
+
+#: ../data/gwget.glade.h:18
 msgid "Pause"
 msgstr "Pozastavit"
 
-#: data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "Pozastavit vše"
 
-#: data/gwget.glade.h:14
+#: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "Pozastavit všechna stahování"
 
-#: data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "Pozastavit stahování"
 
-#: data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "Pozastavit stahování"
+
+#: ../data/gwget.glade.h:23
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: data/gwget.glade.h:17
+#: ../data/gwget.glade.h:24
 msgid "Question"
 msgstr "Otázka"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:21
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Rekurzivně"
 
-#: data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "Možnosti rekurze"
 
-#: data/gwget.glade.h:20
-msgid "Remove"
-msgstr "Odstranit"
-
-#: data/gwget.glade.h:21 src/main_window_cb.c:659
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:658
 msgid "Remove all"
 msgstr "Odstranit vše"
 
-#: data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "Odstranit ze seznamu všechna stahování"
-
-#: data/gwget.glade.h:23 src/main_window_cb.c:601
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:600
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
-#: data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "Odstranit ze seznamu dokončená stahování"
+#: ../data/gwget.glade.h:29
+msgid "Remove from List"
+msgstr "Odstranit ze seznamu"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:630
+#: ../data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "Odstranit ze seznamu"
+
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:629
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
-#: data/gwget.glade.h:26
-msgid "Remove inactive downloads from list"
-msgstr "Odstranit ze seznamu neaktivní stahování"
-
-#: data/gwget.glade.h:27
+#: ../data/gwget.glade.h:32
 msgid "Resume all"
 msgstr "Obnovit vše"
 
-#: data/gwget.glade.h:28
+#: ../data/gwget.glade.h:33
 msgid "Resume all downloads"
 msgstr "Obnovit všechna stahování"
 
-#: data/gwget.glade.h:29
+#: ../data/gwget.glade.h:34
+msgid "Stat_usbar"
+msgstr "_Stavová lišta"
+
+#: ../data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
 msgstr "Zastavit a odstranit stažený soubor"
 
-#: data/gwget.glade.h:30
+#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "Jen soubor index"
 
-#: data/gwget.glade.h:31
+#: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "Tento server (zrcadlo)"
 
-#: data/gwget.glade.h:32 data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: data/gwget.glade.h:33
+#: ../data/gwget.glade.h:39
+msgid "_Download"
+msgstr "_Stahování"
+
+#: ../data/gwget.glade.h:40
 msgid "_New"
 msgstr "_Nové"
 
-#: data/gwget.glade.h:34
+#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "_Lišta nástrojů"
 
-#: data/gwget.schemas.in.h:1
+#: ../data/gwget.schemas.in.h:1
 msgid "Ask save in for each new download"
 msgstr "Ptát se, kde uložit, pro každé nové stahování"
 
-#: data/gwget.schemas.in.h:2
+#: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
 msgstr "Převést odkazy"
 
-#: data/gwget.schemas.in.h:3
+#: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
 msgstr "V rekurzivním režimu převádět na relativní odkazy."
 
-#: data/gwget.schemas.in.h:4
+#: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
 msgstr "Implicitní adresář stahování"
 
-#: data/gwget.schemas.in.h:5
+#: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
 msgstr "Stáhnout, co stránka vyžaduje"
 
-#: data/gwget.schemas.in.h:6
+#: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
 msgstr "Následovat relativní odkazy"
 
-#: data/gwget.schemas.in.h:7
+#: ../data/gwget.schemas.in.h:7
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
@@ -209,271 +237,279 @@ msgstr ""
 "Je-li true, vždy se při spouštění nového stahování ptát na cílový adresář. "
 "Je-li false, vždy ukládat do implicitního adrseáře bez ptaní se uživatele."
 
-#: data/gwget.schemas.in.h:8
+#: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
 msgstr "Omezit maximální rychlost"
 
-#: data/gwget.schemas.in.h:9
+#: ../data/gwget.schemas.in.h:9
 msgid "Limit number of simultaneous downloads"
 msgstr "Omezit počet současných stahování"
 
-#: data/gwget.schemas.in.h:10
+#: ../data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
 msgstr "Maximální hloubka v rekurzivním režimu"
 
-#: data/gwget.schemas.in.h:11
+#: ../data/gwget.schemas.in.h:11
 msgid "Maximum number of simultaneous downloads"
 msgstr "Maximální počet současných stahování"
 
-#: data/gwget.schemas.in.h:12
+#: ../data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
 msgstr "Maximální limit rychlosti"
 
-#: data/gwget.schemas.in.h:13
+#: ../data/gwget.schemas.in.h:13
 msgid "Number of downloads"
 msgstr "Počet stahování"
 
-#: data/gwget.schemas.in.h:14
+#: ../data/gwget.schemas.in.h:14
 msgid "Number of retries"
 msgstr "Počet pokusů"
 
-#: data/gwget.schemas.in.h:15
+#: ../data/gwget.schemas.in.h:15
 msgid "Open the file after download"
 msgstr "Otevířít soubor po stažení"
 
-#: data/gwget.schemas.in.h:16
+#: ../data/gwget.schemas.in.h:16
 msgid "Resume downloads at startup"
 msgstr "Pokračovat ve stahováních při spuštění"
 
-#: data/gwget.schemas.in.h:17
+#: ../data/gwget.schemas.in.h:17
 msgid "View download speed column"
 msgstr "Zobrazovat sloupec rychlosti stahování"
 
-#: data/gwget.schemas.in.h:18
+#: ../data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
 msgstr "Zobrazovat sloupec uplynulého času"
 
-#: data/gwget.schemas.in.h:19
+#: ../data/gwget.schemas.in.h:19
 msgid "View percentage column"
 msgstr "Zobrazovat sloupec procent"
 
-#: data/gwget.schemas.in.h:20
+#: ../data/gwget.schemas.in.h:20
 msgid "View remaining time column"
 msgstr "Zobrazovat sloupec zbývajícího času"
 
-#: data/gwget.schemas.in.h:21
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "Zobrazovat stavovou lištu"
+
+#: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
 msgstr "Zobrazovat lištu nástrojů"
 
-#: data/gwget.schemas.in.h:22
+#: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
 msgstr "Zobrazovat sloupec celkové velikosti"
 
-#: data/newdownload.glade.h:1
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Jestli zobrazovat stavovou lištu."
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "Jestli zobrazovat lištu nástrojů."
+
+#: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Nové stahování</span>"
 
-#: data/newdownload.glade.h:2
+#: ../data/newdownload.glade.h:2
 msgid "New Download"
 msgstr "Nové stahování"
 
-#: data/newdownload.glade.h:3
+#: ../data/newdownload.glade.h:3
 msgid "Save in:"
 msgstr "Uložit do:"
 
-#: data/preferences.glade.h:1
+#: ../data/preferences.glade.h:1
 msgid "   "
 msgstr "   "
 
-#: data/preferences.glade.h:3
-msgid "*"
-msgstr "*"
-
-#: data/preferences.glade.h:4
+#: ../data/preferences.glade.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Chování</span>"
 
-#: data/preferences.glade.h:5
+#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Seznam sloupců</span>"
 
-#: data/preferences.glade.h:6
+#: ../data/preferences.glade.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">Obecné</span>"
 
-#: data/preferences.glade.h:7
+#: ../data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Odkazy</span>"
 
-#: data/preferences.glade.h:8
+#: ../data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Nastavení proxy</span>"
 
-#: data/preferences.glade.h:9
+#: ../data/preferences.glade.h:8
 msgid "Column List"
 msgstr "Seznam sloupců"
 
-#: data/preferences.glade.h:10
+#: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
 msgstr "Implicitní nastavení sítě v _GNOME"
 
-#: data/preferences.glade.h:11
+#: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
 msgstr "Přímé připojení k _Internetu"
 
-#: data/preferences.glade.h:12
+#: ../data/preferences.glade.h:11
 msgid "Do_wnload Speed"
 msgstr "_Rychlost stahování"
 
-#: data/preferences.glade.h:13
+#: ../data/preferences.glade.h:12
 msgid "Don't _create directories"
 msgstr "Ne_vytvářet adresáře"
 
-#: data/preferences.glade.h:14
+#: ../data/preferences.glade.h:13
 msgid "Follow _relative links only"
 msgstr "Následovat jen _relativní odkazy"
 
-#: data/preferences.glade.h:15
+#: ../data/preferences.glade.h:14
 msgid "General"
 msgstr "Obecné"
 
-#: data/preferences.glade.h:16
+#: ../data/preferences.glade.h:15
 msgid "Limit _number of simultaneous download to:"
 msgstr "Omezit _počet současných stahování na:"
 
-#: data/preferences.glade.h:17
+#: ../data/preferences.glade.h:16
 msgid "Network"
 msgstr "Síť"
 
-#: data/preferences.glade.h:18
+#: ../data/preferences.glade.h:17
 msgid "P_ort:"
 msgstr "_Port:"
 
-#: data/preferences.glade.h:19
+#: ../data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "Nastavení"
 
-#: data/preferences.glade.h:20
+#: ../data/preferences.glade.h:19
 msgid "Pro_xy:"
 msgstr "Pro_xy:"
 
-#: data/preferences.glade.h:22
+#: ../data/preferences.glade.h:21
 msgid "Remaining _Time"
 msgstr "Zbývající _čas"
 
-#: data/preferences.glade.h:23
+#: ../data/preferences.glade.h:22
 msgid "Sa_ve in:"
 msgstr "_Uložit do:"
 
-#: data/preferences.glade.h:24
+#: ../data/preferences.glade.h:23
 msgid "Total _Size"
 msgstr "_Celková velikost"
 
-#: data/preferences.glade.h:25
+#: ../data/preferences.glade.h:24
 msgid "_Ask where to save for each download"
 msgstr "Ptát se, _kam ukládat, pro každé stahování"
 
-#: data/preferences.glade.h:26
+#: ../data/preferences.glade.h:25
 msgid "_Continue downloads on startup"
 msgstr "_Pokračovat ve stahováních při spuštění"
 
-#: data/preferences.glade.h:27
+#: ../data/preferences.glade.h:26
 msgid "_Convert links"
 msgstr "_Převést odkazy"
 
-#: data/preferences.glade.h:28
+#: ../data/preferences.glade.h:27
 msgid "_Current Size"
 msgstr "_Momentální velikost"
 
-#: data/preferences.glade.h:29
+#: ../data/preferences.glade.h:28
 msgid "_Download page requisites"
 msgstr "_Stáhnout, co stránka vyžaduje"
 
-#: data/preferences.glade.h:30
+#: ../data/preferences.glade.h:29
 msgid "_Elapsed Time"
 msgstr "_Uplynulý čas"
 
-#: data/preferences.glade.h:31
+#: ../data/preferences.glade.h:30
 msgid "_Limit download speed to:"
 msgstr "_Omezit rychlost stahování na:"
 
-#: data/preferences.glade.h:32
+#: ../data/preferences.glade.h:31
 msgid "_Manual proxy configuration"
 msgstr "_Ruční nastavení proxy"
 
-#: data/preferences.glade.h:33
+#: ../data/preferences.glade.h:32
 msgid "_Maximum depth level:"
 msgstr "_Maximální úroveň hloubky:"
 
-#: data/preferences.glade.h:34
+#: ../data/preferences.glade.h:33
 msgid "_Number of retries:"
 msgstr "_Počet pokusů:"
 
-#: data/preferences.glade.h:35
+#: ../data/preferences.glade.h:34
 msgid "_Open files automatically after download"
 msgstr "_Otevírat soubory automaticky po stažení"
 
-#: data/preferences.glade.h:36
+#: ../data/preferences.glade.h:35
 msgid "_Percentage"
 msgstr "_Procenta"
 
-#: data/preferences.glade.h:37
+#: ../data/preferences.glade.h:36
 msgid "files"
 msgstr "souborů"
 
-#: data/preferences.glade.h:38
+#: ../data/preferences.glade.h:37
 msgid "kB/sec"
 msgstr "kB/s"
 
-#: epiphany-extension/gwget.xml.in.in.h:1
+#: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
 msgstr "Přesměrovávát stahování na GWGet"
 
-#: epiphany-extension/gwget.xml.in.in.h:2
+#: ../epiphany-extension/gwget.xml.in.in.h:2
 msgid "GWGet"
 msgstr "GWGet"
 
-#: src/custom-cell-renderer-progressbar.c:36
+#: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: src/custom-cell-renderer-progressbar.c:99
+#: ../src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
 msgstr "Selhalo"
 
-#: src/gwget_data.c:179
+#: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "vynechává"
 
-#: src/gwget_data.c:214
+#: ../src/gwget_data.c:229
 msgid "Waiting"
 msgstr "Čeká"
 
-#: src/gwget_data.c:216
+#: ../src/gwget_data.c:231
 msgid "Not Started"
 msgstr "Nespuštěno"
 
-#: src/gwget_data.c:218
+#: ../src/gwget_data.c:233
 msgid "Not Running"
 msgstr "Neběží"
 
-#: src/gwget_data.c:220
+#: ../src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "Nepřipojeno"
 
-#: src/gwget_data.c:222
+#: ../src/gwget_data.c:237
 msgid "Connected"
 msgstr "Připojeno"
 
-#: src/gwget_data.c:224
+#: ../src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "Stahuji"
 
-#: src/gwget_data.c:226
+#: ../src/gwget_data.c:241
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: src/gwget_data.c:230
+#: ../src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -482,71 +518,73 @@ msgstr ""
 "Stahování dokončeno\n"
 "(%s)"
 
-#: src/gwget_data.c:237
+#: ../src/gwget_data.c:253
 msgid "Error"
 msgstr "Chyba"
 
-#: src/gwget_data.c:657
+#: ../src/gwget_data.c:676
 msgid "Unable to add this download"
 msgstr "Nemohu přidat toto stahování"
 
-#: src/gwget_data.c:658
+#: ../src/gwget_data.c:677
 msgid "This download is already added"
 msgstr "Toto stahování již bylo přidáno"
 
-#: src/gwget_data.c:706 src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1021 ../src/main_window_cb.c:1040
 msgid "Error opening file"
 msgstr "Chyba při otevírání souboru"
 
-#: src/gwget_data.c:706 src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1021
 msgid "Couldn't open the file"
 msgstr "Nemohu otevřít soubor"
 
-#: src/main_window.c:367
+#: ../src/main_window.c:422
 msgid "File Name"
 msgstr "Název souboru"
 
-#: src/main_window.c:374
+#: ../src/main_window.c:430
 msgid "State"
 msgstr "Stav"
 
-#: src/main_window.c:385
+#: ../src/main_window.c:442
 msgid "Current Size"
 msgstr "Momentální velikost"
 
-#: src/main_window.c:396
+#: ../src/main_window.c:454
 msgid "Total Size"
 msgstr "Celková velikost"
 
-#: src/main_window.c:406 src/main_window.c:412
+#: ../src/main_window.c:465 ../src/main_window.c:471
 msgid "Percentage"
 msgstr "Procenta"
 
-#: src/main_window.c:417
+#: ../src/main_window.c:478
 msgid "Elapsed Time"
 msgstr "Uplynulý čas"
 
-#: src/main_window.c:427
+#: ../src/main_window.c:489
 msgid "Remaining Time"
 msgstr "Zbývající čas"
 
-#: src/main_window.c:437
+#: ../src/main_window.c:500
 msgid "Speed"
 msgstr "Rychlost"
 
-#: src/main_window.c:483
+#: ../src/main_window.c:547
 msgid "Error starting the download"
 msgstr "Chyba při spouštění stahování"
 
-#: src/main_window.c:483
+#: ../src/main_window.c:547
 msgid "There was an unexpected error starting the download"
 msgstr "Při spouštění stahování došlo k neočekávané chybě"
 
-#: src/main_window.c:715
+#: ../src/main_window.c:784
 msgid "Cancel current downloads?"
 msgstr "Zrušit atktuální stahování?"
 
-#: src/main_window.c:716
+#: ../src/main_window.c:785
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -554,23 +592,23 @@ msgstr ""
 "Zbývá alespoň jedno neaktivní atahování. Opravdu přerušit všechny běžící "
 "přenosy?"
 
-#: src/main_window_cb.c:94
+#: ../src/main_window_cb.c:82
 msgid "Error in download"
 msgstr "Chyba při stahování"
 
-#: src/main_window_cb.c:177
+#: ../src/main_window_cb.c:169
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:180
+#: ../src/main_window_cb.c:172
 msgid "Download Manager for GNOME."
 msgstr "Správce stahování pro GNOME."
 
-#: src/main_window_cb.c:516 src/new_window.c:138
+#: ../src/main_window_cb.c:515 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "Zvolte adresář"
 
-#: src/main_window_cb.c:572
+#: ../src/main_window_cb.c:571
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -579,75 +617,100 @@ msgstr ""
 "Opravdu zrušit aktuální stahování?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:573
+#: ../src/main_window_cb.c:572
 msgid "Cancel download?"
 msgstr "Zrušit stahování?"
 
-#: src/main_window_cb.c:601
+#: ../src/main_window_cb.c:600
 msgid "Really remove completed downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu dokončená stahování?"
 
-#: src/main_window_cb.c:630
+#: ../src/main_window_cb.c:629
 msgid "Really remove inactive downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu neaktivní stahování?"
 
-#: src/main_window_cb.c:659
+#: ../src/main_window_cb.c:658
 msgid "Really remove all downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu všechna stahování?"
 
-#: src/systray.c:150
+#: ../src/main_window_cb.c:975
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr "Nové omezení rychlosti stahování bude mít vliv jen na nová nebo znovu spuštěná stahování"
+
+#: ../src/main_window_cb.c:990
+msgid "Remove this download ?"
+msgstr "Odstranit toto stahování?"
+
+#: ../src/main_window_cb.c:990
+msgid "Really remove this download from the list?"
+msgstr "Opravdu odstranit toto stahování ze seznamu?"
+
+#: ../src/main_window_cb.c:1040
+msgid "Couldn't open the folder"
+msgstr "Nemohu otevřít adresář"
+
+#: ../src/systray.c:152
 msgid "Nothing"
 msgstr "Nic"
 
-#: src/systray.c:157
+#: ../src/systray.c:159
 msgid "Downloads"
 msgstr "Stahování"
 
-#: src/wget-log.c:117
+#: ../src/wget-log.c:120
 msgid "Socket error"
 msgstr "Chyba socketu"
 
-#: src/wget-log.c:119
+#: ../src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "Spojení odmítnuto\n"
 
-#: src/wget-log.c:121
+#: ../src/wget-log.c:124
 msgid "No route to host"
 msgstr "K počítači nevede cesta"
 
-#: src/wget-log.c:123
+#: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "Spojení odmítnuto při stahování URL:\n"
 
-#: src/wget-log.c:125
+#: ../src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "Počítač nenalezen\n"
 
-#: src/wget-log.c:127
+#: ../src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Nepodporovaný protokol - pro https: potřebujete wget >= 1.7\n"
 
-#: src/wget-log.c:130
+#: ../src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "Odmítám přepsat existující soubor"
 
-#: src/wget-log.c:132
+#: ../src/wget-log.c:135
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: src/wget-log.c:143 src/wget-log.c:149
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "Soubor nenalezen"
 
-#: src/wget-log.c:156
+#: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Nemohu pokračovat ve stahování, existující místní soubor koliduje se "
 "vzdáleným souborem"
 
-#: src/wget-log.c:214
+#: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "Nemohu zapisovat do cílového adresáře"
+
+#~ msgid "Remove"
+#~ msgstr "Odstranit"
+
+#~ msgid "Remove completed downloads from list"
+#~ msgstr "Odstranit ze seznamu dokončená stahování"
+
+#~ msgid "Remove inactive downloads from list"
+#~ msgstr "Odstranit ze seznamu neaktivní stahování"
 
 #~ msgid "<b>General</b>"
 #~ msgstr "<b>Obecné</b>"
