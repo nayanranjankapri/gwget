@@ -1,3 +1,9 @@
+2005-08-08  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Set correct name of properties_menuitem.
+	* src/gwget_data.c (gwget_data_set_menus): Check if the gwgetdata is
+	null. If so, unselect all menuitems in download menu.
+
 2005-07-31  Francisco Javier F. Serrador  <serrador@cvs.gnome.org>
 
 	* data/gwget.glade: s/Stat_ubar/Stat_usbar/

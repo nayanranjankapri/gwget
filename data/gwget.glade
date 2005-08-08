@@ -70,7 +70,7 @@
 			  <signal name="activate" handler="continue_all_downloads" last_modification_time="Sun, 24 Jul 2005 12:02:10 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image66">
+			    <widget class="GtkImage" id="image142">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-refresh</property>
 			      <property name="icon_size">1</property>
@@ -91,7 +91,7 @@
 			  <signal name="activate" handler="stop_all_downloads" last_modification_time="Sun, 24 Jul 2005 12:02:28 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image67">
+			    <widget class="GtkImage" id="image143">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-stop</property>
 			      <property name="icon_size">1</property>
@@ -137,7 +137,7 @@
 			  <property name="use_underline">True</property>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image68">
+			    <widget class="GtkImage" id="image144">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-delete</property>
 			      <property name="icon_size">1</property>
@@ -219,7 +219,7 @@
 			  <signal name="activate" handler="on_popup_pause_button_clicked" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image69">
+			    <widget class="GtkImage" id="image145">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-stop</property>
 			      <property name="icon_size">1</property>
@@ -241,7 +241,7 @@
 			  <signal name="activate" handler="on_popup_continue_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image70">
+			    <widget class="GtkImage" id="image146">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-refresh</property>
 			      <property name="icon_size">1</property>
@@ -263,7 +263,7 @@
 			  <signal name="activate" handler="on_cancel_download_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image71">
+			    <widget class="GtkImage" id="image147">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-cancel</property>
 			      <property name="icon_size">1</property>
@@ -283,7 +283,7 @@
 		      </child>
 
 		      <child>
-			<widget class="GtkImageMenuItem" id="propiedades1">
+			<widget class="GtkImageMenuItem" id="properties_menuitem">
 			  <property name="visible">True</property>
 			  <property name="stock_item">GNOMEUIINFO_MENU_PROPERTIES_ITEM</property>
 			  <signal name="activate" handler="on_properties_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
