@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-07 00:44+0300\n"
-"PO-Revision-Date: 2005-06-07 00:50+0300\n"
+"POT-Creation-Date: 2005-08-09 20:03+0300\n"
+"PO-Revision-Date: 2005-08-09 00:50+0300\n"
 "Last-Translator: Maxim Dziumanenko <mvd@mylinux.ua>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "GNU GPL версії 2"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Менеджер завантажень для GNOME"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:182
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr "Максим Дзюманенко <mvd@mylinux.ua>"
 
@@ -56,123 +56,151 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: ../data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "Скасувати завантаження"
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "Скасувати завантаження"
+
+#: ../data/gwget.glade.h:7
 msgid "Continue"
 msgstr "Продовжити"
 
-#: ../data/gwget.glade.h:6 ../src/main_window_cb.c:129
-#: ../src/main_window_cb.c:578 ../src/main_window_cb.c:675
+#: ../data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "Продовжити завантаження"
+
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
+#: ../src/main_window_cb.c:579 ../src/main_window_cb.c:676
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Менеджер завантажень"
 
-#: ../data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
 msgid "Information"
 msgstr "Інформація"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:11
 msgid "Local Directory:"
 msgstr "Локальний каталог:"
 
-#: ../data/gwget.glade.h:9
+#: ../data/gwget.glade.h:12
 msgid "Local File:"
 msgstr "Локальний файл:"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "Мультимедійні файли (відео та зображення)"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:14
 msgid "New download"
 msgstr "Нове завантаження"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:15
+msgid "Open"
+msgstr "Відкрити"
+
+#: ../data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "Відкрити каталог"
+
+#: ../data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "Відкрити цільовий каталог"
+
+#: ../data/gwget.glade.h:18
 msgid "Pause"
 msgstr "Призупинити"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "Призупинити усі"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "Призупинити усі завантаження"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "Призупинити завантаження"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "Призупинити завантаження"
+
+#: ../data/gwget.glade.h:23
 msgid "Properties"
 msgstr "Властивості"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:24
 msgid "Question"
 msgstr "Запитання"
 
-#: ../data/gwget.glade.h:18 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Рекурсивно"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "Параметри рекурсії"
 
-#: ../data/gwget.glade.h:20
-msgid "Remove"
-msgstr "Видалити"
-
-#: ../data/gwget.glade.h:21 ../src/main_window_cb.c:657
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:658
 msgid "Remove all"
 msgstr "Видалити все"
 
-#: ../data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "Видалити усі завантаження зі списку"
-
-#: ../data/gwget.glade.h:23 ../src/main_window_cb.c:599
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:600
 msgid "Remove completed"
 msgstr "Видалити завершені"
 
-#: ../data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "Видалити завершені завантаження зі списку"
+#: ../data/gwget.glade.h:29
+msgid "Remove from List"
+msgstr "Видалити зі списку"
 
-#: ../data/gwget.glade.h:25 ../src/main_window_cb.c:628
+#: ../data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "Видалити зі списку"
+
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:629
 msgid "Remove inactive"
 msgstr "Видалити неактивні"
 
-#: ../data/gwget.glade.h:26
-msgid "Remove inactive downloads from list"
-msgstr "Видалити неактивні завантаження зі списку"
-
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:32
 msgid "Resume all"
-msgstr "Видалити все"
+msgstr "Продовжити все"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:33
 msgid "Resume all downloads"
-msgstr "Видалити всі завантаження"
+msgstr "Продовжити всі завантаження"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:34
+msgid "Stat_usbar"
+msgstr "_Рядок стану"
+
+#: ../data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
-msgstr "Зупинити та видалити завантажені файли"
+msgstr "Зупинити та видалити завантажений файл"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "Лише індексний файл"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "Цей сайт (дзеркало)"
 
-#: ../data/gwget.glade.h:32 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:39
+msgid "_Download"
+msgstr "_Завантажити"
+
+#: ../data/gwget.glade.h:40
 msgid "_New"
 msgstr "_Створити"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "_Панель інструментів"
 
@@ -258,15 +286,27 @@ msgstr "Показувати стовпчик відсотку"
 
 #: ../data/gwget.schemas.in.h:20
 msgid "View remaining time column"
-msgstr "показувати стовпчик часу, що лишився"
+msgstr "Показувати стовпчик часу, що лишився"
 
 #: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "Показувати рядок стану"
+
+#: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
 msgstr "Показувати панель інструментів"
 
-#: ../data/gwget.schemas.in.h:22
+#: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
-msgstr "Показувати стовпчик загальног розміру"
+msgstr "Показувати стовпчик загального розміру"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Відображати рядок стану."
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "Чи відображати рядок стану."
 
 #: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
@@ -285,142 +325,138 @@ msgid "   "
 msgstr "   "
 
 #: ../data/preferences.glade.h:3
-msgid "*"
-msgstr "*"
-
-#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Поведінка</span>"
 
-#: ../data/preferences.glade.h:5
+#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Стовпчики</span>"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.glade.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">Загальні</span>"
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Посилання</span>"
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Параметри проксі</span>"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.glade.h:8
 msgid "Column List"
 msgstr "Стовпчики"
 
-#: ../data/preferences.glade.h:10
+#: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
 msgstr "_Типові параметри мережі GNOME"
 
-#: ../data/preferences.glade.h:11
+#: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
 msgstr "_Пряме з'єднання з Інтернет"
 
-#: ../data/preferences.glade.h:12
+#: ../data/preferences.glade.h:11
 msgid "Do_wnload Speed"
 msgstr "_Швидкість завантаження"
 
-#: ../data/preferences.glade.h:13
+#: ../data/preferences.glade.h:12
 msgid "Don't _create directories"
 msgstr "Не _створювати каталоги"
 
-#: ../data/preferences.glade.h:14
+#: ../data/preferences.glade.h:13
 msgid "Follow _relative links only"
 msgstr "Переходити лише за _відносними посиланнями"
 
-#: ../data/preferences.glade.h:15
+#: ../data/preferences.glade.h:14
 msgid "General"
 msgstr "Загальні"
 
-#: ../data/preferences.glade.h:16
+#: ../data/preferences.glade.h:15
 msgid "Limit _number of simultaneous download to:"
 msgstr "Обмежувати _кількість одночасних завантажень:"
 
-#: ../data/preferences.glade.h:17
+#: ../data/preferences.glade.h:16
 msgid "Network"
 msgstr "Мережа"
 
-#: ../data/preferences.glade.h:18
+#: ../data/preferences.glade.h:17
 msgid "P_ort:"
 msgstr "_Порт:"
 
-#: ../data/preferences.glade.h:19
+#: ../data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "Параметри"
 
-#: ../data/preferences.glade.h:20
+#: ../data/preferences.glade.h:19
 msgid "Pro_xy:"
 msgstr "П_роксі:"
 
-#: ../data/preferences.glade.h:22
+#: ../data/preferences.glade.h:21
 msgid "Remaining _Time"
 msgstr "_Час що залишився"
 
-#: ../data/preferences.glade.h:23
+#: ../data/preferences.glade.h:22
 msgid "Sa_ve in:"
 msgstr "З_берегти у:"
 
-#: ../data/preferences.glade.h:24
+#: ../data/preferences.glade.h:23
 msgid "Total _Size"
 msgstr "З_агальний розмір"
 
-#: ../data/preferences.glade.h:25
+#: ../data/preferences.glade.h:24
 msgid "_Ask where to save for each download"
 msgstr "_Підтверджувати збереження кожного завантаження"
 
-#: ../data/preferences.glade.h:26
+#: ../data/preferences.glade.h:25
 msgid "_Continue downloads on startup"
 msgstr "П_родовжувати завантаження після запуску"
 
-#: ../data/preferences.glade.h:27
+#: ../data/preferences.glade.h:26
 msgid "_Convert links"
 msgstr "Пере_творювати посилання"
 
-#: ../data/preferences.glade.h:28
+#: ../data/preferences.glade.h:27
 msgid "_Current Size"
 msgstr "_Поточний розмір"
 
-#: ../data/preferences.glade.h:29
+#: ../data/preferences.glade.h:28
 msgid "_Download page requisites"
 msgstr "_Реквізити сторінки завантаження"
 
-#: ../data/preferences.glade.h:30
+#: ../data/preferences.glade.h:29
 msgid "_Elapsed Time"
 msgstr "_Минуло часу"
 
-#: ../data/preferences.glade.h:31
+#: ../data/preferences.glade.h:30
 msgid "_Limit download speed to:"
 msgstr "_Обмежувати швидкість до:"
 
-#: ../data/preferences.glade.h:32
+#: ../data/preferences.glade.h:31
 msgid "_Manual proxy configuration"
 msgstr "_Ручне налаштовування проксі-сервера"
 
-#: ../data/preferences.glade.h:33
+#: ../data/preferences.glade.h:32
 msgid "_Maximum depth level:"
 msgstr "_Максимальна глибина:"
 
-#: ../data/preferences.glade.h:34
+#: ../data/preferences.glade.h:33
 msgid "_Number of retries:"
 msgstr "_Кількість спроб:"
 
-#: ../data/preferences.glade.h:35
+#: ../data/preferences.glade.h:34
 msgid "_Open files automatically after download"
 msgstr "_Відкривати файли після завантаження"
 
-#: ../data/preferences.glade.h:36
+#: ../data/preferences.glade.h:35
 msgid "_Percentage"
 msgstr "_Відсотки"
 
-#: ../data/preferences.glade.h:37
+#: ../data/preferences.glade.h:36
 msgid "files"
 msgstr "файли"
 
-#: ../data/preferences.glade.h:38
+#: ../data/preferences.glade.h:37
 msgid "kB/sec"
 msgstr "кб/сек"
 
@@ -440,135 +476,136 @@ msgstr "Невідомо"
 msgid "Failed"
 msgstr "Помилка"
 
-#: ../src/gwget_data.c:187
+#: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "Призупинено"
 
-#: ../src/gwget_data.c:221
+#: ../src/gwget_data.c:229
 msgid "Waiting"
 msgstr "Очікування"
 
-#: ../src/gwget_data.c:223
+#: ../src/gwget_data.c:231
 msgid "Not Started"
 msgstr "Не розпочато"
 
-#: ../src/gwget_data.c:225
+#: ../src/gwget_data.c:233
 msgid "Not Running"
 msgstr "Не запущено"
 
-#: ../src/gwget_data.c:227
+#: ../src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "Не з'єднано"
 
-#: ../src/gwget_data.c:229
+#: ../src/gwget_data.c:237
 msgid "Connected"
 msgstr "З'єднано"
 
-#: ../src/gwget_data.c:231
+#: ../src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "Отримується"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:241
 msgid "Completed"
 msgstr "Завершено"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
-"Завантаження заверщено\n"
+"Завантаження завершено\n"
 "(%s)"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:253
 msgid "Error"
 msgstr "Помилка"
 
-#: ../src/gwget_data.c:667
+#: ../src/gwget_data.c:676
 msgid "Unable to add this download"
 msgstr "Не вдається додати це завантаження"
 
-#: ../src/gwget_data.c:668
+#: ../src/gwget_data.c:677
 msgid "This download is already added"
 msgstr "Це завантаження вже додано"
 
-#: ../src/gwget_data.c:716 ../src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1021 ../src/main_window_cb.c:1040
 msgid "Error opening file"
 msgstr "Помилка відкривання файлу"
 
-#: ../src/gwget_data.c:716 ../src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1021
 msgid "Couldn't open the file"
 msgstr "Не вдається відкрити файл"
 
-#: ../src/main_window.c:370
+#: ../src/main_window.c:422
 msgid "File Name"
 msgstr "Назва файлу"
 
-#: ../src/main_window.c:377
+#: ../src/main_window.c:430
 msgid "State"
 msgstr "Стан"
 
-#: ../src/main_window.c:388
+#: ../src/main_window.c:442
 msgid "Current Size"
 msgstr "поточний розмір"
 
-#: ../src/main_window.c:399
+#: ../src/main_window.c:454
 msgid "Total Size"
 msgstr "Загальний розмір"
 
-#: ../src/main_window.c:409 ../src/main_window.c:415
+#: ../src/main_window.c:465 ../src/main_window.c:471
 msgid "Percentage"
 msgstr "Відсоток"
 
-#: ../src/main_window.c:420
+#: ../src/main_window.c:478
 msgid "Elapsed Time"
 msgstr "Минуло часу"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:489
 msgid "Remaining Time"
 msgstr "Залишилось часу"
 
-#: ../src/main_window.c:440
+#: ../src/main_window.c:500
 msgid "Speed"
 msgstr "Швидкість"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:547
 msgid "Error starting the download"
 msgstr "Помилка запуску завантаження"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:547
 msgid "There was an unexpected error starting the download"
-msgstr "Неочікувана помилка запуску заванатження"
+msgstr "Неочікувана помилка запуску завантаження"
 
-#: ../src/main_window.c:720
+#: ../src/main_window.c:784
 msgid "Cancel current downloads?"
 msgstr "Скасувати поточне завантаження?"
 
-#: ../src/main_window.c:721
+#: ../src/main_window.c:785
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
-msgstr ""
-"Не завершено принаймні одне завантаження. Скасувати усі завантаження?"
+msgstr "Не завершено принаймні одне завантаження. Скасувати усі завантаження?"
 
-#: ../src/main_window_cb.c:94
+#: ../src/main_window_cb.c:82
 msgid "Error in download"
 msgstr "Помилка при завантаженні"
 
-#: ../src/main_window_cb.c:177
+#: ../src/main_window_cb.c:169
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window_cb.c:180
+#: ../src/main_window_cb.c:172
 msgid "Download Manager for GNOME."
 msgstr "Менеджер завантажень для GNOME."
 
-#: ../src/main_window_cb.c:514 ../src/new_window.c:138
+#: ../src/main_window_cb.c:515 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "Вибрати теку"
 
-#: ../src/main_window_cb.c:570
+#: ../src/main_window_cb.c:571
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -577,21 +614,37 @@ msgstr ""
 "Скасувати поточне завантаження?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:571
+#: ../src/main_window_cb.c:572
 msgid "Cancel download?"
 msgstr "Скасувати завантаження?"
 
-#: ../src/main_window_cb.c:599
+#: ../src/main_window_cb.c:600
 msgid "Really remove completed downloads from the list?"
 msgstr "Видалити завершені завантаження зі списку?"
 
-#: ../src/main_window_cb.c:628
+#: ../src/main_window_cb.c:629
 msgid "Really remove inactive downloads from the list?"
 msgstr "Видалити неактивні завантаження зі списку?"
 
-#: ../src/main_window_cb.c:657
+#: ../src/main_window_cb.c:658
 msgid "Really remove all downloads from the list?"
 msgstr "Видалити усі завантаження зі списку?"
+
+#: ../src/main_window_cb.c:975
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr "Нове обмеження швидкості завантаження впливатиме лише на нові чи перезапущені завантаження"
+
+#: ../src/main_window_cb.c:990
+msgid "Remove this download ?"
+msgstr "Видалити це завантаження ?"
+
+#: ../src/main_window_cb.c:990
+msgid "Really remove this download from the list?"
+msgstr "Дійсно видалити усі завантаження зі списку?"
+
+#: ../src/main_window_cb.c:1040
+msgid "Couldn't open the folder"
+msgstr "Не вдається відкрити теку"
 
 #: ../src/systray.c:152
 msgid "Nothing"
@@ -601,46 +654,48 @@ msgstr "Нічого"
 msgid "Downloads"
 msgstr "Завантаження"
 
-#: ../src/wget-log.c:118
+#: ../src/wget-log.c:120
 msgid "Socket error"
 msgstr "Помилка сокету"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "Відмова у з'єднанні\n"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:124
 msgid "No route to host"
 msgstr "Вузол не знайдено"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "Відмова у з'єднанні при завантаженні URL:\n"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "Вузол не знайдено\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Непідтримуваний протокол -  https підтримується wget >= 1.7:\n"
 
-#: ../src/wget-log.c:131
+#: ../src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "Помилка при обрізанні існуючого файлу"
 
-#: ../src/wget-log.c:133
+#: ../src/wget-log.c:135
 msgid "Unknown error"
 msgstr "Невідома помилка"
 
-#: ../src/wget-log.c:144 ../src/wget-log.c:150
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "Файл не знайдено"
 
-#: ../src/wget-log.c:157
+#: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Не вдається продовжити завантаження, існуючий локальний файл конфліктує з віддаленим"
+msgstr ""
+"Не вдається продовжити завантаження, існуючий локальний файл конфліктує з "
+"віддаленим"
 
-#: ../src/wget-log.c:216
+#: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "Не вдається записати цільовий каталог"
