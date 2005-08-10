@@ -1,4 +1,23 @@
 ==============
+Version 0.96
+==============
+Features:
+	* Rework the menus structure. The UI is more consistent and easy to use. 
+	* Hide/Show status bar option.
+	* Added a "Download" top menu item. 
+	* Open directory when double click in recursive downloads.
+Fixes:
+	* Support fot file > 2Gb. Needs wget 1.10 (Adel Gadllah).
+	* Allow max speed preference be more than 100 kb/sec
+	* Remove progress bar from status bar.
+	* Set the correct file size and remaining time in recursive downloads.
+	* Really fix ftp handle with proxy (bug #173084).
+
+Translations:
+	* Update: fr (Stephane Roy), fi (Ilkka Tuohela), nl (Vincent van Adrighem), es (Francisco Javier F. Serrador), bg (Vladimir Petkov), eu (Iñaki Larrañaga), zh_TW (Chao-Hsiung Liao), en_CA (Adam Weinberger), sk (Marcel Telka)
+	* New: uk (Maxim Dziumanenko)
+
+==============
 Version 0.95
 ==============
 

@@ -1,5 +1,10 @@
 2005-08-10  David Sedeño <david@alderia.com>
 
+	* configure.in: Version 0.96
+	* NEWS for 0.96
+
+2005-08-10  David Sedeño <david@alderia.com>
+
 	* README: Update homepage.
 
 2005-08-10  David Sedeño <david@alderia.com>
