@@ -1,5 +1,9 @@
 2005-08-10  David Sedeño <david@alderia.com>
 
+	* README: Update homepage.
+
+2005-08-10  David Sedeño <david@alderia.com>
+
 	* src/main_window_cb.c (on_file_menuitem_activate): Set the correct
 	active state of menuitems.
 	* include/main_window_cb.h (on_file_menuitem_activate,
