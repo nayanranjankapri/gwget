@@ -961,6 +961,22 @@ gint count_download_in_progress(void) {
 	return number;
 }
 
+/* Count all downloads */
+gint
+count_all_downloads(void)
+{
+	GtkTreeIter iter;
+	gint number;
+	gboolean iter_valid;
+
+	number=0;
+	for (iter_valid = gtk_tree_model_get_iter_first (model, &iter);iter_valid;iter_valid = gtk_tree_model_iter_next (model, &iter)) {
+		number++;
+	}
+	return number;
+}
+
+
 void
 on_download_menu_activate(void) 
 {
@@ -1044,4 +1060,19 @@ on_open_directory_activate (GtkWidget *widget, gpointer data)
 		run_dialog(_("Error opening file"),_("Couldn't open the folder"));
 		return;
 	}
+}
+
+void
+on_file_menuitem_activate (GtkWidget *widget, gpointer data)
+{
+
+	if (count_all_downloads()==0)
+	{
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_all_menuitem"), FALSE);
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"resume_all_menuitem"), FALSE);
+	} else {
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_all_menuitem"), TRUE);
+		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"resume_all_menuitem"), TRUE);
+	}
+
 }

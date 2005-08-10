@@ -78,5 +78,8 @@ void on_download_menu_activate(void);
 void on_open_download_activate(GtkWidget *widget, gpointer data);
 void on_remove_download_activate(GtkWidget *widget, gpointer data);
 void on_open_directory_activate (GtkWidget *widget, gpointer data);
+void on_file_menuitem_activate (GtkWidget *widget, gpointer data);
+gint count_all_downloads(void);
+
 
 #endif
