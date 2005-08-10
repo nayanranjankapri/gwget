@@ -1,3 +1,8 @@
+2005-08-10  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (new_download): If the download it's recursive,
+	set the icon "gtk-refresh".
+
 2005-08-08  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Set correct name of properties_menuitem.

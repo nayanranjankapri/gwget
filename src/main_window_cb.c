@@ -221,10 +221,14 @@ new_download(GwgetData* gwgetdata)
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
 	
-	mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
 	theme = gtk_icon_theme_get_default ();
-	gwgetdata->icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
-									mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
+	if (!gwgetdata->recursive) {
+		mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
+		gwgetdata->icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
+	 							mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
+	} else {
+		gwgetdata->icon_name = g_strdup("gtk-refresh");
+	}
 	gtk_icon_size_lookup (GTK_ICON_SIZE_MENU, &width, &height);
 	width *= 2;
 	height *= 2;
