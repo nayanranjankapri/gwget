@@ -68,7 +68,7 @@
 	 <type>bool</type>
 	 <default>true</default>
 	 <locale name="C">
-	   <short>Ask save in for each new download</short>
+	   <short>Ask where to save each new download</short>
 	   <long>If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user.</long>
 	 </locale>
 	</schema>

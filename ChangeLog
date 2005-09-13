@@ -1,5 +1,6 @@
 2005-09-13  David Sedeño <david@alderia.com>
 
+	* data/gwget.schemas.in: Correct info.
 	* gwget.desktop.in: Update to follow the spec.
 
 2005-08-10  David Sedeño <david@alderia.com>
