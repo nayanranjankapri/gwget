@@ -1,11 +1,17 @@
-
 [Desktop Entry]
-Name=Download Manager
+Version=1.0
+Encoding=UTF-8
+Name=Gwget Download Manager
+GenericName=Download Manager
 Comment=Download files from the Internet
 Exec=gwget
+StartupNotify=true
 Icon=gwget.png
 Terminal=false
-MultipleArgs=false
+X-MultipleArgs=false
 Type=Application
-Categories=Application;Network
-
+Categories=Application;Network;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gwget
+X-GNOME-Bugzilla-Component=General
+X-GNOME-Bugzilla-Version=@VERSION@
