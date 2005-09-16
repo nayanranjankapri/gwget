@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gwget Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-08-18 04:18+0000\n"
-"PO-Revision-Date: 2005-08-18 23:44+0930\n"
+"PO-Revision-Date: 2005-09-16 17:06+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgstr "Tập tin cục bộ:"
 
 #: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
-msgstr "Tập tin đa phương tiện (ảnh động và ảnh)"
+msgstr "Tập tin đa vật chứa (ảnh động và ảnh)"
 
 #: ../data/gwget.glade.h:14
 msgid "New download"
@@ -188,7 +188,7 @@ msgstr "Chỉ có tập tin chỉ mục."
 
 #: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
-msgstr "Nơi Mạng này (nhân bản)"
+msgstr "Chỗ Mạng này (nhân bản)"
 
 #: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
@@ -234,7 +234,7 @@ msgstr "Theo các liên kết tương đối"
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
-msgstr "Nếu đúng thì luôn luôn hỏi tôi nhập danh mục đích khi bắt đầu tải về tập tin mới.\n"
+msgstr "Nếu đúng thì luôn luôn hỏi tôi nhập thư mục đích khi bắt đầu tải về tập tin mới.\n"
 "Còn nếu sai, luôn luôn lưu tập tin tải về vào thư mục mặc định, không hỏi người dùng về gì."
 
 #: ../data/gwget.schemas.in.h:8
@@ -387,7 +387,7 @@ msgstr "_Cổng:"
 
 #: ../data/preferences.glade.h:18
 msgid "Preferences"
-msgstr "Sở thích"
+msgstr "Tùy thích"
 
 #: ../data/preferences.glade.h:19
 msgid "Pro_xy:"
@@ -515,7 +515,7 @@ msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
-"Tải về xong rồi.\n"
+"Việc tải về hoàn thôành\n"
 "(%s)"
 
 #: ../src/gwget_data.c:253
@@ -528,7 +528,7 @@ msgstr "Không thể thêm tải về này"
 
 #: ../src/gwget_data.c:677
 msgid "This download is already added"
-msgstr "Tải về này đã được thêm rồi."
+msgstr "Việc tải về này đã được thêm."
 
 #: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
 #: ../src/main_window_cb.c:1041 ../src/main_window_cb.c:1060
@@ -606,7 +606,7 @@ msgstr "Bộ quản lý tải về cho Gnome"
 
 #: ../src/main_window_cb.c:519 ../src/new_window.c:138
 msgid "Select Folder"
-msgstr "Chọn danh mục"
+msgstr "Chọn thư mục"
 
 #: ../src/main_window_cb.c:575
 #, c-format
@@ -647,7 +647,7 @@ msgstr "Thật sự muốn loại bỏ mục tải về này ra khỏi danh sác
 
 #: ../src/main_window_cb.c:1060
 msgid "Couldn't open the folder"
-msgstr "Không thể mở danh mục"
+msgstr "Không thể mở thư mục"
 
 #: ../src/systray.c:152
 msgid "Nothing"
