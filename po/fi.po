@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-06 05:22+0300\n"
-"PO-Revision-Date: 2005-09-06 05:40+0300\n"
+"POT-Creation-Date: 2005-09-20 06:37+0300\n"
+"PO-Revision-Date: 2005-09-20 06:40+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -213,8 +213,8 @@ msgid "_Toolbar"
 msgstr "_Työkalurivi"
 
 #: ../data/gwget.schemas.in.h:1
-msgid "Ask save in for each new download"
-msgstr "Kysy tallennusta jokaisen uuden noudon kohdalla"
+msgid "Ask where to save each new download"
+msgstr "Kysy minne kukin noudettu tiedosto tallennetaan"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -241,8 +241,8 @@ msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Jos tosi, kysytään aina kohdekansiota kun aloitetaan uutta noutoa."
-"Jos epätosi, tallennetaan aina oletuskansioon kysymättä käyttäjältä."
+"Jos tosi, kysytään aina kohdekansiota kun aloitetaan uutta noutoa.Jos "
+"epätosi, tallennetaan aina oletuskansioon kysymättä käyttäjältä."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -333,8 +333,8 @@ msgid "   "
 msgstr "   "
 
 #: ../data/preferences.glade.h:3
-msgid "<span weight=\"bold\">behavior</span>"
-msgstr "<span weight=\"bold\">toiminta</span>"
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Toiminta</span>"
 
 #: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
@@ -642,7 +642,8 @@ msgstr "Haluatko poistaa kaikki tiedostonsiirrot luettelosta?"
 
 #: ../src/main_window_cb.c:995
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr "Uusi siirtonopeuden rajoitus vaikuttaa vain uusiin tai uudestaan "
+msgstr ""
+"Uusi siirtonopeuden rajoitus vaikuttaa vain uusiin tai uudestaan "
 "aloitettuihin noutoihin"
 
 #: ../src/main_window_cb.c:1010
@@ -711,6 +712,9 @@ msgstr ""
 #: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "Kohdekansioon ei voi kirjoittaa"
+
+#~ msgid "Ask save in for each new download"
+#~ msgstr "Kysy tallennusta jokaisen uuden noudon kohdalla"
 
 #~ msgid "File Type"
 #~ msgstr "Tiedostotyyppi"
