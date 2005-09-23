@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-01 15:42-0400\n"
+"POT-Creation-Date: 2005-09-23 09:54-0400\n"
 "PO-Revision-Date: 2005-08-01 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -72,8 +72,8 @@ msgstr "Continue"
 msgid "Continue with the download"
 msgstr "Continue with the download"
 
-#: data/gwget.glade.h:9 src/main_window_cb.c:121 src/main_window_cb.c:579
-#: src/main_window_cb.c:676
+#: data/gwget.glade.h:9 src/main_window_cb.c:121 src/main_window_cb.c:583
+#: src/main_window_cb.c:680
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Download Manager"
 
@@ -145,11 +145,11 @@ msgstr "Recursive"
 msgid "Recursive options"
 msgstr "Recursive options"
 
-#: data/gwget.glade.h:27 src/main_window_cb.c:658
+#: data/gwget.glade.h:27 src/main_window_cb.c:662
 msgid "Remove all"
 msgstr "Remove all"
 
-#: data/gwget.glade.h:28 src/main_window_cb.c:600
+#: data/gwget.glade.h:28 src/main_window_cb.c:604
 msgid "Remove completed"
 msgstr "Remove completed"
 
@@ -161,7 +161,7 @@ msgstr "Remove from List"
 msgid "Remove from list"
 msgstr "Remove from list"
 
-#: data/gwget.glade.h:31 src/main_window_cb.c:629
+#: data/gwget.glade.h:31 src/main_window_cb.c:633
 msgid "Remove inactive"
 msgstr "Remove inactive"
 
@@ -206,8 +206,8 @@ msgid "_Toolbar"
 msgstr "_Toolbar"
 
 #: data/gwget.schemas.in.h:1
-msgid "Ask save in for each new download"
-msgstr "Ask save in for each new download"
+msgid "Ask where to save each new download"
+msgstr "Ask where to save each new download"
 
 #: data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -530,12 +530,12 @@ msgstr "Unable to add this download"
 msgid "This download is already added"
 msgstr "This download is already added"
 
-#: src/gwget_data.c:725 src/main_window_cb.c:91 src/main_window_cb.c:1021
-#: src/main_window_cb.c:1040
+#: src/gwget_data.c:725 src/main_window_cb.c:91 src/main_window_cb.c:1041
+#: src/main_window_cb.c:1060
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: src/gwget_data.c:725 src/main_window_cb.c:91 src/main_window_cb.c:1021
+#: src/gwget_data.c:725 src/main_window_cb.c:91 src/main_window_cb.c:1041
 msgid "Couldn't open the file"
 msgstr "Could not open the file"
 
@@ -603,11 +603,11 @@ msgstr "Gwget"
 msgid "Download Manager for GNOME."
 msgstr "Download Manager for GNOME."
 
-#: src/main_window_cb.c:515 src/new_window.c:138
+#: src/main_window_cb.c:519 src/new_window.c:138
 msgid "Select Folder"
 msgstr "Select Folder"
 
-#: src/main_window_cb.c:571
+#: src/main_window_cb.c:575
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -616,35 +616,35 @@ msgstr ""
 "Really cancel current download?\n"
 "(URL: %s)"
 
-#: src/main_window_cb.c:572
+#: src/main_window_cb.c:576
 msgid "Cancel download?"
 msgstr "Cancel download?"
 
-#: src/main_window_cb.c:600
+#: src/main_window_cb.c:604
 msgid "Really remove completed downloads from the list?"
 msgstr "Really remove completed downloads from the list?"
 
-#: src/main_window_cb.c:629
+#: src/main_window_cb.c:633
 msgid "Really remove inactive downloads from the list?"
 msgstr "Really remove inactive downloads from the list?"
 
-#: src/main_window_cb.c:658
+#: src/main_window_cb.c:662
 msgid "Really remove all downloads from the list?"
 msgstr "Really remove all downloads from the list?"
 
-#: src/main_window_cb.c:975
+#: src/main_window_cb.c:995
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "New download speed limit will apply only to new or restarted downloads"
 
-#: src/main_window_cb.c:990
+#: src/main_window_cb.c:1010
 msgid "Remove this download ?"
 msgstr "Remove this download?"
 
-#: src/main_window_cb.c:990
+#: src/main_window_cb.c:1010
 msgid "Really remove this download from the list?"
 msgstr "Really remove this download from the list?"
 
-#: src/main_window_cb.c:1040
+#: src/main_window_cb.c:1060
 msgid "Couldn't open the folder"
 msgstr "Could not open the folder"
 
