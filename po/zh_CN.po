@@ -7,360 +7,506 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-20 04:41+0100\n"
-"PO-Revision-Date: 2004-12-20 15:21+0800\n"
+"POT-Creation-Date: 2005-10-06 11:37+0200\n"
+"PO-Revision-Date: 2005-10-07 22:17+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/GNOME_Gwget.server.in.in.h:1
+#: ../data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
 msgstr "gwget 应用程序"
 
-#: data/GNOME_Gwget.server.in.in.h:2
+#: ../data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
 msgstr "gwget 自动化工厂"
 
-#: data/about.glade.h:1
+#: ../data/about.glade.h:1
 msgid "About Gwget"
 msgstr "关于 Gwget"
 
-#: data/about.glade.h:2
+#: ../data/about.glade.h:2
 msgid "GNU GPL Version 2"
 msgstr "GNU GPL 第二版"
 
-#: data/about.glade.h:3
-msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget：Gnome 2 的下载管理器"
+#: ../data/about.glade.h:3
+msgid "Gwget: Download Manager for GNOME"
+msgstr "Gwget：GNOME 的下载管理器"
 
-#: data/about.glade.h:4
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr "开源软件国际化之 GNOME 简体中文组"
 
-#: data/gwget.glade.h:1 data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
-#: data/gwget.glade.h:2
+#: ../data/gwget.glade.h:2
 msgid "<span weight=\"bold\">Download:</span>"
 msgstr "<span weight=\"bold\">下载：</span>"
 
-#: data/gwget.glade.h:3
+#: ../data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">属性</span>"
 
-#: data/gwget.glade.h:4
+#: ../data/gwget.glade.h:4
 msgid "Cancel"
 msgstr "取消"
 
-#: data/gwget.glade.h:5
+#: ../data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "取消下载吗"
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "取消下载"
+
+#: ../data/gwget.glade.h:7
 msgid "Continue"
 msgstr "继续"
 
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:566
-#: src/main_window_cb.c:662
+#: ../data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "继续下载"
+
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
+#: ../src/main_window_cb.c:583 ../src/main_window_cb.c:680
 msgid "Gwget - Download Manager"
 msgstr "Gwget - 下载管理器"
 
-#: data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
 msgid "Information"
 msgstr "信息"
 
-#: data/gwget.glade.h:8
-msgid "Local Directory: "
+#: ../data/gwget.glade.h:11
+msgid "Local Directory:"
 msgstr "本地目录："
 
-#: data/gwget.glade.h:9
-msgid "Local File: "
+#: ../data/gwget.glade.h:12
+msgid "Local File:"
 msgstr "本地文件："
 
-#: data/gwget.glade.h:10
+#: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "多媒体文件(视频和图像)"
 
-#: data/gwget.glade.h:11
+#: ../data/gwget.glade.h:14
 msgid "New download"
 msgstr "新建下载"
 
-#: data/gwget.glade.h:12
+#: ../data/gwget.glade.h:15
+msgid "Open"
+msgstr "打开"
+
+#: ../data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "打开目录"
+
+#: ../data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "打开目标目录"
+
+#: ../data/gwget.glade.h:18
 msgid "Pause"
 msgstr "暂停"
 
-#: data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "全部暂停"
 
-#: data/gwget.glade.h:14
+#: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "暂停全部下载"
 
-#: data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "暂停下载"
 
-#: data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "暂停下载"
+
+#: ../data/gwget.glade.h:23
 msgid "Properties"
 msgstr "属性"
 
-#: data/gwget.glade.h:17
+#: ../data/gwget.glade.h:24
 msgid "Question"
 msgstr "问题"
 
-#: data/gwget.glade.h:18 data/preferences.glade.h:31
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "递归"
 
-#: data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "递归选项"
 
-#: data/gwget.glade.h:20
-msgid "Remove"
-msgstr "删除"
-
-#: data/gwget.glade.h:21 src/main_window_cb.c:645
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:662
 msgid "Remove all"
 msgstr "全部删除"
 
-#: data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "从列表中删除全部下载"
-
-#: data/gwget.glade.h:23 src/main_window_cb.c:587
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:604
 msgid "Remove completed"
 msgstr "删除已完成项"
 
-#: data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "从列表中删除已经完成的下载"
+#: ../data/gwget.glade.h:29
+msgid "Remove from List"
+msgstr "从列表中删除"
 
-#: data/gwget.glade.h:25 src/main_window_cb.c:616
+#: ../data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "从列表中删除"
+
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:633
 msgid "Remove inactive"
 msgstr "删除不活动的下载"
 
-#: data/gwget.glade.h:26
-msgid "Remove inactive downloads from list"
-msgstr "从列表中删除不活动的下载"
-
-#: data/gwget.glade.h:27
+#: ../data/gwget.glade.h:32
 msgid "Resume all"
 msgstr "全部继续"
 
-#: data/gwget.glade.h:28
+#: ../data/gwget.glade.h:33
 msgid "Resume all downloads"
 msgstr "继续全部下载"
 
-#: data/gwget.glade.h:29
+#: ../data/gwget.glade.h:34
+msgid "Stat_usbar"
+msgstr "状态栏(_U)"
+
+#: ../data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
 msgstr "停止并删除下载的全部文件"
 
-#: data/gwget.glade.h:30
+#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "只有索引文件"
 
-#: data/gwget.glade.h:31
+#: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "此站点(镜像)"
 
-#: data/gwget.glade.h:32
-msgid "Url:"
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
+msgid "URL:"
 msgstr "URL："
 
-#: data/gwget.glade.h:33
+#: ../data/gwget.glade.h:39
+msgid "_Download"
+msgstr "下载(_D)"
+
+#: ../data/gwget.glade.h:40
 msgid "_New"
 msgstr "新建(_N)"
 
-#: data/gwget.glade.h:34
+#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "工具栏(_T)"
 
-#: data/newdownload.glade.h:1
-msgid "*"
-msgstr "*"
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask where to save each new download"
+msgstr "每个新下载询问保存到哪里"
 
-#: data/newdownload.glade.h:2
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "转换链接"
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "在递归模式中转换相对链接。"
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "默认下载目录"
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "下载页面所需内容"
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "跟随相对链接"
+
+#: ../data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "限制最快速度"
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "限制同时进行的下载任务数"
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr "递归模式中的最大深度"
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "同时进行的最多任务数"
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr "最快速度"
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr "下载任务数"
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr "重试次数"
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr "下载后打开文件"
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Resume downloads at startup"
+msgstr "启动时继续下载"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr "查看速度限制列"
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr "查看剩余时间列"
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr "查看百分比列"
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr "查看剩余时间列"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "查看状态栏"
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View toolbar"
+msgstr "查看工具栏"
+
+#: ../data/gwget.schemas.in.h:23
+msgid "View total size column"
+msgstr "查看总计大小列"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "是否显示状态栏。"
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "是否显示工具栏。"
+
+#: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">新建下载</span>"
 
-#: data/newdownload.glade.h:3
+#: ../data/newdownload.glade.h:2
 msgid "New Download"
 msgstr "新建下载"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:33
+#: ../data/newdownload.glade.h:3
 msgid "Save in:"
 msgstr "保存于："
 
-#: data/newdownload.glade.h:5
-msgid "URL: "
-msgstr "URL："
-
-#: data/preferences.glade.h:1
+#: ../data/preferences.glade.h:1
 msgid "   "
 msgstr "   "
 
-#: data/preferences.glade.h:3
-msgid "  kB/sec"
-msgstr "  kB/秒"
-
-#: data/preferences.glade.h:4
-msgid "<b>General</b>"
-msgstr "<b>常规</b>"
-
-#: data/preferences.glade.h:5
+#: ../data/preferences.glade.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">行为</span>"
 
-#: data/preferences.glade.h:6
+#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">列列表</span>"
 
-#: data/preferences.glade.h:7
+#: ../data/preferences.glade.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">常规</span>"
+
+#: ../data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">链接</span>"
 
-#: data/preferences.glade.h:8
+#: ../data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">代理配置</span>"
 
-#: data/preferences.glade.h:9
+#: ../data/preferences.glade.h:8
 msgid "Column List"
 msgstr "列列表"
 
-#: data/preferences.glade.h:10
-msgid "Continue downloads on startup"
-msgstr "启动时继续下载"
+#: ../data/preferences.glade.h:9
+msgid "Default _GNOME network settings"
+msgstr "_GNOME 网络默认设置"
 
-#: data/preferences.glade.h:11
-msgid "Convert links"
-msgstr "转换链接"
+#: ../data/preferences.glade.h:10
+msgid "Direct _Internet connection"
+msgstr "直接 _Internet 连接"
 
-#: data/preferences.glade.h:12 src/main_window.c:284
-msgid "Current Size"
-msgstr "当前大小"
+#: ../data/preferences.glade.h:11
+msgid "Do_wnload Speed"
+msgstr "下载速度(_W)"
 
-#: data/preferences.glade.h:13
-msgid "Default GNOME network settings"
-msgstr "GNOME 网络默认设置"
+#: ../data/preferences.glade.h:12
+msgid "Don't _create directories"
+msgstr "不创建目录(_C)"
 
-#: data/preferences.glade.h:14
-msgid "Direct Internet connection"
-msgstr "直接 Internet 连接"
+#: ../data/preferences.glade.h:13
+msgid "Follow _relative links only"
+msgstr "只跟随相对链接(_R)"
 
-#: data/preferences.glade.h:15
-msgid "Don't create directories"
-msgstr "不创建目录"
-
-#: data/preferences.glade.h:16
-msgid "Download Speed"
-msgstr "下载速度"
-
-#: data/preferences.glade.h:17
-msgid "Download page requisites"
-msgstr "下载页面所需内容"
-
-#: data/preferences.glade.h:18 src/main_window.c:316
-msgid "Elapsed Time"
-msgstr "已过时间"
-
-#: data/preferences.glade.h:19
-msgid "Follow relative links only"
-msgstr "只跟随相对链接"
-
-#: data/preferences.glade.h:20
+#: ../data/preferences.glade.h:14
 msgid "General"
 msgstr "常规"
 
-#: data/preferences.glade.h:21
-msgid "Limit download speed to: "
-msgstr "将下载速度限制为："
+#: ../data/preferences.glade.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr "限制同时进行的下载任务数(_N)："
 
-#: data/preferences.glade.h:22
-msgid "Manual proxy configuration"
-msgstr "手动配置代理服务器"
-
-#: data/preferences.glade.h:23
-msgid "Maximum depth level: "
-msgstr "最多层数："
-
-#: data/preferences.glade.h:24
+#: ../data/preferences.glade.h:16
 msgid "Network"
 msgstr "网络"
 
-#: data/preferences.glade.h:25
-msgid "Number of retries:"
-msgstr "重试次数："
+#: ../data/preferences.glade.h:17
+msgid "P_ort:"
+msgstr "端口(_O)："
 
-#: data/preferences.glade.h:26
-msgid "Open files automatically after download"
-msgstr "下载后自动打开文件"
-
-#: data/preferences.glade.h:27 src/main_window.c:305 src/main_window.c:311
-msgid "Percentage"
-msgstr "百分比"
-
-#: data/preferences.glade.h:28
-msgid "Port:"
-msgstr "端口："
-
-#: data/preferences.glade.h:29
+#: ../data/preferences.glade.h:18
 msgid "Preferences"
 msgstr "首选项"
 
-#: data/preferences.glade.h:30
-msgid "Proxy:"
-msgstr "代理："
+#: ../data/preferences.glade.h:19
+msgid "Pro_xy:"
+msgstr "代理(_X)："
 
-#: data/preferences.glade.h:32 src/main_window.c:326
-msgid "Remaining Time"
-msgstr "剩余时间"
+#: ../data/preferences.glade.h:21
+msgid "Remaining _Time"
+msgstr "剩余时间(_T)"
 
-#: data/preferences.glade.h:34 src/main_window.c:295
-msgid "Total Size"
-msgstr "总计大小"
+#: ../data/preferences.glade.h:22
+msgid "Sa_ve in:"
+msgstr "保存于(_V)："
 
-#: src/custom-cell-renderer-progressbar.c:36
+#: ../data/preferences.glade.h:23
+msgid "Total _Size"
+msgstr "总计大小(_S)"
+
+#: ../data/preferences.glade.h:24
+msgid "_Ask where to save for each download"
+msgstr "每个下载都询问保存到哪里(_A)"
+
+#: ../data/preferences.glade.h:25
+msgid "_Continue downloads on startup"
+msgstr "启动时继续下载(_C)"
+
+#: ../data/preferences.glade.h:26
+msgid "_Convert links"
+msgstr "转换链接(_C)"
+
+#: ../data/preferences.glade.h:27
+msgid "_Current Size"
+msgstr "当前大小(_C)"
+
+#: ../data/preferences.glade.h:28
+msgid "_Download page requisites"
+msgstr "下载页面所需内容(_D)"
+
+#: ../data/preferences.glade.h:29
+msgid "_Elapsed Time"
+msgstr "已过时间(_E)"
+
+#: ../data/preferences.glade.h:30
+msgid "_Limit download speed to:"
+msgstr "将下载速度限制为(_L)："
+
+#: ../data/preferences.glade.h:31
+msgid "_Manual proxy configuration"
+msgstr "手动配置代理服务器(_M)"
+
+#: ../data/preferences.glade.h:32
+msgid "_Maximum depth level:"
+msgstr "最多层数(_M)："
+
+#: ../data/preferences.glade.h:33
+msgid "_Number of retries:"
+msgstr "重试次数(_N)："
+
+#: ../data/preferences.glade.h:34
+msgid "_Open files automatically after download"
+msgstr "下载后自动打开文件(_O)"
+
+#: ../data/preferences.glade.h:35
+msgid "_Percentage"
+msgstr "百分比(_P)"
+
+#: ../data/preferences.glade.h:36
+msgid "files"
+msgstr "个文件"
+
+#: ../data/preferences.glade.h:37
+msgid "kB/sec"
+msgstr "kB/秒"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "将下载转发到 GWGet"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWget"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
 msgstr "未知"
 
-#: src/custom-cell-renderer-progressbar.c:99
+#: ../src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
 msgstr "已失败"
 
-#: src/gwget_data.c:177
+#: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "已暂停"
 
-#: src/gwget_data.c:210
+#: ../src/gwget_data.c:229
 msgid "Waiting"
 msgstr "等待中"
 
-#: src/gwget_data.c:212
+#: ../src/gwget_data.c:231
 msgid "Not Started"
 msgstr "未开始"
 
-#: src/gwget_data.c:214
+#: ../src/gwget_data.c:233
 msgid "Not Running"
 msgstr "未运行"
 
-#: src/gwget_data.c:216
+#: ../src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "未连接"
 
-#: src/gwget_data.c:218
+#: ../src/gwget_data.c:237
 msgid "Connected"
 msgstr "已连接"
 
-#: src/gwget_data.c:220
+#: ../src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "正在获取"
 
-#: src/gwget_data.c:222
+#: ../src/gwget_data.c:241
 msgid "Completed"
 msgstr "已完成"
 
-#: src/gwget_data.c:226
+#: ../src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -369,139 +515,184 @@ msgstr ""
 "下载已完成\n"
 "(%s)"
 
-#: src/gwget_data.c:233
+#: ../src/gwget_data.c:253
 msgid "Error"
 msgstr "错误"
 
-#: src/gwget_data.c:611
+#: ../src/gwget_data.c:676
 msgid "Unable to add this download"
 msgstr "无法添加此下载"
 
-#: src/gwget_data.c:611
+#: ../src/gwget_data.c:677
 msgid "This download is already added"
 msgstr "此下载已经添加"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1041 ../src/main_window_cb.c:1060
 msgid "Error opening file"
 msgstr "打开文件出错"
 
-#: src/gwget_data.c:659 src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1041
 msgid "Couldn't open the file"
 msgstr "无法打开文件"
 
-#: src/main_window.c:266
+#: ../src/main_window.c:422
 msgid "File Name"
 msgstr "文件名"
 
-#: src/main_window.c:273
+#: ../src/main_window.c:430
 msgid "State"
 msgstr "状态"
 
-#: src/main_window.c:336
+#: ../src/main_window.c:442
+msgid "Current Size"
+msgstr "当前大小"
+
+#: ../src/main_window.c:454
+msgid "Total Size"
+msgstr "总计大小"
+
+#: ../src/main_window.c:465 ../src/main_window.c:471
+msgid "Percentage"
+msgstr "百分比"
+
+#: ../src/main_window.c:478
+msgid "Elapsed Time"
+msgstr "已过时间"
+
+#: ../src/main_window.c:489
+msgid "Remaining Time"
+msgstr "剩余时间"
+
+#: ../src/main_window.c:500
 msgid "Speed"
 msgstr "速度"
 
-#: src/main_window.c:560
+#: ../src/main_window.c:547
+msgid "Error starting the download"
+msgstr "开始下载出错"
+
+#: ../src/main_window.c:547
+msgid "There was an unexpected error starting the download"
+msgstr "开始下载时发生了未知错误"
+
+#: ../src/main_window.c:784
 msgid "Cancel current downloads?"
 msgstr "取消当前下载吗？"
 
-#: src/main_window.c:560
+#: ../src/main_window.c:785
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr "至少剩下一个活动的下载。真的要取消运行中的全部下载吗？"
 
-#: src/main_window_cb.c:94
+#: ../src/main_window_cb.c:82
 msgid "Error in download"
 msgstr "下载出错"
 
-#: src/main_window_cb.c:167
-msgid "Download Manager for Gnome2."
-msgstr "Gnome2 的下载管理器。"
-
-#: src/main_window_cb.c:174
-msgid "translator_credits"
-msgstr "开源软件国际化之 GNOME 简体中文组"
-
-#: src/main_window_cb.c:186
+#: ../src/main_window_cb.c:169
 msgid "Gwget"
 msgstr "Gwget"
 
-#: src/main_window_cb.c:503 src/new_window.c:140
+#: ../src/main_window_cb.c:172
+msgid "Download Manager for GNOME."
+msgstr "GNOME 的下载管理器。"
+
+#: ../src/main_window_cb.c:519 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "选择文件夹"
 
-#: src/main_window_cb.c:558
+#: ../src/main_window_cb.c:575
 #, c-format
 msgid ""
 "Really cancel current download?\n"
-"(Url: %s)"
-msgstr "真的要取消当前下载吗？\n(URL：%s)"
+"(URL: %s)"
+msgstr ""
+"真的要取消当前下载吗？\n"
+"(URL：%s)"
 
-#: src/main_window_cb.c:559
+#: ../src/main_window_cb.c:576
 msgid "Cancel download?"
 msgstr "取消下载吗？"
 
-#: src/main_window_cb.c:587
+#: ../src/main_window_cb.c:604
 msgid "Really remove completed downloads from the list?"
 msgstr "真的要从列表中删除已完成的下载吗？"
 
-#: src/main_window_cb.c:616
+#: ../src/main_window_cb.c:633
 msgid "Really remove inactive downloads from the list?"
 msgstr "真的要从列表中删除不活动的下载吗？"
 
-#: src/main_window_cb.c:645
+#: ../src/main_window_cb.c:662
 msgid "Really remove all downloads from the list?"
 msgstr "真的要从列表中删除全部下载吗？"
 
-#: src/systray.c:135
+#: ../src/main_window_cb.c:995
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr "新的下载速度限制将只会应用到新下载或重新开始的下载"
+
+#: ../src/main_window_cb.c:1010
+msgid "Remove this download ?"
+msgstr "继续此下载吗？"
+
+#: ../src/main_window_cb.c:1010
+msgid "Really remove this download from the list?"
+msgstr "真的要从列表中删除此下载吗？"
+
+#: ../src/main_window_cb.c:1060
+msgid "Couldn't open the folder"
+msgstr "无法打开文件夹"
+
+#: ../src/systray.c:152
 msgid "Nothing"
 msgstr "无"
 
-#: src/systray.c:142
+#: ../src/systray.c:159
 msgid "Downloads"
 msgstr "下载"
 
-#: src/wget-log.c:83
+#: ../src/wget-log.c:120
 msgid "Socket error"
 msgstr "套接字错误"
 
-#: src/wget-log.c:85
+#: ../src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "连接被拒绝\n"
 
-#: src/wget-log.c:87
+#: ../src/wget-log.c:124
 msgid "No route to host"
 msgstr "主机不可达"
 
-#: src/wget-log.c:89
+#: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "下载 URL 时连接被拒绝：\n"
 
-#: src/wget-log.c:91
+#: ../src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "主机未找到\n"
 
-#: src/wget-log.c:93
+#: ../src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "不支持的协议 - wget >= 1.7 才支持 https:\n"
 
-#: src/wget-log.c:96
+#: ../src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "拒绝截断已有文件"
 
-#: src/wget-log.c:98
+#: ../src/wget-log.c:135
 msgid "Unknown error"
 msgstr "未知错误"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "文件未找到"
 
-#: src/wget-log.c:122
+#: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr "无法继续下载，已有文件与远程文件冲突"
 
-#: src/wget-log.c:180
+#: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "无法写入目标目录"
+
