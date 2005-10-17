@@ -3,25 +3,23 @@
 # translation of gwget2.
 # Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget2 package.
-# <>, 2003.
-#  <>, 2003.
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004, 2005.
-# Miguel Angel Nieto <manieto@kider.com>, 2005.
 # Jorge Gonzalez <jorge.gonzalez.gonzalez@hispalinux.es>, 2005.
-#
+# Miguel Angel Nieto <correo@miguelangelnieto.net>, 2005.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es_revisado\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-15 20:17+0000\n"
-"PO-Revision-Date: 2005-08-15 23:24+0100\n"
-"Last-Translator: Miguel Angel Nieto <correo@miguelangelnieto.net>\n"
-"Language-Team:  <traductores@es.gnome.org>\n"
+"POT-Creation-Date: 2005-10-13 11:40+0200\n"
+"PO-Revision-Date: 2005-10-13 16:27+0200\n"
+"Last-Translator:  <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.9.1\n"
+"Content-Type: text/plain; charset=\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
 
 #: ../data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
@@ -43,16 +41,14 @@ msgstr "GNU GPL Versión 2"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Gestor de descargas para Gnome"
 
-#: ../data/about.glade.h:4
-#: ../src/main_window_cb.c:174
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr ""
 "Miguel Ángel Nieto Salazar <correo@miguelangelnieto.net>\n"
 "Francisco Javier F. Serrador <serrador@gnome.org>\n"
 "David Sedeño Fernández <david@alderia.com>"
 
-#: ../data/gwget.glade.h:1
-#: ../data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
@@ -84,10 +80,8 @@ msgstr "Continuar"
 msgid "Continue with the download"
 msgstr "Continua con la descarga"
 
-#: ../data/gwget.glade.h:9
-#: ../src/main_window_cb.c:121
-#: ../src/main_window_cb.c:583
-#: ../src/main_window_cb.c:680
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
+#: ../src/main_window_cb.c:583 ../src/main_window_cb.c:680
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gestor de descargas"
 
@@ -151,8 +145,7 @@ msgstr "Propiedades"
 msgid "Question"
 msgstr "Pregunta"
 
-#: ../data/gwget.glade.h:25
-#: ../data/preferences.glade.h:20
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "Recursivo"
 
@@ -160,13 +153,11 @@ msgstr "Recursivo"
 msgid "Recursive options"
 msgstr "Opciones de recursividad"
 
-#: ../data/gwget.glade.h:27
-#: ../src/main_window_cb.c:662
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:662
 msgid "Remove all"
 msgstr "Quitar todas"
 
-#: ../data/gwget.glade.h:28
-#: ../src/main_window_cb.c:604
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:604
 msgid "Remove completed"
 msgstr "Quitar las descargas completadas"
 
@@ -178,8 +169,7 @@ msgstr "Eliminar de la lista"
 msgid "Remove from list"
 msgstr "Eliminar de la lista"
 
-#: ../data/gwget.glade.h:31
-#: ../src/main_window_cb.c:633
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:633
 msgid "Remove inactive"
 msgstr "Quitar las inactivas"
 
@@ -207,8 +197,7 @@ msgstr "El archivo index solamente"
 msgid "This site (mirror)"
 msgstr "Este sitio (replicar)"
 
-#: ../data/gwget.glade.h:38
-#: ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
@@ -225,8 +214,8 @@ msgid "_Toolbar"
 msgstr "Barra de _herramientas"
 
 #: ../data/gwget.schemas.in.h:1
-msgid "Ask save in for each new download"
-msgstr "Preguntar si se debe guardar para cada descarga nueva"
+msgid "Ask where to save each new download"
+msgstr "Preguntar donde guardar cada nueva descarga"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -249,8 +238,13 @@ msgid "Follow relative links"
 msgstr "Seguir sólo enlaces relativos"
 
 #: ../data/gwget.schemas.in.h:7
-msgid "If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user."
-msgstr "Si es «true» pedir siempre una carpeta de destino al iniciar una descarga nueva. Si es  «false» guardar siempre en el directorio predeterminado sin preguntar al usuario."
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Si es «true» pedir siempre una carpeta de destino al iniciar una descarga "
+"nueva. Si es  «false» guardar siempre en el directorio predeterminado sin "
+"preguntar al usuario."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -545,15 +539,12 @@ msgstr "Imposible añadir esta descarga"
 msgid "This download is already added"
 msgstr "Esta descarga ya está añadida"
 
-#: ../src/gwget_data.c:725
-#: ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1041
-#: ../src/main_window_cb.c:1060
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1041 ../src/main_window_cb.c:1060
 msgid "Error opening file"
 msgstr "Error al abrir el archivo"
 
-#: ../src/gwget_data.c:725
-#: ../src/main_window_cb.c:91
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
 #: ../src/main_window_cb.c:1041
 msgid "Couldn't open the file"
 msgstr "No se puede abrir el archivo"
@@ -574,8 +565,7 @@ msgstr "Tamaño actual"
 msgid "Total Size"
 msgstr "Tamaño total"
 
-#: ../src/main_window.c:465
-#: ../src/main_window.c:471
+#: ../src/main_window.c:465 ../src/main_window.c:471
 msgid "Percentage"
 msgstr "Porcentaje"
 
@@ -604,8 +594,12 @@ msgid "Cancel current downloads?"
 msgstr "¿Desea cancelar las descargas actuales?"
 
 #: ../src/main_window.c:785
-msgid "There is at least one active download left. Really cancel all running transfers?"
-msgstr "Hay al menos una descarga activa. ¿Seguro que desea cancelar todas las transferencias activas?"
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Hay al menos una descarga activa. ¿Seguro que desea cancelar todas las "
+"transferencias activas?"
 
 #: ../src/main_window_cb.c:82
 msgid "Error in download"
@@ -619,8 +613,7 @@ msgstr "Gwget"
 msgid "Download Manager for GNOME."
 msgstr "Gestor de descargas para GNOME."
 
-#: ../src/main_window_cb.c:519
-#: ../src/new_window.c:138
+#: ../src/main_window_cb.c:519 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
@@ -651,7 +644,9 @@ msgstr "¿Seguro que quiere quitar todas las descargas de la lista?"
 
 #: ../src/main_window_cb.c:995
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr "El límite nuevo en la velocidad de descarga será aplicado sólo en descargas las nuevas o reiniciadas."
+msgstr ""
+"El límite nuevo en la velocidad de descarga se aplicará sólo en las descargas "
+"nuevas o reiniciadas."
 
 #: ../src/main_window_cb.c:1010
 msgid "Remove this download ?"
@@ -705,27 +700,34 @@ msgstr "Rehusando a truncar el archivo existente"
 msgid "Unknown error"
 msgstr "Error desconocido"
 
-#: ../src/wget-log.c:146
-#: ../src/wget-log.c:152
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "Archivo no encontrado"
 
 #: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "No se puede continuar la descarga, el archivo local entra en conflicto con el archivo remoto"
+msgstr ""
+"No se puede continuar la descarga, el archivo local entra en conflicto con "
+"el archivo remoto"
 
 #: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "No se puede escribir en el directorio destino"
 
+#~ msgid "Ask save in for each new download"
+#~ msgstr "Preguntar si se debe guardar para cada descarga nueva"
+
 #~ msgid "Remove"
 #~ msgstr "Quitar"
+
 #~ msgid "Remove all downloads from list"
 #~ msgstr "Quitar todas las descargas de la lista"
+
 #~ msgid "Remove completed downloads from list"
 #~ msgstr "Quita las descargas completadas de la lista"
+
 #~ msgid "Remove inactive downloads from list"
 #~ msgstr "Quita las descargas inactivas de la lista"
+
 #~ msgid "*"
 #~ msgstr "*"
-
