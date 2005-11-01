@@ -1,4 +1,8 @@
-2005-11-01  Joseph Sacco (jsacco@ydl.net)
+2005-11-01  David Sedeño <david@alderia.com>
+
+	* configure.in: Added ar in ALL_LINGUAS
+
+2005-11-01  Joseph Sacco <jsacco@ydl.net>
 
 	* configure.in: Support for epiphany 1.9
 
