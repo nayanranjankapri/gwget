@@ -1,3 +1,7 @@
+2005-11-01  Joseph Sacco (jsacco@ydl.net)
+
+	* configure.in: Support for epiphany 1.9
+
 2005-10-16  Pawan Chitrakar  <pchitrakar@gmail.com>
 
 	* configure.in: Added ne in ALL_LINGUAS
