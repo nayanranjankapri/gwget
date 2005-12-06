@@ -26,9 +26,15 @@ typedef struct
 	gint num_retries;    /* Number of Retries */
 	gchar *http_proxy; /* HTTP Proxy */
 	gint http_proxy_port; /* HTTP Proxy Port */
+	gchar *proxy_user;	/*Proxy user*/
+	gchar *proxy_password; /*Proxy password*/
+	gboolean proxy_uses_auth; /*Proxy requires password*/
 	gchar *gnome_http_proxy; /* GNOME HTTP Proxy */
 	gint gnome_http_proxy_port; /* GNOME HTTP Proxy Port */
-	gboolean gnome_use_proxy;
+	gchar *gnome_proxy_user;	/*GNOME Proxy user*/
+	gchar *gnome_proxy_password; /*GNOME Proxy password*/
+	gboolean gnome_use_proxy;    
+	gboolean gnome_proxy_uses_auth; /*GNOME Proxy requires password*/
 	gchar *network_mode;
 	gboolean resume_at_start;
 	gboolean open_after_dl; /* Open the file after Download */

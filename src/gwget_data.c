@@ -333,7 +333,8 @@ gwget_data_start_download(GwgetData *gwgetdata)
 	pid_t pid;
 	gint pipe_fd[2];
 	gint number;
-
+	gchar *user_password;
+	user_password=g_strdup("");
 	/* Control the number of download allowed */
 	number=count_download_in_progress();
 
@@ -438,17 +439,27 @@ gwget_data_start_download(GwgetData *gwgetdata)
 			if ( strcmp (gwget_pref.network_mode, "manual") == 0 && 
 			     gwget_pref.http_proxy ) 
 			{
-				setenv("http_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
-				setenv("ftp_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
+				if(gwget_pref.proxy_uses_auth) 
+				{
+					user_password=g_strdup_printf("%s:%s@",gwget_pref.proxy_user,gwget_pref.proxy_password);
+				}
+
+				setenv("http_proxy", g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL), 1);
+				setenv("ftp_proxy", g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL), 1);
 		 	        argv[arg]="-Yon";
 				arg++;
 			}
 			
 			if ( strcmp (gwget_pref.network_mode, "default" ) == 0 && gwget_pref.gnome_http_proxy && gwget_pref.gnome_use_proxy) 
 			{
-				setenv("http_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.gnome_http_proxy),":",g_strdup_printf("%d",gwget_pref.gnome_http_proxy_port),NULL),1);
-				setenv("ftp_proxy",g_strconcat(g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
-	            		argv[arg]="-Yon";
+				if(gwget_pref.gnome_proxy_uses_auth) 
+				{
+					user_password=g_strdup_printf("%s:%s@",gwget_pref.gnome_proxy_user,gwget_pref.gnome_proxy_password);
+				}
+
+				setenv("http_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
+				setenv("ftp_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
+		 	        argv[arg]="-Yon";
 				arg++;
 			}
 			

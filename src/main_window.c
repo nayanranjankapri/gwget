@@ -223,6 +223,7 @@ gwget_destination_file_exists(GwgetData *data)
 	return ( g_stat(data->local_filename,&s) == 0 );
 }
 
+
 void 
 gwget_get_defaults_from_gconf(void)
 {
@@ -236,9 +237,17 @@ gwget_get_defaults_from_gconf(void)
 	
 	gwget_pref.http_proxy=gconf_client_get_string(gconf_client,"/apps/gwget2/http_proxy",NULL);
 	gwget_pref.http_proxy_port=gconf_client_get_int(gconf_client,"/apps/gwget2/http_proxy_port",NULL);
+	gwget_pref.proxy_uses_auth=gconf_client_get_bool(gconf_client,"/apps/gwget2/proxy_uses_auth",NULL);
+	gwget_pref.proxy_user=gconf_client_get_string(gconf_client,"/apps/gwget2/proxy_user",NULL);
+	gwget_pref.proxy_password=gconf_client_get_string(gconf_client,"/apps/gwget2/proxy_password",NULL);
+	
 	gwget_pref.gnome_http_proxy=gconf_client_get_string(gconf_client,"/system/http_proxy/host",NULL);
 	gwget_pref.gnome_http_proxy_port=gconf_client_get_int(gconf_client,"/system/http_proxy/port",NULL);
+	gwget_pref.gnome_proxy_uses_auth=gconf_client_get_bool(gconf_client,"/system/http_proxy/use_authentication",NULL);
+	gwget_pref.gnome_proxy_user=gconf_client_get_string(gconf_client,"/system/http_proxy/authentication_user",NULL);
+	gwget_pref.gnome_proxy_password=gconf_client_get_string(gconf_client,"/system/http_proxy/authentication_password",NULL);
 	gwget_pref.gnome_use_proxy=gconf_client_get_bool(gconf_client,"/system/http_proxy/use_http_proxy",NULL);
+	
 	gwget_pref.network_mode=gconf_client_get_string(gconf_client,"/apps/gwget2/network_mode",NULL);
 	gwget_pref.download_dir=gconf_client_get_string(gconf_client,"/apps/gwget2/download_dir",NULL);
 	gwget_pref.num_retries=gconf_client_get_int(gconf_client,"/apps/gwget2/num_retries",NULL);

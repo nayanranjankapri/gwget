@@ -362,5 +362,41 @@
 	 </locale>
 	</schema>
 	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_uses_auth</key>
+	 <applyto>/apps/gwget2/proxy_uses_auth</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_user</key>
+	 <applyto>/apps/gwget2/proxy_user</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_password</key>
+	 <applyto>/apps/gwget2/proxy_password</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
  </schemalist>
 </gconfschemafile>

@@ -1,3 +1,15 @@
+2005-12-06  David Sedeño <david@alderia.com>
+
+	Patch from Yoandy Rodriguez <mr.dominus@gmail.com> for autenticate
+	proxy:
+	* data/gwget.schemas.in: New vars for proxy user and password.
+	* include/gwget_data.h: added proxy user and password.
+	* data/preferences.glade: Preferences for proxy user/password.
+	* src/gwget_data.c: Set the proxy user/pass env.
+	* src/main_window.c: Get proxy user/pass from Gconf.
+	* src/main_window_cb.c: Set proxy user/pass on Gconf.
+	  Set sensitive of the proxy user and password entry on preferences.
+	
 2005-11-01  David Sedeño <david@alderia.com>
 
 	* configure.in: Added ar in ALL_LINGUAS

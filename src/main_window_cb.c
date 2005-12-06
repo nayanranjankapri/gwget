@@ -292,6 +292,13 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	if (gwget_pref.http_proxy!=NULL) {
 		entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.http_proxy);
+		checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"proxy_uses_auth_radio");
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.proxy_uses_auth);
+		entry = glade_xml_get_widget(xml_pref,"proxy_user_entry");
+		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.proxy_user);
+		entry = glade_xml_get_widget(xml_pref,"proxy_password_entry");
+		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.proxy_password);
+
 	}
 	
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"http_proxy_port_spin");
@@ -338,7 +345,7 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.limit_simultaneousdownloads);
 
 	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_simultaneousdownloads_spin");
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_simultaneousdownloads);
+	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(checkbutton), gwget_pref.max_simultaneousdownloads);
 
 	gtk_widget_show(window);
 		
@@ -359,13 +366,13 @@ void
 on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 {
 	GtkWidget *save_in = NULL, *ask_each_dl = NULL, *pref_window = NULL,*num_retries=NULL,*resume = NULL, *open_after_dl = NULL;
-	GtkWidget *http_proxy = NULL, *http_proxy_port_spin = NULL;
+	GtkWidget *http_proxy = NULL, *http_proxy_port_spin = NULL, *proxy_user=NULL, *proxy_password=NULL;
 	GtkWidget *no_create_directories = NULL;
 	GtkWidget *follow_relative = NULL;	
 	GtkWidget *convert_links = NULL;
 	GtkWidget *dl_page_requisites = NULL;
 	GtkWidget *max_depth=NULL, *limit_speed_check=NULL, *limit_speed_spin=NULL;
-	GtkWidget *manual_radio=NULL, *direct_radio=NULL, *default_radio=NULL;
+	GtkWidget *manual_radio=NULL, *direct_radio=NULL, *default_radio=NULL, *proxy_uses_auth_radio=NULL;
 	GtkWidget *limit_simultaneousdownloads_check=NULL, *limit_simultaneousdownloads_spin=NULL;
 
 	save_in=glade_xml_get_widget(xml_pref,"save_in_entry");
@@ -378,10 +385,27 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	gconf_client_set_string(gconf_client,"/apps/gwget2/http_proxy",
 							g_strdup(gtk_entry_get_text(GTK_ENTRY(http_proxy))),NULL);
 	
+	proxy_user=glade_xml_get_widget(xml_pref,"proxy_user");
+	gwget_pref.proxy_user=g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_user)));
+	gconf_client_set_string(gconf_client,"/apps/gwget2/proxy_user",
+							g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_user))),NULL);
+							
+	proxy_password=glade_xml_get_widget(xml_pref,"proxy_password");
+	gwget_pref.proxy_password=g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_password)));
+	gconf_client_set_string(gconf_client,"/apps/gwget2/proxy_password",
+							g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_password))),NULL);
+	
 	http_proxy_port_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "http_proxy_port_spin");
 	gwget_pref.http_proxy_port = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(http_proxy_port_spin));
 	gconf_client_set_int(gconf_client,"/apps/gwget2/http_proxy_port",
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(http_proxy_port_spin)),NULL);
+						  
+	proxy_uses_auth_radio=glade_xml_get_widget(xml_pref,"proxy_uses_auth_radio");
+
+	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (proxy_uses_auth_radio))) {
+		gconf_client_set_bool(gconf_client,"/apps/gwget2/network_mode",TRUE,NULL);
+		gwget_pref.proxy_uses_auth=TRUE;
+	}
 	
 	manual_radio=glade_xml_get_widget(xml_pref,"manual_radio");
 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(manual_radio))) {
@@ -857,33 +881,70 @@ on_limit_simultaneousdownloads_check_toggled (GtkWidget *widget, gpointer data)
 	}
 }
 void 
-on_manual_radio_toggled (GtkWidget *widget, gpointer data) 
+on_manual_radio_toggled (GtkWidget *sender, gpointer data) 
 {
-	GtkWidget *entry;
-	entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
-	gtk_widget_set_sensitive(GTK_WIDGET(entry),TRUE);
-	entry = glade_xml_get_widget(xml_pref,"http_proxy_port_spin");
-	gtk_widget_set_sensitive(GTK_WIDGET(entry),TRUE);
+	GtkWidget *widget;
+
+	widget = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	gtk_widget_set_sensitive(GTK_WIDGET (widget), TRUE);
+
+	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET (widget), TRUE);
+
+	widget = glade_xml_get_widget(xml_pref, "proxy_uses_auth_radio");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_user");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_password");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
+
 }
 
 void 
-on_direct_radio_toggled (GtkWidget *widget, gpointer data) 
+on_direct_radio_toggled (GtkWidget *sender, gpointer data) 
 {
-	GtkWidget *entry;
-	entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
-	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
-	entry = glade_xml_get_widget(xml_pref,"http_proxy_port_spin");
-	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
+	GtkWidget *widget;
+
+	widget = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	gtk_widget_set_sensitive(GTK_WIDGET (widget), FALSE);
+	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET (widget), FALSE);
+
+	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_uses_auth_radio");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_user");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_password");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
+
 }
 
 void 
-on_default_radio_toggled(GtkWidget *widget, gpointer data) 
+on_default_radio_toggled(GtkWidget *sender, gpointer data) 
 {	
-	GtkWidget *entry;
-	entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
-	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
-	entry = glade_xml_get_widget(xml_pref,"http_proxy_port_spin");
-	gtk_widget_set_sensitive(GTK_WIDGET(entry),FALSE);
+	GtkWidget *widget;
+
+	widget = glade_xml_get_widget(xml_pref, "http_proxy_entry");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
+	
+	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_uses_auth_radio");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_user");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
+	
+	widget = glade_xml_get_widget(xml_pref, "proxy_password");
+	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 }
 
 void
