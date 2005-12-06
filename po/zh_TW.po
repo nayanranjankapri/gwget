@@ -1,15 +1,16 @@
-# traditional Chinese translation of gwget.
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Traditional Chinese translation of gwget.
+# Copyright (C) 2004, 05 Free Software Foundation, Inc.
 # Abel Cheung <maddog@linuxhall.org>, 2004.
+# Pui Lam Wong <pplwong@openoffice.org>, 2005.
 # 
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget 0.14.1\n"
+"Project-Id-Version: gwget 0.96\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-21 22:07+0800\n"
-"PO-Revision-Date: 2005-07-09 10:34+0800\n"
-"Last-Translator: Abel Cheung <maddog@linuxhall.org>\n"
+"POT-Creation-Date: 2005-12-06 00:57+0800\n"
+"PO-Revision-Date: 2005-12-06 10:13+0800\n"
+"Last-Translator: pplwong <pplwong@openoffice.org>\n"
 "Language-Team: Chinese (traditional) <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,13 +36,14 @@ msgstr "GNU GPL 第 2 版"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget：GNOME 的下載管理程式"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:182
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
 "以下地址，GNOME 翻譯團隊會盡快回覆您：\n"
 "community@linuxhall.org\n"
 "\n"
+"Pui Lam Wong <pplwong@openoffice.org>, 2005\n"
 "Woodman Tuen <wmtuen@gmail.com>, 2005\n"
 "Abel Cheung <maddog@linuxhall.org>, 2004"
 
@@ -51,7 +53,7 @@ msgstr "    "
 
 #: ../data/gwget.glade.h:2
 msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">下載：</span>"
+msgstr "<span weight=\"bold\">下載:</span>"
 
 #: ../data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
@@ -62,129 +64,157 @@ msgid "Cancel"
 msgstr "取消"
 
 #: ../data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "取消下載"
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "取消下載"
+
+#: ../data/gwget.glade.h:7
 msgid "Continue"
 msgstr "繼續"
 
-#: ../data/gwget.glade.h:6 ../src/main_window_cb.c:129
-#: ../src/main_window_cb.c:578 ../src/main_window_cb.c:675
+#: ../data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "繼續下載"
+
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
+#: ../src/main_window_cb.c:583 ../src/main_window_cb.c:680
 msgid "Gwget - Download Manager"
 msgstr "Gwget - 下載管理程式"
 
-#: ../data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
 msgid "Information"
 msgstr "資訊"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:11
 msgid "Local Directory:"
-msgstr "本地目錄："
+msgstr "本地目錄:"
 
-#: ../data/gwget.glade.h:9
+#: ../data/gwget.glade.h:12
 msgid "Local File:"
-msgstr "本地檔案："
+msgstr "本地檔案:"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "多媒體檔案（視訊檔或影像）"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:14
 msgid "New download"
 msgstr "新增下載項目"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:15
+msgid "Open"
+msgstr "開啟"
+
+#: ../data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "開啟目錄"
+
+#: ../data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "開啟目的地目錄"
+
+#: ../data/gwget.glade.h:18
 msgid "Pause"
 msgstr "暫停"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "全部暫停"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "暫停所有下載"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "暫停下載"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "暫停下載"
+
+#: ../data/gwget.glade.h:23
 msgid "Properties"
 msgstr "屬性"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:24
 msgid "Question"
 msgstr "問題"
 
-#: ../data/gwget.glade.h:18 ../data/preferences.glade.h:20
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
 msgid "Recursive"
 msgstr "遞迴模式"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "遞迴模式選項"
 
-#: ../data/gwget.glade.h:20
-msgid "Remove"
-msgstr "移除"
-
-#: ../data/gwget.glade.h:21 ../src/main_window_cb.c:657
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:662
 msgid "Remove all"
 msgstr "全部移除"
 
-#: ../data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "從清單中移除所有下載"
-
-#: ../data/gwget.glade.h:23 ../src/main_window_cb.c:599
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:604
 msgid "Remove completed"
 msgstr "移除已完成的下載"
 
-#: ../data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "從清單中移除已完成的下載"
+#: ../data/gwget.glade.h:29
+msgid "Remove from List"
+msgstr "從清單中移除"
 
-#: ../data/gwget.glade.h:25 ../src/main_window_cb.c:628
+#: ../data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "從清單中移除"
+
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:633
 msgid "Remove inactive"
 msgstr "移除已停止的下載"
 
-#: ../data/gwget.glade.h:26
-msgid "Remove inactive downloads from list"
-msgstr "從清單中移除已停止的下載"
-
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:32
 msgid "Resume all"
 msgstr "繼續所有下載"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:33
 msgid "Resume all downloads"
 msgstr "繼續所有下載"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:34
+msgid "Stat_usbar"
+msgstr "狀態列(_U)"
+
+#: ../data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
 msgstr "停止並刪除已下載的檔案"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "只下載 index 檔"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "這站台（對映站）"
 
-#: ../data/gwget.glade.h:32 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:39
+msgid "_Download"
+msgstr "下載(_D)"
+
+#: ../data/gwget.glade.h:40
 msgid "_New"
 msgstr "新增(_N)"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "工具列(_T)"
 
 #: ../data/gwget.schemas.in.h:1
-msgid "Ask save in for each new download"
-msgstr "每個新的下載都詢問儲存在那裡"
+msgid "Ask where to save each new download"
+msgstr "每次下載都詢問儲存位置"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -267,12 +297,24 @@ msgid "View remaining time column"
 msgstr "顯示剩餘時間欄位"
 
 #: ../data/gwget.schemas.in.h:21
-msgid "View toolbar"
-msgstr "顯示工具欄位"
+msgid "View statusbar"
+msgstr "顯示狀態列"
 
 #: ../data/gwget.schemas.in.h:22
+msgid "View toolbar"
+msgstr "顯示工具列"
+
+#: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
 msgstr "顯示全部大小欄位"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "是否顯示狀態列"
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "是否顯示工具列"
 
 #: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
@@ -317,7 +359,7 @@ msgstr "顯示欄位"
 
 #: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
-msgstr "預設的 GNOME 網路設定(_G)"
+msgstr "預設的 _GNOME 網路設定"
 
 #: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
@@ -341,7 +383,7 @@ msgstr "一般"
 
 #: ../data/preferences.glade.h:15
 msgid "Limit _number of simultaneous download to:"
-msgstr "限制同時下載數目至："
+msgstr "限制同時下載數目至(_N):"
 
 #: ../data/preferences.glade.h:16
 msgid "Network"
@@ -349,7 +391,7 @@ msgstr "網路"
 
 #: ../data/preferences.glade.h:17
 msgid "P_ort:"
-msgstr "連接埠(_O)："
+msgstr "連接埠(_O):"
 
 #: ../data/preferences.glade.h:18
 msgid "Preferences"
@@ -357,7 +399,7 @@ msgstr "偏好設定"
 
 #: ../data/preferences.glade.h:19
 msgid "Pro_xy:"
-msgstr "代理伺服器(_X)："
+msgstr "代理伺服器(_X):"
 
 #: ../data/preferences.glade.h:21
 msgid "Remaining _Time"
@@ -365,7 +407,7 @@ msgstr "剩餘時間(_T)"
 
 #: ../data/preferences.glade.h:22
 msgid "Sa_ve in:"
-msgstr "儲存於(_V)："
+msgstr "儲存於(_V):"
 
 #: ../data/preferences.glade.h:23
 msgid "Total _Size"
@@ -397,7 +439,7 @@ msgstr "經過時間(_E)"
 
 #: ../data/preferences.glade.h:30
 msgid "_Limit download speed to:"
-msgstr "限制下載速度為(_L)："
+msgstr "限制下載速度為(_L):"
 
 #: ../data/preferences.glade.h:31
 msgid "_Manual proxy configuration"
@@ -405,11 +447,11 @@ msgstr "手動設置代理伺服器(_M)"
 
 #: ../data/preferences.glade.h:32
 msgid "_Maximum depth level:"
-msgstr "目錄深度上限(_M)："
+msgstr "目錄深度上限(_M):"
 
 #: ../data/preferences.glade.h:33
 msgid "_Number of retries:"
-msgstr "重試次數(_N)："
+msgstr "重試次數(_N):"
 
 #: ../data/preferences.glade.h:34
 msgid "_Open files automatically after download"
@@ -425,7 +467,7 @@ msgstr "檔案"
 
 #: ../data/preferences.glade.h:37
 msgid "kB/sec"
-msgstr "kB/秒"
+msgstr "kB/s"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
@@ -443,39 +485,39 @@ msgstr "未知"
 msgid "Failed"
 msgstr "失敗"
 
-#: ../src/gwget_data.c:187
+#: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "停頓"
 
-#: ../src/gwget_data.c:221
+#: ../src/gwget_data.c:229
 msgid "Waiting"
 msgstr "等待中"
 
-#: ../src/gwget_data.c:223
+#: ../src/gwget_data.c:231
 msgid "Not Started"
 msgstr "未開始"
 
-#: ../src/gwget_data.c:225
+#: ../src/gwget_data.c:233
 msgid "Not Running"
 msgstr "沒有執行"
 
-#: ../src/gwget_data.c:227
+#: ../src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "未連線"
 
-#: ../src/gwget_data.c:229
+#: ../src/gwget_data.c:237
 msgid "Connected"
 msgstr "已連線"
 
-#: ../src/gwget_data.c:231
+#: ../src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "下載中"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:241
 msgid "Completed"
 msgstr "完成"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -484,93 +526,95 @@ msgstr ""
 "完成下載\n"
 "(%s)"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:253
 msgid "Error"
 msgstr "錯誤"
 
-#: ../src/gwget_data.c:667
+#: ../src/gwget_data.c:676
 msgid "Unable to add this download"
 msgstr "無法加入這下載"
 
-#: ../src/gwget_data.c:668
+#: ../src/gwget_data.c:677
 msgid "This download is already added"
-msgstr "這下載已加入"
+msgstr "這下載項目已加入"
 
-#: ../src/gwget_data.c:716 ../src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1041 ../src/main_window_cb.c:1060
 msgid "Error opening file"
 msgstr "開啟檔案時發生錯誤"
 
-#: ../src/gwget_data.c:716 ../src/main_window_cb.c:99
+#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1041
 msgid "Couldn't open the file"
 msgstr "無法開啟檔案"
 
-#: ../src/main_window.c:370
+#: ../src/main_window.c:422
 msgid "File Name"
 msgstr "檔案名稱"
 
-#: ../src/main_window.c:377
+#: ../src/main_window.c:430
 msgid "State"
 msgstr "狀態"
 
-#: ../src/main_window.c:388
+#: ../src/main_window.c:442
 msgid "Current Size"
 msgstr "目前大小"
 
-#: ../src/main_window.c:399
+#: ../src/main_window.c:454
 msgid "Total Size"
 msgstr "原來大小"
 
-#: ../src/main_window.c:409 ../src/main_window.c:415
+#: ../src/main_window.c:465 ../src/main_window.c:471
 msgid "Percentage"
 msgstr "百分比"
 
-#: ../src/main_window.c:420
+#: ../src/main_window.c:478
 msgid "Elapsed Time"
 msgstr "已下載時間"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:489
 msgid "Remaining Time"
 msgstr "剩餘時間"
 
-#: ../src/main_window.c:440
+#: ../src/main_window.c:500
 msgid "Speed"
 msgstr "速度"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:547
 msgid "Error starting the download"
 msgstr "開始下載時發生錯誤"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:547
 msgid "There was an unexpected error starting the download"
 msgstr "開始下載時發生無法預計的錯誤"
 
-#: ../src/main_window.c:720
+#: ../src/main_window.c:784
 msgid "Cancel current downloads?"
 msgstr "是否取消下載目前的檔案"
 
-#: ../src/main_window.c:721
+#: ../src/main_window.c:785
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr "目前至少仍有一個檔案在下載中，是否確定取消下載檔案？"
 
-#: ../src/main_window_cb.c:94
+#: ../src/main_window_cb.c:82
 msgid "Error in download"
 msgstr "下載時發生錯誤"
 
-#: ../src/main_window_cb.c:177
+#: ../src/main_window_cb.c:169
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window_cb.c:180
+#: ../src/main_window_cb.c:172
 msgid "Download Manager for GNOME."
 msgstr "適用於 GNOME 的下載管理程式。"
 
-#: ../src/main_window_cb.c:514 ../src/new_window.c:138
+#: ../src/main_window_cb.c:519 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "選取資料夾"
 
-#: ../src/main_window_cb.c:570
+#: ../src/main_window_cb.c:575
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -579,21 +623,37 @@ msgstr ""
 "真的要取消目前的下載？\n"
 "(URL：%s)"
 
-#: ../src/main_window_cb.c:571
+#: ../src/main_window_cb.c:576
 msgid "Cancel download?"
 msgstr "取消下載？"
 
-#: ../src/main_window_cb.c:599
+#: ../src/main_window_cb.c:604
 msgid "Really remove completed downloads from the list?"
 msgstr "是否確定從清單中移除已成功的下載？"
 
-#: ../src/main_window_cb.c:628
+#: ../src/main_window_cb.c:633
 msgid "Really remove inactive downloads from the list?"
 msgstr "是否確定從清單中移除已停止的下載？"
 
-#: ../src/main_window_cb.c:657
+#: ../src/main_window_cb.c:662
 msgid "Really remove all downloads from the list?"
 msgstr "是否確定從清單中移除所有下載？"
+
+#: ../src/main_window_cb.c:995
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr "新的下載速度限制只會對新的或重新開始的下載項目有效。"
+
+#: ../src/main_window_cb.c:1010
+msgid "Remove this download ?"
+msgstr "是否移除這個項目？"
+
+#: ../src/main_window_cb.c:1010
+msgid "Really remove this download from the list?"
+msgstr "是否確定從清單中移除這個項目？"
+
+#: ../src/main_window_cb.c:1060
+msgid "Couldn't open the folder"
+msgstr "無法開啟目錄"
 
 #: ../src/systray.c:152
 msgid "Nothing"
@@ -603,73 +663,46 @@ msgstr "沒有東西"
 msgid "Downloads"
 msgstr "下載"
 
-#: ../src/wget-log.c:118
+#: ../src/wget-log.c:120
 msgid "Socket error"
 msgstr "Socket 錯誤"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "連線被拒\n"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:124
 msgid "No route to host"
 msgstr "無法連繫主機"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "下載 URL 時被拒絕連線：\n"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "找不到主機\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "不支援這種協定 - https: 協定需要 wget >= 1.7\n"
 
-#: ../src/wget-log.c:131
+#: ../src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "拒絕截斷現有的檔案"
 
-#: ../src/wget-log.c:133
+#: ../src/wget-log.c:135
 msgid "Unknown error"
 msgstr "錯誤原因不明"
 
-#: ../src/wget-log.c:144 ../src/wget-log.c:150
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "找不到檔案"
 
-#: ../src/wget-log.c:157
+#: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr "無法繼續下載，因為已經存在的本機檔案和遠端的檔案有衝突"
 
-#: ../src/wget-log.c:216
+#: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "無法將資料寫入目的地資料夾"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Url:"
-#~ msgstr "Url:"
-
-#~ msgid "  KB"
-#~ msgstr "  KB"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>一般</b>"
-
-#~ msgid "File Type Image"
-#~ msgstr "代表檔案格式的圖示"
-
-#~ msgid "File Type"
-#~ msgstr "檔案類型"
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "如對翻譯有任何意見，請送一封電子郵件給\n"
-#~ "以下地址，GNOME 翻譯團隊會盡快回覆您：\n"
-#~ "community@linuxhall.org\n"
-#~ "\n"
-#~ "Woodman Tuen <wmtuen@gmail.com>, 2005\n"
-#~ "Abel Cheung <maddog@linuxhall.org>, 2004"
