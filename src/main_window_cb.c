@@ -625,19 +625,22 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"));
-	if (response == GTK_RESPONSE_OK) {
-		length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
-		gtk_tree_model_get_iter_root(model,&iter);
-		for (i=0;i<length;i++) {
-			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-			gwgetdata=g_object_get_data(G_OBJECT(model),url);
+	if (g_list_length(downloads)>0) 
+	{
+		response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"));
+		if (response == GTK_RESPONSE_OK) {
+			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+			gtk_tree_model_get_iter_root(model,&iter);
+			for (i=0;i<length;i++) {
+				gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+				gwgetdata=g_object_get_data(G_OBJECT(model),url);
 
-			if (gwgetdata->state==DL_COMPLETED) {
-				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
-				downloads=g_list_remove(downloads,gwgetdata);
-			} else {
-				gtk_tree_model_iter_next(model,&iter);
+				if (gwgetdata->state==DL_COMPLETED) {
+					gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
+					downloads=g_list_remove(downloads,gwgetdata);
+				} else {
+					gtk_tree_model_iter_next(model,&iter);
+				}
 			}
 		}
 	}
@@ -654,19 +657,22 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"));
-	if (response == GTK_RESPONSE_OK) {
-		length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
-		gtk_tree_model_get_iter_root(model,&iter);
-		for (i=0;i<length;i++) {
-			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-			gwgetdata=g_object_get_data(G_OBJECT(model),url);
+	if (g_list_length(downloads)>0) 
+	{
+		response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"));
+		if (response == GTK_RESPONSE_OK) {
+			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+			gtk_tree_model_get_iter_root(model,&iter);
+			for (i=0;i<length;i++) {
+				gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+				gwgetdata=g_object_get_data(G_OBJECT(model),url);
 			
-			if (gwgetdata->state!=DL_RETRIEVING) {
-				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
-				downloads=g_list_remove(downloads,gwgetdata);
-			} else {
-				gtk_tree_model_iter_next(model,&iter);
+				if (gwgetdata->state!=DL_RETRIEVING) {
+					gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
+					downloads=g_list_remove(downloads,gwgetdata);
+				} else {
+					gtk_tree_model_iter_next(model,&iter);
+				}
 			}
 		}
 	}
@@ -683,27 +689,30 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"));
-	if (response == GTK_RESPONSE_OK) {
-		length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
-		gtk_tree_model_get_iter_root(model,&iter);
-		for (i=0;i<length;i++) {
-			gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
-			gwgetdata=g_object_get_data(G_OBJECT(model),url);
-			/* If it's running we must stop it */
-			/* because the function that update the info will */
-			/* be continue trying to update the info, so segfault! */
+	if (g_list_length(downloads)>0) 
+	{
+		response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"));
+		if (response == GTK_RESPONSE_OK) {
+			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
+			gtk_tree_model_get_iter_root(model,&iter);
+			for (i=0;i<length;i++) {
+				gtk_tree_model_get (model, &iter, URL_COLUMN, &url, -1);
+				gwgetdata=g_object_get_data(G_OBJECT(model),url);
+				/* If it's running we must stop it */
+				/* because the function that update the info will */
+				/* be continue trying to update the info, so segfault! */
 
-			if (gwgetdata->state==DL_RETRIEVING) {
-				gwget_data_stop_download(gwgetdata);
-			}
+				if (gwgetdata->state==DL_RETRIEVING) {
+					gwget_data_stop_download(gwgetdata);
+				}
 			
-			gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
-			downloads=g_list_remove(downloads,gwgetdata);
+				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
+				downloads=g_list_remove(downloads,gwgetdata);
+			}
+			gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
 		}
-		gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
 	}
-				
+
 }
 
 void 
@@ -1042,6 +1051,17 @@ void
 on_download_menu_activate(void) 
 {
 	gwget_data_set_menus (gwget_data_get_selected());
+}
+
+void
+on_edit_menu_activate(void)
+{
+	if (g_list_length(downloads)>0) 
+	{
+		 gtk_widget_set_sensitive(glade_xml_get_widget(xml, "remove_item"), TRUE);
+	} else {
+		 gtk_widget_set_sensitive(glade_xml_get_widget(xml, "remove_item"), FALSE);
+	}
 }
 
 static

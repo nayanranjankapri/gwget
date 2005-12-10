@@ -21,6 +21,7 @@
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
   <property name="enable_layout_config">True</property>
   <signal name="delete_event" handler="on_main_window_delete_event" last_modification_time="Fri, 04 Jun 2004 17:32:49 GMT"/>
 
@@ -37,6 +38,8 @@
 	  <child>
 	    <widget class="GtkMenuBar" id="menubar1">
 	      <property name="visible">True</property>
+	      <property name="pack_direction">GTK_PACK_DIRECTION_LTR</property>
+	      <property name="child_pack_direction">GTK_PACK_DIRECTION_LTR</property>
 
 	      <child>
 		<widget class="GtkMenuItem" id="file_menuitem">
@@ -71,7 +74,7 @@
 			  <signal name="activate" handler="continue_all_downloads" last_modification_time="Sun, 24 Jul 2005 12:02:10 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image177">
+			    <widget class="GtkImage" id="image192">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-refresh</property>
 			      <property name="icon_size">1</property>
@@ -92,7 +95,7 @@
 			  <signal name="activate" handler="stop_all_downloads" last_modification_time="Sun, 24 Jul 2005 12:02:28 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image178">
+			    <widget class="GtkImage" id="image193">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-stop</property>
 			      <property name="icon_size">1</property>
@@ -127,18 +130,19 @@
 		<widget class="GtkMenuItem" id="edit1">
 		  <property name="visible">True</property>
 		  <property name="stock_item">GNOMEUIINFO_MENU_EDIT_TREE</property>
+		  <signal name="activate" handler="on_edit_menu_activate" last_modification_time="Sat, 10 Dec 2005 20:12:36 GMT"/>
 
 		  <child>
 		    <widget class="GtkMenu" id="edit1_menu">
 
 		      <child>
-			<widget class="GtkImageMenuItem" id="remove2">
+			<widget class="GtkImageMenuItem" id="remove_item">
 			  <property name="visible">True</property>
 			  <property name="label" translatable="yes">Remove from List</property>
 			  <property name="use_underline">True</property>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image179">
+			    <widget class="GtkImage" id="image194">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-delete</property>
 			      <property name="icon_size">1</property>
@@ -150,7 +154,7 @@
 			  </child>
 
 			  <child>
-			    <widget class="GtkMenu" id="remove2_menu">
+			    <widget class="GtkMenu" id="remove_item_menu">
 
 			      <child>
 				<widget class="GtkMenuItem" id="remove_completed1">
@@ -220,7 +224,7 @@
 			  <signal name="activate" handler="on_popup_pause_button_clicked" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image180">
+			    <widget class="GtkImage" id="image195">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-stop</property>
 			      <property name="icon_size">1</property>
@@ -242,7 +246,7 @@
 			  <signal name="activate" handler="on_popup_continue_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image181">
+			    <widget class="GtkImage" id="image196">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-refresh</property>
 			      <property name="icon_size">1</property>
@@ -264,7 +268,7 @@
 			  <signal name="activate" handler="on_cancel_download_activate" last_modification_time="Sun, 24 Jul 2005 11:01:22 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image182">
+			    <widget class="GtkImage" id="image197">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-cancel</property>
 			      <property name="icon_size">1</property>
@@ -653,6 +657,7 @@
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
   <property name="has_separator">False</property>
 
   <child internal-child="vbox">
@@ -811,6 +816,7 @@
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
   <property name="has_separator">False</property>
 
   <child internal-child="vbox">
@@ -1029,6 +1035,7 @@
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
   <signal name="delete_event" handler="gtk_widget_hide" object="properties_window" last_modification_time="Sun, 25 Apr 2004 19:03:34 GMT"/>
 
   <child>
@@ -1322,6 +1329,7 @@
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
   <property name="has_separator">False</property>
 
   <child internal-child="vbox">

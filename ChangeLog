@@ -1,3 +1,12 @@
+2005-12-10  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c (on_remove_*): Check if really there are
+	downloads to remove. 
+	(on_edit_menu_activate): Set the sensitive of the remove item if there
+	are or not downloads to remove.
+	* data/gwget.glade: Add on_edit_menu_activate.
+	* include/main_window_cb.h: Add on_edit_menu_activate.
+	
 2005-12-06  David Sedeño <david@alderia.com>
 
 	Patch from Yoandy Rodriguez <mr.dominus@gmail.com> for autenticate
