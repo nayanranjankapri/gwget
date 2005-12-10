@@ -1,5 +1,8 @@
 2005-12-10  David Sedeño <david@alderia.com>
 
+	* src/main_window.c (show_prefered_columns), src/main_window_cb.c
+	(on_boton_pref_clicked): Set the correct value of
+	limit_speed_spin and limit_simultaneousdownloads_spin.
 	* src/main_window_cb.c (on_remove_*): Check if really there are
 	downloads to remove. 
 	(on_edit_menu_activate): Set the sensitive of the remove item if there
