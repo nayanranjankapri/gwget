@@ -1,15 +1,15 @@
 # Catalan translation for gwget
 # Copyright (C) 2005, The Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
-# Josep Puigdemont i Casamajó <josep@imatge-sintetica.com>, 2005.
+# Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
-"Report-Msgid-Bugs-To: tradgnome@softcatala.org\n"
-"POT-Creation-Date: 2005-03-27 03:01+0200\n"
-"PO-Revision-Date: 2005-03-31 16:03+0200\n"
-"Last-Translator: Josep Puigdemont i Casamajó <josep@imatge-sintetica.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-12-22 01:50+0100\n"
+"PO-Revision-Date: 2005-12-22 01:51+0100\n"
+"Last-Translator: Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "GNU GPL Versió 2"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Gestor de descàrregues per al GNOME"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:182
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr "Josep Puigdemont i Casamajó <josep@imatge-sintetica.com>"
 
@@ -56,129 +56,157 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 #: ../data/gwget.glade.h:5
+msgid "Cancel download"
+msgstr "Cancel·la la descàrrega"
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel the download"
+msgstr "Cancel·la la descàrrega"
+
+#: ../data/gwget.glade.h:7
 msgid "Continue"
 msgstr "Continua"
 
-#: ../data/gwget.glade.h:6 ../src/main_window_cb.c:129
-#: ../src/main_window_cb.c:580 ../src/main_window_cb.c:677
+#: ../data/gwget.glade.h:8
+msgid "Continue with the download"
+msgstr "Continua la descàrrega"
+
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
+#: ../src/main_window_cb.c:607 ../src/main_window_cb.c:712
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gestor de descàrregues"
 
-#: ../data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
 msgid "Information"
 msgstr "Informació"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:11
 msgid "Local Directory:"
 msgstr "Directori local:"
 
-#: ../data/gwget.glade.h:9
+#: ../data/gwget.glade.h:12
 msgid "Local File:"
 msgstr "Fitxer local:"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
 msgstr "Fitxers multimèdia (vídeos i imatges)"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:14
 msgid "New download"
 msgstr "Descàrrega nova"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:15
+msgid "Open"
+msgstr "Obre"
+
+#: ../data/gwget.glade.h:16
+msgid "Open directory"
+msgstr "Obre un directori"
+
+#: ../data/gwget.glade.h:17
+msgid "Open the target directory"
+msgstr "Obre el directori destí"
+
+#: ../data/gwget.glade.h:18
 msgid "Pause"
 msgstr "Pausa"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
 msgid "Pause all"
 msgstr "Pausa-ho tot"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
 msgstr "Pausa totes les descàrregues"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Pause download"
 msgstr "Pausa la descàrrega"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
+msgid "Pause the download"
+msgstr "Fes una pausa de la descàrrega"
+
+#: ../data/gwget.glade.h:23
 msgid "Properties"
 msgstr "Propietats"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:24
 msgid "Question"
 msgstr "Qüestió"
 
-#: ../data/gwget.glade.h:18 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Recursiu"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Recursive options"
 msgstr "Opcions de recursivitat"
 
-#: ../data/gwget.glade.h:20
-msgid "Remove"
-msgstr "Suprimeix"
-
-#: ../data/gwget.glade.h:21 ../src/main_window_cb.c:659
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:694
 msgid "Remove all"
 msgstr "Suprimeix-les totes"
 
-#: ../data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "Suprimeix totes les descàrregues de la llista"
-
-#: ../data/gwget.glade.h:23 ../src/main_window_cb.c:601
+#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:630
 msgid "Remove completed"
-msgstr "Suprimeix finalitzades"
+msgstr "Suprimeix les finalitzades"
 
-#: ../data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "Suprimeix les descàrregues finalitzades de la llista"
+#: ../data/gwget.glade.h:29
+msgid "Remove from List"
+msgstr "Suprimeix de la llista"
 
-#: ../data/gwget.glade.h:25 ../src/main_window_cb.c:630
+#: ../data/gwget.glade.h:30
+msgid "Remove from list"
+msgstr "Suprimeix de la llista"
+
+#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:662
 msgid "Remove inactive"
-msgstr "Suprimeix inactives"
+msgstr "Suprimeix les inactives"
 
-#: ../data/gwget.glade.h:26
-msgid "Remove inactive downloads from list"
-msgstr "Suprimeix les decàrregues inactives de la llista"
-
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:32
 msgid "Resume all"
 msgstr "Reprèn-les totes"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:33
 msgid "Resume all downloads"
 msgstr "Reprèn totes les descàrregues"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:34
+msgid "Stat_usbar"
+msgstr "_Barra d'estat"
+
+#: ../data/gwget.glade.h:35
 msgid "Stop and delete downloaded file"
 msgstr "Atura i suprimeix tots els fitxers descarregats"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "Només el fitxer índex"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:37
 msgid "This site (mirror)"
 msgstr "Aquest lloc (rèplica)"
 
-#: ../data/gwget.glade.h:32 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:39
+msgid "_Download"
+msgstr "_Descàrregues"
+
+#: ../data/gwget.glade.h:40
 msgid "_New"
 msgstr "_Nova"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
 msgstr "_Barra d'eines"
 
 #: ../data/gwget.schemas.in.h:1
-msgid "Ask save in for each new download"
-msgstr "Pregunta on desar cada descàrrega nova"
+msgid "Ask where to save each new download"
+msgstr "Demana on desar per a cada descàrrega"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -262,12 +290,24 @@ msgid "View remaining time column"
 msgstr "Mostra la columna del temps restant"
 
 #: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "Mostra la barra d'estat"
+
+#: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
 msgstr "Mostra la barra d'eines"
 
-#: ../data/gwget.schemas.in.h:22
+#: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
 msgstr "Mostra la columna de la mida total"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Si s'ha de mostrar la barra d'estat."
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "Si s'ha de mostrar la barra d'eines"
 
 #: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
@@ -286,68 +326,68 @@ msgid "   "
 msgstr "   "
 
 #: ../data/preferences.glade.h:3
-msgid "*"
-msgstr "*"
-
-#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Comportament</span>"
 
-#: ../data/preferences.glade.h:5
+#: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Llista de columes</span>"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.glade.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">General</span>"
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Enllaços</span>"
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Configuració del servidor intermediari</span>"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.glade.h:8
 msgid "Column List"
 msgstr "Llista de columnes"
 
-#: ../data/preferences.glade.h:10
+#: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
 msgstr "Preferències de xarxa predeterminades del _GNOME"
 
-#: ../data/preferences.glade.h:11
+#: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
 msgstr "Connexió directa a _Internet"
 
-#: ../data/preferences.glade.h:12
+#: ../data/preferences.glade.h:11
 msgid "Do_wnload Speed"
 msgstr "_Velocitat de descàrrega"
 
-#: ../data/preferences.glade.h:13
+#: ../data/preferences.glade.h:12
 msgid "Don't _create directories"
 msgstr "No _creïs directoris"
 
-#: ../data/preferences.glade.h:14
+#: ../data/preferences.glade.h:13
 msgid "Follow _relative links only"
 msgstr "Només segueix els enllaços _relatius"
 
-#: ../data/preferences.glade.h:15
+#: ../data/preferences.glade.h:14
 msgid "General"
 msgstr "General"
 
-#: ../data/preferences.glade.h:16
+#: ../data/preferences.glade.h:15
 msgid "Limit _number of simultaneous download to:"
 msgstr "Limita el _nombre de descàrregues simultànies a:"
 
-#: ../data/preferences.glade.h:17
+#: ../data/preferences.glade.h:16
 msgid "Network"
 msgstr "Xarxa"
 
-#: ../data/preferences.glade.h:18
+#: ../data/preferences.glade.h:17
 msgid "P_ort:"
 msgstr "P_ort:"
+
+#: ../data/preferences.glade.h:18
+msgid "Password:"
+msgstr "Contraseya:"
 
 #: ../data/preferences.glade.h:19
 msgid "Preferences"
@@ -418,10 +458,18 @@ msgid "_Percentage"
 msgstr "_Percentatge"
 
 #: ../data/preferences.glade.h:37
+msgid "_Proxy requires authentication"
+msgstr "El _servidor intermediàri requereix autenticació"
+
+#: ../data/preferences.glade.h:38
+msgid "_User:"
+msgstr "_Usuari:"
+
+#: ../data/preferences.glade.h:39
 msgid "files"
 msgstr "fitxers"
 
-#: ../data/preferences.glade.h:38
+#: ../data/preferences.glade.h:40
 msgid "kB/sec"
 msgstr "kB/sec"
 
@@ -441,39 +489,39 @@ msgstr "Desconegut"
 msgid "Failed"
 msgstr "Ha fallat"
 
-#: ../src/gwget_data.c:179
+#: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "encallat"
 
-#: ../src/gwget_data.c:214
+#: ../src/gwget_data.c:229
 msgid "Waiting"
 msgstr "Esperant"
 
-#: ../src/gwget_data.c:216
+#: ../src/gwget_data.c:231
 msgid "Not Started"
 msgstr "No s'ha iniciat"
 
-#: ../src/gwget_data.c:218
+#: ../src/gwget_data.c:233
 msgid "Not Running"
 msgstr "No s'està executant"
 
-#: ../src/gwget_data.c:220
+#: ../src/gwget_data.c:235
 msgid "Not Connected"
 msgstr "Desconnectat"
 
-#: ../src/gwget_data.c:222
+#: ../src/gwget_data.c:237
 msgid "Connected"
 msgstr "Connectat"
 
-#: ../src/gwget_data.c:224
+#: ../src/gwget_data.c:239
 msgid "Retrieving"
 msgstr "Recuperant"
 
-#: ../src/gwget_data.c:226
+#: ../src/gwget_data.c:241
 msgid "Completed"
 msgstr "Completat"
 
-#: ../src/gwget_data.c:230
+#: ../src/gwget_data.c:245
 #, c-format
 msgid ""
 "Download Completed\n"
@@ -482,71 +530,73 @@ msgstr ""
 "S'ha completat la descàrrega\n"
 "(%s)"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:253
 msgid "Error"
 msgstr "Error"
 
-#: ../src/gwget_data.c:657
+#: ../src/gwget_data.c:687
 msgid "Unable to add this download"
 msgstr "No s'ha pogut afegir aquesta descàrrega"
 
-#: ../src/gwget_data.c:658
+#: ../src/gwget_data.c:688
 msgid "This download is already added"
 msgstr "Aquesta descàrrega ja està afegida"
 
-#: ../src/gwget_data.c:706 ../src/main_window_cb.c:99
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1122 ../src/main_window_cb.c:1141
 msgid "Error opening file"
 msgstr "S'ha produït un error en obrir el fitxer"
 
-#: ../src/gwget_data.c:706 ../src/main_window_cb.c:99
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#: ../src/main_window_cb.c:1122
 msgid "Couldn't open the file"
 msgstr "No s'ha pogut obrir el fitxer"
 
-#: ../src/main_window.c:367
+#: ../src/main_window.c:431
 msgid "File Name"
 msgstr "Nom del fitxer"
 
-#: ../src/main_window.c:374
+#: ../src/main_window.c:439
 msgid "State"
 msgstr "Estat"
 
-#: ../src/main_window.c:385
+#: ../src/main_window.c:451
 msgid "Current Size"
 msgstr "Mida actual"
 
-#: ../src/main_window.c:396
+#: ../src/main_window.c:463
 msgid "Total Size"
 msgstr "Mida total"
 
-#: ../src/main_window.c:406 ../src/main_window.c:412
+#: ../src/main_window.c:474 ../src/main_window.c:480
 msgid "Percentage"
 msgstr "Percentatge"
 
-#: ../src/main_window.c:417
+#: ../src/main_window.c:487
 msgid "Elapsed Time"
 msgstr "Temps transcorregut"
 
-#: ../src/main_window.c:427
+#: ../src/main_window.c:498
 msgid "Remaining Time"
 msgstr "Temps restant"
 
-#: ../src/main_window.c:437
+#: ../src/main_window.c:509
 msgid "Speed"
 msgstr "Velocitat"
 
-#: ../src/main_window.c:483
+#: ../src/main_window.c:556
 msgid "Error starting the download"
 msgstr "S'ha produït un error en iniciar la descàrrega"
 
-#: ../src/main_window.c:483
+#: ../src/main_window.c:556
 msgid "There was an unexpected error starting the download"
 msgstr "S'ha produït un error inesperat en iniciar la descàrrega"
 
-#: ../src/main_window.c:715
+#: ../src/main_window.c:793
 msgid "Cancel current downloads?"
 msgstr "Voleu cancel·lar les descàrregues actuals?"
 
-#: ../src/main_window.c:716
+#: ../src/main_window.c:794
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -554,23 +604,23 @@ msgstr ""
 "Encara queda almenys una descàrrega activa. Esteu segur de voler cancel·lar "
 "totes les transferències en actiu?"
 
-#: ../src/main_window_cb.c:94
+#: ../src/main_window_cb.c:82
 msgid "Error in download"
 msgstr "S'ha produït un error en descarregar"
 
-#: ../src/main_window_cb.c:177
+#: ../src/main_window_cb.c:169
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window_cb.c:180
+#: ../src/main_window_cb.c:172
 msgid "Download Manager for GNOME."
 msgstr "Gestor de descàrregues per al GNOME."
 
-#: ../src/main_window_cb.c:516 ../src/new_window.c:138
+#: ../src/main_window_cb.c:543 ../src/new_window.c:138
 msgid "Select Folder"
 msgstr "Seleccioneu una carpeta"
 
-#: ../src/main_window_cb.c:572
+#: ../src/main_window_cb.c:599
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -579,74 +629,107 @@ msgstr ""
 "Esteu segur de voler cancel·lar totes les descàrregues actuals?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:573
+#: ../src/main_window_cb.c:600
 msgid "Cancel download?"
 msgstr "Voleu cancel·lar les descàrregues?"
 
-#: ../src/main_window_cb.c:601
+#: ../src/main_window_cb.c:630
 msgid "Really remove completed downloads from the list?"
 msgstr ""
 "Esteu segur de voler suprimir de la llista les descàrregues finalitzades?"
 
-#: ../src/main_window_cb.c:630
+#: ../src/main_window_cb.c:662
 msgid "Really remove inactive downloads from the list?"
 msgstr "Esteu segur de voler suprimir de la llista les descàrregues inactives?"
 
-#: ../src/main_window_cb.c:659
+#: ../src/main_window_cb.c:694
 msgid "Really remove all downloads from the list?"
 msgstr "Esteu segur de voler suprimir de la llista totes les descàrregues?"
 
-#: ../src/systray.c:150
+#: ../src/main_window_cb.c:1076
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr ""
+"El nou límit de velocitat de les descàrregues només s'aplicarà a "
+"descàrregues noves o reiniciades"
+
+#: ../src/main_window_cb.c:1091
+msgid "Remove this download ?"
+msgstr "Voleu suprimir aquesta descàrrega?"
+
+#: ../src/main_window_cb.c:1091
+msgid "Really remove this download from the list?"
+msgstr "Esteu segur de voler suprimir aquesta descàrrega de la llista?"
+
+#: ../src/main_window_cb.c:1141
+msgid "Couldn't open the folder"
+msgstr "No s'ha pogut obrir la carpeta"
+
+#: ../src/systray.c:152
 msgid "Nothing"
 msgstr "Res"
 
-#: ../src/systray.c:157
+#: ../src/systray.c:159
 msgid "Downloads"
 msgstr "Descàrregues"
 
-#: ../src/wget-log.c:117
+#: ../src/wget-log.c:120
 msgid "Socket error"
 msgstr "Error en el sòcol"
 
-#: ../src/wget-log.c:119
+#: ../src/wget-log.c:122
 msgid "Connection refused\n"
 msgstr "S'ha refusat la connexió\n"
 
-#: ../src/wget-log.c:121
+#: ../src/wget-log.c:124
 msgid "No route to host"
 msgstr "No hi ha cap ruta cap a l'ordinador"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
 msgstr "S'ha refusat la connexió quan es descarregava la URL:\n"
 
-#: ../src/wget-log.c:125
+#: ../src/wget-log.c:128
 msgid "Host not found\n"
 msgstr "No s'ha trobat l'ordinador\n"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:130
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr ""
 "El protocol no està implementat - necessiteu wget >= 1.7 per a https:\n"
 
-#: ../src/wget-log.c:130
+#: ../src/wget-log.c:133
 msgid "Refusing to truncate existing file"
 msgstr "No es truncarà el fitxer existent"
 
-#: ../src/wget-log.c:132
+#: ../src/wget-log.c:135
 msgid "Unknown error"
 msgstr "Error desconegut"
 
-#: ../src/wget-log.c:143 ../src/wget-log.c:149
+#: ../src/wget-log.c:146 ../src/wget-log.c:152
 msgid "File not found"
 msgstr "No s'ha trobat el fitxer"
 
-#: ../src/wget-log.c:156
+#: ../src/wget-log.c:159
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
-"No es pot continuar la descàrrega, un fitxer local està en conflice amb el "
+"No es pot continuar la descàrrega, un fitxer local està en conflicte amb el "
 "fitxer remot"
 
-#: ../src/wget-log.c:214
+#: ../src/wget-log.c:218
 msgid "Can't write to target directory"
 msgstr "No es pot escriure al directori destí"
+
+#~ msgid "Remove"
+#~ msgstr "Suprimeix"
+
+#~ msgid "Remove completed downloads from list"
+#~ msgstr "Suprimeix les descàrregues finalitzades de la llista"
+
+#~ msgid "Remove inactive downloads from list"
+#~ msgstr "Suprimeix les decàrregues inactives de la llista"
+
+#~ msgid "Ask save in for each new download"
+#~ msgstr "Pregunta on desar cada descàrrega nova"
+
+#~ msgid "*"
+#~ msgstr "*"
