@@ -1,3 +1,8 @@
+2006-01-05  David Sedeño <david@alderia.com>
+
+	* configure.in: Version 0.97 "The Reyes Magos" release.
+	* NEWS: update for new version
+
 2005-12-10  David Sedeño <david@alderia.com>
 
 	* src/main_window.c (show_prefered_columns), src/main_window_cb.c

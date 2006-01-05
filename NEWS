@@ -1,4 +1,19 @@
 ==============
+Version 0.97
+==============
+Features:
+	* Support for Epiphany 1.9 (Joseph Sacco)
+	* Support for autenticate proxy (Yoandy Rodriguez)
+	* Update Fireget Firefox extension (Joachim Beckers)
+Fixes: 
+	* Correct .desktop to follow the spec
+	* Set the correct value of limit speed and simultaneus download
+
+Translations: 
+	* Update: sk (Marcel Telka), zh_TW (Abel Cheung), es (Francisco Javier F. Serrador), zh_CN (Funda Wang), cs (Miloslav Trmac), vi (Clytie Siddall), fi (Ilkka Tuohela), eu (Iñaki Larrañaga), nl (Vincent van Adrighem), en_CA (Adam Weinberger), en_GB (Alan Horkan), hu (Gabor Kelemen), ca (Josep Puigdemont i Casamajó)
+	* New: it (Marco Giorgetti), ne (Pawan Chitrakar), ar (Fahad Aljoaid)
+
+==============
 Version 0.96
 ==============
 Features:
