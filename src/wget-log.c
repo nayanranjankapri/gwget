@@ -38,10 +38,13 @@ convert_wget_size (char *size)
 {
 	char *p = size;
 
-	while (*p != ' ') {
+	while (*p != ' ' && *p != '\0') {
 		if (*p == ',') {
-			while (*p != ' ')
-				*p++ = *(p+1);
+			while (*p != ' ' && *p != '\0')
+				{
+				*p = *(p+1);
+				p++;
+				}
 			p = size;
 		} else
 			p++;
