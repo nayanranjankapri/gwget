@@ -1,14 +1,14 @@
 # Canadian English translation for gwget
-# Copyright (C) 2004-2005 Adam Weinberger and the GNOME Foundation
+# Copyright (C) 2004-2006 Adam Weinberger and the GNOME Foundation
 # This file is distributed under the same licence as the gwget package.
-# Adam Weinberger <adamw@gnome.org>, 2004, 2005.
+# Adam Weinberger <adamw@gnome.org>, 2004, 2005, 2006.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-26 17:16-0500\n"
+"POT-Creation-Date: 2006-01-11 12:58-0500\n"
 "PO-Revision-Date: 2005-08-01 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -489,6 +489,14 @@ msgstr "Unknown"
 msgid "Failed"
 msgstr "Failed"
 
+#: ../src/eggtrayicon.c:127
+msgid "Orientation"
+msgstr "Orientation"
+
+#: ../src/eggtrayicon.c:128
+msgid "The orientation of the tray."
+msgstr "The orientation of the tray."
+
 #: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "stalled"
@@ -669,47 +677,47 @@ msgstr "Nothing"
 msgid "Downloads"
 msgstr "Downloads"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:123
 msgid "Socket error"
 msgstr "Socket error"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:125
 msgid "Connection refused\n"
 msgstr "Connection refused\n"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:127
 msgid "No route to host"
 msgstr "No route to host"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:129
 msgid "Connection refused when downloading URL:\n"
 msgstr "Connection refused when downloading URL:\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:131
 msgid "Host not found\n"
 msgstr "Host not found\n"
 
-#: ../src/wget-log.c:130
+#: ../src/wget-log.c:133
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Unsupported protocol - you need wget >= 1.7 for https:\n"
 
-#: ../src/wget-log.c:133
+#: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
 msgstr "Refusing to truncate existing file"
 
-#: ../src/wget-log.c:135
+#: ../src/wget-log.c:138
 msgid "Unknown error"
 msgstr "Unknown error"
 
-#: ../src/wget-log.c:146 ../src/wget-log.c:152
+#: ../src/wget-log.c:149 ../src/wget-log.c:155
 msgid "File not found"
 msgstr "File not found"
 
-#: ../src/wget-log.c:159
+#: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Cannot continue download; existing local file conflicts with remote file"
 
-#: ../src/wget-log.c:218
+#: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Cannot write to target directory"
