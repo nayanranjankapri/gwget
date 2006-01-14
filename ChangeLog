@@ -1,3 +1,18 @@
+2006-01-14  David Sedeño <david@alderia.com>
+
+	* include/eggtrayicon.h, src/eggtrayicon.c: Updated from rhythmbox to
+	support notification bubble.
+	* include/systray.h, src/systray.c: Add gwget_tray_notify
+	* src/systray.c (systray_load): Remove egg_tray_icon_send_message
+	call.
+	(gwget_tray_notify): New func that call egg_tray_icon_notify that use
+	a bubble.
+	* src/Makefile.am: Add eggnotificationbubble.c to the build.
+	* src/gwget_data.c (gwget_gnotify_finished): Call gwget_tray_notify to
+	show the bubble.
+	(gwget_data_update_statistics_ui): Remove egg_tray_icon_send_message
+	call.
+	
 2006-01-10  David Sedeño <david@alderia.com>
 
 	* src/eggtrayicon.c include/eggtrayicon.h: Updated code from libegg.

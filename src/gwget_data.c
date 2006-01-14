@@ -244,8 +244,7 @@ gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 				   if (gwget_pref.docked) {
 					   tooltip_message=g_strdup_printf(_("Download Completed\n(%s)"), 
 							   gwgetdata->url);
-					   gtk_tooltips_set_tip (GTK_TOOLTIPS(tray_tooltip), GTK_WIDGET(tray_icon),tooltip_message,NULL);
-					   egg_tray_icon_send_message(tray_icon,100000,tooltip_message,strlen(tooltip_message));
+					   gtk_tooltips_set_tip (GTK_TOOLTIPS(tray_tooltip), GTK_WIDGET(tray_icon), tooltip_message,NULL);
 					   set_icon_idle();
 				   }
 					   
@@ -290,7 +289,7 @@ gwget_data_process_information (GwgetData *gwgetdata)
 		else if (WIFEXITED (status)) {
             		if (WEXITSTATUS (status) == 0) {
                 		gwget_data_set_state (gwgetdata, DL_COMPLETED);
-                     gwget_gnotify_finished(gwgetdata);
+                     		gwget_gnotify_finished(gwgetdata);
 				start_first_waiting_download();
 				if (gwget_pref.open_after_dl) {
 					gwget_data_exec(gwgetdata);
@@ -771,10 +770,11 @@ gwget_gnotify_finished(GwgetData *gwgetdata) {
       close(sock);
    }
 
+   gwget_tray_notify (_("Download Complete"), gwgetdata->filename);
    g_free(app_msg);
    g_free(icon_msg);
    g_free(fn_msg);
-	g_free(gwgetdata->icon_name);
+   g_free(gwgetdata->icon_name);
 }
 
 void

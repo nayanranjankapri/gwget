@@ -51,6 +51,7 @@ gwget_SOURCES = \
 	custom-cell-renderer-progressbar.c\
 	new_window.c\
 	eggtrayicon.c\
+	eggnotificationbubble.c \
 	systray.c \
 	gwget-application-server.c \
 	gwget-application-server.h 

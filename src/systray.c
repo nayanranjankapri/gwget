@@ -64,7 +64,6 @@ systray_load(void)
 			  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
                           GDK_ACTION_COPY);
 
-	egg_tray_icon_send_message(tray_icon,1000,"gwget",7);
 }
 
 static
@@ -262,4 +261,10 @@ void
 set_icon_idle()
 {
 	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_idle);
+}
+
+void
+gwget_tray_notify(gchar *primary, gchar *secondary)
+{
+	egg_tray_icon_notify (EGG_TRAY_ICON(tray_icon), 4000, primary, NULL, secondary);
 }
