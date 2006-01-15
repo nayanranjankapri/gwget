@@ -7,8 +7,8 @@ msgid ""
 ""
 msgstr "Project-Id-Version: gwget Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-10 04:04+0100\n"
-"PO-Revision-Date: 2006-01-10 22:49+1030\n"
+"POT-Creation-Date: 2006-01-15 03:41+0100\n"
+"PO-Revision-Date: 2006-01-15 21:53+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -491,6 +491,18 @@ msgstr "Không biết"
 msgid "Failed"
 msgstr "Thất bại"
 
+#:../src/eggtrayicon.c:145
+msgid "Orientation"
+msgstr "Hướng"
+
+#:../src/eggtrayicon.c:146
+msgid "The orientation of the tray."
+msgstr "Hướng khay."
+
+#:../src/eggtrayicon.c:483 ../src/eggtrayicon.c:491
+msgid "Notification"
+msgstr "Thông báo"
+
 #:../src/gwget_data.c:195
 msgid "stalled"
 msgstr "bị ngừng"
@@ -531,27 +543,31 @@ msgid ""
 msgstr "Việc tải về hoàn tất\n"
 "(%s)"
 
-#:../src/gwget_data.c:253
+#:../src/gwget_data.c:252
 msgid "Error"
 msgstr "Lỗi"
 
-#:../src/gwget_data.c:687
+#:../src/gwget_data.c:686
 msgid "Unable to add this download"
 msgstr "Không thể thêm việc tải về này"
 
-#:../src/gwget_data.c:688
+#:../src/gwget_data.c:687
 msgid "This download is already added"
 msgstr "Việc tải về này đã được thêm."
 
-#:../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#:../src/gwget_data.c:735 ../src/main_window_cb.c:91
 #:../src/main_window_cb.c:1122 ../src/main_window_cb.c:1141
 msgid "Error opening file"
 msgstr "Gặp lỗi khi mở tập tin"
 
-#:../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#:../src/gwget_data.c:735 ../src/main_window_cb.c:91
 #:../src/main_window_cb.c:1122
 msgid "Couldn't open the file"
 msgstr "Không thể mở tập tin"
+
+#:../src/gwget_data.c:773
+msgid "Download Complete"
+msgstr "Việc tải về hoàn tất"
 
 #:../src/main_window.c:431
 msgid "File Name"
@@ -646,7 +662,8 @@ msgstr "Thật sự muốn gỡ bỏ mọi mục tải về ra khỏi danh sách
 
 #:../src/main_window_cb.c:1076
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr "Giới hạn tốc độ tải về mới sẽ áp dụng chỉ cho việc tải về mới hoặc việc tải về đã khởi chạy lại."
+msgstr "Giới hạn tốc độ tải về mới sẽ áp dụng chỉ cho việc tải về mới hoặc việc tải "
+"về đã khởi chạy lại."
 
 #:../src/main_window_cb.c:1091
 msgid "Remove this download ?"
@@ -660,11 +677,11 @@ msgstr "Thật sự muốn gỡ bỏ mục tải về này ra khỏi danh sách 
 msgid "Couldn't open the folder"
 msgstr "Không thể mở thư mục"
 
-#:../src/systray.c:152
+#:../src/systray.c:151
 msgid "Nothing"
 msgstr "Không có"
 
-#:../src/systray.c:159
+#:../src/systray.c:158
 msgid "Downloads"
 msgstr "Việc tải về"
 
