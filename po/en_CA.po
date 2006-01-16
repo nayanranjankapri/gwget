@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-11 12:58-0500\n"
+"POT-Creation-Date: 2006-01-16 00:05-0500\n"
 "PO-Revision-Date: 2005-08-01 00:01-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -489,13 +489,17 @@ msgstr "Unknown"
 msgid "Failed"
 msgstr "Failed"
 
-#: ../src/eggtrayicon.c:127
+#: ../src/eggtrayicon.c:145
 msgid "Orientation"
 msgstr "Orientation"
 
-#: ../src/eggtrayicon.c:128
+#: ../src/eggtrayicon.c:146
 msgid "The orientation of the tray."
 msgstr "The orientation of the tray."
+
+#: ../src/eggtrayicon.c:483 ../src/eggtrayicon.c:491
+msgid "Notification"
+msgstr "Notification"
 
 #: ../src/gwget_data.c:195
 msgid "stalled"
@@ -538,27 +542,31 @@ msgstr ""
 "Download Completed\n"
 "(%s)"
 
-#: ../src/gwget_data.c:253
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "Error"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:686
 msgid "Unable to add this download"
 msgstr "Unable to add this download"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:687
 msgid "This download is already added"
 msgstr "This download is already added"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#: ../src/gwget_data.c:735 ../src/main_window_cb.c:91
 #: ../src/main_window_cb.c:1122 ../src/main_window_cb.c:1141
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#: ../src/gwget_data.c:735 ../src/main_window_cb.c:91
 #: ../src/main_window_cb.c:1122
 msgid "Couldn't open the file"
 msgstr "Could not open the file"
+
+#: ../src/gwget_data.c:773
+msgid "Download Complete"
+msgstr "Download Complete"
 
 #: ../src/main_window.c:431
 msgid "File Name"
@@ -669,11 +677,11 @@ msgstr "Really remove this download from the list?"
 msgid "Couldn't open the folder"
 msgstr "Could not open the folder"
 
-#: ../src/systray.c:152
+#: ../src/systray.c:151
 msgid "Nothing"
 msgstr "Nothing"
 
-#: ../src/systray.c:159
+#: ../src/systray.c:158
 msgid "Downloads"
 msgstr "Downloads"
 
