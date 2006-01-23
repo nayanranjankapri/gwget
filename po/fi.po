@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-06 23:01+0200\n"
-"PO-Revision-Date: 2006-01-06 23:02+0200\n"
+"POT-Creation-Date: 2006-01-23 20:44+0200\n"
+"PO-Revision-Date: 2006-01-23 20:46+0200\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -37,12 +37,12 @@ msgstr "GNU GPL versio 2"
 
 #: ../data/about.glade.h:3
 msgid "Gwget: Download Manager for GNOME"
-msgstr "Gwget: Tiedostojen hakuohjelma Gnomelle"
+msgstr "Gwget: Tiedostonoutojen hallintaohjelma Gnomelle"
 
 #: ../data/about.glade.h:4 ../src/main_window_cb.c:174
 msgid "translator-credits"
 msgstr ""
-"Ilkka Tuohela, 2005\n"
+"Ilkka Tuohela, 2006\n"
 "Sini Ruohomaa, 2004\n"
 "\n"
 "http://gnome.fi/"
@@ -496,6 +496,18 @@ msgstr "Tuntematon"
 msgid "Failed"
 msgstr "Epäonnistui"
 
+#: ../src/eggtrayicon.c:145
+msgid "Orientation"
+msgstr "Suunta"
+
+#: ../src/eggtrayicon.c:146
+msgid "The orientation of the tray."
+msgstr "Ilmoitusalueen suunta"
+
+#: ../src/eggtrayicon.c:483 ../src/eggtrayicon.c:491
+msgid "Notification"
+msgstr "Huomautus"
+
 #: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "pysähtynyt"
@@ -537,27 +549,31 @@ msgstr ""
 "Tiedostonsiirto valmis\n"
 "(%s)"
 
-#: ../src/gwget_data.c:253
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "Virhe"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:686
 msgid "Unable to add this download"
 msgstr "Tätä noutoa ei voida lisätä"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:687
 msgid "This download is already added"
 msgstr "Tämä nouto on jo lisätty"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#: ../src/gwget_data.c:735 ../src/main_window_cb.c:91
 #: ../src/main_window_cb.c:1122 ../src/main_window_cb.c:1141
 msgid "Error opening file"
 msgstr "Virhe tiedostoa avattaessa"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
+#: ../src/gwget_data.c:735 ../src/main_window_cb.c:91
 #: ../src/main_window_cb.c:1122
 msgid "Couldn't open the file"
 msgstr "Tiedostoa ei voitu avata"
+
+#: ../src/gwget_data.c:773
+msgid "Download Complete"
+msgstr "Nouto on valmis"
 
 #: ../src/main_window.c:431
 msgid "File Name"
@@ -670,58 +686,58 @@ msgstr "Haluatko varmasti poistaa tämän siirron luettelosta?"
 msgid "Couldn't open the folder"
 msgstr "Kansiota ei voitu avata"
 
-#: ../src/systray.c:152
+#: ../src/systray.c:151
 msgid "Nothing"
 msgstr "Ei mitään"
 
-#: ../src/systray.c:159
+#: ../src/systray.c:158
 msgid "Downloads"
 msgstr "Siirrot"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:123
 msgid "Socket error"
 msgstr "Pistokevirhe"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:125
 msgid "Connection refused\n"
 msgstr "Yhteyspyyntö evätty\n"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:127
 msgid "No route to host"
 msgstr "Ei reittiä palvelimelle"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:129
 msgid "Connection refused when downloading URL:\n"
 msgstr "Yhteyspyyntö evättiin noudettaessa URLia:\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:131
 msgid "Host not found\n"
 msgstr "Palvelinta ei löytynyt\n"
 
-#: ../src/wget-log.c:130
+#: ../src/wget-log.c:133
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr ""
 "Yhteyskäytäntöä ei tueta - tarvitset wget-version >= 1.7 https:ää varten:\n"
 
-#: ../src/wget-log.c:133
+#: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
 msgstr "Olemassaolevaa tiedostoa ei typistetä"
 
-#: ../src/wget-log.c:135
+#: ../src/wget-log.c:138
 msgid "Unknown error"
 msgstr "Tuntematon virhe"
 
-#: ../src/wget-log.c:146 ../src/wget-log.c:152
+#: ../src/wget-log.c:149 ../src/wget-log.c:155
 msgid "File not found"
 msgstr "Tiedostoa ei löytynyt"
 
-#: ../src/wget-log.c:159
+#: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Tiedostonsiirtoa ei voi jatkaa. Olemassaoleva paikallinen tiedosto ei sovi "
 "yhteen noudettavan kanssa."
 
-#: ../src/wget-log.c:218
+#: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Kohdekansioon ei voi kirjoittaa"
 
