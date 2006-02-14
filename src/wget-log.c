@@ -65,11 +65,11 @@ show_error (GwgetData *gwgetdata, gchar *error_msg)
 static int
 wget_log_process_line (GwgetData *gwgetdata)
 {
-	if (gwgetdata->line == NULL)
-		return 0;
-
 	gchar *p;
 	struct stat file_stat;
+
+	if (gwgetdata->line == NULL)
+		return 0;
 
 	switch (gwgetdata->state) {
 	case DL_NOT_CONNECTED:
@@ -79,16 +79,16 @@ wget_log_process_line (GwgetData *gwgetdata)
 		 * filesystem filename and set gwgetdata->filename
 		 */
 		if (strstr(gwgetdata->line,"           => `")) {
-			int iL = strlen(gwgetdata->line);
-			gwgetdata->line[iL-1] = 0; // Chop the final ' 
-
 			char *sName = gwgetdata->line;
+			int iL = strlen(sName);
+			sName[iL-1] = 0; // Chop the final ' 
+
 			/*
 			 * Now sName contains the whole pathname. No filename can
 			 * contain '/' so the following search for the last component
 			 * is sane
 			 */
-			sName += strlen(sName) - 1;
+			sName += iL - 2;
 			while (*sName != '/' && sName != gwgetdata->line)
 				sName--;
 			if (*sName == '/')
@@ -298,11 +298,16 @@ wget_log_process_line (GwgetData *gwgetdata)
 
 static void
 wget_log_read_log_line(GwgetData *gwgetdata) {
+	char c;
+	int iRes;
+	int iBlockCount;
+	gchar *buffer;
+	int iWritePos;
+
 	g_free(gwgetdata->line);
 	gwgetdata->line = NULL;
 
-	char c;
-	int iRes = read(gwgetdata->log_fd,&c,1);
+	iRes = read(gwgetdata->log_fd,&c,1);
 
 	if (iRes < 1) {
 		/*
@@ -312,9 +317,9 @@ wget_log_read_log_line(GwgetData *gwgetdata) {
 		return;
 	}
 
-	int iBlockCount = 1;
-	gchar *buffer = g_malloc(sizeof(gchar)*(iBlockCount*BLOCK_SIZE));
-	int iWritePos = 0;
+	iBlockCount = 1;
+	buffer = g_malloc(sizeof(gchar)*(iBlockCount*BLOCK_SIZE));
+	iWritePos = 0;
 		
 	buffer[iWritePos++] = c;
 	while (c != '\n') {

@@ -162,18 +162,17 @@ save_yourself_handler (GnomeClient *client, gint phase, GnomeSaveStyle save_styl
 			 * Otherwise copy arvg , option by option , filetring
 			 * --force-tray-only if present
 			 */
+			int iPos = -1;
+			int i;
 			
 			argc = argc_original + 2;
 			argv = g_malloc0(sizeof(char*)*argc);
 			
-			int iPos = -1;
-			int i;
 			for (i=0;i<argc_original;i++)
 				if (strcmp(argv_original[i],"--force-tray-only") != 0) {
-					iPos++;
 					int iL    = strlen(argv_original[i]);
 					int iSize = sizeof(char)*iL;
-					argv[iPos] = g_malloc0(iSize);
+					argv[++iPos] = g_malloc0(iSize);
 					strcpy(argv[iPos],argv_original[i]);
 				}
 
@@ -192,11 +191,12 @@ static void
 gnome_session_join(int argc,char *argv[]) 
 {
 	Args *args = g_malloc(sizeof(Args));
+	GnomeClient* client;
 
 	(*args).argc = argc;
 	(*args).argv = argv;
 	
-	GnomeClient* client = gnome_master_client();
+	client = gnome_master_client();
 		
 	gnome_client_set_restart_style(client,GNOME_RESTART_IF_RUNNING);	
 	gtk_signal_connect(GTK_OBJECT(client),"save_yourself",

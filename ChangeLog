@@ -1,6 +1,8 @@
 2006-02-14  David Sedeño <david@alderia.com>
 
 	* configure.in: Epiphany extension detection fixes (Jens Granseuer)
+	* src/main.c
+	* src/wget-log.c: C-99 style fixes (Jens Granseuer)
 
 2006-01-14  David Sedeño <david@alderia.com>
 
