@@ -72,7 +72,7 @@ AC_ARG_WITH([epiphany-version],
 dnl try to autodetect Epiphany 1.2, 1.4, 1.6, 1.8 or 1.10
 EPHY_AUTODETECT="(autodetect)"
 if pkg-config --exists epiphany-1.10; then
-               EPHY_VER=1.10
+        EPHY_VER=1.10
 elif pkg-config --exists epiphany-1.8; then
        	EPHY_VER=1.8
 elif pkg-config --exists epiphany-1.6; then
@@ -86,32 +86,35 @@ fi
 
 EPIPHANY_REQUIRED=
 EPIPHANY_PKGCONFIG=
+EPIPHANY_SHORTVER=
 
-if test $EPHY_VER = "1.2"; then
-          AC_DEFINE_UNQUOTED(EPHY_VERSION, 12, [Define to the Epiphany version (12 or 14 or 16)])
+if test "x$EPHY_VER" = "x1.2"; then
           EPIPHANY_PKGCONFIG=epiphany-1.2
           EPIPHANY_REQUIRED=1.2.0
-elif test $EPHY_VER = "1.4"; then
-          AC_DEFINE_UNQUOTED(EPHY_VERSION, 14, [Define to the Epiphany version (12 or 14 or 16)])
+          EPIPHANY_SHORTVER=12
+elif test "x$EPHY_VER" = "x1.4"; then
           EPIPHANY_PKGCONFIG=epiphany-1.4
           EPIPHANY_REQUIRED=1.4.0
-elif test $EPHY_VER = "1.6"; then
-          AC_DEFINE_UNQUOTED(EPHY_VERSION, 16, [Define to the Epiphany version (12 or 14 or 16)])
+          EPIPHANY_SHORTVER=14
+elif test "x$EPHY_VER" = "x1.6"; then
           EPIPHANY_PKGCONFIG=epiphany-1.6
           EPIPHANY_REQUIRED=1.6.0
-elif test $EPHY_VER = "1.8"; then
-          AC_DEFINE_UNQUOTED(EPHY_VERSION, 18, [Define to the Epiphany version (12 or 14 or 16)])
+          EPIPHANY_SHORTVER=16
+elif test "x$EPHY_VER" = "x1.8"; then
           EPIPHANY_PKGCONFIG=epiphany-1.8
           EPIPHANY_REQUIRED=1.7.0
-elif test $EPHY_VER = "1.10"; then
-          AC_DEFINE_UNQUOTED(EPHY_VERSION, 110, [Define to the Epiphany version (12 or 14 or 16)])
+          EPIPHANY_SHORTVER=18
+elif test "x$EPHY_VER" = "x1.10"; then
           EPIPHANY_PKGCONFIG=epiphany-1.10
           EPIPHANY_REQUIRED=1.9.0
+          EPIPHANY_SHORTVER=110
 else
      	AC_MSG_RESULT([no epiphany installed])
 fi
 
-if test $EPHY_VER = "1.2" || test $EPHY_VER = "1.4" || test $EPHY_VER = "1.6" || test $EPHY_VER = "1.8" || test $EPHY_VER = "1.10"; then
+if test -n "$EPIPHANY_SHORTVER" ; then
+AC_DEFINE_UNQUOTED(EPHY_VERSION, "$EPIPHANY_SHORTVER",
+       [Define to the Epiphany version (12, 14, 16, 18, or 110)])
 AC_MSG_RESULT([$EPHY_VER $EPHY_AUTODETECT])
 
 LIBGLIB_REQUIRED=2.4.0
@@ -131,7 +134,7 @@ PKG_CHECK_MODULES(EPIPHANY_DEPENDENCY, \
 AC_SUBST(EPIPHANY_DEPENDENCY_CFLAGS)
 AC_SUBST(EPIPHANY_DEPENDENCY_LIBS)
 
-if test $EPHY_VER = "1.2"; then
+if test "x$EPHY_VER" = "x1.2"; then
 EPIPHANY_EXTENSIONS_DIR="`$PKG_CONFIG --variable=libdir epiphany-1.2`/epiphany/extensions"
 else
 EPIPHANY_EXTENSIONS_DIR="`$PKG_CONFIG --variable=extensionsdir epiphany-$EPHY_VER`"

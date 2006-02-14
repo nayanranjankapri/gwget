@@ -1,3 +1,7 @@
+2006-02-14  David Sedeño <david@alderia.com>
+
+	* configure.in: Epiphany extension detection fixes (Jens Granseuer)
+
 2006-01-14  David Sedeño <david@alderia.com>
 
 	* include/eggtrayicon.h, src/eggtrayicon.c: Updated from rhythmbox to
