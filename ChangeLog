@@ -1,3 +1,10 @@
+2006-02-15  David Sedeño <david@alderia.com>
+
+	* data/gwget.schemas.in: Set default for proxy_uses_auth to false
+	(Jens Granseuer) #331308
+	* configure.in: adds gmodule-2.0 as a dependency (Jens Granseuer)
+	#331310.
+	
 2006-02-14  David Sedeño <david@alderia.com>
 
 	* configure.in: Epiphany extension detection fixes (Jens Granseuer)

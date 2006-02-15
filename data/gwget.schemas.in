@@ -367,7 +367,7 @@
 	 <applyto>/apps/gwget2/proxy_uses_auth</applyto>
 	 <owner>gwget</owner>
 	 <type>bool</type>
-	 <default></default>
+	 <default>false</default>
 	 <locale name="c">
 	   <short></short>
 	   <long></long>

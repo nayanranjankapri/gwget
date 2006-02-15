@@ -22,6 +22,7 @@ GCONF_REQUIRED=1.1.11
 
 PKG_CHECK_MODULES(GNOME, libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
 		 	  gtk+-2.0 	>= $GTK_REQUIRED 
+			  gmodule-2.0
 			  libglade-2.0 	>= $LIBGLADE_REQUIRED)
 
 AC_SUBST(GNOME_LIBS)
