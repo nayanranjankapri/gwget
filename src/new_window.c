@@ -104,7 +104,7 @@ create_new_window(void)
 {
 	GtkWidget *window = NULL;
 	GtkEntry *entry = NULL;
-	gchar *url = ""; // URL in clipboard
+	gchar *url = NULL; // URL in clipboard
 	GtkClipboard *clipboard = NULL;
 
 	clipboard = gtk_clipboard_get (GDK_NONE);
@@ -118,10 +118,11 @@ create_new_window(void)
 	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
 	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
 	if ( (url!=NULL) && !check_url( "http://", url ) && !check_url( "ftp://", url))
-		url = "";
+		url = NULL;
 	
-	gtk_entry_set_text(GTK_ENTRY(entry),url);
-
+	if (url != NULL) {	
+		gtk_entry_set_text(GTK_ENTRY(entry),url);
+	}
 	
 	gtk_list_store_clear (GTK_LIST_STORE(save_in_model));
 	g_list_foreach (save_in_paths, add_to_save_in_combobox, NULL);

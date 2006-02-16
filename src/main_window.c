@@ -194,7 +194,9 @@ gboolean view_selection_func (GtkTreeSelection *selection,
 {
 	GtkTreeIter iter;
 
-	g_return_val_if_fail(gwget_data_get_selected()!=NULL, TRUE);
+	if (gwget_data_get_selected() == NULL) {
+		return TRUE;
+	}
 
 	if (gtk_tree_model_get_iter(model, &iter, path))
 	{

@@ -1,3 +1,10 @@
+2006-02-16  David Sedeño <david@alderia.com>
+
+	* src/main_window.c (view_selection_func): Fix a crash with recent
+	version of GNOME (Jens Granseuer). #331432
+	* src/new_window.c (create_new_window): Fix a crash when url it's
+	empty (Jens Granseuer). #331431
+
 2006-02-15  David Sedeño <david@alderia.com>
 
 	* data/gwget.schemas.in: Set default for proxy_uses_auth to false
