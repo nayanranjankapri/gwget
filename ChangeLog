@@ -10,6 +10,8 @@
 	* src/main.c: replace bonobo stuff with dbus. Remove include of
 	gwget-application-server.h
 	* src/main_window_cb.c: Fix some gnome-vfs mime use.
+	* src/gwget-application-server.h, src/gwget-application-server.c:
+	Removed.
 	
 2006-02-16  David Sedeño <david@alderia.com>
 
