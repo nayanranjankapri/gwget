@@ -27,8 +27,6 @@
 
 #include "main_window_cb.h"
 #include "main_window.h"
-#include "gwget-application-server.h"
-
 #include "gwget-application.h"
 
 #ifdef ENABLE_DBUS

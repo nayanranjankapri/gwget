@@ -7,7 +7,8 @@
 	* src/gwget-application-service.xml: New file for dbus interface.
 	* src/gwget-application.c, src/gwget-application.h: Object for gwget
 	application.
-	* src/main.c: replace bonobo stuff with dbus.
+	* src/main.c: replace bonobo stuff with dbus. Remove include of
+	gwget-application-server.h
 	* src/main_window_cb.c: Fix some gnome-vfs mime use.
 	
 2006-02-16  David Sedeño <david@alderia.com>
