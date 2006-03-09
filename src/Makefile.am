@@ -6,6 +6,7 @@ INCLUDES = \
 	 -DGNOME_GWGET_LOCALEDIR=\""$(datadir)/locale"\" \
 	 -DDATADIR=\""$(gladedir)/"\" \
 	 -I$(srcdir)/../include \
+	 $(GWGET_CFLAGS) \
 	 @GNOME_CFLAGS@
 
 AM_CFLAGS =\
@@ -13,28 +14,12 @@ AM_CFLAGS =\
 	 -O1\
 	 -g
 
-IDL_FILE = GNOME_Gwget.idl
-
-IDL_SOURCES =  \
-	GNOME_Gwget-stubs.c             \
-	GNOME_Gwget-common.c            \
-	GNOME_Gwget-skels.c             \
-	GNOME_Gwget.h
-
 BUILT_SOURCES =                         \
         gwget-marshal.c                 \
-        gwget-marshal.h                 \
-        $(IDL_SOURCES)
+        gwget-marshal.h                 
 
-
-$(IDL_SOURCES): $(IDL_FILE) $(ORBIT_IDL)
-	$(ORBIT_IDL) -I $(LIBBONOBO_IDL) -I $(BONOBO_ACTIVATION_IDL) $(srcdir)/$(IDL_FILE)
-
-idl_DATA = $(IDL_FILE)
-idldir = $(datadir)/idl
-
-EXTRA_DIST = gwget-marshal.list              \
-	     $(IDL_FILE)
+EXTRA_DIST = gwget-marshal.list         \
+	     gwget-application-service.xml
 
 CLEANFILES = $(BUILT_SOURCES)
 
@@ -53,8 +38,8 @@ gwget_SOURCES = \
 	eggtrayicon.c\
 	eggnotificationbubble.c \
 	systray.c \
-	gwget-application-server.c \
-	gwget-application-server.h 
+	gwget-application.c \
+	gwget-application.h
 
 gwget-marshal.h: gwget-marshal.list $(GLIB_GENMARSHAL)
 	        $(GLIB_GENMARSHAL) $< --header --prefix=gwget_marshal > $@
@@ -64,5 +49,21 @@ gwget-marshal.c: gwget-marshal.list $(GLIB_GENMARSHAL)
 	$(GLIB_GENMARSHAL) $< --body --prefix=gwget_marshal >> $@
                                                                                                                                                              
 gwget_LDADD =  \
+	$(GWGET_LIBS)  \
 	$(GNOME_LIBS)
+
+if ENABLE_DBUS
+BUILT_SOURCES += gwget-application-service.h
+endif
+
+DISTCLEANFILES= \
+        gwget-application-service.h
+
+if DBUS_TOOL_NO_PREFIX
+gwget-application-service.h: $(srcdir)/gwget-application-service.xml
+	dbus-binding-tool --mode=glib-server --output=gwget-application-service.h $(srcdir)/gwget-application-service.xml
+else
+gwget-application-service.h: $(srcdir)/gwget-application-service.xml
+	dbus-binding-tool --prefix=gwget_application --mode=glib-server --output=gwget-application-service.h $(srcdir)/gwget-application-service.xml
+endif
 

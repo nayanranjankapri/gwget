@@ -23,9 +23,17 @@
 #include <locale.h>
 #include <libbonobo.h>
 #include <libgnomeui/libgnomeui.h>
+#include <libgnomevfs/gnome-vfs-utils.h>
+
 #include "main_window_cb.h"
 #include "main_window.h"
 #include "gwget-application-server.h"
+
+#include "gwget-application.h"
+
+#ifdef ENABLE_DBUS
+#include <dbus/dbus-glib-bindings.h>
+#endif
 
 static const struct poptOption options[] = {
 	{"force-tray-only", '\0', POPT_ARG_NONE, &(gwget_pref.trayonly), 0, NULL, NULL},
@@ -37,210 +45,219 @@ typedef struct {
 	char **argv;
 } Args;
 
-BonoboObject *gwget_app_server = NULL;
+#ifdef ENABLE_DBUS
 
-static GSList *
-gwget_get_command_line_data (GnomeProgram *program)
+#ifndef HAVE_GTK_WINDOW_PRESENT_WITH_TIME
+static guint32
+get_startup_time (void)
 {
-	GValue value = { 0, };
-	poptContext ctx;
-	char **args;
-	GSList *data = NULL;
+	const char *envvar, *timestamp;
+	unsigned long value;
+	char *end;
+
+	envvar = getenv ("DESKTOP_STARTUP_ID");
+
+	if (envvar == NULL)
+		return 0;
+
+/* DESKTOP_STARTUP_ID is of form "<unique>_TIME<timestamp>".
+ *
+ * <unique> might contain a T but <timestamp> is an integer.  As such,
+ * the last 'T' in the string must be the start of "TIME".
+ */
+	timestamp = rindex (envvar, 'T');
+
+/* Maybe the word "TIME" was not found... */
+	if (timestamp == NULL || strncmp (timestamp, "TIME", 4))
+		return 0;
+
+	timestamp += 4;
+
+/* strtoul sets errno = ERANGE on overflow, but it is not specified
+ * if it sets it to 0 on success.  Doing so ourselves is the only
+ * way to know for sure.
+ */
+	errno = 0;
+	value = strtoul (timestamp, &end, 10);
+
+/* unsigned long might be 64bit, so double-check! */
+	if (errno != 0 || *end != '\0' || value > G_MAXINT32)
+		return 0;
+
+	return value;
+}
+#endif
+
+static gboolean
+load_files_remote (const char **files)
+{
 	int i;
+	GError *error = NULL;
+	DBusGConnection *connection;
+	gboolean result = FALSE;
+#if DBUS_VERSION < 35
+	DBusGPendingCall *call;
+#endif
+	DBusGProxy *remote_object;
+#ifdef HAVE_GTK_WINDOW_PRESENT_WITH_TIME
+	GdkDisplay *display;
+#endif
+	guint32 timestamp;
 
-	g_value_init (&value, G_TYPE_POINTER);
-	g_object_get_property (G_OBJECT (program), GNOME_PARAM_POPT_CONTEXT, &value);
-	ctx = g_value_get_pointer (&value);
-	g_value_unset (&value);
+#ifdef HAVE_GTK_WINDOW_PRESENT_WITH_TIME
+	display = gdk_display_get_default();
+	timestamp = gdk_x11_display_get_user_time (display);
+#else
+	/* Fake it for GTK+2.6 */
+	timestamp = get_startup_time ();
+#endif
 
-	args = (char**) poptGetArgs(ctx);
+connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
+	if (connection == NULL) {
+		g_warning (error->message);
+		g_error_free (error);	
 
-	if (args) 
-	{	
-		for (i = 0; args[i]; i++) 
-		{
-			data = g_slist_append(data,args[i]);
-		}
+		return FALSE;
 	}
-	
-	return data;
-	
-}
 
-static void
-gwget_handle_automation_cmdline (GnomeProgram *program)
-{
-	CORBA_Environment env;
-	GNOME_Gwget_Application server;
-	GNOME_Gwget_URIList *urls_list;
-	/* List of urls to download pased in command line */
-	GSList *data, *list;
-	gint i;
+	remote_object = dbus_g_proxy_new_for_name (connection,
+						   "org.gnome.gwget.ApplicationService",
+                                                   "/org/gnome/gwget/Gwget",
+                                                   "org.gnome.gwget.Application");
+	if (!files) {
+#if DBUS_VERSION <= 33
+		call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
+						DBUS_TYPE_UINT32, &timestamp,
+						DBUS_TYPE_INVALID);
 
-	
-	CORBA_exception_init (&env);
-	
-	server = bonobo_activation_activate_from_id ("OAFIID:GNOME_Gwget_Application",
-												 0, NULL, &env);
-	
-	g_return_if_fail (server != NULL);
-	
-	data = gwget_get_command_line_data(program);
-	
-	if (data) 
-	{
-		urls_list = GNOME_Gwget_URIList__alloc ();
-		urls_list->_maximum = g_slist_length (data);
-		urls_list->_length = urls_list->_maximum;
-		urls_list->_buffer = CORBA_sequence_GNOME_Gwget_URI_allocbuf (urls_list->_length);
-		
-		list = data;
-		i = 0;
-		while (list != NULL) 
-		{
-			urls_list->_buffer[i] = CORBA_string_dup ((gchar*)list->data);
-			list = list->next;
-			i++;
+		if (!dbus_g_proxy_end_call (remote_object, call, &error, DBUS_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			return FALSE;
 		}
+#elif DBUS_VERSION == 34
+		call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
+						G_TYPE_UINT, timestamp,
+						G_TYPE_INVALID);
 
-		
-		CORBA_sequence_set_release (urls_list, CORBA_TRUE);
-		GNOME_Gwget_Application_openURLSList (server, urls_list, &env);
-		
-		g_slist_free (data); 
-	}	
-}
-
-
-static gint
-save_yourself_handler (GnomeClient *client, gint phase, GnomeSaveStyle save_style,
-                       gint is_shutdown, GnomeInteractStyle interact_style,
-                       gint is_fast, gpointer client_data)
-{
-	Args *args_original = (Args*)client_data;
-	int argc_original = (*args_original).argc;
-	char **argv_original = (*args_original).argv;
-
-	int argc;
-	char **argv; 
-
-	if (gwget_pref.docked) {
-		/*
-		 * If we are docked , the tray is there , so pass --foce-tray-only
-		 */
-		if (gwget_pref.trayonly) {
-			/*
-			 * If we were called with --force-tray-only , 
-			 * just copy over the old argv , argc
-			 */
-			argc = argc_original;
-			argv = argv_original;
-		} else {
-			/*
-			 * Otherwise , append --force-tray-only to argv
-			 */
-			argc = argc_original + 2;
-			argv = g_malloc0(sizeof(char*)*argc);
-			g_memmove(argv, argv_original, argc_original*sizeof(char*));
-			argv[argc-2] = "--force-tray-only";
-			// argv[argc-1] = NULL;
+		if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			return FALSE;
 		}
-	} else {
-		/*
-		 * If we are not docked on exit , the tray is not there ,
-		 * and --force-tray-only should NOT be passed
-		 */
-		if (!gwget_pref.trayonly) {
-			/*
-			 * If we were NOT called with --force-tray-only , 
-			 * just copy over the old argv , argc
-			 */
-			argc = argc_original;
-			argv = argv_original;
-		} else {	
-			/*
-			 * Otherwise copy arvg , option by option , filetring
-			 * --force-tray-only if present
-			 */
-			int iPos = -1;
-			int i;
-			
-			argc = argc_original + 2;
-			argv = g_malloc0(sizeof(char*)*argc);
-			
-			for (i=0;i<argc_original;i++)
-				if (strcmp(argv_original[i],"--force-tray-only") != 0) {
-					int iL    = strlen(argv_original[i]);
-					int iSize = sizeof(char)*iL;
-					argv[++iPos] = g_malloc0(iSize);
-					strcpy(argv[iPos],argv_original[i]);
-				}
-
-			argc = iPos+1;
-			argv[argc] = NULL;
+#else
+		if (!dbus_g_proxy_call (remote_object, "OpenWindow", &error,
+					G_TYPE_UINT, timestamp,
+					G_TYPE_INVALID,
+					G_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			return FALSE;
 		}
+#endif
+		return TRUE;
 	}
-	
-	gnome_client_set_clone_command(client, argc, argv);
-	gnome_client_set_restart_command(client, argc, argv);
 
-	return TRUE;
+	for (i = 0; files[i]; i++) {
+		char *uri;
+
+		uri = gnome_vfs_make_uri_from_shell_arg (files[i]);
+#if DBUS_VERSION <= 33
+		call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
+						DBUS_TYPE_STRING, &uri,
+						DBUS_TYPE_UINT32, &timestamp,
+						DBUS_TYPE_INVALID);
+
+		if (!dbus_g_proxy_end_call (remote_object, call, &error, DBUS_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			g_free (uri);
+			continue;
+		}
+#elif DBUS_VERSION == 34
+		call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
+						G_TYPE_STRING, uri,
+						G_TYPE_UINT, timestamp,
+						G_TYPE_INVALID);
+
+		if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			g_free (uri);
+			continue;
+		}
+#else
+		if (!dbus_g_proxy_call (remote_object, "OpenURI", &error,
+					G_TYPE_STRING, uri,
+					G_TYPE_UINT, timestamp,
+					G_TYPE_INVALID,
+					G_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			g_free (uri);
+			continue;
+		}
+#endif
+		g_free (uri);
+		result = TRUE;
+        }
+
+	gdk_notify_startup_complete ();
+
+	return result;
 }
-
-static void 
-gnome_session_join(int argc,char *argv[]) 
-{
-	Args *args = g_malloc(sizeof(Args));
-	GnomeClient* client;
-
-	(*args).argc = argc;
-	(*args).argv = argv;
+#endif /* ENABLE_DBUS */
 	
-	client = gnome_master_client();
-		
-	gnome_client_set_restart_style(client,GNOME_RESTART_IF_RUNNING);	
-	gtk_signal_connect(GTK_OBJECT(client),"save_yourself",
-                           GTK_SIGNAL_FUNC(save_yourself_handler),args);
-        gtk_signal_connect(GTK_OBJECT(client),"die",
-                           GTK_SIGNAL_FUNC(gtk_main_quit),NULL);
-}
+
+	
 
 int main(int argc,char *argv[])
 {
-	GnomeProgram *gwget;
-	CORBA_Object factory;
+	GnomeProgram *program;
+	poptContext context;
+	GValue context_as_value = { 0 };
 	
+#ifdef ENABLE_NLS
+	/* Initialize the i18n stuff */	
 	bindtextdomain (GETTEXT_PACKAGE, GNOME_GWGET_LOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
+#endif
 	setlocale(LC_ALL, "");
+	
 
 	gwget_init_pref(&gwget_pref);
-	gwget = gnome_program_init("Gwget", VERSION, LIBGNOMEUI_MODULE, argc, argv,
-			            GNOME_PARAM_POPT_TABLE,options,GNOME_PARAM_NONE);
-
-	gnome_session_join(argc,argv);		
-
-	/* check whether we are running already */
-	factory = bonobo_activation_activate_from_id
-			("OAFIID:GNOME_Gwget_Factory",
-			Bonobo_ACTIVATION_FLAG_EXISTING_ONLY,
-			NULL, NULL);
+	program = gnome_program_init(PACKAGE, VERSION, 
+								LIBGNOMEUI_MODULE, argc, argv,
+					            GNOME_PARAM_POPT_TABLE, options, 
+								GNOME_PARAM_HUMAN_READABLE_NAME, _("Gwget"),
+				      			GNOME_PARAM_APP_DATADIR, GNOME_GWGET_LOCALEDIR,
+                              	NULL);
 	
-	if (factory != NULL)
-	{
-		g_message("Already running\n");
-		gwget_handle_automation_cmdline(gwget);
-		exit(0);
+	g_object_get_property (G_OBJECT (program),
+                           GNOME_PARAM_POPT_CONTEXT,
+                           g_value_init (&context_as_value, G_TYPE_POINTER));
+    context = g_value_get_pointer (&context_as_value);
+
+#ifdef ENABLE_DBUS
+	if (!gwget_application_register_service (GWGET_APP)) {
+		if (load_files_remote (poptGetArgs (context))) {
+			return 0;
+		}
+	} else {
+		/* enable_metadata = TRUE; */
 	}
+#endif
 	
+	g_set_application_name (_("Gwget Download Manager"));
+
 	main_window();
-	
-	gwget_app_server = gwget_application_server_new (gdk_screen_get_default());
-	gwget_handle_automation_cmdline(gwget);
 	
 	gtk_main();
 	
+	gnome_accelerators_sync ();
+	
+	poptFreeContext (context);
+	
 	return (0);
 }
-

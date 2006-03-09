@@ -22,7 +22,9 @@
 #include <libgnome/gnome-url.h>
 #include <libgnome/gnome-program.h>
 #include <libgnome/gnome-init.h>
-#include <libgnomevfs/gnome-vfs.h>
+#include <libgnomevfs/gnome-vfs-utils.h>
+#include <libgnomevfs/gnome-vfs-mime-utils.h>
+
 #include "main_window.h"
 #include "main_window_cb.h"
 #include "new_window.h"
@@ -223,7 +225,7 @@ new_download(GwgetData* gwgetdata)
 	
 	theme = gtk_icon_theme_get_default ();
 	if (!gwgetdata->recursive) {
-		mime = (gchar *)gnome_vfs_mime_type_from_name(gwgetdata->local_filename);
+		mime = (gchar *)gnome_vfs_get_mime_type_for_name (gwgetdata->local_filename);
 		gwgetdata->icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
 	 							mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
 	} else {

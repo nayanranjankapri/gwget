@@ -19,6 +19,7 @@ LIBGNOME_REQUIRED=2.0.0
 GTK_REQUIRED=2.6.0
 LIBGLADE_REQUIRED=2.0.0
 GCONF_REQUIRED=1.1.11
+DBUS_GLIB_REQUIRED=0.33
 
 PKG_CHECK_MODULES(GNOME, libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
 		 	  gtk+-2.0 	>= $GTK_REQUIRED 
@@ -28,6 +29,29 @@ PKG_CHECK_MODULES(GNOME, libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
 AC_SUBST(GNOME_LIBS)
 AC_SUBST(GNOME_CFLAGS)
 
+dnl ========= Check for DBUS
+PKG_CHECK_MODULES([DBUS], [dbus-glib-1 >= $DBUS_GLIB_REQUIRED],
+        [enable_dbus=yes],[enable_dbus=no])
+AC_SUBST([DBUS_CFLAGS])
+AC_SUBST([DBUS_LIBS])
+
+if test "x$enable_dbus" = "xno"; then
+        AC_MSG_WARN([DBUS support is disabled since dbus $DBUS_GLIB_REQUIRED or higher was not found])
+fi
+
+if test "x$enable_dbus" = "xyes" ; then
+        AC_PATH_PROG([DBUS_BINDING_TOOL], [dbus-binding-tool], [no])
+
+        if test x$DBUS_BINDING_TOOL = "xno" ; then
+                AC_MSG_ERROR([dbus-binding-tool executable not found in your path - should be installed with dbus glib bindings])
+        fi
+
+        AC_DEFINE([ENABLE_DBUS],[1],[Define if DBUS support is enabled])
+
+        DBUS_VERSION=`$PKG_CONFIG --modversion dbus-glib-1 | sed 's/0\.\([[0-9]]*\)\.\{0,1\}\([[0-9]]*\)/\1/'`
+        AC_DEFINE_UNQUOTED(DBUS_VERSION, $DBUS_VERSION, [DBUS version.])
+fi
+
 GETTEXT_PACKAGE=gwget
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [The gettext package])
@@ -35,6 +59,11 @@ dnl Languages which your application supports
 ALL_LINGUAS="ar bg ca cs da de el en_CA es eu fi fr hu it ja lt mk ne nl pa pl pt pt_BR ro ru rw sk sq sv tr uk zh_CN zh_TW"
 AM_GLIB_GNU_GETTEXT
 
+GWGET_CFLAGS="$DBUS_CFLAGS"
+GWGET_LIBS="$DBUS_LIBS -lz"
+
+AC_SUBST(GWGET_CFLAGS)
+AC_SUBST(GWGET_LIBS)
 AC_SUBST(CFLAGS)
 AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)
@@ -130,8 +159,7 @@ PKG_CHECK_MODULES(EPIPHANY_DEPENDENCY, \
                   gmodule-2.0 \
                   gtk+-2.0 >= $LIBGTK_REQUIRED \
                   $EPIPHANY_PKGCONFIG >= $EPIPHANY_REQUIRED \
-		  libbonobo-2.0 \
-		  bonobo-activation-2.0)
+		  )
 AC_SUBST(EPIPHANY_DEPENDENCY_CFLAGS)
 AC_SUBST(EPIPHANY_DEPENDENCY_LIBS)
 
@@ -145,8 +173,10 @@ AC_SUBST([EPIPHANY_EXTENSIONS_DIR])
 else
 	enable_epiphany_extension=no
 fi
-
 AM_CONDITIONAL(ENABLE_EPIPHANY_EXTENSION, test "x$enable_epiphany_extension" = "xyes")
+
+AM_CONDITIONAL([ENABLE_DBUS], [test "x$enable_dbus" = "xyes"])
+AM_CONDITIONAL([DBUS_TOOL_NO_PREFIX], [test "x$DBUS_VERSION" = "x33"])
 
 AC_ARG_WITH([extension-prefix],
     [  --with-extension-prefix=path              Epiphany extension prefix],    
@@ -162,12 +192,6 @@ AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 ORBIT_IDL="`$PKG_CONFIG --variable=orbit_idl ORBit-2.0`"
 AC_SUBST(ORBIT_IDL)
                                                                                                                                                               
-LIBBONOBO_IDL="`$PKG_CONFIG --variable=idldir libbonobo-2.0`"
-AC_SUBST(LIBBONOBO_IDL)
-                                                                                                                                                              
-BONOBO_ACTIVATION_IDL="`$PKG_CONFIG --variable=idldir bonobo-activation-2.0`"
-AC_SUBST(BONOBO_ACTIVATION_IDL)
-
 AC_OUTPUT([
 Makefile
 po/Makefile.in

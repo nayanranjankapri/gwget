@@ -1,3 +1,15 @@
+2006-03-09  David Sedeño <david@alderia.com>
+
+	Patch for remove bonobo dependecy and use dbus.
+	* configure.in: Get rid of bonobo dependencies. Include dbus
+	dependencies. 
+	* src/Makefile.am: Remove bonobo idls reference. 
+	* src/gwget-application-service.xml: New file for dbus interface.
+	* src/gwget-application.c, src/gwget-application.h: Object for gwget
+	application.
+	* src/main.c: replace bonobo stuff with dbus.
+	* src/main_window_cb.c: Fix some gnome-vfs mime use.
+	
 2006-02-16  David Sedeño <david@alderia.com>
 
 	* src/main_window.c (view_selection_func): Fix a crash with recent
