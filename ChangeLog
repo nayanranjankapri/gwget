@@ -1,3 +1,10 @@
+2006-03-11  David Sedeño <david@alderia.com>
+
+	* src/gwget_data.c (gwget_data_update_statistics): Set the title of
+	the window to the percentage if there are only one download running.
+	* src/main_window_cb.c: Count the downloads with count_all_downloads
+	func.
+	
 2006-03-09  David Sedeño <david@alderia.com>
 
 	Patch for remove bonobo dependecy and use dbus.

@@ -627,7 +627,7 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	if (g_list_length(downloads)>0) 
+	if (count_all_downloads()>0) 
 	{
 		response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"));
 		if (response == GTK_RESPONSE_OK) {
@@ -659,7 +659,7 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	if (g_list_length(downloads)>0) 
+	if (count_all_downloads()>0) 
 	{
 		response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"));
 		if (response == GTK_RESPONSE_OK) {
@@ -691,7 +691,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 	gint length,i;
 	gchar *url;
 	
-	if (g_list_length(downloads)>0) 
+	if (count_all_downloads()>0) 
 	{
 		response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"));
 		if (response == GTK_RESPONSE_OK) {
@@ -1058,7 +1058,7 @@ on_download_menu_activate(void)
 void
 on_edit_menu_activate(void)
 {
-	if (g_list_length(downloads)>0) 
+	if (count_all_downloads()>0) 
 	{
 		 gtk_widget_set_sensitive(glade_xml_get_widget(xml, "remove_item"), TRUE);
 	} else {

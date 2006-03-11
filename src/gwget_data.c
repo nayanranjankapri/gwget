@@ -212,7 +212,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 			   -1);
 		
 	gwget_data_update_statistics_ui(gwgetdata);
-	if (gwgetdata == gwget_data_get_selected()) {
+	if (gwgetdata == gwget_data_get_selected() || count_download_in_progress() == 1 ) {
 		gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), title);
 	}
 
