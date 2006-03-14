@@ -609,7 +609,7 @@ void gwget_data_stop_download(GwgetData *data)
 	
 	if (gwget_data_run(data)) {
 		/* Kill wget process */
-		kill (data->wget_pid, SIGINT);
+		kill (data->wget_pid, SIGKILL);
 		
 		/* Remove callback that communicates with wget */
 		gtk_timeout_remove (data->log_tag);
