@@ -1,3 +1,7 @@
+2006-03-17  David Sedeño <david@alderia.com>
+
+	* configure.in: Detecs epiphany 2.14 (Joseph Sacco). Fix #334915.
+
 2006-03-14  David Sedeño <david@alderia.com>
 
 	* src/gwget_data.c: Terminated wget process with SIGKILL. Fix bug
