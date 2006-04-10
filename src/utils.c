@@ -23,17 +23,23 @@
 
 
 gint 
-run_dialog(gchar *title, gchar *msg)
+run_dialog (gchar *title, gchar *message, gchar *action_message)
 {
 	GtkWidget *dialog;
-	gchar *mark;
 	gint response;
 	
-	dialog = glade_xml_get_widget(xml,"dialog1");
-	mark=g_strdup_printf("<span size=\"large\" weight=\"bold\">%s</span>",title);
-	gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml,"title_label")),mark);
-	gtk_label_set_text(GTK_LABEL(glade_xml_get_widget(xml,"msg_label")),msg);
+	dialog = gtk_message_dialog_new_with_markup ( GTK_WINDOW (glade_xml_get_widget(xml, "main_window")),
+			GTK_DIALOG_MODAL,
+			GTK_MESSAGE_QUESTION,
+			GTK_BUTTONS_NONE,
+			g_strdup_printf("<span weight='bold' size='large'>%s</span>", title));
+			
+	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), message);
 	
+	gtk_dialog_add_buttons (GTK_DIALOG(dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+			action_message, GTK_RESPONSE_OK, NULL);
+	gtk_dialog_set_default_response (GTK_DIALOG(dialog), GTK_RESPONSE_OK);
+	gtk_window_set_title (GTK_WINDOW (dialog), "");
 	response=gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_hide(GTK_WIDGET(dialog));
 	return response;
@@ -54,6 +60,24 @@ run_dialog_information(gchar *title, gchar *msg)
 	response=gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_hide(GTK_WIDGET(dialog));
 	return response;
+}
+
+void
+run_dialog_error (gchar *title, gchar *message)
+{
+    GtkWidget *dialog;
+    
+    dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (glade_xml_get_widget(xml, "main_window")),
+            GTK_DIALOG_MODAL,
+            GTK_MESSAGE_ERROR,
+            GTK_BUTTONS_CLOSE,
+            title, message);
+            
+    gtk_window_set_title (GTK_WINDOW (dialog), "");
+    
+    g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
+    
+    gtk_widget_show (dialog);
 }
 
 gboolean check_url_already_exists(gchar *checkurl)

@@ -97,7 +97,7 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 			gwgetdata=gwget_data_get_selected();
 			/* If the download is in error state, show the error message in a dialog */
 			if (gwgetdata->error) {
-				run_dialog(_("Error in download"),gwgetdata->error_msg);
+				run_dialog_error(_("Error in download"),gwgetdata->error_msg);
 			} else {
 				if (gwgetdata->recursive) {
 					uri = gnome_vfs_make_uri_from_input(gwgetdata->dir);
@@ -106,7 +106,7 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
                                                  GNOME_VFS_MAKE_URI_DIR_CURRENT);
 				}
 				if (!gnome_url_show (uri, &err)) {
-					run_dialog(_("Error opening file"),_("Couldn't open the file"));
+					run_dialog_error(_("Error opening file"),_("Couldn't open the file"));
 					return FALSE;
 				}
 				return TRUE;
@@ -615,7 +615,7 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
 	if (gwgetdata) 
 	{
 		msg = g_strdup_printf(_("Really cancel current download?\n(URL: %s)"),gwgetdata->url);
-		response = run_dialog(_("Cancel download?"),_(msg));
+		response = run_dialog(_("Cancel download?"),_(msg), _("Cancel"));
 		if (response==GTK_RESPONSE_OK) {
 			gwget_data_stop_download(gwgetdata); 
 			unlink (gwgetdata->local_filename);
@@ -645,7 +645,7 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 	
 	if (count_all_downloads()>0) 
 	{
-		response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"));
+		response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"), _("Remove"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -677,7 +677,7 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 	
 	if (count_all_downloads()>0) 
 	{
-		response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"));
+		response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"), _("Remove inactive"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -709,7 +709,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 	
 	if (count_all_downloads()>0) 
 	{
-		response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"));
+		response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"), _("Remove all"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -1102,11 +1102,13 @@ on_remove_download_activate (GtkWidget *widget, gpointer data)
 	GwgetData *gwgetdata;
 	GtkTreeIter iter;
 	gchar *url;
+	gchar *message;
 	gint response, length, i;
 
 	gwgetdata = gwget_data_get_selected();
 	if (gwgetdata != NULL) {
-		response = run_dialog(_("Remove this download ?"),_("Really remove this download from the list?"));
+	    message = g_strdup_printf (_("Remove %s ?"), gwgetdata->filename);
+		response = run_dialog (message, _("Really remove this download from the list?"), _("Remove download"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -1137,7 +1139,7 @@ on_open_download_activate (GtkWidget *widget, gpointer data)
 							GNOME_VFS_MAKE_URI_DIR_CURRENT);
 
 	if (!gnome_url_show (uri, &err)) {
-		run_dialog(_("Error opening file"),_("Couldn't open the file"));
+		run_dialog_error (_("Error opening file"),_("Couldn't open the file"));
 		return;
 	}
 }
@@ -1156,7 +1158,7 @@ on_open_directory_activate (GtkWidget *widget, gpointer data)
 	uri = gnome_vfs_make_uri_from_input(gwgetdata->dir);
 
 	if (!gnome_url_show (uri, &err)) {
-		run_dialog(_("Error opening file"),_("Couldn't open the folder"));
+		run_dialog_error (_("Error opening file"),_("Couldn't open the folder"));
 		return;
 	}
 }

@@ -1,5 +1,9 @@
 2006-04-10  David Sedeño <david@alderia.com>
 
+	* data/gwget.glade: Remove dialog that it's unused now.
+	* src/main_window_cb.c: Use the new run_dialog_error.
+	* src/utils.c (run_dialog_error): New func.
+	              (run_dialog): Make the dialog HIGify.
 	* src/main_window_cb.c (on_treeview1_button_press_event): Select the
 	correct line in the treeview. Patch from Karderio fixes bug #337863.
 	* configure.in: - Restore bonobo dep because epiphany extension need it.
