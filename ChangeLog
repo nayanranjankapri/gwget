@@ -1,3 +1,15 @@
+2006-04-10  David Sedeño <david@alderia.com>
+
+	* configure.in: - Restore bonobo dep because epiphany extension need it.
+			- libnotify check
+	* src/eggnotificationbubble.c: 
+	  src/eggnotificationbubble.h: Remove since we now use libnotify.
+	* src/Makefile.am: Include notify and dbus dependeciea. Also added
+	bonobo deps because epiphany extension need it. Remove
+	eggnotificationbubble.c (we use libnotify now)
+	* src/eggtrayicon.c: Remove eggnotificationbubble deps
+	* src/systray.c: Use count_all_downloads.
+
 2006-03-17  David Sedeño <david@alderia.com>
 
 	* configure.in: Detecs epiphany 2.14 (Joseph Sacco). Fix #334915.

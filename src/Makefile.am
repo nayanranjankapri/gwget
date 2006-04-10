@@ -6,6 +6,8 @@ INCLUDES = \
 	 -DGNOME_GWGET_LOCALEDIR=\""$(datadir)/locale"\" \
 	 -DDATADIR=\""$(gladedir)/"\" \
 	 -I$(srcdir)/../include \
+	 $(NOTIFY_CFLAGS) \
+         $(DBUS_CFLAGS) \
 	 $(GWGET_CFLAGS) \
 	 @GNOME_CFLAGS@
 
@@ -14,12 +16,28 @@ AM_CFLAGS =\
 	 -O1\
 	 -g
 
+IDL_FILE = GNOME_Gwget.idl 	 
+  	 
+IDL_SOURCES =  \
+	GNOME_Gwget-stubs.c             \
+	GNOME_Gwget-common.c            \
+	GNOME_Gwget-skels.c             \
+	GNOME_Gwget.h
+
 BUILT_SOURCES =                         \
         gwget-marshal.c                 \
-        gwget-marshal.h                 
+        gwget-marshal.h                 \
+	$(IDL_SOURCES)
+
+$(IDL_SOURCES): $(IDL_FILE) $(ORBIT_IDL) 	 
+	$(ORBIT_IDL) -I $(LIBBONOBO_IDL) -I $(BONOBO_ACTIVATION_IDL) $(srcdir)/$(IDL_FILE) 	 
+ 
+idl_DATA = $(IDL_FILE) 	 
+idldir = $(datadir)/idl
 
 EXTRA_DIST = gwget-marshal.list         \
-	     gwget-application-service.xml
+	gwget-application-service.xml \
+	$(IDL_FILE)
 
 CLEANFILES = $(BUILT_SOURCES)
 
@@ -36,10 +54,11 @@ gwget_SOURCES = \
 	custom-cell-renderer-progressbar.c\
 	new_window.c\
 	eggtrayicon.c\
-	eggnotificationbubble.c \
 	systray.c \
 	gwget-application.c \
-	gwget-application.h
+	gwget-application.h \
+	gwget-application-server.c \
+        gwget-application-server.h
 
 gwget-marshal.h: gwget-marshal.list $(GLIB_GENMARSHAL)
 	        $(GLIB_GENMARSHAL) $< --header --prefix=gwget_marshal > $@
@@ -50,6 +69,7 @@ gwget-marshal.c: gwget-marshal.list $(GLIB_GENMARSHAL)
                                                                                                                                                              
 gwget_LDADD =  \
 	$(GWGET_LIBS)  \
+	$(NOTIFY_LIBS) \
 	$(GNOME_LIBS)
 
 if ENABLE_DBUS

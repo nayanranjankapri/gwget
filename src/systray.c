@@ -147,7 +147,7 @@ systray_generate_menu(GdkEventButton *event)
 		
 	downloads_menu = gtk_menu_new();
 	
-	if (g_list_length(downloads) == 0) {
+	if (count_all_downloads() == 0) {
 		item = gtk_menu_item_new_with_label(_("Nothing"));
 		gtk_widget_set_sensitive(item,FALSE);
 		gtk_menu_shell_append(GTK_MENU_SHELL(downloads_menu),item);

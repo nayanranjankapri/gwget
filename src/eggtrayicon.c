@@ -481,16 +481,6 @@ egg_tray_icon_send_message (EggTrayIcon *icon,
 		     
 #ifdef HAVE_NOTIFY
   egg_tray_icon_notify (icon, timeout, _("Notification"), NULL, message);
-#else
-  if (!icon->bubble)
-    {
-      icon->bubble = egg_notification_bubble_new ();
-      egg_notification_bubble_attach (icon->bubble, GTK_WIDGET (icon));
-    }
-
-  egg_notification_bubble_set (icon->bubble, _("Notification"),
-			       NULL, message);
-  egg_notification_bubble_show (icon->bubble, timeout);
 #endif
 
   return 1;
@@ -512,11 +502,6 @@ egg_tray_icon_cancel_message (EggTrayIcon *icon,
     icon->notify->handle = NULL;
 #endif
   }
-#else
-  g_return_if_fail (id > 0);
-  g_return_if_fail (icon->bubble != NULL);
-
-  egg_notification_bubble_hide (icon->bubble);
 #endif
 }
 
@@ -527,14 +512,6 @@ egg_tray_icon_get_orientation (EggTrayIcon *icon)
 
   return icon->orientation;
 }
-
-#ifndef HAVE_NOTIFY
-static void 
-egg_tray_icon_hide_notify_cb (EggNotificationBubble *bubble, gpointer data)
-{
-  egg_tray_icon_cancel_message (EGG_TRAY_ICON (data), 1);
-}
-#endif
 
 void
 egg_tray_icon_notify (EggTrayIcon *icon,
@@ -549,6 +526,8 @@ egg_tray_icon_notify (EggTrayIcon *icon,
   GdkPixbuf *pixbuf;
   int x;
   int y;
+  char *esc_primary;
+  char *esc_secondary;
 
   if (!notify_is_initted ())
     if (!notify_init ("gwget"))
@@ -559,10 +538,14 @@ egg_tray_icon_notify (EggTrayIcon *icon,
       notify_notification_close (icon->notify->handle, NULL);
     }
 
-  icon->notify->handle = notify_notification_new (primary,
-                                                  secondary,
+  esc_primary = g_markup_escape_text (primary, strlen (primary));
+  esc_secondary = g_markup_escape_text (secondary, strlen (secondary));
+  icon->notify->handle = notify_notification_new (esc_primary,
+                                                  esc_secondary,
                                                   NULL,
-                                                  NULL);
+                                                  GTK_WIDGET (icon));
+  g_free (esc_primary);
+  g_free (esc_secondary);
 
   notify_notification_set_timeout (icon->notify->handle, timeout);
 
@@ -586,8 +569,11 @@ egg_tray_icon_notify (EggTrayIcon *icon,
 
   if (pixbuf)
     {
-      notify_notification_set_icon_data_from_pixbuf (icon->notify->handle,
-                                                     pixbuf);
+#if (LIBNOTIFY_VERSION_MICRO < 2)
+      notify_notification_set_icon_data_from_pixbuf (icon->notify->handle, pixbuf);
+#else
+      notify_notification_set_icon_from_pixbuf (icon->notify->handle, pixbuf);
+#endif
       g_object_unref (pixbuf);
     }
 
@@ -610,7 +596,8 @@ egg_tray_icon_notify (EggTrayIcon *icon,
   NotifyIcon *icon_notify = NULL;
   NotifyHints *hints;
   char *fn;
-  
+  char *esc_primary;
+  char *esc_secondary;
   
   if (!notify_is_initted ())
     if (!notify_init ("gwget"))
@@ -656,36 +643,22 @@ egg_tray_icon_notify (EggTrayIcon *icon,
       notify_close (icon->notify->handle);
     }
 	  
+  esc_primary = g_markup_escape_text (primary, strlen (primary));
+  esc_secondary = g_markup_escape_text (secondary, strlen (secondary));
   icon->notify->hints = hints;
   icon->notify->icon = icon_notify;
   icon->notify->handle = notify_send_notification (NULL, "transfer",
  	 	  	  	            	   NOTIFY_URGENCY_LOW,
-			           	    	   primary,
-			    	   	    	   secondary,
+			           	    	   esc_primary,
+			    	   	    	   esc_secondary,
 			    	   	           icon_notify,
 			    	   	           TRUE, timeout/1000,
 			    	   	           hints,
 			    	   	           NULL,
 			    	   	           0);  
+  g_free (esc_primary);
+  g_free (esc_secondary);
   return;
 #endif
-#else
-  gint x, y;
-  gdk_window_get_origin (GTK_WIDGET (icon)->window,
-			 &x, &y);
-  if (!icon->bubble)
-    {
-      icon->bubble = egg_notification_bubble_new ();
-      egg_notification_bubble_attach (icon->bubble, GTK_WIDGET (icon));
-      g_signal_connect_object (icon->bubble,
-			       "clicked",
-			       G_CALLBACK (egg_tray_icon_hide_notify_cb),
-			       icon, 0);
-    }
-  
-  egg_notification_bubble_set (icon->bubble, primary,
-			       msgicon, secondary);
-  egg_notification_bubble_show (icon->bubble, timeout);
-  return;
 #endif
 }
