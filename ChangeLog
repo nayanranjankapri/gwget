@@ -1,5 +1,7 @@
 2006-04-10  David Sedeño <david@alderia.com>
 
+	* src/main_window_cb.c (on_treeview1_button_press_event): Select the
+	correct line in the treeview. Patch from Karderio fixes bug #337863.
 	* configure.in: - Restore bonobo dep because epiphany extension need it.
 			- libnotify check
 	* src/eggnotificationbubble.c: 

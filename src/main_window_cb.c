@@ -53,17 +53,33 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 	GdkEventButton *event_button;
 	GtkTreeSelection *select;
 	GtkTreeIter iter;
-    GtkTreeModel *model;
+	GtkTreeModel *model;
 	GwgetData *gwgetdata;
 	gchar *uri;
 	GError *err = NULL; 
 	
 	treev=glade_xml_get_widget(xml,"treeview1");
 	select=gtk_tree_view_get_selection(GTK_TREE_VIEW(treev));
-		
+
+	/* Right click - Show popup menu */
 	if (event->type == GDK_BUTTON_PRESS) {
 		event_button = (GdkEventButton *) event;
 		if (event->button==3 && gtk_tree_selection_get_selected (select, &model, &iter)) {
+
+			/* Select right-clicked line */
+			GtkTreeSelection *selection;
+			selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(treev));
+			GtkTreePath *path;
+			if (gtk_tree_view_get_path_at_pos(GTK_TREE_VIEW(treev),
+                                             (gint) event->x, 
+                                             (gint) event->y,
+                                             &path, NULL, NULL, NULL))
+			{
+				gtk_tree_selection_unselect_all(selection);
+				gtk_tree_selection_select_path(selection, path);
+				gtk_tree_path_free(path);
+			}
+
 			gwget_data_set_menus(gwget_data_get_selected());
 			popup=glade_xml_get_widget(xml,"popup1");
 			gtk_menu_popup (GTK_MENU(popup), NULL, NULL, NULL, NULL, 
