@@ -732,7 +732,7 @@ gwget_data_exec (GwgetData *gwgetdata)
 	uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
 							GNOME_VFS_MAKE_URI_DIR_CURRENT);
 	if (!gnome_url_show (uri, &err)) {
-		run_dialog(_("Error opening file"),_("Couldn't open the file"));
+		run_dialog_error(_("Error opening file"), _("Couldn't open the file"));
 	}
 }
 

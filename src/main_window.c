@@ -555,7 +555,7 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 			new_download(gwgetdata);
 			gwget_data_start_download(gwgetdata);
 		} else {
-			run_dialog(_("Error starting the download"), _("There was an unexpected error starting the download"));
+			run_dialog_error(_("Error starting the download"), _("There was an unexpected error starting the download"));
 		}
 		gtk_drag_finish(context, TRUE, FALSE, time);
 	}
@@ -793,7 +793,7 @@ gwget_quit(void)
 	
 	if (running) {
 		response = run_dialog(_("Cancel current downloads?"),
-				      _("There is at least one active download left. Really cancel all running transfers?"));
+				      _("There is at least one active download left. Really cancel all running transfers?"), _("Cancel"));
 		if (response == GTK_RESPONSE_OK) {
 			stop_all_downloads();
 			gtk_main_quit();

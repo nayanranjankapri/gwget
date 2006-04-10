@@ -1,5 +1,7 @@
 2006-04-10  David Sedeño <david@alderia.com>
 
+	* src/gwget_data.c: Use run_dialog_error.
+	* src/main_window.c: Use run_dialog_error.
 	* data/gwget.glade: Remove dialog that it's unused now.
 	* src/main_window_cb.c: Use the new run_dialog_error.
 	* src/utils.c (run_dialog_error): New func.
