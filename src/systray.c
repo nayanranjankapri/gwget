@@ -264,7 +264,7 @@ set_icon_idle()
 }
 
 void
-gwget_tray_notify(gchar *primary, gchar *secondary)
+gwget_tray_notify (gchar *primary, gchar *secondary, gchar *icon_name)
 {
-	egg_tray_icon_notify (EGG_TRAY_ICON(tray_icon), 4000, primary, NULL, secondary);
+    egg_tray_icon_notify (EGG_TRAY_ICON(tray_icon), 4000, primary, GTK_WIDGET (gtk_image_new_from_file  (icon_name)) , secondary);
 }

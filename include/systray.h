@@ -10,7 +10,7 @@ void systray_load(void);
 void set_icon_newdownload(void);
 void set_icon_downloading(void);
 void set_icon_idle(void);
-void gwget_tray_notify(gchar *primary, gchar *secondary);
+void gwget_tray_notify(gchar *primary, gchar *secondary, gchar *icon_nam);
 
 
 #ifdef __cplusplus

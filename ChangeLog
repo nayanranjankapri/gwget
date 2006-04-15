@@ -1,3 +1,10 @@
+2006-04-15  David Sedeño <david@alderia.com>
+
+	* include/systray.c: Add name of the icon to gwget_tray_notify.
+	* src/systray.c (gwget_tray_notify): Set the icon to be displayed in
+	the notify bubble.
+	* src/gwget_data.c (gwget_gnotify_finished): Pass the icon name.
+	
 2006-04-10  David Sedeño <david@alderia.com>
 
 	* src/gwget_data.c: Use run_dialog_error.

@@ -770,7 +770,7 @@ gwget_gnotify_finished(GwgetData *gwgetdata) {
       close(sock);
    }
 
-   gwget_tray_notify (_("Download Complete"), gwgetdata->filename);
+   gwget_tray_notify (_("Download Complete"), gwgetdata->filename, gwgetdata->icon_name);
    g_free(app_msg);
    g_free(icon_msg);
    g_free(fn_msg);
