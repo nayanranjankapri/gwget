@@ -24,6 +24,7 @@
 #include <libgnome/gnome-init.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
 #include <libgnomevfs/gnome-vfs-mime-utils.h>
+#include <gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-mime.h>
 
 #include "main_window.h"
 #include "main_window_cb.h"

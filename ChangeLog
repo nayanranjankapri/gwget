@@ -1,3 +1,8 @@
+2006-05-04  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c: Fix a segfault on amd64.
+	(Thank to Arnaud Fontaine)
+	
 2006-04-16  David Sedeño <david@alderia.com>
 
 	* src/gwget-application-server{.c.h}: readded files for bonobo
