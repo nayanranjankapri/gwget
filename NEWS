@@ -1,4 +1,25 @@
 ==============
+Version 0.98 
+==============
+
+Features:
+	* Use libnotify for popup notification
+	* Use DBUS instead of bonobo for get one instance of gwget
+
+Fixes:
+	* Fix a freeze when pause when called from another program (bug #309007).
+	* Update tray code.
+	* Epiphany extension detection fixes and other small fixes (Jens Granseuer)
+	* Select the correct line when right clicked.
+	* Make the dialogs more HIG compliant.
+	* Segfault on AMD64 (Arnaud Fontaine)
+
+Translation:
+	* Update: ca (Josep Puigdemont Casamajó), sv (Daniel Nylander), fi (Ilkka Tuohela), vi (Clytie Siddall), eu (Inaki Larranaga), es (Francisco Javier F. Serrador), nl (Vincent van Adrighem), zh_CN (Funda Wang), en_CA (Adam Weinberger)
+
+
+
+==============
 Version 0.97
 ==============
 Features:

@@ -1,3 +1,7 @@
+2006-05-07  David Sedeño <david@alderia.com>
+
+	* configure.in: Version 0.98
+	
 2006-05-04  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c: Fix a segfault on amd64.
