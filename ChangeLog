@@ -1,5 +1,11 @@
 2006-05-07  David Sedeño <david@alderia.com>
 
+	* configure.in: Version 0.98.1
+	* include/eggtrayicon.h: Remove eggnotificationbubble includes (Thanks
+	to Arnaud Fontaine for report it).
+
+2006-05-07  David Sedeño <david@alderia.com>
+
 	* configure.in: Version 0.98
 	
 2006-05-04  David Sedeño <david@alderia.com>
