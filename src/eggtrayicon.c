@@ -14,8 +14,8 @@
  *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ * Boston, MA 02110-1301  USA.
  */
 
 #include <config.h>
@@ -538,6 +538,15 @@ egg_tray_icon_notify (EggTrayIcon *icon,
       notify_notification_close (icon->notify->handle, NULL);
     }
 
+  if (primary == NULL)
+    {
+      primary = "";
+    }
+  if (secondary == NULL)
+    {
+      secondary = "";
+    }
+
   esc_primary = g_markup_escape_text (primary, strlen (primary));
   esc_secondary = g_markup_escape_text (secondary, strlen (secondary));
   icon->notify->handle = notify_notification_new (esc_primary,
@@ -569,7 +578,7 @@ egg_tray_icon_notify (EggTrayIcon *icon,
 
   if (pixbuf)
     {
-#if (LIBNOTIFY_VERSION_MICRO < 2)
+#if (LIBNOTIFY_VERSION_MINOR <=3 && LIBNOTIFY_VERSION_MICRO < 2)
       notify_notification_set_icon_data_from_pixbuf (icon->notify->handle, pixbuf);
 #else
       notify_notification_set_icon_from_pixbuf (icon->notify->handle, pixbuf);

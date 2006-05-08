@@ -1,3 +1,8 @@
+2006-05-08  David Sedeño <david@alderia.com>
+
+	* src/eggtrayicon.c: Patch for work with libnotify 0.4. Thanks to
+	Joseph Sacco.
+
 2006-05-07  David Sedeño <david@alderia.com>
 
 	* configure.in: Version 0.98.1
