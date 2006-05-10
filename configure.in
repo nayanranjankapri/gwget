@@ -24,7 +24,9 @@ DBUS_GLIB_REQUIRED=0.33
 PKG_CHECK_MODULES(GNOME, libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
 		 	  gtk+-2.0 	>= $GTK_REQUIRED 
 			  gmodule-2.0
-			  libglade-2.0 	>= $LIBGLADE_REQUIRED)
+			  libglade-2.0 	>= $LIBGLADE_REQUIRED
+			  gnome-vfs-2.0
+			  gnome-vfs-module-2.0)
 
 AC_SUBST(GNOME_LIBS)
 AC_SUBST(GNOME_CFLAGS)

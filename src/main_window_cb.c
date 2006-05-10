@@ -24,7 +24,7 @@
 #include <libgnome/gnome-init.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
 #include <libgnomevfs/gnome-vfs-mime-utils.h>
-#include <gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-mime.h>
+#include <libgnomevfs/gnome-vfs-mime.h>
 
 #include "main_window.h"
 #include "main_window_cb.h"
@@ -66,11 +66,11 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 	if (event->type == GDK_BUTTON_PRESS) {
 		event_button = (GdkEventButton *) event;
 		if (event->button==3 && gtk_tree_selection_get_selected (select, &model, &iter)) {
+			GtkTreeSelection *selection;
+			GtkTreePath *path;
 
 			/* Select right-clicked line */
-			GtkTreeSelection *selection;
 			selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(treev));
-			GtkTreePath *path;
 			if (gtk_tree_view_get_path_at_pos(GTK_TREE_VIEW(treev),
                                              (gint) event->x, 
                                              (gint) event->y,

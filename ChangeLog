@@ -1,3 +1,11 @@
+2006-05-10  David Sedeño <david@alderia.com>
+
+	Patch from Jens Granseuer:
+	* configure.in: Check gnome-vfs and gnome-vfs-module
+	* src/main_window_cb.c: Remove gnome-vfs-module-2.0 in the include
+	* src/main_window_cb.c (on_treeview1_button_press_event): Fix some C99 vs. C89 issue
+	
+	
 2006-05-08  David Sedeño <david@alderia.com>
 
 	* src/eggtrayicon.c: Patch for work with libnotify 0.4. Thanks to
