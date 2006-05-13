@@ -2,29 +2,25 @@
 # not gwget's prefix.  
 # ...but that causes problems w/ make distcheck.
 
-extensiondir = $(EXTENSION_PREFIX)/$(EPIPHANY_EXTENSIONS_DIR)
+extensiondir = $(EPIPHANY_EXTENSIONS_DIR)
 extension_LTLIBRARIES = libgwgetextension.la
 
 INCLUDES =				\
  	$(EPIPHANY_DEPENDENCY_CFLAGS)	\
+	-DSHARE_DIR=\"$(pkgdatadir)\"                   \
+        -DEPHY_EXTENSIONS_LOCALEDIR=\"$(datadir)/locale\"  \
 	-I$(top_srcdir)/src		\
- 	-DSHARE_DIR=\"pkgdatadir\"	\
- 	-DG_DISABLE_DEPRECATED		\
- 	-DGDK_DISABLE_DEPRECATED	\
- 	-DGTK_DISABLE_DEPRECATED	\
- 	-DGDK_PIXBUF_DISABLE_DEPRECATED	\
- 	-DGNOME_DISABLE_DEPRECATED
+	$(DBUS_CFLAGS) \
+	-I$(top_builddir)/include 		
 
 libgwgetextension_la_SOURCES =			\
  	ephy-gwget.c				\
 	ephy-gwget-extension.c			\
- 	ephy-gwget-extension.h			\
-	$(top_builddir)/src/GNOME_Gwget-stubs.c	\
-	$(top_builddir)/src/GNOME_Gwget-common.c\
-	$(top_builddir)/src/GNOME_Gwget-skels.c	\
-	$(top_builddir)/src/GNOME_Gwget.h
+	ephy-gwget-extension.h			\
+ 	$(top_builddir)/src/gwget-application.h \
+ 	$(top_builddir)/src/gwget-application.c  
 
-libgwgetextension_la_LDFLAGS = -module -avoid-version
+libgwgetextension_la_LDFLAGS = -module -avoid-version 
 
 extensionxmldir = $(extensiondir)
 extensionxml_in_files = gwget.xml.in.in

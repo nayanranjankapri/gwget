@@ -506,6 +506,13 @@ gwget_data_set_total_size (GwgetData *gwgetdata, guint64 total_size)
 	gwgetdata->total_size = total_size;
 }
 
+GwgetData *
+gwget_data_new (gchar *url)
+{
+
+	return gwget_data_create (url, gwget_pref.download_dir);
+
+}
 
 GwgetData * 
 gwget_data_create(gchar *url, gchar *dir)
@@ -719,8 +726,8 @@ gwget_data_add_download(GwgetData *gwgetdata)
 		}
 	}
 	downloads = g_list_append(downloads,gwgetdata);
-	gwget_data_set_state(gwgetdata,DL_NOT_CONNECTED);
 	new_download(gwgetdata);
+	gwget_data_set_state(gwgetdata,DL_NOT_CONNECTED);
 }
 
 void

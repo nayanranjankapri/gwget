@@ -21,7 +21,6 @@
 #include <string.h>
 #include <gconf/gconf-client.h>
 #include <locale.h>
-#include <libbonobo.h>
 #include <libgnomeui/libgnomeui.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
 

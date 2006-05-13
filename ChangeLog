@@ -1,3 +1,17 @@
+2006-05-13  David Sedeño <david@alderia.com>
+
+	Port epiphany-extension to dbus. Get rid of bonobo stuff:
+	* configure.in: Remove bonobo checks
+	* epiphany-extension/Makefile.am: Remove bonobo object reference and
+	use dbus interface
+	* epiphany-extension/ephy-gwget-extension.c: Use dbus interface
+	instead of bonobo.
+	* src/Makefile.am: Remove all bonobo and idl reference.
+	* src/main.c: Don't include bonobo.h
+	* src/gwget_data.c: New function gwget_data_new that create a new
+	gwgetdata struct with the preference download dir.
+	* src/gwget-application.c: Use gwget_data_new.
+	
 2006-05-10  David Sedeño <david@alderia.com>
 
 	Patch from Jens Granseuer:

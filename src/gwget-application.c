@@ -134,11 +134,11 @@ init_session (GwgetApplication *application)
 
 gboolean
 gwget_application_open_window (GwgetApplication  *application,
-			    guint32         timestamp,
-			    GError        **error)
+                           guint32         timestamp,
+                           GError        **error)
 {
 
-	return TRUE;
+       return TRUE;
 }
 
 
@@ -151,7 +151,7 @@ gwget_application_open_uri (GwgetApplication  *application,
 	GwgetData *gwgetdata;
 	
 	
-	gwgetdata = gwget_data_create ((gchar *)url, gwget_pref.download_dir);
+	gwgetdata = gwget_data_new ((gchar *)url);
 	gwget_data_add_download(gwgetdata);
 	gwget_data_start_download(gwgetdata);
 

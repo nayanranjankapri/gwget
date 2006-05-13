@@ -22,14 +22,15 @@
 #endif
 
 #include "ephy-gwget-extension.h"
-#include "GNOME_Gwget.h"
+#include "gwget-application.h"
+
+#ifdef ENABLE_DBUS
+#include <dbus/dbus-glib-bindings.h>
+#endif
+
 
 #include <epiphany/ephy-embed-single.h>
 #include <epiphany/ephy-embed-shell.h>
-
-#include <gmodule.h>
-
-#include <libbonobo.h>
 
 #define EPHY_GWGET_EXTENSION_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionPrivate))
 
@@ -46,36 +47,96 @@ handle_content_cb (EphyEmbedSingle *single,
 		   const char *uri,
 		   GObject *extension)
 {
-	CORBA_Environment env;
-	GNOME_Gwget_Application server;
-	GNOME_Gwget_URIList *list;
+	GError *error = NULL;
+	DBusGConnection *connection;
+	DBusGProxy *remote_object;
 	gboolean retval = FALSE;
+	guint32 timestamp;
+#if DBUS_VERSION < 35
+	        DBusGPendingCall *call;
+#endif
 
 	g_return_val_if_fail (uri != NULL, FALSE);
 
-	CORBA_exception_init (&env);
-	server = bonobo_activation_activate_from_id
-			("OAFIID:GNOME_Gwget_Application", 0, NULL, &env);
-	if (BONOBO_EX (&env) || server == CORBA_OBJECT_NIL) return FALSE;
+	connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
+	if (connection == NULL) {
+		g_warning (error->message);
+		g_error_free (error);
+		return FALSE;
+	}
+	remote_object = dbus_g_proxy_new_for_name (connection,
+						"org.gnome.gwget.ApplicationService",
+						"/org/gnome/gwget/Gwget",
+						"org.gnome.gwget.Application");
 
-	list = GNOME_Gwget_URIList__alloc ();
-	if (!list) goto out;
+#if DBUS_VERSION <= 33
+	call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
+					DBUS_TYPE_UINT32, &timestamp,
+					DBUS_TYPE_INVALID);
 
-	list->_maximum = list->_length = 1;
-	list->_buffer = CORBA_sequence_GNOME_Gwget_URI_allocbuf (1);
-	list->_buffer[0] = CORBA_string_dup (uri);
-	
-	CORBA_sequence_set_release (list, CORBA_TRUE);
+	if (!dbus_g_proxy_end_call (remote_object, call, &error, DBUS_TYPE_INVALID)) {
+		g_warning (error->message);
+		g_clear_error (&error);
+		return FALSE;
+	}
+#elif DBUS_VERSION == 34
+	call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
+					G_TYPE_UINT, timestamp,
+					G_TYPE_INVALID);
 
-	CORBA_exception_init (&env);
-	GNOME_Gwget_Application_openURLSList (server, list, &env);
+	if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
+		g_warning (error->message);
+		g_clear_error (&error);
+		return FALSE;
+	}
+#else
+	if (!dbus_g_proxy_call (remote_object, "OpenWindow", &error,
+		G_TYPE_UINT, timestamp,
+		G_TYPE_INVALID,
+		G_TYPE_INVALID)) {
+			g_warning (error->message);
+			g_clear_error (&error);
+			return FALSE;
+	}
+#endif
 
-	retval = !BONOBO_EX (&env);
+#if DBUS_VERSION <= 33
+	call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
+					DBUS_TYPE_STRING, &uri,
+					DBUS_TYPE_UINT32, &timestamp,
+					DBUS_TYPE_INVALID);
 
-	/* FIXME: do we need to CORBA_free the list? */
-out:
-	CORBA_exception_init (&env);
-	CORBA_Object_release (server, &env);
+	if (!dbus_g_proxy_end_call (remote_object, call, &error, DBUS_TYPE_INVALID)) {
+		g_warning (error->message);
+		g_clear_error (&error);
+		g_free (uri);
+		continue;
+	}
+#elif DBUS_VERSION == 34
+	call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
+					G_TYPE_STRING, uri,
+					G_TYPE_UINT, timestamp,
+					G_TYPE_INVALID);
+
+	if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
+		g_warning (error->message);
+		g_clear_error (&error);
+		g_free (uri);
+		continue;
+	}
+#else
+	if (!dbus_g_proxy_call (remote_object, "OpenURI", &error,
+				G_TYPE_STRING, uri,
+				G_TYPE_UINT, timestamp,
+				G_TYPE_INVALID,
+				G_TYPE_INVALID)) {
+		g_warning (error->message);
+		g_clear_error (&error);
+	}
+#endif
+	retval= TRUE;	
+	gdk_notify_startup_complete ();
+
 
 	return retval;
 }

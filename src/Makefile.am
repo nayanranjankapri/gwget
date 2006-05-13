@@ -16,35 +16,11 @@ AM_CFLAGS =\
 	 -O1\
 	 -g
 
-IDL_FILE = GNOME_Gwget.idl 	 
-  	 
-IDL_SOURCES =  \
-	GNOME_Gwget-stubs.c             \
-	GNOME_Gwget-common.c            \
-	GNOME_Gwget-skels.c             \
-	GNOME_Gwget.h
-
-BUILT_SOURCES =                         \
-        gwget-marshal.c                 \
-        gwget-marshal.h                 \
-	$(IDL_SOURCES)
-
-$(IDL_SOURCES): $(IDL_FILE) $(ORBIT_IDL) 	 
-	$(ORBIT_IDL) -I $(LIBBONOBO_IDL) -I $(BONOBO_ACTIVATION_IDL) $(srcdir)/$(IDL_FILE) 	 
- 
-idl_DATA = $(IDL_FILE) 	 
-idldir = $(datadir)/idl
-
-EXTRA_DIST = gwget-marshal.list         \
-	gwget-application-service.xml \
-	$(IDL_FILE)
-
-CLEANFILES = $(BUILT_SOURCES)
+EXTRA_DIST = gwget-application-service.xml 
 
 bin_PROGRAMS = gwget
 
 gwget_SOURCES = \
-	$(BUILT_SOURCES) \
 	main.c\
 	main_window.c\
 	main_window_cb.c\
@@ -56,24 +32,15 @@ gwget_SOURCES = \
 	eggtrayicon.c\
 	systray.c \
 	gwget-application.c \
-	gwget-application.h \
-	gwget-application-server.c \
-        gwget-application-server.h
+	gwget-application.h 
 
-gwget-marshal.h: gwget-marshal.list $(GLIB_GENMARSHAL)
-	        $(GLIB_GENMARSHAL) $< --header --prefix=gwget_marshal > $@
-
-gwget-marshal.c: gwget-marshal.list $(GLIB_GENMARSHAL)
-	echo "#include \"gwget-marshal.h\"" > $@ && \
-	$(GLIB_GENMARSHAL) $< --body --prefix=gwget_marshal >> $@
-                                                                                                                                                             
 gwget_LDADD =  \
 	$(GWGET_LIBS)  \
 	$(NOTIFY_LIBS) \
 	$(GNOME_LIBS)
 
 if ENABLE_DBUS
-BUILT_SOURCES += gwget-application-service.h
+gwget_SOURCES += gwget-application-service.h
 endif
 
 DISTCLEANFILES= \

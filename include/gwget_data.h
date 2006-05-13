@@ -112,7 +112,8 @@ gint num_of_download;
 
 #define gwget_data_run(gwgetdata) ((gwgetdata->log_tag != -1) ? TRUE : FALSE)
 
-GwgetData * gwget_data_create(gchar *url, gchar *dir);
+GwgetData * gwget_data_create (gchar *url, gchar *dir);
+GwgetData * gwget_data_new (gchar *url);
 void gwget_data_set_filename(GwgetData* gwgetdata,gchar *str);
 void gwget_data_start_download(GwgetData *gwgetdata);
 void gwget_data_set_state (GwgetData *gwgetdata, DlState state);
