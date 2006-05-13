@@ -1,5 +1,9 @@
 2006-05-13  David Sedeño <david@alderia.com>
 
+	* src/Makefile.am: Fix generation of gwget-application-service.h
+
+2006-05-13  David Sedeño <david@alderia.com>
+
 	Port epiphany-extension to dbus. Get rid of bonobo stuff:
 	* configure.in: Remove bonobo checks
 	* epiphany-extension/Makefile.am: Remove bonobo object reference and

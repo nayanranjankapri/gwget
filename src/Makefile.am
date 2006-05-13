@@ -20,7 +20,10 @@ EXTRA_DIST = gwget-application-service.xml
 
 bin_PROGRAMS = gwget
 
+BUILT_SOURCES =                     
+
 gwget_SOURCES = \
+	$(BUILT_SOURCES) \
 	main.c\
 	main_window.c\
 	main_window_cb.c\
@@ -40,7 +43,7 @@ gwget_LDADD =  \
 	$(GNOME_LIBS)
 
 if ENABLE_DBUS
-gwget_SOURCES += gwget-application-service.h
+BUILT_SOURCES += gwget-application-service.h
 endif
 
 DISTCLEANFILES= \
