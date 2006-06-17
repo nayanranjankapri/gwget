@@ -1,3 +1,8 @@
+2006-06-17  David Sedeño <david@alderia.com>
+
+	* configure.in: Detect epiphany 2.15. Thanks to Joseph
+	Sacco for the patch.
+
 2006-05-13  David Sedeño <david@alderia.com>
 
 	* src/Makefile.am: Fix generation of gwget-application-service.h
