@@ -1,20 +1,20 @@
 # Hungarian translation of gwget.
-# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget.HEAD.hu\n"
+"Project-Id-Version: gwget.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-19 12:07+0100\n"
-"PO-Revision-Date: 2005-12-16 22:23+0100\n"
+"POT-Creation-Date: 2006-06-23 05:21+0200\n"
+"PO-Revision-Date: 2006-06-25 00:01+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10\n"
+"X-Generator: KBabel 1.10.2\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
 
 #: ../data/GNOME_Gwget.server.in.in.h:1
@@ -37,7 +37,7 @@ msgstr "GNU GPL 2. verzió"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Letöltéskezelő a GNOME-hoz"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:193
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
@@ -53,7 +53,8 @@ msgstr "<span weight=\"bold\">Letöltés:</span>"
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">Tulajdonságok</span>"
 
-#: ../data/gwget.glade.h:4
+#: ../data/gwget.glade.h:4 ../src/main_window.c:796
+#: ../src/main_window_cb.c:619
 msgid "Cancel"
 msgstr "Mégsem"
 
@@ -73,8 +74,8 @@ msgstr "Folytatás"
 msgid "Continue with the download"
 msgstr "Folytatás a letöltéssel"
 
-#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
-#: ../src/main_window_cb.c:607 ../src/main_window_cb.c:712
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:626 ../src/main_window_cb.c:731
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Letöltéskezelő"
 
@@ -134,75 +135,71 @@ msgstr "A letöltés szüneteltetése"
 msgid "Properties"
 msgstr "Tulajdonságok"
 
-#: ../data/gwget.glade.h:24
-msgid "Question"
-msgstr "Kérdés"
-
-#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:24 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekurzió"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:25
 msgid "Recursive options"
 msgstr "Rekurzív opciók"
 
-#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:694
+#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:713
 msgid "Remove all"
 msgstr "Összes eltávolítása"
 
-#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:630
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:649
 msgid "Remove completed"
 msgstr "Befejezettek eltávolítása"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:28
 msgid "Remove from List"
 msgstr "Eltávolítás a listából"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:29
 msgid "Remove from list"
 msgstr "Eltávolítás a listából"
 
-#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:662
+#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:681
 msgid "Remove inactive"
 msgstr "Inaktívak eltávolítása"
 
-#: ../data/gwget.glade.h:32
+#: ../data/gwget.glade.h:31
 msgid "Resume all"
 msgstr "Összes folytatása"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:32
 msgid "Resume all downloads"
 msgstr "Az összes letöltés folytatása"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:33
 msgid "Stat_usbar"
 msgstr "Állap_otsor"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:34
 msgid "Stop and delete downloaded file"
 msgstr "Leállítás és a letöltött fájl törlése"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:35
 msgid "The index file only"
 msgstr "Csak az indexfájlt"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:36
 msgid "This site (mirror)"
 msgstr "Ezt az oldalt (tükrözés)"
 
-#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:37 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:38
 msgid "_Download"
 msgstr "_Letöltés"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:39
 msgid "_New"
 msgstr "Ú_j"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:40
 msgid "_Toolbar"
 msgstr "_Eszköztár"
 
@@ -490,6 +487,18 @@ msgstr "Ismeretlen"
 msgid "Failed"
 msgstr "Sikertelen"
 
+#: ../src/eggtrayicon.c:145
+msgid "Orientation"
+msgstr "Elhelyezkedés"
+
+#: ../src/eggtrayicon.c:146
+msgid "The orientation of the tray."
+msgstr "A tálca elhelyezkedése."
+
+#: ../src/eggtrayicon.c:483
+msgid "Notification"
+msgstr "Értesítés"
+
 #: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "beragadt"
@@ -531,73 +540,85 @@ msgstr ""
 "Letöltés befejezve\n"
 "(%s)"
 
-#: ../src/gwget_data.c:253
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "Hiba"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:693
 msgid "Unable to add this download"
 msgstr "Ezt a letöltést nem lehet hozzáadni"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:694
 msgid "This download is already added"
 msgstr "Ez a letöltés már hozzá van adva"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1122 ../src/main_window_cb.c:1141
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143 ../src/main_window_cb.c:1162
 msgid "Error opening file"
 msgstr "Hiba a fájl megnyitásakor"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1122
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143
 msgid "Couldn't open the file"
 msgstr "Nem lehet megnyitni a fájlt"
 
-#: ../src/main_window.c:431
+#: ../src/gwget_data.c:780
+msgid "Download Complete"
+msgstr "Letöltés befejezve"
+
+#: ../src/main.c:230 ../src/main_window_cb.c:188
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main.c:249
+msgid "Gwget Download Manager"
+msgstr "Gwget letöltéskezelő"
+
+#: ../src/main_window.c:433
 msgid "File Name"
 msgstr "Fájlnév"
 
-#: ../src/main_window.c:439
+#: ../src/main_window.c:441
 msgid "State"
 msgstr "Állapot"
 
-#: ../src/main_window.c:451
+#: ../src/main_window.c:453
 msgid "Current Size"
 msgstr "Jelenlegi méret"
 
-#: ../src/main_window.c:463
+#: ../src/main_window.c:465
 msgid "Total Size"
 msgstr "Teljes méret"
 
-#: ../src/main_window.c:474 ../src/main_window.c:480
+#: ../src/main_window.c:476 ../src/main_window.c:482
 msgid "Percentage"
 msgstr "Százalék"
 
-#: ../src/main_window.c:487
+#: ../src/main_window.c:489
 msgid "Elapsed Time"
 msgstr "Eltelt idő"
 
-#: ../src/main_window.c:498
+#: ../src/main_window.c:500
 msgid "Remaining Time"
 msgstr "Hátralévő idő"
 
-#: ../src/main_window.c:509
+#: ../src/main_window.c:511
 msgid "Speed"
 msgstr "Sebesség"
 
-#: ../src/main_window.c:556
+#: ../src/main_window.c:558
 msgid "Error starting the download"
 msgstr "Hiba a letöltés elkezdése közben"
 
-#: ../src/main_window.c:556
+#: ../src/main_window.c:558
 msgid "There was an unexpected error starting the download"
 msgstr "Váratlan hiba lépett fel a letöltés megkezdésekor"
 
-#: ../src/main_window.c:793
+#: ../src/main_window.c:795
 msgid "Cancel current downloads?"
 msgstr "Megszakítja a jelenlegi letöltéseket?"
 
-#: ../src/main_window.c:794
+#: ../src/main_window.c:796
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -605,23 +626,19 @@ msgstr ""
 "Még legalább egy aktív letöltés van hátra. Valóban megszakítja az összes "
 "futó átvitelt?"
 
-#: ../src/main_window_cb.c:82
+#: ../src/main_window_cb.c:101
 msgid "Error in download"
 msgstr "Hiba a letöltésben"
 
-#: ../src/main_window_cb.c:169
-msgid "Gwget"
-msgstr "Gwget"
-
-#: ../src/main_window_cb.c:172
+#: ../src/main_window_cb.c:191
 msgid "Download Manager for GNOME."
 msgstr "Letöltéskezelő a GNOME-hoz."
 
-#: ../src/main_window_cb.c:543 ../src/new_window.c:138
+#: ../src/main_window_cb.c:562 ../src/new_window.c:139
 msgid "Select Folder"
 msgstr "Mappa kiválasztása"
 
-#: ../src/main_window_cb.c:599
+#: ../src/main_window_cb.c:618
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -630,90 +647,98 @@ msgstr ""
 "Valóban megszakítja a jelenlegi letöltést?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:600
+#: ../src/main_window_cb.c:619
 msgid "Cancel download?"
 msgstr "Megszakítja a letöltést?"
 
-#: ../src/main_window_cb.c:630
+#: ../src/main_window_cb.c:649
 msgid "Really remove completed downloads from the list?"
 msgstr "Valóban eltávolítja a befejeződött letöltéseket a listából?"
 
-#: ../src/main_window_cb.c:662
+#: ../src/main_window_cb.c:649
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ../src/main_window_cb.c:681
 msgid "Really remove inactive downloads from the list?"
 msgstr "Valóban eltávolítja az inaktív letöltéseket a listából?"
 
-#: ../src/main_window_cb.c:694
+#: ../src/main_window_cb.c:713
 msgid "Really remove all downloads from the list?"
 msgstr "Valóban eltávolítja az összes letöltést a listából?"
 
-#: ../src/main_window_cb.c:1076
+#: ../src/main_window_cb.c:1095
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "Az új letöltési sebességhatár csak az az új vagy újraindított letöltésekre "
 "lesz érvényes"
 
-#: ../src/main_window_cb.c:1091
-msgid "Remove this download ?"
-msgstr "Eltávolítja ezt a letöltést?"
+#: ../src/main_window_cb.c:1111
+#, c-format
+msgid "Remove %s ?"
+msgstr "Eltávolítja a következőt: %s?"
 
-#: ../src/main_window_cb.c:1091
+#: ../src/main_window_cb.c:1112
 msgid "Really remove this download from the list?"
 msgstr "Valóban eltávolítja ezt a letöltést a listából?"
 
-#: ../src/main_window_cb.c:1141
+#: ../src/main_window_cb.c:1112
+msgid "Remove download"
+msgstr "Letöltés eltávolítása"
+
+#: ../src/main_window_cb.c:1162
 msgid "Couldn't open the folder"
 msgstr "Nem lehet megnyitni a mappát"
 
-#: ../src/systray.c:152
+#: ../src/systray.c:151
 msgid "Nothing"
 msgstr "Semmi"
 
-#: ../src/systray.c:159
+#: ../src/systray.c:158
 msgid "Downloads"
 msgstr "Letöltések"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:123
 msgid "Socket error"
 msgstr "Foglalathiba"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:125
 msgid "Connection refused\n"
 msgstr "Kapcsolat visszautasítva\n"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:127
 msgid "No route to host"
 msgstr "Nincs útvonal a kiszolgálóhoz"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:129
 msgid "Connection refused when downloading URL:\n"
 msgstr "Kapcsolat visszautasítva az URL letöltése közben:\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:131
 msgid "Host not found\n"
 msgstr "Kiszolgáló nem található\n"
 
-#: ../src/wget-log.c:130
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr ""
-"Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
-
 #: ../src/wget-log.c:133
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
+
+#: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
 msgstr "Létező fájl csonkításának visszautasítása"
 
-#: ../src/wget-log.c:135
+#: ../src/wget-log.c:138
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: ../src/wget-log.c:146 ../src/wget-log.c:152
+#: ../src/wget-log.c:149 ../src/wget-log.c:155
 msgid "File not found"
 msgstr "A fájl nem található"
 
-#: ../src/wget-log.c:159
+#: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
+msgstr "Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
 
-#: ../src/wget-log.c:218
+#: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Nem lehet írni a célkönyvtárba"
+
