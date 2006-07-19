@@ -93,7 +93,7 @@ msgstr "Tập tin cục bộ :"
 
 #:../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
-msgstr "Tập tin đa vật chứa (ảnh động và ảnh)"
+msgstr "Tập tin Đa phương tiện (ảnh động và ảnh)"
 
 #:../data/gwget.glade.h:14
 msgid "New download"
