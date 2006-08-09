@@ -1,16 +1,14 @@
-# translation of gwget.HEAD.eu.po to Basque
-# Basque translation of gwget2.
-# Copyright (C) 2004 Mikel Olasagasti
+# translation of gwget.HEAD.po to Basque
+# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget2 package.
 # Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004, 2005, 2006.
-#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-11 10:03+0000\n"
+"POT-Creation-Date: 2006-08-09 14:41+0000\n"
 "PO-Revision-Date: 2006-05-11 10:04+0000\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
@@ -18,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
 #: ../data/GNOME_Gwget.server.in.in.h:1
@@ -550,33 +548,33 @@ msgstr ""
 msgid "Error"
 msgstr "Errorea"
 
-#: ../src/gwget_data.c:686
+#: ../src/gwget_data.c:693
 msgid "Unable to add this download"
 msgstr "Ezin da deskarga hau geitu"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:694
 msgid "This download is already added"
 msgstr "Deskarga hau dagoeneko jarrita dago"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:110
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
 #: ../src/main_window_cb.c:1143 ../src/main_window_cb.c:1162
 msgid "Error opening file"
 msgstr "Errorea fitxategia irekitzean"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:110
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
 #: ../src/main_window_cb.c:1143
 msgid "Couldn't open the file"
 msgstr "Ezin izan da fitxategia ireki"
 
-#: ../src/gwget_data.c:773
+#: ../src/gwget_data.c:780
 msgid "Download Complete"
 msgstr "Deskarga burutua"
 
-#: ../src/main.c:231 ../src/main_window_cb.c:188
+#: ../src/main.c:230 ../src/main_window_cb.c:188
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main.c:250
+#: ../src/main.c:249
 msgid "Gwget Download Manager"
 msgstr "Gwget deskarga-kudeatzailea"
 
@@ -726,7 +724,8 @@ msgstr "Ez da ostalaria aurkitu\n"
 
 #: ../src/wget-log.c:133
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
+msgstr ""
+"Euskarririk gabeko protokoloa. . wget >=1.7 behar duzu https-rentzat:\n"
 
 #: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
@@ -749,4 +748,3 @@ msgstr ""
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Ezin da helburuko direktorioan idatzi"
-
