@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-06-23 05:21+0200\n"
+"POT-Creation-Date: 2006-08-15 05:43+0200\n"
 "PO-Revision-Date: 2006-06-25 00:01+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=1; plural=0;\n"
+"Plural-Forms:   nplurals=2; plural=(n != 1);\n"
 
 #: ../data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
@@ -720,7 +720,8 @@ msgstr "Kiszolgáló nem található\n"
 
 #: ../src/wget-log.c:133
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
+msgstr ""
+"Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
 
 #: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
@@ -736,9 +737,9 @@ msgstr "A fájl nem található"
 
 #: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
+msgstr ""
+"Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
 
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Nem lehet írni a célkönyvtárba"
-
