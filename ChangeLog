@@ -1,3 +1,7 @@
+2006-08-27  Abel Cheung  <abel@oaka.org>
+
+	* configure.in: Added 'en_GB' 'vi' 'zh_HK' to ALL_LINGUAS.
+
 2006-06-17  David Sedeño <david@alderia.com>
 
 	* configure.in: Detect epiphany 2.15. Thanks to Joseph
