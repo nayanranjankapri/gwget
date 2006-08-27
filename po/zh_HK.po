@@ -1,4 +1,4 @@
-# Chinese (Taiwan) translation of gwget.
+# Chinese (Hong Kong) translation of gwget.
 # Copyright (C) 2004, 05 Free Software Foundation, Inc.
 # Abel Cheung <maddog@linuxhall.org>, 2004.
 # Pui Lam Wong <pplwong@openoffice.org>, 2005.
@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gwget 0.96\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-12-06 00:57+0800\n"
-"PO-Revision-Date: 2006-08-27 10:20+0800\n"
+"PO-Revision-Date: 2006-08-27 10:21+0800\n"
 "Last-Translator: pplwong <pplwong@openoffice.org>\n"
-"Language-Team: Chinese (Taiwan) <community@linuxhall.org>\n"
+"Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,7 +40,7 @@ msgstr "Gwget：GNOME 的下載管理程式"
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
-"以下地址，GNOME 翻譯團隊會盡快回覆您：\n"
+"以下地址，GNOME 翻譯隊伍會盡快回覆你：\n"
 "community@linuxhall.org\n"
 "\n"
 "Pui Lam Wong <pplwong@openoffice.org>, 2005\n"
@@ -98,7 +98,7 @@ msgstr "本地檔案:"
 
 #: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
-msgstr "多媒體檔案（視訊檔或影像）"
+msgstr "多媒體檔案（視像檔或圖像）"
 
 #: ../data/gwget.glade.h:14
 msgid "New download"
@@ -357,11 +357,11 @@ msgstr "顯示欄位"
 
 #: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
-msgstr "預設的 _GNOME 網路設定"
+msgstr "預設的 _GNOME 網絡設定"
 
 #: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
-msgstr "直接網路連線(_I)"
+msgstr "直接網絡連線(_I)"
 
 #: ../data/preferences.glade.h:11
 msgid "Do_wnload Speed"
@@ -369,7 +369,7 @@ msgstr "下載速度(_W)"
 
 #: ../data/preferences.glade.h:12
 msgid "Don't _create directories"
-msgstr "不建構資料夾(_C)"
+msgstr "不建立資料夾(_C)"
 
 #: ../data/preferences.glade.h:13
 msgid "Follow _relative links only"
@@ -385,7 +385,7 @@ msgstr "限制同時下載數目至(_N):"
 
 #: ../data/preferences.glade.h:16
 msgid "Network"
-msgstr "網路"
+msgstr "網絡"
 
 #: ../data/preferences.glade.h:17
 msgid "P_ort:"
@@ -413,7 +413,7 @@ msgstr "全部大小(_S)"
 
 #: ../data/preferences.glade.h:24
 msgid "_Ask where to save for each download"
-msgstr "每個下載都詢問儲存在那裡(_A)"
+msgstr "每個下載都詢問儲存在那裏(_A)"
 
 #: ../data/preferences.glade.h:25
 msgid "_Continue downloads on startup"
@@ -671,7 +671,7 @@ msgstr "連線被拒\n"
 
 #: ../src/wget-log.c:124
 msgid "No route to host"
-msgstr "無法連繫主機"
+msgstr "無法聯繫主機"
 
 #: ../src/wget-log.c:126
 msgid "Connection refused when downloading URL:\n"
