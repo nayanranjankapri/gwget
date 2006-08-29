@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Alleyoop cvs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-28 04:19+0100\n"
-"PO-Revision-Date: 2006-01-28 17:40+0100\n"
+"POT-Creation-Date: 2006-08-29 04:51+0200\n"
+"PO-Revision-Date: 2006-08-29 09:29+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,9 +34,9 @@ msgstr "GNU GPL Versie 2"
 
 #: ../data/about.glade.h:3
 msgid "Gwget: Download Manager for GNOME"
-msgstr "Gwget: Downloadbeheer voor GNOME"
+msgstr "Gwget: Downloadbeheer voor Gnome"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:193
 msgid "translator-credits"
 msgstr ""
 "Tino Meinen\n"
@@ -45,7 +45,7 @@ msgstr ""
 "Jan-Willem Harmanny\n"
 "Elros Cyriatan\n"
 "\n"
-"voor meer info: nl.gnome.org"
+"Kijk voor meer informatie op http://nl.gnome.org"
 
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
@@ -59,7 +59,8 @@ msgstr "<span weight=\"bold\">Download:</span>"
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">Eigenschappen</span>"
 
-#: ../data/gwget.glade.h:4
+#: ../data/gwget.glade.h:4 ../src/main_window.c:796
+#: ../src/main_window_cb.c:619
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -79,8 +80,8 @@ msgstr "Doorgaan"
 msgid "Continue with the download"
 msgstr "Fout bij het starten van de download"
 
-#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
-#: ../src/main_window_cb.c:607 ../src/main_window_cb.c:712
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:626 ../src/main_window_cb.c:731
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Downloadbeheer"
 
@@ -140,75 +141,71 @@ msgstr "Download pauzeren"
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#: ../data/gwget.glade.h:24
-msgid "Question"
-msgstr "Vraag"
-
-#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:24 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Recursief"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:25
 msgid "Recursive options"
 msgstr "Recursieve opties"
 
-#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:694
+#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:713
 msgid "Remove all"
 msgstr "Alles verwijderen"
 
-#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:630
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:649
 msgid "Remove completed"
 msgstr "Voltooide bestanden verwijderen"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:28
 msgid "Remove from List"
 msgstr "Alle downloads van de lijst verwijderen"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:29
 msgid "Remove from list"
 msgstr "Van de lijst verwijderen"
 
-#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:662
+#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:681
 msgid "Remove inactive"
 msgstr "Inactieve verwijderen"
 
-#: ../data/gwget.glade.h:32
+#: ../data/gwget.glade.h:31
 msgid "Resume all"
 msgstr "Alles hervatten"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:32
 msgid "Resume all downloads"
 msgstr "Alle downloads hervatten"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:33
 msgid "Stat_usbar"
 msgstr "_Statusbalk"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:34
 msgid "Stop and delete downloaded file"
 msgstr "Stoppen en gedownload bestand verwijderen"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:35
 msgid "The index file only"
 msgstr "Alleen het indexbestand"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:36
 msgid "This site (mirror)"
 msgstr "Deze site (mirror)"
 
-#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:37 ../data/newdownload.glade.h:4
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:38
 msgid "_Download"
 msgstr "_Download"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:39
 msgid "_New"
 msgstr "_Nieuw"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:40
 msgid "_Toolbar"
 msgstr "_Werkbalk"
 
@@ -368,7 +365,7 @@ msgstr "Kolomlijst"
 
 #: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
-msgstr "Standaard _GNOME netwerkinstellingen"
+msgstr "Standaard _Gnome-netwerkinstellingen"
 
 #: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
@@ -522,7 +519,7 @@ msgstr "Oriëntatie"
 msgid "The orientation of the tray."
 msgstr "De oriëntatie van het applet."
 
-#: ../src/eggtrayicon.c:483 ../src/eggtrayicon.c:491
+#: ../src/eggtrayicon.c:483
 msgid "Notification"
 msgstr "Mededeling"
 
@@ -534,7 +531,7 @@ msgstr "staat stil"
 # wachtend/wachten
 #: ../src/gwget_data.c:229
 msgid "Waiting"
-msgstr "Wachtend"
+msgstr "Wachten"
 
 #: ../src/gwget_data.c:231
 msgid "Not Started"
@@ -573,97 +570,101 @@ msgstr ""
 msgid "Error"
 msgstr "Fout"
 
-#: ../src/gwget_data.c:686
+#: ../src/gwget_data.c:693
 msgid "Unable to add this download"
 msgstr "Niet in staat deze download toe te voegen"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:694
 msgid "This download is already added"
 msgstr "Deze download is al aanwezig"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1122 ../src/main_window_cb.c:1141
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143 ../src/main_window_cb.c:1162
 msgid "Error opening file"
 msgstr "Fout bij bestand openen"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1122
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143
 msgid "Couldn't open the file"
 msgstr "Kon het bestand niet openen"
 
-#: ../src/gwget_data.c:773
+#: ../src/gwget_data.c:780
 msgid "Download Complete"
 msgstr "Download voltooid"
 
-#: ../src/main_window.c:431
+#: ../src/main.c:230 ../src/main_window_cb.c:188
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main.c:249
+msgid "Gwget Download Manager"
+msgstr "Gwget downloadbeheer"
+
+#: ../src/main_window.c:433
 msgid "File Name"
 msgstr "Bestandnaam"
 
-#: ../src/main_window.c:439
+#: ../src/main_window.c:441
 msgid "State"
 msgstr "Status"
 
-#: ../src/main_window.c:451
+#: ../src/main_window.c:453
 msgid "Current Size"
 msgstr "Huidige grootte"
 
-#: ../src/main_window.c:463
+#: ../src/main_window.c:465
 msgid "Total Size"
 msgstr "Totale grootte"
 
-#: ../src/main_window.c:474 ../src/main_window.c:480
+#: ../src/main_window.c:476 ../src/main_window.c:482
 msgid "Percentage"
 msgstr "Percentage"
 
 # Elapse = Elapsed
-#: ../src/main_window.c:487
+#: ../src/main_window.c:489
 msgid "Elapsed Time"
 msgstr "Verstreken tijd"
 
-#: ../src/main_window.c:498
+#: ../src/main_window.c:500
 msgid "Remaining Time"
 msgstr "Resterende tijd"
 
-#: ../src/main_window.c:509
+#: ../src/main_window.c:511
 msgid "Speed"
 msgstr "Snelheid"
 
-#: ../src/main_window.c:556
+#: ../src/main_window.c:558
 msgid "Error starting the download"
 msgstr "Fout bij starten van download"
 
-#: ../src/main_window.c:556
+#: ../src/main_window.c:558
 msgid "There was an unexpected error starting the download"
 msgstr "Er was een onverwachte fout bij het starten van de download"
 
-#: ../src/main_window.c:793
+#: ../src/main_window.c:795
 msgid "Cancel current downloads?"
 msgstr "Huidige downloads annuleren?"
 
-#: ../src/main_window.c:794
+#: ../src/main_window.c:796
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
 "Er is nog tenminste één download actief. Alle actieve downloads annuleren?"
 
-#: ../src/main_window_cb.c:82
+#: ../src/main_window_cb.c:101
 msgid "Error in download"
 msgstr "Fout in download"
 
-#: ../src/main_window_cb.c:169
-msgid "Gwget"
-msgstr "Gwget"
-
-#: ../src/main_window_cb.c:172
+#: ../src/main_window_cb.c:191
 msgid "Download Manager for GNOME."
-msgstr "Downloadbeheer voor GNOME."
+msgstr "Downloadbeheer voor Gnome."
 
-#: ../src/main_window_cb.c:543 ../src/new_window.c:138
+#: ../src/main_window_cb.c:562 ../src/new_window.c:139
 msgid "Select Folder"
 msgstr "Map selecteren"
 
-#: ../src/main_window_cb.c:599
+#: ../src/main_window_cb.c:618
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -672,38 +673,47 @@ msgstr ""
 "De huidige download annuleren?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:600
+#: ../src/main_window_cb.c:619
 msgid "Cancel download?"
 msgstr "Download annuleren?"
 
-#: ../src/main_window_cb.c:630
+#: ../src/main_window_cb.c:649
 msgid "Really remove completed downloads from the list?"
 msgstr "De voltooide downloads van de lijst verwijderen?"
 
-#: ../src/main_window_cb.c:662
+#: ../src/main_window_cb.c:649
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: ../src/main_window_cb.c:681
 msgid "Really remove inactive downloads from the list?"
 msgstr "De inactieve downloads echt van de lijst afhalen?"
 
-#: ../src/main_window_cb.c:694
+#: ../src/main_window_cb.c:713
 msgid "Really remove all downloads from the list?"
 msgstr "De voltooide downloads allemaal van de lijst afhalen?"
 
-#: ../src/main_window_cb.c:1076
+#: ../src/main_window_cb.c:1095
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "De nieuwe downloadsnelheidslimiet zal pas werken vanaf het volgende te "
 "downloaden bestand"
 
-# uit de lijst/van de lijst
-#: ../src/main_window_cb.c:1091
-msgid "Remove this download ?"
-msgstr "Deze download verwijderen?"
+#: ../src/main_window_cb.c:1111
+#, c-format
+msgid "Remove %s ?"
+msgstr "%s verwijderen?"
 
-#: ../src/main_window_cb.c:1091
+#: ../src/main_window_cb.c:1112
 msgid "Really remove this download from the list?"
 msgstr "Deze download van de lijst verwijderen?"
 
-#: ../src/main_window_cb.c:1141
+# uit de lijst/van de lijst
+#: ../src/main_window_cb.c:1112
+msgid "Remove download"
+msgstr "Download verwijderen"
+
+#: ../src/main_window_cb.c:1162
 msgid "Couldn't open the folder"
 msgstr "Kan de map niet openen"
 
@@ -766,11 +776,11 @@ msgstr ""
 msgid "Can't write to target directory"
 msgstr "Kan niet schrijven naar doelmap"
 
+#~ msgid "Question"
+#~ msgstr "Vraag"
+
 #~ msgid "Ask save in for each new download"
 #~ msgstr "Bij elke nieuwe download vragen om downloadlocatie"
-
-#~ msgid "Remove"
-#~ msgstr "Verwijderen"
 
 #~ msgid "Remove completed downloads from list"
 #~ msgstr "Voltooide downloads van de lijst halen"
