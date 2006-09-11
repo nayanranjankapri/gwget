@@ -313,9 +313,9 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.http_proxy);
 		checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"proxy_uses_auth_radio");
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.proxy_uses_auth);
-		entry = glade_xml_get_widget(xml_pref,"proxy_user_entry");
+		entry = glade_xml_get_widget(xml_pref,"proxy_user");
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.proxy_user);
-		entry = glade_xml_get_widget(xml_pref,"proxy_password_entry");
+		entry = glade_xml_get_widget(xml_pref,"proxy_password");
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.proxy_password);
 
 	}
