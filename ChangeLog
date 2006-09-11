@@ -1,3 +1,7 @@
+2006-09-11  David Sedeño <david@alderia.com>
+
+	* src/Makefile.am: Generate gwget-application-client.h.
+
 2006-08-27  Abel Cheung  <abel@oaka.org>
 
 	* configure.in: Added 'en_GB' 'vi' 'zh_HK' to ALL_LINGUAS.

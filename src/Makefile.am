@@ -43,17 +43,23 @@ gwget_LDADD =  \
 	$(GNOME_LIBS)
 
 if ENABLE_DBUS
-BUILT_SOURCES += gwget-application-service.h
+BUILT_SOURCES += gwget-application-service.h gwget-application-client.h
 endif
 
 DISTCLEANFILES= \
-        gwget-application-service.h
+        gwget-application-service.h \
+	gwget-application-client.h
 
 if DBUS_TOOL_NO_PREFIX
 gwget-application-service.h: $(srcdir)/gwget-application-service.xml
 	dbus-binding-tool --mode=glib-server --output=gwget-application-service.h $(srcdir)/gwget-application-service.xml
+gwget-application-client.h: $(srcdir)/gwget-application-service.xml
+	dbus-binding-tool --mode=glib-client --output=gwget-application-client.h $(srcdir)/gwget-application-service.xml
+	
 else
 gwget-application-service.h: $(srcdir)/gwget-application-service.xml
 	dbus-binding-tool --prefix=gwget_application --mode=glib-server --output=gwget-application-service.h $(srcdir)/gwget-application-service.xml
+gwget-application-client.h: $(srcdir)/gwget-application-service.xml
+	dbus-binding-tool --prefix=gwget_application --mode=glib-client --output=gwget-application-client.h $(srcdir)/gwget-application-service.xml
 endif
 
