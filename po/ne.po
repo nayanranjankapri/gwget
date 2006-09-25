@@ -1,22 +1,24 @@
+# translation of gwget.HEAD.ne.po to Nepali
 # translation of gwget.HEAD.po to Nepali
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Pawan Chitrakar <pawan@mpp.org.np>, 2005.
 # Jaydeep Bhusal <zaydeep@hotmail.com>, 2005.
+# Mahesh subedi <submanesh@hotmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget.HEAD\n"
+"Project-Id-Version: gwget.HEAD.ne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-16 09:52+0545\n"
-"PO-Revision-Date: 2005-06-23 14:05+0545\n"
-"Last-Translator: Jaydeep Bhusal <zaydeep@hotmail.com>\n"
+"POT-Creation-Date: 2006-05-15 12:20+0200\n"
+"PO-Revision-Date: 2006-07-19 17:14+0545\n"
+"Last-Translator: Mahesh subedi <submanesh@hotmail.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: Nplurals=2;plural=(n!=0)\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2;plural=(n!=1)\n"
 
 #: ../data/GNOME_Gwget.server.in.in.h:1
 msgid "gwget application"
@@ -24,11 +26,11 @@ msgstr "जिडब्ल्युजेट अनुप्रयोग"
 
 #: ../data/GNOME_Gwget.server.in.in.h:2
 msgid "gwget automation factory"
-msgstr "जिडब्ल्युजेट अटोमेसन कारखाना"
+msgstr "जिडब्ल्युजेट स्वचालन कारखाना"
 
 #: ../data/about.glade.h:1
 msgid "About Gwget"
-msgstr "जिडब्ल्युजेट को बारेमा"
+msgstr "जिडब्ल्युजेटका बारेमा"
 
 #: ../data/about.glade.h:2
 msgid "GNU GPL Version 2"
@@ -36,11 +38,11 @@ msgstr "जिएनयु जिपिएल संस्करण २"
 
 #: ../data/about.glade.h:3
 msgid "Gwget: Download Manager for GNOME"
-msgstr "जिडब्ल्युजेट: जिनोम को लागि व्यवस्थापक डाउनलोड गर्नुहोस"
+msgstr "जिडब्ल्युजेट: जिनोमका लागि डाउनलोड प्रबन्धक"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:174
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:193
 msgid "translator-credits"
-msgstr "अनुवादकको श्रेय"
+msgstr "Mahesh Subedi<submanesh@gmail.com>"
 
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
@@ -48,55 +50,53 @@ msgstr "    "
 
 #: ../data/gwget.glade.h:2
 msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">डाउनलोड गर्नुहोस:</span>"
+msgstr "<span weight=\"bold\">डाउनलोड गर्नुहोस्:</span>"
 
 #: ../data/gwget.glade.h:3
 msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">गुणहरु</span>"
+msgstr "<span weight=\"bold\">गुण</span>"
 
-#: ../data/gwget.glade.h:4
+#: ../data/gwget.glade.h:4 ../src/main_window.c:796
+#: ../src/main_window_cb.c:619
 msgid "Cancel"
-msgstr "रद्द गर्नुहोस"
+msgstr "रद्द गर्नुहोस्"
 
 #: ../data/gwget.glade.h:5
-#, fuzzy
 msgid "Cancel download"
-msgstr "डाउनलोड रद्द गर्ने?"
+msgstr "डाउनलोड रद्द गर्नुहोस्"
 
 #: ../data/gwget.glade.h:6
-#, fuzzy
 msgid "Cancel the download"
-msgstr "डाउनलोड रद्द गर्ने?"
+msgstr "डाउनलोड रद्द गर्नुहोस्"
 
 #: ../data/gwget.glade.h:7
 msgid "Continue"
-msgstr "जारी राख्नुहोस"
+msgstr "जारी राख्नुहोस्"
 
 #: ../data/gwget.glade.h:8
-#, fuzzy
 msgid "Continue with the download"
-msgstr "डाउनलोड शुरु गर्दा त्रुटि"
+msgstr "डाउनलोडसँगै जारी राख्नुहोस्"
 
-#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:121
-#: ../src/main_window_cb.c:583 ../src/main_window_cb.c:680
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:626 ../src/main_window_cb.c:731
 msgid "Gwget - Download Manager"
-msgstr "जिडब्ल्युजेट - व्यव्स्थापक डाउनलोड गर्नुहोस"
+msgstr "जिडब्ल्युजेट - डाउनलोड प्रबन्धक"
 
 #: ../data/gwget.glade.h:10
 msgid "Information"
-msgstr "जानकारि"
+msgstr "सूचना"
 
 #: ../data/gwget.glade.h:11
 msgid "Local Directory:"
-msgstr "स्थानीय निर्देशिका"
+msgstr "स्थानीय डाइरेक्टरी:"
 
 #: ../data/gwget.glade.h:12
 msgid "Local File:"
-msgstr "स्थानीय फाइल"
+msgstr "स्थानीय फाइल:"
 
 #: ../data/gwget.glade.h:13
 msgid "Multimedia files (Videos and images)"
-msgstr "मल्टिमिडिया फाइलहरु (भिडियोहरु र छविहरु)"
+msgstr "मल्टिमिडिया फाइलहरू (भिडियोहरू र छविहरू)"
 
 #: ../data/gwget.glade.h:14
 msgid "New download"
@@ -104,166 +104,153 @@ msgstr "नयाँ डाउनलोड"
 
 #: ../data/gwget.glade.h:15
 msgid "Open"
-msgstr ""
+msgstr "खोल्नुहोस्"
 
 #: ../data/gwget.glade.h:16
-#, fuzzy
 msgid "Open directory"
-msgstr "स्थानीय निर्देशिका"
+msgstr "डाइरेक्टरी खोल्नुहोस्"
 
 #: ../data/gwget.glade.h:17
-#, fuzzy
 msgid "Open the target directory"
-msgstr "लक्षित निर्देशिका मा लेख्न सकेन"
+msgstr "लक्षित डाइरेक्टरी खोल्नुहोस्"
 
 #: ../data/gwget.glade.h:18
 msgid "Pause"
-msgstr "पज गर्नुहोस"
+msgstr "पज गर्नुहोस्"
 
 #: ../data/gwget.glade.h:19
 msgid "Pause all"
-msgstr "सबै पज गर्नुहोस"
+msgstr "सबै पज गर्नुहोस्"
 
 #: ../data/gwget.glade.h:20
 msgid "Pause all downloads"
-msgstr "सबै डाउनलोडहरु पज गर्नुहोस"
+msgstr "सबै डाउनलोडहरू पज गर्नुहोस्"
 
 #: ../data/gwget.glade.h:21
 msgid "Pause download"
-msgstr "डाउनलोड पज गर्नुहोस"
+msgstr "डाउनलोड पज गर्नुहोस्"
 
 #: ../data/gwget.glade.h:22
-#, fuzzy
 msgid "Pause the download"
-msgstr "डाउनलोड पज गर्नुहोस"
+msgstr "डाउनलोड पज गर्नुहोस्"
 
 #: ../data/gwget.glade.h:23
 msgid "Properties"
-msgstr "गुणहरु"
+msgstr "गुण"
 
-#: ../data/gwget.glade.h:24
-msgid "Question"
-msgstr "प्रश्‍न"
-
-#: ../data/gwget.glade.h:25 ../data/preferences.glade.h:20
+#: ../data/gwget.glade.h:24 ../data/preferences.glade.h:21
 msgid "Recursive"
-msgstr "रिकर्सिभ"
+msgstr "पुरनावृत्तिक"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:25
 msgid "Recursive options"
-msgstr "रिकर्सिभ विकल्पहरु"
+msgstr "पुनरावृत्तिक विकल्पहरू"
 
-#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:662
+#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:713
 msgid "Remove all"
-msgstr "सबै हटाउनुहोस"
+msgstr "सबै हटाउनुहोस्"
 
-#: ../data/gwget.glade.h:28 ../src/main_window_cb.c:604
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:649
 msgid "Remove completed"
-msgstr "सकिएको हटाउनुहोस"
+msgstr "सकिएको हटाउनुहोस्"
+
+#: ../data/gwget.glade.h:28
+msgid "Remove from List"
+msgstr "सूचीबाट हटाउनुहोस्"
 
 #: ../data/gwget.glade.h:29
-#, fuzzy
-msgid "Remove from List"
-msgstr "सुचिबाट सबै डाउनलोडहरु हटाउनुहोस"
-
-#: ../data/gwget.glade.h:30
-#, fuzzy
 msgid "Remove from list"
-msgstr "सुचिबाट सबै डाउनलोडहरु हटाउनुहोस"
+msgstr "सूचीबाट हटाउनुहोस्"
 
-#: ../data/gwget.glade.h:31 ../src/main_window_cb.c:633
+#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:681
 msgid "Remove inactive"
-msgstr "निष्क्रिय हटाउनुहोस"
+msgstr "निष्क्रिय हटाउनुहोस्"
+
+#: ../data/gwget.glade.h:31
+msgid "Resume all"
+msgstr "सबैलाई पुन: निरन्तरता दिनुहोस्"
 
 #: ../data/gwget.glade.h:32
-msgid "Resume all"
-msgstr "सबैलाइ पुन:निरन्तरता दिनुहोस"
+msgid "Resume all downloads"
+msgstr "सबै डाउनलोडहरू पुन: निरन्तरता दिनुहोस्"
 
 #: ../data/gwget.glade.h:33
-msgid "Resume all downloads"
-msgstr "सबै डाउनलोडहरु लाइ पुन:निरन्तरता दिनुहोस"
+msgid "Stat_usbar"
+msgstr "स्थितिपट्टी"
 
 #: ../data/gwget.glade.h:34
-msgid "Stat_usbar"
-msgstr ""
+msgid "Stop and delete downloaded file"
+msgstr "डाउनलोड गरिएको फाइललाई रोक्नुहोस् र मेट्नुहोस्"
 
 #: ../data/gwget.glade.h:35
-msgid "Stop and delete downloaded file"
-msgstr "डाउनलोड गरएको फाइल लाइ रोक्नुहोस र मेट्नुहोस"
-
-#: ../data/gwget.glade.h:36
 msgid "The index file only"
 msgstr "अनुक्रमणिका फाइल मात्र"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:36
 msgid "This site (mirror)"
 msgstr "यो साइट (ऐना)"
 
-#: ../data/gwget.glade.h:38 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:37 ../data/newdownload.glade.h:4
 msgid "URL:"
-msgstr "युआरएल:"
+msgstr "यु आर एल:"
+
+#: ../data/gwget.glade.h:38
+msgid "_Download"
+msgstr "डाउनलोड"
 
 #: ../data/gwget.glade.h:39
-#, fuzzy
-msgid "_Download"
-msgstr "डाउनलोडहरु"
+msgid "_New"
+msgstr "नयाँ"
 
 #: ../data/gwget.glade.h:40
-msgid "_New"
-msgstr "_नयाँ"
-
-#: ../data/gwget.glade.h:41
 msgid "_Toolbar"
-msgstr "उपकरणपट्टि"
+msgstr "उपकरणपट्टी"
 
 #: ../data/gwget.schemas.in.h:1
-#, fuzzy
 msgid "Ask where to save each new download"
-msgstr "प्रत्येक डाउनलोड को लागि कहाँ बचत गर्ने सोध्नुहोस"
+msgstr "प्रत्येक डाउनलोडलाईकहाँ बचत गर्ने सोध्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
-msgstr "लिंकहरु रुपान्तरण गर्नुहोस"
+msgstr "लिङ्कहरू रूपान्तरण गर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
-msgstr "रिकर्सिभ मोडमा सम्बन्धित लिंकहरुमा रुपान्तरण गर्नुहोस"
+msgstr "सम्बन्धित लिङ्कहरूलाई पुनरावृत्तिक मोडमा रूपान्तरण गर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
-msgstr "पुर्वनिर्धारित डाउनलोड निर्देशिका"
+msgstr "पूर्वनिर्धारित डाउनलोड डाइरेक्टरी"
 
 #: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
-msgstr "पृष्ठ प्रयोजन डाउनलोड गर्नुहोस"
+msgstr "पृष्ठ आवश्यक वस्तुहरू डाउनलोड गर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
-msgstr "सम्बन्धित लिंकहरु अनुशरण गर्नुहोस"
+msgstr "सम्बन्धित लिङ्कहरू अनुशरण गर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:7
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
-msgstr ""
-"यदि सहि हो भने नयाँ डाउनलोड शुरु गर्दा सँधै गन्तव्य फोल्डरको लागि सोध्नुहोस. यदि गलत हो "
-"भने प्रयोगकर्तालाइ नसोधिकन सँधै पुर्वनिर्धारित निर्देशिका मा बचत गर्नुहोस."
+msgstr "यदि सत्य हो भने, नयाँ डाउनलोड सुरु गर्दा सधै गन्तव्य फोल्डरका लागि सोध्नुहोस्। यदि असत्य हो भने प्रयोगकर्तालाई नसोधिकन सधै पूर्वनिर्धारित डाइरेक्टरीमा बचत गर्नुहोस्।"
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
-msgstr "अधिकतम गति सिमित गर्नुहोस"
+msgstr "अधिकतम गति सिमित गर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:9
 msgid "Limit number of simultaneous downloads"
-msgstr "संगसंगै भएका डाउनलोडहरु को संख्या सिमित गर्नुहोस"
+msgstr "समकालिन डाउनलोडहरूको सङ्ख्या सिमित गर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
-msgstr "रिकर्सिभ मोड मा अधिकतम गहिराइ"
+msgstr "पुनरावृत्तिक मोडमा अधिकतम गहिराइ"
 
 #: ../data/gwget.schemas.in.h:11
 msgid "Maximum number of simultaneous downloads"
-msgstr "संगसंंग भएका डाउनलोडहरु को अधिकतम संख्याै"
+msgstr "समकालिन डाउनलोडहरूको अधिकतम सङ्ख्या"
 
 #: ../data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
@@ -271,56 +258,55 @@ msgstr "अधिकतम गति सीमा"
 
 #: ../data/gwget.schemas.in.h:13
 msgid "Number of downloads"
-msgstr "डाउनलोडहरु को संख्या"
+msgstr "डाउनलोडहरूको सङ्ख्या"
 
 #: ../data/gwget.schemas.in.h:14
 msgid "Number of retries"
-msgstr "पुन:प्रयासहरु को संख्या"
+msgstr "पुन: प्रयास गरिएको सङ्ख्या"
 
 #: ../data/gwget.schemas.in.h:15
 msgid "Open the file after download"
-msgstr "डाउनलोड पछि फाइल खोल्नुहोस"
+msgstr "डाउनलोड पछि फाइल खोल्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:16
 msgid "Resume downloads at startup"
-msgstr "स्टार्टअप मा डाउनलोडहरुलाइ पुन:निरन्तरता दिनुहोस"
+msgstr "सुरुवातमा डाउनलोडहरूलाई पुन:निरन्तरता दिनुहोस्"
 
 #: ../data/gwget.schemas.in.h:17
 msgid "View download speed column"
-msgstr "डाउनलोड गति स्तम्भ हेर्नुहोस"
+msgstr "डाउनलोड गति स्तम्भ हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
-msgstr "व्यतित समय स्तम्भ हेर्नुहोस"
+msgstr "व्यतित समय स्तम्भ हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:19
 msgid "View percentage column"
-msgstr "प्रतिशत स्तम्भ हेर्नुहोस"
+msgstr "प्रतिशत स्तम्भ हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:20
 msgid "View remaining time column"
-msgstr "बाँकी समय स्तम्भ हेर्नुहोस"
+msgstr "बाँकी समय स्तम्भ हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:21
-#, fuzzy
 msgid "View statusbar"
-msgstr "उपकरणपट्टि हेर्नुहोस"
+msgstr "स्थितिपट्टी हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
-msgstr "उपकरणपट्टि हेर्नुहोस"
+msgstr "उपकरणपट्टी हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
-msgstr "जम्मा आकार स्तम्भ हेर्नुहोस"
+msgstr "जम्मा साइज स्तम्भ हेर्नुहोस्"
 
 #: ../data/gwget.schemas.in.h:24
 msgid "Whether to display the statusbar."
-msgstr ""
+msgstr "स्थितिपट्टी प्रदर्शन गर्ने कि"
 
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
-msgstr ""
+msgstr "उपकरणपट्टी प्रदर्शन गर्ने कि"
 
 #: ../data/newdownload.glade.h:1
 msgid "<span weight=\"bold\">New Download</span>"
@@ -332,7 +318,7 @@ msgstr "नयाँ डाउनलोड"
 
 #: ../data/newdownload.glade.h:3
 msgid "Save in:"
-msgstr "मा बचत गर्नुहोस"
+msgstr "यसमा बचत गर्नुहोस्:"
 
 #: ../data/preferences.glade.h:1
 msgid "   "
@@ -344,15 +330,15 @@ msgstr "<span weight=\"bold\">व्यवहार</span>"
 
 #: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">स्तम्भ सुचि</span>"
+msgstr "<span weight=\"bold\">स्तम्भ सूची</span>"
 
 #: ../data/preferences.glade.h:5
 msgid "<span weight=\"bold\">General</span>"
-msgstr "<span weight=\"bold\"> साधारण</span>"
+msgstr "<span weight=\"bold\">साधारण</span>"
 
 #: ../data/preferences.glade.h:6
 msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">लिंकहरु</span>"
+msgstr "<span weight=\"bold\">लिङ्कहरू</span>"
 
 #: ../data/preferences.glade.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
@@ -360,15 +346,15 @@ msgstr "<span weight=\"bold\">प्रोक्सी कन्फिगरे�
 
 #: ../data/preferences.glade.h:8
 msgid "Column List"
-msgstr "स्तम्भ सुचि"
+msgstr "स्तम्भ सूची"
 
 #: ../data/preferences.glade.h:9
 msgid "Default _GNOME network settings"
-msgstr "पुर्वनिर्धारित जिनोम संजाल सेटिंगहरु"
+msgstr "पूर्वनिर्धारित जिनोम सञ्जाल सेटिङ"
 
 #: ../data/preferences.glade.h:10
 msgid "Direct _Internet connection"
-msgstr "सीधा इन्टरनेरट जडान"
+msgstr "प्रतक्ष्य इन्टरनेरट जडान"
 
 #: ../data/preferences.glade.h:11
 msgid "Do_wnload Speed"
@@ -376,19 +362,19 @@ msgstr "डाउनलोड गति"
 
 #: ../data/preferences.glade.h:12
 msgid "Don't _create directories"
-msgstr "निर्देशिकाहरु सृजना नगर्नुहोस"
+msgstr "डाइरेक्टरीहरू सिर्जना नगर्नुहोस्"
 
 #: ../data/preferences.glade.h:13
 msgid "Follow _relative links only"
-msgstr "सम्बन्धित लिंकहरु मात्र अनयुशरण गर्नुहोस"
+msgstr "सम्बन्धित लिङ्कहरू मात्र अनुसरण गर्नुहोस्"
 
 #: ../data/preferences.glade.h:14
 msgid "General"
-msgstr "साधारण"
+msgstr "सामान्य"
 
 #: ../data/preferences.glade.h:15
 msgid "Limit _number of simultaneous download to:"
-msgstr "मा संगसंगै भएका डाउनलोड को संख्यालाइ सिमित गर्नुहोस"
+msgstr "यसमा समकालिन डाउनलोडको सङ्ख्यालाई सिमित गर्नुहोस्:"
 
 #: ../data/preferences.glade.h:16
 msgid "Network"
@@ -396,87 +382,99 @@ msgstr "सञ्जाल"
 
 #: ../data/preferences.glade.h:17
 msgid "P_ort:"
-msgstr "पोर्ट"
+msgstr "पोर्ट:"
 
 #: ../data/preferences.glade.h:18
-msgid "Preferences"
-msgstr "प्राथमिकताहरु"
+msgid "Password:"
+msgstr "पासवर्ड:"
 
 #: ../data/preferences.glade.h:19
-msgid "Pro_xy:"
-msgstr "प्रोक्सि"
+msgid "Preferences"
+msgstr "प्राथमिकताहरू"
 
-#: ../data/preferences.glade.h:21
+#: ../data/preferences.glade.h:20
+msgid "Pro_xy:"
+msgstr "प्रोक्सि:"
+
+#: ../data/preferences.glade.h:22
 msgid "Remaining _Time"
 msgstr "बाँकी समय"
 
-#: ../data/preferences.glade.h:22
-msgid "Sa_ve in:"
-msgstr "मा बचत गर्नुहोस"
-
 #: ../data/preferences.glade.h:23
-msgid "Total _Size"
-msgstr "जम्मा आकार"
+msgid "Sa_ve in:"
+msgstr "यसमा बचत गर्नुहोस्:"
 
 #: ../data/preferences.glade.h:24
-msgid "_Ask where to save for each download"
-msgstr "प्रत्येक डाउनलोड को लागि कहाँ बचत गर्ने सोध्नुहोस"
+msgid "Total _Size"
+msgstr "जम्मा साइज"
 
 #: ../data/preferences.glade.h:25
-msgid "_Continue downloads on startup"
-msgstr "स्टार्टअप मा डाउनलोडहरु जारी राख्नुहोस"
+msgid "_Ask where to save for each download"
+msgstr "प्रत्येक डाउनलोडका लागि कहाँ बचत गर्ने सोध्नुहोस्"
 
 #: ../data/preferences.glade.h:26
-msgid "_Convert links"
-msgstr "लिंकहरु रुपान्तरण गर्नुहोस"
+msgid "_Continue downloads on startup"
+msgstr "सुरुवातमा डाउनलोडहरू जारी राख्नुहोस्"
 
 #: ../data/preferences.glade.h:27
-msgid "_Current Size"
-msgstr "हालको आकार"
+msgid "_Convert links"
+msgstr "लिङ्कहरू रूपान्तरण गर्नुहोस्"
 
 #: ../data/preferences.glade.h:28
-msgid "_Download page requisites"
-msgstr "पृष्ठ प्रयोजन डाउनलोड गर्नुहोस"
+msgid "_Current Size"
+msgstr "हालको साइज"
 
 #: ../data/preferences.glade.h:29
+msgid "_Download page requisites"
+msgstr "पृष्ठ आवश्यक वस्तुहरू डाउनलोड गर्नुहोस्"
+
+#: ../data/preferences.glade.h:30
 msgid "_Elapsed Time"
 msgstr "व्यतित समय"
 
-#: ../data/preferences.glade.h:30
-msgid "_Limit download speed to:"
-msgstr "मा डाउनलोड गति सिमित गर्नुहोस"
-
 #: ../data/preferences.glade.h:31
-msgid "_Manual proxy configuration"
-msgstr "मानवचालित प्रोक्सी कन्फिगरेसन"
+msgid "_Limit download speed to:"
+msgstr "यसलाई डाउनलोड गति सिमित गर्नुहोस्:"
 
 #: ../data/preferences.glade.h:32
-msgid "_Maximum depth level:"
-msgstr "अधिकतम गहिराइ स्तर"
+msgid "_Manual proxy configuration"
+msgstr "म्यानुअल प्रोक्सी कन्फिगरेसन"
 
 #: ../data/preferences.glade.h:33
-msgid "_Number of retries:"
-msgstr "पुन:प्रयासहरु को संख्या"
+msgid "_Maximum depth level:"
+msgstr "अधिकतम गहिराइ स्तर:"
 
 #: ../data/preferences.glade.h:34
-msgid "_Open files automatically after download"
-msgstr "डाउनलोड पछि फाइलहरु स्वत:खोल्नुहोस"
+msgid "_Number of retries:"
+msgstr "पुन: प्रयास गरिएको सङ्ख्या:"
 
 #: ../data/preferences.glade.h:35
+msgid "_Open files automatically after download"
+msgstr "डाउनलोड पछि फाइलहरू स्वचालित रूपमा खोल्नुहोस्"
+
+#: ../data/preferences.glade.h:36
 msgid "_Percentage"
 msgstr "प्रतिशत"
 
-#: ../data/preferences.glade.h:36
-msgid "files"
-msgstr "फाइलहरु"
-
 #: ../data/preferences.glade.h:37
+msgid "_Proxy requires authentication"
+msgstr "प्रोक्सिलाई प्रमाणीकरण आवश्यक पर्दछ"
+
+#: ../data/preferences.glade.h:38
+msgid "_User:"
+msgstr "प्रयोगकर्ता:"
+
+#: ../data/preferences.glade.h:39
+msgid "files"
+msgstr "फाइलहरू"
+
+#: ../data/preferences.glade.h:40
 msgid "kB/sec"
 msgstr "केबि/सेकेन्ड"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
-msgstr "डाउनलोडहरु लाइ जिडब्ल्युजेट तिर बढाउनुहोस"
+msgstr "डाउनलोडहरू जिडब्ल्युजेट तिर फरवार्ड गर्नुहोस्"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:2
 msgid "GWGet"
@@ -490,21 +488,33 @@ msgstr "अज्ञात"
 msgid "Failed"
 msgstr "असफल"
 
+#: ../src/eggtrayicon.c:145
+msgid "Orientation"
+msgstr "अभिमूखिकरण"
+
+#: ../src/eggtrayicon.c:146
+msgid "The orientation of the tray."
+msgstr "ट्रिको अभिमूखिकरण"
+
+#: ../src/eggtrayicon.c:483
+msgid "Notification"
+msgstr "सूचना"
+
 #: ../src/gwget_data.c:195
 msgid "stalled"
 msgstr "स्टल गरिएको"
 
 #: ../src/gwget_data.c:229
 msgid "Waiting"
-msgstr "पर्खँदै"
+msgstr "प्रतीक्षा गर्दै"
 
 #: ../src/gwget_data.c:231
 msgid "Not Started"
-msgstr "सुरू गरिएको छैन"
+msgstr "सुरु गरिएको छैन"
 
 #: ../src/gwget_data.c:233
 msgid "Not Running"
-msgstr "चलेको छैन"
+msgstr "चलिरहेको छैन"
 
 #: ../src/gwget_data.c:235
 msgid "Not Connected"
@@ -516,11 +526,11 @@ msgstr "जडान गरियो"
 
 #: ../src/gwget_data.c:239
 msgid "Retrieving"
-msgstr "पुन:प्राप्ति गर्दै"
+msgstr "पुन: प्राप्त गर्दै"
 
 #: ../src/gwget_data.c:241
 msgid "Completed"
-msgstr "सकियो"
+msgstr "समाप्त"
 
 #: ../src/gwget_data.c:245
 #, c-format
@@ -528,206 +538,204 @@ msgid ""
 "Download Completed\n"
 "(%s)"
 msgstr ""
-"डाउनलोड सकियो\n"
+"डाउनलोड समाप्त\n"
 "(%s)"
 
-#: ../src/gwget_data.c:253
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "त्रुटि"
 
-#: ../src/gwget_data.c:676
+#: ../src/gwget_data.c:693
 msgid "Unable to add this download"
-msgstr "यो डाउनलोड थप्न असमर्थ"
+msgstr "यो डाउनलोड थप गर्न अक्षम"
 
-#: ../src/gwget_data.c:677
+#: ../src/gwget_data.c:694
 msgid "This download is already added"
-msgstr "यो डाउनलोड पहिल्यै थपिएको हो"
+msgstr "यो डाउनलोड पहिल्यै थप गरिएको हो"
 
-#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1041 ../src/main_window_cb.c:1060
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143 ../src/main_window_cb.c:1162
 msgid "Error opening file"
 msgstr "फाइल खोल्दा त्रुटि"
 
-#: ../src/gwget_data.c:725 ../src/main_window_cb.c:91
-#: ../src/main_window_cb.c:1041
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143
 msgid "Couldn't open the file"
 msgstr "फाइल खोल्न सकेन"
 
-#: ../src/main_window.c:422
-msgid "File Name"
-msgstr "फाइल नाम"
+#: ../src/gwget_data.c:780
+msgid "Download Complete"
+msgstr "डाउनलोड समाप्त"
 
-#: ../src/main_window.c:430
-msgid "State"
-msgstr "अवस्था"
-
-#: ../src/main_window.c:442
-msgid "Current Size"
-msgstr "हालको आकार"
-
-#: ../src/main_window.c:454
-msgid "Total Size"
-msgstr "जम्मा आकार"
-
-#: ../src/main_window.c:465 ../src/main_window.c:471
-msgid "Percentage"
-msgstr "प्रतिशत"
-
-#: ../src/main_window.c:478
-msgid "Elapsed Time"
-msgstr "व्यतित समय"
-
-#: ../src/main_window.c:489
-msgid "Remaining Time"
-msgstr "बाँकि समय"
-
-#: ../src/main_window.c:500
-msgid "Speed"
-msgstr "गति"
-
-#: ../src/main_window.c:547
-msgid "Error starting the download"
-msgstr "डाउनलोड शुरु गर्दा त्रुटि"
-
-#: ../src/main_window.c:547
-msgid "There was an unexpected error starting the download"
-msgstr "डाउनलोड शुरु गर्दा एउटा अप्रत्याशित त्रुटि भयो"
-
-#: ../src/main_window.c:784
-msgid "Cancel current downloads?"
-msgstr "हालको डाउनलोडहरु रद्द गर्ने?"
-
-#: ../src/main_window.c:785
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
-msgstr ""
-"कम्तिमा एउटा सक्रिय डाउनलोड बाँकी छ. वास्तवमै सबै चलिरहेका स्थानान्तरहरु रद्द गर्ने?"
-
-#: ../src/main_window_cb.c:82
-msgid "Error in download"
-msgstr "डाउनलोडमा त्रुटि"
-
-#: ../src/main_window_cb.c:169
+#: ../src/main.c:230 ../src/main_window_cb.c:188
 msgid "Gwget"
 msgstr "जिडब्ल्युजेट"
 
-#: ../src/main_window_cb.c:172
+#: ../src/main.c:249
+msgid "Gwget Download Manager"
+msgstr "जिडब्ल्युगेट डाउनलोड प्रबन्धक"
+
+#: ../src/main_window.c:433
+msgid "File Name"
+msgstr "फाइल नाम"
+
+#: ../src/main_window.c:441
+msgid "State"
+msgstr "अवस्था"
+
+#: ../src/main_window.c:453
+msgid "Current Size"
+msgstr "हालको साइज"
+
+#: ../src/main_window.c:465
+msgid "Total Size"
+msgstr "जम्मा साइज"
+
+#: ../src/main_window.c:476 ../src/main_window.c:482
+msgid "Percentage"
+msgstr "प्रतिशत"
+
+#: ../src/main_window.c:489
+msgid "Elapsed Time"
+msgstr "व्यतित समय"
+
+#: ../src/main_window.c:500
+msgid "Remaining Time"
+msgstr "बाँकी समय"
+
+#: ../src/main_window.c:511
+msgid "Speed"
+msgstr "गति"
+
+#: ../src/main_window.c:558
+msgid "Error starting the download"
+msgstr "डाउनलोड सुरु गर्दा त्रुटि"
+
+#: ../src/main_window.c:558
+msgid "There was an unexpected error starting the download"
+msgstr "डाउनलोड सुरु गर्दा एउटा अनपेक्षित त्रुटि"
+
+#: ../src/main_window.c:795
+msgid "Cancel current downloads?"
+msgstr "हालको डाउनलोडहरू रद्द गर्नुहुन्छ ?"
+
+#: ../src/main_window.c:796
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr "कम्तीमा एउटा सक्रिय डाउनलोड बाँकी छ। सबै चलिरहेका स्थानान्तरहरू साच्चिकै रद्द गर्नुहुन्छ ?"
+
+#: ../src/main_window_cb.c:101
+msgid "Error in download"
+msgstr "डाउनलोडमा त्रुटि"
+
+#: ../src/main_window_cb.c:191
 msgid "Download Manager for GNOME."
-msgstr "जिनोम को लागि व्यव्सथापक डाउनलोड गर्नुहोस"
+msgstr "जिनोमका लागि डाउनलोड प्रबन्धक"
 
-#: ../src/main_window_cb.c:519 ../src/new_window.c:138
+#: ../src/main_window_cb.c:562 ../src/new_window.c:139
 msgid "Select Folder"
-msgstr "फोल्डर चयन गर्नुहोस"
+msgstr "फोल्डर चयन गर्नुहोस्"
 
-#: ../src/main_window_cb.c:575
+#: ../src/main_window_cb.c:618
 #, c-format
 msgid ""
 "Really cancel current download?\n"
 "(URL: %s)"
 msgstr ""
-"वास्तवमै हालको डाउनलोड रद्द गर्ने?\n"
-"(युआरएल: %s)"
+"हालको डाउनलोड साच्चिकै रद्द गर्नुहुन्छ ?\n"
+"(यू आर एल: %s)"
 
-#: ../src/main_window_cb.c:576
+#: ../src/main_window_cb.c:619
 msgid "Cancel download?"
-msgstr "डाउनलोड रद्द गर्ने?"
+msgstr "डाउनलोड रद्द गर्नुहुन्छ ?"
 
-#: ../src/main_window_cb.c:604
+#: ../src/main_window_cb.c:649
 msgid "Really remove completed downloads from the list?"
-msgstr "वास्तवमै सकिएका डाउनलोडहरु लाइ सुचि बाट हटाउने?"
+msgstr "समाप्त भएको डाउनलोडहरूलाई सूची बाट साच्चिकै हटाउनुहुन्छ ?"
 
-#: ../src/main_window_cb.c:633
+#: ../src/main_window_cb.c:649
+msgid "Remove"
+msgstr "हटाउनुहोस्"
+
+#: ../src/main_window_cb.c:681
 msgid "Really remove inactive downloads from the list?"
-msgstr "वास्तवमै निस्क्रिय डाउनलोडहरु लाइ सुचि बाट हटाउने?"
+msgstr "निस्क्रिय डाउनलोडहरूलाई सूचीबाट साच्चिकै हटाउनुहुन्छ ?"
 
-#: ../src/main_window_cb.c:662
+#: ../src/main_window_cb.c:713
 msgid "Really remove all downloads from the list?"
-msgstr "वास्तवमै सबै डाउनलोडहरु लाइ सुचि बाट हटाउने?"
+msgstr "सबै डाउनलोडहरूलाई सूची बाट साच्चिकै हटाउनुहुन्छ ?"
 
-#: ../src/main_window_cb.c:995
+#: ../src/main_window_cb.c:1095
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr ""
+msgstr "नयाँ डाउनलोड गति सिमा नयाँ वा पुन: सुरु गरिएको डाउनलोडहरूमा मात्र लागू हुन्छ"
 
-#: ../src/main_window_cb.c:1010
-#, fuzzy
-msgid "Remove this download ?"
-msgstr "सबै डाउनलोडहरु लाइ पुन:निरन्तरता दिनुहोस"
+#: ../src/main_window_cb.c:1111
+#, c-format
+msgid "Remove %s ?"
+msgstr "%s हटाउनुहुन्छ ?"
 
-#: ../src/main_window_cb.c:1010
-#, fuzzy
+#: ../src/main_window_cb.c:1112
 msgid "Really remove this download from the list?"
-msgstr "वास्तवमै सबै डाउनलोडहरु लाइ सुचि बाट हटाउने?"
+msgstr "डाउनलोडलाई सूचीबाट साच्चिकै हटाउनुहुन्छ ?"
 
-#: ../src/main_window_cb.c:1060
-#, fuzzy
+#: ../src/main_window_cb.c:1112
+msgid "Remove download"
+msgstr "डाउनलोड हटाउनुहोस्"
+
+#: ../src/main_window_cb.c:1162
 msgid "Couldn't open the folder"
-msgstr "फाइल खोल्न सकेन"
+msgstr "फोल्डर खोल्न सकेन"
 
-#: ../src/systray.c:152
+#: ../src/systray.c:151
 msgid "Nothing"
-msgstr "केहि पनि हैन"
+msgstr "केही पनि छैन"
 
-#: ../src/systray.c:159
+#: ../src/systray.c:158
 msgid "Downloads"
-msgstr "डाउनलोडहरु"
+msgstr "डाउनलोडहरू"
 
-#: ../src/wget-log.c:120
+#: ../src/wget-log.c:123
 msgid "Socket error"
 msgstr "सकेट त्रुटि"
 
-#: ../src/wget-log.c:122
+#: ../src/wget-log.c:125
 msgid "Connection refused\n"
 msgstr "जडान अस्विकार गरियो\n"
 
-#: ../src/wget-log.c:124
+#: ../src/wget-log.c:127
 msgid "No route to host"
-msgstr "होस्ट को लागि रुट छैन"
+msgstr "होस्टलाई रुट छैन"
 
-#: ../src/wget-log.c:126
+#: ../src/wget-log.c:129
 msgid "Connection refused when downloading URL:\n"
-msgstr "युआरएल डाउनलोड गर्दा जडान अस्विकार गरियो:\n"
+msgstr "यु आर एल डाउनलोड गर्दा जडान अस्विकार गरियो:\n"
 
-#: ../src/wget-log.c:128
+#: ../src/wget-log.c:131
 msgid "Host not found\n"
 msgstr "होस्ट भेटिएन\n"
 
-#: ../src/wget-log.c:130
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "असमर्थित प्रोटोकोल - तपाईंलाइ डब्ल्युजेट चाहिन्छ >= एचटिटिपिएस को लागि १.७:\n"
-
 #: ../src/wget-log.c:133
-msgid "Refusing to truncate existing file"
-msgstr "अस्तित्वमा रहेको फाइल काट्न अस्विकार गर्दै"
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "असमर्थित प्रोटोकोल - तपाईँलाई डब्ल्युजेट चाहिन्छ >= एचटिटिपिएस का लागि १.७:\n"
 
-#: ../src/wget-log.c:135
+#: ../src/wget-log.c:136
+msgid "Refusing to truncate existing file"
+msgstr "अवस्थित फाइल काट्न अस्विकार गर्दैछ"
+
+#: ../src/wget-log.c:138
 msgid "Unknown error"
 msgstr "अज्ञात त्रुटि"
 
-#: ../src/wget-log.c:146 ../src/wget-log.c:152
+#: ../src/wget-log.c:149 ../src/wget-log.c:155
 msgid "File not found"
-msgstr "फाइल भेटिएन"
+msgstr "फाइल फेला परेन"
 
-#: ../src/wget-log.c:159
+#: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"डाउनलोड जारी राख्न सकेन, अस्तित्वमा रहेको स्थानीय फाइलले टाढाको फाइलसंग द्वन्द गर्छ"
+msgstr "डाउनलोड जारी राख्न सकेन, अवस्थित स्थानीय फाइलले टाढाको फाइलसँग द्वन्द गर्दछ"
 
-#: ../src/wget-log.c:218
+#: ../src/wget-log.c:221
 msgid "Can't write to target directory"
-msgstr "लक्षित निर्देशिका मा लेख्न सकेन"
+msgstr "लक्षित डाइरेक्टरीमा लेख्न सकिँदैन"
 
-#~ msgid "Remove"
-#~ msgstr "हटाऊनुहोस"
-
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "सुचिबाट सकिएको डाउनलोडहरु हटाउनुहोस"
-
-#~ msgid "Remove inactive downloads from list"
-#~ msgstr "सुचिबाट निष्क्रिय डाउनलोडहरु हटाउनुहोस"
-
-#~ msgid "Ask save in for each new download"
-#~ msgstr "प्रत्येक नयाँ डाउनलोडमा बचत सोध्नुहोस"
-
-#~ msgid "*"
-#~ msgstr "*"
