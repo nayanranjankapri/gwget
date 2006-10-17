@@ -81,7 +81,7 @@ handle_content_cb (EphyEmbedSingle *single,
 	}
 #elif DBUS_VERSION == 34
 	call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
-					G_TYPE_UINT, timestamp,
+					G_TYPE_UINT, &timestamp,
 					G_TYPE_INVALID);
 
 	if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
@@ -91,7 +91,7 @@ handle_content_cb (EphyEmbedSingle *single,
 	}
 #else
 	if (!dbus_g_proxy_call (remote_object, "OpenWindow", &error,
-		G_TYPE_UINT, timestamp,
+		G_TYPE_UINT, &timestamp,
 		G_TYPE_INVALID,
 		G_TYPE_INVALID)) {
 			g_warning (error->message);
@@ -115,7 +115,7 @@ handle_content_cb (EphyEmbedSingle *single,
 #elif DBUS_VERSION == 34
 	call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
 					G_TYPE_STRING, uri,
-					G_TYPE_UINT, timestamp,
+					G_TYPE_UINT, &timestamp,
 					G_TYPE_INVALID);
 
 	if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
@@ -127,7 +127,7 @@ handle_content_cb (EphyEmbedSingle *single,
 #else
 	if (!dbus_g_proxy_call (remote_object, "OpenURI", &error,
 				G_TYPE_STRING, uri,
-				G_TYPE_UINT, timestamp,
+				G_TYPE_UINT, &timestamp,
 				G_TYPE_INVALID,
 				G_TYPE_INVALID)) {
 		g_warning (error->message);

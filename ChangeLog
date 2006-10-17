@@ -1,3 +1,8 @@
+2006-10-17  David Sedeño <david@alderia.com>
+
+	* epiphany-extension/ephy-gwget-extension.c: Dbus fix. Thanks to
+	Ladislav Michnovic. 
+
 2006-09-11  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c: Set correctly the user and proxy preference.
