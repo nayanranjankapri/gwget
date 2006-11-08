@@ -1,5 +1,7 @@
 2006-11-08  David Sedeño <david@alderia.com>
 
+	* configure.in: Version 0.98.2
+	* NEWS: Updated for 0.98.2
 	* data/GNOME_Gwget_server.in.in: removed
 	* po/POTFILES.in: Remove data/GNOME_Gwget_server.in
 	* data/Makefile.am: Remove bonobo deps

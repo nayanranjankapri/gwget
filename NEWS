@@ -1,4 +1,21 @@
 ==============
+Version 0.98.2
+==============
+
+Features:
+        * Support Epiphany 2.15 (Joseph Sacco) and 2.16
+
+Fixes:
+        * Use dbus in epiphany extension.
+        * Fix some C99 vs. C89 issue (Jens Granseuer)
+        * libnotify 0.4 support (Joseph Sacco)
+	* Fix some dialog messages.
+
+Translations:
+        * Update: eu (Iñaki Larrañaga), nl (Tino Meinen), fr (Damien Durand), hu (Gabor Kelemen), ne (Pawan Chitrakar), el (Dimitris Glezos)
+        * Added: en_GB, vi, zh_HK (Abel Cheung)
+
+==============
 Version 0.98 
 ==============
 
