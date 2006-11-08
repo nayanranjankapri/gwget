@@ -1,5 +1,7 @@
 2006-11-08  David Sedeño <david@alderia.com>
 
+	* src/main_window_cb.c: Change dialog message in cancel option.
+	* src/main_window.c: Change dialog when exit.
 	* configure.in: Detect epiphany 2.16
 
 2006-10-17  David Sedeño <david@alderia.com>

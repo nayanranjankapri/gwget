@@ -616,7 +616,7 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
 	if (gwgetdata) 
 	{
 		msg = g_strdup_printf(_("Really cancel current download?\n(URL: %s)"),gwgetdata->url);
-		response = run_dialog(_("Cancel download?"),_(msg), _("Cancel"));
+		response = run_dialog(_("Delete download?"),_(msg), _("Delete"));
 		if (response==GTK_RESPONSE_OK) {
 			gwget_data_stop_download(gwgetdata); 
 			unlink (gwgetdata->local_filename);
