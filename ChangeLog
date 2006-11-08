@@ -1,5 +1,7 @@
 2006-11-08  David Sedeño <david@alderia.com>
 
+	* data/GNOME_Gwget_server.in.in: removed
+	* po/POTFILES.in: Remove data/GNOME_Gwget_server.in
 	* data/Makefile.am: Remove bonobo deps
 	* src/main_window_cb.c: Change dialog message in cancel option.
 	* src/main_window.c: Change dialog when exit.
