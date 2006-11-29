@@ -1,29 +1,21 @@
 # Hungarian translation of gwget.
 # Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006.
 #
+# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-15 05:43+0200\n"
-"PO-Revision-Date: 2006-06-25 00:01+0200\n"
+"POT-Creation-Date: 2006-11-28 06:43+0100\n"
+"PO-Revision-Date: 2006-11-29 03:23+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:   nplurals=2; plural=(n != 1);\n"
-
-#: ../data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "gwget alkalmazás"
-
-#: ../data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "gwget automatizálási factory"
+"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../data/about.glade.h:1
 msgid "About Gwget"
@@ -53,8 +45,7 @@ msgstr "<span weight=\"bold\">Letöltés:</span>"
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">Tulajdonságok</span>"
 
-#: ../data/gwget.glade.h:4 ../src/main_window.c:796
-#: ../src/main_window_cb.c:619
+#: ../data/gwget.glade.h:4
 msgid "Cancel"
 msgstr "Mégsem"
 
@@ -615,7 +606,7 @@ msgid "There was an unexpected error starting the download"
 msgstr "Váratlan hiba lépett fel a letöltés megkezdésekor"
 
 #: ../src/main_window.c:795
-msgid "Cancel current downloads?"
+msgid "Stop current downloads?"
 msgstr "Megszakítja a jelenlegi letöltéseket?"
 
 #: ../src/main_window.c:796
@@ -625,6 +616,10 @@ msgid ""
 msgstr ""
 "Még legalább egy aktív letöltés van hátra. Valóban megszakítja az összes "
 "futó átvitelt?"
+
+#: ../src/main_window.c:796
+msgid "Exit"
+msgstr "Kilépés"
 
 #: ../src/main_window_cb.c:101
 msgid "Error in download"
@@ -648,8 +643,12 @@ msgstr ""
 "(URL: %s)"
 
 #: ../src/main_window_cb.c:619
-msgid "Cancel download?"
-msgstr "Megszakítja a letöltést?"
+msgid "Delete download?"
+msgstr "Törli a letöltést?"
+
+#: ../src/main_window_cb.c:619
+msgid "Delete"
+msgstr "Törlés"
 
 #: ../src/main_window_cb.c:649
 msgid "Really remove completed downloads from the list?"
@@ -720,8 +719,7 @@ msgstr "Kiszolgáló nem található\n"
 
 #: ../src/wget-log.c:133
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr ""
-"Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
+msgstr "Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
 
 #: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
@@ -737,9 +735,9 @@ msgstr "A fájl nem található"
 
 #: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
+msgstr "Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
 
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Nem lehet írni a célkönyvtárba"
+
