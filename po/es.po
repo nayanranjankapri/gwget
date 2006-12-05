@@ -12,22 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget-Spanish\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-13 12:20+0200\n"
-"PO-Revision-Date: 2006-04-13 12:21+0200\n"
+"POT-Creation-Date: 2006-12-05 16:06+0100\n"
+"PO-Revision-Date: 2006-12-05 16:06+0100\n"
 "Last-Translator:  Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Gnome-es <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "aplicación gwget"
-
-#: ../data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "fábrica de automatización gwget"
 
 #: ../data/about.glade.h:1
 msgid "About Gwget"
@@ -41,7 +33,7 @@ msgstr "GNU GPL Versión 2"
 msgid "Gwget: Download Manager for GNOME"
 msgstr "Gwget: Gestor de descargas para Gnome"
 
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:192
+#: ../data/about.glade.h:4 ../src/main_window_cb.c:193
 msgid "translator-credits"
 msgstr ""
 "Miguel Ángel Nieto Salazar <correo@miguelangelnieto.net>\n"
@@ -60,8 +52,7 @@ msgstr "<span weight=\"bold\">Descarga:</span>"
 msgid "<span weight=\"bold\">Properties</span>"
 msgstr "<span weight=\"bold\">Propiedades</span>"
 
-#: ../data/gwget.glade.h:4 ../src/main_window.c:796
-#: ../src/main_window_cb.c:618
+#: ../data/gwget.glade.h:4
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -81,8 +72,8 @@ msgstr "Continuar"
 msgid "Continue with the download"
 msgstr "Continua con la descarga"
 
-#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:139
-#: ../src/main_window_cb.c:625 ../src/main_window_cb.c:730
+#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:626 ../src/main_window_cb.c:731
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gestor de descargas"
 
@@ -150,11 +141,11 @@ msgstr "Recursivo"
 msgid "Recursive options"
 msgstr "Opciones de recursividad"
 
-#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:712
+#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:713
 msgid "Remove all"
 msgstr "Quitar todas"
 
-#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:648
+#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:649
 msgid "Remove completed"
 msgstr "Quitar las descargas completadas"
 
@@ -166,7 +157,7 @@ msgstr "Quitar de la lista"
 msgid "Remove from list"
 msgstr "Quita de la lista"
 
-#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:680
+#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:681
 msgid "Remove inactive"
 msgstr "Quitar las inactivas"
 
@@ -552,33 +543,33 @@ msgstr ""
 msgid "Error"
 msgstr "Error"
 
-#: ../src/gwget_data.c:686
+#: ../src/gwget_data.c:693
 msgid "Unable to add this download"
 msgstr "Imposible añadir esta descarga"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:694
 msgid "This download is already added"
 msgstr "Esta descarga ya está añadida"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:109
-#: ../src/main_window_cb.c:1142 ../src/main_window_cb.c:1161
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143 ../src/main_window_cb.c:1162
 msgid "Error opening file"
 msgstr "Error al abrir el archivo"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:109
-#: ../src/main_window_cb.c:1142
+#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1143
 msgid "Couldn't open the file"
 msgstr "No se puede abrir el archivo"
 
-#: ../src/gwget_data.c:773
+#: ../src/gwget_data.c:780
 msgid "Download Complete"
 msgstr "Descarga completada"
 
-#: ../src/main.c:231 ../src/main_window_cb.c:187
+#: ../src/main.c:230 ../src/main_window_cb.c:188
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main.c:250
+#: ../src/main.c:249
 msgid "Gwget Download Manager"
 msgstr "Gestor de descargas Gwget"
 
@@ -623,8 +614,8 @@ msgid "There was an unexpected error starting the download"
 msgstr "Hubo un error inesperado al iniciar la descarga"
 
 #: ../src/main_window.c:795
-msgid "Cancel current downloads?"
-msgstr "¿Desea cancelar las descargas actuales?"
+msgid "Stop current downloads?"
+msgstr "¿Desea parar las descargas actuales?"
 
 #: ../src/main_window.c:796
 msgid ""
@@ -634,19 +625,23 @@ msgstr ""
 "Hay al menos una descarga activa. ¿Seguro que desea cancelar todas las "
 "transferencias activas?"
 
-#: ../src/main_window_cb.c:100
+#: ../src/main_window.c:796
+msgid "Exit"
+msgstr "Salir"
+
+#: ../src/main_window_cb.c:101
 msgid "Error in download"
 msgstr "Error en la descarga"
 
-#: ../src/main_window_cb.c:190
+#: ../src/main_window_cb.c:191
 msgid "Download Manager for GNOME."
 msgstr "Gestor de descargas para GNOME."
 
-#: ../src/main_window_cb.c:561 ../src/new_window.c:139
+#: ../src/main_window_cb.c:562 ../src/new_window.c:139
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-#: ../src/main_window_cb.c:617
+#: ../src/main_window_cb.c:618
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -655,46 +650,50 @@ msgstr ""
 "¿Seguro que quiere cancelar la descarga actual?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:618
-msgid "Cancel download?"
-msgstr "¿Quiere cancelar la descarga?"
+#: ../src/main_window_cb.c:619
+msgid "Delete download?"
+msgstr "¿Quiere borrar la descarga?"
 
-#: ../src/main_window_cb.c:648
+#: ../src/main_window_cb.c:619
+msgid "Delete"
+msgstr "Borrar"
+
+#: ../src/main_window_cb.c:649
 msgid "Really remove completed downloads from the list?"
 msgstr "¿Seguro que desea quitar las descargas completadas de la lista?"
 
-#: ../src/main_window_cb.c:648
+#: ../src/main_window_cb.c:649
 msgid "Remove"
 msgstr "Quitar"
 
-#: ../src/main_window_cb.c:680
+#: ../src/main_window_cb.c:681
 msgid "Really remove inactive downloads from the list?"
 msgstr "¿Seguro que quiere quitar las descargas inactivas de la lista?"
 
-#: ../src/main_window_cb.c:712
+#: ../src/main_window_cb.c:713
 msgid "Really remove all downloads from the list?"
 msgstr "¿Seguro que quiere quitar todas las descargas de la lista?"
 
-#: ../src/main_window_cb.c:1094
+#: ../src/main_window_cb.c:1095
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "El límite nuevo en la velocidad de descarga se aplicará sólo en las "
 "descargas nuevas o reiniciadas."
 
-#: ../src/main_window_cb.c:1110
+#: ../src/main_window_cb.c:1111
 #, c-format
 msgid "Remove %s ?"
 msgstr "¿Quitar %s?"
 
-#: ../src/main_window_cb.c:1111
+#: ../src/main_window_cb.c:1112
 msgid "Really remove this download from the list?"
 msgstr "¿Desea quitar esta descarga de la lista?"
 
-#: ../src/main_window_cb.c:1111
+#: ../src/main_window_cb.c:1112
 msgid "Remove download"
 msgstr "Quitar descarga"
 
-#: ../src/main_window_cb.c:1161
+#: ../src/main_window_cb.c:1162
 msgid "Couldn't open the folder"
 msgstr "No fue posible abrir la carpeta"
 
@@ -751,6 +750,12 @@ msgstr ""
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "No se puede escribir en el directorio destino"
+
+#~ msgid "gwget application"
+#~ msgstr "aplicación gwget"
+
+#~ msgid "gwget automation factory"
+#~ msgstr "fábrica de automatización gwget"
 
 #~ msgid "Question"
 #~ msgstr "Pregunta"
