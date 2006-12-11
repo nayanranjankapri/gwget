@@ -32,7 +32,6 @@ gwget_SOURCES = \
 	utils.c\
 	custom-cell-renderer-progressbar.c\
 	new_window.c\
-	eggtrayicon.c\
 	systray.c \
 	gwget-application.c \
 	gwget-application.h 
