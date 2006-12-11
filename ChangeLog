@@ -1,3 +1,8 @@
+2006-12-11  David Sedeño <david@alderia.com>
+
+	* configure.in: Detect epiphany 2.17. Thanks to Joseph Sacco for the
+	patch.
+
 2006-11-08  David Sedeño <david@alderia.com>
 
 	* configure.in: Version 0.98.2
