@@ -1,5 +1,6 @@
 2007-01-18  David Sedeño <david@alderia.com
 
+	* include/main_window.h: Don't include eggtrayicon.h
 	* src/systray.c: Really kill libegg.
 
 2006-12-15  Pema Geyelg  <pgeyleg@gmail.com>

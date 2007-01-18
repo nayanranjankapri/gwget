@@ -20,7 +20,6 @@
 #include <gconf/gconf-client.h>
 #include <glade/glade.h>
 #include <gtk/gtk.h>
-#include "eggtrayicon.h"
 
 enum {
 	IMAGE_COLUMN,
