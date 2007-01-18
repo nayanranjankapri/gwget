@@ -9,28 +9,18 @@
 
 static GdkPixbuf *systray_load_icon (const gchar *filename);
 static GdkPixbuf *systray_pixbuf_new_from_file(const gchar *filename);
-static void systray_embedded(GtkWidget *widget, gpointer data);
-static void systray_destroyed(GtkWidget *widget, gpointer data);
-static void systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data);
-static gboolean systray_generate_menu(GdkEventButton *event);
+static void systray_clicked(GtkStatusIcon *status_icon,guint button,guint activate_time,gpointer user_data);
+static gboolean systray_generate_menu(guint button,guint activate_time);
 static void systray_add_download(gpointer data1, gpointer data2);
 static gboolean put_icon_downloading(gpointer data);
 
-
-
 static GdkPixbuf *icon_idle, *icon_downloading, *icon_newdownload;
-static GtkWidget *image_icon;
 
 void 
 systray_load(void) 
 {
-	GtkWidget *eventbox;
 	
-	/* tray icon */
-	image_icon = gtk_image_new();
-	tray_icon = egg_tray_icon_new("gwget");
-	eventbox = gtk_event_box_new();
-	tray_tooltip = gtk_tooltips_new();
+	tray_icon = gtk_status_icon_new();
 
 	/* icon list */
 	icon_idle = systray_load_icon("gwget-off.png");
@@ -39,31 +29,15 @@ systray_load(void)
 	
 	set_icon_idle();
 
-	gtk_container_add(GTK_CONTAINER(eventbox), GTK_WIDGET(image_icon));
-	gtk_container_add(GTK_CONTAINER(tray_icon), eventbox);
-
-	gtk_widget_show_all(GTK_WIDGET(tray_icon));	
-	
-	g_signal_connect(G_OBJECT(tray_icon), 
-			 "embedded", 
-			 G_CALLBACK(systray_embedded), 
-			 NULL);
-	g_signal_connect(G_OBJECT(tray_icon), 
-			 "destroy", 
-			 G_CALLBACK(systray_destroyed), 
-			 NULL);
-	g_signal_connect(G_OBJECT(eventbox), 
-			 "button-press-event", 
+	g_signal_connect(tray_icon,
+			 "popup-menu",
 			 G_CALLBACK(systray_clicked), 
 			 NULL);						
-	g_signal_connect(G_OBJECT(tray_icon), "drag_data_received",
-			 G_CALLBACK(on_gwget_drag_received),
-			 GUINT_TO_POINTER(dnd_type));	
-	gtk_drag_dest_set(GTK_WIDGET(tray_icon), 
-			  GTK_DEST_DEFAULT_ALL | GTK_DEST_DEFAULT_HIGHLIGHT,
-			  dragtypes, sizeof(dragtypes) / sizeof(dragtypes[0]),
-                          GDK_ACTION_COPY);
 
+	g_signal_connect(tray_icon,
+			"activate", 
+			G_CALLBACK(systray_clicked),
+			NULL);
 }
 
 static
@@ -126,18 +100,13 @@ systray_pixbuf_new_from_file(const gchar *filename)
 }
 
 static gboolean 
-systray_generate_menu(GdkEventButton *event)
+systray_generate_menu(guint button, guint time)
 {
-	GtkWidget *systray_menu;
-	GtkWidget *downloads_menu;
+	GtkMenu *systray_menu;
+	GtkMenu *downloads_menu;
 	GtkWidget *item = NULL;
 	
-	if(event == NULL) {
-		g_warning("systray_generate_menu: gdk event was NULL");
-		return FALSE;
-	}
-	
-	systray_menu = gtk_menu_new();
+	systray_menu = GTK_MENU (gtk_menu_new());
 
 	item = gtk_image_menu_item_new_from_stock(GTK_STOCK_NEW, NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu), item);
@@ -145,7 +114,8 @@ systray_generate_menu(GdkEventButton *event)
 			    GTK_SIGNAL_FUNC(on_button_new_clicked),
 			    NULL);
 		
-	downloads_menu = gtk_menu_new();
+	gtk_widget_show(item);
+	downloads_menu = GTK_MENU(gtk_menu_new());
 	
 	if (count_all_downloads() == 0) {
 		item = gtk_menu_item_new_with_label(_("Nothing"));
@@ -156,7 +126,7 @@ systray_generate_menu(GdkEventButton *event)
 	}
 	
 	item = gtk_menu_item_new_with_label(_("Downloads"));
-	gtk_menu_item_set_submenu(GTK_MENU_ITEM(item),downloads_menu);
+	gtk_menu_item_set_submenu(GTK_MENU_ITEM(item), GTK_WIDGET(downloads_menu));
 	gtk_menu_shell_append(GTK_MENU_SHELL(systray_menu),item);
 	
 	item = gtk_image_menu_item_new_from_stock(GTK_STOCK_PREFERENCES, NULL);
@@ -174,20 +144,13 @@ systray_generate_menu(GdkEventButton *event)
 			    NULL);
 	/* show */
 	gtk_widget_show_all(GTK_WIDGET(systray_menu));
-	gtk_menu_popup(GTK_MENU(systray_menu), NULL, NULL, NULL, NULL, event->button, event->time);
+	gtk_menu_popup(GTK_MENU(systray_menu), NULL, NULL, NULL, NULL, button, time);
 
 	/* clean up */
 	/* gtk_object_sink(GTK_OBJECT(menu)); */
 
 	return TRUE;
 
-}
-
-
-static void 
-systray_embedded(GtkWidget *widget, gpointer data)
-{
-	gwget_pref.docked = TRUE;
 }
 
 static void 
@@ -205,20 +168,11 @@ pop_main_window()
 }
 
 static void 
-systray_destroyed(GtkWidget *widget, gpointer data)
+systray_clicked(GtkStatusIcon *status_icon, guint button, 
+		guint activate_time,gpointer user_data)
 {
-	g_message("systray destroyed\n");
-	gwget_pref.docked = FALSE;
-	pop_main_window();
-}
-
-static void 
-systray_clicked(GtkWidget *widget, GdkEventButton *event, void *data)
-{
-	g_message("docket clicked");
-	
-	if (event->button == 3) {
-		systray_generate_menu(event);
+	if (button == 3) {
+		systray_generate_menu(button,activate_time);
 	} else {
 		pop_main_window();
 	}
@@ -240,31 +194,39 @@ systray_add_download(gpointer data1,gpointer data2)
 void 
 set_icon_newdownload()
 {
-	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_newdownload);
+	gtk_status_icon_set_from_pixbuf(tray_icon, icon_newdownload);
 	g_timeout_add (1500, put_icon_downloading, NULL);
 }
 
 void
 set_icon_downloading()
 {
-	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_downloading);
+	gtk_status_icon_set_from_pixbuf(tray_icon, icon_downloading);
 }
 
 static gboolean
 put_icon_downloading (gpointer data)
 {
-	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_downloading);
+	gtk_status_icon_set_from_pixbuf(tray_icon, icon_downloading);
 	return FALSE;
 }
 
 void
 set_icon_idle()
 {
-	gtk_image_set_from_pixbuf(GTK_IMAGE(image_icon), icon_idle);
+	gtk_status_icon_set_from_pixbuf(tray_icon, icon_idle);
 }
 
 void
 gwget_tray_notify (gchar *primary, gchar *secondary, gchar *icon_name)
 {
-    egg_tray_icon_notify (EGG_TRAY_ICON(tray_icon), 4000, primary, GTK_WIDGET (gtk_image_new_from_file  (icon_name)) , secondary);
+#ifdef HAVE_NOTIFY
+	if (LIBNOTIFY_VERSION_MINOR >= 3)
+       		if (!notify_is_initted ())
+			if (!notify_init ("gwget"))
+		               return;
+       NotifyNotification *notification = notify_notification_new(primary,secondary,icon_name,NULL);
+       notify_notification_show(notification,NULL);
+#endif
+
 }

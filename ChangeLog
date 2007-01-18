@@ -1,3 +1,7 @@
+2007-01-18  David Sedeño <david@alderia.com
+
+	* src/systray.c: Really kill libegg.
+
 2006-12-15  Pema Geyelg  <pgeyleg@gmail.com>
 
 	* configure.in: Added 'dz' to ALL_LINGUAS
