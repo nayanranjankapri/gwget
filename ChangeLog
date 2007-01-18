@@ -1,5 +1,6 @@
 2007-01-18  David Sedeño <david@alderia.com
 
+	* src/eggtrayicon.c: Removed.
 	* po/Makefile.in.in: Remove from svn
 	* data/gwget.glade: Add a remove icon to toolbar. Patch from Nicola
 	Mattei. bug #390769
