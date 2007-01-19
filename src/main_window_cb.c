@@ -661,6 +661,8 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 					gtk_tree_model_iter_next(model,&iter);
 				}
 			}
+			gtk_widget_set_sensitive(glade_xml_get_widget(xml, "clear_button"), FALSE);
+			gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
 		}
 	}
 				

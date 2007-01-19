@@ -42,6 +42,7 @@ static gint gwget_data_process_information (GwgetData *gwgetdata);
 static void gwget_data_update_statistics_ui(GwgetData *gwgetdata);
 static void convert_time2str(gchar *buffer, guint32 time);
 static void gwget_gnotify_finished(GwgetData *gwgetdata);
+static void gwget_download_finished(GwgetData *gwgetdata);
 
 static void
 convert_time2str (gchar *buffer, guint32 time)
@@ -223,8 +224,6 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 static void
 gwget_data_update_statistics_ui(GwgetData *gwgetdata)
 {
-	gchar *tooltip_message;
-	
 	switch(gwgetdata->state) {
 		case DL_WAITING: gwgetdata->state_str = g_strdup(_("Waiting"));
 				 break;
@@ -282,7 +281,7 @@ gwget_data_process_information (GwgetData *gwgetdata)
 		else if (WIFEXITED (status)) {
             		if (WEXITSTATUS (status) == 0) {
                 		gwget_data_set_state (gwgetdata, DL_COMPLETED);
-                     		gwget_gnotify_finished(gwgetdata);
+                     		gwget_download_finished(gwgetdata);
 				start_first_waiting_download();
 				if (gwget_pref.open_after_dl) {
 					gwget_data_exec(gwgetdata);
@@ -770,11 +769,18 @@ gwget_gnotify_finished(GwgetData *gwgetdata) {
       close(sock);
    }
 
-   gwget_tray_notify (_("Download Complete"), gwgetdata->filename, gwgetdata->icon_name);
    g_free(app_msg);
    g_free(icon_msg);
    g_free(fn_msg);
-   g_free(gwgetdata->icon_name);
+}
+
+
+static void
+gwget_download_finished (GwgetData *gwgetdata)
+{
+   gwget_gnotify_finished(gwgetdata);
+   gwget_tray_notify (_("Download Complete"), gwgetdata->filename, gwgetdata->icon_name);
+   gtk_widget_set_sensitive(glade_xml_get_widget(xml, "clear_button"), TRUE);
 }
 
 void

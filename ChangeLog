@@ -1,5 +1,8 @@
 2007-01-19  David Sedeño <david@alderia.com
 
+	* src/gwget_data.c: Activate clear_button when a donwload finish.
+	* src/main_window_cb.c: Set sensitive of clear_button to false when
+	removed all downloads.
 	* include/ Removed
 	* configure.in: Remove include dir from the build.
 	* Makefile.am: Remove include dir from the build.
