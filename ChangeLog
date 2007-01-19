@@ -1,5 +1,8 @@
 2007-01-19  David Sedeño <david@alderia.com
 
+	* include/ Removed
+	* configure.in: Remove include dir from the build.
+	* Makefile.am: Remove include dir from the build.
 	* src/systray.c: Don't include eggtrayicon.h
 	* src/Makefile.am: add includedir.
 	* Move include/*h to src/ dir.

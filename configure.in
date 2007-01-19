@@ -271,7 +271,6 @@ AC_SUBST(ORBIT_IDL)
 AC_OUTPUT([
 Makefile
 po/Makefile.in
-include/Makefile
 src/Makefile
 pixmaps/Makefile
 data/Makefile
