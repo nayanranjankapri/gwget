@@ -2,7 +2,6 @@
 #include <config.h>
 #include <gnome.h>
 #include "main_window.h"
-#include "eggtrayicon.h"
 #include "gwget_data.h"
 #include "systray.h"
 #include "main_window_cb.h"

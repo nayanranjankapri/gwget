@@ -36,6 +36,8 @@ gwget_SOURCES = \
 	gwget-application.c \
 	gwget-application.h 
 
+gwget2_includedir = $(pkgincludedir)
+
 gwget_LDADD =  \
 	$(GWGET_LIBS)  \
 	$(NOTIFY_LIBS) \

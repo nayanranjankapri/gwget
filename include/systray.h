@@ -6,6 +6,14 @@ extern "C"
 {
 #endif
 
+#include <gtk/gtkplug.h>
+#ifdef GDK_WINDOWING_X11
+#include <gdk/gdkx.h>
+#endif
+#ifdef HAVE_NOTIFY
+#include <libnotify/notify.h>
+#endif
+
 void systray_load(void);
 void set_icon_newdownload(void);
 void set_icon_downloading(void);

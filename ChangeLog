@@ -1,3 +1,11 @@
+2007-01-19  David Sedeño <david@alderia.com
+
+	* src/systray.c: Don't include eggtrayicon.h
+	* src/Makefile.am: add includedir.
+	* Move include/*h to src/ dir.
+	* include/eggtryicon.h: Removed
+	* include/systray.h: Include notify. 
+
 2007-01-18  David Sedeño <david@alderia.com
 
 	* src/eggtrayicon.c: Removed.
