@@ -1,3 +1,17 @@
+2007-01-24  Nicola Mattei <foxdalailama@gmail.com>
+
+       * src/md5.{c,h}: added from GNU coreutils 6.7
+	* gwget.glade: added md5_window and compare_md5 button to
+	properties window and attached md5_entry activate to
+	on_md5ok_button_clicked
+	* src/main_window_cb.h: added on_md5ok_button_clicked and
+	on_compare_md5_clicked
+	* src/main_window_cb.c: include gnome-vfs.h and md5.h, define
+	MD5BUFSIZE, implemented on_md5ok_button_clicked and
+	on_compare_md5_clicked, added check to set/unset sensitiveness
+	of compare_md5 button when calling properties window
+	* src/Makefile.am: added md5.{c,h} to gwget_SOURCES
+
 2007-01-19  David Sedeño <david@alderia.com
 
 	* src/gwget_data.c: Activate clear_button when a donwload finish.

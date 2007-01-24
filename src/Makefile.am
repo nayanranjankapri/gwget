@@ -34,7 +34,9 @@ gwget_SOURCES = \
 	new_window.c\
 	systray.c \
 	gwget-application.c \
-	gwget-application.h 
+	gwget-application.h \
+	md5.h \
+	md5.c
 
 gwget2_includedir = $(pkgincludedir)
 

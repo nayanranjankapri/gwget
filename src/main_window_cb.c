@@ -22,6 +22,7 @@
 #include <libgnome/gnome-url.h>
 #include <libgnome/gnome-program.h>
 #include <libgnome/gnome-init.h>
+#include <libgnomevfs/gnome-vfs.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
 #include <libgnomevfs/gnome-vfs-mime-utils.h>
 #include <libgnomevfs/gnome-vfs-mime.h>
@@ -32,6 +33,9 @@
 #include "gwget_data.h"
 #include "utils.h"
 #include "systray.h"
+#include "md5.h"
+
+#define MD5BUFSIZE 512
 
 static void inform_limit_speed_change(void);
 
@@ -792,8 +796,120 @@ on_properties_activate(GtkWidget *widget, gpointer data)
 		gtk_label_set_text(GTK_LABEL(local_file),gwgetdata->filename);
 		local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
 		gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
-		gtk_widget_show(properties);
+		if (gwgetdata->state==DL_COMPLETED) {
+                   gtk_widget_set_sensitive(glade_xml_get_widget(xml, "compare_md5"), TRUE);
+		} else {
+                   gtk_widget_set_sensitive(glade_xml_get_widget(xml, "compare_md5"), FALSE);
+                }
+                gtk_widget_show(properties);
 	}
+}
+
+void
+on_compare_md5_clicked(GtkWidget *widget, gpointer data)
+{
+   GtkWidget *properties_window,*md5; 
+   GwgetData *gwgetdata;
+
+   gwgetdata=gwget_data_get_selected();
+	
+   if (gwgetdata) {
+      properties_window=glade_xml_get_widget(GLADE_XML(xml),"properties_window");
+      md5=glade_xml_get_widget(GLADE_XML(xml),"md5_window");
+      gtk_window_set_transient_for(GTK_WINDOW(md5),GTK_WINDOW(properties_window));
+      gtk_widget_show(md5);
+   }
+}
+
+void
+on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
+{
+   GtkWidget *md5;
+   GwgetData *gwgetdata;
+   const gchar *entrytext;
+   GtkMessageDialog *dialog;
+   GtkMessageType msg_type;
+
+   gchar *uri;
+   GnomeVFSHandle *fd;
+   GnomeVFSResult result;
+   GString *localfile, *md5res;
+   GString *msg;
+   const gchar *err;
+   gint i;
+   GnomeVFSFileSize fsize;
+   
+   struct md5_ctx md5context;
+   guchar md5digest[16];
+   gchar dataread[MD5BUFSIZE];
+   gboolean close_md5_dlg;
+  
+   gwgetdata = gwget_data_get_selected();
+	
+   if (gwgetdata) {
+      md5=glade_xml_get_widget(GLADE_XML(xml),"md5_window");
+      entrytext=gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(GLADE_XML(xml),"md5_entry")));
+      localfile=g_string_new(gwgetdata->dir);
+      localfile=g_string_append(localfile, gwgetdata->filename); 
+      uri=gnome_vfs_get_uri_from_local_path(localfile->str);
+      result=gnome_vfs_open(&fd, uri, GNOME_VFS_OPEN_READ);
+
+      if (result != GNOME_VFS_OK) {
+         err=gnome_vfs_result_to_string(result);
+         g_printerr(_("error %d when accessing %s: %s\n"), result, uri, err);
+         return;
+      }
+
+      md5_init_ctx(&md5context);
+
+      while(result == GNOME_VFS_OK) {
+         result=gnome_vfs_read(fd, dataread, MD5BUFSIZE, &fsize);  
+         md5_process_bytes(dataread, fsize, &md5context);
+         if (fsize < MD5BUFSIZE)
+            break;
+      }
+
+      md5_finish_ctx(&md5context, md5digest);
+
+      result=gnome_vfs_close(fd);
+      if (result != GNOME_VFS_OK) {
+         err=gnome_vfs_result_to_string(result);
+         g_printerr(_("error %d when accessing %s: %s\n"), result, uri, err);
+         return;
+      }
+
+      md5res=g_string_new("");
+      for (i = 0; i < 16; i++) {
+         g_string_append_printf(md5res,"%02x", md5digest[i]);
+      }
+
+      msg=g_string_new("");
+      if (g_str_equal(md5res->str, entrytext)) {
+         close_md5_dlg=TRUE;
+         g_string_append_printf(msg, _("<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"));
+         msg_type=GTK_MESSAGE_INFO;
+      } else {
+         g_string_append_printf(msg, _("<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"));
+         close_md5_dlg=FALSE;
+         msg_type=GTK_MESSAGE_WARNING;
+      }
+
+      dialog=(GtkMessageDialog *)gtk_message_dialog_new_with_markup(GTK_WINDOW(md5),
+                                                     GTK_DIALOG_DESTROY_WITH_PARENT,
+                                                     msg_type,
+                                                     GTK_BUTTONS_CLOSE,
+                                                     msg->str);
+                                  
+      gtk_dialog_run(GTK_DIALOG(dialog));
+      gtk_widget_destroy(GTK_WIDGET(dialog));   
+      g_free(uri); 
+      g_string_free(localfile, TRUE);
+      g_string_free(md5res, TRUE);
+      g_string_free(msg, TRUE);
+      if (close_md5_dlg) {
+         gtk_widget_hide(GTK_WIDGET(md5));
+      }
+   }
 }
 
 void 

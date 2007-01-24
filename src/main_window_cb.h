@@ -62,7 +62,13 @@ void on_check_rem_time_toggled(GtkWidget *widget, gpointer data);
 void on_check_down_speed_toggled(GtkWidget *widget, gpointer data);
 void on_manual_radio_toggled (GtkWidget *widget, gpointer data);
 void on_direct_radio_toggled (GtkWidget *widget, gpointer data);
-void on_default_radio_toggled (GtkWidget *widget, gpointer data); 
+void on_default_radio_toggled (GtkWidget *widget, gpointer data);
+
+//Callback for md5_window
+void on_md5ok_button_clicked(GtkWidget *widget, gpointer data); 
+
+//Callback for properties window
+void on_compare_md5_clicked(GtkWidget *widget, gpointer data);
 
 /* Preferences */
 void on_limit_speed_check_toggled (GtkWidget *widget, gpointer data);
