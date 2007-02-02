@@ -40,21 +40,20 @@ static void add_to_save_in_combobox (gpointer data1, gpointer data2);
 void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *window=NULL, *combo;
-	GtkEntry *url_entry=NULL,*save_in_entry=NULL;
+	GtkEntry *save_in_entry=NULL;
 	gchar *url=NULL,*save_in;
 	gchar *save_in_list;
 	GwgetData *gwgetdata;
 		
 	window = glade_xml_get_widget(xml_new,"new_window");
-	url_entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
 	combo = glade_xml_get_widget (xml_new, "save_in_comboboxentry");
 	save_in_entry=GTK_ENTRY(GTK_BIN(combo)->child);
 	
-	url=  (gchar *)(gtk_entry_get_text(GTK_ENTRY(url_entry)));
+	url=(gchar *)(gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"))));
 	
 	if (strcmp(url,"")) {
 		url = g_strdup(url);
-		save_in=g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in_entry)));
+		save_in=g_strdup(gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"))));
 		
 		if (!strcmp(save_in,"") && gwget_pref.download_dir) {
 			save_in=g_strdup(gwget_pref.download_dir);
@@ -73,9 +72,7 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 		gwget_data_start_download(gwgetdata);
 		gtk_widget_hide(window);
 		g_free(save_in);
-					
 	}
-
 }
 
 void 

@@ -147,7 +147,7 @@ main_window(void)
 	
 	/* Show the toolbar ? */
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_toolbar")),gwget_pref.view_toolbar);
-	toolbar = glade_xml_get_widget(xml,"bonobotoolbar"); 
+	toolbar = glade_xml_get_widget(xml,"toolbar1"); 
 	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
 	if (gwget_pref.trayonly) {
 		gtk_widget_show(GTK_WIDGET(window));
@@ -204,10 +204,6 @@ gboolean view_selection_func (GtkTreeSelection *selection,
 
 		gtk_tree_model_get(model, &iter, FILENAME_COLUMN, &name, -1);
 
-		if (!path_currently_selected)
-		{
-			gwget_data_set_menus (gwget_data_get_selected());
-		}
 		g_free(name);
 	}
 

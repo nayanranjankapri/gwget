@@ -85,10 +85,10 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 				gtk_tree_path_free(path);
 			}
 
-			gwget_data_set_menus(gwget_data_get_selected());
 			popup=glade_xml_get_widget(xml,"popup1");
 			gtk_menu_popup (GTK_MENU(popup), NULL, NULL, NULL, NULL, 
 							event_button->button, event_button->time);
+			gwget_data_set_popupmenu (gwget_data_get_selected());
 			return TRUE;
 		}
 	}
@@ -746,7 +746,7 @@ on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 	GtkWidget *toolbar,*menu_item;
 	gboolean state;
 	
-	toolbar=glade_xml_get_widget(GLADE_XML(xml),"bonobotoolbar");
+	toolbar=glade_xml_get_widget(GLADE_XML(xml),"toolbar1");
 	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
 	state = gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(menu_item));
 	
