@@ -32,7 +32,7 @@
 #include <dbus/dbus-glib-bindings.h>
 #endif
 
-static char **url_arguments = NULL;
+static const char **url_arguments = NULL;
 
 static const GOptionEntry goption_options [] =
 {
@@ -209,7 +209,26 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 }
 #endif /* ENABLE_DBUS */
 	
+static void
+load_urls (const char **urls)
+{
+        int i;
+        GwgetData *gwgetdata;
+        gchar *url;
 
+        main_window();
+    
+        if (!urls) {
+                return;
+        }
+
+        for ( i = 0; urls[i]; i++) {
+                url = gnome_vfs_make_uri_from_shell_arg (urls[i]);
+                gwgetdata = gwget_data_new ((gchar *)url);
+                gwget_data_add_download(gwgetdata);
+                gwget_data_start_download(gwgetdata);
+        }
+}                
 	
 
 int main(int argc,char *argv[])
@@ -226,7 +245,7 @@ int main(int argc,char *argv[])
 	textdomain (GETTEXT_PACKAGE);
 	g_option_context_add_main_entries (context, goption_options, GETTEXT_PACKAGE);
 #else
-    g_option_context_add_main_entries (context, goption_options, NULL);
+        g_option_context_add_main_entries (context, goption_options, NULL);
 #endif
 	setlocale(LC_ALL, "");
 	
@@ -251,7 +270,7 @@ int main(int argc,char *argv[])
 	
 	g_set_application_name (_("Gwget Download Manager"));
 
-	main_window();
+        load_urls (url_arguments);	
 	
 	gtk_main();
 	
