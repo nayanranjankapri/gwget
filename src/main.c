@@ -32,11 +32,13 @@
 #include <dbus/dbus-glib-bindings.h>
 #endif
 
+static gchar *destination_dir;
 static const char **url_arguments = NULL;
 
 static const GOptionEntry goption_options [] =
 {
     { "force-tray-only", 't', 0, G_OPTION_ARG_NONE, &(gwget_pref.trayonly), N_("Launch gwget in the notification area"), NULL },
+    { "destination", 'd', 0, G_OPTION_ARG_STRING, &destination_dir, N_("Destination directory for the download"), NULL },
     { G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_STRING_ARRAY, &url_arguments, NULL, N_("[URL]") },
     { NULL}
 };
@@ -225,6 +227,9 @@ load_urls (const char **urls)
         for ( i = 0; urls[i]; i++) {
                 url = gnome_vfs_make_uri_from_shell_arg (urls[i]);
                 gwgetdata = gwget_data_new ((gchar *)url);
+                if (destination_dir) {
+                        gwgetdata->dir = destination_dir;
+                }
                 gwget_data_add_download(gwgetdata);
                 gwget_data_start_download(gwgetdata);
         }

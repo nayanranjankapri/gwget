@@ -1,7 +1,11 @@
 2007-02-05  David Sedeño <david@alderia.com
 
-	* src/main.c: Port to Goption. 
-		Load files even if it's the first instance of gwget.
+	* src/main.c: 
+		- Port to Goption. 
+		- Load files even if it's the first instance of gwget.
+		- Add -d option for destination directory for the downloads
+		passed in command line. Fixes #403810.
+		
 
 2007-02-02  David Sedeño <david@alderia.com
 
