@@ -38,7 +38,7 @@ static const char **url_arguments = NULL;
 static const GOptionEntry goption_options [] =
 {
     { "force-tray-only", 't', 0, G_OPTION_ARG_NONE, &(gwget_pref.trayonly), N_("Launch gwget in the notification area"), NULL },
-    { "destination", 'd', 0, G_OPTION_ARG_STRING, &destination_dir, N_("Destination directory for the download"), NULL },
+    { "destination-dir", 'd', 0, G_OPTION_ARG_STRING, &destination_dir, N_("Destination directory for the download"), NULL },
     { G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_STRING_ARRAY, &url_arguments, NULL, N_("[URL]") },
     { NULL}
 };
