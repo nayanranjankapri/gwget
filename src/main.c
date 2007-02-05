@@ -32,9 +32,13 @@
 #include <dbus/dbus-glib-bindings.h>
 #endif
 
-static const struct poptOption options[] = {
-	{"force-tray-only", '\0', POPT_ARG_NONE, &(gwget_pref.trayonly), 0, NULL, NULL},
-	{NULL, '\0', 0, NULL, 0} 
+static char **url_arguments = NULL;
+
+static const GOptionEntry goption_options [] =
+{
+    { "force-tray-only", 't', 0, G_OPTION_ARG_NONE, &(gwget_pref.trayonly), N_("Launch gwget in the notification area"), NULL },
+    { G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_STRING_ARRAY, &url_arguments, NULL, N_("[URL]") },
+    { NULL}
 };
 
 typedef struct {
@@ -211,14 +215,18 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 int main(int argc,char *argv[])
 {
 	GnomeProgram *program;
-	poptContext context;
-	GValue context_as_value = { 0 };
+	GOptionContext *context;
+	
+	context = g_option_context_new (_("Gwget Download Manager"));
 	
 #ifdef ENABLE_NLS
 	/* Initialize the i18n stuff */	
 	bindtextdomain (GETTEXT_PACKAGE, GNOME_GWGET_LOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
+	g_option_context_add_main_entries (context, goption_options, GETTEXT_PACKAGE);
+#else
+    g_option_context_add_main_entries (context, goption_options, NULL);
 #endif
 	setlocale(LC_ALL, "");
 	
@@ -226,19 +234,14 @@ int main(int argc,char *argv[])
 	gwget_init_pref(&gwget_pref);
 	program = gnome_program_init(PACKAGE, VERSION, 
 								LIBGNOMEUI_MODULE, argc, argv,
-					            GNOME_PARAM_POPT_TABLE, options, 
+					            GNOME_PARAM_GOPTION_CONTEXT, context, 
 								GNOME_PARAM_HUMAN_READABLE_NAME, _("Gwget"),
 				      			GNOME_PARAM_APP_DATADIR, GNOME_GWGET_LOCALEDIR,
                               	NULL);
 	
-	g_object_get_property (G_OBJECT (program),
-                           GNOME_PARAM_POPT_CONTEXT,
-                           g_value_init (&context_as_value, G_TYPE_POINTER));
-    context = g_value_get_pointer (&context_as_value);
-
 #ifdef ENABLE_DBUS
 	if (!gwget_application_register_service (GWGET_APP)) {
-		if (load_files_remote (poptGetArgs (context))) {
+		if (load_files_remote (url_arguments)) {
 			return 0;
 		}
 	} else {
@@ -254,7 +257,7 @@ int main(int argc,char *argv[])
 	
 	gnome_accelerators_sync ();
 	
-	poptFreeContext (context);
+	g_object_unref (program);
 	
 	return (0);
 }

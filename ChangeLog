@@ -1,3 +1,7 @@
+2007-02-05  David Sedeño <david@alderia.com
+
+	* src/main.c: Port to Goption. 
+
 2007-02-02  David Sedeño <david@alderia.com
 
 	* data/gwget.glade: Use of glade-3 format. Get rid of bonobo (-600!
