@@ -45,15 +45,15 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	gchar *save_in_list;
 	GwgetData *gwgetdata;
 		
-	window = glade_xml_get_widget(xml_new,"new_window");
-	combo = glade_xml_get_widget (xml_new, "save_in_comboboxentry");
+	window = glade_xml_get_widget(xml, "new_window");
+	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
 	save_in_entry=GTK_ENTRY(GTK_BIN(combo)->child);
 	
-	url=(gchar *)(gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"))));
+	url=(gchar *)(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "url_entry"))));
 	
 	if (strcmp(url,"")) {
 		url = g_strdup(url);
-		save_in=g_strdup(gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"))));
+		save_in=g_strdup(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "url_entry"))));
 		
 		if (!strcmp(save_in,"") && gwget_pref.download_dir) {
 			save_in=g_strdup(gwget_pref.download_dir);
@@ -80,9 +80,9 @@ on_cancel_button_clicked(GtkWidget *widget,gpointer data)
 {
 	GtkWidget *window = NULL;
 	
-	window = glade_xml_get_widget(xml_new,"new_window");
+	window = glade_xml_get_widget (xml,"new_window");
 	
-	gtk_widget_hide(window);
+	gtk_widget_hide (window);
 }
 
 /* checks for data in clipboard: URL or not */
@@ -110,10 +110,10 @@ create_new_window(void)
 	}
 		
 	
-	window = glade_xml_get_widget(xml_new,"new_window");
+	window = glade_xml_get_widget (xml, "new_window");
 
 	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
-	entry = GTK_ENTRY(glade_xml_get_widget(xml_new,"url_entry"));
+	entry = GTK_ENTRY(glade_xml_get_widget (xml, "url_entry"));
 	if ( (url!=NULL) && !check_url( "http://", url ) && !check_url( "ftp://", url))
 		url = NULL;
 	
@@ -140,7 +140,7 @@ on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
 						NULL);
 	
-	combo = glade_xml_get_widget (xml_new, "save_in_comboboxentry");
+	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
 	save_in_entry=GTK_ENTRY(GTK_BIN(combo)->child);
 	
 	if (gtk_dialog_run (GTK_DIALOG (filesel)) == GTK_RESPONSE_ACCEPT) {
@@ -162,8 +162,8 @@ create_new_window_with_url (gchar *url)
 	GtkWidget *window;
 	GtkWidget *entry;
 	
-	window = glade_xml_get_widget (xml_new,"new_window");
-	entry = glade_xml_get_widget (xml_new, "url_entry");
+	window = glade_xml_get_widget (xml, "new_window");
+	entry = glade_xml_get_widget (xml, "url_entry");
 	gtk_entry_set_text (GTK_ENTRY(entry), url);
 	
 	gtk_list_store_clear (GTK_LIST_STORE(save_in_model));

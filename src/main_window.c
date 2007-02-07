@@ -71,13 +71,6 @@ main_window(void)
 		glade_xml_signal_autoconnect(xml);
 	}
 	
-	if (!xml_new) {
-		xml_file =g_build_filename(DATADIR, "newdownload.glade", NULL);
-		xml_new = glade_xml_new(xml_file, NULL, NULL);
-		glade_xml_signal_autoconnect (xml_new);
-	}
-	
-	
 	window = glade_xml_get_widget(xml,"main_window");
 	treev = glade_xml_get_widget(xml,"treeview1");
 	model = create_model();
@@ -184,7 +177,7 @@ main_window(void)
 
 	/* Create the model for the "save in" option in new download dialog */
 	save_in_model = (GtkTreeModel*)gtk_list_store_new (1, G_TYPE_STRING);
-	combo = glade_xml_get_widget (xml_new, "save_in_comboboxentry");
+	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
 	gtk_combo_box_set_model(GTK_COMBO_BOX(combo), save_in_model);
 	gtk_combo_box_entry_set_text_column (GTK_COMBO_BOX_ENTRY(combo), 0);
 	gtk_entry_set_text(GTK_ENTRY(GTK_BIN(combo)->child), gwget_pref.download_dir);

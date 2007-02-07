@@ -1,6 +1,11 @@
 2007-02-07  David Sedeño <david@alderia.com
 
-	* src/main_window.c: Set the sensitive of the clear button according
+	* data/newdownload.glade: remove. Put in the main gwget.glade file.
+	* data/gwget.glade: Add the new_window from the newdownload file.
+	* src/new_window.c: Load the widgets from the main xml file.
+	* src/main_window.c: 
+	Put new_window in the main xml file.
+	Set the sensitive of the clear button according
 	if there are or not completed downloads.
 	Use GConfChangeSet for write gconf keys.
 	Don't call gwget_remember_window_size_and_position on quit (it's a gtk
