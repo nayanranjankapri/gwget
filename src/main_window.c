@@ -31,6 +31,8 @@
 #include "systray.h"
 #include "new_window.h"
 
+static gboolean there_are_completed_on_startup = FALSE;
+ 
 /* Global Preferences */
 Preferences gwget_pref;
 
@@ -171,9 +173,13 @@ main_window(void)
 	} else {
 		gtk_widget_hide (GTK_WIDGET(glade_xml_get_widget(xml, "statusbar")));
 	}
-		
 
-	
+	if (there_are_completed_on_startup) {
+		gtk_widget_set_sensitive (glade_xml_get_widget (xml, "clear_button"), TRUE);
+	} else {
+		gtk_widget_set_sensitive (glade_xml_get_widget (xml, "clear_button"), FALSE);
+	}
+
 	systray_load();
 
 	/* Create the model for the "save in" option in new download dialog */
@@ -326,6 +332,7 @@ gwget_get_defaults_from_gconf(void)
 				 */
 				continue;
 			} else {
+				there_are_completed_on_startup = TRUE;
 				new_download(data);
 				gwget_data_set_state(data,DL_COMPLETED);
 				continue;
@@ -697,24 +704,24 @@ gwget_remember_window_size_and_position(void)
 	GtkWidget *main_window;
 	GtkAllocation *allocation;
 	gint position_x,position_y;
+	GConfChangeSet *cs;
 
 	/* Remember the size of the window */
 	main_window=glade_xml_get_widget(xml,"main_window");
 	allocation= &(GTK_WIDGET (main_window)->allocation);
-	gconf_client_set_int (gconf_client, 
-			      "/apps/gwget2/default_width",
-			      allocation->width,
-			      NULL);
-	gconf_client_set_int (gconf_client, 
-			      "/apps/gwget2/default_height",
-			      allocation->height,
-			      NULL);
+	cs = gconf_change_set_new ();
+	gconf_change_set_set_int (cs, "/apps/gwget2/default_height", allocation->height);
+	gconf_change_set_set_int (cs, "/apps/gwget2/default_width", allocation->width);
 	
 	/* Remember the position */
 	gtk_window_get_position(GTK_WINDOW(main_window), &position_x, &position_y);
-	gconf_client_set_int (gconf_client,"/apps/gwget2/position_x",position_x,NULL);
-	gconf_client_set_int (gconf_client,"/apps/gwget2/position_y",position_y,NULL);
+	gconf_change_set_set_int (cs, "/apps/gwget2/position_x", position_x);
+	gconf_change_set_set_int (cs, "/apps/gwget2/position_y", position_y);
 	
+	gconf_client_commit_change_set (gconf_client, cs, TRUE, NULL);
+
+	gconf_change_set_unref (cs);
+
 	return FALSE;
 }
 
@@ -784,7 +791,6 @@ gwget_quit(void)
 	gboolean running;
 	gint response;
 	
-	gwget_remember_window_size_and_position();
 	running = gwget_remember_downloads();
 	
 	if (running) {
