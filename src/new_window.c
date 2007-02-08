@@ -53,7 +53,7 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	
 	if (strcmp(url,"")) {
 		url = g_strdup(url);
-		save_in=g_strdup(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "url_entry"))));
+		save_in=g_strdup(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "save_in_entry"))));
 		
 		if (!strcmp(save_in,"") && gwget_pref.download_dir) {
 			save_in=g_strdup(gwget_pref.download_dir);

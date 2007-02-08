@@ -1,3 +1,13 @@
+2007-02-08  David Sedeño <david@alderia.com
+
+	* data/about.glade: Remove unused file
+	* data/preferences.glade: not required libglade so it can be loaded in
+	glade3.
+	* data/gwget.glade: Some little changes.
+	* data/Makefile.am: Remove newdownload.glade and about.glade
+	* src/new_window.c: Fix a bug introduced about not take the correct
+	entry text.
+
 2007-02-07  David Sedeño <david@alderia.com
 
 	* data/newdownload.glade: remove. Put in the main gwget.glade file.

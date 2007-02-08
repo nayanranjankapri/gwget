@@ -3,8 +3,6 @@
 gwget_datadir = $(datadir)/@PACKAGE@
 
 gwget_data_DATA = \
-	about.glade\
-	newdownload.glade\
 	preferences.glade\
 	gwget.glade
 

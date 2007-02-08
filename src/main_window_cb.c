@@ -180,7 +180,6 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 
 	static const gchar *authors[] = { 
 			"David Sedeño Fernández <david@alderia.com>",
-			"Julien Cegarra <julienc@psychologie-fr.org>",
 			NULL
 	};
 		
@@ -191,7 +190,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 	gtk_show_about_dialog (NULL,
 			       "name", _("Gwget"), 
 			       "version", VERSION,
-			       "copyright", "Copyright © 2004 David Sedeño Fernández",
+			       "copyright", "Copyright © 2004-2007 David Sedeño Fernández",
 			       "comments", _("Download Manager for GNOME."),
 			       "authors", authors,
 			       "translator-credits", _("translator-credits"),
