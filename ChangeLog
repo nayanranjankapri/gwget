@@ -1,9 +1,12 @@
 2007-02-08  David Sedeño <david@alderia.com
 
+	* src/main_window_cb.c (on_compare_md5_clicked): Clean the code for
+	the transient window. Now in glade file.
 	* data/about.glade: Remove unused file
 	* data/preferences.glade: not required libglade so it can be loaded in
 	glade3.
-	* data/gwget.glade: Some little changes.
+	* data/gwget.glade: Some little changes. Put md5_window transient of
+	the properties window.
 	* data/Makefile.am: Remove newdownload.glade and about.glade
 	* src/new_window.c: Fix a bug introduced about not take the correct
 	entry text.

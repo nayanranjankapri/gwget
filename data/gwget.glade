@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.0.2 on Thu Feb  8 20:04:13 2007 by david@ubuntu-->
+<!--Generated with glade3 3.0.2 on Thu Feb  8 20:19:22 2007 by david@ubuntu-->
 <glade-interface>
   <widget class="GtkWindow" id="main_window">
     <property name="title" translatable="yes">Gwget - Download Manager</property>
@@ -857,6 +857,7 @@
     <property name="title" translatable="yes">Compare md5 sum</property>
     <property name="resizable">False</property>
     <property name="window_position">GTK_WIN_POS_CENTER_ON_PARENT</property>
+    <property name="transient_for">properties_window</property>
     <child>
       <widget class="GtkVBox" id="vbox8">
         <property name="visible">True</property>

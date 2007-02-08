@@ -807,16 +807,12 @@ on_properties_activate(GtkWidget *widget, gpointer data)
 void
 on_compare_md5_clicked(GtkWidget *widget, gpointer data)
 {
-   GtkWidget *properties_window,*md5; 
    GwgetData *gwgetdata;
 
    gwgetdata=gwget_data_get_selected();
 	
    if (gwgetdata) {
-      properties_window=glade_xml_get_widget(GLADE_XML(xml),"properties_window");
-      md5=glade_xml_get_widget(GLADE_XML(xml),"md5_window");
-      gtk_window_set_transient_for(GTK_WINDOW(md5),GTK_WINDOW(properties_window));
-      gtk_widget_show(md5);
+      gtk_widget_show(glade_xml_get_widget(GLADE_XML(xml),"md5_window"));
    }
 }
 
