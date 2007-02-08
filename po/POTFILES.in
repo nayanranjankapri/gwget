@@ -4,11 +4,9 @@
 data/about.glade
 data/gwget.glade
 data/gwget.schemas.in
-data/newdownload.glade
 data/preferences.glade
 epiphany-extension/gwget.xml.in.in
 src/custom-cell-renderer-progressbar.c
-src/eggtrayicon.c
 src/gwget_data.c
 src/main.c
 src/main_window.c
