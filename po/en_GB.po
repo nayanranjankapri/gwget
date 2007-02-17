@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-08 07:07+0000\n"
+"POT-Creation-Date: 2007-02-17 00:31+0000\n"
 "PO-Revision-Date: 2007-02-08 07:09-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English/GB <en@li.org>\n"
@@ -16,27 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/about.glade.h:1
-msgid "About Gwget"
-msgstr "About Gwget"
-
-#: ../data/about.glade.h:2
-msgid "GNU GPL Version 2"
-msgstr "GNU GPL Version 2"
-
-#: ../data/about.glade.h:3
-msgid "Gwget: Download Manager for GNOME"
-msgstr "Gwget: Download Manager for GNOME"
-
-#: ../data/about.glade.h:4
-#: ../src/main_window_cb.c:197
-msgid "translator-credits"
-msgstr ""
-"David Lodge <dave@cirt.net>, \n"
-"Alan Horkan <horkana tcd ie>"
-
-#: ../data/gwget.glade.h:1
-#: ../data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
@@ -88,11 +68,9 @@ msgstr "Continue download"
 msgid "Continue with the download"
 msgstr "Continue with the download"
 
-#: ../data/gwget.glade.h:14
-#: ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:630
-#: ../src/main_window_cb.c:669
-#: ../src/main_window_cb.c:737
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
+#: ../src/main_window_cb.c:629 ../src/main_window_cb.c:668
+#: ../src/main_window_cb.c:736
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Download Manager"
 
@@ -156,8 +134,7 @@ msgstr "Pause the download"
 msgid "Properties"
 msgstr "Properties"
 
-#: ../data/gwget.glade.h:30
-#: ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:30 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Recursive"
 
@@ -165,13 +142,11 @@ msgstr "Recursive"
 msgid "Recursive options"
 msgstr "Recursive options"
 
-#: ../data/gwget.glade.h:32
-#: ../src/main_window_cb.c:719
+#: ../data/gwget.glade.h:32 ../src/main_window_cb.c:718
 msgid "Remove all"
 msgstr "Remove all"
 
-#: ../data/gwget.glade.h:33
-#: ../src/main_window_cb.c:653
+#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:652
 msgid "Remove completed"
 msgstr "Remove completed"
 
@@ -183,8 +158,7 @@ msgstr "Remove from List"
 msgid "Remove from list"
 msgstr "Remove from list"
 
-#: ../data/gwget.glade.h:36
-#: ../src/main_window_cb.c:687
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:686
 msgid "Remove inactive"
 msgstr "Remove inactive"
 
@@ -305,8 +279,12 @@ msgid "Follow relative links"
 msgstr "Follow relative links"
 
 #: ../data/gwget.schemas.in.h:7
-msgid "If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user."
-msgstr "If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user."
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -592,16 +570,13 @@ msgstr "Unable to add this download"
 msgid "This download is already added"
 msgstr "This download is already added"
 
-#: ../src/gwget_data.c:734
-#: ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1261
-#: ../src/main_window_cb.c:1280
+#: ../src/gwget_data.c:734 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1256 ../src/main_window_cb.c:1275
 msgid "Error opening file"
 msgstr "Error opening file"
 
-#: ../src/gwget_data.c:734
-#: ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1261
+#: ../src/gwget_data.c:734 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1256
 msgid "Couldn't open the file"
 msgstr "Couldn't open the file"
 
@@ -621,13 +596,11 @@ msgstr "Destination directory for the download"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:244
-#: ../src/main.c:276
+#: ../src/main.c:244 ../src/main.c:276
 msgid "Gwget Download Manager"
 msgstr "Gwget Download Manager"
 
-#: ../src/main.c:262
-#: ../src/main_window_cb.c:192
+#: ../src/main.c:262 ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "Gwget"
 
@@ -647,8 +620,7 @@ msgstr "Current Size"
 msgid "Total Size"
 msgstr "Total Size"
 
-#: ../src/main_window.c:472
-#: ../src/main_window.c:478
+#: ../src/main_window.c:472 ../src/main_window.c:478
 msgid "Percentage"
 msgstr "Percentage"
 
@@ -677,8 +649,12 @@ msgid "Stop current downloads?"
 msgstr "Stop current downloads?"
 
 #: ../src/main_window.c:791
-msgid "There is at least one active download left. Really cancel all running transfers?"
-msgstr "There is at least one active download left. Really cancel all running transfers?"
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
 
 #: ../src/main_window.c:791
 msgid "Exit"
@@ -688,16 +664,21 @@ msgstr "Exit"
 msgid "Error in download"
 msgstr "Error in download"
 
-#: ../src/main_window_cb.c:195
+#: ../src/main_window_cb.c:194
 msgid "Download Manager for GNOME."
 msgstr "Download Manager for GNOME."
 
-#: ../src/main_window_cb.c:566
-#: ../src/new_window.c:136
+#: ../src/main_window_cb.c:196
+msgid "translator-credits"
+msgstr ""
+"David Lodge <dave@cirt.net>, \n"
+"Alan Horkan <horkana tcd ie>"
+
+#: ../src/main_window_cb.c:565 ../src/new_window.c:136
 msgid "Select Folder"
 msgstr "Select Folder"
 
-#: ../src/main_window_cb.c:622
+#: ../src/main_window_cb.c:621
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -706,62 +687,61 @@ msgstr ""
 "Really cancel current download?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:623
+#: ../src/main_window_cb.c:622
 msgid "Delete download?"
 msgstr "Delete download?"
 
-#: ../src/main_window_cb.c:623
+#: ../src/main_window_cb.c:622
 msgid "Delete"
 msgstr "Delete"
 
-#: ../src/main_window_cb.c:653
+#: ../src/main_window_cb.c:652
 msgid "Really remove completed downloads from the list?"
 msgstr "Really remove completed downloads from the list?"
 
-#: ../src/main_window_cb.c:653
+#: ../src/main_window_cb.c:652
 msgid "Remove"
 msgstr "Remove"
 
-#: ../src/main_window_cb.c:687
+#: ../src/main_window_cb.c:686
 msgid "Really remove inactive downloads from the list?"
 msgstr "Really remove inactive downloads from the list?"
 
-#: ../src/main_window_cb.c:719
+#: ../src/main_window_cb.c:718
 msgid "Really remove all downloads from the list?"
 msgstr "Really remove all downloads from the list?"
 
-#: ../src/main_window_cb.c:859
-#: ../src/main_window_cb.c:877
+#: ../src/main_window_cb.c:854 ../src/main_window_cb.c:872
 #, c-format
 msgid "error %d when accessing %s: %s\n"
 msgstr "error %d when accessing %s: %s\n"
 
-#: ../src/main_window_cb.c:889
+#: ../src/main_window_cb.c:884
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 
-#: ../src/main_window_cb.c:892
+#: ../src/main_window_cb.c:887
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 
-#: ../src/main_window_cb.c:1213
+#: ../src/main_window_cb.c:1208
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "New download speed limit will apply only to new or restarted downloads"
 
-#: ../src/main_window_cb.c:1229
+#: ../src/main_window_cb.c:1224
 #, c-format
 msgid "Remove %s ?"
 msgstr "Remove %s ?"
 
-#: ../src/main_window_cb.c:1230
+#: ../src/main_window_cb.c:1225
 msgid "Really remove this download from the list?"
 msgstr "Really remove this download from the list?"
 
-#: ../src/main_window_cb.c:1230
+#: ../src/main_window_cb.c:1225
 msgid "Remove download"
 msgstr "Remove download"
 
-#: ../src/main_window_cb.c:1280
+#: ../src/main_window_cb.c:1275
 msgid "Couldn't open the folder"
 msgstr "Couldn't open the folder"
 
@@ -805,53 +785,76 @@ msgstr "Refusing to truncate existing file"
 msgid "Unknown error"
 msgstr "Unknown error"
 
-#: ../src/wget-log.c:149
-#: ../src/wget-log.c:155
+#: ../src/wget-log.c:149 ../src/wget-log.c:155
 msgid "File not found"
 msgstr "File not found"
 
 #: ../src/wget-log.c:162
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"Can't continue download, existing local file conflicts with remote file"
 
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "Can't write to target directory"
 
+#~ msgid "About Gwget"
+#~ msgstr "About Gwget"
+
+#~ msgid "GNU GPL Version 2"
+#~ msgstr "GNU GPL Version 2"
+
+#~ msgid "Gwget: Download Manager for GNOME"
+#~ msgstr "Gwget: Download Manager for GNOME"
+
 #~ msgid "gwget application"
 #~ msgstr "gwget application"
+
 #~ msgid "gwget automation factory"
 #~ msgstr "gwget automation factory"
+
 #~ msgid "<span weight=\"bold\">Download:</span>"
 #~ msgstr "<span weight=\"bold\">Download:</span>"
+
 #~ msgid "<span weight=\"bold\">Properties</span>"
 #~ msgstr "<span weight=\"bold\">Properties</span>"
+
 #~ msgid "New download"
 #~ msgstr "New download"
+
 #~ msgid "Pause all downloads"
 #~ msgstr "Pause all downloads"
+
 #~ msgid "Resume all downloads"
 #~ msgstr "Resume all downloads"
+
 #~ msgid "Stop and delete downloaded file"
 #~ msgstr "Stop and delete downloaded file"
+
 #~ msgid "Orientation"
 #~ msgstr "Orientation"
+
 #~ msgid "The orientation of the tray."
 #~ msgstr "The orientation of the tray."
+
 #~ msgid "Notification"
 #~ msgstr "Notification"
+
 #~ msgid ""
 #~ "Download Completed\n"
 #~ "(%s)"
 #~ msgstr ""
 #~ "Download Completed\n"
 #~ "(%s)"
+
 #~ msgid "Question"
 #~ msgstr "Question"
+
 #~ msgid "Remove completed downloads from list"
 #~ msgstr "Remove completed downloads from list"
+
 #~ msgid "Ask save in for each new download"
 #~ msgstr "Ask save in for each new download"
+
 #~ msgid "*"
 #~ msgstr "*"
-
