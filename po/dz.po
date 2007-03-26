@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.head.pot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-02 04:36+0100\n"
-"PO-Revision-Date: 2006-11-02 02:33+0530\n"
-"Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
+"POT-Creation-Date: 2007-02-17 00:32+0000\n"
+"PO-Revision-Date: 2007-03-25 23:59+0530\n"
+"Last-Translator: yangka <yanang_ka@hotmail.com>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,201 +19,250 @@ msgstr ""
 "X-Poedit-Country: bhutan\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་ གློག་རིམ་"
-
-#: ../data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་ འཕྲུལ་སྤྱོད་འཕྲུལ་ཁང་"
-
-#: ../data/about.glade.h:1
-msgid "About Gwget"
-msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་གི་སྐོར་ལས་"
-
-#: ../data/about.glade.h:2
-msgid "GNU GPL Version 2"
-msgstr "ཇི་ཨེན་ཡུ་ ཇི་པི་ཨེལ་ འཐོན་རིམ་ ༢"
-
-#: ../data/about.glade.h:3
-msgid "Gwget: Download Manager for GNOME"
-msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་: ཇི་ནོམ་གྱི་དོན་ལུ་ འཛིན་སྐྱོང་པ་ཕབ་ལེན་འབད་"
-
-#: ../data/about.glade.h:4
-#: ../src/main_window_cb.c:193
-msgid "translator-credits"
-msgstr "སྐད་སྒྱུར་པ་-ངོ་བསྟོད་"
-
 #: ../data/gwget.glade.h:1
 #: ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
 #: ../data/gwget.glade.h:2
-msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">ཕབ་ལེན་:</span>"
+msgid "<b>Download</b>"
+msgstr "<b>ཕབ་ལེན།</b>"
 
 #: ../data/gwget.glade.h:3
-msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">རྒྱུ་དངོས་ཚུ་</span>"
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>དང་གཅིག་ཁར་ག་བསྡུར་འབད་ནི་ལུ་ཨེམ་ཌི་༥་སམ་བཙུགས།</b>"
 
 #: ../data/gwget.glade.h:4
-#: ../src/main_window.c:796
-#: ../src/main_window_cb.c:619
+msgid "<b>Properties</b>"
+msgstr "<b>རྒྱུ་དངོས་ཚུ་</b>"
+
+#: ../data/gwget.glade.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">ཕབ་ལེན་གསརཔ་</span>"
+
+#: ../data/gwget.glade.h:6
+msgid "Ay_uda"
+msgstr "ཨ་ཡུ་ད།(_u)"
+
+#: ../data/gwget.glade.h:7
 msgid "Cancel"
 msgstr "ཆ་མེད་གཏང་"
 
-#: ../data/gwget.glade.h:5
+#: ../data/gwget.glade.h:8
 msgid "Cancel download"
 msgstr "ཕབ་ལེན་ཆ་མེད་གཏང་"
 
-#: ../data/gwget.glade.h:6
+#: ../data/gwget.glade.h:9
 msgid "Cancel the download"
 msgstr "ཕབ་ལེན་འདི་ཆ་མེད་གཏང་"
 
-#: ../data/gwget.glade.h:7
+#: ../data/gwget.glade.h:10
+msgid "Compare md5 sum"
+msgstr "ཨེམ་ཌི་༥་སམ་ག་བསྡུར་འབད།"
+
+#: ../data/gwget.glade.h:11
 msgid "Continue"
 msgstr "འཕྲོ་མཐུད་"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:12
+msgid "Continue download"
+msgstr "ཕབ་ལེན་འཕྲོ་མཐུད།"
+
+#: ../data/gwget.glade.h:13
 msgid "Continue with the download"
 msgstr "ཕབ་ལེན་འཕྲོ་མཐུད་དེ་འབད་"
 
-#: ../data/gwget.glade.h:9
-#: ../src/main_window_cb.c:140
-#: ../src/main_window_cb.c:626
-#: ../src/main_window_cb.c:731
+#: ../data/gwget.glade.h:14
+#: ../src/main_window_cb.c:144
+#: ../src/main_window_cb.c:629
+#: ../src/main_window_cb.c:668
+#: ../src/main_window_cb.c:736
 msgid "Gwget - Download Manager"
 msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་- འཛིན་སྐྱོང་པ་ཕབ་ལེན་འབད་"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:15
 msgid "Information"
 msgstr "བརྡ་དོན་"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:16
 msgid "Local Directory:"
 msgstr "ཉེ་གནས་ཀྱི་སྣོད་ཐོ་:"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:17
 msgid "Local File:"
 msgstr "ཉེ་གནས་ཀྱི་ཡིག་སྣོད་:"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:18
+msgid "Md5 Sum:"
+msgstr "ཨེམ་ཌི་༥་སམ།"
+
+#: ../data/gwget.glade.h:19
 msgid "Multimedia files (Videos and images)"
 msgstr "སྣ་མང་བརྡ་ལམ་གྱི་ཡིག་སྣོད་ཚུ་(ཝི་ཌིའོ་དང་གཟུགས་བརྙན་ཚུ་)"
 
-#: ../data/gwget.glade.h:14
-msgid "New download"
+#: ../data/gwget.glade.h:20
+msgid "New Download"
 msgstr "ཕབ་ལེན་གསརཔ་"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:21
 msgid "Open"
 msgstr "ཁ་ཕྱེ་"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:22
 msgid "Open directory"
 msgstr "སྣོད་ཐོ་ཁ་ཕྱེ་"
 
-#: ../data/gwget.glade.h:17
-msgid "Open the target directory"
-msgstr "དམིགས་གཏད་སྣོད་ཐོ་ ཁ་ཕྱེ་"
+#: ../data/gwget.glade.h:23
+msgid "Open file"
+msgstr "ཡིག་སྣོད་ཁ་ཕྱེ།"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:24
+msgid "Open target directory"
+msgstr "ཁ་ཕྱེ་དམིགས་གཏད་སྣོད་ཐོ།"
+
+#: ../data/gwget.glade.h:25
 msgid "Pause"
 msgstr "ཐེམ་"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:26
 msgid "Pause all"
 msgstr "ཆ་མཉམ་ཐེམས་"
 
-#: ../data/gwget.glade.h:20
-msgid "Pause all downloads"
-msgstr "ཕབ་ལེན་ཚུ་ཆ་མཉམ་ ཐེམས་"
-
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:27
 msgid "Pause download"
 msgstr "ཕབ་ལེན་ཐེམས་"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:28
 msgid "Pause the download"
 msgstr "ཕབ་ལེན་འདི་ཐེམས་"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:29
 msgid "Properties"
 msgstr "རྒྱུ་དངོས་ཚུ་"
 
-#: ../data/gwget.glade.h:24
+#: ../data/gwget.glade.h:30
 #: ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "ལོག་རིམ་"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:31
 msgid "Recursive options"
 msgstr "ལོག་རིམ་གདམ་ཁ་ཚུ་"
 
-#: ../data/gwget.glade.h:26
-#: ../src/main_window_cb.c:713
+#: ../data/gwget.glade.h:32
+#: ../src/main_window_cb.c:718
 msgid "Remove all"
 msgstr "ཆ་མཉམ་རྩ་བསྐྲད་གཏང་"
 
-#: ../data/gwget.glade.h:27
-#: ../src/main_window_cb.c:649
+#: ../data/gwget.glade.h:33
+#: ../src/main_window_cb.c:652
 msgid "Remove completed"
 msgstr "མཇུག་བསྡུ་ཡོད་མི་འདི་ རྩ་བསྐྲད་གཏང་"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:34
 msgid "Remove from List"
 msgstr "ཐོ་ཡིག་ནང་ལས་ རྩ་བསྐྲད་གཏང་"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:35
 msgid "Remove from list"
 msgstr "ཐོ་ཡིག་ནང་ལས་ རྩ་བསྐྲད་གཏང་"
 
-#: ../data/gwget.glade.h:30
-#: ../src/main_window_cb.c:681
+#: ../data/gwget.glade.h:36
+#: ../src/main_window_cb.c:686
 msgid "Remove inactive"
 msgstr "ཤུགས་མེད་རྩ་བསྐྲད་གཏང་"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:37
 msgid "Resume all"
 msgstr "ཆ་མཉམ་ བསྐྱར་ལོག་འབད་"
 
-#: ../data/gwget.glade.h:32
-msgid "Resume all downloads"
-msgstr "ཕབ་ལེན་ཚུ་ཆ་མཉམ་ བསྐྱར་ལོག་འབད་"
+#: ../data/gwget.glade.h:38
+msgid "Save in:"
+msgstr "ནང་ལུ་སྲུངས་:"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:39
 msgid "Stat_usbar"
 msgstr "གནས་ཚད་ཕྲ་རིང་(_u)"
 
-#: ../data/gwget.glade.h:34
-msgid "Stop and delete downloaded file"
-msgstr "བཀག་ཞིནམ་ལས་ ཕབ་ལེན་འབད་ཡོད་པའི་ཡིག་སྣོད་འདི་ བཏོན་གཏང་"
-
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:40
 msgid "The index file only"
 msgstr "ཟུར་ཐོའི་ཡིག་སྣོད་རྐྱངམ་ཅིག་"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:41
 msgid "This site (mirror)"
 msgstr "ས་ཁོངས་(ངོ་འཆར་)འདི་"
 
-#: ../data/gwget.glade.h:37
-#: ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:42
 msgid "URL:"
 msgstr "ཡུ་ཨར་ཨེལ་: "
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:43
+msgid "Verify..."
+msgstr "བདེན་སྦྱོར་འབད་་་"
+
+#: ../data/gwget.glade.h:44
+msgid "_Archivo"
+msgstr "ཨར་ཅི་ཝོ།(_A)"
+
+#: ../data/gwget.glade.h:45
 msgid "_Download"
 msgstr "ཕབ་ལེན་(_D)"
 
-#: ../data/gwget.glade.h:39
-msgid "_New"
-msgstr "གསརཔ་(_N)"
+#: ../data/gwget.glade.h:46
+msgid "_Editar"
+msgstr "ཏུན་དཔ།(_E)"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:47
 msgid "_Toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་(_T)"
+
+#: ../data/gwget.glade.h:48
+msgid "_View"
+msgstr "སྟོན།(_V)"
+
+#: ../data/gwget.glade.h:49
+msgid "gtk-about"
+msgstr "ཇི་ཊི་ཀེ་སྐོར་ལས།"
+
+#: ../data/gwget.glade.h:50
+msgid "gtk-cancel"
+msgstr "ཇི་ཊི་ཀེ་-ཆ་མེད་གཏང་།"
+
+#: ../data/gwget.glade.h:51
+msgid "gtk-close"
+msgstr "ཇི་ཊི་ཀེ་ཁ་བསྡམ།"
+
+#: ../data/gwget.glade.h:52
+msgid "gtk-new"
+msgstr "ཇི་ཊི་ཀེ་གསརཔ།"
+
+#: ../data/gwget.glade.h:53
+msgid "gtk-ok"
+msgstr "ཇི་ཊི་ཀེ་བཏུབ།"
+
+#: ../data/gwget.glade.h:54
+msgid "gtk-preferences"
+msgstr "ཇི་ཊི་ཀེ་-དགའ་གདམ་ཚུ།"
+
+#: ../data/gwget.glade.h:55
+msgid "gtk-properties"
+msgstr "ཇི་ཊི་ཀེ་-རྒྱུ་དངོས་ཚུ།"
+
+#: ../data/gwget.glade.h:56
+msgid "gtk-quit"
+msgstr "ཇི་ཊི་ཀེ་སྤང་།"
+
+#: ../data/gwget.glade.h:57
+msgid "label"
+msgstr "ཁ་ཡིག།"
+
+#: ../data/gwget.glade.h:58
+msgid "local_file_text"
+msgstr "ཉེ་གནས་ཡིག་སྣོད་ཚིག་ཡིག(_f)(_t)"
+
+#: ../data/gwget.glade.h:59
+msgid "url_text"
+msgstr "ཡུ་ཨར་ཨེལ་ཚིག་ཡིག(_t)"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -314,18 +363,6 @@ msgstr "གནས་ཚད་ཕྲ་རིང་ ཀྲམ་སྟོན་�
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
 msgstr "ལག་ཆས་ཕྲ་རིང་ བཀྲམ་སྟོན་འབད་ནི་དང་མི་འབད་ནི་ཨིན་ན་"
-
-#: ../data/newdownload.glade.h:1
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">ཕབ་ལེན་གསརཔ་</span>"
-
-#: ../data/newdownload.glade.h:2
-msgid "New Download"
-msgstr "ཕབ་ལེན་གསརཔ་"
-
-#: ../data/newdownload.glade.h:3
-msgid "Save in:"
-msgstr "ནང་ལུ་སྲུངས་:"
 
 #: ../data/preferences.glade.h:1
 msgid "   "
@@ -495,160 +532,160 @@ msgstr "མ་ཤེསཔ་"
 msgid "Failed"
 msgstr "འཐུས་ཤོར་བྱུང་ཡོདཔ་"
 
-#: ../src/eggtrayicon.c:145
-msgid "Orientation"
-msgstr "ཁ་ཕྱོགས་"
-
-#: ../src/eggtrayicon.c:146
-msgid "The orientation of the tray."
-msgstr "ཤོག་སྣོད་ཀྱི་ཁ་ཕྱོགས།"
-
-#: ../src/eggtrayicon.c:483
-msgid "Notification"
-msgstr "བརྡ་བསྐུལ་"
-
-#: ../src/gwget_data.c:195
+#: ../src/gwget_data.c:196
 msgid "stalled"
 msgstr "གཞི་བཙུགས་འབད་ཡོདཔ་"
 
-#: ../src/gwget_data.c:229
+#: ../src/gwget_data.c:228
 msgid "Waiting"
 msgstr "བསྒུག་དོ་"
 
-#: ../src/gwget_data.c:231
+#: ../src/gwget_data.c:230
 msgid "Not Started"
 msgstr "འགོ་མ་བཙུགས་"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:232
 msgid "Not Running"
 msgstr "གཡོག་མ་བཀོལ་"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:234
 msgid "Not Connected"
 msgstr "མ་མཐུད་"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:236
 msgid "Connected"
 msgstr "མཐུད་ཡོདཔ་"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:238
 msgid "Retrieving"
 msgstr "སླར་འདྲེན་འབད་དོ་"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:240
 msgid "Completed"
 msgstr "མཇུག་བསྡུ་ཡོདཔ་"
 
-#: ../src/gwget_data.c:245
-#, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
-msgstr ""
-"ཕབ་ལེན་མཇུག་བསྡུ་ཡོདཔ་\n"
-"(%s)"
-
-#: ../src/gwget_data.c:252
+#: ../src/gwget_data.c:244
 msgid "Error"
 msgstr "འཛོལ་བ་"
 
-#: ../src/gwget_data.c:693
+#: ../src/gwget_data.c:685
 msgid "Unable to add this download"
 msgstr "ཕབ་ལེན་འདི་ ཁ་སྐོང་བརྐྱབ་མ་ཚུགས་"
 
-#: ../src/gwget_data.c:694
+#: ../src/gwget_data.c:686
 msgid "This download is already added"
 msgstr "ཕབ་ལེན་འདི་ ཧེ་མ་ལས་ཁ་སྐོང་བརྐྱབས་ཡོདཔ་"
 
-#: ../src/gwget_data.c:742
-#: ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1143
-#: ../src/main_window_cb.c:1162
+#: ../src/gwget_data.c:734
+#: ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1256
+#: ../src/main_window_cb.c:1275
 msgid "Error opening file"
 msgstr "ཡིག་སྣོད་ཁ་ཕྱེ་བའི་ཚེ་ འཛོལ་བ་"
 
-#: ../src/gwget_data.c:742
-#: ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1143
+#: ../src/gwget_data.c:734
+#: ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1256
 msgid "Couldn't open the file"
 msgstr "ཡིག་སྣོད་ཁ་ཕྱེ་མ་ཚུགས་"
 
-#: ../src/gwget_data.c:780
+#: ../src/gwget_data.c:782
 msgid "Download Complete"
 msgstr "མཇུག་བསྡུཝ་འབད་ ཕབ་ལེན་འབད་"
 
-#: ../src/main.c:230
-#: ../src/main_window_cb.c:188
-msgid "Gwget"
-msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་"
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "བརྡ་བསྐུལ་མངའ་ཁོངས་འདི་ནང་ཇི་ཌབ་ལུ་གེཊི་གསར་བཙུགས་འབད་ནི།"
 
-#: ../src/main.c:249
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "ཕབ་ལེན་དོན་ལུ་འགྲོ་ཡུལ་སྣོད་ཐོ།"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[ཡུ་ཨར་ཨེལ]"
+
+#: ../src/main.c:244
+#: ../src/main.c:276
 msgid "Gwget Download Manager"
 msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་ ཕབ་ལེན་འཛིན་སྐྱོང་པ་"
 
-#: ../src/main_window.c:433
+#: ../src/main.c:262
+#: ../src/main_window_cb.c:191
+msgid "Gwget"
+msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་"
+
+#: ../src/main_window.c:429
 msgid "File Name"
 msgstr "ཡིག་སྣོད་མིང་"
 
-#: ../src/main_window.c:441
+#: ../src/main_window.c:437
 msgid "State"
 msgstr "གནས་ལུགས་"
 
-#: ../src/main_window.c:453
+#: ../src/main_window.c:449
 msgid "Current Size"
 msgstr "ད་ལྟོའི་ཚད་"
 
-#: ../src/main_window.c:465
+#: ../src/main_window.c:461
 msgid "Total Size"
 msgstr "ཚད་བསྡོམས་"
 
-#: ../src/main_window.c:476
-#: ../src/main_window.c:482
+#: ../src/main_window.c:472
+#: ../src/main_window.c:478
 msgid "Percentage"
 msgstr "བརྒྱ་ཆ་"
 
-#: ../src/main_window.c:489
+#: ../src/main_window.c:485
 msgid "Elapsed Time"
 msgstr "ཐལ་སོང་བའི་ཆུ་ཚོད་"
 
-#: ../src/main_window.c:500
+#: ../src/main_window.c:496
 msgid "Remaining Time"
 msgstr "ཆུ་ཚོད་ལྷག་ལུས་"
 
-#: ../src/main_window.c:511
+#: ../src/main_window.c:507
 msgid "Speed"
 msgstr "མགྱོགས་ཚད་"
 
-#: ../src/main_window.c:558
+#: ../src/main_window.c:554
 msgid "Error starting the download"
 msgstr "ཕབ་ལེན་འགོ་བཙུགཔ་ད་ འཛོལ་བ་"
 
-#: ../src/main_window.c:558
+#: ../src/main_window.c:554
 msgid "There was an unexpected error starting the download"
 msgstr "ཕབ་ལེན་འབདཝ་ད་ རེ་བ་མེད་པའི་འཛོལ་བ་ཅིག་བྱུང་ནུག་"
 
-#: ../src/main_window.c:795
-msgid "Cancel current downloads?"
-msgstr "ད་ལྟོའི་ཕབ་ལེན་འདི་ ཆ་མེད་གཏང་ནི་ཨིན་ན་?"
+#: ../src/main_window.c:790
+msgid "Stop current downloads?"
+msgstr "ད་ལྟོའི་ཕབ་ལེན་ཚུ་བཀག་ནི་ཨིན་ན?"
 
-#: ../src/main_window.c:796
+#: ../src/main_window.c:791
 msgid "There is at least one active download left. Really cancel all running transfers?"
 msgstr "ཤུགས་ལྡན་གྱི་ཕབ་ལེན་ཅིག་འདི་ ད་ལྟོ་ཡང་ཡོདཔ་ཨིན། གཡོག་བཀོལ་གནས་སོར་ཚུ་ཆ་མཉམ་ ཐད་རི་འབའ་རི་ཆ་མེད་གཏང་ནི་ཨིན་ན་?"
 
-#: ../src/main_window_cb.c:101
+#: ../src/main_window.c:791
+msgid "Exit"
+msgstr "ཕྱིར་ཐོན།"
+
+#: ../src/main_window_cb.c:105
 msgid "Error in download"
 msgstr "ཕབ་ལེན་ནང་ལུ་འཛོལ་བ་"
 
-#: ../src/main_window_cb.c:191
+#: ../src/main_window_cb.c:194
 msgid "Download Manager for GNOME."
 msgstr "ཇི་ནོམ་གྱི་དོན་ལུ་ འཛིན་སྐྱོང་པ་ཕབ་ལེན་འབད།"
 
-#: ../src/main_window_cb.c:562
-#: ../src/new_window.c:139
+#: ../src/main_window_cb.c:196
+msgid "translator-credits"
+msgstr "སྐད་སྒྱུར་པ་-ངོ་བསྟོད་"
+
+#: ../src/main_window_cb.c:565
+#: ../src/new_window.c:136
 msgid "Select Folder"
 msgstr "སྣོད་འཛིན་ སེལ་འཐུ་འབད་"
 
-#: ../src/main_window_cb.c:618
+#: ../src/main_window_cb.c:621
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -657,52 +694,70 @@ msgstr ""
 "ད་ལྟོའི་ཕབ་ལེན་འདི་ ཐད་རི་འབའ་རི་ཆ་མེད་གཏང་ན་?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:619
-msgid "Cancel download?"
-msgstr "ཕབ་ལེན་འདི་ཆ་མེད་གཏང་ནི་ཨིན་ན?"
+#: ../src/main_window_cb.c:622
+msgid "Delete download?"
+msgstr "ཕབ་ལེན་བཏོན་གཏང་ནི་ཨིན་ན?"
 
-#: ../src/main_window_cb.c:649
+#: ../src/main_window_cb.c:622
+msgid "Delete"
+msgstr "བཏོན་གཏང་།"
+
+#: ../src/main_window_cb.c:652
 msgid "Really remove completed downloads from the list?"
 msgstr "མཇུག་བསྡུ་ཡོད་པའི་ཕབ་ལེན་ཚུ་ ཐོ་ཡིག་ནང་ལས་ ཐད་རི་འབའ་རི་རྩ་བསྐྲད་གཏང་ན་?"
 
-#: ../src/main_window_cb.c:649
+#: ../src/main_window_cb.c:652
 msgid "Remove"
 msgstr "རྩ་བསྐྲད་"
 
-#: ../src/main_window_cb.c:681
+#: ../src/main_window_cb.c:686
 msgid "Really remove inactive downloads from the list?"
 msgstr "ཤུགས་མེད་ཕབ་ལེན་ཚུ་ ཐད་རི་འབའ་རི་ ཐོ་ཡིག་ནང་ལས་ རྩ་བསྐྲད་གཏང་ན་?"
 
-#: ../src/main_window_cb.c:713
+#: ../src/main_window_cb.c:718
 msgid "Really remove all downloads from the list?"
 msgstr "ཐོ་ཡིག་ནང་ལས་ ཕབ་ལེན་ཆ་མཉམ་ར་ རྩ་བསྐྲད་གཏང་ན་?"
 
-#: ../src/main_window_cb.c:1095
+#: ../src/main_window_cb.c:854
+#: ../src/main_window_cb.c:872
+#, c-format
+msgid "error %d when accessing %s: %s\n"
+msgstr "འཛུལ་སྤྱོད་འབད་བའི་སྐབས%dའཛོལ་བ་ %s: %s\n"
+
+#: ../src/main_window_cb.c:884
+msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+msgstr "<span weight=\"bold\">ཨེམ་ཌི་༥་སམ་ ཆོག་ཡིག་ཞིབ་དཔྱད་འབད།</span>"
+
+#: ../src/main_window_cb.c:887
+msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+msgstr "<span weight=\"bold\">ཨེབ་ཌི་༥་ འཐུས་ཤོར་འབྱུང་ཡོད་མི་ཞིབ་དཔྱད་འབད།</span>"
+
+#: ../src/main_window_cb.c:1208
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "ཕབ་ལེན་མགྱོགས་ཚད་གསརཔ་འདི་གསརཔ་ ཡངན་ སླར་འགོ་བཙུགས་ཡོད་པའི་ཕབ་ལེན་རྐྱངམ་ཅིག་ལུ་ འཇུག་སྤྱོད་འབད་འོང་།"
 
-#: ../src/main_window_cb.c:1111
+#: ../src/main_window_cb.c:1224
 #, c-format
 msgid "Remove %s ?"
 msgstr " %s འདི་རྩ་བསྐྲད་གཏང་ནི་ཨིན་ན་?"
 
-#: ../src/main_window_cb.c:1112
+#: ../src/main_window_cb.c:1225
 msgid "Really remove this download from the list?"
 msgstr "ཐོ་ཡིག་ནང་ལས་ཐད་རི་འབའ་རི་ ཕབ་ལེན་འདི་རྩ་བསྐྲད་གཏང་ནི་ཨིན་ན?"
 
-#: ../src/main_window_cb.c:1112
+#: ../src/main_window_cb.c:1225
 msgid "Remove download"
 msgstr "ཕབ་ལེན་འདི་རྩ་བསྐྲད་གཏང་"
 
-#: ../src/main_window_cb.c:1162
+#: ../src/main_window_cb.c:1275
 msgid "Couldn't open the folder"
 msgstr "སྣོད་འཛིན་ཁ་ཕྱེ་མ་ཚུགས་"
 
-#: ../src/systray.c:151
+#: ../src/systray.c:120
 msgid "Nothing"
 msgstr "ག་ནི་ཡང་མེདཔ་"
 
-#: ../src/systray.c:158
+#: ../src/systray.c:127
 msgid "Downloads"
 msgstr "ཕབ་ལེན་ཚུ་"
 
@@ -750,4 +805,39 @@ msgstr "ཕབ་ལེན་འདི་འཕྲོ་མཐུད་མི་
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr "དམིགས་གཏད་སྣོད་ཐོ་ལུ་ འབྲི་མི་བཏུབ་"
+
+#~ msgid "gwget application"
+#~ msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་ གློག་རིམ་"
+#~ msgid "gwget automation factory"
+#~ msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་ འཕྲུལ་སྤྱོད་འཕྲུལ་ཁང་"
+#~ msgid "About Gwget"
+#~ msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་གི་སྐོར་ལས་"
+#~ msgid "GNU GPL Version 2"
+#~ msgstr "ཇི་ཨེན་ཡུ་ ཇི་པི་ཨེལ་ འཐོན་རིམ་ ༢"
+#~ msgid "Gwget: Download Manager for GNOME"
+#~ msgstr "ཇི་ཌབ་ལུ་ཇི་ཨི་ཊི་: ཇི་ནོམ་གྱི་དོན་ལུ་ འཛིན་སྐྱོང་པ་ཕབ་ལེན་འབད་"
+#~ msgid "<span weight=\"bold\">Download:</span>"
+#~ msgstr "<span weight=\"bold\">ཕབ་ལེན་:</span>"
+#~ msgid "<span weight=\"bold\">Properties</span>"
+#~ msgstr "<span weight=\"bold\">རྒྱུ་དངོས་ཚུ་</span>"
+#~ msgid "New download"
+#~ msgstr "ཕབ་ལེན་གསརཔ་"
+#~ msgid "Pause all downloads"
+#~ msgstr "ཕབ་ལེན་ཚུ་ཆ་མཉམ་ ཐེམས་"
+#~ msgid "Resume all downloads"
+#~ msgstr "ཕབ་ལེན་ཚུ་ཆ་མཉམ་ བསྐྱར་ལོག་འབད་"
+#~ msgid "Stop and delete downloaded file"
+#~ msgstr "བཀག་ཞིནམ་ལས་ ཕབ་ལེན་འབད་ཡོད་པའི་ཡིག་སྣོད་འདི་ བཏོན་གཏང་"
+#~ msgid "Orientation"
+#~ msgstr "ཁ་ཕྱོགས་"
+#~ msgid "The orientation of the tray."
+#~ msgstr "ཤོག་སྣོད་ཀྱི་ཁ་ཕྱོགས།"
+#~ msgid "Notification"
+#~ msgstr "བརྡ་བསྐུལ་"
+#~ msgid ""
+#~ "Download Completed\n"
+#~ "(%s)"
+#~ msgstr ""
+#~ "ཕབ་ལེན་མཇུག་བསྡུ་ཡོདཔ་\n"
+#~ "(%s)"
 
