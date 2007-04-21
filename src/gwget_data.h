@@ -117,6 +117,7 @@ GwgetData * gwget_data_new (gchar *url);
 void gwget_data_set_filename(GwgetData* gwgetdata,gchar *str);
 void gwget_data_start_download(GwgetData *gwgetdata);
 void gwget_data_set_state (GwgetData *gwgetdata, DlState state);
+void gwget_data_set_state_no_sync (GwgetData *gwgetdata, DlState state);
 void gwget_data_update_statistics (GwgetData *gwgetdata);
 void gwget_data_set_total_size (GwgetData *gwgetdata,guint64 total_size);
 GwgetData* gwget_data_get_selected(void);

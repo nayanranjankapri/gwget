@@ -51,13 +51,18 @@ convert_time2str (gchar *buffer, guint32 time)
 	     (gint)((time % 3600) / 60), (gint)(time % 60));
 }
 
+void
+gwget_data_set_state_no_sync (GwgetData *gwgetdata, DlState state) 
+{
+	gwgetdata->state=state;
+	gwget_data_update_statistics_ui(gwgetdata);
+}
 
 
 void
 gwget_data_set_state (GwgetData *gwgetdata, DlState state) 
 {
-	gwgetdata->state=state;
-	gwget_data_update_statistics_ui(gwgetdata);
+	gwget_data_set_state_no_sync(gwgetdata, state);
 	gwget_remember_downloads();
 }
 
@@ -330,12 +335,12 @@ gwget_data_start_download(GwgetData *gwgetdata)
 	number=count_download_in_progress();
 
 	if (gwget_pref.limit_simultaneousdownloads==TRUE && number>=gwget_pref.max_simultaneousdownloads) {
-		gwget_data_set_state(gwgetdata,DL_WAITING);
+		gwget_data_set_state_no_sync(gwgetdata,DL_WAITING);
 		return;
 	}
 
 	/* Put the not connected state before */
-	gwget_data_set_state(gwgetdata,DL_NOT_CONNECTED);
+	gwget_data_set_state_no_sync(gwgetdata,DL_NOT_CONNECTED);
 	gwget_data_update_statistics_ui(gwgetdata);
 	
 	/* First check if we are not starting an already started download */
@@ -575,7 +580,6 @@ gwget_data_set_filename(GwgetData* gwgetdata,gchar *str)
 	gwgetdata->local_filename = g_strconcat (gwgetdata->dir, 
 			                         str,
 						 NULL);
-	gwget_remember_downloads();
 }
 
 /* Return the gwgetdata that is selected in the treeview */
@@ -669,8 +673,6 @@ gwget_data_set_filename_from_url(GwgetData *gwgetdata,gchar *url)
 	} else {
 		gwgetdata->filename = g_strdup(filename);
 	}
-
-	gwget_remember_downloads();
 }
 
 /* Add a gwgetdata to the main window */

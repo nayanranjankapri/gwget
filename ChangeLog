@@ -1,3 +1,11 @@
+2007-04-21  David Sedeño <david@alderia.com
+	Patch from Brian Fulkerson <brian@deftdesigns.net> for reduce the
+	syncs in gconf, useful with large download list.
+
+	* src/gwget_data.[ch]: new function gwget_data_set_state_no_sync no
+	set the state but not update the state in gconf.
+	* src/main_window.c: Use gwget_data_set_state_no_sync.
+
 2007-02-08  David Sedeño <david@alderia.com
 
 	* src/main_window_cb.c (on_compare_md5_clicked): Clean the code for

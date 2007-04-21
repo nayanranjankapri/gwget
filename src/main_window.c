@@ -327,19 +327,19 @@ gwget_get_defaults_from_gconf(void)
 			} else {
 				there_are_completed_on_startup = TRUE;
 				new_download(data);
-				gwget_data_set_state(data,DL_COMPLETED);
+				gwget_data_set_state_no_sync(data,DL_COMPLETED);
 				continue;
 			}
 		}
 		    		
-		gwget_data_set_state(data,DL_NOT_RUNNING); 
+		gwget_data_set_state_no_sync(data,DL_NOT_RUNNING); 
 		if (gwget_pref.resume_at_start && data->state!=DL_COMPLETED) {
 			gwget_data_start_download(data);
 		} 
 		/* FIXME: put all the cases (error, retriving...) */
 		
 		if (state==DL_COMPLETED) {
-			gwget_data_set_state(data, state);
+			gwget_data_set_state_no_sync(data, state);
 		}
 	}
 	/*
