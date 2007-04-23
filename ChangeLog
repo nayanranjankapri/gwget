@@ -1,5 +1,10 @@
 2007-04-23  David Sedeño <david@alderia.com>
 
+	
+	* data/org.gnome.gwget.service.in: Add .service for dbus. Fix bug
+	#425931.
+	* data/Makefile.am: Create the .service file for dbus.
+
 	* src/gwget_data.c: Set the gnome proxy setting correctly. Fix bug
 	#432621. Patch from Robert Clark (gnome-bugzilla@ratty.org.uk).
 
