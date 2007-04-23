@@ -1,4 +1,9 @@
-2007-04-21  David Sedeño <david@alderia.com
+2007-04-23  David Sedeño <david@alderia.com>
+
+	* src/gwget_data.c: Set the gnome proxy setting correctly. Fix bug
+	#432621. Patch from Robert Clark (gnome-bugzilla@ratty.org.uk).
+
+2007-04-21  David Sedeño <david@alderia.com>
 	Patch from Brian Fulkerson <brian@deftdesigns.net> for reduce the
 	syncs in gconf, useful with large download list.
 
@@ -6,7 +11,7 @@
 	set the state but not update the state in gconf.
 	* src/main_window.c: Use gwget_data_set_state_no_sync.
 
-2007-02-08  David Sedeño <david@alderia.com
+2007-02-08  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c (on_compare_md5_clicked): Clean the code for
 	the transient window. Now in glade file.
@@ -19,7 +24,7 @@
 	* src/new_window.c: Fix a bug introduced about not take the correct
 	entry text.
 
-2007-02-07  David Sedeño <david@alderia.com
+2007-02-07  David Sedeño <david@alderia.com>
 
 	* data/newdownload.glade: remove. Put in the main gwget.glade file.
 	* data/gwget.glade: Add the new_window from the newdownload file.
@@ -33,7 +38,7 @@
 	callback).
 	* data/gwget.glade: Remove labels from the dialog.
 
-2007-02-05  David Sedeño <david@alderia.com
+2007-02-05  David Sedeño <david@alderia.com>
 
 	* src/main.c: 
 		- Port to Goption. 
@@ -42,7 +47,7 @@
 		passed in command line. Fixes #403810.
 		
 
-2007-02-02  David Sedeño <david@alderia.com
+2007-02-02  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Use of glade-3 format. Get rid of bonobo (-600!
 	lines)
@@ -72,7 +77,7 @@
 	of compare_md5 button when calling properties window
 	* src/Makefile.am: added md5.{c,h} to gwget_SOURCES
 
-2007-01-19  David Sedeño <david@alderia.com
+2007-01-19  David Sedeño <david@alderia.com>
 
 	* src/gwget_data.c: Activate clear_button when a donwload finish.
 	* src/main_window_cb.c: Set sensitive of clear_button to false when
@@ -86,7 +91,7 @@
 	* include/eggtryicon.h: Removed
 	* include/systray.h: Include notify. 
 
-2007-01-18  David Sedeño <david@alderia.com
+2007-01-18  David Sedeño <david@alderia.com>
 
 	* src/eggtrayicon.c: Removed.
 	* po/Makefile.in.in: Remove from svn

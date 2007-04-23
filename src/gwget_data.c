@@ -453,8 +453,8 @@ gwget_data_start_download(GwgetData *gwgetdata)
 					user_password=g_strdup_printf("%s:%s@",gwget_pref.gnome_proxy_user,gwget_pref.gnome_proxy_password);
 				}
 
-				setenv("http_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
-				setenv("ftp_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL),1);
+				setenv("http_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.gnome_http_proxy),":",g_strdup_printf("%d",gwget_pref.gnome_http_proxy_port),NULL),1);
+				setenv("ftp_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.gnome_http_proxy),":",g_strdup_printf("%d",gwget_pref.gnome_http_proxy_port),NULL),1);
 		 	        argv[arg]="-Yon";
 				arg++;
 			}
