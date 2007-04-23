@@ -275,7 +275,7 @@ void
 on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 {
 	gchar *xml_file = NULL;
-	GtkWidget *window = NULL,*entry=NULL, *checkbutton=NULL;
+	GtkWidget *window = NULL,*entry=NULL, *checkbutton=NULL, *main_window = NULL;
 	
 	if (!xml_pref) {
 		xml_file=g_build_filename(DATADIR,"preferences.glade",NULL);
@@ -283,8 +283,11 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 		glade_xml_signal_autoconnect(xml_pref);
 	}
 		
+	main_window = glade_xml_get_widget (xml, "main_window");
 	window = glade_xml_get_widget (xml_pref, "pref_window");
 	entry = glade_xml_get_widget(xml_pref,"save_in_entry");
+
+	gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(main_window));
 
 	if (gwget_pref.download_dir && strlen(gwget_pref.download_dir)!=0) {
 		gtk_entry_set_text(GTK_ENTRY(entry), gwget_pref.download_dir);
