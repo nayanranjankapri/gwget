@@ -101,9 +101,11 @@ AC_ARG_WITH([epiphany-version],
                        [Whether to use epiphany version 1.6 or 1.8 or 1.10 or 2.14 (default 1.6)]),
         [EPHY_VER="$withval"])
 
-dnl try to autodetect Epiphany 1.2, 1.4, 1.6, 1.8, 1.10, 2.14, 2.15, 2.16 or 2.17
+dnl try to autodetect Epiphany 1.2, 1.4, 1.6, 1.8, 1.10, 2.14, 2.15, 2.16, 2.17 or 2.18
 EPHY_AUTODETECT="(autodetect)"
-if pkg-config --exists epiphany-2.17; then
+if pkg-config --exists epiphany-2.18; then
+	EPHY_VER=2.18
+elif pkg-config --exists epiphany-2.17; then
         EPHY_VER=2.17
 elif pkg-config --exists epiphany-2.16; then
         EPHY_VER=2.16
@@ -164,7 +166,10 @@ elif test "x$EPHY_VER" = "x2.17"; then
           EPIPHANY_PKGCONFIG=epiphany-2.17
           EPIPHANY_REQUIRED=2.17
           EPIPHANY_SHORTVER=217
-          
+elif test "x$EPHY_VER" = "x2.18"; then
+	  EPIPHANY_PKGCONFIG=epiphany-2.18
+          EPIPHANY_REQUIRED=2.18
+	  EPIPHANY_SHORTVER=218
 else
      	AC_MSG_RESULT([no epiphany installed])
 fi
