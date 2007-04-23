@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-22 19:02+0000\n"
-"PO-Revision-Date: 2007-03-02 16:12+0200\n"
-"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"PO-Revision-Date: 2007-04-23 22:42+0100\n"
+"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,8 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
 
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1
+#: ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
@@ -30,7 +31,7 @@ msgstr "<b>نزِّل</b>"
 
 #: ../data/gwget.glade.h:3
 msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr ""
+msgstr "<b>ادخل MD5 جملة للتحقق</b>"
 
 #: ../data/gwget.glade.h:4
 msgid "<b>Properties</b>"
@@ -42,7 +43,7 @@ msgstr "<span weight=\"bold\">تنزيل جديد</span>"
 
 #: ../data/gwget.glade.h:6
 msgid "Ay_uda"
-msgstr ""
+msgstr "Ay_uda"
 
 #: ../data/gwget.glade.h:7
 msgid "Cancel"
@@ -58,23 +59,24 @@ msgstr "الغِ التنزيل"
 
 #: ../data/gwget.glade.h:10
 msgid "Compare md5 sum"
-msgstr ""
+msgstr "تحقق بـ md5"
 
 #: ../data/gwget.glade.h:11
 msgid "Continue"
 msgstr "إكمال"
 
 #: ../data/gwget.glade.h:12
-#, fuzzy
 msgid "Continue download"
-msgstr "إكمل مع التنزيل"
+msgstr "اكمل التنزيل"
 
 #: ../data/gwget.glade.h:13
 msgid "Continue with the download"
 msgstr "إكمل مع التنزيل"
 
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:629 ../src/main_window_cb.c:668
+#: ../data/gwget.glade.h:14
+#: ../src/main_window_cb.c:144
+#: ../src/main_window_cb.c:629
+#: ../src/main_window_cb.c:668
 #: ../src/main_window_cb.c:736
 msgid "Gwget - Download Manager"
 msgstr "Gwget - مدير التنزيل"
@@ -93,7 +95,7 @@ msgstr "الملف المحلي:"
 
 #: ../data/gwget.glade.h:18
 msgid "Md5 Sum:"
-msgstr ""
+msgstr "جملة Md5:"
 
 #: ../data/gwget.glade.h:19
 msgid "Multimedia files (Videos and images)"
@@ -112,12 +114,10 @@ msgid "Open directory"
 msgstr "إفتح الدليل"
 
 #: ../data/gwget.glade.h:23
-#, fuzzy
 msgid "Open file"
-msgstr "إفتح"
+msgstr "افتح ملف"
 
 #: ../data/gwget.glade.h:24
-#, fuzzy
 msgid "Open target directory"
 msgstr "إفتح الدليل الهدف"
 
@@ -141,19 +141,22 @@ msgstr "إيقاف هذا التنزيل"
 msgid "Properties"
 msgstr "الخصائص"
 
-#: ../data/gwget.glade.h:30 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:30
+#: ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "تكرار"
 
 #: ../data/gwget.glade.h:31
 msgid "Recursive options"
-msgstr "Recursive options"
+msgstr "الخيارات المترددة"
 
-#: ../data/gwget.glade.h:32 ../src/main_window_cb.c:718
+#: ../data/gwget.glade.h:32
+#: ../src/main_window_cb.c:718
 msgid "Remove all"
 msgstr "أزل الكل"
 
-#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:652
+#: ../data/gwget.glade.h:33
+#: ../src/main_window_cb.c:652
 msgid "Remove completed"
 msgstr "أزل المكتملة"
 
@@ -165,7 +168,8 @@ msgstr "أزل من القائمة"
 msgid "Remove from list"
 msgstr "أزل من القائمة"
 
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:686
+#: ../data/gwget.glade.h:36
+#: ../src/main_window_cb.c:686
 msgid "Remove inactive"
 msgstr "أزل الغير فعالة"
 
@@ -187,7 +191,7 @@ msgstr "ملفات الرئيسية فقط"
 
 #: ../data/gwget.glade.h:41
 msgid "This site (mirror)"
-msgstr "هذا الموقع(مرآة)"
+msgstr "هذا الموقع (مرآة)"
 
 #: ../data/gwget.glade.h:42
 msgid "URL:"
@@ -195,11 +199,11 @@ msgstr "العنوان:"
 
 #: ../data/gwget.glade.h:43
 msgid "Verify..."
-msgstr ""
+msgstr "تحقّق..."
 
 #: ../data/gwget.glade.h:44
 msgid "_Archivo"
-msgstr ""
+msgstr "_أرشيف"
 
 #: ../data/gwget.glade.h:45
 msgid "_Download"
@@ -207,68 +211,63 @@ msgstr "_التنزيل"
 
 #: ../data/gwget.glade.h:46
 msgid "_Editar"
-msgstr ""
+msgstr "_محرر"
 
 #: ../data/gwget.glade.h:47
 msgid "_Toolbar"
 msgstr "_شريط اﻷدوات"
 
 #: ../data/gwget.glade.h:48
-#, fuzzy
 msgid "_View"
-msgstr "_جديد"
+msgstr "_اعرض"
 
 #: ../data/gwget.glade.h:49
 msgid "gtk-about"
-msgstr ""
+msgstr "حول"
 
 #: ../data/gwget.glade.h:50
-#, fuzzy
 msgid "gtk-cancel"
 msgstr "إلغاء"
 
 #: ../data/gwget.glade.h:51
 msgid "gtk-close"
-msgstr ""
+msgstr "اغلق"
 
 #: ../data/gwget.glade.h:52
 msgid "gtk-new"
-msgstr ""
+msgstr "جديد"
 
 #: ../data/gwget.glade.h:53
 msgid "gtk-ok"
-msgstr ""
+msgstr "موافق"
 
 #: ../data/gwget.glade.h:54
-#, fuzzy
 msgid "gtk-preferences"
 msgstr "التفضيلات"
 
 #: ../data/gwget.glade.h:55
-#, fuzzy
 msgid "gtk-properties"
 msgstr "الخصائص"
 
 #: ../data/gwget.glade.h:56
 msgid "gtk-quit"
-msgstr ""
+msgstr "اخرج"
 
 #: ../data/gwget.glade.h:57
 msgid "label"
-msgstr ""
+msgstr "شارة"
 
 #: ../data/gwget.glade.h:58
 msgid "local_file_text"
-msgstr ""
+msgstr "نص_ملف_محلي"
 
 #: ../data/gwget.glade.h:59
 msgid "url_text"
-msgstr ""
+msgstr "نص_العنوان"
 
 #: ../data/gwget.schemas.in.h:1
-#, fuzzy
 msgid "Ask where to save each new download"
-msgstr "_إسئل إين بحفظ كل ملف"
+msgstr "إسئل أين يحفظ كل ملف"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
@@ -276,7 +275,7 @@ msgstr "تحويل الروابط"
 
 #: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
-msgstr "Convert to relative links in recursive mode."
+msgstr "تحويل لوصلات نسبية عند استعمال النسق الترددي."
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
@@ -288,15 +287,11 @@ msgstr "تنزيل صفحة المتطلبات"
 
 #: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
-msgstr "Follow relative links"
+msgstr "اتبع الوصلات النسبية"
 
 #: ../data/gwget.schemas.in.h:7
-msgid ""
-"If true, always ask for a destination folder when starting a new download. "
-"If false, always save in the default directory without asking the user."
-msgstr ""
-"إذا كان صحيحاً,فسئل  أين تحفظ الملفات عند بدأ تنزيل جديد.إذا كان خاطئ,فحفظ "
-"الملفات في الدليل الإفتراضي بدون سؤال المستخدم."
+msgid "If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user."
+msgstr "إذا كان صحيحاً,فسئل  أين تحفظ الملفات عند بدأ تنزيل جديد.إذا كان خاطئ,فحفظ الملفات في الدليل الإفتراضي بدون سؤال المستخدم."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -304,15 +299,15 @@ msgstr "أعلى حد لسرعة"
 
 #: ../data/gwget.schemas.in.h:9
 msgid "Limit number of simultaneous downloads"
-msgstr "Limit number of simultaneous downloads"
+msgstr "حد من عدد التنزيلات في نفس الوقت"
 
 #: ../data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
-msgstr "Maximum depth in recursive mode"
+msgstr "العمق الأقصى"
 
 #: ../data/gwget.schemas.in.h:11
 msgid "Maximum number of simultaneous downloads"
-msgstr "Maximum number of simultaneous downloads"
+msgstr "عدد التنزيلات في نفس الوقت"
 
 #: ../data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
@@ -364,11 +359,11 @@ msgstr "أظهر عمود حجم الملفات"
 
 #: ../data/gwget.schemas.in.h:24
 msgid "Whether to display the statusbar."
-msgstr "Whether to display the statusbar."
+msgstr "اذا يتم عرض شريط الحالة."
 
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
-msgstr "Whether to display the toolbar."
+msgstr "اذا يتم عرض شريط الأدوات."
 
 #: ../data/preferences.glade.h:1
 msgid "   "
@@ -416,7 +411,7 @@ msgstr "لا _تنشئ أدلة"
 
 #: ../data/preferences.glade.h:13
 msgid "Follow _relative links only"
-msgstr "Follow _relative links only"
+msgstr "ا_تبع الوصلات النسبية فقط"
 
 #: ../data/preferences.glade.h:14
 msgid "General"
@@ -424,7 +419,7 @@ msgstr "عام"
 
 #: ../data/preferences.glade.h:15
 msgid "Limit _number of simultaneous download to:"
-msgstr "Limit _number of simultaneous download to:"
+msgstr "حد من _عدد التنزيلات في نفس الوقت:"
 
 #: ../data/preferences.glade.h:16
 msgid "Network"
@@ -435,7 +430,6 @@ msgid "P_ort:"
 msgstr "الم_نفذ:"
 
 #: ../data/preferences.glade.h:18
-#, fuzzy
 msgid "Password:"
 msgstr "كلمة السر:"
 
@@ -481,7 +475,7 @@ msgstr "_نزل صفحة المتطلبات"
 
 #: ../data/preferences.glade.h:30
 msgid "_Elapsed Time"
-msgstr "_Elapsed Time"
+msgstr "الوقت ال_ماضي"
 
 #: ../data/preferences.glade.h:31
 msgid "_Limit download speed to:"
@@ -493,11 +487,11 @@ msgstr "إعداد _يدوي للبروكسي"
 
 #: ../data/preferences.glade.h:33
 msgid "_Maximum depth level:"
-msgstr "_Maximum depth level:"
+msgstr "ال_عمق الأقصى:"
 
 #: ../data/preferences.glade.h:34
 msgid "_Number of retries:"
-msgstr "_Number of retries:"
+msgstr "ع_دد الإعادات:"
 
 #: ../data/preferences.glade.h:35
 msgid "_Open files automatically after download"
@@ -508,12 +502,10 @@ msgid "_Percentage"
 msgstr "_النسبة المئوية"
 
 #: ../data/preferences.glade.h:37
-#, fuzzy
 msgid "_Proxy requires authentication"
-msgstr "يتطلب ال_خادم التوثّق"
+msgstr "يتطلب _خادم البروكسي التوثّق"
 
 #: ../data/preferences.glade.h:38
-#, fuzzy
 msgid "_User:"
 msgstr "_مستخدم:"
 
@@ -527,7 +519,7 @@ msgstr "ك.ب/ث"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
-msgstr "Forward downloads to GWGet"
+msgstr "مرر التنزيلات لمدير التنزيلات"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:2
 msgid "GWGet"
@@ -585,41 +577,42 @@ msgstr "غير قادر على إضافة هذا الملف"
 msgid "This download is already added"
 msgstr "هذا الملف تم تنزيله من قبل"
 
-#: ../src/gwget_data.c:734 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1256 ../src/main_window_cb.c:1275
+#: ../src/gwget_data.c:734
+#: ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1256
+#: ../src/main_window_cb.c:1275
 msgid "Error opening file"
 msgstr "خطاء في فتح الملف"
 
-#: ../src/gwget_data.c:734 ../src/main_window_cb.c:114
+#: ../src/gwget_data.c:734
+#: ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1256
 msgid "Couldn't open the file"
 msgstr "لم يستطع فتح الملف"
 
 #: ../src/gwget_data.c:782
-#, fuzzy
 msgid "Download Complete"
-msgstr "تمَّ التّحديث\n"
+msgstr "إنتهى التنزيل"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
-msgstr ""
+msgstr "ابدأ البرنامج في منطقة التنبيه"
 
 #: ../src/main.c:41
-#, fuzzy
 msgid "Destination directory for the download"
-msgstr "إكمل مع التنزيل"
+msgstr "الدليل الهدف للتنزيل"
 
 #: ../src/main.c:42
-#, fuzzy
 msgid "[URL]"
-msgstr "العنوان:"
+msgstr "[العنوان]"
 
-#: ../src/main.c:244 ../src/main.c:276
-#, fuzzy
+#: ../src/main.c:244
+#: ../src/main.c:276
 msgid "Gwget Download Manager"
-msgstr "مدير الصوت - الصفحة %d/%d"
+msgstr "مدير التنزيلات لجنوم"
 
-#: ../src/main.c:262 ../src/main_window_cb.c:191
+#: ../src/main.c:262
+#: ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "جي دبليوجيت"
 
@@ -639,7 +632,8 @@ msgstr "الحجم"
 msgid "Total Size"
 msgstr "الحجم الكلي"
 
-#: ../src/main_window.c:472 ../src/main_window.c:478
+#: ../src/main_window.c:472
+#: ../src/main_window.c:478
 msgid "Percentage"
 msgstr "النسبة"
 
@@ -664,20 +658,16 @@ msgid "There was an unexpected error starting the download"
 msgstr "خطاء غير متوقع عند بدء التنزبل"
 
 #: ../src/main_window.c:790
-#, fuzzy
 msgid "Stop current downloads?"
-msgstr "ايقاف العملية الحالية"
+msgstr "ايقاف التنزيلات الحالية؟"
 
 #: ../src/main_window.c:791
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
+msgid "There is at least one active download left. Really cancel all running transfers?"
 msgstr "هناك على الأقل تنزيل نشط .هل تريد حقاً إلغاء كل التبادلات؟"
 
 #: ../src/main_window.c:791
-#, fuzzy
 msgid "Exit"
-msgstr "إنهاء البرنامج"
+msgstr "انه"
 
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
@@ -689,9 +679,10 @@ msgstr "مدير التنزبل لجنوم."
 
 #: ../src/main_window_cb.c:196
 msgid "translator-credits"
-msgstr "فهد إبراهيم الجعيد <hade.alhira@gmail.com>"
+msgstr "فهد إبراهيم الجعيد <hade.alhira@gmail.com>جهاد عفيفي <djihed@gmail.com>"
 
-#: ../src/main_window_cb.c:565 ../src/new_window.c:136
+#: ../src/main_window_cb.c:565
+#: ../src/new_window.c:136
 msgid "Select Folder"
 msgstr "تحديد المجلد"
 
@@ -705,12 +696,10 @@ msgstr ""
 "(العنوان: %s)"
 
 #: ../src/main_window_cb.c:622
-#, fuzzy
 msgid "Delete download?"
-msgstr "وصلة التنزيل"
+msgstr "احذف التنزيل؟"
 
 #: ../src/main_window_cb.c:622
-#, fuzzy
 msgid "Delete"
 msgstr "حذف"
 
@@ -719,7 +708,6 @@ msgid "Really remove completed downloads from the list?"
 msgstr "هل تريد إزالة الملفات المكتملة من القائمة؟"
 
 #: ../src/main_window_cb.c:652
-#, fuzzy
 msgid "Remove"
 msgstr "احذف"
 
@@ -731,38 +719,36 @@ msgstr "هل تريد إزالة الملفات الغير نشطة من الق�
 msgid "Really remove all downloads from the list?"
 msgstr "هل تريد إزالة جميع الملفات؟"
 
-#: ../src/main_window_cb.c:854 ../src/main_window_cb.c:872
+#: ../src/main_window_cb.c:854
+#: ../src/main_window_cb.c:872
 #, c-format
 msgid "error %d when accessing %s: %s\n"
-msgstr ""
+msgstr "خطأ %d عند الدخول إلى %s: %s\n"
 
 #: ../src/main_window_cb.c:884
-#, fuzzy
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span weight=\"bold\">الروابط</span>"
+msgstr "<span weight=\"bold\">نجح تحقق MD5SUM </span>"
 
 #: ../src/main_window_cb.c:887
-#, fuzzy
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span weight=\"bold\">أعمدة القائمة</span>"
+msgstr "<span weight=\"bold\">فشل تحقق MD5SUM </span>"
 
 #: ../src/main_window_cb.c:1208
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "السرعة المحددة سوف يتم تنفيذها مع تنزيل جديد أو إعادة التنزيل"
 
 #: ../src/main_window_cb.c:1224
-#, fuzzy, c-format
+#, c-format
 msgid "Remove %s ?"
-msgstr "إ_زالة"
+msgstr "حذف  %s ؟"
 
 #: ../src/main_window_cb.c:1225
 msgid "Really remove this download from the list?"
 msgstr "هل تريد إزالة هذا التنزيل من القائمة؟"
 
 #: ../src/main_window_cb.c:1225
-#, fuzzy
 msgid "Remove download"
-msgstr "وصلة التنزيل"
+msgstr "حذف التنزيل"
 
 #: ../src/main_window_cb.c:1275
 msgid "Couldn't open the folder"
@@ -786,7 +772,7 @@ msgstr "الإتصال مرفوض\n"
 
 #: ../src/wget-log.c:127
 msgid "No route to host"
-msgstr "No route to host"
+msgstr "لا طريق للخادم"
 
 #: ../src/wget-log.c:129
 msgid "Connection refused when downloading URL:\n"
@@ -802,13 +788,14 @@ msgstr "بروتكول غير مدعوم - تحتاج إلى دبليوجيت >=
 
 #: ../src/wget-log.c:136
 msgid "Refusing to truncate existing file"
-msgstr "Refusing to truncate existing file"
+msgstr "رفض قص الملف الحالي"
 
 #: ../src/wget-log.c:138
 msgid "Unknown error"
 msgstr "خطأ غير معروف"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#: ../src/wget-log.c:149
+#: ../src/wget-log.c:155
 msgid "File not found"
 msgstr "الملف غير موجود"
 
