@@ -174,6 +174,7 @@ main_window(void)
 	}
 
 	systray_load();
+	gwget_pref.docked=TRUE;
 
 	/* Create the model for the "save in" option in new download dialog */
 	save_in_model = (GtkTreeModel*)gtk_list_store_new (1, G_TYPE_STRING);

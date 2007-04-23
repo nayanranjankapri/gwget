@@ -1,5 +1,6 @@
 2007-04-23  David Sedeño <david@alderia.com>
 
+	* src/main_window.c: Set the docked var to true.
 	* configure.in: Detect Epiphany 2.18
 	* data/gwget.glade: Set the icon name.
 	* data/org.gnome.gwget.service.in: Add .service for dbus. Fix bug
