@@ -1,5 +1,7 @@
 2007-05-28  David Sedeño <david@alderia.com>
 
+	* configure.in: Version 0.99
+	* NEWS: News for version 0.99
 	* src/Makefile.am: Add *.h files to sources
 	* data/gwget.glade: Fix spanish string in glade file. Fix bug #436322
 
