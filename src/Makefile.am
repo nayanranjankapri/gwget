@@ -26,13 +26,21 @@ gwget_SOURCES = \
 	$(BUILT_SOURCES) \
 	main.c\
 	main_window.c\
+	main_window.h\
 	main_window_cb.c\
+	main_window_cb.h\
 	gwget_data.c\
+	gwget_data.h\
 	wget-log.c\
+	wget-log.h\
 	utils.c\
+	utils.h\
 	custom-cell-renderer-progressbar.c\
+	custom-cell-renderer-progressbar.h\
 	new_window.c\
+	new_window.h\
 	systray.c \
+	systray.h \
 	gwget-application.c \
 	gwget-application.h \
 	md5.h \

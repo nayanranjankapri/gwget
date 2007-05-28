@@ -1,5 +1,6 @@
 2007-05-28  David Sedeño <david@alderia.com>
 
+	* src/Makefile.am: Add *.h files to sources
 	* data/gwget.glade: Fix spanish string in glade file. Fix bug #436322
 
 2007-04-23  David Sedeño <david@alderia.com>
