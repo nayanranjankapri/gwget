@@ -1,3 +1,7 @@
+2007-05-28  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Fix spanish string in glade file. Fix bug #436322
+
 2007-04-23  David Sedeño <david@alderia.com>
 
 	* src/main_window_cb.c: Set the preferences window transient of the
