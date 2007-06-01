@@ -1,7 +1,7 @@
 # Swedish messages for gwget.
-# Copyright (C) 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2007, 2007 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007.
 # Christian Rose <menthos@menthos.com>, 2005.
-# Daniel Nylander <po@danielnylander.se>, 2006.
 #
 # $Id: sv.po,v 1.4 2006/11/11 19:45:40 dnylande Exp $
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-18 21:11+0100\n"
-"PO-Revision-Date: 2007-02-18 21:14+0100\n"
+"POT-Creation-Date: 2007-05-29 03:35+0100\n"
+"PO-Revision-Date: 2007-06-01 15:45+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -40,44 +40,44 @@ msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Ny hämtning</span>"
 
 #: ../data/gwget.glade.h:6
-msgid "Ay_uda"
-msgstr "Hj_älp"
-
-#: ../data/gwget.glade.h:7
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:7
 msgid "Cancel download"
 msgstr "Avbryt hämtning"
 
-#: ../data/gwget.glade.h:9
+#: ../data/gwget.glade.h:8
 msgid "Cancel the download"
 msgstr "Avbryt hämtningen"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:9
 msgid "Compare md5 sum"
 msgstr "Jämför MD5-summa"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:10
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:11
 msgid "Continue download"
 msgstr "Fortsätt hämtning"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:12
 msgid "Continue with the download"
 msgstr "Fortsätt med hämtningen"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:13
 #: ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:629
-#: ../src/main_window_cb.c:668
-#: ../src/main_window_cb.c:736
+#: ../src/main_window_cb.c:632
+#: ../src/main_window_cb.c:671
+#: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Hämtningshanterare"
+
+#: ../data/gwget.glade.h:14
+msgid "Help"
+msgstr "Hjälp"
 
 #: ../data/gwget.glade.h:15
 msgid "Information"
@@ -149,12 +149,12 @@ msgid "Recursive options"
 msgstr "Alternativ för rekursivitet"
 
 #: ../data/gwget.glade.h:32
-#: ../src/main_window_cb.c:718
+#: ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Ta bort alla"
 
 #: ../data/gwget.glade.h:33
-#: ../src/main_window_cb.c:652
+#: ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Ta bort slutförda"
 
@@ -167,7 +167,7 @@ msgid "Remove from list"
 msgstr "Ta bort från listan"
 
 #: ../data/gwget.glade.h:36
-#: ../src/main_window_cb.c:686
+#: ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Ta bort inaktiva"
 
@@ -200,7 +200,7 @@ msgid "Verify..."
 msgstr "Verifiera..."
 
 #: ../data/gwget.glade.h:44
-msgid "_Archivo"
+msgid "_Archive"
 msgstr "_Arkiv"
 
 #: ../data/gwget.glade.h:45
@@ -208,7 +208,7 @@ msgid "_Download"
 msgstr "_Hämta"
 
 #: ../data/gwget.glade.h:46
-msgid "_Editar"
+msgid "_Edit"
 msgstr "R_edigera"
 
 #: ../data/gwget.glade.h:47
@@ -535,64 +535,64 @@ msgstr "Okänd"
 msgid "Failed"
 msgstr "Misslyckades"
 
-#: ../src/gwget_data.c:196
+#: ../src/gwget_data.c:201
 msgid "stalled"
 msgstr "fastnad"
 
-#: ../src/gwget_data.c:228
+#: ../src/gwget_data.c:233
 msgid "Waiting"
 msgstr "Väntar"
 
-#: ../src/gwget_data.c:230
+#: ../src/gwget_data.c:235
 msgid "Not Started"
 msgstr "Inte startad"
 
-#: ../src/gwget_data.c:232
+#: ../src/gwget_data.c:237
 msgid "Not Running"
 msgstr "Kör inte"
 
-#: ../src/gwget_data.c:234
+#: ../src/gwget_data.c:239
 msgid "Not Connected"
 msgstr "Inte ansluten"
 
-#: ../src/gwget_data.c:236
+#: ../src/gwget_data.c:241
 msgid "Connected"
 msgstr "Ansluten"
 
-#: ../src/gwget_data.c:238
+#: ../src/gwget_data.c:243
 msgid "Retrieving"
 msgstr "Hämtar"
 
-#: ../src/gwget_data.c:240
+#: ../src/gwget_data.c:245
 msgid "Completed"
 msgstr "Slutfört"
 
-#: ../src/gwget_data.c:244
+#: ../src/gwget_data.c:249
 msgid "Error"
 msgstr "Fel"
 
-#: ../src/gwget_data.c:685
+#: ../src/gwget_data.c:687
 msgid "Unable to add this download"
 msgstr "Kan inte lägga till denna hämtning"
 
-#: ../src/gwget_data.c:686
+#: ../src/gwget_data.c:688
 msgid "This download is already added"
 msgstr "Denna hämtning har redan lagts till"
 
-#: ../src/gwget_data.c:734
+#: ../src/gwget_data.c:736
 #: ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1256
-#: ../src/main_window_cb.c:1275
+#: ../src/main_window_cb.c:1259
+#: ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Fel vid öppnande av fil"
 
-#: ../src/gwget_data.c:734
+#: ../src/gwget_data.c:736
 #: ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1256
+#: ../src/main_window_cb.c:1259
 msgid "Couldn't open the file"
 msgstr "Kunde inte öppna filen"
 
-#: ../src/gwget_data.c:782
+#: ../src/gwget_data.c:784
 msgid "Download Complete"
 msgstr "Hämtning slutförd"
 
@@ -618,56 +618,56 @@ msgstr "Hämtningshanteraren Gwget"
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:429
+#: ../src/main_window.c:430
 msgid "File Name"
 msgstr "Filnamn"
 
-#: ../src/main_window.c:437
+#: ../src/main_window.c:438
 msgid "State"
 msgstr "Tillstånd"
 
-#: ../src/main_window.c:449
+#: ../src/main_window.c:450
 msgid "Current Size"
 msgstr "Aktuell storlek"
 
-#: ../src/main_window.c:461
+#: ../src/main_window.c:462
 msgid "Total Size"
 msgstr "Total storlek"
 
-#: ../src/main_window.c:472
-#: ../src/main_window.c:478
+#: ../src/main_window.c:473
+#: ../src/main_window.c:479
 msgid "Percentage"
 msgstr "Procentandel"
 
-#: ../src/main_window.c:485
+#: ../src/main_window.c:486
 msgid "Elapsed Time"
 msgstr "Förfluten tid"
 
-#: ../src/main_window.c:496
+#: ../src/main_window.c:497
 msgid "Remaining Time"
 msgstr "Återstående tid"
 
-#: ../src/main_window.c:507
+#: ../src/main_window.c:508
 msgid "Speed"
 msgstr "Hastighet"
 
-#: ../src/main_window.c:554
+#: ../src/main_window.c:555
 msgid "Error starting the download"
 msgstr "Fel vid start av hämtning"
 
-#: ../src/main_window.c:554
+#: ../src/main_window.c:555
 msgid "There was an unexpected error starting the download"
 msgstr "Det inträffade ett oväntat fel start av hämtningen"
 
-#: ../src/main_window.c:790
+#: ../src/main_window.c:791
 msgid "Stop current downloads?"
 msgstr "Stoppa aktuella hämtningar?"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:792
 msgid "There is at least one active download left. Really cancel all running transfers?"
 msgstr "Det finns åtminstone en aktiv hämtning kvar. Verkligen avbryta alla körande överföringar?"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:792
 msgid "Exit"
 msgstr "Avsluta"
 
@@ -688,12 +688,12 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "tp-sv@listor.tp-sv.se"
 
-#: ../src/main_window_cb.c:565
+#: ../src/main_window_cb.c:568
 #: ../src/new_window.c:136
 msgid "Select Folder"
 msgstr "Välj mapp"
 
-#: ../src/main_window_cb.c:621
+#: ../src/main_window_cb.c:624
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -702,64 +702,64 @@ msgstr ""
 "Verkligen avbryta aktuell hämtning?\n"
 "(Url: %s)"
 
-#: ../src/main_window_cb.c:622
+#: ../src/main_window_cb.c:625
 msgid "Delete download?"
 msgstr "Ta bort hämtning?"
 
-#: ../src/main_window_cb.c:622
+#: ../src/main_window_cb.c:625
 msgid "Delete"
 msgstr "Ta bort"
 
-#: ../src/main_window_cb.c:652
+#: ../src/main_window_cb.c:655
 msgid "Really remove completed downloads from the list?"
 msgstr "Verkligen ta bort slutförda hämtningar från listan?"
 
-#: ../src/main_window_cb.c:652
+#: ../src/main_window_cb.c:655
 msgid "Remove"
 msgstr "Ta bort"
 
-#: ../src/main_window_cb.c:686
+#: ../src/main_window_cb.c:689
 msgid "Really remove inactive downloads from the list?"
 msgstr "Verkligen ta bort inaktiva hämtningar från listan?"
 
-#: ../src/main_window_cb.c:718
+#: ../src/main_window_cb.c:721
 msgid "Really remove all downloads from the list?"
 msgstr "Verkligen ta bort alla hämtningar från listan?"
 
-#: ../src/main_window_cb.c:854
-#: ../src/main_window_cb.c:872
+#: ../src/main_window_cb.c:857
+#: ../src/main_window_cb.c:875
 #, c-format
 msgid "error %d when accessing %s: %s\n"
 msgstr "fel %d vid åtkomst till %s: %s\n"
 
 # Finns både med <b> och <span blah blah. Varför?
 # http://bugzilla.ximian.com/show_bug.cgi?id=61078
-#: ../src/main_window_cb.c:884
+#: ../src/main_window_cb.c:887
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM Kontroll OK!</span>"
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:890
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM Kontroll MISSLYCKADES!</span>"
 
-#: ../src/main_window_cb.c:1208
+#: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "Ny begränsning för hämtningshastighet kommer att gälla endast för nya eller omstartade hämtningar"
 
-#: ../src/main_window_cb.c:1224
+#: ../src/main_window_cb.c:1227
 #, c-format
 msgid "Remove %s ?"
 msgstr "Ta bort %s?"
 
-#: ../src/main_window_cb.c:1225
+#: ../src/main_window_cb.c:1228
 msgid "Really remove this download from the list?"
 msgstr "Verkligen ta bort denna hämtning från listan?"
 
-#: ../src/main_window_cb.c:1225
+#: ../src/main_window_cb.c:1228
 msgid "Remove download"
 msgstr "Ta bort hämtning"
 
-#: ../src/main_window_cb.c:1275
+#: ../src/main_window_cb.c:1278
 msgid "Couldn't open the folder"
 msgstr "Kunde inte öppna mappen"
 
@@ -816,6 +816,8 @@ msgstr "Kan inte fortsätta hämtning, befintlig lokal fil är i konflikt med fj
 msgid "Can't write to target directory"
 msgstr "Kan inte skriva till målkatalog"
 
+#~ msgid "Ay_uda"
+#~ msgstr "Hj_älp"
 #~ msgid "About Gwget"
 #~ msgstr "Om Gwget"
 #~ msgid "GNU GPL Version 2"
