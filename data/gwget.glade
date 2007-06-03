@@ -296,7 +296,7 @@
             <child>
               <widget class="GtkToolButton" id="resumeall_button">
                 <property name="visible">True</property>
-                <property name="label">Resume all</property>
+                <property name="label" translatable="yes">Resume all</property>
                 <property name="stock_id">gtk-refresh</property>
                 <signal name="clicked" handler="continue_all_downloads"/>
               </widget>
@@ -307,7 +307,7 @@
             <child>
               <widget class="GtkToolButton" id="stop_button">
                 <property name="visible">True</property>
-                <property name="label">Pause all</property>
+                <property name="label" translatable="yes">Pause all</property>
                 <property name="stock_id">gtk-stop</property>
                 <signal name="clicked" handler="stop_all_downloads"/>
               </widget>
@@ -318,7 +318,7 @@
             <child>
               <widget class="GtkToolButton" id="clear_button">
                 <property name="visible">True</property>
-                <property name="label">Clear</property>
+                <property name="label" translatable="yes">Clear</property>
                 <property name="stock_id">gtk-clear</property>
                 <signal name="clicked" handler="on_remove_completed_activate"/>
               </widget>
