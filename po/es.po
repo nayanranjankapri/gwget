@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-17 00:32+0000\n"
-"PO-Revision-Date: 2007-05-06 13:13+0200\n"
+"POT-Creation-Date: 2007-06-04 03:54+0100\n"
+"PO-Revision-Date: 2007-06-07 22:13+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -41,20 +41,20 @@ msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Nueva descarga</span>"
 
 #: ../data/gwget.glade.h:6
-msgid "Ay_uda"
-msgstr "Ay_uda"
-
-#: ../data/gwget.glade.h:7
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../data/gwget.glade.h:8
+#: ../data/gwget.glade.h:7
 msgid "Cancel download"
 msgstr "Cancelar descarga"
 
-#: ../data/gwget.glade.h:9
+#: ../data/gwget.glade.h:8
 msgid "Cancel the download"
 msgstr "Cancela la descarga"
+
+#: ../data/gwget.glade.h:9
+msgid "Clear"
+msgstr "Limpiar"
 
 #: ../data/gwget.glade.h:10
 msgid "Compare md5 sum"
@@ -73,188 +73,192 @@ msgid "Continue with the download"
 msgstr "Continua con la descarga"
 
 #: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:629 ../src/main_window_cb.c:668
-#: ../src/main_window_cb.c:736
+#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
+#: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gestor de descargas"
 
 #: ../data/gwget.glade.h:15
+msgid "Help"
+msgstr "Ayuda"
+
+#: ../data/gwget.glade.h:16
 msgid "Information"
 msgstr "Información"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:17
 msgid "Local Directory:"
 msgstr "Directorio local:"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:18
 msgid "Local File:"
 msgstr "Archivo local:"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:19
 msgid "Md5 Sum:"
 msgstr "Suma MD5"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:20
 msgid "Multimedia files (Videos and images)"
 msgstr "Archivos multimedia (vídeos e imágenes)"
 
-#: ../data/gwget.glade.h:20
+#: ../data/gwget.glade.h:21
 msgid "New Download"
 msgstr "Descarga nueva"
 
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:22
 msgid "Open"
 msgstr "Abrir"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:23
 msgid "Open directory"
 msgstr "Abrir directorio"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:24
 msgid "Open file"
 msgstr "Abrir archivo"
 
-#: ../data/gwget.glade.h:24
+#: ../data/gwget.glade.h:25
 msgid "Open target directory"
 msgstr "Abrir carpeta de destino"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:26
 msgid "Pause"
 msgstr "Pausar"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:27
 msgid "Pause all"
 msgstr "Pausar todos"
 
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:28
 msgid "Pause download"
 msgstr "Pausar la descarga"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:29
 msgid "Pause the download"
 msgstr "Pausar la descarga"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:30
 msgid "Properties"
 msgstr "Propiedades"
 
-#: ../data/gwget.glade.h:30 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:31 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Recursivo"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:32
 msgid "Recursive options"
 msgstr "Opciones de recursividad"
 
-#: ../data/gwget.glade.h:32 ../src/main_window_cb.c:718
+#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Quitar todas"
 
-#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:652
+#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Quitar las descargas completadas"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:35
 msgid "Remove from List"
 msgstr "Quitar de la lista"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:36
 msgid "Remove from list"
 msgstr "Quita de la lista"
 
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:686
+#: ../data/gwget.glade.h:37 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Quitar las inactivas"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:38
 msgid "Resume all"
 msgstr "Continuar todas"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:39
 msgid "Save in:"
 msgstr "Guardar en:"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:40
 msgid "Stat_usbar"
 msgstr "_Barra de estado"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:41
 msgid "The index file only"
 msgstr "El archivo index solamente"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:42
 msgid "This site (mirror)"
 msgstr "Este sitio (replicar)"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:43
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:44
 msgid "Verify..."
 msgstr "Verificar..."
 
-#: ../data/gwget.glade.h:44
-msgid "_Archivo"
+#: ../data/gwget.glade.h:45
+msgid "_Archive"
 msgstr "_Archivo"
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:46
 msgid "_Download"
 msgstr "_Descarga"
 
-#: ../data/gwget.glade.h:46
-msgid "_Editar"
+#: ../data/gwget.glade.h:47
+msgid "_Edit"
 msgstr "_Editar"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:48
 msgid "_Toolbar"
 msgstr "Barra de _herramientas"
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:49
 msgid "_View"
 msgstr "_Ver"
 
-#: ../data/gwget.glade.h:49
+#: ../data/gwget.glade.h:50
 msgid "gtk-about"
 msgstr "gtk-about"
 
-#: ../data/gwget.glade.h:50
+#: ../data/gwget.glade.h:51
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
-#: ../data/gwget.glade.h:51
+#: ../data/gwget.glade.h:52
 msgid "gtk-close"
 msgstr "gtk-close"
 
-#: ../data/gwget.glade.h:52
+#: ../data/gwget.glade.h:53
 msgid "gtk-new"
 msgstr "gtk-new"
 
-#: ../data/gwget.glade.h:53
+#: ../data/gwget.glade.h:54
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
-#: ../data/gwget.glade.h:54
+#: ../data/gwget.glade.h:55
 msgid "gtk-preferences"
 msgstr "gtk-preferences"
 
-#: ../data/gwget.glade.h:55
+#: ../data/gwget.glade.h:56
 msgid "gtk-properties"
 msgstr "gtk-properties"
 
-#: ../data/gwget.glade.h:56
+#: ../data/gwget.glade.h:57
 msgid "gtk-quit"
 msgstr "gtk-quit"
 
-#: ../data/gwget.glade.h:57
+#: ../data/gwget.glade.h:58
 msgid "label"
 msgstr "etiqueta"
 
-#: ../data/gwget.glade.h:58
+#: ../data/gwget.glade.h:59
 msgid "local_file_text"
 msgstr "archivo_de_texto_local"
 
-#: ../data/gwget.glade.h:59
+#: ../data/gwget.glade.h:60
 msgid "url_text"
 msgstr "texto_url"
 
@@ -531,61 +535,61 @@ msgstr "Desconocido"
 msgid "Failed"
 msgstr "Fallo"
 
-#: ../src/gwget_data.c:196
+#: ../src/gwget_data.c:201
 msgid "stalled"
 msgstr "parado"
 
-#: ../src/gwget_data.c:228
+#: ../src/gwget_data.c:233
 msgid "Waiting"
 msgstr "Esperando"
 
-#: ../src/gwget_data.c:230
+#: ../src/gwget_data.c:235
 msgid "Not Started"
 msgstr "No iniciado"
 
-#: ../src/gwget_data.c:232
+#: ../src/gwget_data.c:237
 msgid "Not Running"
 msgstr "No ejecutado"
 
-#: ../src/gwget_data.c:234
+#: ../src/gwget_data.c:239
 msgid "Not Connected"
 msgstr "No conectado"
 
-#: ../src/gwget_data.c:236
+#: ../src/gwget_data.c:241
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../src/gwget_data.c:238
+#: ../src/gwget_data.c:243
 msgid "Retrieving"
 msgstr "Descargando"
 
-#: ../src/gwget_data.c:240
+#: ../src/gwget_data.c:245
 msgid "Completed"
 msgstr "Completado"
 
-#: ../src/gwget_data.c:244
+#: ../src/gwget_data.c:249
 msgid "Error"
 msgstr "Error"
 
-#: ../src/gwget_data.c:685
+#: ../src/gwget_data.c:687
 msgid "Unable to add this download"
 msgstr "Imposible añadir esta descarga"
 
-#: ../src/gwget_data.c:686
+#: ../src/gwget_data.c:688
 msgid "This download is already added"
 msgstr "Esta descarga ya está añadida"
 
-#: ../src/gwget_data.c:734 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1256 ../src/main_window_cb.c:1275
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Error al abrir el archivo"
 
-#: ../src/gwget_data.c:734 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1256
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259
 msgid "Couldn't open the file"
 msgstr "No se puede abrir el archivo"
 
-#: ../src/gwget_data.c:782
+#: ../src/gwget_data.c:784
 msgid "Download Complete"
 msgstr "Descarga completada"
 
@@ -609,51 +613,51 @@ msgstr "Gestor de descargas Gwget"
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:429
+#: ../src/main_window.c:430
 msgid "File Name"
 msgstr "Nombre del archivo"
 
-#: ../src/main_window.c:437
+#: ../src/main_window.c:438
 msgid "State"
 msgstr "Estado"
 
-#: ../src/main_window.c:449
+#: ../src/main_window.c:450
 msgid "Current Size"
 msgstr "Tamaño actual"
 
-#: ../src/main_window.c:461
+#: ../src/main_window.c:462
 msgid "Total Size"
 msgstr "Tamaño total"
 
-#: ../src/main_window.c:472 ../src/main_window.c:478
+#: ../src/main_window.c:473 ../src/main_window.c:479
 msgid "Percentage"
 msgstr "Porcentaje"
 
-#: ../src/main_window.c:485
+#: ../src/main_window.c:486
 msgid "Elapsed Time"
 msgstr "Tiempo transcurrido"
 
-#: ../src/main_window.c:496
+#: ../src/main_window.c:497
 msgid "Remaining Time"
 msgstr "Tiempo restante"
 
-#: ../src/main_window.c:507
+#: ../src/main_window.c:508
 msgid "Speed"
 msgstr "Velocidad"
 
-#: ../src/main_window.c:554
+#: ../src/main_window.c:555
 msgid "Error starting the download"
 msgstr "Error al iniciar la descarga"
 
-#: ../src/main_window.c:554
+#: ../src/main_window.c:555
 msgid "There was an unexpected error starting the download"
 msgstr "Hubo un error inesperado al iniciar la descarga"
 
-#: ../src/main_window.c:790
+#: ../src/main_window.c:791
 msgid "Stop current downloads?"
 msgstr "¿Desea parar las descargas actuales?"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:792
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -661,7 +665,7 @@ msgstr ""
 "Hay al menos una descarga activa. ¿Seguro que desea cancelar todas las "
 "transferencias activas?"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:792
 msgid "Exit"
 msgstr "Salir"
 
@@ -681,11 +685,11 @@ msgstr ""
 "Francisco Javier F. Serrador <serrador@gnome.org>\n"
 "David Sedeño Fernández <david@alderia.com>"
 
-#: ../src/main_window_cb.c:565 ../src/new_window.c:136
+#: ../src/main_window_cb.c:568 ../src/new_window.c:136
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-#: ../src/main_window_cb.c:621
+#: ../src/main_window_cb.c:624
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -694,63 +698,63 @@ msgstr ""
 "¿Seguro que quiere cancelar la descarga actual?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:622
+#: ../src/main_window_cb.c:625
 msgid "Delete download?"
 msgstr "¿Quiere borrar la descarga?"
 
-#: ../src/main_window_cb.c:622
+#: ../src/main_window_cb.c:625
 msgid "Delete"
 msgstr "Borrar"
 
-#: ../src/main_window_cb.c:652
+#: ../src/main_window_cb.c:655
 msgid "Really remove completed downloads from the list?"
 msgstr "¿Seguro que desea quitar las descargas completadas de la lista?"
 
-#: ../src/main_window_cb.c:652
+#: ../src/main_window_cb.c:655
 msgid "Remove"
 msgstr "Quitar"
 
-#: ../src/main_window_cb.c:686
+#: ../src/main_window_cb.c:689
 msgid "Really remove inactive downloads from the list?"
 msgstr "¿Seguro que quiere quitar las descargas inactivas de la lista?"
 
-#: ../src/main_window_cb.c:718
+#: ../src/main_window_cb.c:721
 msgid "Really remove all downloads from the list?"
 msgstr "¿Seguro que quiere quitar todas las descargas de la lista?"
 
-#: ../src/main_window_cb.c:854 ../src/main_window_cb.c:872
+#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
 #, c-format
 msgid "error %d when accessing %s: %s\n"
 msgstr "error %d al acceder a %s: %s\n"
 
-#: ../src/main_window_cb.c:884
+#: ../src/main_window_cb.c:887
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">Suma MD5 verificada</span>"
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:890
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">Falló la suma MD5</span>"
 
-#: ../src/main_window_cb.c:1208
+#: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "El límite nuevo en la velocidad de descarga se aplicará sólo en las "
 "descargas nuevas o reiniciadas."
 
-#: ../src/main_window_cb.c:1224
+#: ../src/main_window_cb.c:1227
 #, c-format
 msgid "Remove %s ?"
 msgstr "¿Quitar %s?"
 
-#: ../src/main_window_cb.c:1225
+#: ../src/main_window_cb.c:1228
 msgid "Really remove this download from the list?"
 msgstr "¿Desea quitar esta descarga de la lista?"
 
-#: ../src/main_window_cb.c:1225
+#: ../src/main_window_cb.c:1228
 msgid "Remove download"
 msgstr "Quitar descarga"
 
-#: ../src/main_window_cb.c:1275
+#: ../src/main_window_cb.c:1278
 msgid "Couldn't open the folder"
 msgstr "No fue posible abrir la carpeta"
 
