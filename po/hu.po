@@ -717,12 +717,12 @@ msgstr "%d számú hiba %s elérésekor: %s\n"
 
 #: ../src/main_window_cb.c:887
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">Az MD5 ellenőrzés sikerült</span>"
+msgstr "<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés sikerült</span>"
 
 #: ../src/main_window_cb.c:890
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr ""
-"<span size=\"large\" weight=\"bold\">Az MD5 ellenőrzés meghiúsult</span>"
+"<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés meghiúsult</span>"
 
 #: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
