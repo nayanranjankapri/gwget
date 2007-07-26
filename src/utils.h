@@ -20,7 +20,7 @@
 #define _UTILS_H
 
 
-gint run_dialog(gchar *title, gchar *message, gchar *action_message);
+gint run_dialog(gchar *title, gchar *message, gchar *cancel_message, gchar *action_message);
 void run_dialog_error(gchar *title, gchar *msg);
 gint run_dialog_information(gchar *title, gchar *msg);
 gboolean check_url_already_exists(gchar *checkurl);

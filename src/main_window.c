@@ -789,7 +789,7 @@ gwget_quit(void)
 	
 	if (running) {
 		response = run_dialog(_("Stop current downloads?"),
-				      _("There is at least one active download left. Really cancel all running transfers?"), _("Exit"));
+				      _("There is at least one active download left. Really cancel all running transfers?"), _("No"), _("Yes"));
 		if (response == GTK_RESPONSE_OK) {
 			stop_all_downloads();
 			gtk_main_quit();

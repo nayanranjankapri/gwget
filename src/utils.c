@@ -23,7 +23,7 @@
 
 
 gint 
-run_dialog (gchar *title, gchar *message, gchar *action_message)
+run_dialog (gchar *title, gchar *message, gchar *cancel_message, gchar *action_message)
 {
 	GtkWidget *dialog;
 	gint response;
@@ -36,7 +36,7 @@ run_dialog (gchar *title, gchar *message, gchar *action_message)
 			
 	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), message);
 	
-	gtk_dialog_add_buttons (GTK_DIALOG(dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+	gtk_dialog_add_buttons (GTK_DIALOG(dialog), cancel_message, GTK_RESPONSE_CANCEL,
 			action_message, GTK_RESPONSE_OK, NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 	gtk_window_set_title (GTK_WINDOW (dialog), "");

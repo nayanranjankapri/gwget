@@ -622,7 +622,7 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
 	if (gwgetdata) 
 	{
 		msg = g_strdup_printf(_("Really cancel current download?\n(URL: %s)"),gwgetdata->url);
-		response = run_dialog(_("Delete download?"),_(msg), _("Delete"));
+		response = run_dialog(_("Delete download?"),_(msg), GTK_STOCK_CANCEL, _("Delete"));
 		if (response==GTK_RESPONSE_OK) {
 			gwget_data_stop_download(gwgetdata); 
 			unlink (gwgetdata->local_filename);
@@ -652,7 +652,7 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 	
 	if (count_all_downloads()>0) 
 	{
-		response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"), _("Remove"));
+		response = run_dialog(_("Remove completed"),_("Really remove completed downloads from the list?"), GTK_STOCK_CANCEL, _("Remove"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -686,7 +686,7 @@ on_remove_notrunning_activate(GtkWidget *widget, gpointer data)
 	
 	if (count_all_downloads()>0) 
 	{
-		response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"), _("Remove inactive"));
+		response = run_dialog(_("Remove inactive"),_("Really remove inactive downloads from the list?"), GTK_STOCK_CANCEL, _("Remove inactive"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -718,7 +718,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 	
 	if (count_all_downloads()>0) 
 	{
-		response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"), _("Remove all"));
+		response = run_dialog(_("Remove all"),_("Really remove all downloads from the list?"), GTK_STOCK_CANCEL, _("Remove all"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
@@ -1225,7 +1225,7 @@ on_remove_download_activate (GtkWidget *widget, gpointer data)
 	gwgetdata = gwget_data_get_selected();
 	if (gwgetdata != NULL) {
 	    message = g_strdup_printf (_("Remove %s ?"), gwgetdata->filename);
-		response = run_dialog (message, _("Really remove this download from the list?"), _("Remove download"));
+		response = run_dialog (message, _("Really remove this download from the list?"), GTK_STOCK_CANCEL, _("Remove download"));
 		if (response == GTK_RESPONSE_OK) {
 			length=gtk_tree_model_iter_n_children(GTK_TREE_MODEL(model),NULL);
 			gtk_tree_model_get_iter_root(model,&iter);
