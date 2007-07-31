@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-06-04 03:54+0100\n"
-"PO-Revision-Date: 2007-06-07 22:13+0200\n"
+"POT-Creation-Date: 2007-07-27 04:01+0100\n"
+"PO-Revision-Date: 2007-08-01 00:27+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -666,8 +666,12 @@ msgstr ""
 "transferencias activas?"
 
 #: ../src/main_window.c:792
-msgid "Exit"
-msgstr "Salir"
+msgid "No"
+msgstr "No"
+
+#: ../src/main_window.c:792
+msgid "Yes"
+msgstr "Sí"
 
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
