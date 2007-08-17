@@ -1,3 +1,7 @@
+2007-08-17  Raivis Dejus  <orvils@gmail.com>
+
+        * configure.in: Added Latvian Translation (lv).
+
 2007-07-26  David Sedeño <david@alderia.com>
 
 	Better dialog prompt messages.	Thanks to Trent Gamblin for the patch.
