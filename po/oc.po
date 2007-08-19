@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gwget 0.98.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-04 04:45+0100\n"
-"PO-Revision-Date: 2007-08-07 14:04+0200\n"
+"PO-Revision-Date: 2007-08-19 21:47+0200\n"
 "Last-Translator: Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
@@ -213,35 +213,35 @@ msgstr "_Mostrar"
 
 #: ../data/gwget.glade.h:49
 msgid "gtk-about"
-msgstr ""
+msgstr "gtk-about"
 
 #: ../data/gwget.glade.h:50
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/gwget.glade.h:51
 msgid "gtk-close"
-msgstr ""
+msgstr "gtk-close"
 
 #: ../data/gwget.glade.h:52
 msgid "gtk-new"
-msgstr ""
+msgstr "gtk-new"
 
 #: ../data/gwget.glade.h:53
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/gwget.glade.h:54
 msgid "gtk-preferences"
-msgstr ""
+msgstr "gtk-preferences"
 
 #: ../data/gwget.glade.h:55
 msgid "gtk-properties"
-msgstr ""
+msgstr "gtk-properties"
 
 #: ../data/gwget.glade.h:56
 msgid "gtk-quit"
-msgstr ""
+msgstr "gtk-quit"
 
 #: ../data/gwget.glade.h:57
 msgid "label"
@@ -515,7 +515,7 @@ msgstr ""
 
 #: ../epiphany-extension/gwget.xml.in.in.h:2
 msgid "GWGet"
-msgstr ""
+msgstr "GWGet"
 
 #: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
@@ -601,7 +601,7 @@ msgstr ""
 
 #: ../src/main.c:262 ../src/main_window_cb.c:191
 msgid "Gwget"
-msgstr ""
+msgstr "Gwget"
 
 #: ../src/main_window.c:429
 msgid "File Name"
@@ -746,7 +746,7 @@ msgstr "Res"
 
 #: ../src/systray.c:127
 msgid "Downloads"
-msgstr ""
+msgstr "Descargas"
 
 #: ../src/wget-log.c:123
 msgid "Socket error"
