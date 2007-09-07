@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 20:53+0300\n"
+"POT-Creation-Date: 2007-09-07 20:41+0300\n"
 "PO-Revision-Date: 2006-04-14 20:53+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -19,195 +19,247 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "gwget-sovellus"
-
-#: ../data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "gwget-automaation tehdas"
-
-#: ../data/about.glade.h:1
-msgid "About Gwget"
-msgstr "Tietoja Gwgetistä"
-
-#: ../data/about.glade.h:2
-msgid "GNU GPL Version 2"
-msgstr "GNU GPL versio 2"
-
-#: ../data/about.glade.h:3
-msgid "Gwget: Download Manager for GNOME"
-msgstr "Gwget: Tiedostonoutojen hallintaohjelma Gnomelle"
-
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:192
-msgid "translator-credits"
-msgstr ""
-"Ilkka Tuohela, 2006\n"
-"Sini Ruohomaa, 2004\n"
-"\n"
-"http://gnome.fi/"
-
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
 #: ../data/gwget.glade.h:2
-msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">Nouto:</span>"
+msgid "<b>Download</b>"
+msgstr "<b>Noudot</b>"
 
 #: ../data/gwget.glade.h:3
-msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">Ominaisuudet</span>"
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Lisää MD5-summa johon verrataan</b>"
 
-#: ../data/gwget.glade.h:4 ../src/main_window.c:796
-#: ../src/main_window_cb.c:618
+#: ../data/gwget.glade.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Ominaisuudet</b>"
+
+#: ../data/gwget.glade.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Uusi nouto</span>"
+
+#: ../data/gwget.glade.h:6
 msgid "Cancel"
 msgstr "Peru"
 
-#: ../data/gwget.glade.h:5
-msgid "Cancel download"
-msgstr "Peru siirto"
-
-#: ../data/gwget.glade.h:6
-msgid "Cancel the download"
-msgstr "Peru siirto"
-
 #: ../data/gwget.glade.h:7
+msgid "Cancel download"
+msgstr "Peru nouto"
+
+#: ../data/gwget.glade.h:8
+msgid "Cancel the download"
+msgstr "Peru nouto"
+
+#: ../data/gwget.glade.h:9
+msgid "Clear"
+msgstr "Tyhjennä"
+
+#: ../data/gwget.glade.h:10
+msgid "Compare md5 sum"
+msgstr "Vertaa MD4-tarkistussummaa"
+
+#: ../data/gwget.glade.h:11
 msgid "Continue"
 msgstr "Jatka"
 
-#: ../data/gwget.glade.h:8
-msgid "Continue with the download"
+#: ../data/gwget.glade.h:12
+msgid "Continue download"
 msgstr "Jatka noutoa"
 
-#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:139
-#: ../src/main_window_cb.c:625 ../src/main_window_cb.c:730
+#: ../data/gwget.glade.h:13
+msgid "Continue with the download"
+msgstr "Jatka tiedoston noutoa"
+
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
+#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
+#: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Tiedostojen noutaja"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:15
+msgid "Help"
+msgstr "Ohje"
+
+#: ../data/gwget.glade.h:16
 msgid "Information"
 msgstr "Tietoja"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:17
 msgid "Local Directory:"
 msgstr "Paikallinen kansio:"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:18
 msgid "Local File:"
 msgstr "Paikallinen tiedosto:"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:19
+msgid "Md5 Sum:"
+msgstr "MD4-summa:"
+
+#: ../data/gwget.glade.h:20
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediatiedostot (videot ja kuvat)"
 
-#: ../data/gwget.glade.h:14
-msgid "New download"
+#: ../data/gwget.glade.h:21
+msgid "New Download"
 msgstr "Uusi nouto"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:22
 msgid "Open"
 msgstr "Avaa"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:23
 msgid "Open directory"
 msgstr "Avaa kansio"
 
-#: ../data/gwget.glade.h:17
-msgid "Open the target directory"
+#: ../data/gwget.glade.h:24
+msgid "Open file"
+msgstr "Avaa tiedosto"
+
+#: ../data/gwget.glade.h:25
+msgid "Open target directory"
 msgstr "Avaa kohdekansio"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:26
 msgid "Pause"
 msgstr "Pysäytä"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:27
 msgid "Pause all"
 msgstr "Pysäytä kaikki"
 
-#: ../data/gwget.glade.h:20
-msgid "Pause all downloads"
-msgstr "Pysäytä kaikki noudot"
-
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:28
 msgid "Pause download"
 msgstr "Pysäytä nouto"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:29
 msgid "Pause the download"
 msgstr "Pysäytä tämä nouto"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:30
 msgid "Properties"
 msgstr "Ominaisuudet"
 
-#: ../data/gwget.glade.h:24 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:31 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekursiivinen"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:32
 msgid "Recursive options"
 msgstr "Rekursiivisen asetukset"
 
-#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:712
+#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Poista kaikki"
 
-#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:648
+#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Poisto valmis"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:35
 msgid "Remove from List"
 msgstr "Poista listalta"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:36
 msgid "Remove from list"
 msgstr "Poisto listalta"
 
-#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:680
+#: ../data/gwget.glade.h:37 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Poista valmiit ja pysäytetyt"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:38
 msgid "Resume all"
 msgstr "Jatka keskeneräisiä"
 
-#: ../data/gwget.glade.h:32
-msgid "Resume all downloads"
-msgstr "Jatka kaikkia keskeneräisiä siirtoja"
+#: ../data/gwget.glade.h:39
+msgid "Save in:"
+msgstr "Tallenna kansioon:"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:40
 msgid "Stat_usbar"
 msgstr "_Tilarivi"
 
-#: ../data/gwget.glade.h:34
-msgid "Stop and delete downloaded file"
-msgstr "Pysäytä ja poista noudettu tiedosto"
-
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:41
 msgid "The index file only"
 msgstr "Vain indeksitiedosto"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:42
 msgid "This site (mirror)"
 msgstr "Tämä sivusto (peilaus)"
 
-#: ../data/gwget.glade.h:37 ../data/newdownload.glade.h:4
+#: ../data/gwget.glade.h:43
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:44
+msgid "Verify..."
+msgstr "Tarkista..."
+
+#: ../data/gwget.glade.h:45
+msgid "_Archive"
+msgstr "_Arkisto"
+
+#: ../data/gwget.glade.h:46
 msgid "_Download"
 msgstr "_Siirrot"
 
-#: ../data/gwget.glade.h:39
-msgid "_New"
-msgstr "_Uusi"
+#: ../data/gwget.glade.h:47
+msgid "_Edit"
+msgstr "_Muokkaa"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:48
 msgid "_Toolbar"
 msgstr "_Työkalurivi"
+
+#: ../data/gwget.glade.h:49
+msgid "_View"
+msgstr "_Tietoja"
+
+#: ../data/gwget.glade.h:50
+msgid "gtk-about"
+msgstr "Tietoja"
+
+#: ../data/gwget.glade.h:51
+msgid "gtk-cancel"
+msgstr "Peru"
+
+#: ../data/gwget.glade.h:52
+msgid "gtk-close"
+msgstr "Sulje"
+
+#: ../data/gwget.glade.h:53
+msgid "gtk-new"
+msgstr "Uusi"
+
+#: ../data/gwget.glade.h:54
+msgid "gtk-ok"
+msgstr "OK"
+
+#: ../data/gwget.glade.h:55
+msgid "gtk-preferences"
+msgstr "Asetukset"
+
+#: ../data/gwget.glade.h:56
+msgid "gtk-properties"
+msgstr "Ominaisuudet"
+
+#: ../data/gwget.glade.h:57
+msgid "gtk-quit"
+msgstr "Lopeta"
+
+#: ../data/gwget.glade.h:58
+msgid "label"
+msgstr "Otsikko"
+
+#: ../data/gwget.glade.h:59
+msgid "local_file_text"
+msgstr "local_file_text"
+
+#: ../data/gwget.glade.h:60
+msgid "url_text"
+msgstr "url_text"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -312,18 +364,6 @@ msgstr "Näytetäänkö tilarivi."
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
 msgstr "Näytetäänkö työkalupalkki"
-
-#: ../data/newdownload.glade.h:1
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Uusi siirto</span>"
-
-#: ../data/newdownload.glade.h:2
-msgid "New Download"
-msgstr "Uusi siirto"
-
-#: ../data/newdownload.glade.h:3
-msgid "Save in:"
-msgstr "Tallenna kansioon:"
 
 #: ../data/preferences.glade.h:1
 msgid "   "
@@ -493,138 +533,129 @@ msgstr "Tuntematon"
 msgid "Failed"
 msgstr "Epäonnistui"
 
-#: ../src/eggtrayicon.c:145
-msgid "Orientation"
-msgstr "Suunta"
-
-#: ../src/eggtrayicon.c:146
-msgid "The orientation of the tray."
-msgstr "Ilmoitusalueen suunta"
-
-#: ../src/eggtrayicon.c:483
-msgid "Notification"
-msgstr "Huomautus"
-
-#: ../src/gwget_data.c:195
+#: ../src/gwget_data.c:201
 msgid "stalled"
 msgstr "pysähtynyt"
 
-#: ../src/gwget_data.c:229
+#: ../src/gwget_data.c:233
 msgid "Waiting"
 msgstr "Odotetaan"
 
-#: ../src/gwget_data.c:231
+#: ../src/gwget_data.c:235
 msgid "Not Started"
 msgstr "Aloittamatta"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:237
 msgid "Not Running"
 msgstr "Ei käynnissä"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:239
 msgid "Not Connected"
 msgstr "Ei yhteyttä"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:241
 msgid "Connected"
 msgstr "Yhdistetty"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:243
 msgid "Retrieving"
 msgstr "Noutaa"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:245
 msgid "Completed"
 msgstr "Valmis"
 
-#: ../src/gwget_data.c:245
-#, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
-msgstr ""
-"Tiedostonsiirto valmis\n"
-"(%s)"
-
-#: ../src/gwget_data.c:252
+#: ../src/gwget_data.c:249
 msgid "Error"
 msgstr "Virhe"
 
-#: ../src/gwget_data.c:686
+#: ../src/gwget_data.c:687
 msgid "Unable to add this download"
 msgstr "Tätä noutoa ei voida lisätä"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:688
 msgid "This download is already added"
 msgstr "Tämä nouto on jo lisätty"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:109
-#: ../src/main_window_cb.c:1142 ../src/main_window_cb.c:1161
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Virhe tiedostoa avattaessa"
 
-#: ../src/gwget_data.c:735 ../src/main_window_cb.c:109
-#: ../src/main_window_cb.c:1142
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259
 msgid "Couldn't open the file"
 msgstr "Tiedostoa ei voitu avata"
 
-#: ../src/gwget_data.c:773
+#: ../src/gwget_data.c:784
 msgid "Download Complete"
 msgstr "Nouto on valmis"
 
-#: ../src/main.c:231 ../src/main_window_cb.c:187
-msgid "Gwget"
-msgstr "Gwget"
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "Käynnistä gwget ilmoitusalueelle"
 
-#: ../src/main.c:250
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "Noudon kohdekansio"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[URL]"
+
+#: ../src/main.c:244 ../src/main.c:276
 msgid "Gwget Download Manager"
 msgstr "Gwget - tiedostojen noutaja"
 
-#: ../src/main_window.c:433
+#: ../src/main.c:262 ../src/main_window_cb.c:191
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main_window.c:430
 msgid "File Name"
 msgstr "Tiedostonimi"
 
-#: ../src/main_window.c:441
+#: ../src/main_window.c:438
 msgid "State"
 msgstr "Tila"
 
-#: ../src/main_window.c:453
+#: ../src/main_window.c:450
 msgid "Current Size"
 msgstr "Nykyinen koko"
 
-#: ../src/main_window.c:465
+#: ../src/main_window.c:462
 msgid "Total Size"
 msgstr "Koko"
 
-#: ../src/main_window.c:476 ../src/main_window.c:482
+#: ../src/main_window.c:473 ../src/main_window.c:479
 msgid "Percentage"
 msgstr "Prosenttia"
 
-#: ../src/main_window.c:489
+#: ../src/main_window.c:486
 msgid "Elapsed Time"
 msgstr "Kulunut aika"
 
-#: ../src/main_window.c:500
+#: ../src/main_window.c:497
 msgid "Remaining Time"
 msgstr "Aikaa jäljellä"
 
-#: ../src/main_window.c:511
+#: ../src/main_window.c:508
 msgid "Speed"
 msgstr "Nopeus"
 
-#: ../src/main_window.c:558
+#: ../src/main_window.c:555
 msgid "Error starting the download"
 msgstr "Virhe aloitettaessa noutoa"
 
-#: ../src/main_window.c:558
+#: ../src/main_window.c:555
 msgid "There was an unexpected error starting the download"
 msgstr "Määrittelemätön virhe käynnistettäessä noutoa"
 
-#: ../src/main_window.c:795
-msgid "Cancel current downloads?"
-msgstr "Peru käynnissä olevat siirrot?"
+#: ../src/main_window.c:791
+msgid "Stop current downloads?"
+msgstr "Pysäytä käynnissä olevat siirrot?"
 
-#: ../src/main_window.c:796
+#: ../src/main_window.c:792
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -632,19 +663,35 @@ msgstr ""
 "Ainakin yksi tiedostonsiirto on vielä kesken. Haluatko perua kaikki "
 "käynnissä olevat siirrot?"
 
-#: ../src/main_window_cb.c:100
+#: ../src/main_window.c:792
+msgid "No"
+msgstr "Ei"
+
+#: ../src/main_window.c:792
+msgid "Yes"
+msgstr "Kyllä"
+
+#: ../src/main_window_cb.c:105
 msgid "Error in download"
 msgstr "Virhe tiedostonsiirrossa"
 
-#: ../src/main_window_cb.c:190
+#: ../src/main_window_cb.c:194
 msgid "Download Manager for GNOME."
 msgstr "Tiedostojen noudon hallinta Gnomelle."
 
-#: ../src/main_window_cb.c:561 ../src/new_window.c:139
+#: ../src/main_window_cb.c:196
+msgid "translator-credits"
+msgstr ""
+"Ilkka Tuohela, 2006\n"
+"Sini Ruohomaa, 2004\n"
+"\n"
+"http://gnome.fi/"
+
+#: ../src/main_window_cb.c:568 ../src/new_window.c:136
 msgid "Select Folder"
 msgstr "Valitse kansio"
 
-#: ../src/main_window_cb.c:617
+#: ../src/main_window_cb.c:624
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -653,54 +700,73 @@ msgstr ""
 "Haluatko perua käynnissä olevan siirron?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:618
-msgid "Cancel download?"
-msgstr "Peru siirto?"
+#: ../src/main_window_cb.c:625
+msgid "Delete download?"
+msgstr "Poista nouto?"
 
-#: ../src/main_window_cb.c:648
+#: ../src/main_window_cb.c:625
+msgid "Delete"
+msgstr "Poista"
+
+#: ../src/main_window_cb.c:655
 msgid "Really remove completed downloads from the list?"
 msgstr "Haluatko poistaa valmiit tiedostonsiirrot luettelosta?"
 
-#: ../src/main_window_cb.c:648
+#: ../src/main_window_cb.c:655
 msgid "Remove"
 msgstr "Poista"
 
-#: ../src/main_window_cb.c:680
+#: ../src/main_window_cb.c:689
 msgid "Really remove inactive downloads from the list?"
 msgstr "Haluatko poistaa kaikki valmiit ja pysäytetyt siirrot luettelosta?"
 
-#: ../src/main_window_cb.c:712
+#: ../src/main_window_cb.c:721
 msgid "Really remove all downloads from the list?"
 msgstr "Haluatko poistaa kaikki tiedostonsiirrot luettelosta?"
 
-#: ../src/main_window_cb.c:1094
+#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#, c-format
+msgid "error %d when accessing %s: %s\n"
+msgstr "virhe %d avattaessa %s: %s\n"
+
+#: ../src/main_window_cb.c:887
+#, c-format
+msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+msgstr "<span size=\"large\" weight=\"bold\">MD5SUM-tarkistus onnistui!</span>"
+
+#: ../src/main_window_cb.c:890
+#, c-format
+msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+msgstr "<span size=\"large\" weight=\"bold\">MD5SUM-tarkistus epäonnistui!</span>"
+
+#: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "Uusi siirtonopeuden rajoitus vaikuttaa vain uusiin tai uudestaan "
 "aloitettuihin noutoihin"
 
-#: ../src/main_window_cb.c:1110
+#: ../src/main_window_cb.c:1227
 #, c-format
 msgid "Remove %s ?"
 msgstr "Poista %s ?"
 
-#: ../src/main_window_cb.c:1111
+#: ../src/main_window_cb.c:1228
 msgid "Really remove this download from the list?"
 msgstr "Haluatko varmasti poistaa tämän siirron luettelosta?"
 
-#: ../src/main_window_cb.c:1111
+#: ../src/main_window_cb.c:1228
 msgid "Remove download"
 msgstr "Poista nouto"
 
-#: ../src/main_window_cb.c:1161
+#: ../src/main_window_cb.c:1278
 msgid "Couldn't open the folder"
 msgstr "Kansiota ei voitu avata"
 
-#: ../src/systray.c:151
+#: ../src/systray.c:120
 msgid "Nothing"
 msgstr "Ei mitään"
 
-#: ../src/systray.c:158
+#: ../src/systray.c:127
 msgid "Downloads"
 msgstr "Siirrot"
 
@@ -751,18 +817,3 @@ msgstr ""
 msgid "Can't write to target directory"
 msgstr "Kohdekansioon ei voi kirjoittaa"
 
-#~ msgid "Question"
-#~ msgstr "Kysymys"
-
-#~ msgid "Ask save in for each new download"
-#~ msgstr "Kysy tallennusta jokaisen uuden noudon kohdalla"
-
-#~ msgid "File Type"
-#~ msgstr "Tiedostotyyppi"
-
-#~ msgid "Remove not running"
-#~ msgstr "Poista ellei käynnissä"
-
-#~ msgid "Really remove not running downloads from the list?"
-#~ msgstr ""
-#~ "Haluatko poistaa luettelosta tiedostonsiirrot, jotka eivät ole käynnissä?"
