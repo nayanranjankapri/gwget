@@ -1,4 +1,5 @@
 2007-09-20  David Sedeño <david@alderia.com>
+
 	* data/gwget.glade: Connect the signals from the menu. Fix #477615.
 	Thanks to Arnaud Fontaine for the patch.
 

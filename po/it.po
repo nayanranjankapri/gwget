@@ -155,21 +155,19 @@ msgstr "Rimuovi tutti"
 
 #: ../data/gwget.glade.h:28 ../src/main_window_cb.c:604
 msgid "Remove completed"
-msgstr "Rimuovi gli scaricamenti completati"
+msgstr "Rimuovi completati"
 
 #: ../data/gwget.glade.h:29
-#, fuzzy
 msgid "Remove from List"
-msgstr "Rimuove tutti gli scaricamenti dall'elenco"
+msgstr "Rimuove dalla lista"
 
 #: ../data/gwget.glade.h:30
-#, fuzzy
 msgid "Remove from list"
-msgstr "Rimuove tutti gli scaricamenti dall'elenco"
+msgstr "Rimuove dalla lista"
 
 #: ../data/gwget.glade.h:31 ../src/main_window_cb.c:633
 msgid "Remove inactive"
-msgstr "Rimuovi gli scaricamenti inattivi"
+msgstr "Rimuovi inattivi"
 
 #: ../data/gwget.glade.h:32
 msgid "Resume all"
