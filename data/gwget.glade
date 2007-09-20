@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.2.0 on Mon Apr 23 21:15:37 2007 by david@ubuntu-->
+<!--Generated with glade3 3.2.2 on Mon Sep 17 18:10:32 2007 by arnau@maggie-->
 <glade-interface>
   <widget class="GtkWindow" id="main_window">
     <property name="title" translatable="yes">Gwget - Download Manager</property>
@@ -103,6 +103,7 @@
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Remove completed</property>
                                 <property name="use_underline">True</property>
+                                <signal name="activate" handler="on_remove_completed_activate"/>
                               </widget>
                             </child>
                             <child>
@@ -110,6 +111,7 @@
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Remove inactive</property>
                                 <property name="use_underline">True</property>
+                                <signal name="activate" handler="on_remove_notrunning_activate"/>
                               </widget>
                             </child>
                             <child>
@@ -117,6 +119,7 @@
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Remove all</property>
                                 <property name="use_underline">True</property>
+                                <signal name="activate" handler="on_remove_all_activate"/>
                               </widget>
                             </child>
                           </widget>
