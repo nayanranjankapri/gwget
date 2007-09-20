@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.2.2 on Mon Sep 17 18:10:32 2007 by arnau@maggie-->
+<!--Generated with glade3 3.2.0 on Thu Sep 20 21:49:06 2007 by david@ubuntu-->
 <glade-interface>
   <widget class="GtkWindow" id="main_window">
     <property name="title" translatable="yes">Gwget - Download Manager</property>
@@ -289,6 +289,7 @@
             <child>
               <widget class="GtkToolButton" id="button_new">
                 <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">New download</property>
                 <property name="stock_id">gtk-new</property>
                 <signal name="clicked" handler="on_button_new_clicked"/>
               </widget>
@@ -299,7 +300,8 @@
             <child>
               <widget class="GtkToolButton" id="resumeall_button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Resume all</property>
+                <property name="tooltip" translatable="yes">Resume all downloads</property>
+                <property name="label">Resume all</property>
                 <property name="stock_id">gtk-refresh</property>
                 <signal name="clicked" handler="continue_all_downloads"/>
               </widget>
@@ -310,7 +312,8 @@
             <child>
               <widget class="GtkToolButton" id="stop_button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Pause all</property>
+                <property name="tooltip" translatable="yes">Pause all downloads</property>
+                <property name="label">Pause all</property>
                 <property name="stock_id">gtk-stop</property>
                 <signal name="clicked" handler="stop_all_downloads"/>
               </widget>
@@ -321,7 +324,8 @@
             <child>
               <widget class="GtkToolButton" id="clear_button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Clear</property>
+                <property name="tooltip" translatable="yes">Remove completed downloads</property>
+                <property name="label">Clear</property>
                 <property name="stock_id">gtk-clear</property>
                 <signal name="clicked" handler="on_remove_completed_activate"/>
               </widget>
@@ -986,6 +990,47 @@
                     <property name="column_spacing">12</property>
                     <property name="row_spacing">6</property>
                     <child>
+                      <widget class="GtkLabel" id="etiqueta_url1">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">URL:</property>
+                        <property name="justify">GTK_JUSTIFY_CENTER</property>
+                        <property name="wrap">True</property>
+                      </widget>
+                      <packing>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options"></property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="label1">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">Save in:</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options"></property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkEntry" id="url_entry">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="invisible_char">*</property>
+                        <property name="activates_default">True</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="y_options"></property>
+                      </packing>
+                    </child>
+                    <child>
                       <widget class="GtkHBox" id="hbox1">
                         <property name="visible">True</property>
                         <property name="spacing">6</property>
@@ -1021,47 +1066,6 @@
                         <property name="bottom_attach">2</property>
                         <property name="x_options">GTK_FILL</property>
                         <property name="y_options">GTK_FILL</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkEntry" id="url_entry">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="invisible_char">*</property>
-                        <property name="activates_default">True</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="y_options"></property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label1">
-                        <property name="visible">True</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
-                        <property name="label" translatable="yes">Save in:</property>
-                      </widget>
-                      <packing>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
-                        <property name="x_options">GTK_FILL</property>
-                        <property name="y_options"></property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="etiqueta_url1">
-                        <property name="visible">True</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
-                        <property name="label" translatable="yes">URL:</property>
-                        <property name="justify">GTK_JUSTIFY_CENTER</property>
-                        <property name="wrap">True</property>
-                      </widget>
-                      <packing>
-                        <property name="x_options">GTK_FILL</property>
-                        <property name="y_options"></property>
                       </packing>
                     </child>
                   </widget>

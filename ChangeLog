@@ -1,7 +1,9 @@
 2007-09-20  David Sedeño <david@alderia.com>
 
-	* data/gwget.glade: Connect the signals from the menu. Fix #477615.
+	* data/gwget.glade: Connect the signals from the menu. Fix bug #477615.
 	Thanks to Arnaud Fontaine for the patch.
+
+	Add tooltip message for the buttons in the toolbar. Fix bug #443188.
 
 2007-08-17  Raivis Dejus  <orvils@gmail.com>
 
