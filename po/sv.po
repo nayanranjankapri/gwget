@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-29 01:21+0200\n"
-"PO-Revision-Date: 2007-07-29 01:21+0100\n"
+"POT-Creation-Date: 2007-09-21 00:26+0200\n"
+"PO-Revision-Date: 2007-09-21 00:26+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -50,26 +50,22 @@ msgid "Cancel the download"
 msgstr "Avbryt hämtningen"
 
 #: ../data/gwget.glade.h:9
-msgid "Clear"
-msgstr "Töm"
-
-#: ../data/gwget.glade.h:10
 msgid "Compare md5 sum"
 msgstr "Jämför MD5-summa"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:10
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:11
 msgid "Continue download"
 msgstr "Fortsätt hämtning"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:12
 msgid "Continue with the download"
 msgstr "Fortsätt med hämtningen"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:13
 #: ../src/main_window_cb.c:144
 #: ../src/main_window_cb.c:632
 #: ../src/main_window_cb.c:671
@@ -77,32 +73,36 @@ msgstr "Fortsätt med hämtningen"
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Hämtningshanterare"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:14
 msgid "Help"
 msgstr "Hjälp"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:15
 msgid "Information"
 msgstr "Information"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:16
 msgid "Local Directory:"
 msgstr "Lokal katalog:"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:17
 msgid "Local File:"
 msgstr "Lokal fil:"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:18
 msgid "Md5 Sum:"
 msgstr "MD5-summa:"
 
-#: ../data/gwget.glade.h:20
+#: ../data/gwget.glade.h:19
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediafiler (videofilmer och bilder)"
 
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:20
 msgid "New Download"
+msgstr "Ny hämtning"
+
+#: ../data/gwget.glade.h:21
+msgid "New download"
 msgstr "Ny hämtning"
 
 #: ../data/gwget.glade.h:22
@@ -130,138 +130,150 @@ msgid "Pause all"
 msgstr "Gör paus i alla"
 
 #: ../data/gwget.glade.h:28
+msgid "Pause all downloads"
+msgstr "Pausa alla hämtningar"
+
+#: ../data/gwget.glade.h:29
 msgid "Pause download"
 msgstr "Gör paus i hämtning"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:30
 msgid "Pause the download"
 msgstr "Gör paus i hämtningen"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:31
 msgid "Properties"
 msgstr "Egenskaper"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:32
 #: ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekursivt"
 
-#: ../data/gwget.glade.h:32
+#: ../data/gwget.glade.h:33
 msgid "Recursive options"
 msgstr "Alternativ för rekursivitet"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:34
 #: ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Ta bort alla"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:35
 #: ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Ta bort slutförda"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:36
+msgid "Remove completed downloads"
+msgstr "Ta bort slutförda hämtningar"
+
+#: ../data/gwget.glade.h:37
 msgid "Remove from List"
 msgstr "Ta bort från listan"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:38
 msgid "Remove from list"
 msgstr "Ta bort från listan"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:39
 #: ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Ta bort inaktiva"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:40
 msgid "Resume all"
 msgstr "Återuppta alla"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:41
+msgid "Resume all downloads"
+msgstr "Återuppta alla hämtningar"
+
+#: ../data/gwget.glade.h:42
 msgid "Save in:"
 msgstr "Spara i:"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:43
 msgid "Stat_usbar"
 msgstr "Stat_usrad"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:44
 msgid "The index file only"
 msgstr "Endast indexfilen"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:45
 msgid "This site (mirror)"
 msgstr "Denna plats (spegel)"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:46
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:47
 msgid "Verify..."
 msgstr "Verifiera..."
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:48
 msgid "_Archive"
 msgstr "_Arkiv"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:49
 msgid "_Download"
 msgstr "_Hämta"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:50
 msgid "_Edit"
 msgstr "R_edigera"
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:51
 msgid "_Toolbar"
 msgstr "_Verktygsrad"
 
-#: ../data/gwget.glade.h:49
+#: ../data/gwget.glade.h:52
 msgid "_View"
 msgstr "_Visa"
 
-#: ../data/gwget.glade.h:50
+#: ../data/gwget.glade.h:53
 msgid "gtk-about"
 msgstr "gtk-about"
 
-#: ../data/gwget.glade.h:51
+#: ../data/gwget.glade.h:54
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
-#: ../data/gwget.glade.h:52
+#: ../data/gwget.glade.h:55
 msgid "gtk-close"
 msgstr "gtk-close"
 
-#: ../data/gwget.glade.h:53
+#: ../data/gwget.glade.h:56
 msgid "gtk-new"
 msgstr "gtk-new"
 
-#: ../data/gwget.glade.h:54
+#: ../data/gwget.glade.h:57
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
-#: ../data/gwget.glade.h:55
+#: ../data/gwget.glade.h:58
 msgid "gtk-preferences"
 msgstr "gtk-preferences"
 
-#: ../data/gwget.glade.h:56
+#: ../data/gwget.glade.h:59
 msgid "gtk-properties"
 msgstr "gtk-properties"
 
-#: ../data/gwget.glade.h:57
+#: ../data/gwget.glade.h:60
 msgid "gtk-quit"
 msgstr "gtk-quit"
 
-#: ../data/gwget.glade.h:58
+#: ../data/gwget.glade.h:61
 msgid "label"
 msgstr "etikett"
 
-#: ../data/gwget.glade.h:59
+#: ../data/gwget.glade.h:62
 msgid "local_file_text"
 msgstr "local_file_text"
 
-#: ../data/gwget.glade.h:60
+#: ../data/gwget.glade.h:63
 msgid "url_text"
 msgstr "url_text"
 
@@ -741,10 +753,12 @@ msgstr "fel %d vid åtkomst till %s: %s\n"
 # Finns både med <b> och <span blah blah. Varför?
 # http://bugzilla.ximian.com/show_bug.cgi?id=61078
 #: ../src/main_window_cb.c:887
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM Kontroll OK!</span>"
 
 #: ../src/main_window_cb.c:890
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM Kontroll MISSLYCKADES!</span>"
 
@@ -822,6 +836,8 @@ msgstr "Kan inte fortsätta hämtning, befintlig lokal fil är i konflikt med fj
 msgid "Can't write to target directory"
 msgstr "Kan inte skriva till målkatalog"
 
+#~ msgid "Clear"
+#~ msgstr "Töm"
 #~ msgid "Exit"
 #~ msgstr "Avsluta"
 
