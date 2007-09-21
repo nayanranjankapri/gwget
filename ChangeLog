@@ -1,3 +1,8 @@
+2007-09-21  David Sedeño <david@alderia.com>
+
+	* gwget.desktop.in: Update category according to freedesktop
+	menu specification. Thanks to Arnaud Fontaine for the patch.
+
 2007-09-20  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Connect the signals from the menu. Fix bug #477615.
