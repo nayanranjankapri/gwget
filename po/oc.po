@@ -667,9 +667,7 @@ msgstr ""
 
 #: ../src/main_window_cb.c:196
 msgid "translator-credits"
-msgstr ""
-"La còla occitana de revirada d'Ubuntu, 2006 - ubuntu-l10n-"
-"oci@lists.ubuntu.com"
+msgstr "Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>"
 
 #: ../src/main_window_cb.c:565 ../src/new_window.c:136
 msgid "Select Folder"
