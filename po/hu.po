@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-06-09 20:26+0200\n"
-"PO-Revision-Date: 2007-06-09 20:10+0200\n"
+"POT-Creation-Date: 2007-11-01 08:36+0100\n"
+"PO-Revision-Date: 2007-11-01 08:31+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -100,160 +100,132 @@ msgid "New Download"
 msgstr "Új letöltés"
 
 #: ../data/gwget.glade.h:21
+msgid "New download"
+msgstr "Új letöltés"
+
+#: ../data/gwget.glade.h:22
 msgid "Open"
 msgstr "Megnyitás"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:23
 msgid "Open directory"
 msgstr "Könyvtár megnyitása"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:24
 msgid "Open file"
 msgstr "Fájl megnyitása"
 
-#: ../data/gwget.glade.h:24
+#: ../data/gwget.glade.h:25
 msgid "Open target directory"
 msgstr "Célkönyvtár megnyitása"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:26
 msgid "Pause"
 msgstr "Szünet"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:27
 msgid "Pause all"
 msgstr "Összes szüneteltetése"
 
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:28
+msgid "Pause all downloads"
+msgstr "Összes letöltés szüneteltetése"
+
+#: ../data/gwget.glade.h:29
 msgid "Pause download"
 msgstr "Letöltés szüneteltetése"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:30
 msgid "Pause the download"
 msgstr "A letöltés szüneteltetése"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:31
 msgid "Properties"
 msgstr "Tulajdonságok"
 
-#: ../data/gwget.glade.h:30 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:32 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekurzió"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:33
 msgid "Recursive options"
 msgstr "Rekurzív opciók"
 
-#: ../data/gwget.glade.h:32 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Összes eltávolítása"
 
-#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Befejezettek eltávolítása"
 
-#: ../data/gwget.glade.h:34
+#: ../data/gwget.glade.h:36
+msgid "Remove completed downloads"
+msgstr "Befejezett letöltések eltávolítása"
+
+#: ../data/gwget.glade.h:37
 msgid "Remove from List"
 msgstr "Eltávolítás a listából"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:38
 msgid "Remove from list"
 msgstr "Eltávolítás a listából"
 
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:39 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Inaktívak eltávolítása"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:40
 msgid "Resume all"
 msgstr "Összes folytatása"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:41
+msgid "Resume all downloads"
+msgstr "Összes letöltés folytatása"
+
+#: ../data/gwget.glade.h:42
 msgid "Save in:"
 msgstr "Mentés ide:"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:43
 msgid "Stat_usbar"
 msgstr "Állap_otsor"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:44
 msgid "The index file only"
 msgstr "Csak az indexfájlt"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:45
 msgid "This site (mirror)"
 msgstr "Ezt az oldalt (tükrözés)"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:46
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:47
 msgid "Verify..."
 msgstr "Ellenőrzés..."
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:48
 msgid "_Archive"
 msgstr "_Archívum"
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:49
 msgid "_Download"
 msgstr "_Letöltés"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:50
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:51
 msgid "_Toolbar"
 msgstr "_Eszköztár"
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:52
 msgid "_View"
 msgstr "_Nézet"
-
-#: ../data/gwget.glade.h:49
-msgid "gtk-about"
-msgstr ""
-
-#: ../data/gwget.glade.h:50
-msgid "gtk-cancel"
-msgstr ""
-
-#: ../data/gwget.glade.h:51
-msgid "gtk-close"
-msgstr ""
-
-#: ../data/gwget.glade.h:52
-msgid "gtk-new"
-msgstr ""
-
-#: ../data/gwget.glade.h:53
-msgid "gtk-ok"
-msgstr ""
-
-#: ../data/gwget.glade.h:54
-msgid "gtk-preferences"
-msgstr ""
-
-#: ../data/gwget.glade.h:55
-msgid "gtk-properties"
-msgstr ""
-
-#: ../data/gwget.glade.h:56
-msgid "gtk-quit"
-msgstr ""
-
-#: ../data/gwget.glade.h:57
-msgid "label"
-msgstr ""
-
-#: ../data/gwget.glade.h:58
-msgid "local_file_text"
-msgstr ""
-
-#: ../data/gwget.glade.h:59
-msgid "url_text"
-msgstr ""
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -658,8 +630,12 @@ msgstr ""
 "futó átvitelt?"
 
 #: ../src/main_window.c:792
-msgid "Exit"
-msgstr "Kilépés"
+msgid "No"
+msgstr "Nem"
+
+#: ../src/main_window.c:792
+msgid "Yes"
+msgstr "Igen"
 
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
@@ -716,10 +692,12 @@ msgid "error %d when accessing %s: %s\n"
 msgstr "%d számú hiba %s elérésekor: %s\n"
 
 #: ../src/main_window_cb.c:887
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés sikerült</span>"
 
 #: ../src/main_window_cb.c:890
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr ""
 "<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés meghiúsult</span>"
