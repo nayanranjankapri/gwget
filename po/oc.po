@@ -1,21 +1,25 @@
+# Translation of oc.po to Occitan
+# translation of oc.po to Occitan
 # Occitan translation for gwget
 # Copyright (C) 2003-2007 Free Software Foundation
 # This file is distributed under the same license as the gwget package.
 #
 # Yannig MARCHEGAY (yannig@marchegay.org) - 2006-2007
 #
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget 0.98.1\n"
+"Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-10-13 17:49+0200\n"
-"PO-Revision-Date: 2007-08-19 21:47+0200\n"
-"Last-Translator: Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>\n"
-"Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"PO-Revision-Date: 2007-11-20 14:53+0100\n"
+"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
+"Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
@@ -73,7 +77,7 @@ msgstr ""
 
 #: ../data/gwget.glade.h:14
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #: ../data/gwget.glade.h:15
 msgid "Information"
@@ -100,9 +104,8 @@ msgid "New Download"
 msgstr ""
 
 #: ../data/gwget.glade.h:21
-#, fuzzy
 msgid "New download"
-msgstr "_Descargar"
+msgstr ""
 
 #: ../data/gwget.glade.h:22
 msgid "Open"
@@ -114,7 +117,7 @@ msgstr ""
 
 #: ../data/gwget.glade.h:24
 msgid "Open file"
-msgstr ""
+msgstr "Dobrir un fichièr"
 
 #: ../data/gwget.glade.h:25
 msgid "Open target directory"
@@ -154,7 +157,7 @@ msgstr ""
 
 #: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
 msgid "Remove all"
-msgstr ""
+msgstr "Tot suprimir"
 
 #: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
 msgid "Remove completed"
@@ -217,9 +220,8 @@ msgid "_Download"
 msgstr "_Descargar"
 
 #: ../data/gwget.glade.h:50
-#, fuzzy
 msgid "_Edit"
-msgstr "Sortir"
+msgstr "_Edicion"
 
 #: ../data/gwget.glade.h:51
 msgid "_Toolbar"
@@ -227,7 +229,7 @@ msgstr "_Barra d'espleches"
 
 #: ../data/gwget.glade.h:52
 msgid "_View"
-msgstr "_Mostrar"
+msgstr "_Visualizacion"
 
 #: ../data/gwget.glade.h:53
 msgid "gtk-about"
@@ -381,7 +383,7 @@ msgstr "   "
 
 #: ../data/preferences.glade.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
-msgstr ""
+msgstr "<span weight=\"bold\">Comportament</span>"
 
 #: ../data/preferences.glade.h:4
 msgid "<span weight=\"bold\">Column List</span>"
@@ -590,7 +592,7 @@ msgstr ""
 #: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
 msgid "Error opening file"
-msgstr "Error al moment de dobrir lo fichièr"
+msgstr "Error al moment de dubrir lo fichièr"
 
 #: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259
@@ -673,11 +675,11 @@ msgstr ""
 
 #: ../src/main_window.c:792
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: ../src/main_window.c:792
 msgid "Yes"
-msgstr ""
+msgstr "Òc"
 
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
@@ -689,7 +691,7 @@ msgstr ""
 
 #: ../src/main_window_cb.c:196
 msgid "translator-credits"
-msgstr "Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>"
+msgstr "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org)"
 
 #: ../src/main_window_cb.c:568 ../src/new_window.c:136
 msgid "Select Folder"
@@ -813,3 +815,4 @@ msgstr ""
 #: ../src/wget-log.c:221
 msgid "Can't write to target directory"
 msgstr ""
+
