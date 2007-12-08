@@ -23,7 +23,7 @@
                     <child>
                       <widget class="GtkImageMenuItem" id="imagemenuitem1">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">gtk-new</property>
+                        <property name="label">gtk-new</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="on_button_new_clicked"/>
@@ -72,7 +72,7 @@
                     <child>
                       <widget class="GtkImageMenuItem" id="imagemenuitem5">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">gtk-quit</property>
+                        <property name="label">gtk-quit</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="on_quit1_activate"/>
@@ -141,7 +141,7 @@
                     <child>
                       <widget class="GtkImageMenuItem" id="menuitem3">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">gtk-preferences</property>
+                        <property name="label">gtk-preferences</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="on_boton_pref_clicked"/>
@@ -216,7 +216,7 @@
                     <child>
                       <widget class="GtkImageMenuItem" id="properties_menuitem">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">gtk-properties</property>
+                        <property name="label">gtk-properties</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="on_properties_activate"/>
@@ -268,7 +268,7 @@
                     <child>
                       <widget class="GtkImageMenuItem" id="imagemenuitem10">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">gtk-about</property>
+                        <property name="label">gtk-about</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="on_about1_activate"/>
@@ -473,7 +473,7 @@
     <child>
       <widget class="GtkImageMenuItem" id="menuitem15">
         <property name="visible">True</property>
-        <property name="label" translatable="yes">gtk-properties</property>
+        <property name="label">gtk-properties</property>
         <property name="use_underline">True</property>
         <property name="use_stock">True</property>
         <signal name="activate" handler="on_properties_activate"/>
@@ -588,7 +588,7 @@
             <child>
               <widget class="GtkButton" id="okbutton2">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
               </widget>
               <packing>
@@ -775,7 +775,7 @@
             <child>
               <widget class="GtkButton" id="button1">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="gtk_widget_hide" object="properties_window"/>
               </widget>
@@ -859,7 +859,7 @@
             <child>
               <widget class="GtkButton" id="button3">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
               </widget>
               <packing>
@@ -930,7 +930,7 @@
             <child>
               <widget class="GtkButton" id="button4">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="gtk_widget_hide" object="md5_window"/>
               </widget>
@@ -938,7 +938,7 @@
             <child>
               <widget class="GtkButton" id="button5">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_md5ok_button_clicked"/>
               </widget>
