@@ -2,6 +2,7 @@
 
 	* data/gwget.glade: fix icon size in menus. Fix bug #504764. Thanks to 
 	Colomban Wendling.
+		  Set view->Toolbar and view->Statusbar as Check-boxes. Fix bug #494570
 
 2007-12-08  Claude Paroz  <claude@2xlibre.net>
 

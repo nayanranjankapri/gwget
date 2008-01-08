@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.2.0 on Thu Sep 20 21:49:06 2007 by david@ubuntu-->
+<!--Generated with glade3 3.4.0 on Tue Jan  8 19:15:41 2008 -->
 <glade-interface>
   <widget class="GtkWindow" id="main_window">
     <property name="title" translatable="yes">Gwget - Download Manager</property>
@@ -245,7 +245,6 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">_Toolbar</property>
                         <property name="use_underline">True</property>
-                        <property name="draw_as_radio">True</property>
                         <signal name="toggled" handler="on_view_toolbar_activate"/>
                       </widget>
                     </child>
@@ -254,7 +253,6 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">Stat_usbar</property>
                         <property name="use_underline">True</property>
-                        <property name="draw_as_radio">True</property>
                         <signal name="toggled" handler="on_view_statusbar_activate"/>
                         <signal name="activate" handler="on_view_statusbar_activate"/>
                       </widget>
@@ -348,6 +346,7 @@
         <child>
           <widget class="GtkScrolledWindow" id="scrolledwindow1">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
             <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
             <child>
@@ -537,6 +536,7 @@
                       <widget class="GtkRadioButton" id="radio_index">
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">The index file only</property>
+                        <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
                       </widget>
                     </child>
@@ -544,6 +544,7 @@
                       <widget class="GtkRadioButton" id="radio_multimedia">
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">Multimedia files (Videos and images)</property>
+                        <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
                       </widget>
                       <packing>
@@ -554,6 +555,7 @@
                       <widget class="GtkRadioButton" id="radio_mirror">
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">This site (mirror)</property>
+                        <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
                       </widget>
                       <packing>
@@ -564,6 +566,7 @@
                       <widget class="GtkRadioButton" id="radio_recursive">
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">Recursive</property>
+                        <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
                       </widget>
                       <packing>
@@ -601,6 +604,7 @@
                 <property name="visible">True</property>
                 <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
               </widget>
               <packing>
                 <property name="position">1</property>
@@ -732,6 +736,7 @@
                     <child>
                       <widget class="GtkButton" id="compare_md5">
                         <property name="visible">True</property>
+                        <property name="response_id">0</property>
                         <signal name="clicked" handler="on_compare_md5_clicked"/>
                         <child>
                           <widget class="GtkHBox" id="hbox4">
@@ -788,6 +793,7 @@
                 <property name="visible">True</property>
                 <property name="label">gtk-close</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
                 <signal name="clicked" handler="gtk_widget_hide" object="properties_window"/>
               </widget>
             </child>
@@ -872,6 +878,7 @@
                 <property name="visible">True</property>
                 <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
               </widget>
               <packing>
                 <property name="position">1</property>
@@ -943,6 +950,7 @@
                 <property name="visible">True</property>
                 <property name="label">gtk-cancel</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
                 <signal name="clicked" handler="gtk_widget_hide" object="md5_window"/>
               </widget>
             </child>
@@ -951,6 +959,7 @@
                 <property name="visible">True</property>
                 <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
                 <signal name="clicked" handler="on_md5ok_button_clicked"/>
               </widget>
               <packing>
@@ -1001,47 +1010,6 @@
                     <property name="column_spacing">12</property>
                     <property name="row_spacing">6</property>
                     <child>
-                      <widget class="GtkLabel" id="etiqueta_url1">
-                        <property name="visible">True</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
-                        <property name="label" translatable="yes">URL:</property>
-                        <property name="justify">GTK_JUSTIFY_CENTER</property>
-                        <property name="wrap">True</property>
-                      </widget>
-                      <packing>
-                        <property name="x_options">GTK_FILL</property>
-                        <property name="y_options"></property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label1">
-                        <property name="visible">True</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
-                        <property name="label" translatable="yes">Save in:</property>
-                      </widget>
-                      <packing>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
-                        <property name="x_options">GTK_FILL</property>
-                        <property name="y_options"></property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkEntry" id="url_entry">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="invisible_char">*</property>
-                        <property name="activates_default">True</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="y_options"></property>
-                      </packing>
-                    </child>
-                    <child>
                       <widget class="GtkHBox" id="hbox1">
                         <property name="visible">True</property>
                         <property name="spacing">6</property>
@@ -1061,6 +1029,7 @@
                             <property name="can_focus">True</property>
                             <property name="label">gtk-open</property>
                             <property name="use_stock">True</property>
+                            <property name="response_id">0</property>
                             <signal name="clicked" handler="on_new_browse_save_in_button_clicked"/>
                           </widget>
                           <packing>
@@ -1077,6 +1046,47 @@
                         <property name="bottom_attach">2</property>
                         <property name="x_options">GTK_FILL</property>
                         <property name="y_options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkEntry" id="url_entry">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="invisible_char">*</property>
+                        <property name="activates_default">True</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="y_options"></property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="label1">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">Save in:</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options"></property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="etiqueta_url1">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">URL:</property>
+                        <property name="justify">GTK_JUSTIFY_CENTER</property>
+                        <property name="wrap">True</property>
+                      </widget>
+                      <packing>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options"></property>
                       </packing>
                     </child>
                   </widget>
@@ -1113,6 +1123,7 @@
                 <property name="can_default">True</property>
                 <property name="label">gtk-cancel</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
                 <signal name="clicked" handler="on_cancel_button_clicked"/>
               </widget>
             </child>
@@ -1123,6 +1134,7 @@
                 <property name="can_default">True</property>
                 <property name="label">gtk-ok</property>
                 <property name="use_stock">True</property>
+                <property name="response_id">0</property>
                 <signal name="clicked" handler="on_ok_button_clicked"/>
               </widget>
               <packing>
