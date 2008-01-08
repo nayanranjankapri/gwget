@@ -1,5 +1,8 @@
 2008-01-08  David Sedeño <david@alderia.com>
 
+	* Rename configure.in to configure.ac
+	* Use po/LINGUAS 
+	* autogen.sh: Update
 	* data/gwget.glade: fix icon size in menus. Fix bug #504764. Thanks to 
 	Colomban Wendling.
 		  Set view->Toolbar and view->Statusbar as Check-boxes. Fix bug #494570
