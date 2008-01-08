@@ -1,3 +1,8 @@
+2008-01-08  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: fix icon size in menus. Fix bug #504764. Thanks to 
+	Colomban Wendling.
+
 2007-12-08  Claude Paroz  <claude@2xlibre.net>
 
 	* data/gwget.glade: Stock labels should not have the translatable

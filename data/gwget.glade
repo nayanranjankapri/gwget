@@ -45,6 +45,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
                             <property name="stock">gtk-refresh</property>
+                            <property name="icon_size">1</property>
                           </widget>
                         </child>
                       </widget>
@@ -60,6 +61,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
                             <property name="stock">gtk-stop</property>
+                            <property name="icon_size">1</property>
                           </widget>
                         </child>
                       </widget>
@@ -129,6 +131,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
                             <property name="stock">gtk-remove</property>
+                            <property name="icon_size">1</property>
                           </widget>
                         </child>
                       </widget>
@@ -172,6 +175,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
                             <property name="stock">gtk-stop</property>
+                            <property name="icon_size">1</property>
                           </widget>
                         </child>
                       </widget>
@@ -188,6 +192,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
                             <property name="stock">gtk-refresh</property>
+                            <property name="icon_size">1</property>
                           </widget>
                         </child>
                       </widget>
@@ -204,6 +209,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
                             <property name="stock">gtk-cancel</property>
+                            <property name="icon_size">1</property>
                           </widget>
                         </child>
                       </widget>
@@ -381,6 +387,7 @@
             <property name="visible">True</property>
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
             <property name="stock">gtk-stop</property>
+            <property name="icon_size">1</property>
           </widget>
         </child>
       </widget>
@@ -396,6 +403,7 @@
           <widget class="GtkImage" id="menu-item-image18">
             <property name="visible">True</property>
             <property name="stock">gtk-refresh</property>
+            <property name="icon_size">1</property>
           </widget>
         </child>
       </widget>
@@ -426,6 +434,7 @@
             <property name="visible">True</property>
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
             <property name="stock">gtk-open</property>
+            <property name="icon_size">1</property>
           </widget>
         </child>
       </widget>
@@ -446,6 +455,7 @@
             <property name="visible">True</property>
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
             <property name="stock">gtk-remove</property>
+            <property name="icon_size">1</property>
           </widget>
         </child>
       </widget>
@@ -461,6 +471,7 @@
             <property name="visible">True</property>
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
             <property name="stock">gtk-cancel</property>
+            <property name="icon_size">1</property>
           </widget>
         </child>
       </widget>
