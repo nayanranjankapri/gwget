@@ -1,17 +1,17 @@
-# gwget's Finnish translation
+# Finnish messages for gwget
 # This file is distributed under the same license as the gwget package.
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # Sini Ruohomaa <sini.ruohomaa@iki.fi>, 2004
-# Ilkka Tuohela <hile@iki.fi>, 2005
+# Ilkka Tuohela <hile@iki.fi>, 2005-2008
 #
 # Suomennos: http://gnome.fi/
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget 0.14\n"
+"Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-07 20:41+0300\n"
-"PO-Revision-Date: 2006-04-14 20:53+0300\n"
+"POT-Creation-Date: 2008-03-09 08:30+0300\n"
+"PO-Revision-Date: 2008-03-09 08:38+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "<b>Noudot</b>"
 
 #: ../data/gwget.glade.h:3
 msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr "<b>Lisää MD5-summa johon verrataan</b>"
+msgstr "<b>Lisää vertailuun käytetty MD5-summa</b>"
 
 #: ../data/gwget.glade.h:4
 msgid "<b>Properties</b>"
@@ -52,57 +52,57 @@ msgid "Cancel the download"
 msgstr "Peru nouto"
 
 #: ../data/gwget.glade.h:9
-msgid "Clear"
-msgstr "Tyhjennä"
-
-#: ../data/gwget.glade.h:10
 msgid "Compare md5 sum"
 msgstr "Vertaa MD4-tarkistussummaa"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:10
 msgid "Continue"
 msgstr "Jatka"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:11
 msgid "Continue download"
 msgstr "Jatka noutoa"
 
-#: ../data/gwget.glade.h:13
+#: ../data/gwget.glade.h:12
 msgid "Continue with the download"
 msgstr "Jatka tiedoston noutoa"
 
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
+#: ../data/gwget.glade.h:13 ../src/main_window_cb.c:144
 #: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
 #: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Tiedostojen noutaja"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:14
 msgid "Help"
 msgstr "Ohje"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:15
 msgid "Information"
 msgstr "Tietoja"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:16
 msgid "Local Directory:"
 msgstr "Paikallinen kansio:"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:17
 msgid "Local File:"
 msgstr "Paikallinen tiedosto:"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:18
 msgid "Md5 Sum:"
 msgstr "MD4-summa:"
 
-#: ../data/gwget.glade.h:20
+#: ../data/gwget.glade.h:19
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediatiedostot (videot ja kuvat)"
 
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:20
 msgid "New Download"
+msgstr "Uusi nouto"
+
+#: ../data/gwget.glade.h:21
+msgid "New download"
 msgstr "Uusi nouto"
 
 #: ../data/gwget.glade.h:22
@@ -130,134 +130,114 @@ msgid "Pause all"
 msgstr "Pysäytä kaikki"
 
 #: ../data/gwget.glade.h:28
+msgid "Pause all downloads"
+msgstr "Pysäytä kaikki noudot"
+
+#: ../data/gwget.glade.h:29
 msgid "Pause download"
 msgstr "Pysäytä nouto"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:30
 msgid "Pause the download"
 msgstr "Pysäytä tämä nouto"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:31
 msgid "Properties"
 msgstr "Ominaisuudet"
 
-#: ../data/gwget.glade.h:31 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:32 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekursiivinen"
 
-#: ../data/gwget.glade.h:32
+#: ../data/gwget.glade.h:33
 msgid "Recursive options"
 msgstr "Rekursiivisen asetukset"
 
-#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Poista kaikki"
 
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
 msgid "Remove completed"
-msgstr "Poisto valmis"
+msgstr "Poista valmistuneet"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:36
+msgid "Remove completed downloads"
+msgstr "Poista valmistuneet noudot"
+
+#: ../data/gwget.glade.h:37
 msgid "Remove from List"
 msgstr "Poista listalta"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:38
 msgid "Remove from list"
 msgstr "Poisto listalta"
 
-#: ../data/gwget.glade.h:37 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:39 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Poista valmiit ja pysäytetyt"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:40
 msgid "Resume all"
 msgstr "Jatka keskeneräisiä"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:41
+msgid "Resume all downloads"
+msgstr "Jatka kaikkia noutoja"
+
+#: ../data/gwget.glade.h:42
 msgid "Save in:"
 msgstr "Tallenna kansioon:"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:43
 msgid "Stat_usbar"
 msgstr "_Tilarivi"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:44
 msgid "The index file only"
 msgstr "Vain indeksitiedosto"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:45
 msgid "This site (mirror)"
 msgstr "Tämä sivusto (peilaus)"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:46
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:47
 msgid "Verify..."
 msgstr "Tarkista..."
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:48
 msgid "_Archive"
 msgstr "_Arkisto"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:49
 msgid "_Download"
 msgstr "_Siirrot"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:50
 msgid "_Edit"
 msgstr "_Muokkaa"
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:51
 msgid "_Toolbar"
 msgstr "_Työkalurivi"
 
-#: ../data/gwget.glade.h:49
+#: ../data/gwget.glade.h:52
 msgid "_View"
 msgstr "_Tietoja"
 
-#: ../data/gwget.glade.h:50
-msgid "gtk-about"
-msgstr "Tietoja"
-
-#: ../data/gwget.glade.h:51
-msgid "gtk-cancel"
-msgstr "Peru"
-
-#: ../data/gwget.glade.h:52
-msgid "gtk-close"
-msgstr "Sulje"
-
 #: ../data/gwget.glade.h:53
-msgid "gtk-new"
-msgstr "Uusi"
-
-#: ../data/gwget.glade.h:54
-msgid "gtk-ok"
-msgstr "OK"
-
-#: ../data/gwget.glade.h:55
-msgid "gtk-preferences"
-msgstr "Asetukset"
-
-#: ../data/gwget.glade.h:56
-msgid "gtk-properties"
-msgstr "Ominaisuudet"
-
-#: ../data/gwget.glade.h:57
-msgid "gtk-quit"
-msgstr "Lopeta"
-
-#: ../data/gwget.glade.h:58
 msgid "label"
 msgstr "Otsikko"
 
-#: ../data/gwget.glade.h:59
+#: ../data/gwget.glade.h:54
 msgid "local_file_text"
 msgstr "local_file_text"
 
-#: ../data/gwget.glade.h:60
+#: ../data/gwget.glade.h:55
 msgid "url_text"
 msgstr "url_text"
 
@@ -737,7 +717,8 @@ msgstr "<span size=\"large\" weight=\"bold\">MD5SUM-tarkistus onnistui!</span>"
 #: ../src/main_window_cb.c:890
 #, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">MD5SUM-tarkistus epäonnistui!</span>"
+msgstr ""
+"<span size=\"large\" weight=\"bold\">MD5SUM-tarkistus epäonnistui!</span>"
 
 #: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
