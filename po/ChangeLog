@@ -1,3 +1,8 @@
+2008-05-07  Petr Kovar  <pknbe@volny.cz>
+
+	* cs.po: Fixed Czech translation by Lucas Lommer
+	(bug #517967).
+
 2008-03-09  Ilkka Tuohela <hile@iki.fi>
 
 	* fi.po: Updated Finnish translation.
