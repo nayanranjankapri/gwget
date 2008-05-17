@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-09 10:53+0000\n"
-"PO-Revision-Date: 2008-01-07 19:57+0200\n"
-"Last-Translator: Mark Krapivner (Revan) <mark125@gmail.com>\n"
+"POT-Creation-Date: 2008-05-10 18:21+0000\n"
+"PO-Revision-Date: 2008-05-14 17:00+0200\n"
+"Last-Translator: חזי עמיאל <hezy.amiel@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "<b>הכנס סכום MD5 להשוואה</b>"
 
 #: ../data/gwget.glade.h:4
 msgid "<b>Properties</b>"
-msgstr "<b>העדפות</b>"
+msgstr "<b>מאפיינים</b>"
 
 #: ../data/gwget.glade.h:5
 msgid "<span weight=\"bold\">New Download</span>"
@@ -489,7 +489,7 @@ msgstr "קבצים"
 
 #: ../data/preferences.glade.h:40
 msgid "kB/sec"
-msgstr ""
+msgstr "קילו-בתים לשנייה"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
@@ -655,7 +655,7 @@ msgstr "מנהל הורדות עבור GNOME."
 msgid "translator-credits"
 msgstr ""
 "מארק קרפיבנר <mark125@gmail.com>\n"
-"חזי אמיאל <hezy.amiel@gmail.com>\n"
+"חזי עמיאל <hezy.amiel@gmail.com>\n"
 "\n"
 "פרוייקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
@@ -703,12 +703,14 @@ msgid "error %d when accessing %s: %s\n"
 msgstr "שגיאה %d בעת גישה ל-%s: %s\n"
 
 #: ../src/main_window_cb.c:887
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span weight=\"bold\">בדיקת סכום MD5 עברה בהצלחה!</span>"
 
 #: ../src/main_window_cb.c:890
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span weight=\"bold\">בדיקת סכום MD% נכשלה!</span>"
+msgstr "<span weight=\"bold\">השוואת סכום MD5 נכשלה!</span>"
 
 #: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
