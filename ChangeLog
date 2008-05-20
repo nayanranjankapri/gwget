@@ -1,7 +1,8 @@
 2008-05-20  David Sedeño <david@alderia.com>
 
+	* Make desktop file translatable and moved to data/. Fix bug #530310. 
 	* data/gwget.glade: Fix translatable attributes. Fix bug #529953. Thanks to
-	Gabor Kelemen for the patch.
+	Gabor Kelemen for the patchs.
 
 2008-01-08  David Sedeño <david@alderia.com>
 
