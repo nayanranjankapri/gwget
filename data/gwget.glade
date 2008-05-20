@@ -305,7 +305,7 @@
               <widget class="GtkToolButton" id="resumeall_button">
                 <property name="visible">True</property>
                 <property name="tooltip" translatable="yes">Resume all downloads</property>
-                <property name="label">Resume all</property>
+                <property name="label" translatable="yes">Resume all</property>
                 <property name="stock_id">gtk-refresh</property>
                 <signal name="clicked" handler="continue_all_downloads"/>
               </widget>
@@ -317,7 +317,7 @@
               <widget class="GtkToolButton" id="stop_button">
                 <property name="visible">True</property>
                 <property name="tooltip" translatable="yes">Pause all downloads</property>
-                <property name="label">Pause all</property>
+                <property name="label" translatable="yes">Pause all</property>
                 <property name="stock_id">gtk-stop</property>
                 <signal name="clicked" handler="stop_all_downloads"/>
               </widget>
@@ -329,7 +329,7 @@
               <widget class="GtkToolButton" id="clear_button">
                 <property name="visible">True</property>
                 <property name="tooltip" translatable="yes">Remove completed downloads</property>
-                <property name="label">Clear</property>
+                <property name="label" translatable="yes">Clear</property>
                 <property name="stock_id">gtk-clear</property>
                 <signal name="clicked" handler="on_remove_completed_activate"/>
               </widget>
@@ -706,7 +706,7 @@
                   <widget class="GtkLabel" id="url_text">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">url_text</property>
+                    <property name="label">url_text</property>
                     <property name="selectable">True</property>
                   </widget>
                 </child>
@@ -714,7 +714,7 @@
                   <widget class="GtkLabel" id="local_file_text">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">local_file_text</property>
+                    <property name="label">local_file_text</property>
                   </widget>
                   <packing>
                     <property name="position">1</property>
@@ -724,7 +724,7 @@
                   <widget class="GtkLabel" id="local_dir">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label">label</property>
                   </widget>
                   <packing>
                     <property name="position">2</property>

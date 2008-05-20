@@ -1,3 +1,8 @@
+2008-05-20  David Sedeño <david@alderia.com>
+
+	* data/gwget.glade: Fix translatable attributes. Fix bug #529953. Thanks to
+	Gabor Kelemen for the patch.
+
 2008-01-08  David Sedeño <david@alderia.com>
 
 	* Rename configure.in to configure.ac
