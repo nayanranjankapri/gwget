@@ -1,5 +1,9 @@
 2008-05-20  Gabor Kelemen  <kelemeng@gnome.org>
 
+	* hu.po: Translation updated.
+
+2008-05-20  Gabor Kelemen  <kelemeng@gnome.org>
+
 	* POTFILES.in: fix desktop.in/in.in mistake introduced by my patch to bug #530310
 
 2008-05-17  Yair Hershkovitz  <yairhr@gmail.com>
