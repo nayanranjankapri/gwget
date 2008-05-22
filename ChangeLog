@@ -1,5 +1,6 @@
 2008-05-22  David Sedeño <david@alderia.com>
 
+	* configure.ac: Remove gwget.desktop (is in data/ now).
 	* src/main.c: translate program description in --help output. Thanks to Gabor Kelemen 
 	for the patch. Fix #534108.
 

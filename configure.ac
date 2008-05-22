@@ -278,6 +278,5 @@ po/Makefile.in
 src/Makefile
 pixmaps/Makefile
 data/Makefile
-gwget.desktop
 epiphany-extension/Makefile
 ])
