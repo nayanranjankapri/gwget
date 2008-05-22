@@ -1,3 +1,8 @@
+2008-05-22  David Sedeño <david@alderia.com>
+
+	* src/main.c: translate program description in --help output. Thanks to Gabor Kelemen 
+	for the patch. Fix #534108.
+
 2008-05-20  David Sedeño <david@alderia.com>
 
 	* Make desktop file translatable and moved to data/. Fix bug #530310. 
