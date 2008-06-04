@@ -10,32 +10,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-07 02:43+0200\n"
-"PO-Revision-Date: 2008-05-07 02:42+0100\n"
-"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
+"POT-Creation-Date: 2008-06-04 19:14+0200\n"
+"PO-Revision-Date: 2008-06-01 15:28+0100\n"
+"Last-Translator: Lucas Lommer <llommer@svn.gnome.org>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Správce stahování"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Stáhnout soubory z Internetu"
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+msgid "Gwget Download Manager"
+msgstr "Správce stahování Gwget"
+
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
 #: ../data/gwget.glade.h:2
-#, fuzzy
 msgid "<b>Download</b>"
-msgstr "_Stahování"
+msgstr "<b>Stahování</b>"
 
 #: ../data/gwget.glade.h:3
 msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr ""
+msgstr "<b>Vložte součet MD5 pro porovnání</b>"
 
 #: ../data/gwget.glade.h:4
-#, fuzzy
 msgid "<b>Properties</b>"
-msgstr "Vlastnosti"
+msgstr "<b>Vlastnosti</b>"
 
 #: ../data/gwget.glade.h:5
 msgid "<span weight=\"bold\">New Download</span>"
@@ -54,199 +64,186 @@ msgid "Cancel the download"
 msgstr "Zrušit stahování"
 
 #: ../data/gwget.glade.h:9
-msgid "Compare md5 sum"
-msgstr ""
+msgid "Clear"
+msgstr "Vyčistit"
 
 #: ../data/gwget.glade.h:10
+msgid "Compare md5 sum"
+msgstr "Porovnat MD5 součet"
+
+#: ../data/gwget.glade.h:11
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: ../data/gwget.glade.h:11
-#, fuzzy
+#: ../data/gwget.glade.h:12
 msgid "Continue download"
 msgstr "Pokračovat se stahováním"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:13
 msgid "Continue with the download"
 msgstr "Pokračovat se stahováním"
 
-#: ../data/gwget.glade.h:13 ../src/main_window_cb.c:144
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
 #: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
 #: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správce stahování"
 
-#: ../data/gwget.glade.h:14
-msgid "Help"
-msgstr ""
-
 #: ../data/gwget.glade.h:15
+msgid "Help"
+msgstr "Nápověda"
+
+#: ../data/gwget.glade.h:16
 msgid "Information"
 msgstr "Informace"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:17
 msgid "Local Directory:"
 msgstr "Místní adresář:"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:18
 msgid "Local File:"
 msgstr "Místní soubor:"
 
-#: ../data/gwget.glade.h:18
-msgid "Md5 Sum:"
-msgstr ""
-
 #: ../data/gwget.glade.h:19
+msgid "Md5 Sum:"
+msgstr "Součet MD5:"
+
+#: ../data/gwget.glade.h:20
 msgid "Multimedia files (Videos and images)"
 msgstr "Multimediální soubory (videa a obrázky)"
 
-#: ../data/gwget.glade.h:20
+#: ../data/gwget.glade.h:21
 msgid "New Download"
 msgstr "Nové stahování"
 
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:22
 msgid "New download"
 msgstr "Nové stahování"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:23
 msgid "Open"
 msgstr "Otevřít"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:24
 msgid "Open directory"
 msgstr "Otevřít adresář"
 
-#: ../data/gwget.glade.h:24
-#, fuzzy
-msgid "Open file"
-msgstr "Otevřít"
-
 #: ../data/gwget.glade.h:25
-#, fuzzy
+msgid "Open file"
+msgstr "Otevřít soubor"
+
+#: ../data/gwget.glade.h:26
 msgid "Open target directory"
 msgstr "Otevřít cílový adresář"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:27
 msgid "Pause"
 msgstr "Pozastavit"
 
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:28
 msgid "Pause all"
 msgstr "Pozastavit vše"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:29
 msgid "Pause all downloads"
 msgstr "Pozastavit všechna stahování"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:30
 msgid "Pause download"
 msgstr "Pozastavit stahování"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:31
 msgid "Pause the download"
 msgstr "Pozastavit stahování"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:32
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: ../data/gwget.glade.h:32 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekurzivně"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:34
 msgid "Recursive options"
 msgstr "Možnosti rekurze"
 
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Odstranit vše"
 
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
-#: ../data/gwget.glade.h:36
-#, fuzzy
-msgid "Remove completed downloads"
-msgstr "Odstranit ze seznamu dokončená stahování"
-
 #: ../data/gwget.glade.h:37
+msgid "Remove completed downloads"
+msgstr "Odstranit dokončená stahování"
+
+#: ../data/gwget.glade.h:38
 msgid "Remove from List"
 msgstr "Odstranit ze seznamu"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:39
 msgid "Remove from list"
 msgstr "Odstranit ze seznamu"
 
-#: ../data/gwget.glade.h:39 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:41
 msgid "Resume all"
 msgstr "Obnovit vše"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:42
 msgid "Resume all downloads"
 msgstr "Obnovit všechna stahování"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:43
 msgid "Save in:"
 msgstr "Uložit do:"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:44
 msgid "Stat_usbar"
 msgstr "_Stavová lišta"
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:45
 msgid "The index file only"
 msgstr "Jen soubor index"
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:46
 msgid "This site (mirror)"
 msgstr "Tento server (zrcadlo)"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:47
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:47
-msgid "Verify..."
-msgstr ""
-
 #: ../data/gwget.glade.h:48
-msgid "_Archive"
-msgstr ""
+msgid "Verify..."
+msgstr "Kontrola..."
 
 #: ../data/gwget.glade.h:49
+msgid "_Archive"
+msgstr "_Archiv"
+
+#: ../data/gwget.glade.h:50
 msgid "_Download"
 msgstr "_Stahování"
 
-#: ../data/gwget.glade.h:50
-msgid "_Edit"
-msgstr ""
-
 #: ../data/gwget.glade.h:51
+msgid "_Edit"
+msgstr "_Upravit"
+
+#: ../data/gwget.glade.h:52
 msgid "_Toolbar"
 msgstr "_Lišta nástrojů"
 
-#: ../data/gwget.glade.h:52
-#, fuzzy
-msgid "_View"
-msgstr "_Nové"
-
 #: ../data/gwget.glade.h:53
-msgid "label"
-msgstr ""
-
-#: ../data/gwget.glade.h:54
-msgid "local_file_text"
-msgstr ""
-
-#: ../data/gwget.glade.h:55
-msgid "url_text"
-msgstr ""
+msgid "_View"
+msgstr "_Zobrazit"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -418,7 +415,7 @@ msgstr "_Port:"
 
 #: ../data/preferences.glade.h:18
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
 #: ../data/preferences.glade.h:19
 msgid "Preferences"
@@ -490,11 +487,11 @@ msgstr "_Procenta"
 
 #: ../data/preferences.glade.h:37
 msgid "_Proxy requires authentication"
-msgstr ""
+msgstr "_Proxy server vyžaduje ověření"
 
 #: ../data/preferences.glade.h:38
 msgid "_User:"
-msgstr ""
+msgstr "_Uživatel:"
 
 #: ../data/preferences.glade.h:39
 msgid "files"
@@ -575,32 +572,22 @@ msgid "Couldn't open the file"
 msgstr "Nemohu otevřít soubor"
 
 #: ../src/gwget_data.c:784
-#, fuzzy
 msgid "Download Complete"
-msgstr ""
-"Stahování dokončeno\n"
-"(%s)"
+msgstr "Stahování dokončeno"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
-msgstr ""
+msgstr "Spustit gwget v Oznamovací oblasti"
 
 #: ../src/main.c:41
-#, fuzzy
 msgid "Destination directory for the download"
-msgstr "Pokračovat se stahováním"
+msgstr "Cílový adresář pro stahování"
 
 #: ../src/main.c:42
-#, fuzzy
 msgid "[URL]"
-msgstr "URL:"
+msgstr "[URL]"
 
-#: ../src/main.c:244 ../src/main.c:276
-#, fuzzy
-msgid "Gwget Download Manager"
-msgstr "Gwget - Správce stahování"
-
-#: ../src/main.c:262 ../src/main_window_cb.c:191
+#: ../src/main.c:263 ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "Gwget"
 
@@ -645,9 +632,8 @@ msgid "There was an unexpected error starting the download"
 msgstr "Při spouštění stahování došlo k neočekávané chybě"
 
 #: ../src/main_window.c:791
-#, fuzzy
 msgid "Stop current downloads?"
-msgstr "Zrušit atktuální stahování?"
+msgstr "Zastavit atktuální stahování?"
 
 #: ../src/main_window.c:792
 msgid ""
@@ -659,11 +645,11 @@ msgstr ""
 
 #: ../src/main_window.c:792
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: ../src/main_window.c:792
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
@@ -691,13 +677,12 @@ msgstr ""
 "(URL: %s)"
 
 #: ../src/main_window_cb.c:625
-#, fuzzy
 msgid "Delete download?"
-msgstr "Zrušit stahování?"
+msgstr "Odstranit stahování?"
 
 #: ../src/main_window_cb.c:625
 msgid "Delete"
-msgstr ""
+msgstr "Odstranit"
 
 #: ../src/main_window_cb.c:655
 msgid "Really remove completed downloads from the list?"
@@ -718,17 +703,19 @@ msgstr "Opravdu odstranit ze seznamu všechna stahování?"
 #: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
 #, c-format
 msgid "error %d when accessing %s: %s\n"
-msgstr ""
+msgstr "chyba %d při přistupování k %s: %s\n"
 
 #: ../src/main_window_cb.c:887
-#, fuzzy, c-format
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span weight=\"bold\">Odkazy</span>"
+msgstr ""
+"<span size=\"large\" weight=\"bold\">KONTROLA SOUČTU MD5 V POŘÁDKU!</span>"
 
 #: ../src/main_window_cb.c:890
-#, fuzzy, c-format
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span weight=\"bold\">Seznam sloupců</span>"
+msgstr ""
+"<span size=\"large\" weight=\"bold\">KONTROLA SOUČTU MD5 SELHALA!</span>"
 
 #: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
@@ -737,18 +724,17 @@ msgstr ""
 "spuštěná stahování"
 
 #: ../src/main_window_cb.c:1227
-#, fuzzy, c-format
+#, c-format
 msgid "Remove %s ?"
-msgstr "Odstranit"
+msgstr "Odstranit %s ?"
 
 #: ../src/main_window_cb.c:1228
 msgid "Really remove this download from the list?"
 msgstr "Opravdu odstranit toto stahování ze seznamu?"
 
 #: ../src/main_window_cb.c:1228
-#, fuzzy
 msgid "Remove download"
-msgstr "Odstranit toto stahování?"
+msgstr "Odstranit stahování"
 
 #: ../src/main_window_cb.c:1278
 msgid "Couldn't open the folder"
