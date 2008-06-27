@@ -1,24 +1,37 @@
+# translation of gwget.HEAD.po to Español
 # translation of gwget to spanish
-# Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget2 package.
 #
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004, 2005.
 # Jorge Gonzalez <jorge.gonzalez.gonzalez@hispalinux.es>, 2005.
 # Miguel Angel Nieto <correo@miguelangelnieto.net>, 2005.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget.HEAD.es\n"
+"Project-Id-Version: gwget.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 20:51+0100\n"
-"PO-Revision-Date: 2007-09-26 12:07+0200\n"
+"POT-Creation-Date: 2008-05-20 20:43+0000\n"
+"PO-Revision-Date: 2008-06-28 00:39+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Spanish <traductores@es.gnome.org>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
+
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Gestor de descargas"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Descargue archivos de Internet"
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:276
+msgid "Gwget Download Manager"
+msgstr "Gestor de descargas Gwget"
 
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
@@ -53,226 +66,186 @@ msgid "Cancel the download"
 msgstr "Cancela la descarga"
 
 #: ../data/gwget.glade.h:9
+msgid "Clear"
+msgstr "Limpiar"
+
+#: ../data/gwget.glade.h:10
 msgid "Compare md5 sum"
 msgstr "Comparar suma MD5"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:11
 msgid "Continue"
 msgstr "Continuar"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:12
 msgid "Continue download"
 msgstr "Continua con la descarga"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:13
 msgid "Continue with the download"
 msgstr "Continua con la descarga"
 
-#: ../data/gwget.glade.h:13 ../src/main_window_cb.c:144
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
 #: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
 #: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gestor de descargas"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:15
 msgid "Help"
 msgstr "Ayuda"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:16
 msgid "Information"
 msgstr "Información"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:17
 msgid "Local Directory:"
 msgstr "Directorio local:"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:18
 msgid "Local File:"
 msgstr "Archivo local:"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:19
 msgid "Md5 Sum:"
 msgstr "Suma MD5"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:20
 msgid "Multimedia files (Videos and images)"
 msgstr "Archivos multimedia (vídeos e imágenes)"
 
-#: ../data/gwget.glade.h:20
+#: ../data/gwget.glade.h:21
 msgid "New Download"
 msgstr "Descarga nueva"
 
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:22
 msgid "New download"
 msgstr "Descarga nueva"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:23
 msgid "Open"
 msgstr "Abrir"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:24
 msgid "Open directory"
 msgstr "Abrir directorio"
 
-#: ../data/gwget.glade.h:24
+#: ../data/gwget.glade.h:25
 msgid "Open file"
 msgstr "Abrir archivo"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:26
 msgid "Open target directory"
 msgstr "Abrir carpeta de destino"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:27
 msgid "Pause"
 msgstr "Pausar"
 
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:28
 msgid "Pause all"
 msgstr "Pausar todos"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:29
 msgid "Pause all downloads"
 msgstr "Pausar todas las descargas"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:30
 msgid "Pause download"
 msgstr "Pausar la descarga"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:31
 msgid "Pause the download"
 msgstr "Pausar la descarga"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:32
 msgid "Properties"
 msgstr "Propiedades"
 
-#: ../data/gwget.glade.h:32 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Recursivo"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:34
 msgid "Recursive options"
 msgstr "Opciones de recursividad"
 
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Quitar todas"
 
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Quitar las descargas completadas"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:37
 msgid "Remove completed downloads"
 msgstr "Quitar las descargas completadas"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:38
 msgid "Remove from List"
 msgstr "Quitar de la lista"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:39
 msgid "Remove from list"
 msgstr "Quita de la lista"
 
-#: ../data/gwget.glade.h:39 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Quitar las inactivas"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:41
 msgid "Resume all"
 msgstr "Continuar todas"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:42
 msgid "Resume all downloads"
 msgstr "Resumir todas las descargas"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:43
 msgid "Save in:"
 msgstr "Guardar en:"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:44
 msgid "Stat_usbar"
 msgstr "_Barra de estado"
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:45
 msgid "The index file only"
 msgstr "El archivo index solamente"
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:46
 msgid "This site (mirror)"
 msgstr "Este sitio (replicar)"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:47
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:48
 msgid "Verify..."
 msgstr "Verificar..."
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:49
 msgid "_Archive"
 msgstr "_Archivo"
 
-#: ../data/gwget.glade.h:49
+#: ../data/gwget.glade.h:50
 msgid "_Download"
 msgstr "_Descarga"
 
-#: ../data/gwget.glade.h:50
+#: ../data/gwget.glade.h:51
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../data/gwget.glade.h:51
+#: ../data/gwget.glade.h:52
 msgid "_Toolbar"
 msgstr "Barra de _herramientas"
 
-#: ../data/gwget.glade.h:52
+#: ../data/gwget.glade.h:53
 msgid "_View"
 msgstr "_Ver"
-
-#: ../data/gwget.glade.h:53
-msgid "gtk-about"
-msgstr "gtk-about"
-
-#: ../data/gwget.glade.h:54
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../data/gwget.glade.h:55
-msgid "gtk-close"
-msgstr "gtk-close"
-
-#: ../data/gwget.glade.h:56
-msgid "gtk-new"
-msgstr "gtk-new"
-
-#: ../data/gwget.glade.h:57
-msgid "gtk-ok"
-msgstr "gtk-ok"
-
-#: ../data/gwget.glade.h:58
-msgid "gtk-preferences"
-msgstr "gtk-preferences"
-
-#: ../data/gwget.glade.h:59
-msgid "gtk-properties"
-msgstr "gtk-properties"
-
-#: ../data/gwget.glade.h:60
-msgid "gtk-quit"
-msgstr "gtk-quit"
-
-#: ../data/gwget.glade.h:61
-msgid "label"
-msgstr "etiqueta"
-
-#: ../data/gwget.glade.h:62
-msgid "local_file_text"
-msgstr "archivo_de_texto_local"
-
-#: ../data/gwget.glade.h:63
-msgid "url_text"
-msgstr "texto_url"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -617,10 +590,6 @@ msgstr "Carpeta de destino para la descarga"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:244 ../src/main.c:276
-msgid "Gwget Download Manager"
-msgstr "Gestor de descargas Gwget"
-
 #: ../src/main.c:262 ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "Gwget"
@@ -744,10 +713,12 @@ msgid "error %d when accessing %s: %s\n"
 msgstr "error %d al acceder a %s: %s\n"
 
 #: ../src/main_window_cb.c:887
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">Suma MD5 verificada</span>"
 
 #: ../src/main_window_cb.c:890
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">Falló la suma MD5</span>"
 
