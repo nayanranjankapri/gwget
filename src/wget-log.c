@@ -181,7 +181,6 @@ wget_log_process_line (GwgetData *gwgetdata)
 			show_error(gwgetdata, _("Refusing to truncate existing file"));
 		else {
 			show_error (gwgetdata, _ ("Unknown error"));
-			//printf ("%s\n", gwgetdata->line);
 		}
 		
 		kill (gwgetdata->wget_pid, SIGKILL);
