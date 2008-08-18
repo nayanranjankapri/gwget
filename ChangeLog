@@ -1,3 +1,8 @@
+2008-08-18  David Sedeño <david@alderia.com>
+
+	* src/wget-log.c: Fix "resolving" parsing in log line. Thanks to Rich Benson for the
+	patch. Fix #432981.
+
 2008-05-22  David Sedeño <david@alderia.com>
 
 	* configure.ac: Remove gwget.desktop (is in data/ now).

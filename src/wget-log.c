@@ -25,6 +25,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <fcntl.h>
+#include <ctype.h>
 #include "gwget_data.h"
 #include "wget-log.h"
 #include "main_window.h"
@@ -65,8 +66,9 @@ show_error (GwgetData *gwgetdata, gchar *error_msg)
 static int
 wget_log_process_line (GwgetData *gwgetdata)
 {
-	gchar *p;
+	gchar *p, *ip;
 	struct stat file_stat;
+	gint dots = 0;
 
 	if (gwgetdata->line == NULL)
 		return 0;
@@ -101,43 +103,87 @@ wget_log_process_line (GwgetData *gwgetdata)
 			break;
 		}
 		  
-		/* First check to see if connected to the host correctly */
+		/* First check to see if we connected to the host correctly. */
+
 		/* Wget 1.8.1 says "connected." rather than "connected!" */
 		if (strstr (gwgetdata->line, "connected!") != NULL ||
 			strstr (gwgetdata->line, "connected.") != NULL) {
 				gwget_data_set_state (gwgetdata, DL_CONNECTED);
 				break;
 		}
+		
+		/* Second filter out other non-error messages that can precede "connected" */
+		
 		/* Wget 1.8.1 adds an explicit "Resolving" status msg */
-		if (strstr (gwgetdata->line, "Resolving") != NULL &&
-            strstr (gwgetdata->line, "Host not found.") == NULL)
+		if ((strstr (gwgetdata->line, "Resolving") != NULL) &&
+            (strstr (gwgetdata->line, "Host not found.") == NULL) &&
+			(strstr (gwgetdata->line, "Name or service not known") == NULL))
                 break;
 
-		/* We are not connected to the host so we must find the problem */
 		if (strncmp (gwgetdata->line, "--", 2) == 0 ||
 			strncmp (gwgetdata->line, "  ", 2) == 0 ||
 			strncmp (gwgetdata->line, "Connecting to ", 14) == 0 ||
 			strlen(gwgetdata->line) ==0)
 			break;
-		else if (strncmp (gwgetdata->line, "socket: ", 8) == 0)
+		
+		/* Wget, under certain circumstances, returns a list of resolved IP addresses
+		 *	before attempting to connect, which can be ignored.
+		 */
+		
+		/* Test for ipv4 address */
+		dots = 0;
+		for (ip = gwgetdata->line; ip[0]; ip ++)
+		{
+			if (isdigit (ip[0])) continue;
+			else if (ip[0] == '.') dots ++;
+			else if ((ip[0] == '\n') || (ip[0] == ',')) break;
+			else break;
+		}
+		if ((! ip[0]) || (ip[0] == '\n') || (ip[0] == ','))
+		{
+			if (dots == 3) break;
+		}
+
+		/* Test for ipv6 address */
+		dots = 0;
+		for (ip = gwgetdata->line; ip[0]; ip ++)
+		{
+			if (isxdigit (ip[0])) continue;
+			else if (ip[0] == ':') dots ++;
+			else if ((ip[0] == '\n') || (ip[0] == ',')) break;
+			else break;
+		}
+		if ((! ip[0]) || (ip[0] == '\n') || (ip[0] == ','))
+		{
+			if (dots > 1) break;
+		}
+
+		/* Failing the above checks, we _assume_ we have an error. The wget process will
+		 * be killed after trying to find a known error message.
+		 */
+
+		if (strncmp (gwgetdata->line, "socket: ", 8) == 0)
 			show_error (gwgetdata, _ ("Socket error"));
 	    else if (strncmp (gwgetdata->line, "Connection to ", 14) == 0)
-			show_error (gwgetdata, _ ("Connection refused\n"));
+			show_error (gwgetdata, _ ("Connection refused"));
 	    else if (strstr (gwgetdata->line, "No route to host") != NULL)
 			show_error (gwgetdata, _ ("No route to host"));
 	    else if (strncmp (gwgetdata->line, "connect: ", 9) == 0)
-				show_error (gwgetdata, _ ("Connection refused when downloading URL:\n"));
+			show_error (gwgetdata, _ ("Connection refused when downloading URL:"));
 	    else if (strstr (gwgetdata->line, "Host not found.") != NULL)
-			show_error (gwgetdata, _ ("Host not found\n"));
+			show_error (gwgetdata, _ ("Host not found"));
+		else if (strstr (gwgetdata->line, "Name or service not known") != NULL)
+			show_error (gwgetdata, _ ("Name or service not known"));
 	    else if (strstr (gwgetdata->line, "unsupported protocol") != NULL)
-		show_error (gwgetdata, _ ("Unsupported protocol - you need wget >= 1.7 "
-			       "for https:\n"));
+			show_error (gwgetdata, _ ("Unsupported protocol - you need wget >= 1.7 "
+			       "for https:"));
 		else if (strstr (gwgetdata->line, "Refusing to truncate existing") != NULL)
 			show_error(gwgetdata, _("Refusing to truncate existing file"));
-	    else {
+		else {
 			show_error (gwgetdata, _ ("Unknown error"));
-			
+			//printf ("%s\n", gwgetdata->line);
 		}
+		
 		kill (gwgetdata->wget_pid, SIGKILL);
 		return 1;
 		break;
