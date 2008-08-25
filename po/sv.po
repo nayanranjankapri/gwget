@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 21:53+0200\n"
-"PO-Revision-Date: 2008-06-23 21:53+0100\n"
+"POT-Creation-Date: 2008-08-25 19:59+0200\n"
+"PO-Revision-Date: 2008-08-25 19:59+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -760,48 +760,52 @@ msgstr "Ingenting"
 msgid "Downloads"
 msgstr "Hämtningar"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:166
 msgid "Socket error"
 msgstr "Uttagsfel"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Anslutning nekades\n"
+#: ../src/wget-log.c:168
+msgid "Connection refused"
+msgstr "Anslutning nekades"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:170
 msgid "No route to host"
 msgstr "Ingen väg till värd"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Anslutning nekades vid hämtning av URL:\n"
+#: ../src/wget-log.c:172
+msgid "Connection refused when downloading URL:"
+msgstr "Anslutning nekades vid hämtning av URL:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Värden kunde inte hittas\n"
+#: ../src/wget-log.c:174
+msgid "Host not found"
+msgstr "Värden kunde inte hittas"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Protokollet stöds inte - du behöver wget >= 1.7 för https:\n"
+#: ../src/wget-log.c:176
+msgid "Name or service not known"
+msgstr "Namn eller tjänst är inte känd"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:178
+msgid "Unsupported protocol - you need wget >= 1.7 for https:"
+msgstr "Protokollet stöds inte - du behöver wget >= 1.7 för https:"
+
+#: ../src/wget-log.c:181
 msgid "Refusing to truncate existing file"
 msgstr "Vägrar att avkorta befintlig fil"
 
-#: ../src/wget-log.c:138
+#: ../src/wget-log.c:183
 msgid "Unknown error"
 msgstr "Okänt fel"
 
-#: ../src/wget-log.c:149
-#: ../src/wget-log.c:155
+#: ../src/wget-log.c:194
+#: ../src/wget-log.c:200
 msgid "File not found"
 msgstr "Filen kunde inte hittas"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:207
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr "Kan inte fortsätta hämtning, befintlig lokal fil är i konflikt med fjärrfilen"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:266
 msgid "Can't write to target directory"
 msgstr "Kan inte skriva till målkatalog"
 
