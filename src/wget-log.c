@@ -59,20 +59,18 @@ show_error (GwgetData *gwgetdata, gchar *error_msg)
     gwget_data_set_state(gwgetdata,DL_ERROR);
 	gwgetdata->error=TRUE;
 	gwgetdata->error_msg=g_strdup(error_msg);
-    
 }
-
 
 static int
 wget_log_process_line (GwgetData *gwgetdata)
 {
-	gchar *p, *ip;
+	gchar *p;
 	struct stat file_stat;
 	gint dots = 0;
 
-	if (gwgetdata->line == NULL)
+	if ((gwgetdata->line == NULL) || (strlen (gwgetdata->line) == 0))
 		return 0;
-
+	
 	switch (gwgetdata->state) {
 	case DL_NOT_CONNECTED:
 		/* 
@@ -96,7 +94,6 @@ wget_log_process_line (GwgetData *gwgetdata)
 			if (*sName == '/')
 				sName++;
 
-			//g_print("NAME: %s\n",sName);
 			gwget_data_set_filename(gwgetdata,sName);
 			gwget_data_update_statistics(gwgetdata);
 			gwget_remember_downloads();
@@ -114,73 +111,94 @@ wget_log_process_line (GwgetData *gwgetdata)
 		
 		/* Second filter out other non-error messages that can precede "connected" */
 		
+		if (strncmp (gwgetdata->line, "--", 2) == 0 ||
+			strncmp (gwgetdata->line, "  ", 2) == 0)
+			break;
+
+		if ((strncmp (gwgetdata->line, "Connecting to ", 14) == 0) &&
+			(strstr (gwgetdata->line, "failed: ") == NULL))
+			break;
+
 		/* Wget 1.8.1 adds an explicit "Resolving" status msg */
 		if ((strstr (gwgetdata->line, "Resolving") != NULL) &&
             (strstr (gwgetdata->line, "Host not found.") == NULL) &&
 			(strstr (gwgetdata->line, "Name or service not known") == NULL))
                 break;
-
-		if (strncmp (gwgetdata->line, "--", 2) == 0 ||
-			strncmp (gwgetdata->line, "  ", 2) == 0 ||
-			strncmp (gwgetdata->line, "Connecting to ", 14) == 0 ||
-			strlen(gwgetdata->line) ==0)
-			break;
-		
+			
 		/* Wget, under certain circumstances, returns a list of resolved IP addresses
 		 *	before attempting to connect, which can be ignored.
 		 */
 		
 		/* Test for ipv4 address */
 		dots = 0;
-		for (ip = gwgetdata->line; ip[0]; ip ++)
-		{
-			if (isdigit (ip[0])) continue;
-			else if (ip[0] == '.') dots ++;
-			else if ((ip[0] == '\n') || (ip[0] == ',')) break;
+		for (p = gwgetdata->line; p[0]; p ++) {
+			if (isdigit (p[0])) continue;
+			else if (p[0] == '.') dots ++;
+			else if ((p[0] == '\n') || (p[0] == ',')) break;
 			else break;
 		}
-		if ((! ip[0]) || (ip[0] == '\n') || (ip[0] == ','))
-		{
+		if ((! p[0]) || (p[0] == '\n') || (p[0] == ',')) {
 			if (dots == 3) break;
 		}
 
 		/* Test for ipv6 address */
 		dots = 0;
-		for (ip = gwgetdata->line; ip[0]; ip ++)
-		{
-			if (isxdigit (ip[0])) continue;
-			else if (ip[0] == ':') dots ++;
-			else if ((ip[0] == '\n') || (ip[0] == ',')) break;
+		for (p = gwgetdata->line; p[0]; p ++) {
+			if (isxdigit (p[0])) continue;
+			else if (p[0] == ':') dots ++;
+			else if ((p[0] == '\n') || (p[0] == ',')) break;
 			else break;
 		}
-		if ((! ip[0]) || (ip[0] == '\n') || (ip[0] == ','))
-		{
+		if ((! p[0]) || (p[0] == '\n') || (p[0] == ',')) {
 			if (dots > 1) break;
 		}
 
 		/* Failing the above checks, we _assume_ we have an error. The wget process will
-		 * be killed after trying to find a known error message.
+		 * be killed after we create an error message.
 		 */
 
 		if (strncmp (gwgetdata->line, "socket: ", 8) == 0)
 			show_error (gwgetdata, _ ("Socket error"));
+			
 	    else if (strncmp (gwgetdata->line, "Connection to ", 14) == 0)
 			show_error (gwgetdata, _ ("Connection refused"));
+			
 	    else if (strstr (gwgetdata->line, "No route to host") != NULL)
 			show_error (gwgetdata, _ ("No route to host"));
+			
 	    else if (strncmp (gwgetdata->line, "connect: ", 9) == 0)
 			show_error (gwgetdata, _ ("Connection refused when downloading URL:"));
+			
 	    else if (strstr (gwgetdata->line, "Host not found.") != NULL)
 			show_error (gwgetdata, _ ("Host not found"));
+			
 		else if (strstr (gwgetdata->line, "Name or service not known") != NULL)
 			show_error (gwgetdata, _ ("Name or service not known"));
+			
 	    else if (strstr (gwgetdata->line, "unsupported protocol") != NULL)
-			show_error (gwgetdata, _ ("Unsupported protocol - you need wget >= 1.7 "
-			       "for https:"));
+			show_error (gwgetdata, _ ("Unsupported protocol"));
+			
 		else if (strstr (gwgetdata->line, "Refusing to truncate existing") != NULL)
 			show_error(gwgetdata, _("Refusing to truncate existing file"));
+			
+		else if (strstr (gwgetdata->line, "unable to resolve"))
+				show_error (gwgetdata, _ ("Unable to resolve host address"));
+			
+		else if ((p = strstr (gwgetdata->line, "failed: ")) != NULL) {
+			/* 
+			 * This is somewhat generic looking, but is informative
+			 */
+			show_error (gwgetdata, p + 8);
+		}
+			
 		else {
-			show_error (gwgetdata, _ ("Unknown error"));
+			/*
+			 * All other possible output may as well be reported, since we treat it
+			 * as an error. We tag the message as unknown to make it more meaningful.
+			 */
+			p = g_strconcat (_ ("Unknown error "), gwgetdata->line, NULL);
+			show_error (gwgetdata, p);
+			g_free (p);
 		}
 		
 		kill (gwgetdata->wget_pid, SIGKILL);
@@ -197,6 +215,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 
 		/* File not found for HTTP or Proxy */
 		if (strstr (gwgetdata->line, "ERROR") != NULL) {
+			gwget_data_set_state (gwgetdata, DL_ERROR);
 			show_error (gwgetdata, _ ("File not found"));
 			break;
 	    }
@@ -341,82 +360,76 @@ wget_log_process_line (GwgetData *gwgetdata)
 	return 0;
 }
 
-static void
+static gboolean
 wget_log_read_log_line(GwgetData *gwgetdata) {
 	char c;
-	int iRes;
-	int iBlockCount;
-	gchar *buffer;
-	int iWritePos;
+	int res;
 
-	g_free(gwgetdata->line);
-	gwgetdata->line = NULL;
-
-	iRes = read(gwgetdata->log_fd,&c,1);
-
-	if (iRes < 1) {
+	res = read (gwgetdata->log_fd, &c, 1);
+	if (res < 1) {
 		/*
 		 * No input available
 		 */
-		gwgetdata->line = NULL;
-		return;
+		return FALSE;
 	}
 
-	iBlockCount = 1;
-	buffer = g_malloc(sizeof(gchar)*(iBlockCount*BLOCK_SIZE));
-	iWritePos = 0;
-		
-	buffer[iWritePos++] = c;
-	while (c != '\n') {
-		iRes = read(gwgetdata->log_fd,&c,1);
-		if (iRes < 1) {
-			/*
-			 * There is currently no more data to read. Return what we have.
-			 */
-			buffer[iWritePos++] = 0;
-			break;
-		}
-		buffer[iWritePos++] = c;
+	if (! gwgetdata->line) {
+		gwgetdata->line = g_malloc (sizeof (gchar) * BLOCK_SIZE);
+		gwgetdata->line_pos = 0;
+		gwgetdata->line_blocks = 1;
+	}
 
-		if (iWritePos == iBlockCount*BLOCK_SIZE && c != '\n') {
-			/*
-			 * The buffer is full , expanding
-			 */
-			iBlockCount++;
-			buffer = g_realloc(buffer,
-					   sizeof(gchar)*(iBlockCount*BLOCK_SIZE));
-		}
-	} 
-	buffer[iWritePos-1] = 0;
-	//g_print("LOG: %s\n",buffer);
+	gwgetdata->line [gwgetdata->line_pos ++] = c;
 	
-	gwgetdata->line = buffer;
+	while (c != '\n') {
+		res = read (gwgetdata->log_fd, &c, 1);
+		if (res < 1) {
+			/*
+			 * There is currently no more data to read, so return FALSE - but 
+			 * the line can still be completed later where it left off.
+			 */ 
+			return FALSE;
+		}
+
+		gwgetdata->line [gwgetdata->line_pos ++] = c;
+		if ((gwgetdata->line_pos == gwgetdata->line_blocks * BLOCK_SIZE) && (c != '\n')) {
+			/*
+			 * The buffer is full, expanding
+			 */
+			gwgetdata->line_blocks ++;
+			gwgetdata->line = g_realloc (gwgetdata->line,
+					   sizeof (gchar) * gwgetdata->line_blocks * BLOCK_SIZE);
+		}
+	}
+	
+	gwgetdata->line [gwgetdata->line_pos -1] = 0;
+
+	/* 
+	 * We can just reuse gwgetdata->line by setting the line_pos to zero.
+	 */
+	gwgetdata->line_pos = 0;
+	
+	/*
+	 * Result TRUE means gwgetdata->line contains a complete line.
+	 */ 
+	return TRUE;
 }
 
 void
 wget_drain_remaining_log(GwgetData *gwgetdata) 
 {
-	wget_log_read_log_line(gwgetdata);
-	while (gwgetdata->line != NULL) {
-		wget_log_process_line(gwgetdata);
-		wget_log_read_log_line(gwgetdata);
-	}
-	gwget_data_update_statistics(gwgetdata);
+	while (wget_log_read_log_line (gwgetdata))
+		wget_log_process_line (gwgetdata);
+	
+	gwget_data_update_statistics (gwgetdata);
 }
 
 void
 wget_log_process (GwgetData *gwgetdata)
 {
-	/*
-	 * Read and process two lines of log
-	 */
-	wget_log_read_log_line(gwgetdata);
-	wget_log_process_line(gwgetdata);
+	while (wget_log_read_log_line (gwgetdata))
+		wget_log_process_line (gwgetdata);
 	
-	wget_log_read_log_line(gwgetdata);
-	wget_log_process_line(gwgetdata);
-
-	if (gwgetdata->state == DL_RETRIEVING)
-		gwget_data_update_statistics(gwgetdata);
+	 if (gwgetdata->state == DL_RETRIEVING)
+		gwget_data_update_statistics (gwgetdata);
 }
-
