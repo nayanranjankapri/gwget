@@ -88,6 +88,8 @@ typedef struct
     gboolean use_proxy;         /* Used to use proxy */
     gboolean use_auto_dl;       /* Used to use auto download */
     gchar *line;                /* Used to process the wget output */
+    guint32 line_blocks;
+    guint32 line_pos;
     guint64 total_size;         /* Total file size in bytes */
     guint32 total_time;         /* Total time spent in seconds */
     time_t session_start_time;  /* Time at start of this download session */

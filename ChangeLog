@@ -1,3 +1,7 @@
+2008-09-09  David Sedeño <david@alderia.com>
+
+	* src/gwget_data.h: Ooops, forget to commit that.
+
 2008-08-28  David Sedeño <david@alderia.com>
 
 	* src/wget-log.c: More error reporting checking and better general log parsing and 
