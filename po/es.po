@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-18 18:34+0000\n"
-"PO-Revision-Date: 2008-08-26 11:04-0500\n"
+"POT-Creation-Date: 2008-08-28 17:56+0000\n"
+"PO-Revision-Date: 2008-09-03 09:34-0500\n"
 "Last-Translator: Juan Percy Rojas Cruz <juanperojas@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -755,23 +755,23 @@ msgstr "Nada"
 msgid "Downloads"
 msgstr "Descargas"
 
-#: ../src/wget-log.c:166
+#: ../src/wget-log.c:161
 msgid "Socket error"
 msgstr "Error de socket"
 
-#: ../src/wget-log.c:168
+#: ../src/wget-log.c:164
 msgid "Connection refused"
 msgstr "Conexión rechazada"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:167
 msgid "No route to host"
-msgstr "Sin ruta hasta el host"
+msgstr "No hay ruta hacia el servidor"
 
-#: ../src/wget-log.c:172
+#: ../src/wget-log.c:170
 msgid "Connection refused when downloading URL:"
 msgstr "La conexión se rechazó al descargar el URL:"
 
-#: ../src/wget-log.c:174
+#: ../src/wget-log.c:173
 msgid "Host not found"
 msgstr "Equipo no encontrado"
 
@@ -779,29 +779,38 @@ msgstr "Equipo no encontrado"
 msgid "Name or service not known"
 msgstr "Nombre de servicio desconocido"
 
-#: ../src/wget-log.c:178
-msgid "Unsupported protocol - you need wget >= 1.7 for https:"
-msgstr "Protocolo no soportado; necesita wget >= 1.7 para https:"
+#: ../src/wget-log.c:179
+msgid "Unsupported protocol"
+msgstr "Protocolo no soportado"
 
-#: ../src/wget-log.c:181
+#: ../src/wget-log.c:182
 msgid "Refusing to truncate existing file"
 msgstr "Rechazando a truncar el archivo existente"
 
-#: ../src/wget-log.c:183
-msgid "Unknown error"
+#: ../src/wget-log.c:185
+msgid "Unable to resolve host address"
+msgstr "No se puede determinar la dirección del equipo"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:199
+#, fuzzy
+msgid "Unknown error "
 msgstr "Error desconocido"
 
-#: ../src/wget-log.c:195 ../src/wget-log.c:201
+#: ../src/wget-log.c:212 ../src/wget-log.c:219
 msgid "File not found"
 msgstr "Archivo no encontrado"
 
-#: ../src/wget-log.c:208
+#: ../src/wget-log.c:226
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "No se puede continuar la descarga, el archivo local entra en conflicto con "
 "el archivo remoto"
 
-#: ../src/wget-log.c:267
+#: ../src/wget-log.c:285
 msgid "Can't write to target directory"
 msgstr "No se puede escribir en la carpeta destino"
 
