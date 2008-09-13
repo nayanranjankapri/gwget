@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-25 19:59+0200\n"
-"PO-Revision-Date: 2008-08-25 19:59+0100\n"
+"POT-Creation-Date: 2008-09-13 20:04+0200\n"
+"PO-Revision-Date: 2008-09-13 20:04+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -760,23 +760,23 @@ msgstr "Ingenting"
 msgid "Downloads"
 msgstr "Hämtningar"
 
-#: ../src/wget-log.c:166
+#: ../src/wget-log.c:161
 msgid "Socket error"
 msgstr "Uttagsfel"
 
-#: ../src/wget-log.c:168
+#: ../src/wget-log.c:164
 msgid "Connection refused"
 msgstr "Anslutning nekades"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:167
 msgid "No route to host"
 msgstr "Ingen väg till värd"
 
-#: ../src/wget-log.c:172
+#: ../src/wget-log.c:170
 msgid "Connection refused when downloading URL:"
 msgstr "Anslutning nekades vid hämtning av URL:"
 
-#: ../src/wget-log.c:174
+#: ../src/wget-log.c:173
 msgid "Host not found"
 msgstr "Värden kunde inte hittas"
 
@@ -784,31 +784,41 @@ msgstr "Värden kunde inte hittas"
 msgid "Name or service not known"
 msgstr "Namn eller tjänst är inte känd"
 
-#: ../src/wget-log.c:178
-msgid "Unsupported protocol - you need wget >= 1.7 for https:"
-msgstr "Protokollet stöds inte - du behöver wget >= 1.7 för https:"
+#: ../src/wget-log.c:179
+msgid "Unsupported protocol"
+msgstr "Protokollet stöds inte"
 
-#: ../src/wget-log.c:181
+#: ../src/wget-log.c:182
 msgid "Refusing to truncate existing file"
 msgstr "Vägrar att avkorta befintlig fil"
 
-#: ../src/wget-log.c:183
-msgid "Unknown error"
+#: ../src/wget-log.c:185
+msgid "Unable to resolve host address"
+msgstr "Kunde inte slå upp värdadressen"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:199
+msgid "Unknown error "
 msgstr "Okänt fel"
 
-#: ../src/wget-log.c:194
-#: ../src/wget-log.c:200
+#: ../src/wget-log.c:212
+#: ../src/wget-log.c:219
 msgid "File not found"
 msgstr "Filen kunde inte hittas"
 
-#: ../src/wget-log.c:207
+#: ../src/wget-log.c:226
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr "Kan inte fortsätta hämtning, befintlig lokal fil är i konflikt med fjärrfilen"
 
-#: ../src/wget-log.c:266
+#: ../src/wget-log.c:285
 msgid "Can't write to target directory"
 msgstr "Kan inte skriva till målkatalog"
 
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:"
+#~ msgstr "Protokollet stöds inte - du behöver wget >= 1.7 för https:"
 #~ msgid "gtk-about"
 #~ msgstr "gtk-about"
 #~ msgid "gtk-cancel"
