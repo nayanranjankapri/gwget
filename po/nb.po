@@ -1,0 +1,799 @@
+# Norwegian (bokmål dialect) translation of the gnome-network module
+# Copyright (C) 1998, 1999 Free Software Foundation, Inc.
+# Kjartan Maraas <kmaraas@online.no>, 1998-2008.
+# Eskild Hustvedt <i18n@zerodogg.org>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-nettool 2.15.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-08 20:54+0200\n"
+"PO-Revision-Date: 2008-10-08 20:58+0200\n"
+"Last-Translator: Eskild Hustvedt <i18n@zerodogg.org>\n"
+"Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Håndter nedlastinger"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Last ned filer fra internett"
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+msgid "Gwget Download Manager"
+msgstr ""
+
+#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.glade.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Last ned</b>"
+
+#: ../data/gwget.glade.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr ""
+
+#: ../data/gwget.glade.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Egenskaper</b>"
+
+#: ../data/gwget.glade.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr ""
+
+#: ../data/gwget.glade.h:6
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../data/gwget.glade.h:7
+msgid "Cancel download"
+msgstr "Avbryt nedlasting"
+
+#: ../data/gwget.glade.h:8
+msgid "Cancel the download"
+msgstr ""
+
+#: ../data/gwget.glade.h:9
+msgid "Clear"
+msgstr ""
+
+#: ../data/gwget.glade.h:10
+msgid "Compare md5 sum"
+msgstr ""
+
+#: ../data/gwget.glade.h:11
+msgid "Continue"
+msgstr "Fortsett"
+
+#: ../data/gwget.glade.h:12
+msgid "Continue download"
+msgstr ""
+
+#: ../data/gwget.glade.h:13
+msgid "Continue with the download"
+msgstr ""
+
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
+#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
+#: ../src/main_window_cb.c:739
+msgid "Gwget - Download Manager"
+msgstr ""
+
+#: ../data/gwget.glade.h:15
+msgid "Help"
+msgstr "Hjelp"
+
+#: ../data/gwget.glade.h:16
+msgid "Information"
+msgstr "Informasjon"
+
+#: ../data/gwget.glade.h:17
+msgid "Local Directory:"
+msgstr ""
+
+#: ../data/gwget.glade.h:18
+msgid "Local File:"
+msgstr "Lokal fil:"
+
+#: ../data/gwget.glade.h:19
+msgid "Md5 Sum:"
+msgstr ""
+
+#: ../data/gwget.glade.h:20
+msgid "Multimedia files (Videos and images)"
+msgstr ""
+
+#: ../data/gwget.glade.h:21
+msgid "New Download"
+msgstr ""
+
+#: ../data/gwget.glade.h:22
+msgid "New download"
+msgstr ""
+
+#: ../data/gwget.glade.h:23
+msgid "Open"
+msgstr "Åpne"
+
+#: ../data/gwget.glade.h:24
+msgid "Open directory"
+msgstr "Åpne katalog"
+
+#: ../data/gwget.glade.h:25
+msgid "Open file"
+msgstr "Åpne fil"
+
+#: ../data/gwget.glade.h:26
+msgid "Open target directory"
+msgstr ""
+
+#: ../data/gwget.glade.h:27
+msgid "Pause"
+msgstr "Pause"
+
+#: ../data/gwget.glade.h:28
+msgid "Pause all"
+msgstr ""
+
+#: ../data/gwget.glade.h:29
+msgid "Pause all downloads"
+msgstr ""
+
+#: ../data/gwget.glade.h:30
+msgid "Pause download"
+msgstr ""
+
+#: ../data/gwget.glade.h:31
+msgid "Pause the download"
+msgstr ""
+
+#: ../data/gwget.glade.h:32
+msgid "Properties"
+msgstr "Egenskaper"
+
+#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
+msgid "Recursive"
+msgstr "Rekursivt"
+
+#: ../data/gwget.glade.h:34
+msgid "Recursive options"
+msgstr ""
+
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
+msgid "Remove all"
+msgstr "Fjern alle"
+
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
+msgid "Remove completed"
+msgstr ""
+
+#: ../data/gwget.glade.h:37
+msgid "Remove completed downloads"
+msgstr ""
+
+#: ../data/gwget.glade.h:38
+msgid "Remove from List"
+msgstr ""
+
+#: ../data/gwget.glade.h:39
+msgid "Remove from list"
+msgstr ""
+
+#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
+#, fuzzy
+msgid "Remove inactive"
+msgstr "Inaktiv"
+
+#: ../data/gwget.glade.h:41
+msgid "Resume all"
+msgstr ""
+
+#: ../data/gwget.glade.h:42
+msgid "Resume all downloads"
+msgstr ""
+
+#: ../data/gwget.glade.h:43
+msgid "Save in:"
+msgstr "Lagre i:"
+
+#: ../data/gwget.glade.h:44
+msgid "Stat_usbar"
+msgstr ""
+
+#: ../data/gwget.glade.h:45
+msgid "The index file only"
+msgstr ""
+
+#: ../data/gwget.glade.h:46
+msgid "This site (mirror)"
+msgstr ""
+
+#: ../data/gwget.glade.h:47
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.glade.h:48
+msgid "Verify..."
+msgstr ""
+
+#: ../data/gwget.glade.h:49
+msgid "_Archive"
+msgstr "_Arkiv"
+
+#: ../data/gwget.glade.h:50
+msgid "_Download"
+msgstr ""
+
+#: ../data/gwget.glade.h:51
+msgid "_Edit"
+msgstr "R_ediger"
+
+#: ../data/gwget.glade.h:52
+msgid "_Toolbar"
+msgstr "Verk_tøylinje"
+
+#: ../data/gwget.glade.h:53
+msgid "_View"
+msgstr "_Vis"
+
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask where to save each new download"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:8
+#, fuzzy
+msgid "Limit maximum speed"
+msgstr "Maksimumstid:\t%s ms\n"
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Resume downloads at startup"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View toolbar"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:23
+msgid "View total size column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr ""
+
+#: ../data/preferences.glade.h:1
+msgid "   "
+msgstr ""
+
+#: ../data/preferences.glade.h:3
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr ""
+
+#: ../data/preferences.glade.h:4
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr ""
+
+#: ../data/preferences.glade.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr ""
+
+#: ../data/preferences.glade.h:6
+msgid "<span weight=\"bold\">Links</span>"
+msgstr ""
+
+#: ../data/preferences.glade.h:7
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr ""
+
+#: ../data/preferences.glade.h:8
+msgid "Column List"
+msgstr ""
+
+#: ../data/preferences.glade.h:9
+msgid "Default _GNOME network settings"
+msgstr ""
+
+#: ../data/preferences.glade.h:10
+#, fuzzy
+msgid "Direct _Internet connection"
+msgstr "Finner aktive internettforbindelser"
+
+#: ../data/preferences.glade.h:11
+msgid "Do_wnload Speed"
+msgstr ""
+
+#: ../data/preferences.glade.h:12
+msgid "Don't _create directories"
+msgstr ""
+
+#: ../data/preferences.glade.h:13
+msgid "Follow _relative links only"
+msgstr ""
+
+#: ../data/preferences.glade.h:14
+msgid "General"
+msgstr "Generelt"
+
+#: ../data/preferences.glade.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr ""
+
+#: ../data/preferences.glade.h:16
+msgid "Network"
+msgstr "Nettverk"
+
+#: ../data/preferences.glade.h:17
+msgid "P_ort:"
+msgstr "P_ort:"
+
+#: ../data/preferences.glade.h:18
+msgid "Password:"
+msgstr "Passord:"
+
+#: ../data/preferences.glade.h:19
+msgid "Preferences"
+msgstr "Brukervalg"
+
+#: ../data/preferences.glade.h:20
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: ../data/preferences.glade.h:22
+msgid "Remaining _Time"
+msgstr ""
+
+#: ../data/preferences.glade.h:23
+msgid "Sa_ve in:"
+msgstr ""
+
+#: ../data/preferences.glade.h:24
+msgid "Total _Size"
+msgstr "Total _størrelse"
+
+#: ../data/preferences.glade.h:25
+msgid "_Ask where to save for each download"
+msgstr ""
+
+#: ../data/preferences.glade.h:26
+msgid "_Continue downloads on startup"
+msgstr ""
+
+#: ../data/preferences.glade.h:27
+msgid "_Convert links"
+msgstr ""
+
+#: ../data/preferences.glade.h:28
+msgid "_Current Size"
+msgstr ""
+
+#: ../data/preferences.glade.h:29
+msgid "_Download page requisites"
+msgstr ""
+
+#: ../data/preferences.glade.h:30
+msgid "_Elapsed Time"
+msgstr ""
+
+#: ../data/preferences.glade.h:31
+msgid "_Limit download speed to:"
+msgstr ""
+
+#: ../data/preferences.glade.h:32
+#, fuzzy
+msgid "_Manual proxy configuration"
+msgstr "Postboksinformasjon"
+
+#: ../data/preferences.glade.h:33
+msgid "_Maximum depth level:"
+msgstr ""
+
+#: ../data/preferences.glade.h:34
+msgid "_Number of retries:"
+msgstr ""
+
+#: ../data/preferences.glade.h:35
+msgid "_Open files automatically after download"
+msgstr ""
+
+#: ../data/preferences.glade.h:36
+msgid "_Percentage"
+msgstr "_Prosent"
+
+#: ../data/preferences.glade.h:37
+msgid "_Proxy requires authentication"
+msgstr ""
+
+#: ../data/preferences.glade.h:38
+msgid "_User:"
+msgstr "Br_uker:"
+
+#: ../data/preferences.glade.h:39
+msgid "files"
+msgstr "filer"
+
+#: ../data/preferences.glade.h:40
+msgid "kB/sec"
+msgstr ""
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr ""
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr ""
+
+#: ../src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: ../src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Feilet"
+
+#: ../src/gwget_data.c:201
+#, fuzzy
+msgid "stalled"
+msgstr "Deaktivert"
+
+#: ../src/gwget_data.c:233
+msgid "Waiting"
+msgstr "Venter"
+
+#: ../src/gwget_data.c:235
+msgid "Not Started"
+msgstr "Ikke startet"
+
+#: ../src/gwget_data.c:237
+msgid "Not Running"
+msgstr ""
+
+#: ../src/gwget_data.c:239
+msgid "Not Connected"
+msgstr ""
+
+#: ../src/gwget_data.c:241
+msgid "Connected"
+msgstr ""
+
+#: ../src/gwget_data.c:243
+msgid "Retrieving"
+msgstr ""
+
+#: ../src/gwget_data.c:245
+msgid "Completed"
+msgstr "Fullført"
+
+#: ../src/gwget_data.c:249
+msgid "Error"
+msgstr "Feil"
+
+#: ../src/gwget_data.c:687
+msgid "Unable to add this download"
+msgstr ""
+
+#: ../src/gwget_data.c:688
+msgid "This download is already added"
+msgstr ""
+
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+msgid "Error opening file"
+msgstr ""
+
+#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259
+msgid "Couldn't open the file"
+msgstr ""
+
+#: ../src/gwget_data.c:784
+msgid "Download Complete"
+msgstr ""
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr ""
+
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr ""
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr ""
+
+#: ../src/main.c:263 ../src/main_window_cb.c:191
+msgid "Gwget"
+msgstr ""
+
+#: ../src/main_window.c:430
+msgid "File Name"
+msgstr "Filnavn"
+
+#: ../src/main_window.c:438
+msgid "State"
+msgstr "Tilstand"
+
+#: ../src/main_window.c:450
+msgid "Current Size"
+msgstr ""
+
+#: ../src/main_window.c:462
+msgid "Total Size"
+msgstr ""
+
+#: ../src/main_window.c:473 ../src/main_window.c:479
+msgid "Percentage"
+msgstr ""
+
+#: ../src/main_window.c:486
+msgid "Elapsed Time"
+msgstr ""
+
+#: ../src/main_window.c:497
+msgid "Remaining Time"
+msgstr ""
+
+#: ../src/main_window.c:508
+msgid "Speed"
+msgstr "Hastighet"
+
+#: ../src/main_window.c:555
+msgid "Error starting the download"
+msgstr ""
+
+#: ../src/main_window.c:555
+msgid "There was an unexpected error starting the download"
+msgstr ""
+
+#: ../src/main_window.c:791
+msgid "Stop current downloads?"
+msgstr ""
+
+#: ../src/main_window.c:792
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+
+#: ../src/main_window.c:792
+msgid "No"
+msgstr "Nei"
+
+#: ../src/main_window.c:792
+msgid "Yes"
+msgstr "Ja"
+
+#: ../src/main_window_cb.c:105
+msgid "Error in download"
+msgstr ""
+
+#: ../src/main_window_cb.c:194
+msgid "Download Manager for GNOME."
+msgstr ""
+
+#: ../src/main_window_cb.c:196
+msgid "translator-credits"
+msgstr "Kjartan Maraas <kmaraas@gnome.org>"
+
+#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+msgid "Select Folder"
+msgstr "Velg mappe"
+
+#: ../src/main_window_cb.c:624
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
+msgstr ""
+
+#: ../src/main_window_cb.c:625
+msgid "Delete download?"
+msgstr ""
+
+#: ../src/main_window_cb.c:625
+msgid "Delete"
+msgstr "Slett"
+
+#: ../src/main_window_cb.c:655
+msgid "Really remove completed downloads from the list?"
+msgstr ""
+
+#: ../src/main_window_cb.c:655
+msgid "Remove"
+msgstr "Fjern"
+
+#: ../src/main_window_cb.c:689
+msgid "Really remove inactive downloads from the list?"
+msgstr ""
+
+#: ../src/main_window_cb.c:721
+msgid "Really remove all downloads from the list?"
+msgstr ""
+
+#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#, c-format
+msgid "error %d when accessing %s: %s\n"
+msgstr ""
+
+#: ../src/main_window_cb.c:887
+#, c-format
+msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+msgstr ""
+
+#: ../src/main_window_cb.c:890
+#, c-format
+msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+msgstr ""
+
+#: ../src/main_window_cb.c:1211
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr ""
+
+#: ../src/main_window_cb.c:1227
+#, c-format
+msgid "Remove %s ?"
+msgstr "Fjern %s?"
+
+#: ../src/main_window_cb.c:1228
+msgid "Really remove this download from the list?"
+msgstr ""
+
+#: ../src/main_window_cb.c:1228
+msgid "Remove download"
+msgstr ""
+
+#: ../src/main_window_cb.c:1278
+msgid "Couldn't open the folder"
+msgstr ""
+
+#: ../src/systray.c:120
+msgid "Nothing"
+msgstr "Ingen ting"
+
+#: ../src/systray.c:127
+msgid "Downloads"
+msgstr "Nedlastinger"
+
+#: ../src/wget-log.c:161
+#, fuzzy
+msgid "Socket error"
+msgstr "Feil ved mottak:"
+
+#: ../src/wget-log.c:164
+msgid "Connection refused"
+msgstr ""
+
+#: ../src/wget-log.c:167
+#, fuzzy
+msgid "No route to host"
+msgstr "Følger ruten til %s"
+
+#: ../src/wget-log.c:170
+msgid "Connection refused when downloading URL:"
+msgstr ""
+
+#: ../src/wget-log.c:173
+msgid "Host not found"
+msgstr ""
+
+#: ../src/wget-log.c:176
+#, fuzzy
+msgid "Name or service not known"
+msgstr "Nettverksenheter ikke funnet"
+
+#: ../src/wget-log.c:179
+msgid "Unsupported protocol"
+msgstr ""
+
+#: ../src/wget-log.c:182
+msgid "Refusing to truncate existing file"
+msgstr ""
+
+#: ../src/wget-log.c:185
+msgid "Unable to resolve host address"
+msgstr ""
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:199
+msgid "Unknown error "
+msgstr "Ukjent feil"
+
+#: ../src/wget-log.c:212 ../src/wget-log.c:219
+msgid "File not found"
+msgstr "Fil ikke funnet"
+
+#: ../src/wget-log.c:226
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+
+#: ../src/wget-log.c:285
+msgid "Can't write to target directory"
+msgstr ""
