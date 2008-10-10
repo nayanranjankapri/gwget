@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 17:56+0000\n"
-"PO-Revision-Date: 2008-09-03 09:34-0500\n"
+"POT-Creation-Date: 2008-09-10 18:48+0000\n"
+"PO-Revision-Date: 2008-10-03 09:38-0500\n"
 "Last-Translator: Juan Percy Rojas Cruz <juanperojas@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -796,7 +796,6 @@ msgstr "No se puede determinar la dirección del equipo"
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
 #: ../src/wget-log.c:199
-#, fuzzy
 msgid "Unknown error "
 msgstr "Error desconocido"
 
