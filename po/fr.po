@@ -1,5 +1,5 @@
 # French translation for gwget
-# Copyright (C) 2003-2007 Free Software Foundation
+# Copyright (C) 2003-2008 Free Software Foundation
 # This file is distributed under the same license as the gwget package.
 #
 # Julien Cegarra <julienc@psychologie-fr.org>, 2004.
@@ -7,19 +7,31 @@
 # Damien Durand <splinux@fedoraproject.org>, 2006.
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2007.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
-# Robert-André Mauchin <zebob.m@pengzone.org>, 2007.
+# Robert-André Mauchin <zebob.m@pengzone.org>, 2007-2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gwget 0.98.1\n"
+"Project-Id-Version: gwget HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-08 22:34+0100\n"
-"PO-Revision-Date: 2007-12-03 12:36:26+0100\n"
+"POT-Creation-Date: 2008-11-06 09:34+0100\n"
+"PO-Revision-Date: 2008-08-13 17:36+0200\n"
 "Last-Translator: Robert-André Mauchin <zebob.m@pengzone.org>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Gestionnaire de téléchargements"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Télécharger des fichiers à partir d'Internet"
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+msgid "Gwget Download Manager"
+msgstr "Gestionnaire de téléchargements Gwget"
 
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
@@ -54,194 +66,186 @@ msgid "Cancel the download"
 msgstr "Annule le téléchargement"
 
 #: ../data/gwget.glade.h:9
+msgid "Clear"
+msgstr "Effacer"
+
+#: ../data/gwget.glade.h:10
 msgid "Compare md5 sum"
 msgstr "Comparer la somme MD5"
 
-#: ../data/gwget.glade.h:10
+#: ../data/gwget.glade.h:11
 msgid "Continue"
 msgstr "Poursuivre"
 
-#: ../data/gwget.glade.h:11
+#: ../data/gwget.glade.h:12
 msgid "Continue download"
 msgstr "Poursuivre le téléchargement"
 
-#: ../data/gwget.glade.h:12
+#: ../data/gwget.glade.h:13
 msgid "Continue with the download"
 msgstr "Poursuit le téléchargement"
 
-#: ../data/gwget.glade.h:13 ../src/main_window_cb.c:144
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
 #: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
 #: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Gestionnaire de téléchargements"
 
-#: ../data/gwget.glade.h:14
+#: ../data/gwget.glade.h:15
 msgid "Help"
 msgstr "Aide"
 
-#: ../data/gwget.glade.h:15
+#: ../data/gwget.glade.h:16
 msgid "Information"
 msgstr "Informations"
 
-#: ../data/gwget.glade.h:16
+#: ../data/gwget.glade.h:17
 msgid "Local Directory:"
 msgstr "Répertoire local :"
 
-#: ../data/gwget.glade.h:17
+#: ../data/gwget.glade.h:18
 msgid "Local File:"
 msgstr "Fichier local :"
 
-#: ../data/gwget.glade.h:18
+#: ../data/gwget.glade.h:19
 msgid "Md5 Sum:"
 msgstr "Somme MD5 :"
 
-#: ../data/gwget.glade.h:19
+#: ../data/gwget.glade.h:20
 msgid "Multimedia files (Videos and images)"
 msgstr "Fichiers multimédias (vidéos et images)"
 
-#: ../data/gwget.glade.h:20
+#: ../data/gwget.glade.h:21
 msgid "New Download"
 msgstr "Nouveau téléchargement"
 
-#: ../data/gwget.glade.h:21
+#: ../data/gwget.glade.h:22
 msgid "New download"
 msgstr "Nouveau téléchargement"
 
-#: ../data/gwget.glade.h:22
+#: ../data/gwget.glade.h:23
 msgid "Open"
 msgstr "Ouvrir"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:24
 msgid "Open directory"
 msgstr "Ouvrir le répertoire"
 
-#: ../data/gwget.glade.h:24
+#: ../data/gwget.glade.h:25
 msgid "Open file"
 msgstr "Ouvrir un fichier"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:26
 msgid "Open target directory"
 msgstr "Ouvrir le répertoire cible"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:27
 msgid "Pause"
 msgstr "Pause"
 
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:28
 msgid "Pause all"
 msgstr "Tout suspendre"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:29
 msgid "Pause all downloads"
 msgstr "Suspend tous les téléchargements"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:30
 msgid "Pause download"
 msgstr "Suspendre le téléchargement"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:31
 msgid "Pause the download"
 msgstr "Suspend le téléchargement"
 
-#: ../data/gwget.glade.h:31
+#: ../data/gwget.glade.h:32
 msgid "Properties"
 msgstr "Propriétés"
 
-#: ../data/gwget.glade.h:32 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Récursif"
 
-#: ../data/gwget.glade.h:33
+#: ../data/gwget.glade.h:34
 msgid "Recursive options"
-msgstr "Options recursives"
+msgstr "Options récursives"
 
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Tout retirer"
 
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Enlever les fichiers réceptionnés"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:37
 msgid "Remove completed downloads"
 msgstr "Enlève les fichiers réceptionnés"
 
-#: ../data/gwget.glade.h:37
+#: ../data/gwget.glade.h:38
 msgid "Remove from List"
 msgstr "Enlever de la liste"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:39
 msgid "Remove from list"
 msgstr "Enlève de la liste"
 
-#: ../data/gwget.glade.h:39 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Enlever les téléchargements inactifs"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:41
 msgid "Resume all"
 msgstr "Tout poursuivre"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:42
 msgid "Resume all downloads"
 msgstr "Poursuivre tous les téléchargements"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:43
 msgid "Save in:"
 msgstr "Enregistrer dans :"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:44
 msgid "Stat_usbar"
 msgstr "Barre d'é_tat"
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:45
 msgid "The index file only"
 msgstr "Le fichier d'index seulement"
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:46
 msgid "This site (mirror)"
 msgstr "Ce site (miroir)"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:47
 msgid "URL:"
 msgstr "URL :"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:48
 msgid "Verify..."
 msgstr "Vérification..."
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:49
 msgid "_Archive"
 msgstr "_Archive"
 
-#: ../data/gwget.glade.h:49
+#: ../data/gwget.glade.h:50
 msgid "_Download"
 msgstr "_Téléchargement"
 
-#: ../data/gwget.glade.h:50
+#: ../data/gwget.glade.h:51
 msgid "_Edit"
 msgstr "É_dition"
 
-#: ../data/gwget.glade.h:51
+#: ../data/gwget.glade.h:52
 msgid "_Toolbar"
 msgstr "Barre d'_outils"
 
-#: ../data/gwget.glade.h:52
+#: ../data/gwget.glade.h:53
 msgid "_View"
 msgstr "_Affichage"
-
-#: ../data/gwget.glade.h:53
-msgid "label"
-msgstr "Étiquette"
-
-#: ../data/gwget.glade.h:54
-msgid "local_file_text"
-msgstr "local_file_text"
-
-#: ../data/gwget.glade.h:55
-msgid "url_text"
-msgstr "url_text"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -261,7 +265,7 @@ msgstr "Répertoire de téléchargement par défaut"
 
 #: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
-msgstr "Télécharger les pages requises"
+msgstr "Télécharger les données requises par les pages"
 
 #: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
@@ -466,7 +470,7 @@ msgstr "_Limiter la vitesse de téléchargement à :"
 
 #: ../data/preferences.glade.h:32
 msgid "_Manual proxy configuration"
-msgstr "Configuration _manuelle du proxy"
+msgstr "Configuration _manuelle du serveur mandataire"
 
 #: ../data/preferences.glade.h:33
 msgid "_Maximum depth level:"
@@ -586,11 +590,7 @@ msgstr "Répertoire de destination pour le téléchargement"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:244 ../src/main.c:276
-msgid "Gwget Download Manager"
-msgstr "Gestionnaire de téléchargements Gwget"
-
-#: ../src/main.c:262 ../src/main_window_cb.c:191
+#: ../src/main.c:263 ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "Gwget"
 
@@ -674,7 +674,7 @@ msgstr ""
 
 #: ../src/main_window_cb.c:568 ../src/new_window.c:136
 msgid "Select Folder"
-msgstr "Selectionnez un dossier"
+msgstr "Sélectionnez un dossier"
 
 #: ../src/main_window_cb.c:624
 #, c-format
@@ -761,72 +761,60 @@ msgstr "Rien"
 msgid "Downloads"
 msgstr "Téléchargements"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:161
 msgid "Socket error"
-msgstr "Erreur de socket"
+msgstr "Erreur du connecteur"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Connexion refusée\n"
+#: ../src/wget-log.c:164
+msgid "Connection refused"
+msgstr "Connexion refusée"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:167
 msgid "No route to host"
 msgstr "Aucune route vers l'hôte"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Connexion refusée durant le téléchargement de l'URL suivant :\n"
+#: ../src/wget-log.c:170
+msgid "Connection refused when downloading URL:"
+msgstr "Connexion refusée durant le téléchargement de l'URL :"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Hôte non trouvé\n"
+#: ../src/wget-log.c:173
+msgid "Host not found"
+msgstr "Hôte non trouvé"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Protocole non pris en charge - wget >= 1.7 nécessaire pour https:\n"
+#: ../src/wget-log.c:176
+msgid "Name or service not known"
+msgstr "Nom ou service inconnu"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:179
+msgid "Unsupported protocol"
+msgstr "Protocole non pris en charge"
+
+#: ../src/wget-log.c:182
 msgid "Refusing to truncate existing file"
 msgstr "Impossible de tronquer un fichier existant"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
-msgstr "Erreur inconnue"
+#: ../src/wget-log.c:185
+msgid "Unable to resolve host address"
+msgstr "Impossible de résoudre l'adresse de l'hôte"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:199
+msgid "Unknown error "
+msgstr "Erreur inconnue "
+
+#: ../src/wget-log.c:212 ../src/wget-log.c:219
 msgid "File not found"
 msgstr "Fichier non trouvé"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:226
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Impossible de continuer à télécharger, un fichier local interfère avec le "
 "fichier à télécharger"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:285
 msgid "Can't write to target directory"
 msgstr "Impossible d'écrire dans le répertoire de destination"
-
-#~ msgid "gtk-about"
-#~ msgstr "gtk-about"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
-
-#~ msgid "gtk-new"
-#~ msgstr "gtk-new"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
-#~ msgid "gtk-preferences"
-#~ msgstr "gtk-preferences"
-
-#~ msgid "gtk-properties"
-#~ msgstr "gtk-properties"
-
-#~ msgid "gtk-quit"
-#~ msgstr "gtk-quit"
