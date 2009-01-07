@@ -1,14 +1,14 @@
 # Hungarian translation of gwget.
-# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
 #
-# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006, 2007, 2008.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006, 2007, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-20 23:04+0200\n"
-"PO-Revision-Date: 2008-05-20 22:59+0200\n"
+"POT-Creation-Date: 2008-11-07 14:26+0100\n"
+"PO-Revision-Date: 2009-01-07 12:00+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -221,7 +221,7 @@ msgstr "URL:"
 
 #: ../data/gwget.glade.h:48
 msgid "Verify..."
-msgstr "Ellenőrzés..."
+msgstr "Ellenőrzés…"
 
 #: ../data/gwget.glade.h:49
 msgid "_Archive"
@@ -711,8 +711,7 @@ msgstr "<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés sikerült</span
 #: ../src/main_window_cb.c:890
 #, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr ""
-"<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés meghiúsult</span>"
+msgstr "<span size=\"large\" weight=\"bold\">Az MD5-ellenőrzés meghiúsult</span>"
 
 #: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
@@ -745,48 +744,59 @@ msgstr "Semmi"
 msgid "Downloads"
 msgstr "Letöltések"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:161
 msgid "Socket error"
 msgstr "Foglalathiba"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Kapcsolat visszautasítva\n"
+#: ../src/wget-log.c:164
+msgid "Connection refused"
+msgstr "Kapcsolat visszautasítva"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:167
 msgid "No route to host"
 msgstr "Nincs útvonal a kiszolgálóhoz"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Kapcsolat visszautasítva az URL letöltése közben:\n"
+#: ../src/wget-log.c:170
+msgid "Connection refused when downloading URL:"
+msgstr "Kapcsolat visszautasítva az URL letöltése közben:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Kiszolgáló nem található\n"
+#: ../src/wget-log.c:173
+msgid "Host not found"
+msgstr "A gép nem található"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr ""
-"Nem támogatott protokoll - a https-hez a wget >= 1.7 verziója szükséges:\n"
+#: ../src/wget-log.c:176
+msgid "Name or service not known"
+msgstr "A név vagy szolgáltatás ismeretlen"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:179
+msgid "Unsupported protocol"
+msgstr "Nem támogatott protokoll"
+
+#: ../src/wget-log.c:182
 msgid "Refusing to truncate existing file"
 msgstr "Létező fájl csonkításának visszautasítása"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
+#: ../src/wget-log.c:185
+msgid "Unable to resolve host address"
+msgstr "A gép címe nem oldható fel"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:199
+msgid "Unknown error "
 msgstr "Ismeretlen hiba"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#: ../src/wget-log.c:212 ../src/wget-log.c:219
 msgid "File not found"
 msgstr "A fájl nem található"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:226
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
+msgstr "Nem folytatható a letöltés, a létező helyi fájl ütközik a távoli fájllal"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:285
 msgid "Can't write to target directory"
 msgstr "Nem lehet írni a célkönyvtárba"
+
