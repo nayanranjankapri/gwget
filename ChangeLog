@@ -1,5 +1,7 @@
 2009-02-06  David Sedeño <david@alderia.com>
 
+	* data/gwget.glade: Set Radiobuttons in recursive window in a group.
+	Fix bug #533152.
 	* data/preferences.glade: Fix GtkSpinButton Adjustment.
 
 2009-02-06  David Sedeño <david@alderia.com>
