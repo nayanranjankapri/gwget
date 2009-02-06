@@ -32,9 +32,12 @@ run_dialog (gchar *title, gchar *message, gchar *cancel_message, gchar *action_m
 			GTK_DIALOG_MODAL,
 			GTK_MESSAGE_QUESTION,
 			GTK_BUTTONS_NONE,
-			g_strdup_printf("<span weight='bold' size='large'>%s</span>", title));
-			
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), message);
+			"<span weight='bold' size='large'>%s</span>",
+			title);
+
+	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", message);
+		/* message may contain '%' characters, so we must not use it
+		 * as the format string directly. */
 	
 	gtk_dialog_add_buttons (GTK_DIALOG(dialog), cancel_message, GTK_RESPONSE_CANCEL,
 			action_message, GTK_RESPONSE_OK, NULL);
@@ -78,6 +81,16 @@ run_dialog_error (gchar *title, gchar *message)
     g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
     
     gtk_widget_show (dialog);
+}
+
+int check_url( char *str1, char *str2 ) 
+{
+	int i;
+	for( i = 0; str1[i] != '\0'; i++ ) 
+	{
+		if( str1[i] != str2[i] ) return(0);
+	}
+	return(1);
 }
 
 gboolean check_url_already_exists(gchar *checkurl)

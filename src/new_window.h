@@ -20,7 +20,6 @@
 
 
 void on_ok_button_clicked(GtkWidget *widget, gpointer data);
-int check_url(char *str1, char *str2);
 void create_new_window(void);
 void on_cancel_button_clicked(GtkWidget *widget,gpointer data);
 

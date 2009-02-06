@@ -15,6 +15,12 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
+ 
+/*
+ * For the log parsing to work, the wget process must be started with
+ * the "C" locale, e.g., by setting the environment variable LC_ALL=C
+ * programmatically prior to invoking wget.
+ */
 
 #define _FILE_OFFSET_BITS 64
 
@@ -61,45 +67,65 @@ show_error (GwgetData *gwgetdata, gchar *error_msg)
 	gwgetdata->error_msg=g_strdup(error_msg);
 }
 
+/* Get session start time and session file start size */
+static void
+set_start_size_and_time(GwgetData *gwgetdata)
+{
+	struct stat file_stat;
+	if (stat (gwgetdata->local_filename, &file_stat) != -1) {
+    	gwgetdata->session_start_time = file_stat.st_ctime;
+    	gwgetdata->session_start_size = file_stat.st_size;
+	} else {
+    	gwgetdata->session_start_time = 0;
+    	gwgetdata->session_start_size = 0;
+	}
+}
+
+/* 
+ * If gwgetdata->filename does not match the filesystem filename,
+ * bad things can happen. We intecept the line that prints the 
+ * filesystem filename and set gwgetdata->filename
+ */
+static void
+update_filename(GwgetData *gwgetdata)
+{
+	char *sName = gwgetdata->line;
+	int iL = strlen(sName);
+	sName[iL-1] = 0; // Chop the final ' 
+
+	/*
+	 * Now sName contains the whole pathname. No filename can
+	 * contain '/' so the following search for the last component
+	 * is sane
+	 */
+	sName += iL - 2;
+	while (*sName != '/' && sName != gwgetdata->line)
+		sName--;
+	if (*sName == '/')
+		sName++;
+
+	gwget_data_set_filename(gwgetdata,sName);
+	set_start_size_and_time(gwgetdata);
+	gwget_data_update_statistics(gwgetdata);
+	gwget_remember_downloads();
+}
+
 static int
 wget_log_process_line (GwgetData *gwgetdata)
 {
 	gchar *p;
-	struct stat file_stat;
 	gint dots = 0;
 
 	if ((gwgetdata->line == NULL) || (strlen (gwgetdata->line) == 0))
 		return 0;
-	
+		
 	switch (gwgetdata->state) {
 	case DL_NOT_CONNECTED:
-		/* 
-		 * If gwgetdata->filename does not match the filesystem filename,
-		 * bad things can happen. We intecept the line that prints the 
-		 * filesystem filename and set gwgetdata->filename
-		 */
-		if (strstr(gwgetdata->line,"           => `")) {
-			char *sName = gwgetdata->line;
-			int iL = strlen(sName);
-			sName[iL-1] = 0; // Chop the final ' 
-
-			/*
-			 * Now sName contains the whole pathname. No filename can
-			 * contain '/' so the following search for the last component
-			 * is sane
-			 */
-			sName += iL - 2;
-			while (*sName != '/' && sName != gwgetdata->line)
-				sName--;
-			if (*sName == '/')
-				sName++;
-
-			gwget_data_set_filename(gwgetdata,sName);
-			gwget_data_update_statistics(gwgetdata);
-			gwget_remember_downloads();
-			break;
-		}
-		  
+		if (strstr(gwgetdata->line,"           => `")) {		/* wget <1.11 */
+		    update_filename(gwgetdata);
+		    break;
+    	}
+   
 		/* First check to see if we connected to the host correctly. */
 
 		/* Wget 1.8.1 says "connected." rather than "connected!" */
@@ -249,14 +275,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 			}
 			gwget_data_set_state (gwgetdata, DL_RETRIEVING);
 			set_icon_newdownload();
-			/* Get session start time and session file start size */
-			if (stat (gwgetdata->local_filename, &file_stat) != -1) {
-		    	gwgetdata->session_start_time = file_stat.st_ctime;
-		    	gwgetdata->session_start_size = file_stat.st_size;
-			} else {
-		    	gwgetdata->session_start_time = 0;
-		    	gwgetdata->session_start_size = 0;
-			}
+			set_start_size_and_time(gwgetdata);
 			gwgetdata->session_elapsed = 0;
 	    } else {
 				/* We didn't get a length so, probably it's unspecified size
@@ -267,19 +286,18 @@ wget_log_process_line (GwgetData *gwgetdata)
 					/* Unspecified size, so set total_size to 0 */
 					gwget_data_set_total_size (gwgetdata, 0);
 					gwget_data_set_state (gwgetdata, DL_RETRIEVING);
-					if (stat (gwgetdata->local_filename, &file_stat) != -1) {
-						gwgetdata->session_start_time = file_stat.st_ctime;
-						gwgetdata->session_start_size = file_stat.st_size;
-					} else {
-						gwgetdata->session_start_time = 0;
-						gwgetdata->session_start_size = 0;
-					}
+					set_start_size_and_time(gwgetdata);
 				}
 				gwgetdata->session_elapsed = 0;
         }
 	    break;
 
 		case DL_RETRIEVING:
+			if (strstr(gwgetdata->line,"Saving to: `")) {		/* wget >=1.11 */
+			    update_filename(gwgetdata);
+			    break;
+	    	}
+
 			if (strncmp (gwgetdata->line, "Cannot write to ", 15) == 0) {
 			show_error (gwgetdata,
 					    _ ("Can't write to target directory"));
@@ -294,14 +312,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 				if (p != NULL) {
 					p += 8;
 					gwget_data_set_total_size (gwgetdata,convert_wget_size (p));
-					/* Get session start time and session file start size */
-					if (stat (gwgetdata->local_filename, &file_stat) != -1) {
-						gwgetdata->session_start_time = file_stat.st_ctime;
-						gwgetdata->session_start_size = file_stat.st_size;
-					} else {
-						gwgetdata->session_start_time = 0;
-						gwgetdata->session_start_size = 0;
-					}
+					set_start_size_and_time(gwgetdata);
 					gwgetdata->session_elapsed = 0;
 				} else {
 		                	/* We didn't get a length so, probably it's unspecified size
@@ -311,13 +322,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 					if (p != NULL) {
 						/* Unspecified size, so set total_size to 0 */
 						gwget_data_set_total_size (gwgetdata, 0);
-						if (stat (gwgetdata->local_filename, &file_stat) != -1) {
-							gwgetdata->session_start_time = file_stat.st_ctime;
-							gwgetdata->session_start_size = file_stat.st_size;
-						} else {
-							gwgetdata->session_start_time = 0;
-							gwgetdata->session_start_size = 0;
-						}
+						set_start_size_and_time(gwgetdata);
 					}
 					gwgetdata->session_elapsed = 0;
 				}
@@ -418,10 +423,7 @@ wget_log_read_log_line(GwgetData *gwgetdata) {
 void
 wget_drain_remaining_log(GwgetData *gwgetdata) 
 {
-	while (wget_log_read_log_line (gwgetdata))
-		wget_log_process_line (gwgetdata);
-	
-	gwget_data_update_statistics (gwgetdata);
+	wget_log_process (gwgetdata);
 }
 
 void

@@ -1,3 +1,16 @@
+2009-02-06  David Sedeño <david@alderia.com>
+
+	Patch from Michael Fotsch <foetsch@yahoo.com> with: 
+	* src/gwget_data.c: Support of mp3 playlist: When gwget finishes 
+	downloading an .m3u file, it asks the user whether it should download 
+	the files that it contains. If yes, the files will be added as 
+	additional downloads. 
+	* src/wget_data.c: Parser for wget version 1.11.4 
+	* Moved check_url function to utils.{.c.h} 
+	* In several places, leading and trailing whitespace is stripped from 
+	the user-specified URL. (This is a common pitfall when inadvertently 
+	copying leading spaces or trailing newlines into the clipboard.)
+
 2008-09-09  David Sedeño <david@alderia.com>
 
 	* src/gwget_data.h: Ooops, forget to commit that.

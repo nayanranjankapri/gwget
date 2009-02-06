@@ -49,7 +49,7 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
 	save_in_entry=GTK_ENTRY(GTK_BIN(combo)->child);
 	
-	url=(gchar *)(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "url_entry"))));
+	url=g_strstrip((gchar *)(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "url_entry")))));
 	
 	if (strcmp(url,"")) {
 		url = g_strdup(url);
@@ -85,17 +85,6 @@ on_cancel_button_clicked(GtkWidget *widget,gpointer data)
 	gtk_widget_hide (window);
 }
 
-/* checks for data in clipboard: URL or not */
-int check_url( char *str1, char *str2 ) 
-{
-	int i;
-	for( i = 0; str1[i] != '\0'; i++ ) 
-	{
-		if( str1[i] != str2[i] ) return(0);
-	}
-	return(1);
-}
-
 void 
 create_new_window(void)
 {
@@ -106,7 +95,7 @@ create_new_window(void)
 
 	clipboard = gtk_clipboard_get (GDK_NONE);
 	if (clipboard!=NULL) {
-		url = gtk_clipboard_wait_for_text (clipboard);
+		url = g_strstrip(gtk_clipboard_wait_for_text (clipboard));
 	}
 		
 	
@@ -114,11 +103,14 @@ create_new_window(void)
 
 	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
 	entry = GTK_ENTRY(glade_xml_get_widget (xml, "url_entry"));
-	if ( (url!=NULL) && !check_url( "http://", url ) && !check_url( "ftp://", url))
+	if ( (url!=NULL) && !check_url( "http://", url ) && !check_url( "ftp://", url)) {
+		g_free(url);
 		url = NULL;
+	}
 	
 	if (url != NULL) {	
 		gtk_entry_set_text(GTK_ENTRY(entry),url);
+		g_free(url);
 	}
 	
 	gtk_list_store_clear (GTK_LIST_STORE(save_in_model));

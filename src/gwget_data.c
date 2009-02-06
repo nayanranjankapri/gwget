@@ -17,6 +17,7 @@
 #define _FILE_OFFSET_BITS  64
 #include <config.h>
 #include <gnome.h>
+#include <glib/gstdio.h>
 #include <libgnomevfs/gnome-vfs.h>
 #include <fcntl.h>
 #include <signal.h>
@@ -43,6 +44,8 @@ static void gwget_data_update_statistics_ui(GwgetData *gwgetdata);
 static void convert_time2str(gchar *buffer, guint32 time);
 static void gwget_gnotify_finished(GwgetData *gwgetdata);
 static void gwget_download_finished(GwgetData *gwgetdata);
+static gboolean gwget_ask_download_playlist(GwgetData *gwgetdata);
+static void gwget_download_playlist_items(gchar *filename);
 
 static void
 convert_time2str (gchar *buffer, guint32 time)
@@ -780,9 +783,53 @@ gwget_gnotify_finished(GwgetData *gwgetdata) {
 static void
 gwget_download_finished (GwgetData *gwgetdata)
 {
-   gwget_gnotify_finished(gwgetdata);
-   gwget_tray_notify (_("Download Complete"), gwgetdata->filename, gwgetdata->icon_name);
-   gtk_widget_set_sensitive(glade_xml_get_widget(xml, "clear_button"), TRUE);
+	gwget_gnotify_finished(gwgetdata);
+	gwget_tray_notify (_("Download Complete"), gwgetdata->filename, gwgetdata->icon_name);
+	gtk_widget_set_sensitive(glade_xml_get_widget(xml, "clear_button"), TRUE);
+
+	if (gwget_ask_download_playlist(gwgetdata))
+		gwget_download_playlist_items(gwgetdata->local_filename);
+}
+
+static gboolean
+gwget_ask_download_playlist(GwgetData *gwgetdata)
+{
+	gchar *msg;
+	gint response;
+
+	if (g_str_has_suffix(gwgetdata->filename, ".m3u")
+	    	|| g_str_has_suffix(gwgetdata->filename, ".M3U")) {   
+		msg = g_strdup_printf(
+			_("The file %s is an MP3 playlist.\nDownload the files that it contains?"),
+			gwgetdata->filename);
+		response = run_dialog(_("Download files in MP3 playlist?"),
+							  _(msg), _("No"), _("Yes"));
+		g_free(msg);
+		if (response == GTK_RESPONSE_OK)
+			return TRUE;
+	}
+	
+	return FALSE;
+}
+
+static void
+gwget_download_playlist_items(gchar *filename)
+{
+	FILE *f;
+	gchar line[1024];
+	GwgetData *gwgetdata;
+	
+	f = g_fopen(filename, "r");
+	if (f!=NULL) {
+		while (fgets(line, 1024, f)!=NULL) {
+			if (check_url("http://", line) || check_url("ftp://", line)) {
+				gwgetdata = gwget_data_new (g_strstrip(line));
+				gwget_data_add_download(gwgetdata);
+				gwget_data_start_download(gwgetdata);
+			}
+		}
+		fclose(f);
+	}
 }
 
 void
