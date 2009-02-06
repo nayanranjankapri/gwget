@@ -1,5 +1,9 @@
 2009-02-06  David Sedeño <david@alderia.com>
 
+	* data/preferences.glade: Fix GtkSpinButton Adjustment.
+
+2009-02-06  David Sedeño <david@alderia.com>
+
 	Patch from Michael Fotsch <foetsch@yahoo.com> with: 
 	* src/gwget_data.c: Support of mp3 playlist: When gwget finishes 
 	downloading an .m3u file, it asks the user whether it should download 
