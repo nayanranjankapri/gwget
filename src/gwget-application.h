@@ -58,6 +58,7 @@ gboolean          gwget_application_open_window         (GwgetApplication   *app
 						      GError         **error);
 gboolean          gwget_application_open_uri            (GwgetApplication   *application,
 		                      const char      *uri,
+		                      const char      *destination_dir,
 						      guint32         timestamp,
 						      GError         **error);
 

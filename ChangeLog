@@ -1,3 +1,9 @@
+2009-02-07  David Sedeño <david@alderia.com>
+
+	* src/gwget-application{.c, .h}, src/gwget-application-service.xml,
+	  main.c: Add destination directory parameter to OpenURI method. 
+	  Fixes: #562993
+	
 2009-02-06  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Set Radiobuttons in recursive window in a group.

@@ -145,13 +145,20 @@ gwget_application_open_window (GwgetApplication  *application,
 gboolean
 gwget_application_open_uri (GwgetApplication  *application,
 			 const char     *url,
+			 const char	*destination_dir,
 			 guint32         timestamp,
 			 GError        **error)
 {
 	GwgetData *gwgetdata;
 	
-	
 	gwgetdata = gwget_data_new ((gchar *)url);
+	
+	if (strlen(destination_dir)!=0) {
+		gwgetdata->dir = (gchar *)destination_dir;
+        } else {
+        	gwgetdata->dir = gwget_pref.download_dir;
+        }
+	
 	gwget_data_add_download(gwgetdata);
 	gwget_data_start_download(gwgetdata);
 

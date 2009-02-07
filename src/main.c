@@ -163,11 +163,17 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 
 	for (i = 0; files[i]; i++) {
 		char *uri;
+		char *dest_dir;
 
 		uri = gnome_vfs_make_uri_from_shell_arg (files[i]);
+		
+		if (destination_dir) {
+        		dest_dir = destination_dir;
+        	} 
 #if DBUS_VERSION <= 33
 		call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
 						DBUS_TYPE_STRING, &uri,
+						DBUS_TYPE_STRING, &dest_dir,
 						DBUS_TYPE_UINT32, &timestamp,
 						DBUS_TYPE_INVALID);
 
@@ -180,6 +186,7 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 #elif DBUS_VERSION == 34
 		call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
 						G_TYPE_STRING, uri,
+						G_TYPE_STRING, dest_dir,
 						G_TYPE_UINT, timestamp,
 						G_TYPE_INVALID);
 
@@ -192,6 +199,7 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 #else
 		if (!dbus_g_proxy_call (remote_object, "OpenURI", &error,
 					G_TYPE_STRING, uri,
+					G_TYPE_STRING, dest_dir,
 					G_TYPE_UINT, timestamp,
 					G_TYPE_INVALID,
 					G_TYPE_INVALID)) {
@@ -258,10 +266,10 @@ int main(int argc,char *argv[])
 
 	gwget_init_pref(&gwget_pref);
 	program = gnome_program_init(PACKAGE, VERSION, 
-								LIBGNOMEUI_MODULE, argc, argv,
-					            GNOME_PARAM_GOPTION_CONTEXT, context, 
-								GNOME_PARAM_HUMAN_READABLE_NAME, _("Gwget"),
-				      			GNOME_PARAM_APP_DATADIR, GNOME_GWGET_LOCALEDIR,
+				LIBGNOMEUI_MODULE, argc, argv,
+			        GNOME_PARAM_GOPTION_CONTEXT, context, 
+				GNOME_PARAM_HUMAN_READABLE_NAME, _("Gwget"),
+				GNOME_PARAM_APP_DATADIR, GNOME_GWGET_LOCALEDIR,
                               	NULL);
 	
 #ifdef ENABLE_DBUS
