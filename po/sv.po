@@ -1,14 +1,14 @@
 # Swedish messages for gwget.
-# Copyright (C) 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
-# Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008.
+# Copyright (C) 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Christian Rose <menthos@menthos.com>, 2005.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-13 20:04+0200\n"
-"PO-Revision-Date: 2008-09-13 20:04+0100\n"
+"POT-Creation-Date: 2009-02-11 21:32+0100\n"
+"PO-Revision-Date: 2009-02-11 21:33+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,8 @@ msgid "Download files from the Internet"
 msgstr "Hämta ner filer från Internet"
 
 #: ../data/gwget.desktop.in.in.h:3
-#: ../src/main.c:244
-#: ../src/main.c:277
+#: ../src/main.c:252
+#: ../src/main.c:285
 msgid "Gwget Download Manager"
 msgstr "Hämtningshanteraren Gwget"
 
@@ -523,66 +523,89 @@ msgstr "Okänd"
 msgid "Failed"
 msgstr "Misslyckades"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:204
 msgid "stalled"
 msgstr "fastnad"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:236
 msgid "Waiting"
 msgstr "Väntar"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:238
 msgid "Not Started"
 msgstr "Inte startad"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:240
 msgid "Not Running"
 msgstr "Kör inte"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:242
 msgid "Not Connected"
 msgstr "Inte ansluten"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:244
 msgid "Connected"
 msgstr "Ansluten"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:246
 msgid "Retrieving"
 msgstr "Hämtar"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:248
 msgid "Completed"
 msgstr "Slutfört"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "Fel"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:690
 msgid "Unable to add this download"
 msgstr "Kan inte lägga till denna hämtning"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:691
 msgid "This download is already added"
 msgstr "Denna hämtning har redan lagts till"
 
-#: ../src/gwget_data.c:736
+#: ../src/gwget_data.c:739
 #: ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259
 #: ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Fel vid öppnande av fil"
 
-#: ../src/gwget_data.c:736
+#: ../src/gwget_data.c:739
 #: ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259
 msgid "Couldn't open the file"
 msgstr "Kunde inte öppna filen"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:787
 msgid "Download Complete"
 msgstr "Hämtning slutförd"
+
+#: ../src/gwget_data.c:803
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Filen %s är en MP3-spellista.\n"
+"Hämta filerna som den innehåller?"
+
+#: ../src/gwget_data.c:805
+msgid "Download files in MP3 playlist?"
+msgstr "Hämta filer i MP3-spellista?"
+
+#: ../src/gwget_data.c:806
+#: ../src/main_window.c:792
+msgid "No"
+msgstr "Nej"
+
+#: ../src/gwget_data.c:806
+#: ../src/main_window.c:792
+msgid "Yes"
+msgstr "Ja"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -596,7 +619,7 @@ msgstr "Målkatalog för hämtningen"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:263
+#: ../src/main.c:271
 #: ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "Gwget"
@@ -650,14 +673,6 @@ msgstr "Stoppa aktuella hämtningar?"
 msgid "There is at least one active download left. Really cancel all running transfers?"
 msgstr "Det finns åtminstone en aktiv hämtning kvar. Verkligen avbryta alla körande överföringar?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "Nej"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Ja"
-
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
 msgstr "Fel vid hämtning"
@@ -676,7 +691,7 @@ msgstr ""
 "tp-sv@listor.tp-sv.se"
 
 #: ../src/main_window_cb.c:568
-#: ../src/new_window.c:136
+#: ../src/new_window.c:128
 msgid "Select Folder"
 msgstr "Välj mapp"
 
@@ -760,39 +775,39 @@ msgstr "Ingenting"
 msgid "Downloads"
 msgstr "Hämtningar"
 
-#: ../src/wget-log.c:161
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Uttagsfel"
 
-#: ../src/wget-log.c:164
+#: ../src/wget-log.c:190
 msgid "Connection refused"
 msgstr "Anslutning nekades"
 
-#: ../src/wget-log.c:167
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Ingen väg till värd"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:196
 msgid "Connection refused when downloading URL:"
 msgstr "Anslutning nekades vid hämtning av URL:"
 
-#: ../src/wget-log.c:173
+#: ../src/wget-log.c:199
 msgid "Host not found"
 msgstr "Värden kunde inte hittas"
 
-#: ../src/wget-log.c:176
+#: ../src/wget-log.c:202
 msgid "Name or service not known"
 msgstr "Namn eller tjänst är inte känd"
 
-#: ../src/wget-log.c:179
+#: ../src/wget-log.c:205
 msgid "Unsupported protocol"
 msgstr "Protokollet stöds inte"
 
-#: ../src/wget-log.c:182
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Vägrar att avkorta befintlig fil"
 
-#: ../src/wget-log.c:185
+#: ../src/wget-log.c:211
 msgid "Unable to resolve host address"
 msgstr "Kunde inte slå upp värdadressen"
 
@@ -800,20 +815,20 @@ msgstr "Kunde inte slå upp värdadressen"
 #. * All other possible output may as well be reported, since we treat it
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
-#: ../src/wget-log.c:199
+#: ../src/wget-log.c:225
 msgid "Unknown error "
 msgstr "Okänt fel"
 
-#: ../src/wget-log.c:212
-#: ../src/wget-log.c:219
+#: ../src/wget-log.c:238
+#: ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Filen kunde inte hittas"
 
-#: ../src/wget-log.c:226
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr "Kan inte fortsätta hämtning, befintlig lokal fil är i konflikt med fjärrfilen"
 
-#: ../src/wget-log.c:285
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "Kan inte skriva till målkatalog"
 
