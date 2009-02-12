@@ -194,7 +194,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 	gtk_show_about_dialog (NULL,
 			       "name", _("Gwget"), 
 			       "version", VERSION,
-			       "copyright", "Copyright © 2004-2007 David Sedeño Fernández",
+			       "copyright", "Copyright © 2004-2009 David Sedeño Fernández",
 			       "comments", _("Download Manager for GNOME."),
 			       "authors", authors,
 			       "translator-credits", _("translator-credits"),
