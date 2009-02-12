@@ -61,7 +61,8 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 	GtkTreeModel *model;
 	GwgetData *gwgetdata;
 	gchar *uri;
-	GError *err = NULL; 
+	GError *err = NULL;
+	GFile *location; 
 	
 	treev=glade_xml_get_widget(xml,"treeview1");
 	select=gtk_tree_view_get_selection(GTK_TREE_VIEW(treev));
@@ -105,12 +106,15 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 				run_dialog_error(_("Error in download"),gwgetdata->error_msg);
 			} else {
 				if (gwgetdata->recursive) {
-					uri = gnome_vfs_make_uri_from_input(gwgetdata->dir);
+					location = g_file_parse_name (gwgetdata->dir); 
+					uri = g_file_get_uri (location);
+					g_object_unref (location);
 				} else {
-					uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
-                                                 GNOME_VFS_MAKE_URI_DIR_CURRENT);
+					location = g_file_new_for_commandline_arg (gwgetdata->local_filename);
+					uri = g_file_get_uri (location);
+					g_object_unref (location);
 				}
-				if (!gnome_url_show (uri, &err)) {
+				if (!gtk_show_uri (NULL, uri, GDK_CURRENT_TIME, &err)) {
 					run_dialog_error(_("Error opening file"),_("Couldn't open the file"));
 					return FALSE;
 				}
@@ -217,7 +221,8 @@ new_download(GwgetData* gwgetdata)
 	GtkIconTheme *theme;
 	GtkIconInfo *icon_info;
 	GdkPixbuf *pixbuf;
-	char *mime, *size;
+	gchar *content_type = NULL;
+	gchar *size;
 	int width = 16, height = 16;
 	gdouble perc;
 	
@@ -245,9 +250,9 @@ new_download(GwgetData* gwgetdata)
 	
 	theme = gtk_icon_theme_get_default ();
 	if (!gwgetdata->recursive) {
-		mime = (gchar *)gnome_vfs_get_mime_type_for_name (gwgetdata->local_filename);
+		content_type = g_content_type_guess (gwgetdata->local_filename, NULL, 0, NULL);
 		gwgetdata->icon_name = gnome_icon_lookup (theme, NULL, NULL, NULL, NULL,
-	 							mime, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
+	 							content_type, GNOME_ICON_LOOKUP_FLAGS_NONE, NULL);
 	} else {
 		gwgetdata->icon_name = g_strdup("gtk-refresh");
 	}
@@ -267,7 +272,8 @@ new_download(GwgetData* gwgetdata)
 
 	if (pixbuf)
 		g_object_unref (pixbuf);
-	
+		
+	g_free (content_type);
 }
 
 
@@ -896,7 +902,7 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
                                                      GTK_DIALOG_DESTROY_WITH_PARENT,
                                                      msg_type,
                                                      GTK_BUTTONS_CLOSE,
-                                                     msg->str);
+                                                     "%s", msg->str);
                                   
       gtk_dialog_run(GTK_DIALOG(dialog));
       gtk_widget_destroy(GTK_WIDGET(dialog));   

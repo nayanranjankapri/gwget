@@ -405,6 +405,8 @@ add_columns (GtkTreeView *treeview)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
+	PangoContext *context;
+	PangoLayout *layout;
 	
 	
 	/* File Name Column */
@@ -429,8 +431,12 @@ add_columns (GtkTreeView *treeview)
 	
 	gtk_tree_view_column_set_title (GTK_TREE_VIEW_COLUMN(column),_("File Name"));
 	
+	context = gtk_widget_get_pango_context(GTK_WIDGET(treeview));
+	layout = pango_layout_new (PANGO_CONTEXT(context));
+	pango_layout_set_ellipsize (PANGO_LAYOUT(layout), PANGO_ELLIPSIZE_END);
+	
 	gtk_tree_view_column_set_sort_column_id (column, FILENAME_COLUMN);
-	gtk_tree_view_column_set_resizable(column, TRUE); 
+	gtk_tree_view_column_set_resizable (column, TRUE); 
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* State Column */
@@ -522,7 +528,9 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 							guint time, gpointer data)
 {
 	gchar *file;
-	GList *files;
+	gchar *uri;
+	gchar **uris;
+	GList *files = NULL;
 	GwgetData *gwgetdata;
 	gboolean drop_ok;
 	
@@ -532,10 +540,12 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 	
 	drop_ok = FALSE;
 	if (dnd_type==TARGET_URI_LIST) {
-		GnomeVFSURI *vfs_uri;
-		files = gnome_vfs_uri_list_parse (seldata->data);
-		vfs_uri = files->data;
-		file = gnome_vfs_uri_to_string(vfs_uri,GNOME_VFS_URI_HIDE_NONE);
+		uris = g_uri_list_extract_uris (seldata->data);
+		for (uri=uris[0]; uri != NULL; uri++) {
+			files = g_list_prepend (files, uri);
+		}
+		g_strfreev (uris); 
+		file = files->data;
 		drop_ok = TRUE;
 	} else if (dnd_type==TARGET_NETSCAPE_URL) {
 		file=((gchar *) (seldata->data));

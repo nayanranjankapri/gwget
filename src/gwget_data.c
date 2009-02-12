@@ -16,9 +16,12 @@
 
 #define _FILE_OFFSET_BITS  64
 #include <config.h>
-#include <gnome.h>
+#include <gio/gio.h> 
+#include <glib.h>
 #include <glib/gstdio.h>
-#include <libgnomevfs/gnome-vfs.h>
+#include <glib/gi18n.h>
+#include <gtk/gtk.h>
+
 #include <fcntl.h>
 #include <signal.h>
 #include <stdlib.h>
@@ -443,8 +446,8 @@ gwget_data_start_download(GwgetData *gwgetdata)
 					user_password=g_strdup_printf("%s:%s@",gwget_pref.proxy_user,gwget_pref.proxy_password);
 				}
 
-				setenv("http_proxy", g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL), 1);
-				setenv("ftp_proxy", g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL), 1);
+				setenv("http_proxy", g_strconcat("http://", g_strdup_printf("%s", user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL), 1);
+				setenv("ftp_proxy", g_strconcat("http://", g_strdup_printf("%s", user_password),g_strdup_printf("%s",gwget_pref.http_proxy),":",g_strdup_printf("%d",gwget_pref.http_proxy_port),NULL), 1);
 		 	        argv[arg]="-Yon";
 				arg++;
 			}
@@ -456,8 +459,8 @@ gwget_data_start_download(GwgetData *gwgetdata)
 					user_password=g_strdup_printf("%s:%s@",gwget_pref.gnome_proxy_user,gwget_pref.gnome_proxy_password);
 				}
 
-				setenv("http_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.gnome_http_proxy),":",g_strdup_printf("%d",gwget_pref.gnome_http_proxy_port),NULL),1);
-				setenv("ftp_proxy",g_strconcat("http://",g_strdup_printf(user_password),g_strdup_printf("%s",gwget_pref.gnome_http_proxy),":",g_strdup_printf("%d",gwget_pref.gnome_http_proxy_port),NULL),1);
+				setenv("http_proxy",g_strconcat("http://", g_strdup_printf("%s", user_password), g_strdup_printf("%s", gwget_pref.gnome_http_proxy),":", g_strdup_printf("%d", gwget_pref.gnome_http_proxy_port),NULL),1);
+				setenv("ftp_proxy",g_strconcat("http://", g_strdup_printf("%s", user_password), g_strdup_printf("%s", gwget_pref.gnome_http_proxy),":", g_strdup_printf("%d", gwget_pref.gnome_http_proxy_port),NULL),1);
 		 	        argv[arg]="-Yon";
 				arg++;
 			}
@@ -518,8 +521,10 @@ GwgetData *
 gwget_data_create(gchar *url, gchar *dir)
 {
 	GwgetData *gwgetdata;
-	GnomeVFSURI *localfile_uri;
+	GFile *file;
+	GFileInfo *info;
 	gint length;
+	GError    *err = NULL;
 
 	g_return_val_if_fail(url != NULL, NULL);
 	g_return_val_if_fail(dir != NULL, NULL);
@@ -547,23 +552,22 @@ gwget_data_create(gchar *url, gchar *dir)
 	
 	gwget_data_set_filename(gwgetdata,gwgetdata->filename);
 	
-	localfile_uri = gnome_vfs_uri_new (gwgetdata->local_filename);
-	if (gnome_vfs_uri_exists (localfile_uri) ) {
-		GnomeVFSFileInfo *info;
-		info = gnome_vfs_file_info_new();
-		gnome_vfs_get_file_info (gwgetdata->local_filename, 
-				         info, 
-					 GNOME_VFS_FILE_INFO_DEFAULT);
-		gwgetdata->cur_size = (guint64)info->size;
+	file = g_file_new_for_path (gwgetdata->local_filename);
+	info = g_file_query_info (file, G_FILE_ATTRIBUTE_STANDARD_SIZE, 0, NULL, &err);
+	
+	if (err==NULL) {
+		gwgetdata->cur_size = g_file_info_get_size (info);
 	} else {
 		gwgetdata->cur_size = 0;
+		g_warning ("Failed to get file size for %s: %s", gwgetdata->local_filename, err->message);
+		g_error_free (err);
 	}
+	
 	
 	gwgetdata->line = NULL;
 	gwgetdata->session_start_time = 0;
 	gwgetdata->session_start_size = 0;
 	gwgetdata->session_elapsed = 0;
-	/* gwgetdata->cur_size = 0; */
 	gwgetdata->state = DL_NOT_STARTED;
 	gwgetdata->total_size = 0;
 	gwgetdata->total_time = 0;
@@ -730,12 +734,15 @@ gwget_data_add_download(GwgetData *gwgetdata)
 void
 gwget_data_exec (GwgetData *gwgetdata)
 {
-	gchar *uri;
+	gchar *url;
+	GFile *file;
 	GError *err = NULL; 
 
-	uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
-							GNOME_VFS_MAKE_URI_DIR_CURRENT);
-	if (!gnome_url_show (uri, &err)) {
+	file = g_file_new_for_commandline_arg (gwgetdata->local_filename);
+	url = g_file_get_uri (file);
+	g_object_unref (file);
+	
+	if (!gtk_show_uri (NULL, url, GDK_CURRENT_TIME, &err)) {
 		run_dialog_error(_("Error opening file"), _("Couldn't open the file"));
 	}
 }

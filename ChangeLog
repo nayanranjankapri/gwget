@@ -1,3 +1,8 @@
+2009-02-12  David Sedeño <david@alderia.com>
+
+	* src/gwget_data.c, src/main_window.c, src/main_window_cb.c, 
+	src/main.c: Port to gio for local operations.
+
 2009-02-08  David Sedeño <david@alderia.com>
 
 	* data/gwget.glade: Set url label ellipsize to FINAL.

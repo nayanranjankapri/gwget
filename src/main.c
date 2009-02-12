@@ -22,7 +22,7 @@
 #include <gconf/gconf-client.h>
 #include <locale.h>
 #include <libgnomeui/libgnomeui.h>
-#include <libgnomevfs/gnome-vfs-utils.h>
+#include <gio/gio.h>
 
 #include "main_window_cb.h"
 #include "main_window.h"
@@ -164,9 +164,11 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 	for (i = 0; files[i]; i++) {
 		char *uri;
 		char *dest_dir;
-
-		uri = gnome_vfs_make_uri_from_shell_arg (files[i]);
+		GFile *file;
 		
+		file = g_file_new_for_commandline_arg (files[i]);
+		uri = g_file_get_uri (file);
+
 		if (destination_dir) {
         		dest_dir = destination_dir;
         	} 
@@ -210,6 +212,7 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 		}
 #endif
 		g_free (uri);
+		g_object_unref (file);
 		result = TRUE;
         }
 
@@ -233,13 +236,18 @@ load_urls (const char **urls)
         }
 
         for ( i = 0; urls[i]; i++) {
-                url = gnome_vfs_make_uri_from_shell_arg (urls[i]);
+		GFile *file;
+        	
+		file = g_file_new_for_commandline_arg (urls[i]);
+        	
+                url = g_file_get_uri (file);
                 gwgetdata = gwget_data_new ((gchar *)url);
                 if (destination_dir) {
                         gwgetdata->dir = destination_dir;
                 }
                 gwget_data_add_download(gwgetdata);
                 gwget_data_start_download(gwgetdata);
+                g_object_unref (file);
         }
 }                
 	
