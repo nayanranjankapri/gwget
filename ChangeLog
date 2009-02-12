@@ -1,5 +1,6 @@
 2009-02-12  David Sedeño <david@alderia.com>
 
+	* configure.ac: Require gio and not gnome-vfs.
 	* src/gwget_data.c, src/main_window.c, src/main_window_cb.c, 
 	src/main.c: Port to gio for local operations.
 

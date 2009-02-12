@@ -20,16 +20,18 @@ GTK_REQUIRED=2.6.0
 LIBGLADE_REQUIRED=2.0.0
 GCONF_REQUIRED=1.1.11
 DBUS_GLIB_REQUIRED=0.33
+GIO_REQUIRED=2.16.0
 
 PKG_CHECK_MODULES(GNOME, libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
 		 	  gtk+-2.0 	>= $GTK_REQUIRED 
 			  gmodule-2.0
 			  libglade-2.0 	>= $LIBGLADE_REQUIRED
-			  gnome-vfs-2.0
-			  gnome-vfs-module-2.0)
+			  gio-unix-2.0 >= $GIO_REQUIRED)
+			
 
 AC_SUBST(GNOME_LIBS)
 AC_SUBST(GNOME_CFLAGS)
+AC_SUBST(GIO_REQUIRED)
 
 dnl ========= Check for DBUS
 PKG_CHECK_MODULES([DBUS], [dbus-glib-1 >= $DBUS_GLIB_REQUIRED],
