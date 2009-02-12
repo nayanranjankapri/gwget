@@ -1,4 +1,26 @@
 ==============
+Version 1.00
+==============
+Features:
+	* Support m3u filenames: When gwget finishes
+        downloading an .m3u file, it asks the user whether it should download
+        the files that it contains. If yes, the files will be added as
+        additional downloads. (Michael Fotsch)	
+
+Fixes: 
+	* Better log parsing (Rick Benson)
+	* Translate --help output (Gabor Kelemen)
+	* Destination dir command line option works with open gwget.
+	* View menu items as checkboxes instead of radiobuttons
+	* All options in recursive dialog marked.
+Other:
+	* Port to GIO and get rid of gnome-vfs
+
+Translations:
+	* New: he, lv, nb, th, oc
+
+
+==============
 Version 0.99
 ==============
 Features:
