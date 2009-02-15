@@ -103,6 +103,7 @@ handle_content_cb (EphyEmbedSingle *single,
 #if DBUS_VERSION <= 33
 	call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
 					DBUS_TYPE_STRING, &uri,
+					DBUS_TYPE_STRING, "",
 					DBUS_TYPE_UINT32, &timestamp,
 					DBUS_TYPE_INVALID);
 
@@ -115,6 +116,7 @@ handle_content_cb (EphyEmbedSingle *single,
 #elif DBUS_VERSION == 34
 	call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
 					G_TYPE_STRING, uri,
+					G_TYPE_STRING, "",
 					G_TYPE_UINT, &timestamp,
 					G_TYPE_INVALID);
 
@@ -127,6 +129,7 @@ handle_content_cb (EphyEmbedSingle *single,
 #else
 	if (!dbus_g_proxy_call (remote_object, "OpenURI", &error,
 				G_TYPE_STRING, uri,
+				G_TYPE_STRING, "",
 				G_TYPE_UINT, &timestamp,
 				G_TYPE_INVALID,
 				G_TYPE_INVALID)) {

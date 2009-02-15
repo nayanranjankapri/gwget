@@ -1,5 +1,9 @@
 2009-02-12  David Sedeño <david@alderia.com>
 	
+	* src/gwget_data.h: don't make gwget_pref be extern (fix the epiphany
+	extension)
+	* epiphany-extension/ephy-gwget-extension.c: Send the destination dir
+	var in the call to gwget.
 	* epiphany-extension/gwget.xml.in.in: Set author and url.
 	* epiphany-extension/Makefile.am: Include @GNOME_CFLAGS@ 
 	to INCLUDE_CFLAGS so it can find libgnomeui.h. Fix bug #571790.

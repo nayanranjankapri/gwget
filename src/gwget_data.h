@@ -60,7 +60,7 @@ typedef struct
 	gboolean trayonly;
 } Preferences;
 
-extern Preferences gwget_pref;
+Preferences gwget_pref;
 
 typedef enum
 {
