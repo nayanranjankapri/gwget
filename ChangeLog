@@ -1,4 +1,4 @@
-2009-02-12  David Sedeño <david@alderia.com>
+2009-02-15  David Sedeño <david@alderia.com>
 	
 	* src/gwget_data.h: don't make gwget_pref be extern (fix the epiphany
 	extension)
