@@ -1,5 +1,7 @@
 2009-02-12  David Sedeño <david@alderia.com>
 	
+	* epiphany-extension/Makefile.am: Include @GNOME_CFLAGS@ 
+	to INCLUDE_CFLAGS so it can find libgnomeui.h. Fix bug #571790.
 	* configure.ac: Detects Epiphany > 2.18. Patch from 
 	Christoph Wickert. Fix bug #571789.
 	* Changelog: Convert to UTF-8

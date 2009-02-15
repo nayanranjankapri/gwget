@@ -11,7 +11,8 @@ INCLUDES =				\
         -DEPHY_EXTENSIONS_LOCALEDIR=\"$(datadir)/locale\"  \
 	-I$(top_srcdir)/src		\
 	$(DBUS_CFLAGS) \
-	-I$(top_builddir)/include 		
+	-I$(top_builddir)/include \
+	@GNOME_CFLAGS@
 
 libgwgetextension_la_SOURCES =			\
  	ephy-gwget.c				\
