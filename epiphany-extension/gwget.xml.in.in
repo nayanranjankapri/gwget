@@ -2,8 +2,8 @@
 <extension>
 	<_name>GWGet</_name>
 	<_description>Forward downloads to GWGet</_description>
-	<author>FIXME</author>
-	<url>FIXME</url>
+	<author>David Sedeño Fernández</author>
+	<url>http://projects.gnome.org/gwget/</url>
 	<version>1</version>
 	<gettext-domain>%GETTEXT_PACKAGE%</gettext-domain>
 	<locale-directory>%LOCALE_DIR%</locale-directory>
