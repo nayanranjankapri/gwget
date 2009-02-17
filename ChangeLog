@@ -1,3 +1,8 @@
+2009-02-17  David Sedeño <david@alderia.com>
+
+	* configure.ac: Version 1.0.1
+	* NEWS: news for 1.0.1
+
 2009-02-15  David Sedeño <david@alderia.com>
 	
 	* src/gwget_data.h: don't make gwget_pref be extern (fix the epiphany

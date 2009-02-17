@@ -1,4 +1,11 @@
 ==============
+Version 1.0.1
+==============
+Fixes:
+	* Fix Epiphany Extension.
+	* Detects Epiphany vers>2.18 (Christoph Wickert)
+
+==============
 Version 1.00
 ==============
 Features:
