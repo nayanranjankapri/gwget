@@ -3,15 +3,15 @@
 # Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
 # This file is distributed under the same license as the gwget package.
 # Miloslav Trmac <mitr@volny.cz>, 2004, 2005.
-# Lucas Lommer <llommer@svn.gnome.org>, 2008.
+# Lucas Lommer <llommer@svn.gnome.org>, 2008, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 19:14+0200\n"
-"PO-Revision-Date: 2008-06-01 15:28+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gwget&component=general\n"
+"POT-Creation-Date: 2009-02-06 19:25+0000\n"
+"PO-Revision-Date: 2009-02-16 20:54+0100\n"
 "Last-Translator: Lucas Lommer <llommer@svn.gnome.org>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,11 +27,14 @@ msgstr "Správce stahování"
 msgid "Download files from the Internet"
 msgstr "Stáhnout soubory z Internetu"
 
-#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+#: ../data/gwget.desktop.in.in.h:3
+#: ../src/main.c:244
+#: ../src/main.c:277
 msgid "Gwget Download Manager"
 msgstr "Správce stahování Gwget"
 
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
+#: ../data/gwget.glade.h:1
+#: ../data/preferences.glade.h:2
 msgid "    "
 msgstr "    "
 
@@ -83,8 +86,10 @@ msgstr "Pokračovat se stahováním"
 msgid "Continue with the download"
 msgstr "Pokračovat se stahováním"
 
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
+#: ../data/gwget.glade.h:14
+#: ../src/main_window_cb.c:144
+#: ../src/main_window_cb.c:632
+#: ../src/main_window_cb.c:671
 #: ../src/main_window_cb.c:739
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Správce stahování"
@@ -161,7 +166,8 @@ msgstr "Pozastavit stahování"
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:33
+#: ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Rekurzivně"
 
@@ -169,11 +175,13 @@ msgstr "Rekurzivně"
 msgid "Recursive options"
 msgstr "Možnosti rekurze"
 
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:35
+#: ../src/main_window_cb.c:721
 msgid "Remove all"
 msgstr "Odstranit vše"
 
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:36
+#: ../src/main_window_cb.c:655
 msgid "Remove completed"
 msgstr "Odstranit dokončená"
 
@@ -189,7 +197,8 @@ msgstr "Odstranit ze seznamu"
 msgid "Remove from list"
 msgstr "Odstranit ze seznamu"
 
-#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:40
+#: ../src/main_window_cb.c:689
 msgid "Remove inactive"
 msgstr "Odstranit neaktivní"
 
@@ -270,12 +279,8 @@ msgid "Follow relative links"
 msgstr "Následovat relativní odkazy"
 
 #: ../data/gwget.schemas.in.h:7
-msgid ""
-"If true, always ask for a destination folder when starting a new download. "
-"If false, always save in the default directory without asking the user."
-msgstr ""
-"Je-li true, vždy se při spouštění nového stahování ptát na cílový adresář. "
-"Je-li false, vždy ukládat do implicitního adrseáře bez ptaní se uživatele."
+msgid "If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user."
+msgstr "Je-li true, vždy se při spouštění nového stahování ptát na cílový adresář. Je-li false, vždy ukládat do implicitního adrseáře bez ptaní se uživatele."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -517,63 +522,89 @@ msgstr "Neznámé"
 msgid "Failed"
 msgstr "Selhalo"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:204
 msgid "stalled"
 msgstr "vynechává"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:236
 msgid "Waiting"
 msgstr "Čeká"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:238
 msgid "Not Started"
 msgstr "Nespuštěno"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:240
 msgid "Not Running"
 msgstr "Neběží"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:242
 msgid "Not Connected"
 msgstr "Nepřipojeno"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:244
 msgid "Connected"
 msgstr "Připojeno"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:246
 msgid "Retrieving"
 msgstr "Stahuji"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:248
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "Chyba"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:690
 msgid "Unable to add this download"
 msgstr "Nemohu přidat toto stahování"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:691
 msgid "This download is already added"
 msgstr "Toto stahování již bylo přidáno"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:739
+#: ../src/main_window_cb.c:114
+#: ../src/main_window_cb.c:1259
+#: ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Chyba při otevírání souboru"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/gwget_data.c:739
+#: ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259
 msgid "Couldn't open the file"
 msgstr "Nemohu otevřít soubor"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:787
 msgid "Download Complete"
 msgstr "Stahování dokončeno"
+
+#: ../src/gwget_data.c:803
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Soubor %s je seznam MP3 skladeb.\n"
+"Stáhnout soubory, které obsahuje?"
+
+#: ../src/gwget_data.c:805
+msgid "Download files in MP3 playlist?"
+msgstr "Stáhnout soubory ze seznamu MP3 skladeb?"
+
+#: ../src/gwget_data.c:806
+#: ../src/main_window.c:792
+msgid "No"
+msgstr "Ne"
+
+#: ../src/gwget_data.c:806
+#: ../src/main_window.c:792
+msgid "Yes"
+msgstr "Ano"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -587,7 +618,8 @@ msgstr "Cílový adresář pro stahování"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:263 ../src/main_window_cb.c:191
+#: ../src/main.c:263
+#: ../src/main_window_cb.c:191
 msgid "Gwget"
 msgstr "Gwget"
 
@@ -607,7 +639,8 @@ msgstr "Momentální velikost"
 msgid "Total Size"
 msgstr "Celková velikost"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:473
+#: ../src/main_window.c:479
 msgid "Percentage"
 msgstr "Procenta"
 
@@ -636,20 +669,8 @@ msgid "Stop current downloads?"
 msgstr "Zastavit atktuální stahování?"
 
 #: ../src/main_window.c:792
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
-msgstr ""
-"Zbývá alespoň jedno neaktivní atahování. Opravdu přerušit všechny běžící "
-"přenosy?"
-
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "Ne"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Ano"
+msgid "There is at least one active download left. Really cancel all running transfers?"
+msgstr "Zbývá alespoň jedno neaktivní atahování. Opravdu přerušit všechny běžící přenosy?"
 
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
@@ -663,7 +684,8 @@ msgstr "Správce stahování pro GNOME."
 msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:568
+#: ../src/new_window.c:128
 msgid "Select Folder"
 msgstr "Zvolte adresář"
 
@@ -700,7 +722,8 @@ msgstr "Opravdu odstranit ze seznamu neaktivní stahování?"
 msgid "Really remove all downloads from the list?"
 msgstr "Opravdu odstranit ze seznamu všechna stahování?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:857
+#: ../src/main_window_cb.c:875
 #, c-format
 msgid "error %d when accessing %s: %s\n"
 msgstr "chyba %d při přistupování k %s: %s\n"
@@ -708,20 +731,16 @@ msgstr "chyba %d při přistupování k %s: %s\n"
 #: ../src/main_window_cb.c:887
 #, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr ""
-"<span size=\"large\" weight=\"bold\">KONTROLA SOUČTU MD5 V POŘÁDKU!</span>"
+msgstr "<span size=\"large\" weight=\"bold\">KONTROLA SOUČTU MD5 V POŘÁDKU!</span>"
 
 #: ../src/main_window_cb.c:890
 #, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr ""
-"<span size=\"large\" weight=\"bold\">KONTROLA SOUČTU MD5 SELHALA!</span>"
+msgstr "<span size=\"large\" weight=\"bold\">KONTROLA SOUČTU MD5 SELHALA!</span>"
 
 #: ../src/main_window_cb.c:1211
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr ""
-"Nové omezení rychlosti stahování bude mít vliv jen na nová nebo znovu "
-"spuštěná stahování"
+msgstr "Nové omezení rychlosti stahování bude mít vliv jen na nová nebo znovu spuštěná stahování"
 
 #: ../src/main_window_cb.c:1227
 #, c-format
@@ -748,48 +767,67 @@ msgstr "Nic"
 msgid "Downloads"
 msgstr "Stahování"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Chyba socketu"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Spojení odmítnuto\n"
+#: ../src/wget-log.c:190
+#| msgid "Connection refused\n"
+msgid "Connection refused"
+msgstr "Spojení odmítnuto"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "K počítači nevede cesta"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Spojení odmítnuto při stahování URL:\n"
+#: ../src/wget-log.c:196
+#| msgid "Connection refused when downloading URL:\n"
+msgid "Connection refused when downloading URL:"
+msgstr "Spojení odmítnuto při stahování URL:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Počítač nenalezen\n"
+#: ../src/wget-log.c:199
+#| msgid "Host not found\n"
+msgid "Host not found"
+msgstr "Hostitel nenalezen"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Nepodporovaný protokol - pro https: potřebujete wget >= 1.7\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Název nebo služba není známa"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Nepodporovaný protokol"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Odmítám přepsat existující soubor"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Nelze zjistit adresu hostitele"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+#| msgid "Unknown error"
+msgid "Unknown error "
 msgstr "Neznámá chyba"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#: ../src/wget-log.c:238
+#: ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Soubor nenalezen"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr ""
-"Nemohu pokračovat ve stahování, existující místní soubor koliduje se "
-"vzdáleným souborem"
+msgstr "Nemohu pokračovat ve stahování, existující místní soubor koliduje se vzdáleným souborem"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "Nemohu zapisovat do cílového adresáře"
+
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#~ msgstr "Nepodporovaný protokol - pro https: potřebujete wget >= 1.7\n"
+
