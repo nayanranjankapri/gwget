@@ -1,5 +1,6 @@
 2009-02-18  David Sedeño <david@alderia.com>
 
+	* configure.ac: Fix typo for epiphany version 2.26 (Götz Waschk).
 	* data/gwget.desktop.in.in: Fix icon and category. Fix bug #572280.
 	Thanks to  Götz Waschk.
 
