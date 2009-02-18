@@ -1,3 +1,8 @@
+2009-02-18  David Sedeño <david@alderia.com>
+
+	* data/gwget.desktop.in.in: Fix icon and category. Fix bug #572280.
+	Thanks to  Götz Waschk.
+
 2009-02-17  David Sedeño <david@alderia.com>
 
 	* configure.ac: Version 1.0.1
