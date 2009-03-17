@@ -1,23 +1,23 @@
 # translation of eu.po to Basque
-# Copyright (C) 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget2 package.
 #
 # Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004, 2005, 2006, 2008.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004, 2005, 2006, 2008, 2009.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-09 14:43+0200\n"
-"PO-Revision-Date: 2008-09-09 14:44+0200\n"
+"POT-Creation-Date: 2009-03-17 19:41+0100\n"
+"PO-Revision-Date: 2009-03-17 19:42+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "\n"
 
 #: ../data/gwget.desktop.in.in.h:1
@@ -28,7 +28,7 @@ msgstr "Deskarga-kudeatzailea"
 msgid "Download files from the Internet"
 msgstr "Deskargatu fitxategiak Internetetik"
 
-#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:260 ../src/main.c:293
 msgid "Gwget Download Manager"
 msgstr "Gwget deskarga-kudeatzailea"
 
@@ -84,9 +84,9 @@ msgstr "Jarraitu deskargarekin"
 msgid "Continue with the download"
 msgstr "Jarraitu deskargarekin"
 
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
-#: ../src/main_window_cb.c:739
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:148
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
 msgid "Gwget - Download Manager"
 msgstr "Gwget - Deskarga-kudeatzailea"
 
@@ -170,11 +170,11 @@ msgstr "Errekurtsiboa"
 msgid "Recursive options"
 msgstr "Errekurtsibitate aukerak"
 
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:727
 msgid "Remove all"
 msgstr "Kendu guztiak"
 
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:661
 msgid "Remove completed"
 msgstr "Kendu burututakoak"
 
@@ -190,7 +190,7 @@ msgstr "Kendu zerrendatik"
 msgid "Remove from list"
 msgstr "Kendu zerrendatik"
 
-#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:695
 msgid "Remove inactive"
 msgstr "Kendu aktibitaterik gabekoak"
 
@@ -518,63 +518,84 @@ msgstr "Ezezaguna"
 msgid "Failed"
 msgstr "Huts egin du"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:207
 msgid "stalled"
 msgstr "trabatuta"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:239
 msgid "Waiting"
 msgstr "Itxoiten"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:241
 msgid "Not Started"
 msgstr "Hasi gabe"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:243
 msgid "Not Running"
 msgstr "Geldirik"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:245
 msgid "Not Connected"
 msgstr "Konektatu gabe"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:247
 msgid "Connected"
 msgstr "Konektatua"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:249
 msgid "Retrieving"
 msgstr "Eskuratzen"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:251
 msgid "Completed"
 msgstr "Burutua"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:255
 msgid "Error"
 msgstr "Errorea"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:694
 msgid "Unable to add this download"
 msgstr "Ezin da deskarga hau gehitu"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:695
 msgid "This download is already added"
 msgstr "Deskarga hau dagoeneko jarrita dago"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:118
+#: ../src/main_window_cb.c:1265 ../src/main_window_cb.c:1284
 msgid "Error opening file"
 msgstr "Errorea fitxategia irekitzean"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:118
+#: ../src/main_window_cb.c:1265
 msgid "Couldn't open the file"
 msgstr "Ezin izan da fitxategia ireki"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:794
 msgid "Download Complete"
 msgstr "Deskarga burutua"
+
+#: ../src/gwget_data.c:810
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"%s fitxategia MP3 erreproduzkio-zerrenda bat da.\n"
+"Horrek dituen fitxategiak deskargatu?"
+
+#: ../src/gwget_data.c:812
+msgid "Download files in MP3 playlist?"
+msgstr "Deskargatu MP3 erreprodukzio-zerrendako fitxategiak?"
+
+#: ../src/gwget_data.c:813 ../src/main_window.c:802
+msgid "No"
+msgstr "Ez"
+
+#: ../src/gwget_data.c:813 ../src/main_window.c:802
+msgid "Yes"
+msgstr "Bai"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -588,55 +609,55 @@ msgstr "Deskargaren helburuko direktorioa"
 msgid "[URL]"
 msgstr "[URLa]"
 
-#: ../src/main.c:263 ../src/main_window_cb.c:191
+#: ../src/main.c:279 ../src/main_window_cb.c:195
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:432
 msgid "File Name"
 msgstr "Fitxategiaren izena"
 
-#: ../src/main_window.c:438
+#: ../src/main_window.c:444
 msgid "State"
 msgstr "Egoera"
 
-#: ../src/main_window.c:450
+#: ../src/main_window.c:456
 msgid "Current Size"
 msgstr "Uneko tamaina"
 
-#: ../src/main_window.c:462
+#: ../src/main_window.c:468
 msgid "Total Size"
 msgstr "Tamaina osoa"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:479 ../src/main_window.c:485
 msgid "Percentage"
 msgstr "Ehunekoa"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:492
 msgid "Elapsed Time"
 msgstr "Igarotako denbora"
 
-#: ../src/main_window.c:497
+#: ../src/main_window.c:503
 msgid "Remaining Time"
 msgstr "Geratzen den denbora"
 
-#: ../src/main_window.c:508
+#: ../src/main_window.c:514
 msgid "Speed"
 msgstr "Abiadura"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:565
 msgid "Error starting the download"
 msgstr "Errorea deskarga abiarazten"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:565
 msgid "There was an unexpected error starting the download"
 msgstr "Espero ez zen errore bat gertatu da deskarga abiaraztean"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:801
 msgid "Stop current downloads?"
 msgstr "Gelditu uneko deskargak?"
 
-#: ../src/main_window.c:792
+#: ../src/main_window.c:802
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -644,33 +665,25 @@ msgstr ""
 "Gutxienez fitxategi bat deskargatzen ari da. Deskargatzen ari diren "
 "transferentzia guztiak bertan behera uztea nahi duzu?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "Ez"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Bai"
-
-#: ../src/main_window_cb.c:105
+#: ../src/main_window_cb.c:106
 msgid "Error in download"
 msgstr "Errorea deskargatzean"
 
-#: ../src/main_window_cb.c:194
+#: ../src/main_window_cb.c:198
 msgid "Download Manager for GNOME."
 msgstr "Deskarga-kudeatzaile bat GNOMErako."
 
-#: ../src/main_window_cb.c:196
+#: ../src/main_window_cb.c:200
 msgid "translator-credits"
 msgstr ""
 "Mikel Olasagasti <hey_neken@mundurat.net>\n"
 "Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:574 ../src/new_window.c:128
 msgid "Select Folder"
 msgstr "Hautatu karpeta"
 
-#: ../src/main_window_cb.c:624
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -679,65 +692,65 @@ msgstr ""
 "Uneko deskarga bertan behera utzi?\n"
 "(URLa: %s)"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
 msgstr "Ezabatu deskarga?"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete"
 msgstr "Ezabatu"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "Burututakoak zerrendatik kentzea nahi duzu?"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Remove"
 msgstr "Kendu"
 
-#: ../src/main_window_cb.c:689
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "Aktibitaterik gabeko deskarga guztiak zerrendatik kentzea nahi duzu?"
 
-#: ../src/main_window_cb.c:721
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "Deskarga guztiak zerrendatik kentzea nahi duzu?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:863 ../src/main_window_cb.c:881
 #, c-format
 msgid "error %d when accessing %s: %s\n"
 msgstr "%d errore %s(e)n sarbidetzean: %s\n"
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:893
 #, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM egiaztaketa gainditua</span>"
 
-#: ../src/main_window_cb.c:890
+#: ../src/main_window_cb.c:896
 #, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr "<span size=\"large\" weight=\"bold\">MD5SUM egiaztaketak huts egin du!</span>"
 
-#: ../src/main_window_cb.c:1211
+#: ../src/main_window_cb.c:1217
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "Deskargaren abiadura berria deskarga berriei edo berrasieratutako deskargei "
 "aplikatuko zaie."
 
-#: ../src/main_window_cb.c:1227
+#: ../src/main_window_cb.c:1233
 #, c-format
 msgid "Remove %s ?"
 msgstr "Kendu %s?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1234
 msgid "Really remove this download from the list?"
 msgstr "Deskarga hau zerrendatik kentzea nahi duzu?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1234
 msgid "Remove download"
 msgstr "Kendu deskarga"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1284
 msgid "Couldn't open the folder"
 msgstr "Ezin izan da karpeta ireki"
 
@@ -749,39 +762,39 @@ msgstr "Ezer ez"
 msgid "Downloads"
 msgstr "Deskargak"
 
-#: ../src/wget-log.c:161
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Socket errorea"
 
-#: ../src/wget-log.c:164
+#: ../src/wget-log.c:190
 msgid "Connection refused"
 msgstr "Konexioa ukatua"
 
-#: ../src/wget-log.c:167
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Ez dago ate-biderik ostalariarentzat"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:196
 msgid "Connection refused when downloading URL:"
 msgstr "Konexioa ukatua URLa deskargatzean:"
 
-#: ../src/wget-log.c:173
+#: ../src/wget-log.c:199
 msgid "Host not found"
 msgstr "Ez da ostalaria aurkitu"
 
-#: ../src/wget-log.c:176
+#: ../src/wget-log.c:202
 msgid "Name or service not known"
 msgstr "Izena edo zerbitzua ez da ezaguna"
 
-#: ../src/wget-log.c:179
+#: ../src/wget-log.c:205
 msgid "Unsupported protocol"
 msgstr "Onartu gabeko protokoloa"
 
-#: ../src/wget-log.c:182
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Fitxategia mozteari uko egiten"
 
-#: ../src/wget-log.c:185
+#: ../src/wget-log.c:211
 msgid "Unable to resolve host address"
 msgstr "Ezin da ostalariaren helbidea ebatzi"
 
@@ -789,21 +802,21 @@ msgstr "Ezin da ostalariaren helbidea ebatzi"
 #. * All other possible output may as well be reported, since we treat it
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
-#: ../src/wget-log.c:199
+#: ../src/wget-log.c:225
 msgid "Unknown error "
 msgstr "Errore ezezaguna "
 
-#: ../src/wget-log.c:212 ../src/wget-log.c:219
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Ez da fitxategia aurkitu"
 
-#: ../src/wget-log.c:226
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Ezin da deskargatzen jarraitu, fitxategi lokal batek urrunekoarekin gatazkak "
 "ditu"
 
-#: ../src/wget-log.c:285
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "Ezin da helburuko direktorioan idatzi"
 
