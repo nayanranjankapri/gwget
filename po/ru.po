@@ -7,13 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-11 21:11+0400\n"
-"PO-Revision-Date: 2007-09-11 14:46+0300\n"
-"Last-Translator: Yuriy Myasoedov <omerta13@yandex.ru>\n"
+"POT-Creation-Date: 2009-03-26 11:32+0300\n"
+"PO-Revision-Date: 2009-03-09 13:22+0300\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Диспетчер закачек"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Закачать файлы из Интернета"
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:260 ../src/main.c:293
+msgid "Gwget Download Manager"
+msgstr "Менеджер закачек Gwget"
 
 #: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
 msgid "    "
@@ -67,9 +79,9 @@ msgstr "Продолжить закачку"
 msgid "Continue with the download"
 msgstr "Продолжить с закачки"
 
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
-#: ../src/main_window_cb.c:739
+#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:148
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
 msgid "Gwget - Download Manager"
 msgstr "Менеджер закачек Gwget"
 
@@ -99,163 +111,135 @@ msgstr "Мультимедиа файлы (видео и изображения)
 
 #: ../data/gwget.glade.h:21
 msgid "New Download"
-msgstr "Новая закачка"
+msgstr "Создать закачку"
 
 #: ../data/gwget.glade.h:22
+msgid "New download"
+msgstr "Создать закачку"
+
+#: ../data/gwget.glade.h:23
 msgid "Open"
 msgstr "Открыть файл"
 
-#: ../data/gwget.glade.h:23
+#: ../data/gwget.glade.h:24
 msgid "Open directory"
 msgstr "Открыть каталог"
 
-#: ../data/gwget.glade.h:24
+#: ../data/gwget.glade.h:25
 msgid "Open file"
 msgstr "Открыть файл"
 
-#: ../data/gwget.glade.h:25
+#: ../data/gwget.glade.h:26
 msgid "Open target directory"
 msgstr "Открыть целевой каталог"
 
-#: ../data/gwget.glade.h:26
+#: ../data/gwget.glade.h:27
 msgid "Pause"
 msgstr "Приостановить"
 
-#: ../data/gwget.glade.h:27
+#: ../data/gwget.glade.h:28
 msgid "Pause all"
 msgstr "Приостановить все"
 
-#: ../data/gwget.glade.h:28
+#: ../data/gwget.glade.h:29
+msgid "Pause all downloads"
+msgstr "Приостановить все закачки"
+
+#: ../data/gwget.glade.h:30
 msgid "Pause download"
 msgstr "Приостановить закачку"
 
-#: ../data/gwget.glade.h:29
+#: ../data/gwget.glade.h:31
 msgid "Pause the download"
 msgstr "Приостановить закачку"
 
-#: ../data/gwget.glade.h:30
+#: ../data/gwget.glade.h:32
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../data/gwget.glade.h:31 ../data/preferences.glade.h:21
+#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
 msgid "Recursive"
 msgstr "Рекурсивно"
 
-#: ../data/gwget.glade.h:32
+#: ../data/gwget.glade.h:34
 msgid "Recursive options"
 msgstr "Параметры рекурсивности"
 
-#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:721
+#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:727
 msgid "Remove all"
 msgstr "Удалить все"
 
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:655
+#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:661
 msgid "Remove completed"
 msgstr "Удалить завершённые"
 
-#: ../data/gwget.glade.h:35
+#: ../data/gwget.glade.h:37
+msgid "Remove completed downloads"
+msgstr "Удалить завершённые закачки"
+
+#: ../data/gwget.glade.h:38
 msgid "Remove from List"
 msgstr "Удалить из списка"
 
-#: ../data/gwget.glade.h:36
+#: ../data/gwget.glade.h:39
 msgid "Remove from list"
 msgstr "Удалить из списка"
 
-#: ../data/gwget.glade.h:37 ../src/main_window_cb.c:689
+#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:695
 msgid "Remove inactive"
 msgstr "Удалить неактивные"
 
-#: ../data/gwget.glade.h:38
+#: ../data/gwget.glade.h:41
 msgid "Resume all"
 msgstr "Возобновить все"
 
-#: ../data/gwget.glade.h:39
+#: ../data/gwget.glade.h:42
+msgid "Resume all downloads"
+msgstr "Возобновить все закачки"
+
+#: ../data/gwget.glade.h:43
 msgid "Save in:"
 msgstr "Сохранить в:"
 
-#: ../data/gwget.glade.h:40
+#: ../data/gwget.glade.h:44
 msgid "Stat_usbar"
 msgstr "Панель _состояния"
 
-#: ../data/gwget.glade.h:41
+#: ../data/gwget.glade.h:45
 msgid "The index file only"
 msgstr "Только индекс-файл"
 
-#: ../data/gwget.glade.h:42
+#: ../data/gwget.glade.h:46
 msgid "This site (mirror)"
 msgstr "Этот сайт (зеркало)"
 
-#: ../data/gwget.glade.h:43
+#: ../data/gwget.glade.h:47
 msgid "URL:"
 msgstr "URL:"
 
-#: ../data/gwget.glade.h:44
+#: ../data/gwget.glade.h:48
 msgid "Verify..."
 msgstr "Проверка..."
 
-#: ../data/gwget.glade.h:45
+#: ../data/gwget.glade.h:49
 msgid "_Archive"
 msgstr "_Архив"
 
-#: ../data/gwget.glade.h:46
+#: ../data/gwget.glade.h:50
 msgid "_Download"
 msgstr "_Закачка"
 
-#: ../data/gwget.glade.h:47
+#: ../data/gwget.glade.h:51
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../data/gwget.glade.h:48
+#: ../data/gwget.glade.h:52
 msgid "_Toolbar"
 msgstr "Панель _инструментов"
 
-#: ../data/gwget.glade.h:49
+#: ../data/gwget.glade.h:53
 msgid "_View"
 msgstr "_Вид"
-
-#: ../data/gwget.glade.h:50
-msgid "gtk-about"
-msgstr "gtk-about"
-
-#: ../data/gwget.glade.h:51
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../data/gwget.glade.h:52
-msgid "gtk-close"
-msgstr "gtk-close"
-
-#: ../data/gwget.glade.h:53
-msgid "gtk-new"
-msgstr "gtk-new"
-
-#: ../data/gwget.glade.h:54
-msgid "gtk-ok"
-msgstr "gtk-ok"
-
-#: ../data/gwget.glade.h:55
-msgid "gtk-preferences"
-msgstr "gtk-preferences"
-
-#: ../data/gwget.glade.h:56
-msgid "gtk-properties"
-msgstr "gtk-properties"
-
-#: ../data/gwget.glade.h:57
-msgid "gtk-quit"
-msgstr "gtk-quit"
-
-#: ../data/gwget.glade.h:58
-msgid "label"
-msgstr "метка"
-
-#: ../data/gwget.glade.h:59
-msgid "local_file_text"
-msgstr "local_file_text"
-
-#: ../data/gwget.glade.h:60
-msgid "url_text"
-msgstr "url_text"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -512,7 +496,7 @@ msgstr "файлы"
 
 #: ../data/preferences.glade.h:40
 msgid "kB/sec"
-msgstr "кб/сек"
+msgstr "КБ/сек"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
@@ -530,63 +514,84 @@ msgstr "Неизвестная ошибка"
 msgid "Failed"
 msgstr "Неудачно"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:207
 msgid "stalled"
 msgstr "срыв потока"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:239
 msgid "Waiting"
 msgstr "Ожидание"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:241
 msgid "Not Started"
 msgstr "Не стартовать"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:243
 msgid "Not Running"
 msgstr "Не запускать"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:245
 msgid "Not Connected"
 msgstr "Нет соединения"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:247
 msgid "Connected"
 msgstr "Соединение"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:249
 msgid "Retrieving"
 msgstr "Закачка"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:251
 msgid "Completed"
 msgstr "Завершена"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:255
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:694
 msgid "Unable to add this download"
-msgstr "Невозможно добавить эту закачку"
+msgstr "Не удалось добавить эту закачку"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:695
 msgid "This download is already added"
 msgstr "Эта закачка уже добавлена"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:118
+#: ../src/main_window_cb.c:1265 ../src/main_window_cb.c:1284
 msgid "Error opening file"
 msgstr "Ошибка открытия файла"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:118
+#: ../src/main_window_cb.c:1265
 msgid "Couldn't open the file"
-msgstr "Невозможно открыть файл"
+msgstr "Не удалось открыть файл"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:794
 msgid "Download Complete"
 msgstr "Загрузка завершена"
+
+#: ../src/gwget_data.c:810
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Файл %s является списком воспроизведения MP3.\n"
+"Закачать файлы, которые он содержит?"
+
+#: ../src/gwget_data.c:812
+msgid "Download files in MP3 playlist?"
+msgstr "Закачать файлы в список воспроизведения MP3?"
+
+#: ../src/gwget_data.c:813 ../src/main_window.c:802
+msgid "No"
+msgstr "Нет"
+
+#: ../src/gwget_data.c:813 ../src/main_window.c:802
+msgid "Yes"
+msgstr "Да"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -600,59 +605,55 @@ msgstr "Каталог назначения для закачки"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:244 ../src/main.c:276
-msgid "Gwget Download Manager"
-msgstr "Менеджер закачек Gwget"
-
-#: ../src/main.c:262 ../src/main_window_cb.c:191
+#: ../src/main.c:279 ../src/main_window_cb.c:195
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:432
 msgid "File Name"
 msgstr "Файла"
 
-#: ../src/main_window.c:438
+#: ../src/main_window.c:444
 msgid "State"
 msgstr "Состояние"
 
-#: ../src/main_window.c:450
+#: ../src/main_window.c:456
 msgid "Current Size"
 msgstr "Текущий размер"
 
-#: ../src/main_window.c:462
+#: ../src/main_window.c:468
 msgid "Total Size"
 msgstr "Общий размер"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:479 ../src/main_window.c:485
 msgid "Percentage"
 msgstr "Процент"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:492
 msgid "Elapsed Time"
 msgstr "Прошло времени"
 
-#: ../src/main_window.c:497
+#: ../src/main_window.c:503
 msgid "Remaining Time"
 msgstr "Осталось времени"
 
-#: ../src/main_window.c:508
+#: ../src/main_window.c:514
 msgid "Speed"
 msgstr "Скорость"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:565
 msgid "Error starting the download"
 msgstr "Возникла ошибка во время начала скачивания"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:565
 msgid "There was an unexpected error starting the download"
 msgstr "Возникла непредвиденная ошибка во время начала скачивания"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:801
 msgid "Stop current downloads?"
 msgstr "Остановить текущие закачки?"
 
-#: ../src/main_window.c:792
+#: ../src/main_window.c:802
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -660,33 +661,25 @@ msgstr ""
 "Осталась, по крайней мере, одна активная закачка. Отменить все запущенные "
 "передачи?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "Нет"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Да"
-
-#: ../src/main_window_cb.c:105
+#: ../src/main_window_cb.c:106
 msgid "Error in download"
 msgstr "Ошибка закачки"
 
-#: ../src/main_window_cb.c:194
+#: ../src/main_window_cb.c:198
 msgid "Download Manager for GNOME."
 msgstr "Менеджер закачек GNOME."
 
-#: ../src/main_window_cb.c:196
+#: ../src/main_window_cb.c:200
 msgid "translator-credits"
 msgstr ""
 "Павел Богмат\n"
 "Юрий Мясоедов <omerta13@yandex.ru>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:574 ../src/new_window.c:128
 msgid "Select Folder"
 msgstr "Выбрать папку"
 
-#: ../src/main_window_cb.c:624
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -695,67 +688,69 @@ msgstr ""
 "Действительно удалить текущую закачку?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
 msgstr "Удалить закачку?"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "Действительно удалить завершённые закачки из списка?"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Remove"
 msgstr "Удалить"
 
-#: ../src/main_window_cb.c:689
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "Действительно удалить все закачки из списка?"
 
-#: ../src/main_window_cb.c:721
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "Действительно удалить все закачки из списка?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:863 ../src/main_window_cb.c:881
 #, c-format
 msgid "error %d when accessing %s: %s\n"
 msgstr "ошибка %d при получении доступа %s: %s\n"
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:893
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
 msgstr ""
 "<span size=\"large\" weight=\"bold\">Проверка на значение контрольной суммы "
 "ПРОЙДЕНА!</span>"
 
-#: ../src/main_window_cb.c:890
+#: ../src/main_window_cb.c:896
+#, c-format
 msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
 msgstr ""
 "<span weight=\"bold\">Проверка на значение контрольной суммы НЕ ПРОЙДЕНА!</"
 "span>"
 
-#: ../src/main_window_cb.c:1211
+#: ../src/main_window_cb.c:1217
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "Новое ограничение по скорости будет применено только к новым или "
 "перезапущенным закачкам"
 
-#: ../src/main_window_cb.c:1227
+#: ../src/main_window_cb.c:1233
 #, c-format
 msgid "Remove %s ?"
 msgstr "Удалить %s ?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1234
 msgid "Really remove this download from the list?"
 msgstr "Действительно удалить эту закачку из списка?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1234
 msgid "Remove download"
 msgstr "Удалить закачку"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1284
 msgid "Couldn't open the folder"
 msgstr "Не удалось открыть папку"
 
@@ -767,50 +762,60 @@ msgstr "Пусто"
 msgid "Downloads"
 msgstr "Закачки"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Ошибка сокета"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Соединение отклонено\n"
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "Соединение отклонено"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Нет маршрута к узлу"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Соединение отклонено при закачивании URL:\n"
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "Соединение отклонено при загрузке URL:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Узел не найден\n"
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Узел не найден"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr ""
-"Неподдерживаемый протокол - для работы с https: вам нужен wget версии >= "
-"1.7\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Название или служба не известны"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Неподдерживаемый протокол"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Отклонено для сокращения существующего файла"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Не удалось разрешить адрес узла"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
 msgstr "Неизвестная ошибка"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Файл не найден"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
-"Невозможно продолжить загрузку: существующий локальный файл конфликтует с "
+"Не удалось продолжить загрузку: существующий локальный файл конфликтует с "
 "удалённым файлом"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
-msgstr "Невозможно записать в указанный каталог"
+msgstr "Не удалось записать в указанный каталог"
