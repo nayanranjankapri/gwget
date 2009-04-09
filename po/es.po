@@ -7,13 +7,14 @@
 # Jorge Gonzalez <jorge.gonzalez.gonzalez@hispalinux.es>, 2005.
 # Miguel Angel Nieto <correo@miguelangelnieto.net>, 2005.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
-# Juan Percy Rojas Cruz <juanperojas@gmail.com>, 2008.
+# Juan Percy Rojas Cruz <juanperojas@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-10 18:48+0000\n"
-"PO-Revision-Date: 2008-10-03 09:38-0500\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&component=general\n"
+"POT-Creation-Date: 2009-02-06 19:25+0000\n"
+"PO-Revision-Date: 2009-04-09 17:13+0200\n"
 "Last-Translator: Juan Percy Rojas Cruz <juanperojas@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -521,63 +522,84 @@ msgstr "Desconocido"
 msgid "Failed"
 msgstr "Fallo"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:204
 msgid "stalled"
 msgstr "parado"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:236
 msgid "Waiting"
 msgstr "Esperando"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:238
 msgid "Not Started"
 msgstr "No iniciado"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:240
 msgid "Not Running"
 msgstr "No ejecutado"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:242
 msgid "Not Connected"
 msgstr "No conectado"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:244
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:246
 msgid "Retrieving"
 msgstr "Descargando"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:248
 msgid "Completed"
 msgstr "Completado"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:252
 msgid "Error"
 msgstr "Error"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:690
 msgid "Unable to add this download"
 msgstr "Imposible añadir esta descarga"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:691
 msgid "This download is already added"
 msgstr "Esta descarga ya está añadida"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/gwget_data.c:739 ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Error al abrir el archivo"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
+#: ../src/gwget_data.c:739 ../src/main_window_cb.c:114
 #: ../src/main_window_cb.c:1259
 msgid "Couldn't open the file"
 msgstr "No se puede abrir el archivo"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:787
 msgid "Download Complete"
 msgstr "Descarga completada"
+
+#: ../src/gwget_data.c:803
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"El archivo %s es una lista de reproducción en MP3.\n"
+"¿Descargar los archivos que contiene?"
+
+#: ../src/gwget_data.c:805
+msgid "Download files in MP3 playlist?"
+msgstr "¿Descargar los archivos en la lista de reproducción MP3?"
+
+#: ../src/gwget_data.c:806 ../src/main_window.c:792
+msgid "No"
+msgstr "No"
+
+#: ../src/gwget_data.c:806 ../src/main_window.c:792
+msgid "Yes"
+msgstr "Sí"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -647,14 +669,6 @@ msgstr ""
 "Hay al menos una descarga activa. ¿Seguro que quiere cancelar todas las "
 "transferencias activas?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "No"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Sí"
-
 #: ../src/main_window_cb.c:105
 msgid "Error in download"
 msgstr "Error en la descarga"
@@ -672,7 +686,7 @@ msgstr ""
 "Francisco Javier F. Serrador <serrador@gnome.org>\n"
 "David Sedeño Fernández <david@alderia.com>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:568 ../src/new_window.c:128
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
@@ -755,39 +769,39 @@ msgstr "Nada"
 msgid "Downloads"
 msgstr "Descargas"
 
-#: ../src/wget-log.c:161
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Error de socket"
 
-#: ../src/wget-log.c:164
+#: ../src/wget-log.c:190
 msgid "Connection refused"
 msgstr "Conexión rechazada"
 
-#: ../src/wget-log.c:167
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "No hay ruta hacia el servidor"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:196
 msgid "Connection refused when downloading URL:"
 msgstr "La conexión se rechazó al descargar el URL:"
 
-#: ../src/wget-log.c:173
+#: ../src/wget-log.c:199
 msgid "Host not found"
 msgstr "Equipo no encontrado"
 
-#: ../src/wget-log.c:176
+#: ../src/wget-log.c:202
 msgid "Name or service not known"
 msgstr "Nombre de servicio desconocido"
 
-#: ../src/wget-log.c:179
+#: ../src/wget-log.c:205
 msgid "Unsupported protocol"
 msgstr "Protocolo no soportado"
 
-#: ../src/wget-log.c:182
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Rechazando a truncar el archivo existente"
 
-#: ../src/wget-log.c:185
+#: ../src/wget-log.c:211
 msgid "Unable to resolve host address"
 msgstr "No se puede determinar la dirección del equipo"
 
@@ -795,21 +809,20 @@ msgstr "No se puede determinar la dirección del equipo"
 #. * All other possible output may as well be reported, since we treat it
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
-#: ../src/wget-log.c:199
+#: ../src/wget-log.c:225
 msgid "Unknown error "
 msgstr "Error desconocido"
 
-#: ../src/wget-log.c:212 ../src/wget-log.c:219
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Archivo no encontrado"
 
-#: ../src/wget-log.c:226
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "No se puede continuar la descarga, el archivo local entra en conflicto con "
 "el archivo remoto"
 
-#: ../src/wget-log.c:285
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "No se puede escribir en la carpeta destino"
-
