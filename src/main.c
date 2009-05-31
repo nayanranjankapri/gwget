@@ -173,7 +173,7 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
         		dest_dir = destination_dir;
         	} 
 #if DBUS_VERSION <= 33
-		call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
+		call = dbus_g_proxy_begin_call (remote_object, "OpenURIDest",
 						DBUS_TYPE_STRING, &uri,
 						DBUS_TYPE_STRING, &dest_dir,
 						DBUS_TYPE_UINT32, &timestamp,
@@ -186,7 +186,7 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 			continue;
 		}
 #elif DBUS_VERSION == 34
-		call = dbus_g_proxy_begin_call (remote_object, "OpenURI",
+		call = dbus_g_proxy_begin_call (remote_object, "OpenURIDest",
 						G_TYPE_STRING, uri,
 						G_TYPE_STRING, dest_dir,
 						G_TYPE_UINT, timestamp,
@@ -199,7 +199,7 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 			continue;
 		}
 #else
-		if (!dbus_g_proxy_call (remote_object, "OpenURI", &error,
+		if (!dbus_g_proxy_call (remote_object, "OpenURIDest", &error,
 					G_TYPE_STRING, uri,
 					G_TYPE_STRING, dest_dir,
 					G_TYPE_UINT, timestamp,

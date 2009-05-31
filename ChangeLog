@@ -1,3 +1,9 @@
+2009-05-31  David Sedeño <david@alderia.com>
+
+	* src/main.c, src/gwget-application-service.xml: Add OpenURIDest call to 
+	Dbus so that OpenURI doesn't break external programs that use Dbus API. 
+	Fix: #583929
+  
 2009-02-18  David Sedeño <david@alderia.com>
 
 	* configure.ac: Fix typo for epiphany version 2.26 (Götz Waschk).
