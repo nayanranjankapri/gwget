@@ -141,9 +141,24 @@ gwget_application_open_window (GwgetApplication  *application,
        return TRUE;
 }
 
-
 gboolean
 gwget_application_open_uri (GwgetApplication  *application,
+			 const char     *url,
+			 guint32         timestamp,
+			 GError        **error)
+{
+	GwgetData *gwgetdata;
+
+	gwgetdata = gwget_data_new ((gchar *)url);
+
+	gwget_data_add_download(gwgetdata);
+	gwget_data_start_download(gwgetdata);
+
+	return TRUE;
+}
+
+gboolean
+gwget_application_open_uri_with_dest (GwgetApplication  *application,
 			 const char     *url,
 			 const char	*destination_dir,
 			 guint32         timestamp,

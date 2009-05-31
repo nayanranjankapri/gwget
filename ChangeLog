@@ -1,3 +1,8 @@
+2009-06-01  David Sedeño <david@alderia.com>
+
+	* src/gwget-application-service.xml, src/gwget-application.{c,h}: 
+	Map the openuriwithdest api call to another funcion. 
+
 2009-05-31  David Sedeño <david@alderia.com>
 
 	* src/main.c, src/gwget-application-service.xml: Add OpenURIDest call to 
