@@ -1,3 +1,8 @@
+2009-06-15  David Sedeño <david@alderia.com>
+
+	* src/utils.{c,h}: Clean up run_dialog_information and run_dialog_error. Thanks to 
+	Jaroslav Imrich <jaroslav.imrich@gmail.com> for the patch.
+
 2009-06-01  David Sedeño <david@alderia.com>
 
 	* src/gwget-application-service.xml, src/gwget-application.{c,h}: 

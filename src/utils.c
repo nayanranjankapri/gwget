@@ -48,21 +48,22 @@ run_dialog (gchar *title, gchar *message, gchar *cancel_message, gchar *action_m
 	return response;
 }
 
-gint 
+void 
 run_dialog_information(gchar *title, gchar *msg)
 {
 	GtkWidget *dialog;
-	gchar *mark;
-	gint response;
-	
-	dialog = glade_xml_get_widget(xml,"dialog3");
-	mark=g_strdup_printf("<span size=\"large\" weight=\"bold\">%s</span>",title);
-	gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml,"title_label_inf")),mark);
-	gtk_label_set_text(GTK_LABEL(glade_xml_get_widget(xml,"msg_label_inf")),msg);
-	
-	response=gtk_dialog_run(GTK_DIALOG(dialog));
-	gtk_widget_hide(GTK_WIDGET(dialog));
-	return response;
+
+  dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (glade_xml_get_widget(xml, "main_window")),
+          GTK_DIALOG_MODAL,
+          GTK_MESSAGE_INFO,
+          GTK_BUTTONS_CLOSE,
+          "%s", msg);
+          
+  gtk_window_set_title (GTK_WINDOW (dialog), title);
+  
+  g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
+  
+  gtk_widget_show (dialog);
 }
 
 void
@@ -74,9 +75,9 @@ run_dialog_error (gchar *title, gchar *message)
             GTK_DIALOG_MODAL,
             GTK_MESSAGE_ERROR,
             GTK_BUTTONS_CLOSE,
-            title, message);
+            "%s", message);
             
-    gtk_window_set_title (GTK_WINDOW (dialog), "");
+    gtk_window_set_title (GTK_WINDOW (dialog), title);
     
     g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
     
