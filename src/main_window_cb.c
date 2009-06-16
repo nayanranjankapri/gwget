@@ -1263,10 +1263,12 @@ on_open_download_activate (GtkWidget *widget, gpointer data)
 
 	uri = g_file_get_uri (location);
 	
-	if (!gnome_url_show (uri, &err)) {
+	if (!gtk_show_uri (NULL, uri, GDK_CURRENT_TIME, &err)) {
 		run_dialog_error (_("Error opening file"),_("Couldn't open the file"));
 		return;
 	}
+
+	g_object_unref (location);
 }
 
 void
@@ -1284,10 +1286,12 @@ on_open_directory_activate (GtkWidget *widget, gpointer data)
 
 	uri = g_file_get_uri (location);
 
-	if (!gnome_url_show (uri, &err)) {
+	if (!gtk_show_uri (NULL, uri, GDK_CURRENT_TIME, &err)) {
 		run_dialog_error (_("Error opening file"),_("Couldn't open the folder"));
 		return;
 	}
+
+	g_object_unref (location);
 }
 
 void
