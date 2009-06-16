@@ -1253,14 +1253,16 @@ on_open_download_activate (GtkWidget *widget, gpointer data)
 {
 	GwgetData *gwgetdata;
 	gchar *uri;
+	GFile *location;
 	GError *err = NULL;
 
 	gwgetdata=gwget_data_get_selected();
 	g_return_if_fail (gwgetdata!=NULL);
 
-	uri = gnome_vfs_make_uri_from_input_with_dirs (gwgetdata->local_filename,
-							GNOME_VFS_MAKE_URI_DIR_CURRENT);
+	location = g_file_parse_name (gwgetdata->local_filename);
 
+	uri = g_file_get_uri (location);
+	
 	if (!gnome_url_show (uri, &err)) {
 		run_dialog_error (_("Error opening file"),_("Couldn't open the file"));
 		return;
@@ -1272,13 +1274,15 @@ on_open_directory_activate (GtkWidget *widget, gpointer data)
 {
 	GwgetData *gwgetdata;
 	gchar *uri;
+	GFile *location;
 	GError *err = NULL;
 
 	gwgetdata=gwget_data_get_selected();
 	g_return_if_fail (gwgetdata!=NULL);
 
+	location = g_file_parse_name (gwgetdata->dir);
 
-	uri = gnome_vfs_make_uri_from_input(gwgetdata->dir);
+	uri = g_file_get_uri (location);
 
 	if (!gnome_url_show (uri, &err)) {
 		run_dialog_error (_("Error opening file"),_("Couldn't open the folder"));
