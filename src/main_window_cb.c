@@ -19,13 +19,6 @@
 #include <glade/glade.h>
 #include <gconf/gconf-client.h>
 #include <signal.h>
-#include <libgnome/gnome-url.h>
-#include <libgnome/gnome-program.h>
-#include <libgnome/gnome-init.h>
-#include <libgnomevfs/gnome-vfs.h>
-#include <libgnomevfs/gnome-vfs-utils.h>
-#include <libgnomevfs/gnome-vfs-mime-utils.h>
-#include <libgnomevfs/gnome-vfs-mime.h>
 
 #include "main_window.h"
 #include "main_window_cb.h"
@@ -834,60 +827,46 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
    GtkMessageDialog *dialog;
    GtkMessageType msg_type;
 
-   gchar *uri;
-   GnomeVFSHandle *fd;
-   GnomeVFSResult result;
-   GString *localfile, *md5res;
+   GString *md5res;
    GString *msg;
-   const gchar *err;
    gint i;
-   GnomeVFSFileSize fsize;
    
    struct md5_ctx md5context;
    guchar md5digest[16];
    gchar dataread[MD5BUFSIZE];
    gboolean close_md5_dlg;
+   GFile *file;
+   GInputStream *stream;
+   gssize *sizeread;
   
    gwgetdata = gwget_data_get_selected();
 	
    if (gwgetdata) {
       md5=glade_xml_get_widget(GLADE_XML(xml),"md5_window");
-      entrytext=gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(GLADE_XML(xml),"md5_entry")));
-      localfile=g_string_new(gwgetdata->dir);
-      localfile=g_string_append(localfile, gwgetdata->filename); 
-      uri=gnome_vfs_get_uri_from_local_path(localfile->str);
-      result=gnome_vfs_open(&fd, uri, GNOME_VFS_OPEN_READ);
-
-      if (result != GNOME_VFS_OK) {
-         err=gnome_vfs_result_to_string(result);
-         g_printerr(_("error %d when accessing %s: %s\n"), result, uri, err);
-         return;
-      }
-
+      
+      file = g_file_new_for_path (gwgetdata->local_filename);
+      
+      stream = (GInputStream *) g_file_read (file, NULL, NULL);
+      sizeread = (gssize *)g_input_stream_read (stream, dataread, MD5BUFSIZE, NULL,NULL);
+      
       md5_init_ctx(&md5context);
 
-      while(result == GNOME_VFS_OK) {
-         result=gnome_vfs_read(fd, dataread, MD5BUFSIZE, &fsize);  
-         md5_process_bytes(dataread, fsize, &md5context);
-         if (fsize < MD5BUFSIZE)
-            break;
+      while ( sizeread>0 ) {
+				md5_process_bytes (dataread, (int)sizeread, &md5context);
+				sizeread = (gssize *)g_input_stream_read (stream, dataread, MD5BUFSIZE, NULL,NULL);
       }
+
+      entrytext=gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(GLADE_XML(xml),"md5_entry")));
 
       md5_finish_ctx(&md5context, md5digest);
 
-      result=gnome_vfs_close(fd);
-      if (result != GNOME_VFS_OK) {
-         err=gnome_vfs_result_to_string(result);
-         g_printerr(_("error %d when accessing %s: %s\n"), result, uri, err);
-         return;
-      }
-
-      md5res=g_string_new("");
+			md5res=g_string_new("");
       for (i = 0; i < 16; i++) {
          g_string_append_printf(md5res,"%02x", md5digest[i]);
       }
 
       msg=g_string_new("");
+      
       if (g_str_equal(md5res->str, entrytext)) {
          close_md5_dlg=TRUE;
          g_string_append_printf(msg, _("<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"));
@@ -906,10 +885,11 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
                                   
       gtk_dialog_run(GTK_DIALOG(dialog));
       gtk_widget_destroy(GTK_WIDGET(dialog));   
-      g_free(uri); 
-      g_string_free(localfile, TRUE);
       g_string_free(md5res, TRUE);
       g_string_free(msg, TRUE);
+      g_object_unref (stream);
+      g_object_unref (file);
+
       if (close_md5_dlg) {
          gtk_widget_hide(GTK_WIDGET(md5));
       }

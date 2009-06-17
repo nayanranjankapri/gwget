@@ -1,3 +1,12 @@
+2009-06-16  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c: Remove gnome_vfs and use gio 
+	in md5sum comprobation.
+
+2009-06-16  David Sedeño <david@alderia.com>
+
+	* src/main_window_cb.c: Remove gnome-vfs from two functions.
+
 2009-06-15  David Sedeño <david@alderia.com>
 
 	* src/utils.{c,h}: Clean up run_dialog_information and run_dialog_error. Thanks to 
