@@ -824,7 +824,7 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
    GtkWidget *md5;
    GwgetData *gwgetdata;
    const gchar *entrytext;
-   GtkMessageDialog *dialog;
+   GtkWidget *dialog;
    GtkMessageType msg_type;
 
    GString *md5res;
@@ -865,23 +865,26 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
          g_string_append_printf(md5res,"%02x", md5digest[i]);
       }
 
-      msg=g_string_new("");
+      msg = g_string_new("<span weight=\"bold\">");
       
       if (g_str_equal(md5res->str, entrytext)) {
          close_md5_dlg=TRUE;
-         g_string_append_printf(msg, _("<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"));
+         g_string_append_printf(msg, _("MD5SUM Check PASSED!"));
          msg_type=GTK_MESSAGE_INFO;
       } else {
-         g_string_append_printf(msg, _("<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"));
+         g_string_append_printf(msg, _("MD5SUM Check FAILED!"));
          close_md5_dlg=FALSE;
          msg_type=GTK_MESSAGE_WARNING;
       }
+      g_string_append_printf(msg, "</span>");
 
-      dialog=(GtkMessageDialog *)gtk_message_dialog_new_with_markup(GTK_WINDOW(md5),
+      dialog = gtk_message_dialog_new_with_markup(GTK_WINDOW(md5),
                                                      GTK_DIALOG_DESTROY_WITH_PARENT,
                                                      msg_type,
                                                      GTK_BUTTONS_CLOSE,
-                                                     "%s", msg->str);
+                                                     NULL);
+
+      gtk_message_dialog_set_markup (GTK_MESSAGE_DIALOG(dialog), msg->str);
                                   
       gtk_dialog_run(GTK_DIALOG(dialog));
       gtk_widget_destroy(GTK_WIDGET(dialog));   
