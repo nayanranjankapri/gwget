@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 AC_INIT(configure.ac)
-AM_INIT_AUTOMAKE(gwget, 1.0.1)
+AM_INIT_AUTOMAKE(gwget, 1.0.2)
 AM_CONFIG_HEADER(config.h)
 
 AC_PATH_PROG(GCONFTOOL, gconftool-2)

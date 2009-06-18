@@ -1,9 +1,11 @@
 2009-06-18  David Sedeño <david@alderia.com>
 
-        * src/main.c, src/gnome-application.c: Remove old dbus code. 
+  * configure.ac, NEWS: Version 1.0.2 
 
-        * src/main_window_cb.c (on_md5ok_button_clicked): 
-        Make the markup work again. Remove from the traduction str.
+  * src/main.c, src/gnome-application.c: Remove old dbus code. 
+
+  * src/main_window_cb.c (on_md5ok_button_clicked): 
+  Make the markup work again. Remove from the traduction str.
         
 2009-06-17  David Sedeño <david@alderia.com>
 

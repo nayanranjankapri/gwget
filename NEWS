@@ -1,4 +1,18 @@
 ==============
+Version 1.0.2
+==============
+Fixes:
+  * Fix Epiphany version detection (Götz Waschk)
+  * Fix gwget icon and category in desktop file (Götz Waschk)
+  * Doesn't break DBus API (David Sedeño)
+
+Other: 
+  * Clear dialog code (Jaroslav Imrich)
+  * Remove gnome-vfs (David Sedeño)
+  * Remove old DBus code (David Sedeño)
+
+
+==============
 Version 1.0.1
 ==============
 Fixes:
