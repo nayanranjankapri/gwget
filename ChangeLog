@@ -1,5 +1,7 @@
 2009-06-18  David Sedeño <david@alderia.com>
 
+        * src/main.c, src/gnome-application.c: Remove old dbus code. 
+
         * src/main_window_cb.c (on_md5ok_button_clicked): 
         Make the markup work again. Remove from the traduction str.
         

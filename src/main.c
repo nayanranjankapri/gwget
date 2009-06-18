@@ -98,9 +98,6 @@ load_files_remote (const char **files)
 	GError *error = NULL;
 	DBusGConnection *connection;
 	gboolean result = FALSE;
-#if DBUS_VERSION < 35
-	DBusGPendingCall *call;
-#endif
 	DBusGProxy *remote_object;
 #ifdef HAVE_GTK_WINDOW_PRESENT_WITH_TIME
 	GdkDisplay *display;
@@ -117,7 +114,7 @@ load_files_remote (const char **files)
 
 connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 	if (connection == NULL) {
-		g_warning (error->message);
+		g_warning ("%s", error->message);
 		g_error_free (error);	
 
 		return FALSE;
@@ -128,36 +125,14 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
                                                    "/org/gnome/gwget/Gwget",
                                                    "org.gnome.gwget.Application");
 	if (!files) {
-#if DBUS_VERSION <= 33
-		call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
-						DBUS_TYPE_UINT32, &timestamp,
-						DBUS_TYPE_INVALID);
-
-		if (!dbus_g_proxy_end_call (remote_object, call, &error, DBUS_TYPE_INVALID)) {
-			g_warning (error->message);
-			g_clear_error (&error);
-			return FALSE;
-		}
-#elif DBUS_VERSION == 34
-		call = dbus_g_proxy_begin_call (remote_object, "OpenWindow",
-						G_TYPE_UINT, timestamp,
-						G_TYPE_INVALID);
-
-		if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
-			g_warning (error->message);
-			g_clear_error (&error);
-			return FALSE;
-		}
-#else
-		if (!dbus_g_proxy_call (remote_object, "OpenWindow", &error,
+        	if (!dbus_g_proxy_call (remote_object, "OpenWindow", &error,
 					G_TYPE_UINT, timestamp,
 					G_TYPE_INVALID,
 					G_TYPE_INVALID)) {
-			g_warning (error->message);
+			g_warning ("%s", error->message);
 			g_clear_error (&error);
 			return FALSE;
 		}
-#endif
 		return TRUE;
 	}
 
@@ -172,45 +147,17 @@ connection = dbus_g_bus_get (DBUS_BUS_STARTER, &error);
 		if (destination_dir) {
         		dest_dir = destination_dir;
         	} 
-#if DBUS_VERSION <= 33
-		call = dbus_g_proxy_begin_call (remote_object, "OpenURIDest",
-						DBUS_TYPE_STRING, &uri,
-						DBUS_TYPE_STRING, &dest_dir,
-						DBUS_TYPE_UINT32, &timestamp,
-						DBUS_TYPE_INVALID);
-
-		if (!dbus_g_proxy_end_call (remote_object, call, &error, DBUS_TYPE_INVALID)) {
-			g_warning (error->message);
-			g_clear_error (&error);
-			g_free (uri);
-			continue;
-		}
-#elif DBUS_VERSION == 34
-		call = dbus_g_proxy_begin_call (remote_object, "OpenURIDest",
-						G_TYPE_STRING, uri,
-						G_TYPE_STRING, dest_dir,
-						G_TYPE_UINT, timestamp,
-						G_TYPE_INVALID);
-
-		if (!dbus_g_proxy_end_call (remote_object, call, &error, G_TYPE_INVALID)) {
-			g_warning (error->message);
-			g_clear_error (&error);
-			g_free (uri);
-			continue;
-		}
-#else
 		if (!dbus_g_proxy_call (remote_object, "OpenURIDest", &error,
 					G_TYPE_STRING, uri,
 					G_TYPE_STRING, dest_dir,
 					G_TYPE_UINT, timestamp,
 					G_TYPE_INVALID,
 					G_TYPE_INVALID)) {
-			g_warning (error->message);
+			g_warning ("%s", error->message);
 			g_clear_error (&error);
 			g_free (uri);
 			continue;
 		}
-#endif
 		g_free (uri);
 		g_object_unref (file);
 		result = TRUE;
