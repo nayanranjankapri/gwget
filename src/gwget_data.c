@@ -225,7 +225,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 		
 	gwget_data_update_statistics_ui(gwgetdata);
 	if (gwgetdata == gwget_data_get_selected() || count_download_in_progress() == 1 ) {
-		gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), title);
+		gtk_window_set_title(GTK_WINDOW(GTK_WIDGET (gtk_builder_get_object(builder, "main_window"))), title);
 	}
 
 
@@ -599,7 +599,7 @@ GwgetData* gwget_data_get_selected(void)
 	GwgetData *gwgetdata;
 	gchar *url;
 	
-	treev=glade_xml_get_widget(xml,"treeview1");
+	treev=GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	select=gtk_tree_view_get_selection(GTK_TREE_VIEW(treev));
 	
 	if (gtk_tree_selection_get_selected (select, &model, &iter)) 
@@ -702,25 +702,25 @@ gwget_data_add_download(GwgetData *gwgetdata)
 	if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url) ||
 		!strncmp(reverse_filename,"lmth",4) || !strncmp(reverse_filename,"mth",3) || 
 		!strncmp(reverse_filename,"php",3)  || !strncmp(reverse_filename,"asp",3)) {
-		recursive_window=glade_xml_get_widget(xml,"dialog2");
+		recursive_window=GTK_WIDGET (gtk_builder_get_object(builder,"dialog2"));
 		response=gtk_dialog_run(GTK_DIALOG(recursive_window));
 		gtk_widget_hide(GTK_WIDGET(recursive_window));
 		if (response==GTK_RESPONSE_OK) {
-			radio=glade_xml_get_widget(xml,"radio_index");
+			radio=GTK_WIDGET (gtk_builder_get_object(builder,"radio_index"));
 			if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
 				gwgetdata->recursive=FALSE;
 			}
-			radio=glade_xml_get_widget(xml,"radio_multimedia");
+			radio=GTK_WIDGET (gtk_builder_get_object(builder,"radio_multimedia"));
 			if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
 				gwgetdata->recursive=TRUE;
 				gwgetdata->multimedia=TRUE;
 			}
-			radio=glade_xml_get_widget(xml,"radio_mirror");
+			radio=GTK_WIDGET (gtk_builder_get_object(builder,"radio_mirror"));
 			if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
 				gwgetdata->recursive=TRUE;
 				gwgetdata->mirror=TRUE;
 			}
-			radio=glade_xml_get_widget(xml,"radio_recursive");
+			radio=GTK_WIDGET (gtk_builder_get_object(builder,"radio_recursive"));
 			if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(radio))) {
 				gwgetdata->recursive=TRUE;
 			}
@@ -792,7 +792,7 @@ gwget_download_finished (GwgetData *gwgetdata)
 {
 	gwget_gnotify_finished(gwgetdata);
 	gwget_tray_notify (_("Download Complete"), gwgetdata->filename, gwgetdata->icon_name);
-	gtk_widget_set_sensitive(glade_xml_get_widget(xml, "clear_button"), TRUE);
+	gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder, "clear_button")), TRUE);
 
 	if (gwget_ask_download_playlist(gwgetdata))
 		gwget_download_playlist_items(gwgetdata->local_filename);
@@ -845,23 +845,23 @@ gwget_data_set_menus (GwgetData *gwgetdata)
 
 	if (gwgetdata!=NULL) {
 		if (gwget_data_run(gwgetdata)) {
-			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),TRUE);
-			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),FALSE);
-			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_menuitem"),TRUE);
+			gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_menuitem")),TRUE);
+			gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_menuitem")),FALSE);
+			gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"cancel_menuitem")),TRUE);
 		} else {
 			if (gwgetdata->state==DL_COMPLETED) {
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),FALSE);
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),FALSE);
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_menuitem"),FALSE);
+				gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_menuitem")),FALSE);
+				gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_menuitem")),FALSE);
+				gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"cancel_menuitem")),FALSE);
 			} else {
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),TRUE);
-				gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),FALSE);
+				gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_menuitem")),TRUE);
+				gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_menuitem")),FALSE);
 			}
 		}
 	} else {
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_menuitem"),FALSE);
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_menuitem"),FALSE);
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_menuitem"),FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_menuitem")),FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_menuitem")),FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"cancel_menuitem")),FALSE);
 	}
 }
 
@@ -870,22 +870,22 @@ gwget_data_set_popupmenu (GwgetData *gwgetdata)
 {
 	if (gwgetdata!=NULL) {
 		if (gwget_data_run(gwgetdata)) {
-			gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),TRUE);
-                        gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
-                        gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),TRUE);
+			gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_download")),TRUE);
+                        gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_download")),FALSE);
+                        gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"cancel_download")),TRUE);
 		} else {
 			if (gwgetdata->state==DL_COMPLETED) {
-                                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
-                                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
-                                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),FALSE);
+                                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_download")),FALSE);
+                                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_download")),FALSE);
+                                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"cancel_download")),FALSE);
                         } else {
-                                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),TRUE);
-                                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
+                                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_download")),TRUE);
+                                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_download")),FALSE);
                         }
 		}
 	} else {
-                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"continue_download"),FALSE);
-                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_download"),FALSE);
-                gtk_widget_set_sensitive(glade_xml_get_widget(xml,"cancel_download"),FALSE);
+                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"continue_download")),FALSE);
+                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_download")),FALSE);
+                gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"cancel_download")),FALSE);
         }
 }

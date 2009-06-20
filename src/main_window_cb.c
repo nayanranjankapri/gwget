@@ -16,7 +16,6 @@
  
 #include <config.h>
 #include <gnome.h>
-#include <glade/glade.h>
 #include <gconf/gconf-client.h>
 #include <signal.h>
 
@@ -57,7 +56,7 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 	GError *err = NULL;
 	GFile *location; 
 	
-	treev=glade_xml_get_widget(xml,"treeview1");
+	treev=GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	select=gtk_tree_view_get_selection(GTK_TREE_VIEW(treev));
 
 	/* Right click - Show popup menu */
@@ -79,7 +78,7 @@ on_treeview1_button_press_event(GtkWidget *widget, GdkEventButton *event,gpointe
 				gtk_tree_path_free(path);
 			}
 
-			popup=glade_xml_get_widget(xml,"popup1");
+			popup=GTK_WIDGET (gtk_builder_get_object(builder,"popup1"));
 			gtk_menu_popup (GTK_MENU(popup), NULL, NULL, NULL, NULL, 
 							event_button->button, event_button->time);
 			gwget_data_set_popupmenu (gwget_data_get_selected());
@@ -138,7 +137,7 @@ stop_all_downloads(void)
 		gtk_tree_model_iter_next(model,&iter);
 	}
 
-	gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
+	gtk_window_set_title(GTK_WINDOW (gtk_builder_get_object(builder, "main_window")), _("Gwget - Download Manager"));
 }
 
 void
@@ -236,7 +235,7 @@ new_download(GwgetData* gwgetdata)
 		
 	gwgetdata->file_list=iter; 
 
-        select=gtk_tree_view_get_selection(GTK_TREE_VIEW(glade_xml_get_widget(xml,"treeview1")));
+        select=gtk_tree_view_get_selection(GTK_TREE_VIEW(GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"))));
 	gtk_tree_selection_select_iter(select, &iter);
 	
 	g_object_set_data(G_OBJECT(model),gwgetdata->url,gwgetdata);
@@ -273,18 +272,24 @@ new_download(GwgetData* gwgetdata)
 void 
 on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 {
-	gchar *xml_file = NULL;
+	gchar *builder_file = NULL;
 	GtkWidget *window = NULL,*entry=NULL, *checkbutton=NULL, *main_window = NULL;
+	GError* error = NULL;
 	
-	if (!xml_pref) {
-		xml_file=g_build_filename(DATADIR,"preferences.glade",NULL);
-		xml_pref = glade_xml_new(xml_file,NULL,NULL);
-		glade_xml_signal_autoconnect(xml_pref);
+	if (!builder_pref) {
+		builder_file=g_build_filename(DATADIR,"preferences.ui",NULL);
+		builder_pref = gtk_builder_new();
+		if (!gtk_builder_add_from_file (builder_pref, builder_file, &error))
+			{
+				g_warning ("Couldn't load builder file: s");
+				g_error_free (error);
+			}
+		gtk_builder_connect_signals(builder_pref, NULL);
 	}
 		
-	main_window = glade_xml_get_widget (xml, "main_window");
-	window = glade_xml_get_widget (xml_pref, "pref_window");
-	entry = glade_xml_get_widget(xml_pref,"save_in_entry");
+	main_window = GTK_WIDGET (gtk_builder_get_object (builder, "main_window"));
+	window = GTK_WIDGET (gtk_builder_get_object (builder_pref, "pref_window"));
+	entry = GTK_WIDGET (gtk_builder_get_object(builder_pref,"save_in_entry"));
 
 	gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(main_window));
 
@@ -298,77 +303,77 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 
 	if (gwget_pref.network_mode!=NULL) {
 		if ( strcmp (gwget_pref.network_mode, "manual") == 0) {
-			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"manual_radio");
+			checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"manual_radio"));
 			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
 		} else if ( strcmp (gwget_pref.network_mode, "default") == 0 ) {
-			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"default_radio");
+			checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"default_radio"));
 			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
 		} else {
-			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"direct_radio");
+			checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"direct_radio"));
 			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
 		}
 	} else {
-			checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"direct_radio");
+			checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"direct_radio"));
 			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),TRUE);
 	}
 	
 
 	if (gwget_pref.http_proxy!=NULL) {
-		entry = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+		entry = GTK_WIDGET (gtk_builder_get_object(builder_pref,"http_proxy_entry"));
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.http_proxy);
-		checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"proxy_uses_auth_radio");
+		checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"proxy_uses_auth_radio"));
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.proxy_uses_auth);
-		entry = glade_xml_get_widget(xml_pref,"proxy_user");
+		entry = GTK_WIDGET (gtk_builder_get_object(builder_pref,"proxy_user"));
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.proxy_user);
-		entry = glade_xml_get_widget(xml_pref,"proxy_password");
+		entry = GTK_WIDGET (gtk_builder_get_object(builder_pref,"proxy_password"));
 		gtk_entry_set_text(GTK_ENTRY(entry),gwget_pref.proxy_password);
 
 	}
 	
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"http_proxy_port_spin");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"http_proxy_port_spin"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.http_proxy_port);
 
 	
 	/* General */
-	checkbutton = glade_xml_get_widget (GLADE_XML(xml_pref), "ask_save_each_dl_check");
+	checkbutton = GTK_WIDGET (gtk_builder_get_object (builder_pref, "ask_save_each_dl_check"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton), gwget_pref.ask_save_each_dl);
 
 	
-	checkbutton = glade_xml_get_widget(GLADE_XML(xml_pref),"num_retries_spin");
+	checkbutton = GTK_WIDGET (gtk_builder_get_object(builder_pref,"num_retries_spin"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.num_retries);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref), "resume_at_start");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref, "resume_at_start"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.resume_at_start);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref), "open_after_dl");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref, "open_after_dl"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.open_after_dl);
 	
 	/* Recursive */
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"no_create_directories"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.no_create_directories);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"follow_relative");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"follow_relative"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.follow_relative);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"convert_links");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"convert_links"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.convert_links);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"dl_page_requisites");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"dl_page_requisites"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.dl_page_requisites);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"max_depth");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"max_depth"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_depth);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_speed_check");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_speed_check"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.limit_speed);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_speed_spin");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_speed_spin"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_speed);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_simultaneousdownloads_check");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_simultaneousdownloads_check"));
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkbutton),gwget_pref.limit_simultaneousdownloads);
 
-	checkbutton=glade_xml_get_widget(GLADE_XML(xml_pref),"limit_simultaneousdownloads_spin");
+	checkbutton=GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_simultaneousdownloads_spin"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkbutton), (gdouble)gwget_pref.max_simultaneousdownloads);
 
 	gtk_widget_show(window);
@@ -382,7 +387,7 @@ on_pref_cancel_button_clicked(GtkWidget *widget,gpointer data)
 {
 	GtkWidget *pref_window = NULL;
 	
-	pref_window = glade_xml_get_widget(xml_pref,"pref_window");
+	pref_window = GTK_WIDGET (gtk_builder_get_object(builder_pref,"pref_window"));
 	gtk_widget_hide(pref_window);
 }
 
@@ -399,74 +404,74 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 	GtkWidget *manual_radio=NULL, *direct_radio=NULL, *default_radio=NULL, *proxy_uses_auth_radio=NULL;
 	GtkWidget *limit_simultaneousdownloads_check=NULL, *limit_simultaneousdownloads_spin=NULL;
 
-	save_in=glade_xml_get_widget(xml_pref,"save_in_entry");
+	save_in=GTK_WIDGET (gtk_builder_get_object(builder_pref,"save_in_entry"));
 	gwget_pref.download_dir=g_strdup(gtk_entry_get_text(GTK_ENTRY(save_in)));
 	
 	/* Set HTTP proxy values */
 	
-	http_proxy=glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	http_proxy=GTK_WIDGET (gtk_builder_get_object(builder_pref,"http_proxy_entry"));
 	gwget_pref.http_proxy=g_strdup(gtk_entry_get_text(GTK_ENTRY(http_proxy)));
 	gconf_client_set_string(gconf_client,"/apps/gwget2/http_proxy",
 							g_strdup(gtk_entry_get_text(GTK_ENTRY(http_proxy))),NULL);
 	
-	proxy_user=glade_xml_get_widget(xml_pref,"proxy_user");
+	proxy_user=GTK_WIDGET (gtk_builder_get_object(builder_pref,"proxy_user"));
 	gwget_pref.proxy_user=g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_user)));
 	gconf_client_set_string(gconf_client,"/apps/gwget2/proxy_user",
 							g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_user))),NULL);
 							
-	proxy_password=glade_xml_get_widget(xml_pref,"proxy_password");
+	proxy_password=GTK_WIDGET (gtk_builder_get_object(builder_pref,"proxy_password"));
 	gwget_pref.proxy_password=g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_password)));
 	gconf_client_set_string(gconf_client,"/apps/gwget2/proxy_password",
 							g_strdup(gtk_entry_get_text(GTK_ENTRY(proxy_password))),NULL);
 	
-	http_proxy_port_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "http_proxy_port_spin");
+	http_proxy_port_spin = GTK_WIDGET (gtk_builder_get_object (builder_pref, "http_proxy_port_spin"));
 	gwget_pref.http_proxy_port = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(http_proxy_port_spin));
 	gconf_client_set_int(gconf_client,"/apps/gwget2/http_proxy_port",
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(http_proxy_port_spin)),NULL);
 						  
-	proxy_uses_auth_radio=glade_xml_get_widget(xml_pref,"proxy_uses_auth_radio");
+	proxy_uses_auth_radio=GTK_WIDGET (gtk_builder_get_object(builder_pref,"proxy_uses_auth_radio"));
 
 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (proxy_uses_auth_radio))) {
 		gconf_client_set_bool(gconf_client,"/apps/gwget2/network_mode",TRUE,NULL);
 		gwget_pref.proxy_uses_auth=TRUE;
 	}
 	
-	manual_radio=glade_xml_get_widget(xml_pref,"manual_radio");
+	manual_radio=GTK_WIDGET (gtk_builder_get_object(builder_pref,"manual_radio"));
 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(manual_radio))) {
 		gconf_client_set_string(gconf_client,"/apps/gwget2/network_mode","manual",NULL);
 		gwget_pref.network_mode="manual";
 	}
 			
-	direct_radio=glade_xml_get_widget(xml_pref,"direct_radio");
+	direct_radio=GTK_WIDGET (gtk_builder_get_object(builder_pref,"direct_radio"));
 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(direct_radio))) {
 		gconf_client_set_string(gconf_client,"/apps/gwget2/network_mode","direct",NULL);
 		gwget_pref.network_mode="direct";
 	}	
 	
-	default_radio=glade_xml_get_widget(xml_pref,"default_radio");
+	default_radio=GTK_WIDGET (gtk_builder_get_object(builder_pref,"default_radio"));
 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(default_radio))) {
 		gconf_client_set_string(gconf_client,"/apps/gwget2/network_mode","default",NULL);
 		gwget_pref.network_mode="default";
 	}	
 		
-	ask_each_dl = glade_xml_get_widget(xml_pref, "ask_save_each_dl_check");
+	ask_each_dl = GTK_WIDGET (gtk_builder_get_object(builder_pref, "ask_save_each_dl_check"));
 	gwget_pref.ask_save_each_dl = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ask_each_dl));
 	gconf_client_set_bool(gconf_client, "/apps/gwget2/ask_save_each_dl",
 				gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ask_each_dl)), NULL);
 	
 	
-	num_retries = glade_xml_get_widget(xml_pref,"num_retries_spin");
+	num_retries = GTK_WIDGET (gtk_builder_get_object(builder_pref,"num_retries_spin"));
 	gwget_pref.num_retries = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(num_retries));
 	
-	resume=glade_xml_get_widget(xml_pref,"resume_at_start");
+	resume=GTK_WIDGET (gtk_builder_get_object(builder_pref,"resume_at_start"));
 	gwget_pref.resume_at_start=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume));
 
-	open_after_dl = glade_xml_get_widget(xml_pref, "open_after_dl");
+	open_after_dl = GTK_WIDGET (gtk_builder_get_object(builder_pref, "open_after_dl"));
 	gwget_pref.open_after_dl = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(open_after_dl));
 	gconf_client_set_bool(gconf_client, "/apps/gwget2/open_after_dl",
 					gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(open_after_dl)), NULL);
 	
-	pref_window = glade_xml_get_widget(xml_pref,"pref_window");
+	pref_window = GTK_WIDGET (gtk_builder_get_object(builder_pref,"pref_window"));
 	gtk_widget_hide(pref_window);
 	
 	gconf_client_set_string(gconf_client,"/apps/gwget2/download_dir",
@@ -477,8 +482,8 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(resume)),NULL);
 	
 	/* Limit Speed */
-	limit_speed_check = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_check");
-	limit_speed_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_speed_spin");
+	limit_speed_check = GTK_WIDGET (gtk_builder_get_object (builder_pref, "limit_speed_check"));
+	limit_speed_spin = GTK_WIDGET (gtk_builder_get_object (builder_pref, "limit_speed_spin"));
 
 	if ( (count_download_in_progress()>0) && 
 	    ((gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_speed_check)) &&
@@ -496,64 +501,64 @@ on_pref_ok_button_clicked(GtkWidget *widget,gpointer data)
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_speed_spin)),NULL);
 	
 	/* Limit Simultaneous downloads */
-	limit_simultaneousdownloads_check = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_simultaneousdownloads_check");
+	limit_simultaneousdownloads_check = GTK_WIDGET (gtk_builder_get_object (builder_pref, "limit_simultaneousdownloads_check"));
 	gwget_pref.limit_simultaneousdownloads = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_simultaneousdownloads_check));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/limit_simultaneousdownloads",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(limit_simultaneousdownloads_check)),NULL);
-	limit_simultaneousdownloads_spin = glade_xml_get_widget (GLADE_XML(xml_pref), "limit_simultaneousdownloads_spin");
+	limit_simultaneousdownloads_spin = GTK_WIDGET (gtk_builder_get_object (builder_pref, "limit_simultaneousdownloads_spin"));
 	gwget_pref.max_simultaneousdownloads = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_simultaneousdownloads_spin));
 	gconf_client_set_int(gconf_client,"/apps/gwget2/max_simultaneousdownloads",
 						  gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON(limit_simultaneousdownloads_spin)),NULL);
 	
 	/* Recursivity */
-	no_create_directories  = glade_xml_get_widget(GLADE_XML(xml_pref),"no_create_directories");
+	no_create_directories  = GTK_WIDGET (gtk_builder_get_object(builder_pref,"no_create_directories"));
 	gwget_pref.no_create_directories = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/no_create_directories",
 						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(no_create_directories)),NULL);
 	
 	/* Follow relative links only */
-	follow_relative = glade_xml_get_widget(GLADE_XML(xml_pref),"follow_relative");
+	follow_relative = GTK_WIDGET (gtk_builder_get_object(builder_pref,"follow_relative"));
 	gwget_pref.follow_relative = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(follow_relative));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/follow_relative",gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(follow_relative)), NULL);
 	
 	/* Convert links */
-	convert_links = glade_xml_get_widget(GLADE_XML(xml_pref),"convert_links");
+	convert_links = GTK_WIDGET (gtk_builder_get_object(builder_pref,"convert_links"));
 	gwget_pref.follow_relative = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(convert_links));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/convert_links",gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(convert_links)), NULL);
 	/* Download page requisites */
-	dl_page_requisites= glade_xml_get_widget(GLADE_XML(xml_pref),"dl_page_requisites");
+	dl_page_requisites= GTK_WIDGET (gtk_builder_get_object(builder_pref,"dl_page_requisites"));
 	gwget_pref.follow_relative = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dl_page_requisites));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/dl_page_requisites",	gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dl_page_requisites)), NULL);
 	/* Max Depth */
-	max_depth=glade_xml_get_widget(GLADE_XML(xml_pref),"max_depth");
+	max_depth=GTK_WIDGET (gtk_builder_get_object(builder_pref,"max_depth"));
 	gwget_pref.max_depth=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth));
 	gconf_client_set_int(gconf_client,"/apps/gwget2/max_depth",gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(max_depth)), NULL);
 	
 	/* Column listing */
-	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size")));
+	gwget_pref.view_actual_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_actual_size"))));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_actual_size",
-	 					  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_actual_size"))),NULL);
+	 					  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_actual_size")))),NULL);
 
-	gwget_pref.view_total_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size")));
+	gwget_pref.view_total_size=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_total_size"))));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_total_size",
-						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_total_size"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_total_size")))),NULL);
 	
-	gwget_pref.view_percentage=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage")));
+	gwget_pref.view_percentage=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_percentage"))));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_percentage",
-						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_percentage"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_percentage")))),NULL);
 
 
-	gwget_pref.view_elapse_time=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time")));
+	gwget_pref.view_elapse_time=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_elapse_time"))));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_elapse_time",
-						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_elapse_time"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_elapse_time")))),NULL);
 
-	gwget_pref.view_rem_time=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time")));
+	gwget_pref.view_rem_time=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_rem_time"))));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_rem_time",
-						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_rem_time"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_rem_time")))),NULL);
 
-	gwget_pref.view_down_speed=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed")));
+	gwget_pref.view_down_speed=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_down_speed"))));
 	gconf_client_set_bool(gconf_client,"/apps/gwget2/view_down_speed",
-						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(glade_xml_get_widget(GLADE_XML(xml_pref),"check_down_speed"))),NULL);
+						  gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_down_speed")))),NULL);
 
 }
 
@@ -562,7 +567,7 @@ on_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 {
 	GtkWidget *filesel = NULL;
 	GtkWidget *save_in;
-	save_in = glade_xml_get_widget(xml_pref,"save_in_entry");
+	save_in = GTK_WIDGET (gtk_builder_get_object(builder_pref,"save_in_entry"));
 	
 	filesel = gtk_file_chooser_dialog_new  (_("Select Folder"),
 						NULL,
@@ -628,7 +633,7 @@ on_cancel_download_activate(GtkWidget *widget,gpointer data)
     			gwgetdata->total_time = 0;
     			gwget_data_set_state (gwgetdata, DL_COMPLETED);
 			if (gwgetdata == gwget_data_get_selected()) {
-				gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
+				gtk_window_set_title(GTK_WINDOW(GTK_WIDGET (gtk_builder_get_object(builder, "main_window"))), _("Gwget - Download Manager"));
 			}
 			gtk_list_store_remove(GTK_LIST_STORE(model),&gwgetdata->file_list);
 			downloads=g_list_remove(downloads,gwgetdata);
@@ -666,8 +671,8 @@ on_remove_completed_activate(GtkWidget *widget, gpointer data)
 					gtk_tree_model_iter_next(model,&iter);
 				}
 			}
-			gtk_widget_set_sensitive(glade_xml_get_widget(xml, "clear_button"), FALSE);
-			gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
+			gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder, "clear_button")), FALSE);
+			gtk_window_set_title(GTK_WINDOW(GTK_WIDGET (gtk_builder_get_object(builder, "main_window"))), _("Gwget - Download Manager"));
 		}
 	}
 				
@@ -735,7 +740,7 @@ on_remove_all_activate(GtkWidget *widget, gpointer data)
 				gtk_list_store_remove(GTK_LIST_STORE(model),&iter);
 				downloads=g_list_remove(downloads,gwgetdata);
 			}
-			gtk_window_set_title(GTK_WINDOW(glade_xml_get_widget(xml, "main_window")), _("Gwget - Download Manager"));
+			gtk_window_set_title(GTK_WINDOW(GTK_WIDGET (gtk_builder_get_object(builder, "main_window"))), _("Gwget - Download Manager"));
 		}
 	}
 
@@ -747,8 +752,8 @@ on_view_toolbar_activate(GtkWidget *widget,gpointer data)
 	GtkWidget *toolbar,*menu_item;
 	gboolean state;
 	
-	toolbar=glade_xml_get_widget(GLADE_XML(xml),"toolbar1");
-	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
+	toolbar=GTK_WIDGET (gtk_builder_get_object(builder,"toolbar1"));
+	menu_item=GTK_WIDGET (gtk_builder_get_object(builder,"view_toolbar"));
 	state = gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(menu_item));
 	
 	if (!state) 
@@ -766,8 +771,8 @@ on_view_statusbar_activate(GtkWidget *widget, gpointer data)
 	GtkWidget *statusbar, *menu_item;
 	gboolean state;
 
-	statusbar = glade_xml_get_widget (GLADE_XML(xml), "statusbar");
-	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_statusbar");
+	statusbar = GTK_WIDGET (gtk_builder_get_object (builder, "statusbar"));
+	menu_item=GTK_WIDGET (gtk_builder_get_object(builder,"view_statusbar"));
 	state = gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(menu_item));
 	
 	if (!state) 
@@ -788,19 +793,19 @@ on_properties_activate(GtkWidget *widget, gpointer data)
 	gwgetdata = gwget_data_get_selected();	
 	
 	if (gwgetdata) {
-		main_window=glade_xml_get_widget(GLADE_XML(xml),"main_window");
-		properties=glade_xml_get_widget(GLADE_XML(xml),"properties_window");
+		main_window=GTK_WIDGET (gtk_builder_get_object(builder,"main_window"));
+		properties=GTK_WIDGET (gtk_builder_get_object(builder,"properties_window"));
 		gtk_window_set_transient_for(GTK_WINDOW(properties),GTK_WINDOW(main_window));
-		url_txt=glade_xml_get_widget(GLADE_XML(xml),"url_text");
+		url_txt=GTK_WIDGET (gtk_builder_get_object(builder,"url_text"));
 		gtk_label_set_text(GTK_LABEL(url_txt),gwgetdata->url);
-		local_file=glade_xml_get_widget(GLADE_XML(xml),"local_file_text");
+		local_file=GTK_WIDGET (gtk_builder_get_object(builder,"local_file_text"));
 		gtk_label_set_text(GTK_LABEL(local_file),gwgetdata->filename);
-		local_dir=glade_xml_get_widget(GLADE_XML(xml),"local_dir");
+		local_dir=GTK_WIDGET (gtk_builder_get_object(builder,"local_dir"));
 		gtk_label_set_text(GTK_LABEL(local_dir),gwgetdata->dir);
 		if (gwgetdata->state==DL_COMPLETED) {
-                   gtk_widget_set_sensitive(glade_xml_get_widget(xml, "compare_md5"), TRUE);
+                   gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder, "compare_md5")), TRUE);
 		} else {
-                   gtk_widget_set_sensitive(glade_xml_get_widget(xml, "compare_md5"), FALSE);
+                   gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder, "compare_md5")), FALSE);
                 }
                 gtk_widget_show(properties);
 	}
@@ -814,7 +819,7 @@ on_compare_md5_clicked(GtkWidget *widget, gpointer data)
    gwgetdata=gwget_data_get_selected();
 	
    if (gwgetdata) {
-      gtk_widget_show(glade_xml_get_widget(GLADE_XML(xml),"md5_window"));
+      gtk_widget_show(GTK_WIDGET (gtk_builder_get_object(builder,"md5_window")));
    }
 }
 
@@ -842,7 +847,7 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
    gwgetdata = gwget_data_get_selected();
 	
    if (gwgetdata) {
-      md5=glade_xml_get_widget(GLADE_XML(xml),"md5_window");
+      md5 = GTK_WIDGET (gtk_builder_get_object(builder,"md5_window"));
       
       file = g_file_new_for_path (gwgetdata->local_filename);
       
@@ -856,7 +861,7 @@ on_md5ok_button_clicked(GtkWidget *widget, gpointer data)
 				sizeread = (gssize *)g_input_stream_read (stream, dataread, MD5BUFSIZE, NULL,NULL);
       }
 
-      entrytext=gtk_entry_get_text(GTK_ENTRY(glade_xml_get_widget(GLADE_XML(xml),"md5_entry")));
+      entrytext = gtk_entry_get_text(GTK_ENTRY (gtk_builder_get_object(builder, "md5_entry")));
 
       md5_finish_ctx(&md5context, md5digest);
 
@@ -905,7 +910,7 @@ on_check_actual_size_toggled(GtkWidget *widget, gpointer data)
 	GtkWidget *treev,*column;
 	gboolean visible;
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-2);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
@@ -918,7 +923,7 @@ on_check_total_size_toggled(GtkWidget *widget, gpointer data)
 	GtkWidget *treev,*column;
 	gboolean visible;
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder, "treeview1"));
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-2);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
@@ -932,7 +937,7 @@ on_check_percentage_toggled(GtkWidget *widget, gpointer data)
 	GtkWidget *treev,*column;
 	gboolean visible;
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-2);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
@@ -946,7 +951,7 @@ on_check_elapse_time_toggled(GtkWidget *widget, gpointer data)
 	GtkWidget *treev,*column;
 	gboolean visible;
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-3);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
@@ -960,7 +965,7 @@ on_check_rem_time_toggled(GtkWidget *widget, gpointer data)
 	GtkWidget *treev,*column;
 	gboolean visible;
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-5);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
@@ -974,7 +979,7 @@ on_check_down_speed_toggled(GtkWidget *widget, gpointer data)
 	GtkWidget *treev,*column;
 	gboolean visible;
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-7);
 	visible=gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 	gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),
@@ -988,7 +993,7 @@ on_limit_speed_check_toggled (GtkWidget *widget, gpointer data)
 	GtkWidget *limit_speed_spin;
 	gboolean limit_speed;
 	
-	limit_speed_spin = glade_xml_get_widget (xml_pref, "limit_speed_spin");
+	limit_speed_spin = GTK_WIDGET (gtk_builder_get_object (builder_pref, "limit_speed_spin"));
 	limit_speed = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget));
 	
 	if (limit_speed) {
@@ -1004,7 +1009,7 @@ on_limit_simultaneousdownloads_check_toggled (GtkWidget *widget, gpointer data)
 	GtkWidget *limit_simultaneousdownloads_spin;
 	gboolean limit_simultaneousdownloads;
 	
-	limit_simultaneousdownloads_spin = glade_xml_get_widget (xml_pref, "limit_simultaneousdownloads_spin");
+	limit_simultaneousdownloads_spin = GTK_WIDGET (gtk_builder_get_object (builder_pref, "limit_simultaneousdownloads_spin"));
 	limit_simultaneousdownloads = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget));
 	
 	if (limit_simultaneousdownloads) {
@@ -1018,19 +1023,19 @@ on_manual_radio_toggled (GtkWidget *sender, gpointer data)
 {
 	GtkWidget *widget;
 
-	widget = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref,"http_proxy_entry"));
 	gtk_widget_set_sensitive(GTK_WIDGET (widget), TRUE);
 
-	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "http_proxy_port_spin"));
 	gtk_widget_set_sensitive(GTK_WIDGET (widget), TRUE);
 
-	widget = glade_xml_get_widget(xml_pref, "proxy_uses_auth_radio");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_uses_auth_radio"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_user");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_user"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_password");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_password"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 
 }
@@ -1040,21 +1045,21 @@ on_direct_radio_toggled (GtkWidget *sender, gpointer data)
 {
 	GtkWidget *widget;
 
-	widget = glade_xml_get_widget(xml_pref,"http_proxy_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref,"http_proxy_entry"));
 	gtk_widget_set_sensitive(GTK_WIDGET (widget), FALSE);
-	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "http_proxy_port_spin"));
 	gtk_widget_set_sensitive(GTK_WIDGET (widget), FALSE);
 
-	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "http_proxy_port_spin"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_uses_auth_radio");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_uses_auth_radio"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_user");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_user"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_password");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_password"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
 
 }
@@ -1064,19 +1069,19 @@ on_default_radio_toggled(GtkWidget *sender, gpointer data)
 {	
 	GtkWidget *widget;
 
-	widget = glade_xml_get_widget(xml_pref, "http_proxy_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "http_proxy_entry"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
 	
-	widget = glade_xml_get_widget(xml_pref, "http_proxy_port_spin");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "http_proxy_port_spin"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), FALSE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_uses_auth_radio");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_uses_auth_radio"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_user");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_user"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 	
-	widget = glade_xml_get_widget(xml_pref, "proxy_password");
+	widget = GTK_WIDGET (gtk_builder_get_object(builder_pref, "proxy_password"));
 	gtk_widget_set_sensitive(GTK_WIDGET(widget), TRUE);
 }
 
@@ -1182,9 +1187,9 @@ on_edit_menu_activate(void)
 {
 	if (count_all_downloads()>0) 
 	{
-		 gtk_widget_set_sensitive(glade_xml_get_widget(xml, "remove_item"), TRUE);
+		 gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder, "remove_item")), TRUE);
 	} else {
-		 gtk_widget_set_sensitive(glade_xml_get_widget(xml, "remove_item"), FALSE);
+		 gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder, "remove_item")), FALSE);
 	}
 }
 
@@ -1283,11 +1288,11 @@ on_file_menuitem_activate (GtkWidget *widget, gpointer data)
 
 	if (count_all_downloads()==0)
 	{
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_all_menuitem"), FALSE);
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"resume_all_menuitem"), FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_all_menuitem")), FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"resume_all_menuitem")), FALSE);
 	} else {
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"pause_all_menuitem"), TRUE);
-		gtk_widget_set_sensitive(glade_xml_get_widget(xml,"resume_all_menuitem"), TRUE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"pause_all_menuitem")), TRUE);
+		gtk_widget_set_sensitive(GTK_WIDGET (gtk_builder_get_object(builder,"resume_all_menuitem")), TRUE);
 	}
 
 }

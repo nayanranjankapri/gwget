@@ -157,7 +157,7 @@ pop_main_window()
 {
 	GtkWidget *window;
 	
-	window = glade_xml_get_widget(xml,"main_window");
+	window = GTK_WIDGET (gtk_builder_get_object(builder,"main_window"));
 	if((gdk_window_get_state(GTK_WIDGET(window)->window) & 
 				 GDK_WINDOW_STATE_ICONIFIED) || 
 			         !GTK_WIDGET_VISIBLE(window)) 

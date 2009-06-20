@@ -3,8 +3,8 @@
 gwget_datadir = $(datadir)/@PACKAGE@
 
 gwget_data_DATA = \
-	preferences.glade\
-	gwget.glade
+	preferences.ui\
+	gwget.ui
 
                                                                                                             
 # Dbus service file

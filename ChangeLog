@@ -1,3 +1,7 @@
+2009-06-20  David Sedeño <david@alderia.com>
+
+  * Mass changes to migrate to gtkbuilder. Thanks to Artur Roma <ari-tczew@tlen.pl>
+
 2009-06-18  David Sedeño <david@alderia.com>
 
   * configure.ac, NEWS: Version 1.0.2 

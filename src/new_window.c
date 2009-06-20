@@ -25,7 +25,6 @@ This file creates the window for add new download and its callback
 
 
 #include <gnome.h>
-#include <glade/glade.h>
 #include <config.h>
 #include "new_window.h"
 #include "main_window.h"
@@ -45,15 +44,15 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	gchar *save_in_list;
 	GwgetData *gwgetdata;
 		
-	window = glade_xml_get_widget(xml, "new_window");
-	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
+	window = GTK_WIDGET (gtk_builder_get_object(builder, "new_window"));
+	combo = GTK_WIDGET (gtk_builder_get_object (builder, "save_in_comboboxentry"));
 	save_in_entry=GTK_ENTRY(GTK_BIN(combo)->child);
 	
-	url=g_strstrip((gchar *)(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "url_entry")))));
+	url=g_strstrip((gchar *)(gtk_entry_get_text (GTK_ENTRY(GTK_WIDGET (gtk_builder_get_object(builder, "url_entry"))))));
 	
 	if (strcmp(url,"")) {
 		url = g_strdup(url);
-		save_in=g_strdup(gtk_entry_get_text (GTK_ENTRY(glade_xml_get_widget(xml, "save_in_entry"))));
+		save_in=g_strdup(gtk_entry_get_text (GTK_ENTRY(GTK_WIDGET (gtk_builder_get_object(builder, "save_in_entry")))));
 		
 		if (!strcmp(save_in,"") && gwget_pref.download_dir) {
 			save_in=g_strdup(gwget_pref.download_dir);
@@ -80,7 +79,7 @@ on_cancel_button_clicked(GtkWidget *widget,gpointer data)
 {
 	GtkWidget *window = NULL;
 	
-	window = glade_xml_get_widget (xml,"new_window");
+	window = GTK_WIDGET (gtk_builder_get_object (builder,"new_window"));
 	
 	gtk_widget_hide (window);
 }
@@ -99,10 +98,10 @@ create_new_window(void)
 	}
 		
 	
-	window = glade_xml_get_widget (xml, "new_window");
+	window = GTK_WIDGET (gtk_builder_get_object (builder, "new_window"));
 
 	/* if clipboards data is an URL, then leave url value as is, else -- empty string */
-	entry = GTK_ENTRY(glade_xml_get_widget (xml, "url_entry"));
+	entry = GTK_ENTRY(GTK_WIDGET (gtk_builder_get_object (builder, "url_entry")));
 	if ( (url!=NULL) && !check_url( "http://", url ) && !check_url( "ftp://", url)) {
 		g_free(url);
 		url = NULL;
@@ -132,7 +131,7 @@ on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
 						NULL);
 	
-	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
+	combo = GTK_WIDGET (gtk_builder_get_object (builder, "save_in_comboboxentry"));
 	save_in_entry=GTK_ENTRY(GTK_BIN(combo)->child);
 	
 	if (gtk_dialog_run (GTK_DIALOG (filesel)) == GTK_RESPONSE_ACCEPT) {
@@ -154,8 +153,8 @@ create_new_window_with_url (gchar *url)
 	GtkWidget *window;
 	GtkWidget *entry;
 	
-	window = glade_xml_get_widget (xml, "new_window");
-	entry = glade_xml_get_widget (xml, "url_entry");
+	window = GTK_WIDGET (gtk_builder_get_object (builder, "new_window"));
+	entry = GTK_WIDGET (gtk_builder_get_object (builder, "url_entry"));
 	gtk_entry_set_text (GTK_ENTRY(entry), url);
 	
 	gtk_list_store_clear (GTK_LIST_STORE(save_in_model));

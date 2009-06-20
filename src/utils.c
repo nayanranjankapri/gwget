@@ -15,7 +15,6 @@
  */
 
 #include <gnome.h>
-#include <glade/glade.h>
 #include "main_window.h"
 #include "utils.h"
 #include "gwget_data.h"
@@ -28,7 +27,7 @@ run_dialog (gchar *title, gchar *message, gchar *cancel_message, gchar *action_m
 	GtkWidget *dialog;
 	gint response;
 	
-	dialog = gtk_message_dialog_new_with_markup ( GTK_WINDOW (glade_xml_get_widget(xml, "main_window")),
+	dialog = gtk_message_dialog_new_with_markup ( GTK_WINDOW (GTK_WIDGET (gtk_builder_get_object(builder, "main_window")) ),
 			GTK_DIALOG_MODAL,
 			GTK_MESSAGE_QUESTION,
 			GTK_BUTTONS_NONE,
@@ -53,7 +52,7 @@ run_dialog_information(gchar *title, gchar *msg)
 {
 	GtkWidget *dialog;
 
-  dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (glade_xml_get_widget(xml, "main_window")),
+  dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (GTK_WIDGET(gtk_builder_get_object (builder, "main_window"))),
           GTK_DIALOG_MODAL,
           GTK_MESSAGE_INFO,
           GTK_BUTTONS_CLOSE,
@@ -71,7 +70,7 @@ run_dialog_error (gchar *title, gchar *message)
 {
     GtkWidget *dialog;
     
-    dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (glade_xml_get_widget(xml, "main_window")),
+    dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (GTK_WIDGET (gtk_builder_get_object(builder, "main_window"))),
             GTK_DIALOG_MODAL,
             GTK_MESSAGE_ERROR,
             GTK_BUTTONS_CLOSE,

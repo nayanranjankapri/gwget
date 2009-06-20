@@ -15,7 +15,6 @@
  */
  
 #include <config.h>
-#include <glade/glade.h>
 #include <gnome.h>
 #include <gconf/gconf-client.h>
 #include <glib/gstdio.h>
@@ -59,20 +58,24 @@ void
 main_window(void) 
 {
 	GtkWidget * window = NULL;
-	gchar *xml_file = NULL,*toolbar_setting;
+	gchar *builder_file = NULL,*toolbar_setting;
 	GtkWidget *treev,*toolbar,*menu_item, *combo;
 	GtkTreeSelection *select;
-	
+	GError* error = NULL;
 
-	if (!xml) {
-		xml_file=g_build_filename(DATADIR,"gwget.glade",NULL);
-		xml = glade_xml_new(xml_file,NULL,NULL);
-	
-		glade_xml_signal_autoconnect(xml);
+	if (!builder) {
+		builder_file=g_build_filename(DATADIR,"gwget.ui",NULL);
+		builder = gtk_builder_new();
+		if (!gtk_builder_add_from_file (builder, builder_file, &error))
+			{
+				g_warning ("Couldn't load builder file: s");
+				g_error_free (error);
+			}
+		gtk_builder_connect_signals(builder, NULL);
 	}
 	
-	window = glade_xml_get_widget(xml,"main_window");
-	treev = glade_xml_get_widget(xml,"treeview1");
+	window = GTK_WIDGET (gtk_builder_get_object(builder,"main_window"));
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	model = create_model();
 	gtk_tree_view_set_model(GTK_TREE_VIEW(treev),GTK_TREE_MODEL(model));
 	select = gtk_tree_view_get_selection (GTK_TREE_VIEW (treev));
@@ -113,7 +116,7 @@ main_window(void)
 			 GUINT_TO_POINTER(dnd_type));	
 					 
 	/* Set the toolbar like gnome preferences */
-	toolbar = glade_xml_get_widget(xml,"toolbar1");
+	toolbar = GTK_WIDGET (gtk_builder_get_object(builder,"toolbar1"));
 	toolbar_setting = gconf_client_get_string(gconf_client,"/desktop/gnome/interface/toolbar_style",NULL);
 	
 	if (!strcmp(toolbar_setting,"icons")) {
@@ -141,9 +144,9 @@ main_window(void)
 				NULL);
 	
 	/* Show the toolbar ? */
-	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_toolbar")),gwget_pref.view_toolbar);
-	toolbar = glade_xml_get_widget(xml,"toolbar1"); 
-	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_toolbar");
+	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM (gtk_builder_get_object(builder,"view_toolbar")),gwget_pref.view_toolbar);
+	toolbar = GTK_WIDGET (gtk_builder_get_object(builder,"toolbar1"));
+	menu_item = GTK_WIDGET (gtk_builder_get_object(builder,"view_toolbar"));
 	if (gwget_pref.trayonly) {
 		gtk_widget_show(GTK_WIDGET(window));
 		gtk_widget_hide(GTK_WIDGET(window));
@@ -158,19 +161,19 @@ main_window(void)
 	}
 
 	/* Show the statusbar ? */
-	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(glade_xml_get_widget(xml,"view_statusbar")), gwget_pref.view_statusbar);
-	menu_item=glade_xml_get_widget(GLADE_XML(xml),"view_statusbar");
+	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM (gtk_builder_get_object(builder,"view_statusbar")), gwget_pref.view_statusbar);
+	menu_item = GTK_WIDGET (gtk_builder_get_object(builder,"view_statusbar"));
 	if (gwget_pref.view_statusbar)
 	{
-		gtk_widget_show (GTK_WIDGET(glade_xml_get_widget(xml, "statusbar")));
+		gtk_widget_show (GTK_WIDGET(GTK_WIDGET (gtk_builder_get_object(builder, "statusbar"))));
 	} else {
-		gtk_widget_hide (GTK_WIDGET(glade_xml_get_widget(xml, "statusbar")));
+		gtk_widget_hide (GTK_WIDGET(GTK_WIDGET (gtk_builder_get_object(builder, "statusbar"))));
 	}
 
 	if (there_are_completed_on_startup) {
-		gtk_widget_set_sensitive (glade_xml_get_widget (xml, "clear_button"), TRUE);
+		gtk_widget_set_sensitive (GTK_WIDGET (gtk_builder_get_object (builder, "clear_button")), TRUE);
 	} else {
-		gtk_widget_set_sensitive (glade_xml_get_widget (xml, "clear_button"), FALSE);
+		gtk_widget_set_sensitive (GTK_WIDGET (gtk_builder_get_object (builder, "clear_button")), FALSE);
 	}
 
 	systray_load();
@@ -178,7 +181,7 @@ main_window(void)
 
 	/* Create the model for the "save in" option in new download dialog */
 	save_in_model = (GtkTreeModel*)gtk_list_store_new (1, G_TYPE_STRING);
-	combo = glade_xml_get_widget (xml, "save_in_comboboxentry");
+	combo = GTK_WIDGET (gtk_builder_get_object (builder, "save_in_comboboxentry"));
 	gtk_combo_box_set_model(GTK_COMBO_BOX(combo), save_in_model);
 	gtk_combo_box_entry_set_text_column (GTK_COMBO_BOX_ENTRY(combo), 0);
 	gtk_entry_set_text(GTK_ENTRY(GTK_BIN(combo)->child), gwget_pref.download_dir);
@@ -353,10 +356,10 @@ gwget_get_defaults_from_gconf(void)
 	/* Default width and height */
 	default_width=gconf_client_get_int (gconf_client,"/apps/gwget2/default_width",NULL);
 	default_height=gconf_client_get_int (gconf_client,"/apps/gwget2/default_height",NULL);
-	gtk_window_resize (GTK_WINDOW (glade_xml_get_widget(xml,"main_window")),default_width,default_height);
+	gtk_window_resize (GTK_WINDOW (gtk_builder_get_object(builder,"main_window")),default_width,default_height);
 	
 	/* Default position */
-	gtk_window_move(GTK_WINDOW(glade_xml_get_widget(xml,"main_window")),
+	gtk_window_move(GTK_WINDOW(GTK_WIDGET (gtk_builder_get_object(builder,"main_window"))),
 					gconf_client_get_int (gconf_client,"/apps/gwget2/position_x",NULL),
 					gconf_client_get_int (gconf_client,"/apps/gwget2/position_y",NULL)
 					);
@@ -581,7 +584,7 @@ gwget_gconf_notify_toolbar(GConfClient *client,
 	
 	value = gconf_entry_get_value (entry);
 	
-	toolbar = glade_xml_get_widget(xml,"toolbar1");
+	toolbar = GTK_WIDGET (gtk_builder_get_object(builder,"toolbar1"));
 	toolbar_setting = (gchar *)gconf_value_get_string(value);
 	
 	if (!strcmp(toolbar_setting,"icons")) {
@@ -607,18 +610,24 @@ static void
 show_prefered_columns(void)
 {	
 	GtkWidget *treev,*column,*checkitem;
-	gchar *xml_file=NULL;
+	gchar *builder_file=NULL;
 	
-	if (!xml_pref) {
-		xml_file=g_build_filename(DATADIR,"preferences.glade",NULL);
-		xml_pref = glade_xml_new(xml_file,NULL,NULL);
-		glade_xml_signal_autoconnect(xml_pref);
+	if (!builder_pref) {
+		GError* error = NULL;
+		builder_file=g_build_filename(DATADIR,"preferences.ui",NULL);
+		builder_pref = gtk_builder_new();
+		if (!gtk_builder_add_from_file (builder, builder_file, &error))
+			{
+				g_warning ("Couldn't load builder file: s");
+				g_error_free (error);
+			}
+		gtk_builder_connect_signals(builder_pref, NULL);
 	}
 	
-	treev = glade_xml_get_widget(xml,"treeview1");
+	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),CURRENTSIZE_COLUMN-2);
-	checkitem=glade_xml_get_widget(xml_pref,"check_actual_size");
+	checkitem=GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_actual_size"));
 	if (gwget_pref.view_actual_size) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
@@ -628,7 +637,7 @@ show_prefered_columns(void)
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),TOTALSIZE_COLUMN-2);
-	checkitem=glade_xml_get_widget(xml_pref,"check_total_size");
+	checkitem=GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_total_size"));
 	if (gwget_pref.view_total_size) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column),TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
@@ -638,7 +647,7 @@ show_prefered_columns(void)
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),PERCENTAGE_COLUMN-2);
-	checkitem=glade_xml_get_widget(xml_pref,"check_percentage");
+	checkitem=GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_percentage"));
 	if (gwget_pref.view_percentage) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), TRUE);
@@ -648,7 +657,7 @@ show_prefered_columns(void)
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),ELAPSETIME_COLUMN-3);
-	checkitem=glade_xml_get_widget(xml_pref,"check_elapse_time");
+	checkitem=GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_elapse_time"));
 	if (gwget_pref.view_elapse_time) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
@@ -658,7 +667,7 @@ show_prefered_columns(void)
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),REMAINTIME_COLUMN-5);
-	checkitem=glade_xml_get_widget(xml_pref,"check_rem_time");
+	checkitem=GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_rem_time"));
 	if (gwget_pref.view_rem_time) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
@@ -668,7 +677,7 @@ show_prefered_columns(void)
 	}
 	
 	column=(GtkWidget *)gtk_tree_view_get_column(GTK_TREE_VIEW(treev),SPEED_COLUMN-7);
-	checkitem=glade_xml_get_widget(xml_pref,"check_down_speed");
+	checkitem=GTK_WIDGET (gtk_builder_get_object(builder_pref,"check_down_speed"));
 	if (gwget_pref.view_down_speed) {
 		gtk_tree_view_column_set_visible(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), TRUE);
@@ -677,23 +686,23 @@ show_prefered_columns(void)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem), FALSE);
 	}
 	
-	checkitem = glade_xml_get_widget(xml_pref,"limit_speed_check");
+	checkitem = GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_speed_check"));
 	if (gwget_pref.limit_speed) {
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
 	} else {
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
-	checkitem = glade_xml_get_widget(xml_pref,"limit_speed_spin");
+	checkitem = GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_speed_spin"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkitem), (gdouble)gwget_pref.max_speed);
 
 
-	checkitem = glade_xml_get_widget(xml_pref,"limit_simultaneousdownloads_check");
+	checkitem = GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_simultaneousdownloads_check"));
 	if (gwget_pref.limit_simultaneousdownloads) {
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),TRUE);
 	} else {
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(checkitem),FALSE);
 	}
-	checkitem = glade_xml_get_widget(xml_pref,"limit_simultaneousdownloads_spin");
+	checkitem = GTK_WIDGET (gtk_builder_get_object(builder_pref,"limit_simultaneousdownloads_spin"));
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(checkitem), (gdouble)gwget_pref.max_simultaneousdownloads);
 
 }
@@ -711,7 +720,7 @@ gwget_remember_window_size_and_position(void)
 	GConfChangeSet *cs;
 
 	/* Remember the size of the window */
-	main_window=glade_xml_get_widget(xml,"main_window");
+	main_window=GTK_WIDGET (gtk_builder_get_object(builder,"main_window"));
 	allocation= &(GTK_WIDGET (main_window)->allocation);
 	cs = gconf_change_set_new ();
 	gconf_change_set_set_int (cs, "/apps/gwget2/default_height", allocation->height);

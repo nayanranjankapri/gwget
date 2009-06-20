@@ -18,7 +18,6 @@
 #define _MAIN_WINDOW_H
 
 #include <gconf/gconf-client.h>
-#include <glade/glade.h>
 #include <gtk/gtk.h>
 
 enum {
@@ -61,10 +60,10 @@ static  GtkTargetEntry dragtypes[] = {
 		{ "_NETSCAPE_URL", 	0, TARGET_NETSCAPE_URL }
 };
 
-GladeXML *xml;
+GtkBuilder *builder;
 
 /* xml of the new download window */
-GladeXML *xml_new;
+GtkBuilder *builder_new;
 
 
 /* the model of the GtkTreeView */
@@ -83,7 +82,7 @@ GtkStatusIcon *tray_icon;
 /* XML for the preferences gui */
 /* It's here because we must load it from main_window.c to put */
 /* the options of the column list from Gconf on load */
-GladeXML *xml_pref;
+GtkBuilder *builder_pref;
 
 /* List of introduced path in save in dialogs */
 GList *save_in_paths;
