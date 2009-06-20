@@ -1,5 +1,6 @@
 2009-06-20  David Sedeño <david@alderia.com>
 
+  * data/gwget.ui: Redone the menuitems
   * src/main_window.c: Load correct file
   * data/preferences.ui: Update with glade-3
   
