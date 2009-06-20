@@ -52,7 +52,7 @@ void on_ok_button_clicked(GtkWidget *widget, gpointer data)
 	
 	if (strcmp(url,"")) {
 		url = g_strdup(url);
-		save_in=g_strdup(gtk_entry_get_text (GTK_ENTRY(GTK_WIDGET (gtk_builder_get_object(builder, "save_in_entry")))));
+		save_in=g_strdup(gtk_combo_box_get_active_text (GTK_COMBO_BOX( GTK_WIDGET (gtk_builder_get_object(builder, "save_in_comboboxentry")))));
 		
 		if (!strcmp(save_in,"") && gwget_pref.download_dir) {
 			save_in=g_strdup(gwget_pref.download_dir);

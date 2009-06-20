@@ -1,6 +1,8 @@
 2009-06-20  David Sedeño <david@alderia.com>
 
-  * data/gwget.ui: Redone the menuitems
+  * src/new_window.c: Use gtk_combo_box_get_active_text instead 
+    of gtk_entry_get_text
+  * data/gwget.ui: Redone the menuitems. Remove unused dialog3.
   * src/main_window.c: Load correct file
   * data/preferences.ui: Update with glade-3
   
