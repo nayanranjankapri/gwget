@@ -64,13 +64,12 @@ main_window(void)
 	GError* error = NULL;
 
 	if (!builder) {
-		builder_file=g_build_filename(DATADIR,"gwget.ui",NULL);
+		builder_file = g_build_filename(DATADIR,"gwget.ui",NULL);
 		builder = gtk_builder_new();
-		if (!gtk_builder_add_from_file (builder, builder_file, &error))
-			{
-				g_warning ("Couldn't load builder file: s");
+		if (!gtk_builder_add_from_file (builder, builder_file, &error)) {
+				g_warning ("Couldn't load builder file: %s", builder_file);
 				g_error_free (error);
-			}
+		}
 		gtk_builder_connect_signals(builder, NULL);
 	}
 	
@@ -610,18 +609,17 @@ static void
 show_prefered_columns(void)
 {	
 	GtkWidget *treev,*column,*checkitem;
-	gchar *builder_file=NULL;
+	gchar *builder_file = NULL;
+	GError* error = NULL;
 	
 	if (!builder_pref) {
-		GError* error = NULL;
-		builder_file=g_build_filename(DATADIR,"preferences.ui",NULL);
+		builder_file = g_build_filename (DATADIR, "preferences.ui", NULL);
 		builder_pref = gtk_builder_new();
-		if (!gtk_builder_add_from_file (builder, builder_file, &error))
-			{
-				g_warning ("Couldn't load builder file: s");
+		if (!gtk_builder_add_from_file (builder_pref, builder_file, &error)) {
+				g_warning ("Couldn't load builder file: %s", builder_file);
 				g_error_free (error);
-			}
-		gtk_builder_connect_signals(builder_pref, NULL);
+		}
+		gtk_builder_connect_signals (builder_pref, NULL);
 	}
 	
 	treev = GTK_WIDGET (gtk_builder_get_object(builder,"treeview1"));

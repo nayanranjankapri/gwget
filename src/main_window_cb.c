@@ -277,11 +277,11 @@ on_boton_pref_clicked(GtkWidget *widget, gpointer data)
 	GError* error = NULL;
 	
 	if (!builder_pref) {
-		builder_file=g_build_filename(DATADIR,"preferences.ui",NULL);
+		builder_file = g_build_filename(DATADIR,"preferences.ui",NULL);
 		builder_pref = gtk_builder_new();
 		if (!gtk_builder_add_from_file (builder_pref, builder_file, &error))
 			{
-				g_warning ("Couldn't load builder file: s");
+				g_warning ("Couldn't load builder file: %s", builder_file);
 				g_error_free (error);
 			}
 		gtk_builder_connect_signals(builder_pref, NULL);

@@ -1,6 +1,14 @@
 2009-06-20  David Sedeño <david@alderia.com>
 
-  * Mass changes to migrate to gtkbuilder. Thanks to Artur Roma <ari-tczew@tlen.pl>
+  * src/main_window.c: Load correct file
+  * data/preferences.ui: Update with glade-3
+  
+2009-06-20  David Sedeño <david@alderia.com>
+
+  * configure.ac, data/Makefile.am, data/gwget.ui, data/preferences.ui,
+    src/gwget_data.c, src/main_window.c, src/main_window.h, src/main_window_cb.c,
+    src/new_window.c, src/systray.c, src/utils.c
+  Mass changes to migrate to gtkbuilder. Thanks to Artur Roma <ari-tczew@tlen.pl>
 
 2009-06-18  David Sedeño <david@alderia.com>
 
