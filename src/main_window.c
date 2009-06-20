@@ -542,7 +542,7 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 	
 	drop_ok = FALSE;
 	if (dnd_type==TARGET_URI_LIST) {
-		uris = g_uri_list_extract_uris (seldata->data);
+		uris = g_uri_list_extract_uris ((gchar *)seldata->data);
 		for (uri=uris[0]; uri != NULL; uri++) {
 			files = g_list_prepend (files, uri);
 		}

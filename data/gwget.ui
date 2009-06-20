@@ -26,6 +26,7 @@
                       <object class="GtkImageMenuItem" id="Nuevo">
                         <property name="label">gtk-new</property>
                         <property name="visible">True</property>
+                        <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <property name="accel_group">accelgroup1</property>
                         <property name="always_show_image">True</property>
@@ -61,7 +62,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem" id="imagemenuitem1">
+                      <object class="GtkImageMenuItem" id="menuitem5">
                         <property name="label">gtk-quit</property>
                         <property name="visible">True</property>
                         <property name="use_underline">True</property>
@@ -335,6 +336,85 @@
   </object>
   <object class="GtkMenu" id="popup1">
     <property name="visible">True</property>
+    <child>
+      <object class="GtkImageMenuItem" id="pause_download">
+        <property name="label" translatable="yes">Pause</property>
+        <property name="visible">True</property>
+        <property name="image">image7</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_popup_pause_button_clicked"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="continue_download">
+        <property name="label" translatable="yes">Continue</property>
+        <property name="visible">True</property>
+        <property name="image">image8</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_popup_continue_activate"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
+        <property name="visible">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="open">
+        <property name="label" translatable="yes">Open</property>
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Open file</property>
+        <property name="image">image9</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_open_download_activate"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="open_directory">
+        <property name="label" translatable="yes">Open directory</property>
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Open target directory</property>
+        <property name="image">image10</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_open_directory_activate"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="separatormenuitem2">
+        <property name="visible">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="remove">
+        <property name="label" translatable="yes">Remove from list</property>
+        <property name="visible">True</property>
+        <property name="image">image11</property>
+        <property name="use_stock">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="cancel_download">
+        <property name="label" translatable="yes">Cancel</property>
+        <property name="visible">True</property>
+        <property name="image">image12</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_cancel_download_activate" after="yes"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="separatormenuitem3">
+        <property name="visible">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="imagemenuitem1">
+        <property name="label">gtk-properties</property>
+        <property name="visible">True</property>
+        <property name="use_underline">True</property>
+        <property name="use_stock">True</property>
+        <signal name="activate" handler="on_properties_activate"/>
+      </object>
+    </child>
   </object>
   <object class="GtkDialog" id="dialog2">
     <property name="border_width">5</property>
@@ -965,6 +1045,29 @@
     </child>
   </object>
   <object class="GtkAccelGroup" id="accelgroup1"/>
+  <object class="GtkImage" id="image7">
+    <property name="visible">True</property>
+    <property name="stock">gtk-stop</property>
+  </object>
+  <object class="GtkImage" id="image8">
+    <property name="visible">True</property>
+    <property name="stock">gtk-missing-image</property>
+  </object>
+  <object class="GtkImage" id="image9">
+    <property name="visible">True</property>
+  </object>
+  <object class="GtkImage" id="image10">
+    <property name="visible">True</property>
+    <property name="stock">gtk-open</property>
+  </object>
+  <object class="GtkImage" id="image11">
+    <property name="visible">True</property>
+    <property name="stock">gtk-remove</property>
+  </object>
+  <object class="GtkImage" id="image12">
+    <property name="visible">True</property>
+    <property name="stock">gtk-cancel</property>
+  </object>
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="stock">gtk-refresh</property>
