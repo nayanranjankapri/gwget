@@ -1,3 +1,7 @@
+2009-06-27  David Sedeño <david@alderia.com>
+
+  * po/POTFILES.in: Remove .glade file and add .ui files
+
 2009-06-20  David Sedeño <david@alderia.com>
 
   * src/new_window.c: Use gtk_combo_box_get_active_text instead 

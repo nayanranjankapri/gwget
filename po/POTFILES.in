@@ -2,9 +2,9 @@
 # Please keep this file sorted alphabetically.
 [encoding: UTF-8]
 data/gwget.desktop.in.in
-data/gwget.glade
 data/gwget.schemas.in
-data/preferences.glade
+data/gwget.ui
+data/preferences.ui
 epiphany-extension/gwget.xml.in.in
 src/custom-cell-renderer-progressbar.c
 src/gwget_data.c
