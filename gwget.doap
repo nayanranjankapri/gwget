@@ -1,0 +1,20 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:gnome="http://api.gnome.org/doap-extensions#"
+         xmlns="http://usefulinc.com/ns/doap#">
+
+  <name xml:lang="en">Gwget Download Manager</name>
+  <shortdesc xml:lang="en">Download manager for Gnome</shortdesc>
+  <homepage rdf:resource="http://projects.gnome.org/gwget" />
+  <download-page rdf:resource="ftp://ftp.gnome.org/pub/GNOME/sources/gwget/"/>
+  <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=gwget"/>
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>David Sedeño Fernández</foaf:name>
+      <foaf:mbox rdf:resource="mailto:david@alderia.com" />
+      <gnome:userid>davidsf</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+</Project>
