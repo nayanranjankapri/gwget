@@ -1,5 +1,10 @@
+2009-06-30  David Sedeño <david@alderia.com>
+
+  * data/gwget.ui: Set button size to menu. Fixes #527818
+
 2009-06-27  David Sedeño <david@alderia.com>
 
+  * gwget.doap: new file
   * data/gwget.ui: Set resume icon in popup menu
   * po/POTFILES.in: Remove .glade file and add .ui files
 
