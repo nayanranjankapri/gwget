@@ -1,21 +1,23 @@
 # Italian translation of gwget
-# Copyright (C) 2003-2007 Free Software Foundation
+# Copyright (C) 2003-2009 Free Software Foundation
 # This file is distributed under the same licence as the gwget package.
 # Marco Giorgetti <midimarcus@gmail.com>, 2005.
-# Gianvito Cavasoli <janvitus@ubuntu-it.org>, 2007-2008.
-# 
-# 
+# Gianvito Cavasoli <janvitus@ubuntu-it.org>, 2007, 2008, 2009.
+#
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Gwget 0.99\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 17:56+0000\n"
-"PO-Revision-Date: 2008-09-06 16:02+0200\n"
+"Project-Id-Version: Gwget 1.0.2\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&component=general\n"
+"POT-Creation-Date: 2009-06-27 19:35+0000\n"
+"PO-Revision-Date: 2009-06-23 13:03+0200\n"
 "Last-Translator: Gianvito Cavasoli <janvitus@ubuntu-it.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../data/gwget.desktop.in.in.h:1
 msgid "Download Manager"
@@ -23,266 +25,52 @@ msgstr "Gestore scaricamenti"
 
 #: ../data/gwget.desktop.in.in.h:2
 msgid "Download files from the Internet"
-msgstr "Scarica file da internet"
+msgstr "Scarica file da Internet"
 
-#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
 msgid "Gwget Download Manager"
 msgstr "Gwget - Gestore scaricamenti"
 
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
-
-#: ../data/gwget.glade.h:2
-msgid "<b>Download</b>"
-msgstr "<b>Scaricamento</b>"
-
-#: ../data/gwget.glade.h:3
-msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr "<b>Inserire la somma md5 per compararla</b>"
-
-#: ../data/gwget.glade.h:4
-msgid "<b>Properties</b>"
-msgstr "<b>Proprietà</b>"
-
-#: ../data/gwget.glade.h:5
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Nuovo scaricamento</span>"
-
-#: ../data/gwget.glade.h:6
-msgid "Cancel"
-msgstr "Annulla"
-
-#: ../data/gwget.glade.h:7
-msgid "Cancel download"
-msgstr "Annulla scaricamento"
-
-#: ../data/gwget.glade.h:8
-msgid "Cancel the download"
-msgstr "Annulla lo scaricamento"
-
-#: ../data/gwget.glade.h:9
-msgid "Clear"
-msgstr "Pulisci"
-
-#: ../data/gwget.glade.h:10
-msgid "Compare md5 sum"
-msgstr "Compara somma md5"
-
-#: ../data/gwget.glade.h:11
-msgid "Continue"
-msgstr "Continua"
-
-#: ../data/gwget.glade.h:12
-msgid "Continue download"
-msgstr "Continua scaricamento"
-
-#: ../data/gwget.glade.h:13
-msgid "Continue with the download"
-msgstr "Continua con lo scaricamento"
-
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
-#: ../src/main_window_cb.c:739
-msgid "Gwget - Download Manager"
-msgstr "Gwget - Gestore scaricamenti"
-
-#: ../data/gwget.glade.h:15
-msgid "Help"
-msgstr "Aiuto"
-
-#: ../data/gwget.glade.h:16
-msgid "Information"
-msgstr "Informazioni"
-
-#: ../data/gwget.glade.h:17
-msgid "Local Directory:"
-msgstr "Cartella locale: "
-
-#: ../data/gwget.glade.h:18
-msgid "Local File:"
-msgstr "File locale: "
-
-#: ../data/gwget.glade.h:19
-msgid "Md5 Sum:"
-msgstr "Somma md5:"
-
-#: ../data/gwget.glade.h:20
-msgid "Multimedia files (Videos and images)"
-msgstr "File multimediali (video e immagini)"
-
-#: ../data/gwget.glade.h:21
-msgid "New Download"
-msgstr "Nuovo scaricamento"
-
-#: ../data/gwget.glade.h:22
-msgid "New download"
-msgstr "Nuovo scaricamento"
-
-#: ../data/gwget.glade.h:23
-msgid "Open"
-msgstr "Apri"
-
-#: ../data/gwget.glade.h:24
-msgid "Open directory"
-msgstr "Apri cartella"
-
-#: ../data/gwget.glade.h:25
-msgid "Open file"
-msgstr "Apri file"
-
-#: ../data/gwget.glade.h:26
-msgid "Open target directory"
-msgstr "Apri cartella di destinazione"
-
-#: ../data/gwget.glade.h:27
-msgid "Pause"
-msgstr "Sospendi"
-
-#: ../data/gwget.glade.h:28
-msgid "Pause all"
-msgstr "Sospendi tutti"
-
-#: ../data/gwget.glade.h:29
-msgid "Pause all downloads"
-msgstr "Sospende tutti gli scaricamenti"
-
-#: ../data/gwget.glade.h:30
-msgid "Pause download"
-msgstr "Scaricamento sospeso"
-
-#: ../data/gwget.glade.h:31
-msgid "Pause the download"
-msgstr "Sospende lo scaricamento"
-
-#: ../data/gwget.glade.h:32
-msgid "Properties"
-msgstr "Proprietà"
-
-#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
-msgid "Recursive"
-msgstr "Ricorsivo"
-
-#: ../data/gwget.glade.h:34
-msgid "Recursive options"
-msgstr "Opzioni di ricorsione"
-
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
-msgid "Remove all"
-msgstr "Rimuovi tutti"
-
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
-msgid "Remove completed"
-msgstr "Rimuovi completati"
-
-#: ../data/gwget.glade.h:37
-msgid "Remove completed downloads"
-msgstr "Rimuove gli scaricamenti completati"
-
-#: ../data/gwget.glade.h:38
-msgid "Remove from List"
-msgstr "Rimuovere dalla lista"
-
-#: ../data/gwget.glade.h:39
-msgid "Remove from list"
-msgstr "Rimuovi dalla lista"
-
-#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
-msgid "Remove inactive"
-msgstr "Rimuovi inattivi"
-
-#: ../data/gwget.glade.h:41
-msgid "Resume all"
-msgstr "Riprendi tutti"
-
-#: ../data/gwget.glade.h:42
-msgid "Resume all downloads"
-msgstr "Riprendi tutti gli scaricamenti"
-
-#: ../data/gwget.glade.h:43
-msgid "Save in:"
-msgstr "Salva in:"
-
-#: ../data/gwget.glade.h:44
-msgid "Stat_usbar"
-msgstr "Barra di stat_o"
-
-#: ../data/gwget.glade.h:45
-msgid "The index file only"
-msgstr "Solo file index"
-
-#: ../data/gwget.glade.h:46
-msgid "This site (mirror)"
-msgstr "Questo sito (mirror)"
-
-#: ../data/gwget.glade.h:47
-msgid "URL:"
-msgstr "URL: "
-
-#: ../data/gwget.glade.h:48
-msgid "Verify..."
-msgstr "Verifica..."
-
-#: ../data/gwget.glade.h:49
-msgid "_Archive"
-msgstr "_Archivio"
-
-#: ../data/gwget.glade.h:50
-msgid "_Download"
-msgstr "_Scaricamento"
-
-#: ../data/gwget.glade.h:51
-msgid "_Edit"
-msgstr "_Modifica"
-
-#: ../data/gwget.glade.h:52
-msgid "_Toolbar"
-msgstr "Barra degli _strumenti"
-
-#: ../data/gwget.glade.h:53
-msgid "_View"
-msgstr "_Visualizza"
-
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
-msgstr "Chiedere dove salvare ogni nuovo scaricamento"
+msgstr "Chiede dove salvare ogni nuovo scaricamento"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
-msgstr "Convertire collegamenti"
+msgstr "Converte collegamenti"
 
 #: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
-msgstr "Converte in collegamenti relativi nella modalità ricorsiva"
+msgstr "Converte in collegamenti relativi nella modalità ricorsiva."
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
-msgstr "Cartella di scaricamento predefinita"
+msgstr "Directory di scaricamento predefinita"
 
 #: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
-msgstr "Scaricare elementi richiesti dalla pagina"
+msgstr "Scarica i requisiti della pagina"
 
 #: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
-msgstr "Seguire solo i collegamenti relativi"
+msgstr "Segue i collegamenti relativi"
 
 #: ../data/gwget.schemas.in.h:7
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Se impostato a vero, chiedere sempre la cartella destinazione quando parte "
-"un nuovo scaricamento. Se impostato a falso, salvare sempre nella cartella "
-"predefinita senza chiederlo all'utente."
+"Se impostato a vero, chiede sempre la cartella di destinazione quando parte "
+"un nuovo scaricamento. Se impostato a falso, salva sempre nella directory "
+"predefinita senza chiedere all'utente."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
-msgstr "Limitare velocità massima"
+msgstr "Limita velocità massima"
 
 #: ../data/gwget.schemas.in.h:9
 msgid "Limit number of simultaneous downloads"
-msgstr "Limitare numero di scaricamenti simultanei"
+msgstr "Limita numero di scaricamenti simultanei"
 
 #: ../data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
@@ -306,199 +94,47 @@ msgstr "Numero di tentativi"
 
 #: ../data/gwget.schemas.in.h:15
 msgid "Open the file after download"
-msgstr "Aprire il file dopo averlo scaricato"
+msgstr "Apre il file dopo averlo scaricato"
 
 #: ../data/gwget.schemas.in.h:16
 msgid "Resume downloads at startup"
-msgstr "Riprendere gli scaricamenti all'avvio"
+msgstr "Riprende gli scaricamenti all'avvio"
 
 #: ../data/gwget.schemas.in.h:17
 msgid "View download speed column"
-msgstr "Visualizzare la colonna della velocità di scaricamento"
+msgstr "Visualizza la colonna della velocità di scaricamento"
 
 #: ../data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
-msgstr "Visualizzare la colonna del tempo trascorso"
+msgstr "Visualizza la colonna del tempo trascorso"
 
 #: ../data/gwget.schemas.in.h:19
 msgid "View percentage column"
-msgstr "Visualizzare la colonna della percentuale"
+msgstr "Visualizza la colonna della percentuale"
 
 #: ../data/gwget.schemas.in.h:20
 msgid "View remaining time column"
-msgstr "Visualizzare la colonna del tempo rimanente"
+msgstr "Visualizza la colonna del tempo rimanente"
 
 #: ../data/gwget.schemas.in.h:21
 msgid "View statusbar"
-msgstr "Visualizzare barra della stato"
+msgstr "Visualizza la barra di stato"
 
 #: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
-msgstr "Visualizzare la barra degli strumenti"
+msgstr "Visualizza la barra degli strumenti"
 
 #: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
-msgstr "Visualizzare la colonna della dimensione totale"
+msgstr "Visualizza la colonna della dimensione totale"
 
 #: ../data/gwget.schemas.in.h:24
 msgid "Whether to display the statusbar."
-msgstr "Mostrare la barra di stato."
+msgstr "Indica se mostrare la barra di stato."
 
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
 msgstr "Indica se mostrare la barra degli strumenti."
-
-#: ../data/preferences.glade.h:1
-msgid "   "
-msgstr "   "
-
-#: ../data/preferences.glade.h:3
-msgid "<span weight=\"bold\">Behavior</span>"
-msgstr "<span weight=\"bold\">Comportamento</span>"
-
-#: ../data/preferences.glade.h:4
-msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">Elenco colonne</span>"
-
-#: ../data/preferences.glade.h:5
-msgid "<span weight=\"bold\">General</span>"
-msgstr "<span weight=\"bold\">Generale</span>"
-
-#: ../data/preferences.glade.h:6
-msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">Collegamenti</span>"
-
-#: ../data/preferences.glade.h:7
-msgid "<span weight=\"bold\">Proxy Configuration</span>"
-msgstr "<span weight=\"bold\">Configurazione del proxy</span>"
-
-#: ../data/preferences.glade.h:8
-msgid "Column List"
-msgstr "Elenco colonne"
-
-#: ../data/preferences.glade.h:9
-msgid "Default _GNOME network settings"
-msgstr "Impostazioni di rete predefinite di _GNOME"
-
-#: ../data/preferences.glade.h:10
-msgid "Direct _Internet connection"
-msgstr "Connessione diretta ad _Internet"
-
-#: ../data/preferences.glade.h:11
-msgid "Do_wnload Speed"
-msgstr "Velocità sca_ricamento"
-
-#: ../data/preferences.glade.h:12
-msgid "Don't _create directories"
-msgstr "Non _creare cartelle"
-
-#: ../data/preferences.glade.h:13
-msgid "Follow _relative links only"
-msgstr "Seguire solo i collegamenti _relativi"
-
-#: ../data/preferences.glade.h:14
-msgid "General"
-msgstr "Generale"
-
-#: ../data/preferences.glade.h:15
-msgid "Limit _number of simultaneous download to:"
-msgstr "Limitare il _numero di scaricamenti simultanei a:"
-
-#: ../data/preferences.glade.h:16
-msgid "Network"
-msgstr "Rete"
-
-#: ../data/preferences.glade.h:17
-msgid "P_ort:"
-msgstr "P_orta:"
-
-#: ../data/preferences.glade.h:18
-msgid "Password:"
-msgstr "Parola d'ordine:"
-
-#: ../data/preferences.glade.h:19
-msgid "Preferences"
-msgstr "Preferenze"
-
-#: ../data/preferences.glade.h:20
-msgid "Pro_xy:"
-msgstr "Pro_xy:"
-
-#: ../data/preferences.glade.h:22
-msgid "Remaining _Time"
-msgstr "_Tempo rimanente"
-
-#: ../data/preferences.glade.h:23
-msgid "Sa_ve in:"
-msgstr "Sa_lva in:"
-
-#: ../data/preferences.glade.h:24
-msgid "Total _Size"
-msgstr "_Dimensione totale"
-
-#: ../data/preferences.glade.h:25
-msgid "_Ask where to save for each download"
-msgstr "_Chiedere dove salvare ogni scaricamento"
-
-#: ../data/preferences.glade.h:26
-msgid "_Continue downloads on startup"
-msgstr "_Riprendere gli scaricamenti all'avvio"
-
-#: ../data/preferences.glade.h:27
-msgid "_Convert links"
-msgstr "_Convertire i collegamenti"
-
-#: ../data/preferences.glade.h:28
-msgid "_Current Size"
-msgstr "_Dimensione attuale"
-
-#: ../data/preferences.glade.h:29
-msgid "_Download page requisites"
-msgstr "_Scaricare gli elementi richiesti dalla pagina"
-
-#: ../data/preferences.glade.h:30
-msgid "_Elapsed Time"
-msgstr "Tempo _trascorso"
-
-#: ../data/preferences.glade.h:31
-msgid "_Limit download speed to:"
-msgstr "_Limitare la velocità di scaricamento a:"
-
-#: ../data/preferences.glade.h:32
-msgid "_Manual proxy configuration"
-msgstr "Configurazione _manuale del proxy"
-
-#: ../data/preferences.glade.h:33
-msgid "_Maximum depth level:"
-msgstr "_Massimo livello di profondità:"
-
-#: ../data/preferences.glade.h:34
-msgid "_Number of retries:"
-msgstr "_Numero di tentativi:"
-
-#: ../data/preferences.glade.h:35
-msgid "_Open files automatically after download"
-msgstr "_Aprire automaticamente i file al termine dello scaricamento"
-
-#: ../data/preferences.glade.h:36
-msgid "_Percentage"
-msgstr "_Percentuale"
-
-#: ../data/preferences.glade.h:37
-msgid "_Proxy requires authentication"
-msgstr "Il _proxy richiede l'autenticazione"
-
-#: ../data/preferences.glade.h:38
-msgid "_User:"
-msgstr "_Utente:"
-
-#: ../data/preferences.glade.h:39
-msgid "files"
-msgstr "file"
-
-#: ../data/preferences.glade.h:40
-msgid "kB/sec"
-msgstr "kB/sec"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
@@ -516,159 +152,177 @@ msgstr "Sconosciuto"
 msgid "Failed"
 msgstr "Fallito"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:207
 msgid "stalled"
 msgstr "in stallo"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:239
 msgid "Waiting"
 msgstr "In attesa"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:241
 msgid "Not Started"
 msgstr "Non iniziato"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:243
 msgid "Not Running"
 msgstr "Non in esecuzione"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:245
 msgid "Not Connected"
 msgstr "Non connesso"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:247
 msgid "Connected"
 msgstr "Connesso"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:249
 msgid "Retrieving"
-msgstr "In ricezione"
+msgstr "Recupero"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:251
 msgid "Completed"
 msgstr "Completato"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:255
 msgid "Error"
 msgstr "Errore"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:694
 msgid "Unable to add this download"
 msgstr "Impossibile aggiungere questo scaricamento"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:695
 msgid "This download is already added"
 msgstr "Questo scaricamento è già presente"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1255 ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Errore nell'apertura del file"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1255
 msgid "Couldn't open the file"
 msgstr "Impossibile aprire il file"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:794
 msgid "Download Complete"
 msgstr "Scaricamento completato"
 
+#: ../src/gwget_data.c:810
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Il file «%s» è una scaletta MP3.\n"
+"Scaricare i file che contiene?"
+
+#: ../src/gwget_data.c:812
+msgid "Download files in MP3 playlist?"
+msgstr "Scaricare i file nella scaletta MP3?"
+
+#: ../src/gwget_data.c:813 ../src/main_window.c:809
+msgid "No"
+msgstr "No"
+
+#: ../src/gwget_data.c:813 ../src/main_window.c:809
+msgid "Yes"
+msgstr "Sì"
+
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
-msgstr "Lanciare gwget nell'area di notifica"
+msgstr "Lancia l'applicazione nell'area di notifica"
 
 #: ../src/main.c:41
 msgid "Destination directory for the download"
-msgstr "Cartella di destinazione dello scaricamento"
+msgstr "Directory di destinazione per lo scaricamento"
 
 #: ../src/main.c:42
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:263 ../src/main_window_cb.c:191
+#: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:434
 msgid "File Name"
 msgstr "Nome file"
 
-#: ../src/main_window.c:438
+#: ../src/main_window.c:446
 msgid "State"
 msgstr "Stato"
 
-#: ../src/main_window.c:450
+#: ../src/main_window.c:458
 msgid "Current Size"
 msgstr "Dimensione attuale"
 
-#: ../src/main_window.c:462
+#: ../src/main_window.c:470
 msgid "Total Size"
 msgstr "Dimensione totale"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:481 ../src/main_window.c:487
 msgid "Percentage"
 msgstr "Percentuale"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:494
 msgid "Elapsed Time"
 msgstr "Tempo trascorso"
 
-#: ../src/main_window.c:497
+#: ../src/main_window.c:505
 msgid "Remaining Time"
 msgstr "Tempo rimanente"
 
-#: ../src/main_window.c:508
+#: ../src/main_window.c:516
 msgid "Speed"
 msgstr "Velocità"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:567
 msgid "Error starting the download"
 msgstr "Errore nell'avviare lo scaricamento"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:567
 msgid "There was an unexpected error starting the download"
 msgstr "Si è verificato un errore inatteso all'avvio dello scaricamento"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:808
 msgid "Stop current downloads?"
-msgstr "Fermare gli scaricamenti attuali?"
+msgstr "Interrompere gli scaricamenti attuali?"
 
-#: ../src/main_window.c:792
+#: ../src/main_window.c:809
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
-"Alcuni scaricamenti sono ancora in corso. Annullare tutti quelli non "
+"Alcuni scaricamenti sono ancora in corso. Annullare quelli non ancora "
 "terminati?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "No"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Si"
-
-#: ../src/main_window_cb.c:105
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
-msgstr "Errore durante lo scaricamento"
+msgstr "Errore nello scaricamento"
 
-#: ../src/main_window_cb.c:194
+#: ../src/main_window_cb.c:140 ../src/main_window_cb.c:636
+#: ../src/main_window_cb.c:675 ../src/main_window_cb.c:743
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Gestore scaricamenti"
+
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "Gestore di scaricamenti per GNOME."
 
-#: ../src/main_window_cb.c:196
+#: ../src/main_window_cb.c:192
 msgid "translator-credits"
 msgstr ""
 "Marco Giorgetti <midimarcus@gmail.com>\n"
 "Gianvito Cavasoli <janvitus@ubuntu-it.org>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:572 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Seleziona cartella"
 
-#: ../src/main_window_cb.c:624
+#: ../src/main_window_cb.c:628
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -677,63 +331,68 @@ msgstr ""
 "Annullare lo scaricamento in corso?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:629
 msgid "Delete download?"
 msgstr "Eliminare scaricamento?"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:629
 msgid "Delete"
 msgstr "Elimina"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:659
+msgid "Remove completed"
+msgstr "Rimuovi completati"
+
+#: ../src/main_window_cb.c:659
 msgid "Really remove completed downloads from the list?"
 msgstr "Rimuovere gli scaricamenti completati dall'elenco?"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:659
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: ../src/main_window_cb.c:689
+#: ../src/main_window_cb.c:693
+msgid "Remove inactive"
+msgstr "Rimuovi inattivi"
+
+#: ../src/main_window_cb.c:693
 msgid "Really remove inactive downloads from the list?"
-msgstr "Eliminare gli scaricamenti inattivi dall'elenco?"
+msgstr "Rimuovere gli scaricamenti inattivi dall'elenco?"
 
-#: ../src/main_window_cb.c:721
+#: ../src/main_window_cb.c:725
+msgid "Remove all"
+msgstr "Rimuovi tutti"
+
+#: ../src/main_window_cb.c:725
 msgid "Really remove all downloads from the list?"
-msgstr "Eliminare tutti gli scaricamenti dall'elenco?"
+msgstr "Rimuovere tutti gli scaricamenti dall'elenco?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:877
 #, c-format
-msgid "error %d when accessing %s: %s\n"
-msgstr "errore %d nell'accedere %s: %s\n"
+msgid "MD5SUM Check PASSED!"
+msgstr "Controllo somma MD5 riuscito."
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:880
 #, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr ""
-"<span size=\"large\" weight=\"bold\">Controllo somma md5 superato</span>"
+msgid "MD5SUM Check FAILED!"
+msgstr "Controllo somma MD5 non riuscito."
 
-#: ../src/main_window_cb.c:890
-#, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr ""
-"<span size=\"large\" weight=\"bold\">Controllo somma md5 fallito</span>"
-
-#: ../src/main_window_cb.c:1211
+#: ../src/main_window_cb.c:1205
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "Il nuovo limite di velocità sarà applicato solo agli scaricamenti nuovi o "
 "riavviati"
 
-#: ../src/main_window_cb.c:1227
+#: ../src/main_window_cb.c:1221
 #, c-format
 msgid "Remove %s ?"
-msgstr "Rimuovere %s?"
+msgstr "Rimuovere «%s» ?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1222
 msgid "Really remove this download from the list?"
 msgstr "Eliminare questo scaricamento dall'elenco?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1222
 msgid "Remove download"
 msgstr "Rimuovi scaricamento"
 
@@ -743,45 +402,45 @@ msgstr "Impossibile aprire la cartella"
 
 #: ../src/systray.c:120
 msgid "Nothing"
-msgstr "Niente"
+msgstr "Nessuno"
 
 #: ../src/systray.c:127
 msgid "Downloads"
 msgstr "Scaricamenti"
 
-#: ../src/wget-log.c:161
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Errore del socket"
 
-#: ../src/wget-log.c:164
+#: ../src/wget-log.c:190
 msgid "Connection refused"
 msgstr "Connessione rifiutata"
 
-#: ../src/wget-log.c:167
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Nessun percorso fino all'host"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:196
 msgid "Connection refused when downloading URL:"
 msgstr "Connessione rifiutata durante lo scaricamento dell'URL:"
 
-#: ../src/wget-log.c:173
+#: ../src/wget-log.c:199
 msgid "Host not found"
 msgstr "Host non trovato"
 
-#: ../src/wget-log.c:176
+#: ../src/wget-log.c:202
 msgid "Name or service not known"
 msgstr "Nome o servizio non conosciuto"
 
-#: ../src/wget-log.c:179
+#: ../src/wget-log.c:205
 msgid "Unsupported protocol"
 msgstr "Protocollo non supportato"
 
-#: ../src/wget-log.c:182
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Troncamento del file esistente rifiutato"
 
-#: ../src/wget-log.c:185
+#: ../src/wget-log.c:211
 msgid "Unable to resolve host address"
 msgstr "Impossibile risolvere l'indirizzo dell'host"
 
@@ -789,21 +448,281 @@ msgstr "Impossibile risolvere l'indirizzo dell'host"
 #. * All other possible output may as well be reported, since we treat it
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
-#: ../src/wget-log.c:199
+#: ../src/wget-log.c:225
 msgid "Unknown error "
 msgstr "Errore sconosciuto "
 
-#: ../src/wget-log.c:212 ../src/wget-log.c:219
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "File non trovato"
 
-#: ../src/wget-log.c:226
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
-"Impossibile proseguire lo scaricamento. Esiste un file locale in conflitto "
+"Impossibile proseguire lo scaricamento, esiste un file locale in conflitto "
 "con quello remoto"
 
-#: ../src/wget-log.c:285
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
-msgstr "Impossibile scrivere nella cartella di destinazione"
+msgstr "Impossibile scrivere nella directory di destinazione"
 
+#~ msgid "    "
+#~ msgstr "    "
+
+#~ msgid "<b>Download</b>"
+#~ msgstr "<b>Scaricamento</b>"
+
+#~ msgid "<b>Insert MD5 sum to compare with</b>"
+#~ msgstr "<b>Inserire la somma md5 per compararla</b>"
+
+#~ msgid "<b>Properties</b>"
+#~ msgstr "<b>Proprietà</b>"
+
+#~ msgid "<span weight=\"bold\">New Download</span>"
+#~ msgstr "<span weight=\"bold\">Nuovo scaricamento</span>"
+
+#~ msgid "Cancel"
+#~ msgstr "Annulla"
+
+#~ msgid "Cancel download"
+#~ msgstr "Annulla scaricamento"
+
+#~ msgid "Cancel the download"
+#~ msgstr "Annulla lo scaricamento"
+
+#~ msgid "Clear"
+#~ msgstr "Pulisci"
+
+#~ msgid "Compare md5 sum"
+#~ msgstr "Compara somma md5"
+
+#~ msgid "Continue"
+#~ msgstr "Continua"
+
+#~ msgid "Continue download"
+#~ msgstr "Continua lo scaricamento"
+
+#~ msgid "Continue with the download"
+#~ msgstr "Continua con lo scaricamento"
+
+#~ msgid "Help"
+#~ msgstr "Aiuto"
+
+#~ msgid "Information"
+#~ msgstr "Informazioni"
+
+#~ msgid "Local Directory:"
+#~ msgstr "Directory locale: "
+
+#~ msgid "Local File:"
+#~ msgstr "File locale: "
+
+#~ msgid "Md5 Sum:"
+#~ msgstr "Somma md5:"
+
+#~ msgid "Multimedia files (Videos and images)"
+#~ msgstr "File multimediali (video e immagini)"
+
+#~ msgid "New Download"
+#~ msgstr "Nuovo scaricamento"
+
+#~ msgid "New download"
+#~ msgstr "Nuovo scaricamento"
+
+#~ msgid "Open"
+#~ msgstr "Apri"
+
+#~ msgid "Open directory"
+#~ msgstr "Apri directory"
+
+#~ msgid "Open file"
+#~ msgstr "Apre il file"
+
+#~ msgid "Open target directory"
+#~ msgstr "Apre la directory di destinazione"
+
+#~ msgid "Pause"
+#~ msgstr "Sospendi"
+
+#~ msgid "Pause all"
+#~ msgstr "Sospendi tutti"
+
+#~ msgid "Pause all downloads"
+#~ msgstr "Sospende tutti gli scaricamenti"
+
+#~ msgid "Pause download"
+#~ msgstr "Sospende lo scaricamento"
+
+#~ msgid "Pause the download"
+#~ msgstr "Sospende lo scaricamento"
+
+#~ msgid "Properties"
+#~ msgstr "Proprietà"
+
+#~ msgid "Recursive"
+#~ msgstr "Ricorsivo"
+
+#~ msgid "Recursive options"
+#~ msgstr "Opzioni di ricorsione"
+
+#~ msgid "Remove completed downloads"
+#~ msgstr "Rimuove gli scaricamenti completati"
+
+#~ msgid "Remove from List"
+#~ msgstr "Rimuovi dall'elenco"
+
+#~ msgid "Remove from list"
+#~ msgstr "Rimuovi dall'elenco"
+
+#~ msgid "Resume all"
+#~ msgstr "Riprendi tutti"
+
+#~ msgid "Resume all downloads"
+#~ msgstr "Riprende tutti gli scaricamenti"
+
+#~ msgid "Save in:"
+#~ msgstr "Salva in:"
+
+#~ msgid "Stat_usbar"
+#~ msgstr "Barra di sta_to"
+
+#~ msgid "The index file only"
+#~ msgstr "Solo il file index"
+
+#~ msgid "This site (mirror)"
+#~ msgstr "Questo sito (mirror)"
+
+#~ msgid "URL:"
+#~ msgstr "URL: "
+
+#~ msgid "Verify..."
+#~ msgstr "Verifica..."
+
+#~ msgid "_Archive"
+#~ msgstr "_Archivio"
+
+#~ msgid "_Download"
+#~ msgstr "_Scaricamento"
+
+#~ msgid "_Edit"
+#~ msgstr "_Modifica"
+
+#~ msgid "_Toolbar"
+#~ msgstr "Barra degli str_umenti"
+
+#~ msgid "_View"
+#~ msgstr "_Visualizza"
+
+#~ msgid "   "
+#~ msgstr "   "
+
+#~ msgid "<span weight=\"bold\">Behavior</span>"
+#~ msgstr "<span weight=\"bold\">Comportamento</span>"
+
+#~ msgid "<span weight=\"bold\">Column List</span>"
+#~ msgstr "<span weight=\"bold\">Elenco colonne</span>"
+
+#~ msgid "<span weight=\"bold\">General</span>"
+#~ msgstr "<span weight=\"bold\">Generale</span>"
+
+#~ msgid "<span weight=\"bold\">Links</span>"
+#~ msgstr "<span weight=\"bold\">Collegamenti</span>"
+
+#~ msgid "<span weight=\"bold\">Proxy Configuration</span>"
+#~ msgstr "<span weight=\"bold\">Configurazione del proxy</span>"
+
+#~ msgid "Column List"
+#~ msgstr "Elenco colonne"
+
+#~ msgid "Default _GNOME network settings"
+#~ msgstr "Impostazioni di rete predefinite di _GNOME"
+
+#~ msgid "Direct _Internet connection"
+#~ msgstr "Connessione diretta a Inte_rnet"
+
+#~ msgid "Do_wnload Speed"
+#~ msgstr "Velocità scari_camento"
+
+#~ msgid "Don't _create directories"
+#~ msgstr "Non crea_re directory"
+
+#~ msgid "Follow _relative links only"
+#~ msgstr "Seguire solo i collegamenti re_lativi"
+
+#~ msgid "General"
+#~ msgstr "Generale"
+
+#~ msgid "Limit _number of simultaneous download to:"
+#~ msgstr "Limitare il n_umero di scaricamenti simultanei a:"
+
+#~ msgid "Network"
+#~ msgstr "Rete"
+
+#~ msgid "P_ort:"
+#~ msgstr "P_orta:"
+
+#~ msgid "Password:"
+#~ msgstr "Password:"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferenze"
+
+#~ msgid "Pro_xy:"
+#~ msgstr "Pro_xy:"
+
+#~ msgid "Remaining _Time"
+#~ msgstr "Tem_po rimanente"
+
+#~ msgid "Sa_ve in:"
+#~ msgstr "Salv_are in:"
+
+#~ msgid "Total _Size"
+#~ msgstr "_Dimensione totale"
+
+#~ msgid "_Ask where to save for each download"
+#~ msgstr "Chie_dere dove salvare ogni scaricamento"
+
+#~ msgid "_Continue downloads on startup"
+#~ msgstr "Ripr_endere gli scaricamenti all'avvio"
+
+#~ msgid "_Convert links"
+#~ msgstr "Convert_ire i collegamenti"
+
+#~ msgid "_Current Size"
+#~ msgstr "Di_mensione attuale"
+
+#~ msgid "_Download page requisites"
+#~ msgstr "_Scaricare i requisiti della pagina"
+
+#~ msgid "_Elapsed Time"
+#~ msgstr "Tempo trascors_o"
+
+#~ msgid "_Limit download speed to:"
+#~ msgstr "Lim_itare la velocità di scaricamento a:"
+
+#~ msgid "_Manual proxy configuration"
+#~ msgstr "Configurazione man_uale del proxy"
+
+#~ msgid "_Maximum depth level:"
+#~ msgstr "Mas_simo livello di profondità:"
+
+#~ msgid "_Number of retries:"
+#~ msgstr "_Numero di tentativi:"
+
+#~ msgid "_Open files automatically after download"
+#~ msgstr "Aprir_e automaticamente i file al termine dello scaricamento"
+
+#~ msgid "_Percentage"
+#~ msgstr "_Percentuale"
+
+#~ msgid "_Proxy requires authentication"
+#~ msgstr "Il prox_y richiede l'autenticazione"
+
+#~ msgid "_User:"
+#~ msgstr "_Utente:"
+
+#~ msgid "files"
+#~ msgstr "file"
+
+#~ msgid "kB/sec"
+#~ msgstr "kB/sec"
