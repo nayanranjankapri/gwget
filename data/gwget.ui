@@ -390,6 +390,7 @@
         <property name="visible">True</property>
         <property name="image">image11</property>
         <property name="use_stock">False</property>
+        <signal name="activate" handler="on_remove_download_activate"/>
       </object>
     </child>
     <child>

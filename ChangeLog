@@ -1,6 +1,6 @@
 2009-07-04  David Sedeño <david@alderia.com>
 
-	
+	* data/gwget.ui: Set remove download callback.
 	* src/main_window.c: 
 		- Fix drag'n'drop freeze. Thansk to Artur Rona <ari-tczew@tlen.pl> 
 		for the bugreport.
