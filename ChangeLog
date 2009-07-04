@@ -1,6 +1,7 @@
 2009-07-04  David Sedeño <david@alderia.com>
 
-	* src/main_window.c: Fix drag'n'drop freeze.
+	* src/main_window.c: Fix drag'n'drop freeze. 
+	Thansk to Artur Rona <ari-tczew@tlen.pl> for the bugreport.
 
 2009-06-30  David Sedeño <david@alderia.com>
 
