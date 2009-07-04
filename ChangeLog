@@ -4,7 +4,7 @@
 	* src/new_window.c: Set parent window to the filechooser in new dialog. 
 	* src/main_window_cb.c: Set parent window to about dialog.
 	* data/gwget.ui, src/main_window.c: Set the rows and columns reorderable.
-	* data/gwget.ui: Set remove download callback.
+	* data/gwget.ui: Set remove download callback. Set icon for md5_sum window.
 	* src/main_window.c: 
 		- Fix drag'n'drop freeze. Thansk to Artur Rona <ari-tczew@tlen.pl> 
 		for the bugreport.

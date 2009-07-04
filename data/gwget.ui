@@ -779,6 +779,7 @@
     <property name="title" translatable="yes">Compare md5 sum</property>
     <property name="resizable">False</property>
     <property name="window_position">center-on-parent</property>
+    <property name="icon">gwget.png</property>
     <property name="transient_for">properties_window</property>
     <child>
       <object class="GtkVBox" id="vbox8">
