@@ -530,11 +530,11 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 							guint time, gpointer data)
 {
 	gchar *file;
-	gchar *uri;
 	gchar **uris;
 	GList *files = NULL;
 	GwgetData *gwgetdata;
 	gboolean drop_ok;
+	int i;
 	
 	g_return_if_fail(gwget_pref.download_dir != NULL);
 
@@ -543,8 +543,8 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 	drop_ok = FALSE;
 	if (dnd_type==TARGET_URI_LIST) {
 		uris = g_uri_list_extract_uris ((gchar *)seldata->data);
-		for (uri=uris[0]; uri != NULL; uri++) {
-			files = g_list_prepend (files, uri);
+		for (i=0; uris[i] != NULL; i++) {
+		  files = g_list_prepend (files, uris[i]);
 		}
 		g_strfreev (uris); 
 		file = files->data;
@@ -568,7 +568,6 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 		}
 		gtk_drag_finish(context, TRUE, FALSE, time);
 	}
-	
 }
 
 static void
