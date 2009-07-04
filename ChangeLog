@@ -1,5 +1,6 @@
 2009-07-04  David Sedeño <david@alderia.com>
 
+	* src/gwget_data.c: Remove g_warning when getting the size of a no (new) file.
 	* src/new_window.c: Set parent window to the filechooser in new dialog. 
 	* src/main_window_cb.c: Set parent window to about dialog.
 	* data/gwget.ui, src/main_window.c: Set the rows and columns reorderable.

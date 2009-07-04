@@ -559,7 +559,6 @@ gwget_data_create(gchar *url, gchar *dir)
 		gwgetdata->cur_size = g_file_info_get_size (info);
 	} else {
 		gwgetdata->cur_size = 0;
-		g_warning ("Failed to get file size for %s: %s", gwgetdata->local_filename, err->message);
 		g_error_free (err);
 	}
 	
