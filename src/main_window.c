@@ -549,7 +549,7 @@ on_gwget_drag_received (GtkWidget * widget, GdkDragContext * context, int x,
 		  files = g_list_prepend (files, uris[i]);
 		}
 		g_strfreev (uris); 
-		file = files->data;
+		file = g_list_first(files)->data;
 		drop_ok = TRUE;
 	} else if (dnd_type==TARGET_NETSCAPE_URL) {
 		file=((gchar *) (seldata->data));
