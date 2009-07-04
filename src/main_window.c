@@ -441,7 +441,10 @@ add_columns (GtkTreeView *treeview)
 	
 	gtk_tree_view_column_set_sort_column_id (column, FILENAME_COLUMN);
 	gtk_tree_view_column_set_resizable (column, TRUE); 
+	gtk_tree_view_column_set_reorderable (column, TRUE);
 	gtk_tree_view_append_column (treeview, column);
+
+
 	
 	/* State Column */
 	renderer = gtk_cell_renderer_text_new ();
@@ -453,6 +456,7 @@ add_columns (GtkTreeView *treeview)
 	gtk_tree_view_column_set_resizable(column, TRUE); 
 	gtk_tree_view_column_set_sort_column_id (column, STATE_COLUMN);
 	gtk_tree_view_column_set_sizing (column, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
+	gtk_tree_view_column_set_reorderable (column, TRUE);
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Current Size */
@@ -465,7 +469,8 @@ add_columns (GtkTreeView *treeview)
 
 	gtk_tree_view_column_set_sort_column_id (column, CURRENTSIZE_COLUMN);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
-  	gtk_tree_view_append_column (treeview, column);
+	gtk_tree_view_column_set_reorderable (column, TRUE);
+ 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Total Size */
 	renderer = gtk_cell_renderer_text_new ();
@@ -476,7 +481,8 @@ add_columns (GtkTreeView *treeview)
 							NULL);
 	gtk_tree_view_column_set_sort_column_id (column, TOTALSIZE_COLUMN);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
-  	gtk_tree_view_append_column (treeview, column);
+	gtk_tree_view_column_set_reorderable (column, TRUE);
+ 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Percentage */
 	renderer = ephy_cell_renderer_progress_new();
@@ -489,7 +495,8 @@ add_columns (GtkTreeView *treeview)
 	gtk_tree_view_column_set_title (column, (_("Percentage"))); 
 	gtk_tree_view_column_set_resizable(column, TRUE); 
 	gtk_tree_view_column_set_sort_column_id (column, PERCENTAGE_COLUMN);
-    	gtk_tree_view_append_column(GTK_TREE_VIEW(treeview),column); 
+	gtk_tree_view_column_set_reorderable (column, TRUE);	
+	gtk_tree_view_append_column(GTK_TREE_VIEW(treeview),column); 
 		
 	/* Elapse Time */
 	renderer = gtk_cell_renderer_text_new ();
@@ -500,6 +507,7 @@ add_columns (GtkTreeView *treeview)
 							NULL);
 	gtk_tree_view_column_set_sort_column_id (column, ELAPSETIME_COLUMN);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
+	gtk_tree_view_column_set_reorderable (column, TRUE);
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* REMAINTIME_COLUMN */
@@ -511,6 +519,7 @@ add_columns (GtkTreeView *treeview)
 														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, REMAINTIME_COLUMN);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
+	gtk_tree_view_column_set_reorderable (column, TRUE);
 	gtk_tree_view_append_column (treeview, column);
 	
 	/* Speed */
@@ -522,6 +531,7 @@ add_columns (GtkTreeView *treeview)
 														NULL);
 	gtk_tree_view_column_set_sort_column_id (column, SPEED_COLUMN);
 	gtk_tree_view_column_set_resizable(column, TRUE); 
+	gtk_tree_view_column_set_reorderable (column, TRUE);
 	gtk_tree_view_append_column (treeview, column);
 	
 }

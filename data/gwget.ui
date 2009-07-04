@@ -314,6 +314,7 @@
             <child>
               <object class="GtkTreeView" id="treeview1">
                 <property name="visible">True</property>
+                <property name="reorderable">True</property>
                 <signal name="button_press_event" handler="on_treeview1_button_press_event"/>
               </object>
             </child>
