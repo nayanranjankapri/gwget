@@ -291,47 +291,49 @@ gwget_get_defaults_from_gconf(void)
 		url=gconf_client_get_string(gconf_client,key,NULL);
 		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/dir",i);
 		dir=gconf_client_get_string(gconf_client,key,NULL);
-		
-		data=gwget_data_create(url,dir);
-		
-		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/filename",i);
-		name=gconf_client_get_string(gconf_client,key,NULL);
-		gwget_data_set_filename(data,name);
-		
-		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
-		state=gconf_client_get_int(gconf_client,key,NULL); 
-		
-		key=g_strdup_printf("/apps/gwget2/downloads_data/%d/file_size",i);
-		total_size = atoll(gconf_client_get_string (gconf_client, key, &error));
-		if (!error) {		
-			gwget_data_set_total_size (data, total_size);
-		} else { 
-			gwget_data_set_total_size (data, 0);
-		}
 
-		if ( state != DL_COMPLETED ) {
+		if (url!=NULL) {
+			data=gwget_data_create(url,dir);
+		
+			key=g_strdup_printf("/apps/gwget2/downloads_data/%d/filename",i);
+			name=gconf_client_get_string(gconf_client,key,NULL);
+			gwget_data_set_filename(data,name);
+		
+			key=g_strdup_printf("/apps/gwget2/downloads_data/%d/state",i);
+			state=gconf_client_get_int(gconf_client,key,NULL); 
+		
+			key=g_strdup_printf("/apps/gwget2/downloads_data/%d/file_size",i);
+			total_size = atoll(gconf_client_get_string (gconf_client, key, &error));
+			if (!error) {		
+				gwget_data_set_total_size (data, total_size);
+			} else { 
+				gwget_data_set_total_size (data, 0);
+			}
+
+			if ( state != DL_COMPLETED ) {
 			/*
 			 * If the download is not completed - add it , no questions
 			 */	
-			new_download(data);
-		} else {
+				new_download(data);
+			} else {
 			/* 
 			 * If the download is completed , then:
 			 * if the file we want to write to is missing , the user
 			 * has (re)moved it , so quietly forget download , otherwise
 			 * add it
 		 	 */
-			if ( !gwget_destination_file_exists(data) ) {
-				/*
-				 * We do not add download, the gwget_remember_downloads
-				 * call after the cycle will flush gconf
-				 */
-				continue;
-			} else {
-				there_are_completed_on_startup = TRUE;
-				new_download(data);
-				gwget_data_set_state_no_sync(data,DL_COMPLETED);
-				continue;
+				if ( !gwget_destination_file_exists(data) ) {
+					/*
+					 * We do not add download, the gwget_remember_downloads
+					 * call after the cycle will flush gconf
+					 */
+					continue;
+				} else {
+					there_are_completed_on_startup = TRUE;
+					new_download(data);
+					gwget_data_set_state_no_sync(data,DL_COMPLETED);
+					continue;
+				}
 			}
 		}
 		    		
