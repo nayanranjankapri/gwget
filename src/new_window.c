@@ -125,7 +125,7 @@ on_new_browse_save_in_button_clicked(GtkWidget *widget, gpointer data)
 	GtkEntry *save_in_entry;
 	
 	filesel = gtk_file_chooser_dialog_new  (_("Select Folder"),
-						NULL,
+						GTK_WINDOW (gtk_builder_get_object(builder,"main_window")),
 						GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
 						GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 						GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
