@@ -183,7 +183,7 @@ on_about1_activate(GtkWidget *widget, gpointer data)
 	pixbuf = gdk_pixbuf_new_from_file (logo_file, NULL);
 	g_free (logo_file);
 
-	gtk_show_about_dialog (NULL,
+	gtk_show_about_dialog (GTK_WINDOW (gtk_builder_get_object(builder,"main_window")),
 			       "name", _("Gwget"), 
 			       "version", VERSION,
 			       "copyright", "Copyright © 2004-2009 David Sedeño Fernández",
