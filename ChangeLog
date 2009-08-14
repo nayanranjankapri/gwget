@@ -1,5 +1,7 @@
 2009-08-14  David Sedeño <david@alderia.com>
   
+  * data/Makefile.am: Fix --disable-schemas-install. Pach from Vincent Untz
+  (Fixes #590850)
   * configure.ac, epiphany-extension/ephy-gwget-extension.c: 
   Support for Epiphany 2.27/2.28. Patch from Vincent Untz (Fixes #585401)
 

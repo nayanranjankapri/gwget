@@ -30,8 +30,12 @@ desktop_DATA     =$(desktop_in_files:.desktop.in.in=.desktop)
 
 @INTLTOOL_DESKTOP_RULE@
 
+if GCONF_SCHEMAS_INSTALL
 install-data-local:
 	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule gwget.schemas
+else
+install-data-local:
+endif
 
 EXTRA_DIST = $(gwget_data_DATA) \
 	     $(service_in_files) \
