@@ -29,8 +29,12 @@
 #endif
 
 
+#if EPHY_VERSION >= 227
+#include <epiphany/epiphany.h>
+#else
 #include <epiphany/ephy-embed-single.h>
 #include <epiphany/ephy-embed-shell.h>
+#endif
 
 #define EPHY_GWGET_EXTENSION_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), EPHY_TYPE_GWGET_EXTENSION, EphyGwgetExtensionPrivate))
 

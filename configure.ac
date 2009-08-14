@@ -96,13 +96,17 @@ AC_MSG_CHECKING([which epiphany to use])
 
 EPHY_VER=
 AC_ARG_WITH([epiphany-version],
-        AC_HELP_STRING([--with-epiphany-version@<:@=1.6|1.8|1.10|2.14|2.16|2.18|2.20|2.22|2.24|2.26@:>@],
-                       [Whether to use epiphany version 1.6 or 1.8 or 1.10 or 2.14 or 2.16 or 2.18 or 2.20 or 2.22 or 2.24 or 2.26 (default 1.6)]),
+        AC_HELP_STRING([--with-epiphany-version@<:@=1.6|1.8|1.10|2.14|2.16|2.18|2.20|2.22|2.24|2.26|2.28@:>@],
+                       [Whether to use epiphany version 1.6 or 1.8 or 1.10 or 2.14 or 2.16 or 2.18 or 2.20 or 2.22 or 2.24 or 2.26 or 2.28 (default 1.6)]),
         [EPHY_VER="$withval"])
 
-dnl try to autodetect Epiphany 1.2, 1.4, 1.6, 1.8, 1.10, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.20, 2.21, 2.22, 2.23, 2.24, 2.25 or 2.26
+dnl try to autodetect Epiphany 1.2, 1.4, 1.6, 1.8, 1.10, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.20, 2.21, 2.22, 2.23, 2.24, 2.25, 2.26, 2.27 or 2.28
 EPHY_AUTODETECT="(autodetect)"
-if pkg-config --exists epiphany-2.26; then
+if pkg-config --exists epiphany-2.28; then
+        EPHY_VER=2.28
+elif pkg-config --exists epiphany-2.27; then
+        EPHY_VER=2.27
+elif pkg-config --exists epiphany-2.26; then
         EPHY_VER=2.26
 elif pkg-config --exists epiphany-2.25; then
         EPHY_VER=2.25
@@ -217,13 +221,21 @@ elif test "x$EPHY_VER" = "x2.26"; then
 	  EPIPHANY_PKGCONFIG=epiphany-2.26
           EPIPHANY_REQUIRED=2.26
 	  EPIPHANY_SHORTVER=226
+elif test "x$EPHY_VER" = "x2.27"; then
+	  EPIPHANY_PKGCONFIG=epiphany-2.27
+          EPIPHANY_REQUIRED=2.27
+	  EPIPHANY_SHORTVER=227
+elif test "x$EPHY_VER" = "x2.28"; then
+	  EPIPHANY_PKGCONFIG=epiphany-2.28
+          EPIPHANY_REQUIRED=2.28
+	  EPIPHANY_SHORTVER=228
 else
      	AC_MSG_RESULT([no epiphany installed])
 fi
 
 if test -n "$EPIPHANY_SHORTVER" ; then
-AC_DEFINE_UNQUOTED(EPHY_VERSION, "$EPIPHANY_SHORTVER",
-       [Define to the Epiphany version (12, 14, 16, 18, 110, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225 or 226)])
+AC_DEFINE_UNQUOTED(EPHY_VERSION, $EPIPHANY_SHORTVER,
+       [Define to the Epiphany version (12, 14, 16, 18, 110, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227 or 228)])
 AC_MSG_RESULT([$EPHY_VER $EPHY_AUTODETECT])
 
 LIBGLIB_REQUIRED=2.4.0
