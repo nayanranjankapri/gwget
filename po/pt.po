@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.10\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-01 23:51+0000\n"
-"PO-Revision-Date: 2009-02-28 22:44+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&component=general\n"
+"POT-Creation-Date: 2009-06-27 19:21+0000\n"
+"PO-Revision-Date: 2009-09-04 14:09+0100\n"
 "Last-Translator: Filipe Gomes <filipefgomes@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -24,223 +25,9 @@ msgstr "Gestor de Transferências"
 msgid "Download files from the Internet"
 msgstr "Transferir ficheiros da Internet"
 
-#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:260 ../src/main.c:293
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
 msgid "Gwget Download Manager"
 msgstr "Gestor de Transferências Gwget"
-
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
-
-#: ../data/gwget.glade.h:2
-msgid "<b>Download</b>"
-msgstr "<b>Transferência</b>"
-
-#: ../data/gwget.glade.h:3
-msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr "<b>Insira soma MD5 com que comparar</b>"
-
-#: ../data/gwget.glade.h:4
-msgid "<b>Properties</b>"
-msgstr "<b>Propriedades</b>"
-
-#: ../data/gwget.glade.h:5
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Novo Download</span>"
-
-#: ../data/gwget.glade.h:6
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: ../data/gwget.glade.h:7
-msgid "Cancel download"
-msgstr "Cancelar transferência"
-
-#: ../data/gwget.glade.h:8
-msgid "Cancel the download"
-msgstr "Cancelar a transferência"
-
-#: ../data/gwget.glade.h:9
-msgid "Clear"
-msgstr "Limpar"
-
-#: ../data/gwget.glade.h:10
-msgid "Compare md5 sum"
-msgstr "Comparar soma md5"
-
-#: ../data/gwget.glade.h:11
-msgid "Continue"
-msgstr "Prosseguir"
-
-#: ../data/gwget.glade.h:12
-msgid "Continue download"
-msgstr "Continuar transferência"
-
-#: ../data/gwget.glade.h:13
-msgid "Continue with the download"
-msgstr "Continuar a transferência"
-
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:148
-#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
-#: ../src/main_window_cb.c:745
-msgid "Gwget - Download Manager"
-msgstr "Gwget - Gestor de Downloads"
-
-#: ../data/gwget.glade.h:15
-msgid "Help"
-msgstr "Ajuda"
-
-#: ../data/gwget.glade.h:16
-msgid "Information"
-msgstr "Informação"
-
-#: ../data/gwget.glade.h:17
-msgid "Local Directory:"
-msgstr "Directório Local:"
-
-#: ../data/gwget.glade.h:18
-msgid "Local File:"
-msgstr "Ficheiro Local:"
-
-#: ../data/gwget.glade.h:19
-msgid "Md5 Sum:"
-msgstr "Soma Md5:"
-
-#: ../data/gwget.glade.h:20
-msgid "Multimedia files (Videos and images)"
-msgstr "Ficheiros multimédia (Vídeos e imagens)"
-
-#: ../data/gwget.glade.h:21
-msgid "New Download"
-msgstr "Novo Download"
-
-#: ../data/gwget.glade.h:22
-msgid "New download"
-msgstr "Novo download"
-
-#: ../data/gwget.glade.h:23
-msgid "Open"
-msgstr "Abrir"
-
-#: ../data/gwget.glade.h:24
-msgid "Open directory"
-msgstr "Abrir directório"
-
-#: ../data/gwget.glade.h:25
-msgid "Open file"
-msgstr "Abrir ficheiro"
-
-#: ../data/gwget.glade.h:26
-msgid "Open target directory"
-msgstr "Abrir directório de destino"
-
-#: ../data/gwget.glade.h:27
-msgid "Pause"
-msgstr "Pausar"
-
-#: ../data/gwget.glade.h:28
-msgid "Pause all"
-msgstr "Pausar todos"
-
-#: ../data/gwget.glade.h:29
-msgid "Pause all downloads"
-msgstr "Pausar todos os downloads"
-
-#: ../data/gwget.glade.h:30
-msgid "Pause download"
-msgstr "Pausar o download"
-
-#: ../data/gwget.glade.h:31
-msgid "Pause the download"
-msgstr "Pausar a transferência"
-
-#: ../data/gwget.glade.h:32
-msgid "Properties"
-msgstr "Propriedades"
-
-#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
-msgid "Recursive"
-msgstr "Recursivo"
-
-#: ../data/gwget.glade.h:34
-msgid "Recursive options"
-msgstr "Opções recursivas"
-
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:727
-msgid "Remove all"
-msgstr "Remover todos"
-
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:661
-msgid "Remove completed"
-msgstr "Remoção terminada"
-
-#: ../data/gwget.glade.h:37
-msgid "Remove completed downloads"
-msgstr "Remover transferências terminadas"
-
-#: ../data/gwget.glade.h:38
-msgid "Remove from List"
-msgstr "Remover da Lista"
-
-#: ../data/gwget.glade.h:39
-msgid "Remove from list"
-msgstr "Remover da lista"
-
-#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:695
-msgid "Remove inactive"
-msgstr "Remover os inactivos"
-
-#: ../data/gwget.glade.h:41
-msgid "Resume all"
-msgstr "Retomar todos"
-
-#: ../data/gwget.glade.h:42
-msgid "Resume all downloads"
-msgstr "Retomar todos os downloads da lista"
-
-#: ../data/gwget.glade.h:43
-msgid "Save in:"
-msgstr "Gravar em:"
-
-#: ../data/gwget.glade.h:44
-msgid "Stat_usbar"
-msgstr "Ba_rra de Estado"
-
-#: ../data/gwget.glade.h:45
-msgid "The index file only"
-msgstr "Apenas o ficheiro de índice"
-
-#: ../data/gwget.glade.h:46
-msgid "This site (mirror)"
-msgstr "Este servidor (mirror)"
-
-#: ../data/gwget.glade.h:47
-msgid "URL:"
-msgstr "URL:"
-
-#: ../data/gwget.glade.h:48
-msgid "Verify..."
-msgstr "Verificar..."
-
-#: ../data/gwget.glade.h:49
-msgid "_Archive"
-msgstr "_Arquivar"
-
-#: ../data/gwget.glade.h:50
-msgid "_Download"
-msgstr "_Transferência"
-
-#: ../data/gwget.glade.h:51
-msgid "_Edit"
-msgstr "_Editar"
-
-#: ../data/gwget.glade.h:52
-msgid "_Toolbar"
-msgstr "Barra de Ferramen_tas"
-
-#: ../data/gwget.glade.h:53
-msgid "_View"
-msgstr "_Ver"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -347,158 +134,6 @@ msgstr "Determina a apresentação da barra de estado."
 msgid "Whether to display the toolbar."
 msgstr "Determina a apresentação da barra de ferramentas."
 
-#: ../data/preferences.glade.h:1
-msgid "   "
-msgstr "   "
-
-#: ../data/preferences.glade.h:3
-msgid "<span weight=\"bold\">Behavior</span>"
-msgstr "<span weight=\"bold\">Comportamento</span>"
-
-#: ../data/preferences.glade.h:4
-msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">Lista de Colunas</span>"
-
-#: ../data/preferences.glade.h:5
-msgid "<span weight=\"bold\">General</span>"
-msgstr "<span weight=\"bold\">Geral</span>"
-
-#: ../data/preferences.glade.h:6
-msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">Links</span>"
-
-#: ../data/preferences.glade.h:7
-msgid "<span weight=\"bold\">Proxy Configuration</span>"
-msgstr "<span weight=\"bold\">Configuração da Proxy</span>"
-
-#: ../data/preferences.glade.h:8
-msgid "Column List"
-msgstr "Lista de Colunas"
-
-#: ../data/preferences.glade.h:9
-msgid "Default _GNOME network settings"
-msgstr "Definições de rede do _GNOME por omissão"
-
-#: ../data/preferences.glade.h:10
-msgid "Direct _Internet connection"
-msgstr "Ligação directa à _Internet"
-
-#: ../data/preferences.glade.h:11
-msgid "Do_wnload Speed"
-msgstr "Velocidade de Tra_nsferência"
-
-#: ../data/preferences.glade.h:12
-msgid "Don't _create directories"
-msgstr "Não _criar directórios"
-
-#: ../data/preferences.glade.h:13
-msgid "Follow _relative links only"
-msgstr "Seguir apenas ligações _relativas"
-
-#: ../data/preferences.glade.h:14
-msgid "General"
-msgstr "Geral"
-
-#: ../data/preferences.glade.h:15
-msgid "Limit _number of simultaneous download to:"
-msgstr "Limitar o _número de transferências em simultâneo a:"
-
-#: ../data/preferences.glade.h:16
-msgid "Network"
-msgstr "Rede"
-
-#: ../data/preferences.glade.h:17
-msgid "P_ort:"
-msgstr "P_orta:"
-
-#: ../data/preferences.glade.h:18
-msgid "Password:"
-msgstr "Senha:"
-
-#: ../data/preferences.glade.h:19
-msgid "Preferences"
-msgstr "Preferências"
-
-#: ../data/preferences.glade.h:20
-msgid "Pro_xy:"
-msgstr "Pro_xy:"
-
-#: ../data/preferences.glade.h:22
-msgid "Remaining _Time"
-msgstr "_Tempo Restante"
-
-#: ../data/preferences.glade.h:23
-msgid "Sa_ve in:"
-msgstr "Gra_var em:"
-
-#: ../data/preferences.glade.h:24
-msgid "Total _Size"
-msgstr "Tamanho T_otal"
-
-#: ../data/preferences.glade.h:25
-msgid "_Ask where to save for each download"
-msgstr "_Perguntar onde gravar para cada transferência"
-
-#: ../data/preferences.glade.h:26
-msgid "_Continue downloads on startup"
-msgstr "_Continuar as transferências no arranque"
-
-#: ../data/preferences.glade.h:27
-msgid "_Convert links"
-msgstr "_Converter ligações"
-
-#: ../data/preferences.glade.h:28
-msgid "_Current Size"
-msgstr "Tamanho _Actual"
-
-#: ../data/preferences.glade.h:29
-msgid "_Download page requisites"
-msgstr "Requisitos da _página de transferências"
-
-#: ../data/preferences.glade.h:30
-msgid "_Elapsed Time"
-msgstr "Tempo _Decorrido"
-
-#: ../data/preferences.glade.h:31
-msgid "_Limit download speed to:"
-msgstr "_Limitar a velocidade de transferência a:"
-
-#: ../data/preferences.glade.h:32
-msgid "_Manual proxy configuration"
-msgstr "Configuração _manual da proxy"
-
-#: ../data/preferences.glade.h:33
-msgid "_Maximum depth level:"
-msgstr "Nível _máximo de profundidade: "
-
-#: ../data/preferences.glade.h:34
-msgid "_Number of retries:"
-msgstr "_Número de tentativas:"
-
-#: ../data/preferences.glade.h:35
-msgid "_Open files automatically after download"
-msgstr "Abrir aut_omaticamente os ficheiros ao terminar as transferências"
-
-#: ../data/preferences.glade.h:36
-msgid "_Percentage"
-msgstr "_Percentagem"
-
-#: ../data/preferences.glade.h:37
-msgid "_Proxy requires authentication"
-msgstr "A _proxy exige autenticação"
-
-#: ../data/preferences.glade.h:38
-msgid "_User:"
-msgstr "_Utilizador:"
-
-#: ../data/preferences.glade.h:39
-msgid "files"
-msgstr "ficheiros"
-
-#: ../data/preferences.glade.h:40
-msgid "kB/sec"
-msgstr "kB/seg"
-
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
 msgstr "Encaminhar transferências para o GWGet"
@@ -559,13 +194,13 @@ msgstr "Incapaz de adicionar este download"
 msgid "This download is already added"
 msgstr "Este download já se encontra adicionado"
 
-#: ../src/gwget_data.c:746 ../src/main_window_cb.c:118
-#: ../src/main_window_cb.c:1265 ../src/main_window_cb.c:1284
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1255 ../src/main_window_cb.c:1278
 msgid "Error opening file"
 msgstr "Erro ao abrir o ficheiro"
 
-#: ../src/gwget_data.c:746 ../src/main_window_cb.c:118
-#: ../src/main_window_cb.c:1265
+#: ../src/gwget_data.c:746 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1255
 msgid "Couldn't open the file"
 msgstr "Incapaz de abrir o ficheiro"
 
@@ -586,11 +221,11 @@ msgstr ""
 msgid "Download files in MP3 playlist?"
 msgstr "Transferir ficheiros na lista de reprodução MP3?"
 
-#: ../src/gwget_data.c:813 ../src/main_window.c:802
+#: ../src/gwget_data.c:813 ../src/main_window.c:809
 msgid "No"
 msgstr "Não"
 
-#: ../src/gwget_data.c:813 ../src/main_window.c:802
+#: ../src/gwget_data.c:813 ../src/main_window.c:809
 msgid "Yes"
 msgstr "Sim"
 
@@ -606,55 +241,55 @@ msgstr "Directório de destino para a transferência"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:279 ../src/main_window_cb.c:195
+#: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:432
+#: ../src/main_window.c:434
 msgid "File Name"
 msgstr "Nome do Ficheiro"
 
-#: ../src/main_window.c:444
+#: ../src/main_window.c:446
 msgid "State"
 msgstr "Estado"
 
-#: ../src/main_window.c:456
+#: ../src/main_window.c:458
 msgid "Current Size"
 msgstr "Tamanho Actual"
 
-#: ../src/main_window.c:468
+#: ../src/main_window.c:470
 msgid "Total Size"
 msgstr "Tamanho Total"
 
-#: ../src/main_window.c:479 ../src/main_window.c:485
+#: ../src/main_window.c:481 ../src/main_window.c:487
 msgid "Percentage"
 msgstr "Percentagem"
 
-#: ../src/main_window.c:492
+#: ../src/main_window.c:494
 msgid "Elapsed Time"
 msgstr "Tempo Decorrido"
 
-#: ../src/main_window.c:503
+#: ../src/main_window.c:505
 msgid "Remaining Time"
 msgstr "Tempo Remanescente"
 
-#: ../src/main_window.c:514
+#: ../src/main_window.c:516
 msgid "Speed"
 msgstr "Velocidade"
 
-#: ../src/main_window.c:565
+#: ../src/main_window.c:567
 msgid "Error starting the download"
 msgstr "Erro ao iniciar a transferência"
 
-#: ../src/main_window.c:565
+#: ../src/main_window.c:567
 msgid "There was an unexpected error starting the download"
 msgstr "Houve um erro inesperado ao iniciar a transferência"
 
-#: ../src/main_window.c:801
+#: ../src/main_window.c:808
 msgid "Stop current downloads?"
 msgstr "Cancelar as transferências actuais?"
 
-#: ../src/main_window.c:802
+#: ../src/main_window.c:809
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -662,23 +297,30 @@ msgstr ""
 "Existe pelo menos um download activo. Cancelar realmente todas as "
 "transferências em execução?"
 
-#: ../src/main_window_cb.c:106
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
 msgstr "Erro no download"
 
-#: ../src/main_window_cb.c:198
+#: ../src/main_window_cb.c:140 ../src/main_window_cb.c:636
+#: ../src/main_window_cb.c:675 ../src/main_window_cb.c:743
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Gestor de Downloads"
+
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "Gestor de Transferências para o GNOME."
 
-#: ../src/main_window_cb.c:200
+#: ../src/main_window_cb.c:192
 msgid "translator-credits"
-msgstr "Filipe Gomes <filipefgomes@gmail.com>, Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr ""
+"Filipe Gomes <filipefgomes@gmail.com>, Duarte Loreto <happyguy_pt@hotmail."
+"com>"
 
-#: ../src/main_window_cb.c:574 ../src/new_window.c:128
+#: ../src/main_window_cb.c:572 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Seleccionar a Pasta"
 
-#: ../src/main_window_cb.c:630
+#: ../src/main_window_cb.c:628
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -687,65 +329,72 @@ msgstr ""
 "Realmente cancelar a transferência actual?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:631
+#: ../src/main_window_cb.c:629
 msgid "Delete download?"
 msgstr "Apagar a transferência?"
 
-#: ../src/main_window_cb.c:631
+#: ../src/main_window_cb.c:629
 msgid "Delete"
 msgstr "Apagar"
 
-#: ../src/main_window_cb.c:661
+#: ../src/main_window_cb.c:659
+msgid "Remove completed"
+msgstr "Remoção terminada"
+
+#: ../src/main_window_cb.c:659
 msgid "Really remove completed downloads from the list?"
 msgstr "Realmente remover da lista os downloads terminados?"
 
-#: ../src/main_window_cb.c:661
+#: ../src/main_window_cb.c:659
 msgid "Remove"
 msgstr "Remover"
 
-#: ../src/main_window_cb.c:695
+#: ../src/main_window_cb.c:693
+msgid "Remove inactive"
+msgstr "Remover os inactivos"
+
+#: ../src/main_window_cb.c:693
 msgid "Really remove inactive downloads from the list?"
 msgstr "Realmente remover da lista os downloads inactivos?"
 
-#: ../src/main_window_cb.c:727
+#: ../src/main_window_cb.c:725
+msgid "Remove all"
+msgstr "Remover todos"
+
+#: ../src/main_window_cb.c:725
 msgid "Really remove all downloads from the list?"
 msgstr "Realmente remover da lista todos os downloads?"
 
-#: ../src/main_window_cb.c:863 ../src/main_window_cb.c:881
+#: ../src/main_window_cb.c:877
 #, c-format
-msgid "error %d when accessing %s: %s\n"
-msgstr "erro %d ao aceder a %s: %s\n"
+msgid "MD5SUM Check PASSED!"
+msgstr "Verificação MD5SUM PASSOU!"
 
-#: ../src/main_window_cb.c:893
+#: ../src/main_window_cb.c:880
 #, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">Verificação MD5SUM PASSOU!</span>"
+msgid "MD5SUM Check FAILED!"
+msgstr "Verificação MD5SUM FALHOU!"
 
-#: ../src/main_window_cb.c:896
-#, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">Verificação MD5SUM FALHOU!</span>"
-
-#: ../src/main_window_cb.c:1217
+#: ../src/main_window_cb.c:1205
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "Novo limite da velocidade de transferência irá aplicar-se apenas a "
 "transferências novas ou reiniciadas"
 
-#: ../src/main_window_cb.c:1233
+#: ../src/main_window_cb.c:1221
 #, c-format
 msgid "Remove %s ?"
 msgstr "Remover %s ?"
 
-#: ../src/main_window_cb.c:1234
+#: ../src/main_window_cb.c:1222
 msgid "Really remove this download from the list?"
 msgstr "Realmente remover esta transferência da lista?"
 
-#: ../src/main_window_cb.c:1234
+#: ../src/main_window_cb.c:1222
 msgid "Remove download"
 msgstr "Remover transferência"
 
-#: ../src/main_window_cb.c:1284
+#: ../src/main_window_cb.c:1278
 msgid "Couldn't open the folder"
 msgstr "Incapaz de abrir a pasta"
 
@@ -814,6 +463,278 @@ msgstr ""
 #: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "Incapaz de escrever no directório de destino"
+
+#~ msgid "    "
+#~ msgstr "    "
+
+#~ msgid "<b>Download</b>"
+#~ msgstr "<b>Transferência</b>"
+
+#~ msgid "<b>Insert MD5 sum to compare with</b>"
+#~ msgstr "<b>Insira soma MD5 com que comparar</b>"
+
+#~ msgid "<b>Properties</b>"
+#~ msgstr "<b>Propriedades</b>"
+
+#~ msgid "<span weight=\"bold\">New Download</span>"
+#~ msgstr "<span weight=\"bold\">Novo Download</span>"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "Cancel download"
+#~ msgstr "Cancelar transferência"
+
+#~ msgid "Cancel the download"
+#~ msgstr "Cancelar a transferência"
+
+#~ msgid "Clear"
+#~ msgstr "Limpar"
+
+#~ msgid "Compare md5 sum"
+#~ msgstr "Comparar soma md5"
+
+#~ msgid "Continue"
+#~ msgstr "Prosseguir"
+
+#~ msgid "Continue download"
+#~ msgstr "Continuar transferência"
+
+#~ msgid "Continue with the download"
+#~ msgstr "Continuar a transferência"
+
+#~ msgid "Help"
+#~ msgstr "Ajuda"
+
+#~ msgid "Information"
+#~ msgstr "Informação"
+
+#~ msgid "Local Directory:"
+#~ msgstr "Directório Local:"
+
+#~ msgid "Local File:"
+#~ msgstr "Ficheiro Local:"
+
+#~ msgid "Md5 Sum:"
+#~ msgstr "Soma Md5:"
+
+#~ msgid "Multimedia files (Videos and images)"
+#~ msgstr "Ficheiros multimédia (Vídeos e imagens)"
+
+#~ msgid "New Download"
+#~ msgstr "Novo Download"
+
+#~ msgid "New download"
+#~ msgstr "Novo download"
+
+#~ msgid "Open"
+#~ msgstr "Abrir"
+
+#~ msgid "Open directory"
+#~ msgstr "Abrir directório"
+
+#~ msgid "Open file"
+#~ msgstr "Abrir ficheiro"
+
+#~ msgid "Open target directory"
+#~ msgstr "Abrir directório de destino"
+
+#~ msgid "Pause"
+#~ msgstr "Pausar"
+
+#~ msgid "Pause all"
+#~ msgstr "Pausar todos"
+
+#~ msgid "Pause all downloads"
+#~ msgstr "Pausar todos os downloads"
+
+#~ msgid "Pause download"
+#~ msgstr "Pausar o download"
+
+#~ msgid "Pause the download"
+#~ msgstr "Pausar a transferência"
+
+#~ msgid "Properties"
+#~ msgstr "Propriedades"
+
+#~ msgid "Recursive"
+#~ msgstr "Recursivo"
+
+#~ msgid "Recursive options"
+#~ msgstr "Opções recursivas"
+
+#~ msgid "Remove completed downloads"
+#~ msgstr "Remover transferências terminadas"
+
+#~ msgid "Remove from List"
+#~ msgstr "Remover da Lista"
+
+#~ msgid "Remove from list"
+#~ msgstr "Remover da lista"
+
+#~ msgid "Resume all"
+#~ msgstr "Retomar todos"
+
+#~ msgid "Resume all downloads"
+#~ msgstr "Retomar todos os downloads da lista"
+
+#~ msgid "Save in:"
+#~ msgstr "Gravar em:"
+
+#~ msgid "Stat_usbar"
+#~ msgstr "Ba_rra de Estado"
+
+#~ msgid "The index file only"
+#~ msgstr "Apenas o ficheiro de índice"
+
+#~ msgid "This site (mirror)"
+#~ msgstr "Este servidor (mirror)"
+
+#~ msgid "URL:"
+#~ msgstr "URL:"
+
+#~ msgid "Verify..."
+#~ msgstr "Verificar..."
+
+#~ msgid "_Archive"
+#~ msgstr "_Arquivar"
+
+#~ msgid "_Download"
+#~ msgstr "_Transferência"
+
+#~ msgid "_Edit"
+#~ msgstr "_Editar"
+
+#~ msgid "_Toolbar"
+#~ msgstr "Barra de Ferramen_tas"
+
+#~ msgid "_View"
+#~ msgstr "_Ver"
+
+#~ msgid "   "
+#~ msgstr "   "
+
+#~ msgid "<span weight=\"bold\">Behavior</span>"
+#~ msgstr "<span weight=\"bold\">Comportamento</span>"
+
+#~ msgid "<span weight=\"bold\">Column List</span>"
+#~ msgstr "<span weight=\"bold\">Lista de Colunas</span>"
+
+#~ msgid "<span weight=\"bold\">General</span>"
+#~ msgstr "<span weight=\"bold\">Geral</span>"
+
+#~ msgid "<span weight=\"bold\">Links</span>"
+#~ msgstr "<span weight=\"bold\">Links</span>"
+
+#~ msgid "<span weight=\"bold\">Proxy Configuration</span>"
+#~ msgstr "<span weight=\"bold\">Configuração da Proxy</span>"
+
+#~ msgid "Column List"
+#~ msgstr "Lista de Colunas"
+
+#~ msgid "Default _GNOME network settings"
+#~ msgstr "Definições de rede do _GNOME por omissão"
+
+#~ msgid "Direct _Internet connection"
+#~ msgstr "Ligação directa à _Internet"
+
+#~ msgid "Do_wnload Speed"
+#~ msgstr "Velocidade de Tra_nsferência"
+
+#~ msgid "Don't _create directories"
+#~ msgstr "Não _criar directórios"
+
+#~ msgid "Follow _relative links only"
+#~ msgstr "Seguir apenas ligações _relativas"
+
+#~ msgid "General"
+#~ msgstr "Geral"
+
+#~ msgid "Limit _number of simultaneous download to:"
+#~ msgstr "Limitar o _número de transferências em simultâneo a:"
+
+#~ msgid "Network"
+#~ msgstr "Rede"
+
+#~ msgid "P_ort:"
+#~ msgstr "P_orta:"
+
+#~ msgid "Password:"
+#~ msgstr "Senha:"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferências"
+
+#~ msgid "Pro_xy:"
+#~ msgstr "Pro_xy:"
+
+#~ msgid "Remaining _Time"
+#~ msgstr "_Tempo Restante"
+
+#~ msgid "Sa_ve in:"
+#~ msgstr "Gra_var em:"
+
+#~ msgid "Total _Size"
+#~ msgstr "Tamanho T_otal"
+
+#~ msgid "_Ask where to save for each download"
+#~ msgstr "_Perguntar onde gravar para cada transferência"
+
+#~ msgid "_Continue downloads on startup"
+#~ msgstr "_Continuar as transferências no arranque"
+
+#~ msgid "_Convert links"
+#~ msgstr "_Converter ligações"
+
+#~ msgid "_Current Size"
+#~ msgstr "Tamanho _Actual"
+
+#~ msgid "_Download page requisites"
+#~ msgstr "Requisitos da _página de transferências"
+
+#~ msgid "_Elapsed Time"
+#~ msgstr "Tempo _Decorrido"
+
+#~ msgid "_Limit download speed to:"
+#~ msgstr "_Limitar a velocidade de transferência a:"
+
+#~ msgid "_Manual proxy configuration"
+#~ msgstr "Configuração _manual da proxy"
+
+#~ msgid "_Maximum depth level:"
+#~ msgstr "Nível _máximo de profundidade: "
+
+#~ msgid "_Number of retries:"
+#~ msgstr "_Número de tentativas:"
+
+#~ msgid "_Open files automatically after download"
+#~ msgstr "Abrir aut_omaticamente os ficheiros ao terminar as transferências"
+
+#~ msgid "_Percentage"
+#~ msgstr "_Percentagem"
+
+#~ msgid "_Proxy requires authentication"
+#~ msgstr "A _proxy exige autenticação"
+
+#~ msgid "_User:"
+#~ msgstr "_Utilizador:"
+
+#~ msgid "files"
+#~ msgstr "ficheiros"
+
+#~ msgid "kB/sec"
+#~ msgstr "kB/seg"
+
+#~ msgid "error %d when accessing %s: %s\n"
+#~ msgstr "erro %d ao aceder a %s: %s\n"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+#~ msgstr ""
+#~ "<span size=\"large\" weight=\"bold\">Verificação MD5SUM PASSOU!</span>"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+#~ msgstr ""
+#~ "<span size=\"large\" weight=\"bold\">Verificação MD5SUM FALHOU!</span>"
 
 #~ msgid "gwget application"
 #~ msgstr "aplicação gwget"
