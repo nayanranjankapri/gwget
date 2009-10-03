@@ -1,5 +1,6 @@
 2009-10-03  David Sedeño <david@alderia.com>
 
+  * src/wget-log.c: Free tmp var (Fix #595155) 
   * epiphany-extension/ephy-gwget-extension.c: Fix Dbus call.
 
 2009-08-14  David Sedeño <david@alderia.com>

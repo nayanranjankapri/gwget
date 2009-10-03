@@ -338,6 +338,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 					tmp[j]='\0';
 					gwget_data_set_filename_from_url(gwgetdata,tmp);
 					gwgetdata->local_filename = g_strconcat (gwgetdata->dir, gwgetdata->filename, NULL);
+					g_free(tmp);
 				}
 
 				if (strstr (gwgetdata->line, "           =>") != NULL) {
@@ -356,6 +357,7 @@ wget_log_process_line (GwgetData *gwgetdata)
 					gwgetdata->total_size=0; 
 					gwgetdata->session_start_time = 0;
 					gwgetdata->session_start_size = 0;
+					g_free(tmp);
 				}
 			}
 		break;
