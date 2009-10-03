@@ -1,3 +1,7 @@
+2009-10-03  David Sedeño <david@alderia.com>
+
+  * epiphany-extension/ephy-gwget-extension.c: Fix Dbus call.
+
 2009-08-14  David Sedeño <david@alderia.com>
   
   * data/Makefile.am: Fix --disable-schemas-install. Pach from Vincent Untz
