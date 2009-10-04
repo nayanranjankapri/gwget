@@ -1,4 +1,17 @@
 ==============
+Version 1.0.3
+==============
+Feature: 
+  * Detect Epiphany 2.27/2.28 (Vincent Untz)
+
+Fixes: 
+  * Fix epiphany-extension dbus call.
+  * Fix menu icon size.
+
+Other:
+  * Port to GtkBuilder.
+
+==============
 Version 1.0.2
 ==============
 Fixes:
