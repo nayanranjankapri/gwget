@@ -1,4 +1,10 @@
 ==============
+Version 1.0.4
+==============
+Fixes: 
+  * Fix crash with gtk+-2.18
+
+==============
 Version 1.0.3
 ==============
 Feature: 

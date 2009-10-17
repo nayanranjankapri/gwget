@@ -1,5 +1,6 @@
 2009-10-17  David Sedeño <david@alderia.com>
 
+  * configure.ac, NEWS: Version 1.0.4 
   * data/gwget.ui: Remove duplicates ids. Fix #597396.
 
 2009-10-04  David Sedeño <david@alderia.com>
