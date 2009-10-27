@@ -700,7 +700,7 @@ gwget_data_add_download(GwgetData *gwgetdata)
 	reverse_filename = g_strreverse(reverse_filename);
 	if (!strcmp(gwgetdata->filename,"") || !strcmp(gwgetdata->filename,gwgetdata->url) ||
 		!strncmp(reverse_filename,"lmth",4) || !strncmp(reverse_filename,"mth",3) || 
-		!strncmp(reverse_filename,"php",3)  || !strncmp(reverse_filename,"asp",3)) {
+		!strncmp(reverse_filename,"php",3)  || !strncmp(reverse_filename,"psa",3)) {
 		recursive_window=GTK_WIDGET (gtk_builder_get_object(builder,"dialog2"));
 		response=gtk_dialog_run(GTK_DIALOG(recursive_window));
 		gtk_widget_hide(GTK_WIDGET(recursive_window));
