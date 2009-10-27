@@ -1,3 +1,7 @@
+2009-10-27  David Sedeño <david@alderia.com>
+
+  * src/gwget_data.c: compare .asp file correctly. 
+
 2009-10-17  David Sedeño <david@alderia.com>
 
   * configure.ac, NEWS: Version 1.0.4 
