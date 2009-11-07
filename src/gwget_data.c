@@ -83,6 +83,7 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	time_t estimated;
 	gdouble perc;
 	gchar *title;
+	gchar *size;
 		
 	
 	/* Get time and size of the file being retrieved */
@@ -130,22 +131,24 @@ gwget_data_update_statistics (GwgetData *gwgetdata)
 	
 	/* Total Size */
 	if (gwgetdata->state == DL_NOT_STARTED)
-		strcpy (buffer, "");
-	else
-		sprintf (buffer, "%d kB", (guint32)(gwgetdata->total_size + 512) / 1024);
-	
+		size = g_strdup("0");
+	else {
+	  size = get_readable_size (gwgetdata->total_size);
+  }
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
-						TOTALSIZE_COLUMN,buffer,
+						TOTALSIZE_COLUMN, size,
 						-1);
 	
 	
 	/* Update retrieved information */
 	if (gwgetdata->state == DL_NOT_STARTED || gwgetdata->state == DL_COMPLETED)
-		strcpy (buffer, "");
-	else
-		sprintf (buffer, "%d kB",(guint32) (gwgetdata->cur_size + 512) / 1024);
+		size = g_strdup("0");
+	else {
+	  size = get_readable_size (gwgetdata->cur_size);
+  }
+
 	gtk_list_store_set(GTK_LIST_STORE(model),&gwgetdata->file_list,
-						CURRENTSIZE_COLUMN,buffer,
+						CURRENTSIZE_COLUMN, size,
 						-1);
 	
 	

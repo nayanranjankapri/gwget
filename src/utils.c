@@ -157,3 +157,26 @@ gboolean check_server_already_exists(gchar *checkurl)
 	return FALSE;
 }
 
+gchar* get_readable_size(guint64 size_in_kb)
+{
+  float n_mb;
+  gchar *size;
+
+  if (size_in_kb == 0)
+    size = g_strdup("0");
+  else
+  {
+    n_mb = (float)((guint32)(size_in_kb  + 512)/1048576);
+
+    if(n_mb >= 1024)
+	    size = g_strdup_printf ("%0.2f Gb", (float)(guint32)(size_in_kb  + 512) / 1073741824);
+    else
+      if (n_mb >= 1)
+          size = g_strdup_printf ("%0.2f Mb", (float)(guint32)(size_in_kb  + 512) / 1048576);
+      else
+          size = g_strdup_printf ("%0.2f Kb", (float)(guint32)(size_in_kb  + 512) / 1024);
+  }
+
+  return size;
+}
+

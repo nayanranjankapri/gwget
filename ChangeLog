@@ -1,3 +1,10 @@
+2009-11-07  David Sedeño <david@alderia.com>
+
+  * src/gwget_data.c, src/main_window_cb.c, src/utils.c:
+    Add function to set the current and total size in Mb and Gb.
+    Thanks Felipe Besoaín <fbesoain@gmail.com> for initial patch.
+    Fix #596421
+
 2009-10-27  David Sedeño <david@alderia.com>
 
   * src/gwget_data.c: compare .asp file correctly. 

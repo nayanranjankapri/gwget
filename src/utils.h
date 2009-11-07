@@ -26,7 +26,7 @@ void run_dialog_information(gchar *title, gchar *msg);
 int check_url(char *str1, char *str2);
 gboolean check_url_already_exists(gchar *checkurl);
 gboolean check_server_already_exists(gchar *checkurl);
-
+gchar* get_readable_size(guint64 size_in_kb);
 
 
 #endif

@@ -218,15 +218,17 @@ new_download(GwgetData* gwgetdata)
 	int width = 16, height = 16;
 	gdouble perc;
 	
-	gtk_list_store_append (GTK_LIST_STORE(model), &iter); 
-	size = g_strdup_printf ("%d kB", (guint32)(gwgetdata->cur_size + 512) / 1024);
+	gtk_list_store_append (GTK_LIST_STORE(model), &iter);
+
+	size = get_readable_size (gwgetdata->cur_size);
+
 	gtk_list_store_set (GTK_LIST_STORE(model), &iter,URL_COLUMN,gwgetdata->url,
 						CURRENTSIZE_COLUMN, size, 
 						FILENAME_COLUMN, gwgetdata->filename,
 	    				-1);
 	
+  size = get_readable_size (gwgetdata->total_size);
 	
-	size = g_strdup_printf ("%d kB", (guint32)(gwgetdata->total_size + 512) / 1024);
 	gtk_list_store_set (GTK_LIST_STORE(model), &iter, TOTALSIZE_COLUMN, size, -1);
 	
 	perc = gwgetdata->total_size==0?0:((gdouble)gwgetdata->cur_size*100)/(gdouble)gwgetdata->total_size ;
