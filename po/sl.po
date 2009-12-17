@@ -1,0 +1,465 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Andrej Žnidaršič <andrej.znidarsic@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gwget master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gwget&component=general\n"
+"POT-Creation-Date: 2009-11-07 21:13+0000\n"
+"PO-Revision-Date: 2009-12-17 07:01+0100\n"
+"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"X-Poedit-Country: SLOVENIA\n"
+"X-Poedit-Language: Slovenian\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Upravljalnik prejemanja"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Prejemanje datotek s spleta"
+
+#: ../data/gwget.desktop.in.in.h:3
+#: ../src/main.c:207
+#: ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Gwget upravljalnik prejemanja"
+
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask where to save each new download"
+msgstr "Vprašaj kam naj se shrani vsaka datoteka"
+
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "Pretvori povezave"
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "Pretvori v relativne povezave v rekurzivnem načinu."
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Privzeta mapa za prejemanje"
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "Zahteve prejemanja"
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "Sledi relativnim povezavam"
+
+#: ../data/gwget.schemas.in.h:7
+msgid "If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user."
+msgstr "Izbrana možnost določa, da program vsakokrat vpraša za ciljno mapo shranjevanja pred začetkom novega prejemanja. V kolikor možnost ni izbrana, se datoteke samodejno shranijo v privzeto mapo."
+
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Omeji največjo hitrost"
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Omeji število sočasnih prejemanj"
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr "Največja globina v rekurzivnem načinu"
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "Največje število sočasnih prejemanj"
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr "Omejitev največje hitrosti"
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr "Število prejemanj"
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr "Število ponovnih poskusov"
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr "Odpri datoteko po prejemu"
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Resume downloads at startup"
+msgstr "Nadaljevanje prejemanj ob zagonu"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr "Prikaz stolpca hitrosti prejemanja"
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr "Prikaz stolpca pretečenega časa"
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr "Prikaz stolpca odstotka"
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr "Prikaz stolpca preostalega časa"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "Prikaz vrstice stanja"
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View toolbar"
+msgstr "Prikaz orodne vrstice"
+
+#: ../data/gwget.schemas.in.h:23
+msgid "View total size column"
+msgstr "Prikaz stolpca skupne velikosti"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Ali naj bo prikazana vrstica stanja?"
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "Ali naj bo prikazana orodna vrstica?"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Posreduj prejemanja h GWGet"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Neznano"
+
+#: ../src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Spodletelo"
+
+#: ../src/gwget_data.c:210
+msgid "stalled"
+msgstr "zastalo"
+
+#: ../src/gwget_data.c:242
+msgid "Waiting"
+msgstr "Čakanje"
+
+#: ../src/gwget_data.c:244
+msgid "Not Started"
+msgstr "Ni začeto"
+
+#: ../src/gwget_data.c:246
+msgid "Not Running"
+msgstr "Ni zagnano"
+
+#: ../src/gwget_data.c:248
+msgid "Not Connected"
+msgstr "Brez povezave"
+
+#: ../src/gwget_data.c:250
+msgid "Connected"
+msgstr "Povezano"
+
+#: ../src/gwget_data.c:252
+msgid "Retrieving"
+msgstr "Pridobivanje"
+
+#: ../src/gwget_data.c:254
+msgid "Completed"
+msgstr "Končano"
+
+#: ../src/gwget_data.c:258
+msgid "Error"
+msgstr "Napaka"
+
+#: ../src/gwget_data.c:696
+msgid "Unable to add this download"
+msgstr "Tega prejema ni mogoče dodati"
+
+#: ../src/gwget_data.c:697
+msgid "This download is already added"
+msgstr "To prejemanje je že dodano"
+
+#: ../src/gwget_data.c:748
+#: ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
+#: ../src/main_window_cb.c:1280
+msgid "Error opening file"
+msgstr "Napaka med odpiranjem datoteke"
+
+#: ../src/gwget_data.c:748
+#: ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
+msgid "Couldn't open the file"
+msgstr "Datoteke ni mogoče odpreti"
+
+#: ../src/gwget_data.c:796
+msgid "Download Complete"
+msgstr "Prejemanje je končano"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Datoteka %s je seznam predvajanja MP3 datotek.\n"
+"Ali naj se začne prejemanje vse datotek iz seznama?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "Prejemanje datotek iz seznama predvajanja MP3 datotek?"
+
+#: ../src/gwget_data.c:815
+#: ../src/main_window.c:820
+msgid "No"
+msgstr "Ne"
+
+#: ../src/gwget_data.c:815
+#: ../src/main_window.c:820
+msgid "Yes"
+msgstr "Da"
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "Zagon gwget v obvestilnem področju"
+
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "Ciljna mapa za prejemanje"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[URL]"
+
+#: ../src/main.c:226
+#: ../src/main_window_cb.c:187
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main_window.c:436
+msgid "File Name"
+msgstr "Ime datoteke"
+
+#: ../src/main_window.c:451
+msgid "State"
+msgstr "Stanje"
+
+#: ../src/main_window.c:464
+msgid "Current Size"
+msgstr "Trenutna velikost"
+
+#: ../src/main_window.c:477
+msgid "Total Size"
+msgstr "Skupna velikost "
+
+#: ../src/main_window.c:489
+#: ../src/main_window.c:495
+msgid "Percentage"
+msgstr "Odstotek"
+
+#: ../src/main_window.c:503
+msgid "Elapsed Time"
+msgstr "Pretečni čas"
+
+#: ../src/main_window.c:515
+msgid "Remaining Time"
+msgstr "Preostali čas"
+
+#: ../src/main_window.c:527
+msgid "Speed"
+msgstr "Hitrost"
+
+#: ../src/main_window.c:579
+msgid "Error starting the download"
+msgstr "Napaka med začenjanjem prejemanja"
+
+#: ../src/main_window.c:579
+msgid "There was an unexpected error starting the download"
+msgstr "Med začenjanjem prejemanja je prišlo do napake"
+
+#: ../src/main_window.c:819
+msgid "Stop current downloads?"
+msgstr "Ali naj se zaustavijo trenutna prejemanja?"
+
+#: ../src/main_window.c:820
+msgid "There is at least one active download left. Really cancel all running transfers?"
+msgstr "Ostalo je vsaj eno dejavno prejemanje. Ali res želite preklicati vse dejavne prenose?"
+
+#: ../src/main_window_cb.c:98
+msgid "Error in download"
+msgstr "Napaka prejemanja"
+
+#: ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638
+#: ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget upravljalnik prejemanja"
+
+#: ../src/main_window_cb.c:190
+msgid "Download Manager for GNOME."
+msgstr "Upravljalnik prejemanja za GNOME."
+
+#: ../src/main_window_cb.c:192
+msgid "translator-credits"
+msgstr "Andrej Žnidaršič, <andrej.znidarsic@gmail.com>"
+
+#: ../src/main_window_cb.c:574
+#: ../src/new_window.c:127
+msgid "Select Folder"
+msgstr "Izbor mape"
+
+#: ../src/main_window_cb.c:630
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
+msgstr ""
+"Ali naj se res odstrani trenutno prejemanje?\n"
+"(URL: %s)"
+
+#: ../src/main_window_cb.c:631
+msgid "Delete download?"
+msgstr "Ali naj se izbriše prejemanje?"
+
+#: ../src/main_window_cb.c:631
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Odstrani končane"
+
+#: ../src/main_window_cb.c:661
+msgid "Really remove completed downloads from the list?"
+msgstr "Ali naj se res odstranijo končani prejemi iz seznama?"
+
+#: ../src/main_window_cb.c:661
+msgid "Remove"
+msgstr "Odstrani"
+
+#: ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Odstrani nedejavne"
+
+#: ../src/main_window_cb.c:695
+msgid "Really remove inactive downloads from the list?"
+msgstr "Ali naj se res odstranijo nedejavni prejemi iz seznama?"
+
+#: ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Odstrani vse"
+
+#: ../src/main_window_cb.c:727
+msgid "Really remove all downloads from the list?"
+msgstr "Ali naj se res odstranijo vsi prejemi iz seznama?"
+
+#: ../src/main_window_cb.c:879
+#, c-format
+msgid "MD5SUM Check PASSED!"
+msgstr "Preverjanje vsote MD5 uspešno končano!"
+
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr "Preverjanje vsote MD5 je spodletelo!"
+
+#: ../src/main_window_cb.c:1207
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr "Nova omejitev hitrosti prejemanja bo uveljavljena samo za nove ali ponovno začete prejeme"
+
+#: ../src/main_window_cb.c:1223
+#, c-format
+msgid "Remove %s ?"
+msgstr "Ali naj se odstrani %s?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Really remove this download from the list?"
+msgstr "Ali naj se res odstrani prejemanje iz seznama?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Remove download"
+msgstr "Odstrani prejemanje"
+
+#: ../src/main_window_cb.c:1280
+msgid "Couldn't open the folder"
+msgstr "Mape ni mogoče odpreti"
+
+#: ../src/systray.c:120
+msgid "Nothing"
+msgstr "Nič"
+
+#: ../src/systray.c:127
+msgid "Downloads"
+msgstr "Prejemi"
+
+#: ../src/wget-log.c:187
+msgid "Socket error"
+msgstr "Napaka vtiča"
+
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "Povezava je bila zavrnjena"
+
+#: ../src/wget-log.c:193
+msgid "No route to host"
+msgstr "Ni poti do gostitelja"
+
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "Med prejemanjem URL je bila povezava zavrnjena:"
+
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Gostitelja ni mogoče najti"
+
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Ime ali storitev ni znana"
+
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Nepodprt protokol"
+
+#: ../src/wget-log.c:208
+msgid "Refusing to truncate existing file"
+msgstr "Obstoječe datoteke ni mogoče skrajšati"
+
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Naslova gostitelja ni mogoče razrešiti"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
+msgstr "Neznana napaka"
+
+#: ../src/wget-log.c:238
+#: ../src/wget-log.c:245
+msgid "File not found"
+msgstr "Datoteke ni mogoče najti"
+
+#: ../src/wget-log.c:252
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr "Prejemanja ni mogoče nadaljevati, obstoječa krajevna datoteka je v sporu z oddaljeno datoteko"
+
+#: ../src/wget-log.c:303
+msgid "Can't write to target directory"
+msgstr "V ciljno mapo ni mogoče pisati"
+
