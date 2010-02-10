@@ -102,7 +102,11 @@ AC_ARG_WITH([epiphany-version],
 
 dnl try to autodetect Epiphany 1.2, 1.4, 1.6, 1.8, 1.10, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.20, 2.21, 2.22, 2.23, 2.24, 2.25, 2.26, 2.27 or 2.28
 EPHY_AUTODETECT="(autodetect)"
-if pkg-config --exists epiphany-2.28; then
+if pkg-config --exists epiphany-2.30; then
+        EPHY_VER=2.30
+elif pkg-config --exists epiphany-2.29; then
+        EPHY_VER=2.29
+elif pkg-config --exists epiphany-2.28; then
         EPHY_VER=2.28
 elif pkg-config --exists epiphany-2.27; then
         EPHY_VER=2.27
@@ -229,6 +233,14 @@ elif test "x$EPHY_VER" = "x2.28"; then
 	  EPIPHANY_PKGCONFIG=epiphany-2.28
           EPIPHANY_REQUIRED=2.28
 	  EPIPHANY_SHORTVER=228
+elif test "x$EPHY_VER" = "x2.29"; then
+	  EPIPHANY_PKGCONFIG=epiphany-2.29
+          EPIPHANY_REQUIRED=2.29
+	  EPIPHANY_SHORTVER=229
+elif test "x$EPHY_VER" = "x2.30"; then
+	  EPIPHANY_PKGCONFIG=epiphany-2.30
+          EPIPHANY_REQUIRED=2.30
+	  EPIPHANY_SHORTVER=230
 else
      	AC_MSG_RESULT([no epiphany installed])
 fi
