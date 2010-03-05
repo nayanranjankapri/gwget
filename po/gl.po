@@ -1,0 +1,464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fran Diéguez <frandieguez@ubuntu.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: gwget\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&component=general\n"
+"POT-Creation-Date: 2010-02-10 19:47+0000\n"
+"PO-Revision-Date: 2010-03-04 13:43+0100\n"
+"Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
+"Language-Team: Galician <gnome@g11n.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Galician\n"
+
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Xestor de descargas"
+
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Descargue ficheiros de Internet"
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Xestor de descargas Gwget"
+
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask where to save each new download"
+msgstr "Preguntar onde gardar cada nova descarga"
+
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr "Converter ligazóns"
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr "Converter a ligazóns relativas en modo recursivo."
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Cartafol predefinido para descargas"
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr "Descargar os requisitos das páxinas"
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr "Seguir as ligazóns relativas"
+
+#: ../data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Se é afirmativo, pedir sempre un cartafol de destino cando se inicie unha "
+"descarga nova. Se é  negativo, gardar sempre no cartafol predefinido sen "
+"preguntar ao usuario."
+
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Limitar a velocidade máxima"
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Limitar o número de descargas simultáneas"
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr "Profundidade máxima en modo recursivo"
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "Número máximo de descargas simultáneas"
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr "Límite máximo da velocidade"
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr "Número de descargas"
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr "Número de reintentos"
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr "Abrir o ficheiro despois de descargar"
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Resume downloads at startup"
+msgstr "Continuar coas descargas ao iniciar"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr "Ver a columna de velocidade das descargas"
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr "Ver a columna do tempo transcorrido"
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr "Ver a columna da porcentaxe"
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr "Ver a columna do tempo restante"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "Ver a barra de estado"
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View toolbar"
+msgstr "Ver a barra de ferramentas"
+
+#: ../data/gwget.schemas.in.h:23
+msgid "View total size column"
+msgstr "Ver a columna do tamaño total"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Indica se mostrar a barra de estado."
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "Indica se mostrar a barra de ferramentas."
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Transferir as descargas a GWGet"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
+msgid "Unknown"
+msgstr "Descoñecido"
+
+#: ../src/custom-cell-renderer-progressbar.c:99
+msgid "Failed"
+msgstr "Fallou"
+
+#: ../src/gwget_data.c:210
+msgid "stalled"
+msgstr "atrancado"
+
+#: ../src/gwget_data.c:242
+msgid "Waiting"
+msgstr "En espera"
+
+#: ../src/gwget_data.c:244
+msgid "Not Started"
+msgstr "Non iniciado"
+
+#: ../src/gwget_data.c:246
+msgid "Not Running"
+msgstr "Non se está a executar"
+
+#: ../src/gwget_data.c:248
+msgid "Not Connected"
+msgstr "Non conectado"
+
+#: ../src/gwget_data.c:250
+msgid "Connected"
+msgstr "Conectado"
+
+#: ../src/gwget_data.c:252
+msgid "Retrieving"
+msgstr "A recuperar"
+
+#: ../src/gwget_data.c:254
+msgid "Completed"
+msgstr "Completado"
+
+#: ../src/gwget_data.c:258
+msgid "Error"
+msgstr "Produciuse un erro"
+
+#: ../src/gwget_data.c:696
+msgid "Unable to add this download"
+msgstr "Non foi posíbel engadir esta descarga"
+
+#: ../src/gwget_data.c:697
+msgid "This download is already added"
+msgstr "Esta descarga xa foi engadida"
+
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
+msgid "Error opening file"
+msgstr "Produciuse un erro ao abrir o ficheiro"
+
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
+msgid "Couldn't open the file"
+msgstr "Non foi posíbel abrir o ficheiro"
+
+#: ../src/gwget_data.c:796
+msgid "Download Complete"
+msgstr "Descarga completada"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"O ficheiro %s é unha listaxe de reprodución.\n"
+"Desexa descargar os ficheiros que contén?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "Desexa descargar os ficheiros da listaxe de MP3?"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "Non"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "Si"
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "Abrir o gwget na área de notificación"
+
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "Cartafol de destino para a descarga"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[URL]"
+
+#: ../src/main.c:226 ../src/main_window_cb.c:187
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main_window.c:436
+msgid "File Name"
+msgstr "Nome do ficheiro"
+
+#: ../src/main_window.c:451
+msgid "State"
+msgstr "Estado"
+
+#: ../src/main_window.c:464
+msgid "Current Size"
+msgstr "Tamaño actual"
+
+#: ../src/main_window.c:477
+msgid "Total Size"
+msgstr "Tamaño total"
+
+#: ../src/main_window.c:489 ../src/main_window.c:495
+msgid "Percentage"
+msgstr "Porcentaxe"
+
+#: ../src/main_window.c:503
+msgid "Elapsed Time"
+msgstr "Tempo transcorrido"
+
+#: ../src/main_window.c:515
+msgid "Remaining Time"
+msgstr "Tempo restante"
+
+#: ../src/main_window.c:527
+msgid "Speed"
+msgstr "Velocidade"
+
+#: ../src/main_window.c:579
+msgid "Error starting the download"
+msgstr "Produciuse un erro ao iniciar a descarga"
+
+#: ../src/main_window.c:579
+msgid "There was an unexpected error starting the download"
+msgstr "Produciuse un erro inesperado ao iniciar a descarga"
+
+#: ../src/main_window.c:819
+msgid "Stop current downloads?"
+msgstr "Desexa parar as descargas actuais?"
+
+#: ../src/main_window.c:820
+msgid ""
+"There is at least one active download left. Really cancel all running "
+"transfers?"
+msgstr ""
+"Hai alomenos unha descarga activa. Está certo de cancelar todas as descargas "
+"activas?"
+
+#: ../src/main_window_cb.c:98
+msgid "Error in download"
+msgstr "Produciuse un erro na descarga"
+
+#: ../src/main_window_cb.c:140 ../src/main_window_cb.c:638
+#: ../src/main_window_cb.c:677 ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Xestor de descargas"
+
+#: ../src/main_window_cb.c:190
+msgid "Download Manager for GNOME."
+msgstr "Xestor de descargas para GNOME."
+
+#: ../src/main_window_cb.c:192
+msgid "translator-credits"
+msgstr "Marcos Lans"
+
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
+msgid "Select Folder"
+msgstr "Seleccionar o cartafol"
+
+#: ../src/main_window_cb.c:630
+#, c-format
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
+msgstr ""
+"Está certo de cancelar a descarga actual?\n"
+"(URL: %s)"
+
+#: ../src/main_window_cb.c:631
+msgid "Delete download?"
+msgstr "Desexa eliminar a descarga?"
+
+#: ../src/main_window_cb.c:631
+msgid "Delete"
+msgstr "Eliminar"
+
+#: ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Eliminar as descargas completadas"
+
+#: ../src/main_window_cb.c:661
+msgid "Really remove completed downloads from the list?"
+msgstr "Está certo de eliminar da listaxe as descargas completadas?"
+
+#: ../src/main_window_cb.c:661
+msgid "Remove"
+msgstr "Eliminar"
+
+#: ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Eliminar as inactivas"
+
+#: ../src/main_window_cb.c:695
+msgid "Really remove inactive downloads from the list?"
+msgstr "Desexa eliminar da listaxe as descargas inactivas?"
+
+#: ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Eliminar todas"
+
+#: ../src/main_window_cb.c:727
+msgid "Really remove all downloads from the list?"
+msgstr "Está certo de eliminar todas as descargas da listaxe?"
+
+#: ../src/main_window_cb.c:879
+#, c-format
+msgid "MD5SUM Check PASSED!"
+msgstr "Verificouse correctamente o MD5SUM"
+
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr "Fallou a verificación do MD5SUM"
+
+#: ../src/main_window_cb.c:1207
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr ""
+"O novo límite da velocidade de descarga aplicarase só ás descargas novas ou "
+"reiniciadas"
+
+#: ../src/main_window_cb.c:1223
+#, c-format
+msgid "Remove %s ?"
+msgstr "Desexa eliminar %s?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Really remove this download from the list?"
+msgstr "Desexa eliminar esta descarga da listaxe?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Remove download"
+msgstr "Eliminar a descarga"
+
+#: ../src/main_window_cb.c:1280
+msgid "Couldn't open the folder"
+msgstr "Non foi posíbel abrir o cartafol"
+
+#: ../src/systray.c:120
+msgid "Nothing"
+msgstr "Nada"
+
+#: ../src/systray.c:127
+msgid "Downloads"
+msgstr "Descargas"
+
+#: ../src/wget-log.c:187
+msgid "Socket error"
+msgstr "Erro do socket"
+
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "A conexión foi rexeitada"
+
+#: ../src/wget-log.c:193
+msgid "No route to host"
+msgstr "Non hai unha ruta ao servidor"
+
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "A conexión foi rexeitada durante a descarga da URL:"
+
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Non se atopou o servidor"
+
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Nome ou servizo descoñecidos"
+
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Protocolo non soportado"
+
+#: ../src/wget-log.c:208
+msgid "Refusing to truncate existing file"
+msgstr "Rexeitando o truncado do ficheiro existente"
+
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Non foi posíbel determinar o enderezo do servidor"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
+msgstr "Produciuse un erro descoñecido"
+
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
+msgid "File not found"
+msgstr "Non se atopou o ficheiro"
+
+#: ../src/wget-log.c:252
+msgid "Can't continue download, existing local file conflicts with remote file"
+msgstr ""
+"No é posíbel continuar a descarga, o ficheiro local entra en conflito co "
+"ficheiro remoto"
+
+#: ../src/wget-log.c:303
+msgid "Can't write to target directory"
+msgstr "Non é posíbel escribir no cartafol de destino"
