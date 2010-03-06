@@ -3,8 +3,8 @@
 [encoding: UTF-8]
 data/gwget.desktop.in.in
 data/gwget.schemas.in
-data/gwget.ui
-data/preferences.ui
+[type: gettext/glade]data/gwget.ui
+[type: gettext/glade]data/preferences.ui
 epiphany-extension/gwget.xml.in.in
 src/custom-cell-renderer-progressbar.c
 src/gwget_data.c
