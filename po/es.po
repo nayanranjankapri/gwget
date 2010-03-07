@@ -6,22 +6,21 @@
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004, 2005.
 # Jorge Gonzalez <jorge.gonzalez.gonzalez@hispalinux.es>, 2005.
 # Miguel Angel Nieto <correo@miguelangelnieto.net>, 2005.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
 # Juan Percy Rojas Cruz <juanperojas@gmail.com>, 2008, 2009.
-# Jorge González <jorgegonz@svn.gnome.org>, 2009.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gwget&component=general\n"
-"POT-Creation-Date: 2009-06-27 19:21+0000\n"
-"PO-Revision-Date: 2009-06-30 20:45+0200\n"
+"POT-Creation-Date: 2010-03-06 21:36+0000\n"
+"PO-Revision-Date: 2010-03-07 15:01+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../data/gwget.desktop.in.in.h:1
@@ -141,6 +140,345 @@ msgstr "Indica si se debe mostrar la barra de estado."
 msgid "Whether to display the toolbar."
 msgstr "Indica si se debe mostrar la barra de herramientas."
 
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Descargar</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Insertar suma MD5 para comparar con</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Propiedades</b>"
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Nueva descarga</span>"
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "Limpiar"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "Comparar suma MD5"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "Continuar"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Gestor de descargas"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "Directorio local:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "Archivo local:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "Suma MD5"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "Archivos multimedia (vídeos e imágenes)"
+
+#: ../data/gwget.ui.h:15
+msgid "New Download"
+msgstr "Descarga nueva"
+
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "Descarga nueva"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "Abrir"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "Abrir directorio"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "Abrir archivo"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "Abrir carpeta de destino"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "Pausar"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "Pausar todos"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "Pausar todas las descargas"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "Propiedades"
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "Recursivo"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "Opciones de recursividad"
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Quitar todas"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Quitar las descargas completadas"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "Quitar las descargas completadas"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "Quitar de la lista"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "Quita de la lista"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Quitar las inactivas"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "Continuar todas"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "Continuar todas las descargas"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "Guardar en:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "_Barra de estado"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "El archivo index solamente"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "Este sitio (replicar)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "Verificar..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_Archivo"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_Descarga"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../data/gwget.ui.h:44
+#| msgid "Help"
+msgid "_Help"
+msgstr "Ay_uda"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "Barra de _herramientas"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_Ver"
+
+#: ../data/preferences.ui.h:1
+msgid "   "
+msgstr "   "
+
+#: ../data/preferences.ui.h:3
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Comportamiento</span>"
+
+#: ../data/preferences.ui.h:4
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Lista de columnas</span>"
+
+#: ../data/preferences.ui.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">General</span>"
+
+#: ../data/preferences.ui.h:6
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Enlaces</span>"
+
+#: ../data/preferences.ui.h:7
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Configuración del proxy</span>"
+
+#: ../data/preferences.ui.h:8
+msgid "Column List"
+msgstr "Lista de columnas"
+
+#: ../data/preferences.ui.h:9
+msgid "Default _GNOME network settings"
+msgstr "Configuración de red de _Gnome"
+
+#: ../data/preferences.ui.h:10
+msgid "Direct _Internet connection"
+msgstr "Conexión directa a _Internet"
+
+#: ../data/preferences.ui.h:11
+msgid "Do_wnload Speed"
+msgstr "_Velocidad de descarga"
+
+#: ../data/preferences.ui.h:12
+msgid "Don't _create directories"
+msgstr "No _crear directorios"
+
+#: ../data/preferences.ui.h:13
+msgid "Follow _relative links only"
+msgstr "Seguir sólo enlaces _relativos"
+
+#: ../data/preferences.ui.h:14
+msgid "General"
+msgstr "General"
+
+#: ../data/preferences.ui.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr "Limitar el _número de descargas simultáneas a:"
+
+#: ../data/preferences.ui.h:16
+msgid "Network"
+msgstr "Red"
+
+#: ../data/preferences.ui.h:17
+msgid "P_ort:"
+msgstr "_Puerto:"
+
+#: ../data/preferences.ui.h:18
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: ../data/preferences.ui.h:19
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: ../data/preferences.ui.h:20
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: ../data/preferences.ui.h:22
+msgid "Remaining _Time"
+msgstr "_Tiempo restante"
+
+#: ../data/preferences.ui.h:23
+msgid "Sa_ve in:"
+msgstr "_Guardar en:"
+
+#: ../data/preferences.ui.h:24
+msgid "Total _Size"
+msgstr "_Tamaño total"
+
+#: ../data/preferences.ui.h:25
+msgid "_Ask where to save for each download"
+msgstr "Pregunt_ar dónde guardar para cada descarga"
+
+#: ../data/preferences.ui.h:26
+msgid "_Continue downloads on startup"
+msgstr "_Continuar descargas al iniciar"
+
+#: ../data/preferences.ui.h:27
+msgid "_Convert links"
+msgstr "_Convertir enlaces"
+
+#: ../data/preferences.ui.h:28
+msgid "_Current Size"
+msgstr "Tamaño a_ctual"
+
+#: ../data/preferences.ui.h:29
+msgid "_Download page requisites"
+msgstr "_Descargar requisitos de la página"
+
+#: ../data/preferences.ui.h:30
+msgid "_Elapsed Time"
+msgstr "Ti_empo transcurrido"
+
+#: ../data/preferences.ui.h:31
+msgid "_Limit download speed to:"
+msgstr "_Limitar velocidad de descarga a:"
+
+#: ../data/preferences.ui.h:32
+msgid "_Manual proxy configuration"
+msgstr "Configuración _manual del proxy"
+
+#: ../data/preferences.ui.h:33
+msgid "_Maximum depth level:"
+msgstr "Nivel de profundidad _máximo:"
+
+#: ../data/preferences.ui.h:34
+msgid "_Number of retries:"
+msgstr "_Número de reintentos:"
+
+#: ../data/preferences.ui.h:35
+msgid "_Open files automatically after download"
+msgstr "_Abrir archivos automáticamente después de descargar"
+
+#: ../data/preferences.ui.h:36
+msgid "_Percentage"
+msgstr "_Porcentaje"
+
+#: ../data/preferences.ui.h:37
+msgid "_Proxy requires authentication"
+msgstr "_El proxy requiere autenticación"
+
+#: ../data/preferences.ui.h:38
+msgid "_User:"
+msgstr "_Usuario:"
+
+#: ../data/preferences.ui.h:39
+msgid "files"
+msgstr "archivos"
+
+#: ../data/preferences.ui.h:40
+msgid "kB/sec"
+msgstr "KiB/seg"
+
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
 msgstr "Reenviar las descargas a GWGet"
@@ -157,65 +495,65 @@ msgstr "Desconocido"
 msgid "Failed"
 msgstr "Fallo"
 
-#: ../src/gwget_data.c:207
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "parado"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:242
 msgid "Waiting"
 msgstr "Esperando"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "No iniciado"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "No ejecutado"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "No conectado"
 
-#: ../src/gwget_data.c:247
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "Descargando"
 
-#: ../src/gwget_data.c:251
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "Completado"
 
-#: ../src/gwget_data.c:255
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "Error"
 
-#: ../src/gwget_data.c:694
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
 msgstr "Imposible añadir esta descarga"
 
-#: ../src/gwget_data.c:695
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
 msgstr "Esta descarga ya está añadida"
 
-#: ../src/gwget_data.c:746 ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1255 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
 msgid "Error opening file"
 msgstr "Error al abrir el archivo"
 
-#: ../src/gwget_data.c:746 ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1255
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "No se puede abrir el archivo"
 
-#: ../src/gwget_data.c:794
+#: ../src/gwget_data.c:796
 msgid "Download Complete"
 msgstr "Descarga completada"
 
-#: ../src/gwget_data.c:810
+#: ../src/gwget_data.c:812
 #, c-format
 msgid ""
 "The file %s is an MP3 playlist.\n"
@@ -224,15 +562,15 @@ msgstr ""
 "El archivo %s es una lista de reproducción en MP3.\n"
 "¿Descargar los archivos que contiene?"
 
-#: ../src/gwget_data.c:812
+#: ../src/gwget_data.c:814
 msgid "Download files in MP3 playlist?"
 msgstr "¿Descargar los archivos en la lista de reproducción MP3?"
 
-#: ../src/gwget_data.c:813 ../src/main_window.c:809
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
 msgid "No"
 msgstr "No"
 
-#: ../src/gwget_data.c:813 ../src/main_window.c:809
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
 msgid "Yes"
 msgstr "Sí"
 
@@ -252,51 +590,51 @@ msgstr "[URL]"
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:434
+#: ../src/main_window.c:436
 msgid "File Name"
 msgstr "Nombre del archivo"
 
-#: ../src/main_window.c:446
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "Estado"
 
-#: ../src/main_window.c:458
+#: ../src/main_window.c:464
 msgid "Current Size"
 msgstr "Tamaño actual"
 
-#: ../src/main_window.c:470
+#: ../src/main_window.c:477
 msgid "Total Size"
 msgstr "Tamaño total"
 
-#: ../src/main_window.c:481 ../src/main_window.c:487
+#: ../src/main_window.c:489 ../src/main_window.c:495
 msgid "Percentage"
 msgstr "Porcentaje"
 
-#: ../src/main_window.c:494
+#: ../src/main_window.c:503
 msgid "Elapsed Time"
 msgstr "Tiempo transcurrido"
 
-#: ../src/main_window.c:505
+#: ../src/main_window.c:515
 msgid "Remaining Time"
 msgstr "Tiempo restante"
 
-#: ../src/main_window.c:516
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "Velocidad"
 
-#: ../src/main_window.c:567
+#: ../src/main_window.c:579
 msgid "Error starting the download"
 msgstr "Error al iniciar la descarga"
 
-#: ../src/main_window.c:567
+#: ../src/main_window.c:579
 msgid "There was an unexpected error starting the download"
 msgstr "Hubo un error inesperado al iniciar la descarga"
 
-#: ../src/main_window.c:808
+#: ../src/main_window.c:819
 msgid "Stop current downloads?"
 msgstr "¿Quiere parar las descargas actuales?"
 
-#: ../src/main_window.c:809
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -307,11 +645,6 @@ msgstr ""
 #: ../src/main_window_cb.c:98
 msgid "Error in download"
 msgstr "Error en la descarga"
-
-#: ../src/main_window_cb.c:140 ../src/main_window_cb.c:636
-#: ../src/main_window_cb.c:675 ../src/main_window_cb.c:743
-msgid "Gwget - Download Manager"
-msgstr "Gwget - Gestor de descargas"
 
 #: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
@@ -326,11 +659,11 @@ msgstr ""
 "Francisco Javier F. Serrador <serrador@gnome.org>\n"
 "David Sedeño Fernández <david@alderia.com>"
 
-#: ../src/main_window_cb.c:572 ../src/new_window.c:127
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-#: ../src/main_window_cb.c:628
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -339,72 +672,60 @@ msgstr ""
 "¿Seguro que quiere cancelar la descarga actual?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:629
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
 msgstr "¿Quiere borrar la descarga?"
 
-#: ../src/main_window_cb.c:629
+#: ../src/main_window_cb.c:631
 msgid "Delete"
 msgstr "Borrar"
 
-#: ../src/main_window_cb.c:659
-msgid "Remove completed"
-msgstr "Quitar las descargas completadas"
-
-#: ../src/main_window_cb.c:659
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "¿Seguro que quiere quitar las descargas completadas de la lista?"
 
-#: ../src/main_window_cb.c:659
+#: ../src/main_window_cb.c:661
 msgid "Remove"
 msgstr "Quitar"
 
-#: ../src/main_window_cb.c:693
-msgid "Remove inactive"
-msgstr "Quitar las inactivas"
-
-#: ../src/main_window_cb.c:693
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "¿Seguro que quiere quitar las descargas inactivas de la lista?"
 
-#: ../src/main_window_cb.c:725
-msgid "Remove all"
-msgstr "Quitar todas"
-
-#: ../src/main_window_cb.c:725
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "¿Seguro que quiere quitar todas las descargas de la lista?"
 
-#: ../src/main_window_cb.c:877
+#: ../src/main_window_cb.c:879
 #, c-format
 msgid "MD5SUM Check PASSED!"
 msgstr "Suma de verificación MD5 pasada"
 
-#: ../src/main_window_cb.c:880
+#: ../src/main_window_cb.c:882
 #, c-format
 msgid "MD5SUM Check FAILED!"
 msgstr "Falló la verificación de la suma MD5"
 
-#: ../src/main_window_cb.c:1205
+#: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "El límite nuevo en la velocidad de descarga se aplicará sólo en las "
 "descargas nuevas o reiniciadas."
 
-#: ../src/main_window_cb.c:1221
+#: ../src/main_window_cb.c:1223
 #, c-format
 msgid "Remove %s ?"
 msgstr "¿Quitar %s?"
 
-#: ../src/main_window_cb.c:1222
+#: ../src/main_window_cb.c:1224
 msgid "Really remove this download from the list?"
 msgstr "¿Quiere quitar esta descarga de la lista?"
 
-#: ../src/main_window_cb.c:1222
+#: ../src/main_window_cb.c:1224
 msgid "Remove download"
 msgstr "Quitar descarga"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1280
 msgid "Couldn't open the folder"
 msgstr "No fue posible abrir la carpeta"
 
@@ -474,38 +795,11 @@ msgstr ""
 msgid "Can't write to target directory"
 msgstr "No se puede escribir en la carpeta destino"
 
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "<b>Download</b>"
-#~ msgstr "<b>Descargar</b>"
-
-#~ msgid "<b>Insert MD5 sum to compare with</b>"
-#~ msgstr "<b>Insertar suma MD5 para comparar con</b>"
-
-#~ msgid "<b>Properties</b>"
-#~ msgstr "<b>Propiedades</b>"
-
-#~ msgid "<span weight=\"bold\">New Download</span>"
-#~ msgstr "<span weight=\"bold\">Nueva descarga</span>"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
-
 #~ msgid "Cancel download"
 #~ msgstr "Cancelar descarga"
 
 #~ msgid "Cancel the download"
 #~ msgstr "Cancela la descarga"
-
-#~ msgid "Clear"
-#~ msgstr "Limpiar"
-
-#~ msgid "Compare md5 sum"
-#~ msgstr "Comparar suma MD5"
-
-#~ msgid "Continue"
-#~ msgstr "Continuar"
 
 #~ msgid "Continue download"
 #~ msgstr "Continua con la descarga"
@@ -513,227 +807,14 @@ msgstr "No se puede escribir en la carpeta destino"
 #~ msgid "Continue with the download"
 #~ msgstr "Continua con la descarga"
 
-#~ msgid "Help"
-#~ msgstr "Ayuda"
-
 #~ msgid "Information"
 #~ msgstr "Información"
-
-#~ msgid "Local Directory:"
-#~ msgstr "Directorio local:"
-
-#~ msgid "Local File:"
-#~ msgstr "Archivo local:"
-
-#~ msgid "Md5 Sum:"
-#~ msgstr "Suma MD5"
-
-#~ msgid "Multimedia files (Videos and images)"
-#~ msgstr "Archivos multimedia (vídeos e imágenes)"
-
-#~ msgid "New Download"
-#~ msgstr "Descarga nueva"
-
-#~ msgid "New download"
-#~ msgstr "Descarga nueva"
-
-#~ msgid "Open"
-#~ msgstr "Abrir"
-
-#~ msgid "Open directory"
-#~ msgstr "Abrir directorio"
-
-#~ msgid "Open file"
-#~ msgstr "Abrir archivo"
-
-#~ msgid "Open target directory"
-#~ msgstr "Abrir carpeta de destino"
-
-#~ msgid "Pause"
-#~ msgstr "Pausar"
-
-#~ msgid "Pause all"
-#~ msgstr "Pausar todos"
-
-#~ msgid "Pause all downloads"
-#~ msgstr "Pausar todas las descargas"
 
 #~ msgid "Pause download"
 #~ msgstr "Pausar la descarga"
 
 #~ msgid "Pause the download"
 #~ msgstr "Pausar la descarga"
-
-#~ msgid "Properties"
-#~ msgstr "Propiedades"
-
-#~ msgid "Recursive"
-#~ msgstr "Recursivo"
-
-#~ msgid "Recursive options"
-#~ msgstr "Opciones de recursividad"
-
-#~ msgid "Remove completed downloads"
-#~ msgstr "Quitar las descargas completadas"
-
-#~ msgid "Remove from List"
-#~ msgstr "Quitar de la lista"
-
-#~ msgid "Remove from list"
-#~ msgstr "Quita de la lista"
-
-#~ msgid "Resume all"
-#~ msgstr "Continuar todas"
-
-#~ msgid "Resume all downloads"
-#~ msgstr "Continuar todas las descargas"
-
-#~ msgid "Save in:"
-#~ msgstr "Guardar en:"
-
-#~ msgid "Stat_usbar"
-#~ msgstr "_Barra de estado"
-
-#~ msgid "The index file only"
-#~ msgstr "El archivo index solamente"
-
-#~ msgid "This site (mirror)"
-#~ msgstr "Este sitio (replicar)"
-
-#~ msgid "URL:"
-#~ msgstr "URL:"
-
-#~ msgid "Verify..."
-#~ msgstr "Verificar..."
-
-#~ msgid "_Archive"
-#~ msgstr "_Archivo"
-
-#~ msgid "_Download"
-#~ msgstr "_Descarga"
-
-#~ msgid "_Edit"
-#~ msgstr "_Editar"
-
-#~ msgid "_Toolbar"
-#~ msgstr "Barra de _herramientas"
-
-#~ msgid "_View"
-#~ msgstr "_Ver"
-
-#~ msgid "   "
-#~ msgstr "   "
-
-#~ msgid "<span weight=\"bold\">Behavior</span>"
-#~ msgstr "<span weight=\"bold\">Comportamiento</span>"
-
-#~ msgid "<span weight=\"bold\">Column List</span>"
-#~ msgstr "<span weight=\"bold\">Lista de columnas</span>"
-
-#~ msgid "<span weight=\"bold\">General</span>"
-#~ msgstr "<span weight=\"bold\">General</span>"
-
-#~ msgid "<span weight=\"bold\">Links</span>"
-#~ msgstr "<span weight=\"bold\">Enlaces</span>"
-
-#~ msgid "<span weight=\"bold\">Proxy Configuration</span>"
-#~ msgstr "<span weight=\"bold\">Configuración del proxy</span>"
-
-#~ msgid "Column List"
-#~ msgstr "Lista de columnas"
-
-#~ msgid "Default _GNOME network settings"
-#~ msgstr "Configuración de red de _Gnome"
-
-#~ msgid "Direct _Internet connection"
-#~ msgstr "Conexión directa a _Internet"
-
-#~ msgid "Do_wnload Speed"
-#~ msgstr "_Velocidad de descarga"
-
-#~ msgid "Don't _create directories"
-#~ msgstr "No _crear directorios"
-
-#~ msgid "Follow _relative links only"
-#~ msgstr "Seguir sólo enlaces _relativos"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Limit _number of simultaneous download to:"
-#~ msgstr "Limitar el _número de descargas simultáneas a:"
-
-#~ msgid "Network"
-#~ msgstr "Red"
-
-#~ msgid "P_ort:"
-#~ msgstr "_Puerto:"
-
-#~ msgid "Password:"
-#~ msgstr "Contraseña:"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
-
-#~ msgid "Pro_xy:"
-#~ msgstr "Pro_xy:"
-
-#~ msgid "Remaining _Time"
-#~ msgstr "_Tiempo restante"
-
-#~ msgid "Sa_ve in:"
-#~ msgstr "_Guardar en:"
-
-#~ msgid "Total _Size"
-#~ msgstr "_Tamaño total"
-
-#~ msgid "_Ask where to save for each download"
-#~ msgstr "Pregunt_ar dónde guardar para cada descarga"
-
-#~ msgid "_Continue downloads on startup"
-#~ msgstr "_Continuar descargas al iniciar"
-
-#~ msgid "_Convert links"
-#~ msgstr "_Convertir enlaces"
-
-#~ msgid "_Current Size"
-#~ msgstr "Tamaño a_ctual"
-
-#~ msgid "_Download page requisites"
-#~ msgstr "_Descargar requisitos de la página"
-
-#~ msgid "_Elapsed Time"
-#~ msgstr "Ti_empo transcurrido"
-
-#~ msgid "_Limit download speed to:"
-#~ msgstr "_Limitar velocidad de descarga a:"
-
-#~ msgid "_Manual proxy configuration"
-#~ msgstr "Configuración _manual del proxy"
-
-#~ msgid "_Maximum depth level:"
-#~ msgstr "Nivel de profundidad _máximo:"
-
-#~ msgid "_Number of retries:"
-#~ msgstr "_Número de reintentos:"
-
-#~ msgid "_Open files automatically after download"
-#~ msgstr "_Abrir archivos automáticamente después de descargar"
-
-#~ msgid "_Percentage"
-#~ msgstr "_Porcentaje"
-
-#~ msgid "_Proxy requires authentication"
-#~ msgstr "_El proxy requiere autenticación"
-
-#~ msgid "_User:"
-#~ msgstr "_Usuario:"
-
-#~ msgid "files"
-#~ msgstr "archivos"
-
-#~ msgid "kB/sec"
-#~ msgstr "KiB/seg"
 
 #~ msgid "error %d when accessing %s: %s\n"
 #~ msgstr "error %d al acceder a %s: %s\n"
