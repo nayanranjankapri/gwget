@@ -1,14 +1,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Andrej Žnidaršič <andrej.znidarsic@gmail.com>, 2009.
+# This file is distributed under the same license as the gwget package.
+#
+# Andrej Žnidaršič <andrej.znidarsic@gmail.com>, 2009 - 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gwget master\n"
+"Project-Id-Version: gwget master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gwget&component=general\n"
-"POT-Creation-Date: 2009-11-07 21:13+0000\n"
-"PO-Revision-Date: 2009-12-17 07:01+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"POT-Creation-Date: 2010-03-07 17:18+0000\n"
+"PO-Revision-Date: 2010-03-12 18:29+0100\n"
+"Last-Translator: Andrej Žnidaršič <andrej.znidarsic@gmail.com>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -131,6 +132,351 @@ msgstr "Ali naj bo prikazana vrstica stanja?"
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
 msgstr "Ali naj bo prikazana orodna vrstica?"
+
+#: ../data/gwget.ui.h:1
+#: ../data/preferences.ui.h:2
+msgid "    "
+msgstr "     "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Prejem</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Vnesite vsoto MD5 za primerjavo</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Lastnosti</b>"
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Nov prejem</span>"
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "Počisti"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "Primerjaj vsoto md5"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "Nadaljuj"
+
+#: ../data/gwget.ui.h:10
+#: ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638
+#: ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget upravljalnik prejemanja"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "Krajevna mapa:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "Krajevna datoteka:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "Vsota Md5:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "Večpredstavnostne datoteke (Videi in slike)"
+
+#: ../data/gwget.ui.h:15
+msgid "New Download"
+msgstr "Nov prejem"
+
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "Nov prejem"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "Odpri"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "Odpri mapo"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "Odpri datoteko"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "Odpri ciljno mapo"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "Premor"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "Premor vsega"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "Premor vseh prejemov"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "Lastnosti"
+
+#: ../data/gwget.ui.h:25
+#: ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "Rekurzivno"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "Rekurzivne možnosti"
+
+#: ../data/gwget.ui.h:27
+#: ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Odstrani vse"
+
+#: ../data/gwget.ui.h:28
+#: ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Odstrani končane"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "Odstrani dokončane prejeme"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "Odstrani s seznama"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "Odstrani s seznama"
+
+#: ../data/gwget.ui.h:32
+#: ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Odstrani nedejavne"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "Nadaljuj vse"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "Nadaljevanje vseh prejemov"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "Shrani v:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "Vrstica _stanja"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "Le datoteka kazala"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "Ta stran (zrcalo)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "Preveri ..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_Arhiviraj"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_Prejmi"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr "Pomo_č"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "_Orodna vrstica"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_Pogled"
+
+#: ../data/preferences.ui.h:1
+msgid "   "
+msgstr " "
+
+#: ../data/preferences.ui.h:3
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Obnašanje</span>"
+
+#: ../data/preferences.ui.h:4
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Seznam stolpcev</span>"
+
+#: ../data/preferences.ui.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Splošno</span>"
+
+#: ../data/preferences.ui.h:6
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Povezave</span>"
+
+#: ../data/preferences.ui.h:7
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Nastavitve posredovalnega strežnika</span>"
+
+#: ../data/preferences.ui.h:8
+msgid "Column List"
+msgstr "Seznam stolpcev"
+
+#: ../data/preferences.ui.h:9
+msgid "Default _GNOME network settings"
+msgstr "Privzete _GNOME nastavitve omrežja"
+
+#: ../data/preferences.ui.h:10
+msgid "Direct _Internet connection"
+msgstr "Neposredna _medmrežna povezava"
+
+#: ../data/preferences.ui.h:11
+msgid "Do_wnload Speed"
+msgstr "Hitrost _prejemanja"
+
+#: ../data/preferences.ui.h:12
+msgid "Don't _create directories"
+msgstr "Ne _ustvari map"
+
+#: ../data/preferences.ui.h:13
+msgid "Follow _relative links only"
+msgstr "Ustvari le _relativne povezave"
+
+#: ../data/preferences.ui.h:14
+msgid "General"
+msgstr "Splošno"
+
+#: ../data/preferences.ui.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr "Omejitev _števila hkratnih prejemov na:"
+
+#: ../data/preferences.ui.h:16
+msgid "Network"
+msgstr "Omrežje"
+
+#: ../data/preferences.ui.h:17
+msgid "P_ort:"
+msgstr "_Vrata:"
+
+#: ../data/preferences.ui.h:18
+msgid "Password:"
+msgstr "Geslo:"
+
+#: ../data/preferences.ui.h:19
+msgid "Preferences"
+msgstr "Možnosti"
+
+#: ../data/preferences.ui.h:20
+msgid "Pro_xy:"
+msgstr "Posredovalni s_trežnik:"
+
+#: ../data/preferences.ui.h:22
+msgid "Remaining _Time"
+msgstr "Preostali _čas"
+
+#: ../data/preferences.ui.h:23
+msgid "Sa_ve in:"
+msgstr "Shra_ni v:"
+
+#: ../data/preferences.ui.h:24
+msgid "Total _Size"
+msgstr "Skupna _velikost"
+
+#: ../data/preferences.ui.h:25
+msgid "_Ask where to save for each download"
+msgstr "_Vprašaj kam naj se shrani vsak prejem"
+
+#: ../data/preferences.ui.h:26
+msgid "_Continue downloads on startup"
+msgstr "_Nadaljuj s prejemi ob zagonu"
+
+#: ../data/preferences.ui.h:27
+msgid "_Convert links"
+msgstr "_Pretvori povezave"
+
+#: ../data/preferences.ui.h:28
+msgid "_Current Size"
+msgstr "_Trenutna velikost"
+
+#: ../data/preferences.ui.h:29
+msgid "_Download page requisites"
+msgstr "_Zahteve prejema strani"
+
+#: ../data/preferences.ui.h:30
+msgid "_Elapsed Time"
+msgstr "_Porabljen čas"
+
+#: ../data/preferences.ui.h:31
+msgid "_Limit download speed to:"
+msgstr "_Omeji hitrost prejemanja na:"
+
+#: ../data/preferences.ui.h:32
+msgid "_Manual proxy configuration"
+msgstr "_Ročna nastavitev posredniškega strežnika"
+
+#: ../data/preferences.ui.h:33
+msgid "_Maximum depth level:"
+msgstr "_Največja raven globine:"
+
+#: ../data/preferences.ui.h:34
+msgid "_Number of retries:"
+msgstr "_Število ponovnih poskusov:"
+
+#: ../data/preferences.ui.h:35
+msgid "_Open files automatically after download"
+msgstr "_Samodejno odpri datoteke po prejemu"
+
+#: ../data/preferences.ui.h:36
+msgid "_Percentage"
+msgstr "O_dstotki"
+
+#: ../data/preferences.ui.h:37
+msgid "_Proxy requires authentication"
+msgstr "Posredniški strežnik zahteva _overitev"
+
+#: ../data/preferences.ui.h:38
+msgid "_User:"
+msgstr "_Uporabnik:"
+
+#: ../data/preferences.ui.h:39
+msgid "files"
+msgstr "datoteke"
+
+#: ../data/preferences.ui.h:40
+msgid "kB/sec"
+msgstr "kB/sek"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
@@ -302,13 +648,6 @@ msgstr "Ostalo je vsaj eno dejavno prejemanje. Ali res želite preklicati vse de
 msgid "Error in download"
 msgstr "Napaka prejemanja"
 
-#: ../src/main_window_cb.c:140
-#: ../src/main_window_cb.c:638
-#: ../src/main_window_cb.c:677
-#: ../src/main_window_cb.c:745
-msgid "Gwget - Download Manager"
-msgstr "Gwget upravljalnik prejemanja"
-
 #: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "Upravljalnik prejemanja za GNOME."
@@ -340,10 +679,6 @@ msgid "Delete"
 msgstr "Izbriši"
 
 #: ../src/main_window_cb.c:661
-msgid "Remove completed"
-msgstr "Odstrani končane"
-
-#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "Ali naj se res odstranijo končani prejemi iz seznama?"
 
@@ -352,16 +687,8 @@ msgid "Remove"
 msgstr "Odstrani"
 
 #: ../src/main_window_cb.c:695
-msgid "Remove inactive"
-msgstr "Odstrani nedejavne"
-
-#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "Ali naj se res odstranijo nedejavni prejemi iz seznama?"
-
-#: ../src/main_window_cb.c:727
-msgid "Remove all"
-msgstr "Odstrani vse"
 
 #: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
