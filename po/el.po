@@ -2,15 +2,15 @@
 # translation of gwget to Greek
 # This file is distributed under the same license as the el package.
 # Copyright (C) 2004 THE el'S COPYRIGHT HOLDER.
-# Kostas Papadimas <pkst@gnome.org>, 2004, 2005.
 #
 #
+# Kostas Papadimas <pkst@gnome.org>, 2004, 2005, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-12 12:19+0300\n"
-"PO-Revision-Date: 2005-03-14 12:03+0200\n"
+"POT-Creation-Date: 2010-04-10 19:56+0300\n"
+"PO-Revision-Date: 2010-04-05 00:42+0300\n"
 "Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
@@ -19,209 +19,25 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "εφαρμογή gwget"
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Διαχειριστής λήψης αρχείων"
 
-#: ../data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "Εργοστάσιο αυτοματοποίησης gedit "
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Λήψη αρχείων από το διαδίκτυο"
 
-#: ../data/about.glade.h:1
-msgid "About Gwget"
-msgstr "Περί Gwget"
-
-#: ../data/about.glade.h:2
-msgid "GNU GPL Version 2"
-msgstr "GNU GPL Version 2"
-
-#: ../data/about.glade.h:3
-msgid "Gwget: Download Manager for GNOME"
-msgstr "Gwget: Εφαρμογή διαχείρισης λήψης αρχείων για το Gnome"
-
-#: ../data/about.glade.h:4 ../src/main_window_cb.c:193
-msgid "translator-credits"
-msgstr "Κώστας Παπαδήμας <pkst@gnome.org>"
-
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
-
-#: ../data/gwget.glade.h:2
-msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">Λήψη:</span>"
-
-#: ../data/gwget.glade.h:3
-msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\"> Ιδιότητες</span>"
-
-#: ../data/gwget.glade.h:4 ../src/main_window.c:796
-#: ../src/main_window_cb.c:619
-msgid "Cancel"
-msgstr "Ακύρωση"
-
-#: ../data/gwget.glade.h:5
-#, fuzzy
-msgid "Cancel download"
-msgstr "Ακύρωση λήψης αρχείου;"
-
-#: ../data/gwget.glade.h:6
-#, fuzzy
-msgid "Cancel the download"
-msgstr "Ακύρωση λήψης αρχείου;"
-
-#: ../data/gwget.glade.h:7
-msgid "Continue"
-msgstr "Συνέχεια"
-
-#: ../data/gwget.glade.h:8
-#, fuzzy
-msgid "Continue with the download"
-msgstr "Σφάλμα εκκίνησης της λήψης αρχείου"
-
-#: ../data/gwget.glade.h:9 ../src/main_window_cb.c:140
-#: ../src/main_window_cb.c:626 ../src/main_window_cb.c:731
-msgid "Gwget - Download Manager"
-msgstr "Gwget - Διαχείριση λήψης αρχείων"
-
-#: ../data/gwget.glade.h:10
-msgid "Information"
-msgstr "Πληροφορίες"
-
-#: ../data/gwget.glade.h:11
-msgid "Local Directory:"
-msgstr "Τοπικός κατάλογος:"
-
-#: ../data/gwget.glade.h:12
-msgid "Local File:"
-msgstr "Τοπικό αρχείο:"
-
-#: ../data/gwget.glade.h:13
-msgid "Multimedia files (Videos and images)"
-msgstr "Αρχεία πολυμέσων (Βίντεο και εικόνες)"
-
-#: ../data/gwget.glade.h:14
-msgid "New download"
-msgstr "Νέα λήψη αρχείου"
-
-#: ../data/gwget.glade.h:15
-msgid "Open"
-msgstr ""
-
-#: ../data/gwget.glade.h:16
-#, fuzzy
-msgid "Open directory"
-msgstr "Τοπικός κατάλογος:"
-
-#: ../data/gwget.glade.h:17
-#, fuzzy
-msgid "Open the target directory"
-msgstr "Αδυναμία εγγραφής στον κατάλογο προορισμού"
-
-#: ../data/gwget.glade.h:18
-msgid "Pause"
-msgstr "Παύση"
-
-#: ../data/gwget.glade.h:19
-msgid "Pause all"
-msgstr "Παύση όλων"
-
-#: ../data/gwget.glade.h:20
-msgid "Pause all downloads"
-msgstr "Παύση όλων των λήψεων αρχείων"
-
-#: ../data/gwget.glade.h:21
-msgid "Pause download"
-msgstr "Παύση λήψης αρχείου"
-
-#: ../data/gwget.glade.h:22
-#, fuzzy
-msgid "Pause the download"
-msgstr "Παύση λήψης αρχείου"
-
-#: ../data/gwget.glade.h:23
-msgid "Properties"
-msgstr "Ιδιότητες"
-
-#: ../data/gwget.glade.h:24 ../data/preferences.glade.h:21
-msgid "Recursive"
-msgstr "Recursive"
-
-#: ../data/gwget.glade.h:25
-msgid "Recursive options"
-msgstr "Επιλογές Recursive"
-
-#: ../data/gwget.glade.h:26 ../src/main_window_cb.c:713
-msgid "Remove all"
-msgstr "Απομάκρυνση όλων"
-
-#: ../data/gwget.glade.h:27 ../src/main_window_cb.c:649
-msgid "Remove completed"
-msgstr "Απομάκρυνση ολοκληρωμένων"
-
-#: ../data/gwget.glade.h:28
-#, fuzzy
-msgid "Remove from List"
-msgstr "Απομάκρυνση όλων των λήψεων από τη λίστα"
-
-#: ../data/gwget.glade.h:29
-#, fuzzy
-msgid "Remove from list"
-msgstr "Απομάκρυνση όλων των λήψεων από τη λίστα"
-
-#: ../data/gwget.glade.h:30 ../src/main_window_cb.c:681
-msgid "Remove inactive"
-msgstr "Απομάκρυνση ανενεργών"
-
-#: ../data/gwget.glade.h:31
-msgid "Resume all"
-msgstr "Συνέχιση όλων"
-
-#: ../data/gwget.glade.h:32
-msgid "Resume all downloads"
-msgstr "Συνέχιση όλων των λήψεων αρχείων"
-
-#: ../data/gwget.glade.h:33
-msgid "Stat_usbar"
-msgstr ""
-
-#: ../data/gwget.glade.h:34
-msgid "Stop and delete downloaded file"
-msgstr "Διακοπή και διαγραφή του αρχείου που λαμβάνεται"
-
-#: ../data/gwget.glade.h:35
-msgid "The index file only"
-msgstr "Το αρχείο καταλόγου μόνο"
-
-#: ../data/gwget.glade.h:36
-msgid "This site (mirror)"
-msgstr "Αυτή την ιστοσελίδα (mirror)"
-
-#: ../data/gwget.glade.h:37 ../data/newdownload.glade.h:4
-msgid "URL:"
-msgstr "URL: "
-
-#: ../data/gwget.glade.h:38
-#, fuzzy
-msgid "_Download"
-msgstr "Λήψεις αρχείων"
-
-#: ../data/gwget.glade.h:39
-msgid "_New"
-msgstr "_Νέο"
-
-#: ../data/gwget.glade.h:40
-msgid "_Toolbar"
-msgstr "_Εργαλειοθήκη"
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Διαχειριστής λήψης αρχείων Gwget"
 
 #: ../data/gwget.schemas.in.h:1
-#, fuzzy
 msgid "Ask where to save each new download"
-msgstr "Ε_ρώτηση για την τοποθεσία αποθήκευσης για κάθε λήψη αρχείου"
+msgstr "Ερώτηση για την τοποθεσία αποθήκευσης κάθε λήψης αρχείου"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
-msgstr "Μετατροπή δεσμών"
+msgstr "Μετατροπή συνδέσμων"
 
 #: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
@@ -229,7 +45,7 @@ msgstr "Μετατροπή σχετικών δεσμών σε recursive mode."
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
-msgstr "Προεπιλεγμένος κατάλογος λήψης αρχείων"
+msgstr "Προεπιλεγμένος φάκελος λήψης αρχείων"
 
 #: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
@@ -244,9 +60,9 @@ msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Αν true, να γίνεται πάντοτε ερώτηση για φάκελο λήψης αρχείων κατά την "
-"εκκίνηση μιας νέας λήψης. Αν false, να γίνεται πάντα αποθήκευση στο "
-"προεπιλεγμένο φάκελο χωρίς να ερώταται ο χρήστης."
+"Αν είναι αληθές, να γίνεται πάντοτε ερώτηση για φάκελο λήψης αρχείων κατά "
+"την εκκίνηση μιας νέας λήψης. Αν δεν είναι αληθές, να γίνεται πάντα "
+"αποθήκευση στον προεπιλεγμένο φάκελο χωρίς να ερώταται ο χρήστης."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -286,7 +102,7 @@ msgstr "Συνέχιση λήψης αρχείων κατά την εκκίνη�
 
 #: ../data/gwget.schemas.in.h:17
 msgid "View download speed column"
-msgstr "Προβολή στήλης περιορισμού ταχύτητας λήψης αρχείων"
+msgstr "Προβολή στήλης ταχύτητας λήψης"
 
 #: ../data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
@@ -301,9 +117,8 @@ msgid "View remaining time column"
 msgstr "Προβολή στήλης χρόνου που απομένει"
 
 #: ../data/gwget.schemas.in.h:21
-#, fuzzy
 msgid "View statusbar"
-msgstr "Προβολή εργαλειοθήκης"
+msgstr "Προβολή γραμμής κατάστασης"
 
 #: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
@@ -315,184 +130,357 @@ msgstr "Προβολή στήλης συνολικού μεγέθους"
 
 #: ../data/gwget.schemas.in.h:24
 msgid "Whether to display the statusbar."
-msgstr ""
+msgstr "Αν θα εμφανίζεται η γραμμή κατάστασης."
 
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
-msgstr ""
+msgstr "Αν θα εμφανίζεται η εργαλειοθήκη."
 
-#: ../data/newdownload.glade.h:1
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Λήψη</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Εισάγετε άθροισμα MD5 με το οποίο να γίνει σύγκριση</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Ιδιότητες</b>"
+
+#: ../data/gwget.ui.h:5
 msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\"> Νέα λήψη αρχείου</span>"
+msgstr "<span weight=\"bold\">Νέα λήψη αρχείου</span>"
 
-#: ../data/newdownload.glade.h:2
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "Καθαρισμός"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "Σύγκριση αθροίσματος md5"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Διαχειριστής λήψης αρχείων Gwget"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "Τοπικός φάκελος:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "Τοπικό αρχείο:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "Άθροισμα Md5:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "Αρχεία πολυμέσων (Βίντεο και εικόνες)"
+
+#: ../data/gwget.ui.h:15
 msgid "New Download"
 msgstr "Νέα λήψη αρχείου"
 
-#: ../data/newdownload.glade.h:3
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "Νέα λήψη αρχείου"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "Άνοιγμα φακέλου"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "Άνοιγμα αρχείου"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "Άνοιγμα φακέλου προορισμού"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "Παύση"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "Παύση όλων"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "Παύση όλων των λήψεων αρχείων"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "Ιδιότητες"
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "Recursive"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "Επιλογές Recursive"
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Απομάκρυνση όλων"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Απομάκρυνση ολοκληρωμένων"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "Απομάκρυνση ολοκληρωμένων λήψεων"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "Απομάκρυνση από τη λίστα"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "Απομάκρυνση από τη λίστα"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Απομάκρυνση ανενεργών"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "Συνέχιση όλων"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "Συνέχιση όλων των λήψεων αρχείων"
+
+#: ../data/gwget.ui.h:35
 msgid "Save in:"
 msgstr "Αποθήκευση σε:"
 
-#: ../data/preferences.glade.h:1
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "_Γραμμή κατάστασης"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "Το αρχείο καταλόγου μόνο"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "Αυτή την ιστοσελίδα (mirror)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "URL: "
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "Επιβεβαίωση..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_Αρχείο"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_Λήψη"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "_Επεξεργασία"
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "_Εργαλειοθήκη"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_Προβολή"
+
+#: ../data/preferences.ui.h:1
 msgid "   "
 msgstr "   "
 
-#: ../data/preferences.glade.h:3
+#: ../data/preferences.ui.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Συμπεριφορά</span>"
 
-#: ../data/preferences.glade.h:4
+#: ../data/preferences.ui.h:4
 msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\"> Στήλη λίστας</span>"
+msgstr "<span weight=\"bold\">Λίστα στηλών</span>"
 
-#: ../data/preferences.glade.h:5
+#: ../data/preferences.ui.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">Γενικά</span>"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.ui.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Δεσμοί</span>"
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.ui.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
-msgstr "<span weight=\"bold\"> Ρύθμιση διαμεσολαβητή</span>"
+msgstr "<span weight=\"bold\">Ρύθμιση διαμεσολαβητή</span>"
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.ui.h:8
 msgid "Column List"
-msgstr "Στήλη λίστας"
+msgstr "Λίστα στηλών"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.ui.h:9
 msgid "Default _GNOME network settings"
-msgstr "Προεπιλεγμένες ρυθμίσεις δικτύου του _GNOME"
+msgstr "_Προεπιλεγμένες ρυθμίσεις δικτύου του GNOME"
 
-#: ../data/preferences.glade.h:10
+#: ../data/preferences.ui.h:10
 msgid "Direct _Internet connection"
-msgstr "Απ'ευθείας σύνδεση στο _διαδίκτυο"
+msgstr "_Σύνδεση στο διαδίκτυο χωρίς διαμεσολαβητή"
 
-#: ../data/preferences.glade.h:11
+#: ../data/preferences.ui.h:11
 msgid "Do_wnload Speed"
-msgstr "Ταχύτητα μετα_φόρτωσης"
+msgstr "Ταχύτητα λή_ψης"
 
-#: ../data/preferences.glade.h:12
+#: ../data/preferences.ui.h:12
 msgid "Don't _create directories"
-msgstr "Να μην _δημιουργούνται κατάλογοι"
+msgstr "Να μη _δημιουργούνται φάκελοι"
 
-#: ../data/preferences.glade.h:13
+#: ../data/preferences.ui.h:13
 msgid "Follow _relative links only"
 msgstr "Να ακολουθούνται _σχετικοί δεσμοί μόνο"
 
-#: ../data/preferences.glade.h:14
+#: ../data/preferences.ui.h:14
 msgid "General"
 msgstr "Γενικά"
 
-#: ../data/preferences.glade.h:15
+#: ../data/preferences.ui.h:15
 msgid "Limit _number of simultaneous download to:"
 msgstr "Περιορισ_μός αριθμού ταυτόχρονων λήψεων αρχείων σε:"
 
-#: ../data/preferences.glade.h:16
+#: ../data/preferences.ui.h:16
 msgid "Network"
 msgstr "Δίκτυο"
 
-#: ../data/preferences.glade.h:17
+#: ../data/preferences.ui.h:17
 msgid "P_ort:"
 msgstr "_Θύρα:"
 
-#: ../data/preferences.glade.h:18
+#: ../data/preferences.ui.h:18
 msgid "Password:"
-msgstr ""
+msgstr "Συνθηματικό:"
 
-#: ../data/preferences.glade.h:19
+#: ../data/preferences.ui.h:19
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../data/preferences.glade.h:20
+#: ../data/preferences.ui.h:20
 msgid "Pro_xy:"
-msgstr "Διαμεσολα_βητής:"
+msgstr "_Διαμεσολαβητής:"
 
-#: ../data/preferences.glade.h:22
+#: ../data/preferences.ui.h:22
 msgid "Remaining _Time"
 msgstr "Χρόνος που απο_μένει:"
 
-#: ../data/preferences.glade.h:23
+#: ../data/preferences.ui.h:23
 msgid "Sa_ve in:"
-msgstr "Απο_θήκευση σε:"
+msgstr "_Αποθήκευση σε:"
 
-#: ../data/preferences.glade.h:24
+#: ../data/preferences.ui.h:24
 msgid "Total _Size"
 msgstr "Συνο_λικό μέγεθος"
 
-#: ../data/preferences.glade.h:25
+#: ../data/preferences.ui.h:25
 msgid "_Ask where to save for each download"
 msgstr "Ε_ρώτηση για την τοποθεσία αποθήκευσης για κάθε λήψη αρχείου"
 
-#: ../data/preferences.glade.h:26
+#: ../data/preferences.ui.h:26
 msgid "_Continue downloads on startup"
 msgstr "Συνέ_χιση λήψης αρχείων κατά την εκκίνηση"
 
-#: ../data/preferences.glade.h:27
+#: ../data/preferences.ui.h:27
 msgid "_Convert links"
 msgstr "_Μετατροπή δεσμών"
 
-#: ../data/preferences.glade.h:28
+#: ../data/preferences.ui.h:28
 msgid "_Current Size"
 msgstr "Τρέ_χον μέγεθος"
 
-#: ../data/preferences.glade.h:29
+#: ../data/preferences.ui.h:29
 msgid "_Download page requisites"
 msgstr "_Λήψη απαιτούμενων σελίδας"
 
-#: ../data/preferences.glade.h:30
+#: ../data/preferences.ui.h:30
 msgid "_Elapsed Time"
 msgstr "Χρόνος που _πέρασε"
 
-#: ../data/preferences.glade.h:31
+#: ../data/preferences.ui.h:31
 msgid "_Limit download speed to:"
 msgstr "Π_εριορισμός ταχύτητας λήψης αρχείων σε:"
 
-#: ../data/preferences.glade.h:32
+#: ../data/preferences.ui.h:32
 msgid "_Manual proxy configuration"
 msgstr "_Χειρωνακτική ρύθμιση διαμεσολαβητή"
 
-#: ../data/preferences.glade.h:33
+#: ../data/preferences.ui.h:33
 msgid "_Maximum depth level:"
 msgstr "_Μέγιστο επίπεδο βάθους:"
 
-#: ../data/preferences.glade.h:34
+#: ../data/preferences.ui.h:34
 msgid "_Number of retries:"
 msgstr "Αριθμός επανάλη_ψης προσπαθειών:"
 
-#: ../data/preferences.glade.h:35
+#: ../data/preferences.ui.h:35
 msgid "_Open files automatically after download"
 msgstr "Αυ_τόματο άνοιγμα αρχείων μετά τη λήψη"
 
-#: ../data/preferences.glade.h:36
+#: ../data/preferences.ui.h:36
 msgid "_Percentage"
 msgstr "Ποσο_στό"
 
-#: ../data/preferences.glade.h:37
+#: ../data/preferences.ui.h:37
 msgid "_Proxy requires authentication"
-msgstr ""
+msgstr "_Ο διαμεσολαβητής απαιτεί πιστοποίηση"
 
-#: ../data/preferences.glade.h:38
+#: ../data/preferences.ui.h:38
 msgid "_User:"
-msgstr ""
+msgstr "Χ_ρήστης:"
 
-#: ../data/preferences.glade.h:39
+#: ../data/preferences.ui.h:39
 msgid "files"
 msgstr "αρχεία"
 
-#: ../data/preferences.glade.h:40
+#: ../data/preferences.ui.h:40
 msgid "kB/sec"
 msgstr "kB/δευτ"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
-msgstr ""
+msgstr "Προώθηση λήψεων στο GWGet"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:2
-#, fuzzy
 msgid "GWGet"
-msgstr "Gwget"
+msgstr "GWGet"
 
 #: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
@@ -502,142 +490,146 @@ msgstr "Άγνωστο"
 msgid "Failed"
 msgstr "Απέτυχε"
 
-#: ../src/eggtrayicon.c:145
-msgid "Orientation"
-msgstr ""
-
-#: ../src/eggtrayicon.c:146
-msgid "The orientation of the tray."
-msgstr ""
-
-#: ../src/eggtrayicon.c:483
-msgid "Notification"
-msgstr ""
-
-#: ../src/gwget_data.c:195
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "κολλημένο"
 
-#: ../src/gwget_data.c:229
+#: ../src/gwget_data.c:242
 msgid "Waiting"
 msgstr "Αναμονή"
 
-#: ../src/gwget_data.c:231
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "Δεν έχει ξεκινήσει"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "Δεν εκτελείται"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "Χωρίς σύνδεση"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "Συνδεδεμένο"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "Ανάκτηση"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "Ολοκληρώθηκε"
 
-#: ../src/gwget_data.c:245
-#, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
-msgstr ""
-"Η λήψη ολοκληρώθηκε\n"
-"(%s)"
-
-#: ../src/gwget_data.c:252
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: ../src/gwget_data.c:693
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
 msgstr "Αδυναμία προσθήκης αυτής της λήψης"
 
-#: ../src/gwget_data.c:694
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
 msgstr "Αυτή η λήψη έχει ήδη προστεθεί"
 
-#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1143 ../src/main_window_cb.c:1162
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
 msgid "Error opening file"
 msgstr "Σφάλμα ανοίγματος αρχείου"
 
-#: ../src/gwget_data.c:742 ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1143
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "Αδυναμία ανοίγματος αρχείου"
 
-#: ../src/gwget_data.c:780
-#, fuzzy
+#: ../src/gwget_data.c:796
 msgid "Download Complete"
-msgstr ""
-"Η λήψη ολοκληρώθηκε\n"
-"(%s)"
+msgstr "Η λήψη ολοκληρώθηκε"
 
-#: ../src/main.c:230 ../src/main_window_cb.c:188
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Το αρχείο %s είναι μια λίστα αναπαραγωγής MP3.\n"
+"Να ληφθούν τα αρχεία που περιέχει;"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "Να ληφθούν τα αρχεία από τη λίστα αναπαραγωγής MP3;"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "Όχι"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "Ναι"
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "Εκκίνηση του GWGet στην περιοχή ειδοποίησεων"
+
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "Φάκελος προορισμού για τη λήψη"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[URL]"
+
+#: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main.c:249
-#, fuzzy
-msgid "Gwget Download Manager"
-msgstr "Gwget - Διαχείριση λήψης αρχείων"
-
-#: ../src/main_window.c:433
+#: ../src/main_window.c:436
 msgid "File Name"
 msgstr "Όνομα αρχείου"
 
-#: ../src/main_window.c:441
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "Κατάσταση"
 
-#: ../src/main_window.c:453
+#: ../src/main_window.c:464
 msgid "Current Size"
 msgstr "Τρέχον μέγεθος"
 
-#: ../src/main_window.c:465
+#: ../src/main_window.c:477
 msgid "Total Size"
 msgstr "Συνολικό  μέγεθος"
 
-#: ../src/main_window.c:476 ../src/main_window.c:482
+#: ../src/main_window.c:489 ../src/main_window.c:495
 msgid "Percentage"
 msgstr "Ποσοστό"
 
-#: ../src/main_window.c:489
+#: ../src/main_window.c:503
 msgid "Elapsed Time"
 msgstr "Χρόνος που πέρασε"
 
-#: ../src/main_window.c:500
+#: ../src/main_window.c:515
 msgid "Remaining Time"
 msgstr "Χρόνος που απομένει:"
 
-#: ../src/main_window.c:511
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "Ταχύτητα"
 
-#: ../src/main_window.c:558
+#: ../src/main_window.c:579
 msgid "Error starting the download"
 msgstr "Σφάλμα εκκίνησης της λήψης αρχείου"
 
-#: ../src/main_window.c:558
+#: ../src/main_window.c:579
 msgid "There was an unexpected error starting the download"
 msgstr "Υπήρξε απρόσμενο σφάλμα κατά την εκκίνηση της λήψης αρχείου"
 
-#: ../src/main_window.c:795
-msgid "Cancel current downloads?"
-msgstr "Ακύρωση τρεχουσών λήψεων;"
+#: ../src/main_window.c:819
+msgid "Stop current downloads?"
+msgstr "Σταμάτημα τρεχουσών λήψεων;"
 
-#: ../src/main_window.c:796
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -645,19 +637,23 @@ msgstr ""
 "Υπάρχει τουλάχιστον μια λήψη αρχείου σε εξέλιξη. Είστε σίγουρο ότι θέλετε να "
 "ακυρώσετε όλες τις μεταφορές αρχείων;"
 
-#: ../src/main_window_cb.c:101
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
 msgstr "Σφάλμα λήψης αρχείου"
 
-#: ../src/main_window_cb.c:191
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "Εφαρμογή διαχείρισης λήψης αρχείων για το Gnome."
 
-#: ../src/main_window_cb.c:562 ../src/new_window.c:139
+#: ../src/main_window_cb.c:192
+msgid "translator-credits"
+msgstr "Κώστας Παπαδήμας <pkst@gnome.org>"
+
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Επιλογή φακέλου"
 
-#: ../src/main_window_cb.c:618
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -666,119 +662,192 @@ msgstr ""
 "Είστε σίγουροι ότι θέλετε να ακυρώσετε την τρέχουσα λήψη αρχείου;\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:619
-msgid "Cancel download?"
-msgstr "Ακύρωση λήψης αρχείου;"
+#: ../src/main_window_cb.c:631
+msgid "Delete download?"
+msgstr "Διαγραφή λήψης;"
 
-#: ../src/main_window_cb.c:649
+#: ../src/main_window_cb.c:631
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr ""
 "Είστε σίγουροι ότι θέλετε να απομακρυνθούν οι ολοκληρωμένες λήψεις αρχείων "
 "από τη λίστα;"
 
-#: ../src/main_window_cb.c:649
+#: ../src/main_window_cb.c:661
 msgid "Remove"
 msgstr "Απομάκρυνση"
 
-#: ../src/main_window_cb.c:681
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr ""
 "Είστε σίγουροι ότι θέλετε να απομακρυνθούν οι ανενενεργές λήψεις αρχείων από "
 "τη λίστα;"
 
-#: ../src/main_window_cb.c:713
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr ""
 "Είστε σίγουροι ότι θέλετε να απομακρυνθούν όλες οι λήψεις αρχείων από την "
 "λίστα;"
 
-#: ../src/main_window_cb.c:1095
+#: ../src/main_window_cb.c:879
+#, c-format
+msgid "MD5SUM Check PASSED!"
+msgstr "Έλεγχος MD5SUM ΕΠΙΤΥΧΗΣ!"
+
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr "Έλεγχος MD5SUM ΑΠΕΤΥΧΕ!"
+
+#: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
+"Το νέο όριο ταχύτητα λήψεων θα εφαρμοστεί μόνο στις νέες ή στις "
+"επανεκκινημένες λήψεις"
 
-#: ../src/main_window_cb.c:1111
-#, fuzzy, c-format
+#: ../src/main_window_cb.c:1223
+#, c-format
 msgid "Remove %s ?"
-msgstr "Απομάκρυνση"
+msgstr "Απομάκρυνση του %s;"
 
-#: ../src/main_window_cb.c:1112
-#, fuzzy
+#: ../src/main_window_cb.c:1224
 msgid "Really remove this download from the list?"
 msgstr ""
-"Είστε σίγουροι ότι θέλετε να απομακρυνθούν όλες οι λήψεις αρχείων από την "
-"λίστα;"
+"Είστε σίγουροι ότι θέλετε να απομακρυνθεί αυτή η λήψη αρχείων από τη λίστα;"
 
-#: ../src/main_window_cb.c:1112
-#, fuzzy
+#: ../src/main_window_cb.c:1224
 msgid "Remove download"
-msgstr "Συνέχιση όλων των λήψεων αρχείων"
+msgstr "Απομάκρυνση λήψης"
 
-#: ../src/main_window_cb.c:1162
-#, fuzzy
+#: ../src/main_window_cb.c:1280
 msgid "Couldn't open the folder"
-msgstr "Αδυναμία ανοίγματος αρχείου"
+msgstr "Αδυναμία ανοίγματος φακέλου"
 
-#: ../src/systray.c:151
+#: ../src/systray.c:120
 msgid "Nothing"
 msgstr "Τίποτα"
 
-#: ../src/systray.c:158
+#: ../src/systray.c:127
 msgid "Downloads"
 msgstr "Λήψεις αρχείων"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Σφάλμα Socket"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Άρνηση σύνδεσης\n"
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "Άρνηση σύνδεσης"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Δεν υπάρχει διαδρομή για το σύστημα"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Άρνηση σύνδεσης κατά τη λήψη URL:\n"
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "Άρνηση σύνδεσης κατά τη λήψη URL:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Το σύστημα δεν βρέθηκε\n"
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Το σύστημα δεν βρέθηκε"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr ""
-"Το πρωτόκολλο δεν υποστηρίζεται - χρειάζεστε μεγαλύτερη έκδοση από το  wget "
-"1.7 για https:\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Άγνωστο όνομα ή υπηρεσία"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Δεν υποστηρίζεται το πρωτόκολλο"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Άρνηση truncate υπάρχοντος αρχείου"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Αδυναμία ανάλυσης της διεύθυνσης συστήματος"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
 msgstr "Άγνωστο σφάλμα"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Το αρχείο δε βρέθηκε"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Αδυναμία συνέχισης λήψης αρχείου, το υπάρχον τοπικό αρχείο είναι σε "
 "σύγκρουση με το απομακρυσμένο"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "Αδυναμία εγγραφής στον κατάλογο προορισμού"
 
+#~ msgid "gwget application"
+#~ msgstr "εφαρμογή gwget"
+
+#~ msgid "gwget automation factory"
+#~ msgstr "Εργοστάσιο αυτοματοποίησης gedit "
+
+#~ msgid "About Gwget"
+#~ msgstr "Περί Gwget"
+
+#~ msgid "GNU GPL Version 2"
+#~ msgstr "GNU GPL Version 2"
+
+#~ msgid "Gwget: Download Manager for GNOME"
+#~ msgstr "Gwget: Εφαρμογή διαχείρισης λήψης αρχείων για το Gnome"
+
+#~ msgid "<span weight=\"bold\">Download:</span>"
+#~ msgstr "<span weight=\"bold\">Λήψη:</span>"
+
+#~ msgid "<span weight=\"bold\">Properties</span>"
+#~ msgstr "<span weight=\"bold\"> Ιδιότητες</span>"
+
+#, fuzzy
+#~ msgid "Cancel download"
+#~ msgstr "Ακύρωση λήψης αρχείου;"
+
+#, fuzzy
+#~ msgid "Cancel the download"
+#~ msgstr "Ακύρωση λήψης αρχείου;"
+
+#~ msgid "Information"
+#~ msgstr "Πληροφορίες"
+
+#~ msgid "Pause download"
+#~ msgstr "Παύση λήψης αρχείου"
+
+#, fuzzy
+#~ msgid "Pause the download"
+#~ msgstr "Παύση λήψης αρχείου"
+
+#~ msgid "Stop and delete downloaded file"
+#~ msgstr "Διακοπή και διαγραφή του αρχείου που λαμβάνεται"
+
+#~ msgid ""
+#~ "Download Completed\n"
+#~ "(%s)"
+#~ msgstr ""
+#~ "Η λήψη ολοκληρώθηκε\n"
+#~ "(%s)"
+
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#~ msgstr ""
+#~ "Το πρωτόκολλο δεν υποστηρίζεται - χρειάζεστε μεγαλύτερη έκδοση από το  "
+#~ "wget 1.7 για https:\n"
+
 #~ msgid "Question"
 #~ msgstr "Ερώτηση"
-
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "Απομάκρυνση ολοκληρωμένων λήψεων από τη λίστα"
 
 #~ msgid "Remove inactive downloads from list"
 #~ msgstr "Απομάκρυνση ανενεργών λήψεων από τη λίστα"
