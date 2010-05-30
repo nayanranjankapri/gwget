@@ -1,212 +1,62 @@
 # Danish translation of Gnome wget.
-# Copyright (C) 2005 David Sedeño Fernández
+# Copyright (C) 2009 David Sedeño Fernández og nedenstående oversættere.
 # This file is distributed under the same license as the gwget package.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.
+# Joe Hansen (joedalton2@yahoo.dk), 2010.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
+#
+# connection -> forbindelse
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-01 11:58+0100\n"
-"PO-Revision-Date: 2005-02-01 11:58+0100\n"
-"Last-Translator: Martin Willemoes Hansen <mwh@sysrq.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"POT-Creation-Date: 2010-05-30 23:15+0200\n"
+"PO-Revision-Date: 2010-03-20 12:42+0000\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "programmet gwget"
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "Overføringshåndtering"
 
-#: data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "automationsfabrik for gwget"
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Hent filer fra internettet"
 
-#: data/about.glade.h:1
-msgid "About Gwget"
-msgstr "Om Gwget"
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Gwget - overføringshåndtering"
 
-#: data/about.glade.h:2
-msgid "GNU GPL Version 2"
-msgstr "GNU GPL version 2"
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask where to save each new download"
+msgstr "Spørg hvor der skal gemmes for hver overførsel"
 
-#: data/about.glade.h:3
-msgid "Gwget: Download Manager for GNOME"
-msgstr "Gwget: Gnome-overføringshåndtering"
-
-#: data/about.glade.h:4 src/main_window_cb.c:174
-msgid "translator-credits"
-msgstr ""
-"Martin Willemoes Hansen\n"
-"\n"
-"Dansk-gruppen <dansk@klid.dk>\n"
-"Mere info: http://www.klid.dk/dansk/"
-
-#: data/gwget.glade.h:1 data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
-
-#: data/gwget.glade.h:2
-msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">Overføring:</span>"
-
-#: data/gwget.glade.h:3
-msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">Egenskaber</span>"
-
-#: data/gwget.glade.h:4
-msgid "Cancel"
-msgstr "Afbryd"
-
-#: data/gwget.glade.h:5
-msgid "Continue"
-msgstr "Fortsæt"
-
-#: data/gwget.glade.h:6 src/main_window_cb.c:129 src/main_window_cb.c:576
-#: src/main_window_cb.c:672
-msgid "Gwget - Download Manager"
-msgstr "Gwget - Overføringshåndtering"
-
-#: data/gwget.glade.h:7
-msgid "Information"
-msgstr "Information"
-
-#: data/gwget.glade.h:8
-msgid "Local Directory:"
-msgstr "Lokalt katalog:"
-
-#: data/gwget.glade.h:9
-msgid "Local File:"
-msgstr "Lokal fil:"
-
-#: data/gwget.glade.h:10
-msgid "Multimedia files (Videos and images)"
-msgstr "Multimediafiler (videofilm og billeder)"
-
-#: data/gwget.glade.h:11
-msgid "New download"
-msgstr "Ny overførsel"
-
-#: data/gwget.glade.h:12
-msgid "Pause"
-msgstr "Pause"
-
-#: data/gwget.glade.h:13
-msgid "Pause all"
-msgstr "Pause alle"
-
-#: data/gwget.glade.h:14
-msgid "Pause all downloads"
-msgstr "Pause alle overførsler"
-
-#: data/gwget.glade.h:15
-msgid "Pause download"
-msgstr "Pause overførsel"
-
-#: data/gwget.glade.h:16
-msgid "Properties"
-msgstr "Egenskaber"
-
-#: data/gwget.glade.h:17
-msgid "Question"
-msgstr "Spørgsmål"
-
-#: data/gwget.glade.h:18 data/preferences.glade.h:32
-msgid "Recursive"
-msgstr "Rekursivt"
-
-#: data/gwget.glade.h:19
-msgid "Recursive options"
-msgstr "Rekursive indstillinger"
-
-#: data/gwget.glade.h:20
-msgid "Remove"
-msgstr "Fjern"
-
-#: data/gwget.glade.h:21 src/main_window_cb.c:655
-msgid "Remove all"
-msgstr "Fjern alle"
-
-#: data/gwget.glade.h:22
-msgid "Remove all downloads from list"
-msgstr "Fjern alle overførsler fra listen"
-
-#: data/gwget.glade.h:23 src/main_window_cb.c:597
-msgid "Remove completed"
-msgstr "Fjern fuldførte"
-
-#: data/gwget.glade.h:24
-msgid "Remove completed downloads from list"
-msgstr "Fjern fuldførte overførsler fra listen"
-
-#: data/gwget.glade.h:25 src/main_window_cb.c:626
-msgid "Remove inactive"
-msgstr "Fjern inaktive"
-
-#: data/gwget.glade.h:26
-msgid "Remove inactive downloads from list"
-msgstr "Fjern inaktive overførsler fra listen"
-
-#: data/gwget.glade.h:27
-msgid "Resume all"
-msgstr "Genoptag alle"
-
-#: data/gwget.glade.h:28
-msgid "Resume all downloads"
-msgstr "Genoptag alle overførsler"
-
-#: data/gwget.glade.h:29
-msgid "Stop and delete downloaded file"
-msgstr "Stop overførsel og fjern fil"
-
-#: data/gwget.glade.h:30
-msgid "The index file only"
-msgstr "Kun indeksfilen"
-
-#: data/gwget.glade.h:31
-msgid "This site (mirror)"
-msgstr "Dette sted (spejl)"
-
-#: data/gwget.glade.h:32
-msgid "Url:"
-msgstr "Url:"
-
-#: data/gwget.glade.h:33
-msgid "_New"
-msgstr "_Ny"
-
-#: data/gwget.glade.h:34
-msgid "_Toolbar"
-msgstr "_Værktøjslinje"
-
-#: data/gwget.schemas.in.h:1
-msgid "Ask save in for each new download"
-msgstr "Spørg om der skal gemmes og hvorhenne for hver ny overførsel"
-
-#: data/gwget.schemas.in.h:2
+#: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
 msgstr "Konvertér links"
 
-#: data/gwget.schemas.in.h:3
+#: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
 msgstr "Konvertér til relative links ved rekursiv tilstand."
 
-#: data/gwget.schemas.in.h:4
+#: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
 msgstr "Standardoverførselsmappe"
 
-#: data/gwget.schemas.in.h:5
+#: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
 msgstr "Krav på overførselsside"
 
-#: data/gwget.schemas.in.h:6
+#: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
 msgstr "Følg relative links"
 
-#: data/gwget.schemas.in.h:7
+#: ../data/gwget.schemas.in.h:7
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
@@ -214,397 +64,735 @@ msgstr ""
 "Hvis sand, spørg altid om en mål-mappe når en ny overførsel startes. Hvis "
 "falsk, gem altid i den forvalgte mappe uden at spørge brugeren."
 
-#: data/gwget.schemas.in.h:8
+#: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
 msgstr "Begræns maksimum hastighed"
 
-#: data/gwget.schemas.in.h:9
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Begræns antallet af samtidige overførsler"
+
+#: ../data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
 msgstr "Maksimum dybde i rekursiv tilstand"
 
-#: data/gwget.schemas.in.h:10
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr "Maksimalt antal af samtidige overførsler"
+
+#: ../data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
 msgstr "Maksimum hastighedsgrænse"
 
-#: data/gwget.schemas.in.h:11
+#: ../data/gwget.schemas.in.h:13
 msgid "Number of downloads"
 msgstr "Antal overførsler"
 
-#: data/gwget.schemas.in.h:12
+#: ../data/gwget.schemas.in.h:14
 msgid "Number of retries"
 msgstr "Antal forsøg"
 
-#: data/gwget.schemas.in.h:13
+#: ../data/gwget.schemas.in.h:15
 msgid "Open the file after download"
 msgstr "Åbn filen efter overførslen"
 
-#: data/gwget.schemas.in.h:14
+#: ../data/gwget.schemas.in.h:16
 msgid "Resume downloads at startup"
 msgstr "Genoptag overførsler ved opstart"
 
-#: data/gwget.schemas.in.h:15
+#: ../data/gwget.schemas.in.h:17
 msgid "View download speed column"
 msgstr "Vis kolonnen overførselshastighed"
 
-#: data/gwget.schemas.in.h:16
+#: ../data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
 msgstr "Vis kolonnen forløbet tid"
 
-#: data/gwget.schemas.in.h:17
+#: ../data/gwget.schemas.in.h:19
 msgid "View percentage column"
 msgstr "Vis kolonnen procentandel"
 
-#: data/gwget.schemas.in.h:18
+#: ../data/gwget.schemas.in.h:20
 msgid "View remaining time column"
 msgstr "Vis kolonnen tilbageværende tid"
 
-#: data/gwget.schemas.in.h:19
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr "Vis statuslinje"
+
+#: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
 msgstr "Vis værktøjslinje"
 
-#: data/gwget.schemas.in.h:20
+#: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
 msgstr "Vis kolonnen total størrelse"
 
-#: data/newdownload.glade.h:1
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Hvorvidt statuslinjen skal vises."
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr "Hvorvidt værktøjslinjen skal vises."
+
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Hent</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Indsæt MD5-sum til sammenligning</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Egenskaber</b>"
+
+#: ../data/gwget.ui.h:5
 msgid "<span weight=\"bold\">New Download</span>"
 msgstr "<span weight=\"bold\">Ny overførsel</span>"
 
-#: data/newdownload.glade.h:2
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "Afbryd"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "Ryd"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "Sammenlign md5-sum"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "Fortsæt"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget - overføringshåndtering"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "Lokal mappe:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "Lokal fil:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "Md5-sum:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimediafiler (videofilm og billeder)"
+
+#: ../data/gwget.ui.h:15
 msgid "New Download"
 msgstr "Ny overførsel"
 
-#: data/newdownload.glade.h:3 data/preferences.glade.h:34
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "Ny overførsel"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "Åbn"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "Åbn mappe"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "Åbn fil"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "Åbn målmappe"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "Pause"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "Pause alle"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "Pause alle overførsler"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "Egenskaber"
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "Rekursivt"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "Rekursive indstillinger"
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Fjern alle"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Fjern fuldførte"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "Fjern fuldførte overførsler"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "Fjern fra listen"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "Fjern fra listen"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Fjern inaktive"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "Genoptag alle"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "Genoptag alle overførsler"
+
+#: ../data/gwget.ui.h:35
 msgid "Save in:"
 msgstr "Gem i:"
 
-#: data/newdownload.glade.h:4
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "Stat_uslinje"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "Kun indeksfilen"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "Dette sted (spejl)"
+
+#: ../data/gwget.ui.h:39
 msgid "URL:"
 msgstr "URL:"
 
-#: data/preferences.glade.h:1
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "Bekræft..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_Arkiv"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_Overfør"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "_Rediger"
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "_Værktøjslinje"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_Vis"
+
+#: ../data/preferences.ui.h:1
 msgid "   "
 msgstr "   "
 
-#: data/preferences.glade.h:3
-msgid "  kB/sec"
-msgstr "  kB/s"
-
-#: data/preferences.glade.h:4
+#: ../data/preferences.ui.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Opførsel</span>"
 
-#: data/preferences.glade.h:5
+#: ../data/preferences.ui.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">Kolonneliste</span>"
 
-#: data/preferences.glade.h:6
+#: ../data/preferences.ui.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">Generelt</span>"
 
-#: data/preferences.glade.h:7
+#: ../data/preferences.ui.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Links</span>"
 
-#: data/preferences.glade.h:8
+#: ../data/preferences.ui.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">Konfiguration af proxy</span>"
 
-#: data/preferences.glade.h:9
-msgid "Ask where to save for each download"
-msgstr "Spørg hvor der skal gemmes for hver overførsel"
-
-#: data/preferences.glade.h:10
+#: ../data/preferences.ui.h:8
 msgid "Column List"
 msgstr "Kolonneliste"
 
-#: data/preferences.glade.h:11
-msgid "Continue downloads on startup"
-msgstr "Fortsæt overførsler ved opstart"
+#: ../data/preferences.ui.h:9
+msgid "Default _GNOME network settings"
+msgstr "Standardopsætning for _GNOME-netværk"
 
-#: data/preferences.glade.h:12
-msgid "Convert links"
-msgstr "Konvertér links"
+#: ../data/preferences.ui.h:10
+msgid "Direct _Internet connection"
+msgstr "Direkte _internetforbindelse"
 
-#: data/preferences.glade.h:13 src/main_window.c:317
-msgid "Current Size"
-msgstr "Aktuel størrelse"
+#: ../data/preferences.ui.h:11
+msgid "Do_wnload Speed"
+msgstr "_Overførselshastighed"
 
-#: data/preferences.glade.h:14
-msgid "Default GNOME network settings"
-msgstr "Gnome-standardindstillinger for netværk"
+#: ../data/preferences.ui.h:12
+msgid "Don't _create directories"
+msgstr "Opret _ikke mapper"
 
-#: data/preferences.glade.h:15
-msgid "Direct Internet connection"
-msgstr "Direkte internetforbindelse"
+#: ../data/preferences.ui.h:13
+msgid "Follow _relative links only"
+msgstr "Følg kun _relative henvisninger"
 
-#: data/preferences.glade.h:16
-msgid "Don't create directories"
-msgstr "Opret ikke mapper"
-
-#: data/preferences.glade.h:17
-msgid "Download Speed"
-msgstr "Overførselshastighed"
-
-#: data/preferences.glade.h:18
-msgid "Download page requisites"
-msgstr "Krav på overførselsside"
-
-#: data/preferences.glade.h:19 src/main_window.c:349
-msgid "Elapsed Time"
-msgstr "Forløbet tid"
-
-#: data/preferences.glade.h:20
-msgid "Follow relative links only"
-msgstr "Følg kun relative links"
-
-#: data/preferences.glade.h:21
+#: ../data/preferences.ui.h:14
 msgid "General"
 msgstr "Generelt"
 
-#: data/preferences.glade.h:22
-msgid "Limit download speed to:"
-msgstr "Begræns overførselshastighed til:"
+#: ../data/preferences.ui.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr "Begræns _antallet af samtidige overførsler til:"
 
-#: data/preferences.glade.h:23
-msgid "Manual proxy configuration"
-msgstr "Manuel konfiguration af proxy"
-
-#: data/preferences.glade.h:24
-msgid "Maximum depth level:"
-msgstr "Maksimum dybdeniveau:"
-
-#: data/preferences.glade.h:25
+#: ../data/preferences.ui.h:16
 msgid "Network"
 msgstr "Netværk"
 
-#: data/preferences.glade.h:26
-msgid "Number of retries:"
-msgstr "Antal forsøg:"
+#: ../data/preferences.ui.h:17
+msgid "P_ort:"
+msgstr "P_ort:"
 
-#: data/preferences.glade.h:27
-msgid "Open files automatically after download"
-msgstr "Åbn automatisk filer efter overførsel"
+#: ../data/preferences.ui.h:18
+msgid "Password:"
+msgstr "Adgangskode:"
 
-#: data/preferences.glade.h:28 src/main_window.c:338 src/main_window.c:344
-msgid "Percentage"
-msgstr "Procentandel"
-
-#: data/preferences.glade.h:29
-msgid "Port:"
-msgstr "Port:"
-
-#: data/preferences.glade.h:30
+#: ../data/preferences.ui.h:19
 msgid "Preferences"
 msgstr "Indstillinger"
 
-#: data/preferences.glade.h:31
-msgid "Proxy:"
-msgstr "Proxy:"
+#: ../data/preferences.ui.h:20
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
 
-#: data/preferences.glade.h:33 src/main_window.c:359
-msgid "Remaining Time"
-msgstr "Tilbageværende tid"
+#: ../data/preferences.ui.h:22
+msgid "Remaining _Time"
+msgstr "Tilbageværende _tid"
 
-#: data/preferences.glade.h:35 src/main_window.c:328
-msgid "Total Size"
-msgstr "Total størrelse"
+#: ../data/preferences.ui.h:23
+msgid "Sa_ve in:"
+msgstr "_Gem i:"
 
-#: src/custom-cell-renderer-progressbar.c:36
+#: ../data/preferences.ui.h:24
+msgid "Total _Size"
+msgstr "Total _størrelse"
+
+#: ../data/preferences.ui.h:25
+msgid "_Ask where to save for each download"
+msgstr "Spørg hvor der skal gemmes for hver _overførsel"
+
+#: ../data/preferences.ui.h:26
+msgid "_Continue downloads on startup"
+msgstr "_Fortsæt overførsler ved opstart"
+
+#: ../data/preferences.ui.h:27
+msgid "_Convert links"
+msgstr "_Konvertér links"
+
+#: ../data/preferences.ui.h:28
+msgid "_Current Size"
+msgstr "_Aktuel størrelse"
+
+# _Krav på overførselsside
+# Tror det er _Hent sidens afhængigheder
+# (altså om man henter en webside, eller om man henter siden *plus*
+# billeder el. lign.)
+#: ../data/preferences.ui.h:29
+msgid "_Download page requisites"
+msgstr "_Hent sidens afhængigheder"
+
+#: ../data/preferences.ui.h:30
+msgid "_Elapsed Time"
+msgstr "_Forløbet tid"
+
+#: ../data/preferences.ui.h:31
+msgid "_Limit download speed to:"
+msgstr "_Begræns overførselshastighed til:"
+
+#: ../data/preferences.ui.h:32
+msgid "_Manual proxy configuration"
+msgstr "_Manuel konfiguration af proxy"
+
+#: ../data/preferences.ui.h:33
+msgid "_Maximum depth level:"
+msgstr "_Maksimalt dybdeniveau:"
+
+#: ../data/preferences.ui.h:34
+msgid "_Number of retries:"
+msgstr "_Antal forsøg:"
+
+#: ../data/preferences.ui.h:35
+msgid "_Open files automatically after download"
+msgstr "_Åbn automatisk filer efter overførsel"
+
+#: ../data/preferences.ui.h:36
+msgid "_Percentage"
+msgstr "_Procentandel"
+
+#: ../data/preferences.ui.h:37
+msgid "_Proxy requires authentication"
+msgstr "_Proxy kræver godkendelse"
+
+#: ../data/preferences.ui.h:38
+msgid "_User:"
+msgstr "_Bruger:"
+
+#: ../data/preferences.ui.h:39
+msgid "files"
+msgstr "filer"
+
+#: ../data/preferences.ui.h:40
+msgid "kB/sec"
+msgstr "kB/sek"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr "Videresend overførsler til GWGet"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "GWGet"
+msgstr "GWGet"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
 msgstr "Ukendt"
 
-#: src/custom-cell-renderer-progressbar.c:99
+#: ../src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
 msgstr "Mislykkedes"
 
-#: src/gwget_data.c:177
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "gået i stå"
 
-#: src/gwget_data.c:210
+#: ../src/gwget_data.c:242
 msgid "Waiting"
 msgstr "Venter"
 
-#: src/gwget_data.c:212
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "Ikke startet"
 
-#: src/gwget_data.c:214
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "Køre ikke"
 
-#: src/gwget_data.c:216
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "Ikke tilsluttet"
 
-#: src/gwget_data.c:218
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "Tilsluttet"
 
-#: src/gwget_data.c:220
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "Henter"
 
-#: src/gwget_data.c:222
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "Fuldført"
 
-#: src/gwget_data.c:226
-#, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
-msgstr ""
-"Overførsel fuldført\n"
-"(%s)"
-
-#: src/gwget_data.c:233
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "Fejl"
 
-#: src/gwget_data.c:616
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
 msgstr "Kan ikke tilføje denne overførsel"
 
-#: src/gwget_data.c:616
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
 msgstr "Denne overførsel er allerede tilføjet"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
 msgid "Error opening file"
 msgstr "Fejl ved åbning af fil"
 
-#: src/gwget_data.c:664 src/main_window_cb.c:99
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "Kunne ikke åbne filen"
 
-#: src/main_window.c:299
+#: ../src/gwget_data.c:796
+msgid "Download Complete"
+msgstr "Overførsel fuldført"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Filen %s er en MP3-afspilningsliste.\n"
+"Hent de filer, den indeholder?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "Hent filer i MP3-afspilningslisten?"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "Nej"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "Ja"
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "Start gwget i statusfeltet"
+
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "Destinationsmappe for overførslen"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[URL]"
+
+#: ../src/main.c:226 ../src/main_window_cb.c:187
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main_window.c:436
 msgid "File Name"
 msgstr "Filnavn"
 
-#: src/main_window.c:306
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "Tilstand"
 
-#: src/main_window.c:369
+#: ../src/main_window.c:464
+msgid "Current Size"
+msgstr "Aktuel størrelse"
+
+#: ../src/main_window.c:477
+msgid "Total Size"
+msgstr "Total størrelse"
+
+#: ../src/main_window.c:489 ../src/main_window.c:495
+msgid "Percentage"
+msgstr "Procentandel"
+
+#: ../src/main_window.c:503
+msgid "Elapsed Time"
+msgstr "Forløbet tid"
+
+#: ../src/main_window.c:515
+msgid "Remaining Time"
+msgstr "Tilbageværende tid"
+
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "Hastighed"
 
-#: src/main_window.c:415
+#: ../src/main_window.c:579
 msgid "Error starting the download"
 msgstr "Fejl ved start af overførslen"
 
-#: src/main_window.c:415
+#: ../src/main_window.c:579
 msgid "There was an unexpected error starting the download"
 msgstr "Der opstod en uventet fejl ved start af overførslen"
 
-#: src/main_window.c:605
-msgid "Cancel current downloads?"
-msgstr "Afbryd aktuelle overførsler?"
+#: ../src/main_window.c:819
+msgid "Stop current downloads?"
+msgstr "Stop aktuelle overførsler?"
 
-#: src/main_window.c:605
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
-"Der er mindst en aktiv overførsel tilbage. Er du sikker på at alle "
+"Der er mindst en aktiv overførsel tilbage. Er du sikker på, at alle "
 "igangværende overførsler skal afbrydes?"
 
-#: src/main_window_cb.c:94
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
 msgstr "Fejl i overførslen"
 
-#: src/main_window_cb.c:167
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
-msgstr "Overførselshåndtering for Gnome."
+msgstr "Overførselshåndtering for GNOME."
 
-#: src/main_window_cb.c:186
-msgid "Gwget"
-msgstr "Gwget"
+#: ../src/main_window_cb.c:192
+msgid "translator-credits"
+msgstr ""
+"Joe Hansen <joedalton2@yahoo.dk>, 2010.\n"
+"Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
 
-#: src/main_window_cb.c:513 src/new_window.c:138
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Vælg mappe"
 
-#: src/main_window_cb.c:568
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
-"(Url: %s)"
+"(URL: %s)"
 msgstr ""
 "Afbryd virkelig den aktuelle overførsel?\n"
-"(Url: %s)"
+"(URL: %s)"
 
-#: src/main_window_cb.c:569
-msgid "Cancel download?"
-msgstr "Afbryd overførsel?"
+#: ../src/main_window_cb.c:631
+msgid "Delete download?"
+msgstr "Slet overførsel?"
 
-#: src/main_window_cb.c:597
+#: ../src/main_window_cb.c:631
+msgid "Delete"
+msgstr "Slet"
+
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "Fjern virkelig fuldførte overførsler fra listen?"
 
-#: src/main_window_cb.c:626
+#: ../src/main_window_cb.c:661
+msgid "Remove"
+msgstr "Fjern"
+
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "Fjern virkelig inaktive overførsler fra listen?"
 
-#: src/main_window_cb.c:655
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "Fjern virkelig alle overførsler fra listen?"
 
-#: src/systray.c:135
+#: ../src/main_window_cb.c:879
+#, c-format
+msgid "MD5SUM Check PASSED!"
+msgstr "Tjek af MD5SUM BESTÅET!"
+
+# IKKE BESTÅET
+# altså md5-summen stemte ikke overens med hvad den skulle være (selve
+# tjekket lykkedes sikkert fint nok).
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr "Tjek af MD5SUM IKKE BESTÅET!"
+
+#: ../src/main_window_cb.c:1207
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr ""
+"Ny begrænsning på overførselshastighed vil kun gælde for nye eller "
+"genstartede overførsler"
+
+#: ../src/main_window_cb.c:1223
+#, c-format
+msgid "Remove %s ?"
+msgstr "Fjern %s?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Really remove this download from the list?"
+msgstr "Fjern virkelig denne overførsel fra listen?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Remove download"
+msgstr "Fjern overførsel"
+
+#: ../src/main_window_cb.c:1280
+msgid "Couldn't open the folder"
+msgstr "Kunne ikke åbne mappen"
+
+#: ../src/systray.c:120
 msgid "Nothing"
 msgstr "Ingenting"
 
-#: src/systray.c:142
+#: ../src/systray.c:127
 msgid "Downloads"
 msgstr "Overførsler"
 
-#: src/wget-log.c:83
+#: ../src/wget-log.c:187
 msgid "Socket error"
-msgstr "Sokkel-fejl"
+msgstr "Sokkelfejl"
 
-#: src/wget-log.c:85
-msgid "Connection refused\n"
-msgstr "Tilslutning afslået\n"
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "Forbindelse afslået"
 
-#: src/wget-log.c:87
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Ingen forbindelse til værten"
 
-#: src/wget-log.c:89
-msgid "Connection refused when downloading URL:\n"
-msgstr "Forbindelsen afslået ved overførsel af URL'en:\n"
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "Forbindelsen afslået ved overførsel af URL'en:"
 
-#: src/wget-log.c:91
-msgid "Host not found\n"
-msgstr "Værten blev ikke fundet\n"
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Værten blev ikke fundet"
 
-#: src/wget-log.c:93
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Protokollen understøttes ikke - du behøver wget >= 1.7 for https:\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Navn eller tjeneste er ukendt"
 
-#: src/wget-log.c:96
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Protokol understøttes ikke"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Afslår fra at afkorte eksisterende fil"
 
-#: src/wget-log.c:98
-msgid "Unknown error"
-msgstr "Ukendt fejl"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Kan ikke løse værtsadresse"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
+msgstr "Ukendt fejl "
+
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Filen kunne ikke findes"
 
-#: src/wget-log.c:122
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Kan ikke fortsætte overførslen, eksisterende lokal fil er i konflikt med "
 "fjernfilen"
 
-#: src/wget-log.c:180
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
-msgstr "Kan ikke skrive til målkataloget"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>Generelt</b>"
+msgstr "Kan ikke skrive til målmappe"
