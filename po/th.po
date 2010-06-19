@@ -2,13 +2,15 @@
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gwget package.
 # Manatsawin Hanmongkolchai <manatsawin@gmail.com>, 2008.
+# Sira Nokyoongtong <gumaraa@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-01 16:04+0700\n"
-"PO-Revision-Date: 2008-10-01 17:43+0700\n"
-"Last-Translator: Manatsawin Hanmongkolchai <manatsawin@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&component=general\n"
+"POT-Creation-Date: 2010-05-30 21:15+0000\n"
+"PO-Revision-Date: 2010-06-19 23:15+0700\n"
+"Last-Translator: Sira Nokyoongtong <gumaraa@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,223 +24,9 @@ msgstr "เครื่องมือช่วยดาวน์โหลด"
 msgid "Download files from the Internet"
 msgstr "ดาวน์โหลดแฟ้มจากอินเทอร์เน็ต"
 
-#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:244 ../src/main.c:277
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
 msgid "Gwget Download Manager"
 msgstr "เครื่องมือช่วยดาวน์โหลด Gwget"
-
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
-
-#: ../data/gwget.glade.h:2
-msgid "<b>Download</b>"
-msgstr "<b>ดาวน์โหลด</b>"
-
-#: ../data/gwget.glade.h:3
-msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr "<b>ป้อน MD5 ที่จะใช้เปรียบเทียบ</b>"
-
-#: ../data/gwget.glade.h:4
-msgid "<b>Properties</b>"
-msgstr "<b>คุณสมบัติ</b>"
-
-#: ../data/gwget.glade.h:5
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">รายการดาวน์โหลดใหม่</span>"
-
-#: ../data/gwget.glade.h:6
-msgid "Cancel"
-msgstr "ยกเลิก"
-
-#: ../data/gwget.glade.h:7
-msgid "Cancel download"
-msgstr "ยกเลิกการดาวน์โหลด"
-
-#: ../data/gwget.glade.h:8
-msgid "Cancel the download"
-msgstr "ยกเลิกการดาวน์โหลด"
-
-#: ../data/gwget.glade.h:9
-msgid "Clear"
-msgstr "ล้าง"
-
-#: ../data/gwget.glade.h:10
-msgid "Compare md5 sum"
-msgstr "เปรียบเทียบผลรวม MD5"
-
-#: ../data/gwget.glade.h:11
-msgid "Continue"
-msgstr "ทำต่อไป"
-
-#: ../data/gwget.glade.h:12
-msgid "Continue download"
-msgstr "ดาวน์โหลดต่อ"
-
-#: ../data/gwget.glade.h:13
-msgid "Continue with the download"
-msgstr "ดาวน์โหลดต่อไป"
-
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
-#: ../src/main_window_cb.c:739
-msgid "Gwget - Download Manager"
-msgstr "Gwget - เครื่องมือช่วยดาวน์โหลด"
-
-#: ../data/gwget.glade.h:15
-msgid "Help"
-msgstr "วิธีใช้"
-
-#: ../data/gwget.glade.h:16
-msgid "Information"
-msgstr "ข้อมูล"
-
-#: ../data/gwget.glade.h:17
-msgid "Local Directory:"
-msgstr "ไดเรกทอรีในเครื่อง:"
-
-#: ../data/gwget.glade.h:18
-msgid "Local File:"
-msgstr "แฟ้มในเครื่อง:"
-
-#: ../data/gwget.glade.h:19
-msgid "Md5 Sum:"
-msgstr "ผลรวม MD5:"
-
-#: ../data/gwget.glade.h:20
-msgid "Multimedia files (Videos and images)"
-msgstr "แฟ้มมัลติมีเดีย (วิดีโอและรูปภาพ)"
-
-#: ../data/gwget.glade.h:21
-msgid "New Download"
-msgstr "รายการดาวน์โหลดใหม่"
-
-#: ../data/gwget.glade.h:22
-msgid "New download"
-msgstr "รายการดาวน์โหลดใหม่"
-
-#: ../data/gwget.glade.h:23
-msgid "Open"
-msgstr "เปิด"
-
-#: ../data/gwget.glade.h:24
-msgid "Open directory"
-msgstr "เปิดไดเรกทอรี"
-
-#: ../data/gwget.glade.h:25
-msgid "Open file"
-msgstr "เปิดแฟ้ม"
-
-#: ../data/gwget.glade.h:26
-msgid "Open target directory"
-msgstr "เปิดไดเรกทอรีปลายทาง"
-
-#: ../data/gwget.glade.h:27
-msgid "Pause"
-msgstr "พัก"
-
-#: ../data/gwget.glade.h:28
-msgid "Pause all"
-msgstr "พักทั้งหมด"
-
-#: ../data/gwget.glade.h:29
-msgid "Pause all downloads"
-msgstr "พักการดาวน์โหลดทั้งหมด"
-
-#: ../data/gwget.glade.h:30
-msgid "Pause download"
-msgstr "พักการดาวน์โหลด"
-
-#: ../data/gwget.glade.h:31
-msgid "Pause the download"
-msgstr "พักการดาวน์โหลด"
-
-#: ../data/gwget.glade.h:32
-msgid "Properties"
-msgstr "คุณสมบัติ"
-
-#: ../data/gwget.glade.h:33 ../data/preferences.glade.h:21
-msgid "Recursive"
-msgstr "แบบลงลึก"
-
-#: ../data/gwget.glade.h:34
-msgid "Recursive options"
-msgstr "ตัวเลือกการดาวน์โหลดแบบลงลึก"
-
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:721
-msgid "Remove all"
-msgstr "ลบทั้งหมด"
-
-#: ../data/gwget.glade.h:36 ../src/main_window_cb.c:655
-msgid "Remove completed"
-msgstr "ลบรายการที่เสร็จแล้ว"
-
-#: ../data/gwget.glade.h:37
-msgid "Remove completed downloads"
-msgstr "ลบรายการดาวน์โหลดที่เสร็จแล้ว"
-
-#: ../data/gwget.glade.h:38
-msgid "Remove from List"
-msgstr "ลบออกจากรายชื่อ"
-
-#: ../data/gwget.glade.h:39
-msgid "Remove from list"
-msgstr "ลบออกจากรายชื่อ"
-
-#: ../data/gwget.glade.h:40 ../src/main_window_cb.c:689
-msgid "Remove inactive"
-msgstr "ลบรายการที่ไม่ได้ทำงานอยู่"
-
-#: ../data/gwget.glade.h:41
-msgid "Resume all"
-msgstr "ดาวน์โหลดต่อทั้งหมด"
-
-#: ../data/gwget.glade.h:42
-msgid "Resume all downloads"
-msgstr "ดาวน์โหลดต่อทุกรายการ"
-
-#: ../data/gwget.glade.h:43
-msgid "Save in:"
-msgstr "บันทึกใน:"
-
-#: ../data/gwget.glade.h:44
-msgid "Stat_usbar"
-msgstr "แถบ_สถานะ"
-
-#: ../data/gwget.glade.h:45
-msgid "The index file only"
-msgstr "แฟ้มดัชนีเท่านั้น"
-
-#: ../data/gwget.glade.h:46
-msgid "This site (mirror)"
-msgstr "ไซต์นี้ (แหล่งสำเนา)"
-
-#: ../data/gwget.glade.h:47
-msgid "URL:"
-msgstr "URL:"
-
-#: ../data/gwget.glade.h:48
-msgid "Verify..."
-msgstr "ตรวจสอบ..."
-
-#: ../data/gwget.glade.h:49
-msgid "_Archive"
-msgstr "แ_ฟ้ม"
-
-#: ../data/gwget.glade.h:50
-msgid "_Download"
-msgstr "_ดาวน์โหลด"
-
-#: ../data/gwget.glade.h:51
-msgid "_Edit"
-msgstr "แ_ก้ไข"
-
-#: ../data/gwget.glade.h:52
-msgid "_Toolbar"
-msgstr "แถบเ_ครื่องมือ"
-
-#: ../data/gwget.glade.h:53
-msgid "_View"
-msgstr "มุ_มมอง"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -344,155 +132,341 @@ msgstr "แสดงแถบสถานะหรือไม่"
 msgid "Whether to display the toolbar."
 msgstr "แสดงแถบเครื่องมือหรือไม่"
 
-#: ../data/preferences.glade.h:1
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>ดาวน์โหลด</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>ป้อน MD5 ที่จะใช้เปรียบเทียบ</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>คุณสมบัติ</b>"
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">รายการดาวน์โหลดใหม่</span>"
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "ล้าง"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "เปรียบเทียบผลรวม MD5"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "ทำต่อไป"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget - เครื่องมือช่วยดาวน์โหลด"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "ไดเรกทอรีในเครื่อง:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "แฟ้มในเครื่อง:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "ผลรวม MD5:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "แฟ้มมัลติมีเดีย (วิดีโอและรูปภาพ)"
+
+#: ../data/gwget.ui.h:15
+msgid "New Download"
+msgstr "รายการดาวน์โหลดใหม่"
+
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "รายการดาวน์โหลดใหม่"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "เปิด"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "เปิดไดเรกทอรี"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "เปิดแฟ้ม"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "เปิดไดเรกทอรีปลายทาง"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "พัก"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "พักทั้งหมด"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "พักการดาวน์โหลดทั้งหมด"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "คุณสมบัติ"
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "แบบลงลึก"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "ตัวเลือกการดาวน์โหลดแบบลงลึก"
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "ลบทั้งหมด"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "ลบรายการที่เสร็จแล้ว"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "ลบรายการดาวน์โหลดที่เสร็จแล้ว"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "ลบออกจากรายชื่อ"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "ลบออกจากรายชื่อ"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "ลบรายการที่ไม่ได้ทำงานอยู่"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "ดาวน์โหลดต่อทั้งหมด"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "ดาวน์โหลดต่อทุกรายการ"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "บันทึกใน:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "แถบ_สถานะ"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "แฟ้มดัชนีเท่านั้น"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "ไซต์นี้ (แหล่งสำเนา)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "ตรวจสอบ..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "แ_ฟ้ม"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_ดาวน์โหลด"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "แ_ก้ไข"
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr "_วิธีใช้"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "แถบเ_ครื่องมือ"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "มุ_มมอง"
+
+#: ../data/preferences.ui.h:1
 msgid "   "
 msgstr "   "
 
-#: ../data/preferences.glade.h:3
+#: ../data/preferences.ui.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">การทำงาน</span>"
 
-#: ../data/preferences.glade.h:4
+#: ../data/preferences.ui.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">คอลัมน์ที่แสดง</span>"
 
-#: ../data/preferences.glade.h:5
+#: ../data/preferences.ui.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">ทั่วไป</span>"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.ui.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">ลิงก์</span>"
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.ui.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">ตั้งค่าพร็อกซี</span>"
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.ui.h:8
 msgid "Column List"
 msgstr "คอลัมน์ที่แสดง"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.ui.h:9
 msgid "Default _GNOME network settings"
 msgstr "ค่าเครือข่ายปริยายของ _GNOME"
 
-#: ../data/preferences.glade.h:10
+#: ../data/preferences.ui.h:10
 msgid "Direct _Internet connection"
 msgstr "เ_ชื่อมต่ออินเทอร์เน็ตโดยตรง"
 
-#: ../data/preferences.glade.h:11
+#: ../data/preferences.ui.h:11
 msgid "Do_wnload Speed"
 msgstr "_ความเร็วการดาวน์โหลด"
 
-#: ../data/preferences.glade.h:12
+#: ../data/preferences.ui.h:12
 msgid "Don't _create directories"
 msgstr "ไม่ต้อง_สร้างไดเรกทอรี"
 
-#: ../data/preferences.glade.h:13
+#: ../data/preferences.ui.h:13
 msgid "Follow _relative links only"
 msgstr "ตามลิงก์ที่เป็นลิงก์สัม_พัทธ์เท่านั้น"
 
-#: ../data/preferences.glade.h:14
+#: ../data/preferences.ui.h:14
 msgid "General"
 msgstr "ทั่วไป"
 
-#: ../data/preferences.glade.h:15
+#: ../data/preferences.ui.h:15
 msgid "Limit _number of simultaneous download to:"
 msgstr "จำกัดจำนวนดาวน์โหลดที่ทำงาน_พร้อมกันที่:"
 
-#: ../data/preferences.glade.h:16
+#: ../data/preferences.ui.h:16
 msgid "Network"
 msgstr "เครือข่าย"
 
-#: ../data/preferences.glade.h:17
+#: ../data/preferences.ui.h:17
 msgid "P_ort:"
 msgstr "พ_อร์ต:"
 
-#: ../data/preferences.glade.h:18
+#: ../data/preferences.ui.h:18
 msgid "Password:"
 msgstr "รหัสผ่าน:"
 
-#: ../data/preferences.glade.h:19
+#: ../data/preferences.ui.h:19
 msgid "Preferences"
 msgstr "ตั้งค่า"
 
-#: ../data/preferences.glade.h:20
+#: ../data/preferences.ui.h:20
 msgid "Pro_xy:"
 msgstr "พ_ร็อกซี:"
 
-#: ../data/preferences.glade.h:22
+#: ../data/preferences.ui.h:22
 msgid "Remaining _Time"
 msgstr "เวลาที่เห_ลือ"
 
-#: ../data/preferences.glade.h:23
+#: ../data/preferences.ui.h:23
 msgid "Sa_ve in:"
 msgstr "_บันทึกใน:"
 
-#: ../data/preferences.glade.h:24
+#: ../data/preferences.ui.h:24
 msgid "Total _Size"
 msgstr "ขนาด_รวม"
 
-#: ../data/preferences.glade.h:25
+#: ../data/preferences.ui.h:25
 msgid "_Ask where to save for each download"
 msgstr "_ถามตำแหน่งบันทึกแฟ้มที่ดาวน์โหลดเป็นครั้งๆ ไป"
 
-#: ../data/preferences.glade.h:26
+#: ../data/preferences.ui.h:26
 msgid "_Continue downloads on startup"
 msgstr "ดาวน์โหลด_ต่อเมื่อเริ่มโปรแกรม"
 
-#: ../data/preferences.glade.h:27
+#: ../data/preferences.ui.h:27
 msgid "_Convert links"
 msgstr "แ_ปลงลิงก์"
 
-#: ../data/preferences.glade.h:28
+#: ../data/preferences.ui.h:28
 msgid "_Current Size"
 msgstr "_ขนาดปัจจุบัน"
 
-#: ../data/preferences.glade.h:29
+#: ../data/preferences.ui.h:29
 msgid "_Download page requisites"
 msgstr "ดาวน์โหลดสิ่งที่_ต้องใช้ในหน้าเว็บ"
 
-#: ../data/preferences.glade.h:30
+#: ../data/preferences.ui.h:30
 msgid "_Elapsed Time"
 msgstr "เ_วลาที่ผ่านไป"
 
-#: ../data/preferences.glade.h:31
+#: ../data/preferences.ui.h:31
 msgid "_Limit download speed to:"
 msgstr "_จำกัดความเร็วการดาวน์โหลดที่:"
 
-#: ../data/preferences.glade.h:32
+#: ../data/preferences.ui.h:32
 msgid "_Manual proxy configuration"
 msgstr "_ตั้งค่าพร็อกซีเอง"
 
-#: ../data/preferences.glade.h:33
+#: ../data/preferences.ui.h:33
 msgid "_Maximum depth level:"
 msgstr "_ระดับความลึกสูงสุด:"
 
-#: ../data/preferences.glade.h:34
+#: ../data/preferences.ui.h:34
 msgid "_Number of retries:"
 msgstr "จำนวนครั้งการ_ลองใหม่:"
 
-#: ../data/preferences.glade.h:35
+#: ../data/preferences.ui.h:35
 msgid "_Open files automatically after download"
 msgstr "เ_ปิดแฟ้มโดยอัตโนมัติหลังการดาวน์โหลด"
 
-#: ../data/preferences.glade.h:36
+#: ../data/preferences.ui.h:36
 msgid "_Percentage"
 msgstr "เ_ปอร์เซ็นต์"
 
-#: ../data/preferences.glade.h:37
+#: ../data/preferences.ui.h:37
 msgid "_Proxy requires authentication"
 msgstr "_พร็อกซีต้องยึนยันตัวบุคคล"
 
-#: ../data/preferences.glade.h:38
+#: ../data/preferences.ui.h:38
 msgid "_User:"
 msgstr "ผู้ใ_ช้:"
 
-#: ../data/preferences.glade.h:39
+#: ../data/preferences.ui.h:39
 msgid "files"
 msgstr "แฟ้ม"
 
-#: ../data/preferences.glade.h:40
+#: ../data/preferences.ui.h:40
 msgid "kB/sec"
 msgstr "kB/วินาที"
 
@@ -512,63 +486,84 @@ msgstr "ไม่ทราบ"
 msgid "Failed"
 msgstr "ล้มเหลว"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "ติดขัด"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:242
 msgid "Waiting"
 msgstr "กำลังรอ"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "ยังไม่เริ่ม"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "ไม่ได้ทำงานอยู่"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "ไม่ได้เชื่อมต่อ"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "เชื่อมต่อแล้ว"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "กำลังดึงข้อมูล"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "เสร็จสมบูรณ์"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "ผิดพลาด"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
 msgstr "ไม่สามารถเพิ่มการดาวน์โหลดนี้ได้"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
 msgstr "มีรายการดาวน์โหลดนี้อยู่แล้ว"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
 msgid "Error opening file"
 msgstr "เกิดข้อผิดพลาดในการเปิดแฟ้ม"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "ไม่สามารถเปิดแฟ้ม"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:796
 msgid "Download Complete"
 msgstr "ดาวน์โหลดเสร็จสมบูรณ์"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"แฟ้ม %s เป็นรายชื่อเพลง MP3\n"
+"คุณต้องการดาวน์โหลดแฟ้มต่างๆ ในรายชื่อเพลงหรือไม่?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "ดาวน์โหลดแฟ้มต่างๆ ในรายชื่อเพลง MP3 หรือไม่?"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "ไม่"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "ใช่"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -582,55 +577,55 @@ msgstr "ไดเรกทอรีปลายทางสำหรับกา
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:263 ../src/main_window_cb.c:191
+#: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:436
 msgid "File Name"
 msgstr "ชื่อแฟ้ม"
 
-#: ../src/main_window.c:438
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "สถานะ"
 
-#: ../src/main_window.c:450
+#: ../src/main_window.c:464
 msgid "Current Size"
 msgstr "ขนาดปัจจุบัน"
 
-#: ../src/main_window.c:462
+#: ../src/main_window.c:477
 msgid "Total Size"
 msgstr "ขนาดรวม"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:489 ../src/main_window.c:495
 msgid "Percentage"
 msgstr "เปอร์เซ็นต์"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:503
 msgid "Elapsed Time"
 msgstr "เวลาที่ผ่านไป"
 
-#: ../src/main_window.c:497
+#: ../src/main_window.c:515
 msgid "Remaining Time"
 msgstr "เวลาที่เหลือ"
 
-#: ../src/main_window.c:508
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "ความเร็ว"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:579
 msgid "Error starting the download"
 msgstr "เกิดข้อผิดพลาดขณะเริ่มดาวน์โหลด"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:579
 msgid "There was an unexpected error starting the download"
 msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดในขณะเริ่มการดาวน์โหลด"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:819
 msgid "Stop current downloads?"
 msgstr "หยุดการดาวน์โหลดปัจจุบันหรือไม่?"
 
-#: ../src/main_window.c:792
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -638,31 +633,23 @@ msgstr ""
 "เหลือการดาวน์โหลดอย่างน้อยหนึ่งรายการที่ยังทำงานอยู่ "
 "จะยกเลิกการถ่ายโอนที่ยังค้างอยู่ทั้งหมดจริงหรือ?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "ไม่"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "ใช่"
-
-#: ../src/main_window_cb.c:105
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
 msgstr "เกิดข้อผิดพลาดในการดาวน์โหลด"
 
-#: ../src/main_window_cb.c:194
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "เครื่องมือช่วยดาวน์โหลดสำหรับ GNOME"
 
-#: ../src/main_window_cb.c:196
+#: ../src/main_window_cb.c:192
 msgid "translator-credits"
 msgstr "Manatsawin Hanmongkolchai <manatsawin@gmail.com>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "เลือกโฟลเดอร์"
 
-#: ../src/main_window_cb.c:624
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -671,65 +658,60 @@ msgstr ""
 "ยกเลิกการดาวน์โหลดปัจจุบันจริงหรือ?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
 msgstr "ลบรายการดาวน์โหลดหรือไม่?"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete"
 msgstr "ลบ"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "ลบการดาวน์โหลดที่เสร็จแล้วออกจากรายชื่อจริงหรือ?"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Remove"
 msgstr "ลบ"
 
-#: ../src/main_window_cb.c:689
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "ลบการดาวน์โหลดที่ไม่ได้ทำงานอยู่ออกจากรายชื่อจริงหรือ?"
 
-#: ../src/main_window_cb.c:721
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "ลบการดาวน์โหลดทั้งหมดออกจากรายชื่อจริงหรือ?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:879
 #, c-format
-msgid "error %d when accessing %s: %s\n"
-msgstr "เกิดข้อผิดพลาด %d ขณะเข้าถึง %s: %s\n"
+msgid "MD5SUM Check PASSED!"
+msgstr "ค่า MD5SUM ที่ตรวจสอบ ผ่าน!"
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:882
 #, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">การตรวจสอบ MD5SUM ผ่าน!</span>"
+msgid "MD5SUM Check FAILED!"
+msgstr "ค่า MD5SUM ที่ตรวจสอบ ผิดพลาด!"
 
-#: ../src/main_window_cb.c:890
-#, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">การตรวจสอบ MD5SUM ไม่ผ่าน!</span>"
-
-#: ../src/main_window_cb.c:1211
+#: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
 "ขีดจำกัดความเร็วการดาวน์โหลดค่าใหม่ จะมีผลต่อการดาวน์โหลดรายการใหม่ "
 "หรือรายการที่ตั้งต้นใหม่เท่านั้น"
 
-#: ../src/main_window_cb.c:1227
+#: ../src/main_window_cb.c:1223
 #, c-format
 msgid "Remove %s ?"
 msgstr "ลบ %s หรือไม่?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1224
 msgid "Really remove this download from the list?"
 msgstr "ลบรายการดาวน์โหลดนี้ออกจากรายชื่อจริงหรือ?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1224
 msgid "Remove download"
 msgstr "ลบรายการดาวน์โหลด"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1280
 msgid "Couldn't open the folder"
 msgstr "ไม่สามารถเปิดโฟลเดอร์"
 
@@ -741,39 +723,39 @@ msgstr "ไม่มี"
 msgid "Downloads"
 msgstr "การดาวน์โหลด"
 
-#: ../src/wget-log.c:161
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "ซ็อกเก็ตผิดพลาด"
 
-#: ../src/wget-log.c:164
+#: ../src/wget-log.c:190
 msgid "Connection refused"
 msgstr "การเชื่อมต่อถูกปฎิเสธ"
 
-#: ../src/wget-log.c:167
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "ไม่มีเส้นทางไปยังโฮสต์"
 
-#: ../src/wget-log.c:170
+#: ../src/wget-log.c:196
 msgid "Connection refused when downloading URL:"
 msgstr "การเชื่อมต่อถูกปฏิเสธขณะดาวน์โหลด URL:"
 
-#: ../src/wget-log.c:173
+#: ../src/wget-log.c:199
 msgid "Host not found"
 msgstr "ไม่พบโฮสต์"
 
-#: ../src/wget-log.c:176
+#: ../src/wget-log.c:202
 msgid "Name or service not known"
 msgstr "ไม่รู้จักชื่อหรือบริการ"
 
-#: ../src/wget-log.c:179
+#: ../src/wget-log.c:205
 msgid "Unsupported protocol"
 msgstr "ไม่รองรับโพรโทคอล"
 
-#: ../src/wget-log.c:182
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "ปฎิเสธการตัดท้ายแฟ้มที่มีอยู่"
 
-#: ../src/wget-log.c:185
+#: ../src/wget-log.c:211
 msgid "Unable to resolve host address"
 msgstr "ไม่สามารถเปิดหาที่อยู่โฮสต์"
 
@@ -781,18 +763,49 @@ msgstr "ไม่สามารถเปิดหาที่อยู่โฮ
 #. * All other possible output may as well be reported, since we treat it
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
-#: ../src/wget-log.c:199
+#: ../src/wget-log.c:225
 msgid "Unknown error "
 msgstr "ข้อผิดพลาดไม่ทราบสาเหตุ"
 
-#: ../src/wget-log.c:212 ../src/wget-log.c:219
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "ไม่พบแฟ้ม"
 
-#: ../src/wget-log.c:226
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr "ไม่สามารถดาวน์โหลดต่อ แฟ้มในเครื่องขัดแย้งกับแฟ้มบนเซิร์ฟเวอร์"
 
-#: ../src/wget-log.c:285
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "ไม่สามารถเขียนไปยังไดเรกทอรีปลายทาง"
+
+#~ msgid "Cancel download"
+#~ msgstr "ยกเลิกการดาวน์โหลด"
+
+#~ msgid "Cancel the download"
+#~ msgstr "ยกเลิกการดาวน์โหลด"
+
+#~ msgid "Continue download"
+#~ msgstr "ดาวน์โหลดต่อ"
+
+#~ msgid "Continue with the download"
+#~ msgstr "ดาวน์โหลดต่อไป"
+
+#~ msgid "Information"
+#~ msgstr "ข้อมูล"
+
+#~ msgid "Pause download"
+#~ msgstr "พักการดาวน์โหลด"
+
+#~ msgid "Pause the download"
+#~ msgstr "พักการดาวน์โหลด"
+
+#~ msgid "error %d when accessing %s: %s\n"
+#~ msgstr "เกิดข้อผิดพลาด %d ขณะเข้าถึง %s: %s\n"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+#~ msgstr "<span size=\"large\" weight=\"bold\">การตรวจสอบ MD5SUM ผ่าน!</span>"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+#~ msgstr ""
+#~ "<span size=\"large\" weight=\"bold\">การตรวจสอบ MD5SUM ไม่ผ่าน!</span>"
