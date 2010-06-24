@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-10 18:21+0000\n"
-"PO-Revision-Date: 2008-05-14 17:00+0200\n"
-"Last-Translator: חזי עמיאל <hezy.amiel@gmail.com>\n"
+"POT-Creation-Date: 2010-06-24 10:37+0300\n"
+"PO-Revision-Date: 2010-06-24 10:47+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,227 +13,17 @@ msgstr ""
 "X-Poedit-Language: Hebrew\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
+#: ../data/gwget.desktop.in.in.h:1
+msgid "Download Manager"
+msgstr "מנהל הורדות"
 
-#: ../data/gwget.glade.h:2
-msgid "<b>Download</b>"
-msgstr "<b>הורדה</b>"
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "הורדת קבצים מהאינטרנט"
 
-#: ../data/gwget.glade.h:3
-msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr "<b>הכנס סכום MD5 להשוואה</b>"
-
-#: ../data/gwget.glade.h:4
-msgid "<b>Properties</b>"
-msgstr "<b>מאפיינים</b>"
-
-#: ../data/gwget.glade.h:5
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">הורדה חדשה</span>"
-
-#: ../data/gwget.glade.h:6
-msgid "Cancel"
-msgstr "ביטול"
-
-#: ../data/gwget.glade.h:7
-msgid "Cancel download"
-msgstr "בטל הורדה"
-
-#: ../data/gwget.glade.h:8
-msgid "Cancel the download"
-msgstr "בטל את ההורדה"
-
-#: ../data/gwget.glade.h:9
-msgid "Compare md5 sum"
-msgstr "השווה סכום md5"
-
-#: ../data/gwget.glade.h:10
-msgid "Continue"
-msgstr "המשך"
-
-#: ../data/gwget.glade.h:11
-msgid "Continue download"
-msgstr "המשך הורדה"
-
-#: ../data/gwget.glade.h:12
-msgid "Continue with the download"
-msgstr "המשך את ההורדה"
-
-#: ../data/gwget.glade.h:13 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
-#: ../src/main_window_cb.c:739
-msgid "Gwget - Download Manager"
-msgstr "Gwget - מנהל הורדות"
-
-#: ../data/gwget.glade.h:14
-msgid "Help"
-msgstr "עזרה"
-
-#: ../data/gwget.glade.h:15
-msgid "Information"
-msgstr "מידע"
-
-#: ../data/gwget.glade.h:16
-msgid "Local Directory:"
-msgstr "תיקייה מקומית"
-
-#: ../data/gwget.glade.h:17
-msgid "Local File:"
-msgstr "קובץ מקומי:"
-
-#: ../data/gwget.glade.h:18
-msgid "Md5 Sum:"
-msgstr "סכום Md5:"
-
-#: ../data/gwget.glade.h:19
-msgid "Multimedia files (Videos and images)"
-msgstr "קבצי מולטימדיה (וידאו ותמונות)"
-
-#: ../data/gwget.glade.h:20
-msgid "New Download"
-msgstr "הורדה חדשה"
-
-#: ../data/gwget.glade.h:21
-msgid "New download"
-msgstr "הורדה חדשה"
-
-#: ../data/gwget.glade.h:22
-msgid "Open"
-msgstr "פתח"
-
-#: ../data/gwget.glade.h:23
-msgid "Open directory"
-msgstr "פתח תיקייה"
-
-#: ../data/gwget.glade.h:24
-msgid "Open file"
-msgstr "פתח קובץ"
-
-#: ../data/gwget.glade.h:25
-msgid "Open target directory"
-msgstr "פתח את תיקיית היעד"
-
-#: ../data/gwget.glade.h:26
-msgid "Pause"
-msgstr "השהה"
-
-#: ../data/gwget.glade.h:27
-msgid "Pause all"
-msgstr "השהה הכל"
-
-#: ../data/gwget.glade.h:28
-msgid "Pause all downloads"
-msgstr "השהה את כל ההורדות"
-
-#: ../data/gwget.glade.h:29
-msgid "Pause download"
-msgstr "השהה הורדה"
-
-#: ../data/gwget.glade.h:30
-msgid "Pause the download"
-msgstr "השהה את ההורדה"
-
-#: ../data/gwget.glade.h:31
-msgid "Properties"
-msgstr "מאפיינים"
-
-#: ../data/gwget.glade.h:32 ../data/preferences.glade.h:21
-msgid "Recursive"
-msgstr "רקורסיה"
-
-#: ../data/gwget.glade.h:33
-msgid "Recursive options"
-msgstr "אפשרויות רקורסיה"
-
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:721
-msgid "Remove all"
-msgstr "הסר הכל"
-
-#: ../data/gwget.glade.h:35 ../src/main_window_cb.c:655
-msgid "Remove completed"
-msgstr "הסר הורדות שהושלמו"
-
-#: ../data/gwget.glade.h:36
-msgid "Remove completed downloads"
-msgstr "להסיר את ההורדות שהושלמו"
-
-#: ../data/gwget.glade.h:37
-msgid "Remove from List"
-msgstr "הסר מהרשימה"
-
-#: ../data/gwget.glade.h:38
-msgid "Remove from list"
-msgstr "הסר מהרשימה"
-
-#: ../data/gwget.glade.h:39 ../src/main_window_cb.c:689
-msgid "Remove inactive"
-msgstr "הסר לא פעילות"
-
-#: ../data/gwget.glade.h:40
-msgid "Resume all"
-msgstr "המשך הכל"
-
-#: ../data/gwget.glade.h:41
-msgid "Resume all downloads"
-msgstr "המשך את כל ההורדות"
-
-#: ../data/gwget.glade.h:42
-msgid "Save in:"
-msgstr "שמור ב:"
-
-#: ../data/gwget.glade.h:43
-msgid "Stat_usbar"
-msgstr "שורת _מצב"
-
-#: ../data/gwget.glade.h:44
-msgid "The index file only"
-msgstr "קובץ האינדקס בלבד"
-
-#: ../data/gwget.glade.h:45
-msgid "This site (mirror)"
-msgstr "אתר זה (מראה)"
-
-#: ../data/gwget.glade.h:46
-msgid "URL:"
-msgstr "כתובת:"
-
-#: ../data/gwget.glade.h:47
-msgid "Verify..."
-msgstr "וודא..."
-
-#: ../data/gwget.glade.h:48
-msgid "_Archive"
-msgstr "_ארכיון"
-
-#: ../data/gwget.glade.h:49
-msgid "_Download"
-msgstr "_הורדה"
-
-#: ../data/gwget.glade.h:50
-msgid "_Edit"
-msgstr "_עריכה"
-
-#: ../data/gwget.glade.h:51
-msgid "_Toolbar"
-msgstr "_סרגל כלים"
-
-#: ../data/gwget.glade.h:52
-msgid "_View"
-msgstr "_תצוגה"
-
-#: ../data/gwget.glade.h:53
-msgid "label"
-msgstr "תווית"
-
-#: ../data/gwget.glade.h:54
-msgid "local_file_text"
-msgstr "local_file_text"
-
-#: ../data/gwget.glade.h:55
-msgid "url_text"
-msgstr "url_text"
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Gwget Download Manager"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
@@ -339,161 +129,347 @@ msgstr "Whether to display the statusbar."
 msgid "Whether to display the toolbar."
 msgstr "Whether to display the toolbar."
 
-#: ../data/preferences.glade.h:1
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>הורדה</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>נא להזין סכום MD5 להשוואה</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>מאפיינים</b>"
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">הורדה חדשה</span>"
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "ביטול"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "מחיקה"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "השוואת סכום md5"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "המשך"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget - מנהל הורדות"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "תיקייה מקומית:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "קובץ מקומי:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "סכום Md5:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "קובצי מולטימדיה (וידאו ותמונות)"
+
+#: ../data/gwget.ui.h:15
+msgid "New Download"
+msgstr "הורדה חדשה"
+
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "הורדה חדשה"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "פתיחה"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "פתיחת תיקייה"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "פתיחת קובץ"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "פתיחת תיקיית היעד"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "השהייה"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "השהיית הכול"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "השהיית כל ההורדות"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "מאפיינים"
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "נסיגה"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "אפשרויות נסיגה"
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "הסרת הכול"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "הסרת הורדות שהושלמו"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "יש להסיר את ההורדות שהושלמו"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "הסרה מהרשימה"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "הסרה מהרשימה"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "הסרת בלתי פעילות"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "המשך הכול"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "המשך כל ההורדות"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "שמירה ב־:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "שורת _מצב"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "קובץ האינדקס בלבד"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "אתר זה (מראה)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "כתובת:"
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "וידוא..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_ארכיון"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_הורדה"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "_עריכה"
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr "ע_זרה"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "_סרגל כלים"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_תצוגה"
+
+#: ../data/preferences.ui.h:1
 msgid "   "
 msgstr "   "
 
-#: ../data/preferences.glade.h:3
+#: ../data/preferences.ui.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">התנהגות</span>"
 
-#: ../data/preferences.glade.h:4
+#: ../data/preferences.ui.h:4
 msgid "<span weight=\"bold\">Column List</span>"
 msgstr "<span weight=\"bold\">רשימת עמודות</span>"
 
-#: ../data/preferences.glade.h:5
+#: ../data/preferences.ui.h:5
 msgid "<span weight=\"bold\">General</span>"
 msgstr "<span weight=\"bold\">כללי</span>"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.ui.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">קישורים</span>"
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.ui.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
 msgstr "<span weight=\"bold\">הגדרות מתווך</span>"
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.ui.h:8
 msgid "Column List"
 msgstr "רשימת עמודות"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.ui.h:9
 msgid "Default _GNOME network settings"
 msgstr "ברירת המחדל עבור הגדרות רשת של GNOME"
 
-#: ../data/preferences.glade.h:10
+#: ../data/preferences.ui.h:10
 msgid "Direct _Internet connection"
 msgstr "חיבור ישיר _לאינטרנט"
 
-#: ../data/preferences.glade.h:11
+#: ../data/preferences.ui.h:11
 msgid "Do_wnload Speed"
 msgstr "מהירות הור_דה"
 
-#: ../data/preferences.glade.h:12
+#: ../data/preferences.ui.h:12
 msgid "Don't _create directories"
-msgstr "_אל תיצור תיקיות"
+msgstr "_אין ליצור תיקיות"
 
-#: ../data/preferences.glade.h:13
+#: ../data/preferences.ui.h:13
 msgid "Follow _relative links only"
-msgstr "עקוב אחר קישורים יחסיים בלבד"
+msgstr "מעקב אחר קישורים יחסיים בלבד"
 
-#: ../data/preferences.glade.h:14
+#: ../data/preferences.ui.h:14
 msgid "General"
 msgstr "כללי"
 
-#: ../data/preferences.glade.h:15
+#: ../data/preferences.ui.h:15
 msgid "Limit _number of simultaneous download to:"
-msgstr "הגבל את מספר ההורדות המקבילות ל:"
+msgstr "הגבלת מספר ההורדות המקבילות ל־:"
 
-#: ../data/preferences.glade.h:16
+#: ../data/preferences.ui.h:16
 msgid "Network"
 msgstr "רשת"
 
-#: ../data/preferences.glade.h:17
+#: ../data/preferences.ui.h:17
 msgid "P_ort:"
-msgstr "ש_ער:"
+msgstr "_פתחה:"
 
-#: ../data/preferences.glade.h:18
+#: ../data/preferences.ui.h:18
 msgid "Password:"
 msgstr "סיסמה:"
 
-#: ../data/preferences.glade.h:19
+#: ../data/preferences.ui.h:19
 msgid "Preferences"
 msgstr "העדפות"
 
-#: ../data/preferences.glade.h:20
+#: ../data/preferences.ui.h:20
 msgid "Pro_xy:"
 msgstr "_מתווך"
 
-#: ../data/preferences.glade.h:22
+#: ../data/preferences.ui.h:22
 msgid "Remaining _Time"
-msgstr "_זמן נותר"
+msgstr "_זמן שנותר"
 
-#: ../data/preferences.glade.h:23
+#: ../data/preferences.ui.h:23
 msgid "Sa_ve in:"
-msgstr "_שמור ב:"
+msgstr "_שמירה ב:"
 
-#: ../data/preferences.glade.h:24
+#: ../data/preferences.ui.h:24
 msgid "Total _Size"
 msgstr "גו_דל כללי"
 
-#: ../data/preferences.glade.h:25
+#: ../data/preferences.ui.h:25
 msgid "_Ask where to save for each download"
-msgstr "_שאל היכן לשמור בכל הורדה"
+msgstr "הצגת _שאלה היכן לשמור בכול הורדה"
 
-#: ../data/preferences.glade.h:26
+#: ../data/preferences.ui.h:26
 msgid "_Continue downloads on startup"
-msgstr "ה_משך הורדות עם הפעלת התוכנה"
+msgstr "ה_משך בהורדות עם הפעלת התכנה"
 
-#: ../data/preferences.glade.h:27
+#: ../data/preferences.ui.h:27
 msgid "_Convert links"
-msgstr "_המר קישורים"
+msgstr "ה_מרת קישורים"
 
-#: ../data/preferences.glade.h:28
+#: ../data/preferences.ui.h:28
 msgid "_Current Size"
 msgstr "_גודל נוכחי"
 
-#: ../data/preferences.glade.h:29
+#: ../data/preferences.ui.h:29
 msgid "_Download page requisites"
-msgstr "_הורד את חלקי הדף החיוניים"
+msgstr "הו_רדת חלקי הדף החיוניים"
 
-#: ../data/preferences.glade.h:30
+#: ../data/preferences.ui.h:30
 msgid "_Elapsed Time"
 msgstr "_זמן שעבר"
 
-#: ../data/preferences.glade.h:31
+#: ../data/preferences.ui.h:31
 msgid "_Limit download speed to:"
-msgstr "_הגבל את מהירות ההורדה ל:"
+msgstr "ה_גבלת מהירות ההורדה ל־:"
 
-#: ../data/preferences.glade.h:32
+#: ../data/preferences.ui.h:32
 msgid "_Manual proxy configuration"
 msgstr "הגדרות מתווך _ידניות"
 
-#: ../data/preferences.glade.h:33
+#: ../data/preferences.ui.h:33
 msgid "_Maximum depth level:"
 msgstr "_רמת עומק מרבי:"
 
-#: ../data/preferences.glade.h:34
+#: ../data/preferences.ui.h:34
 msgid "_Number of retries:"
 msgstr "מס_פר ניסיונות מחדש:"
 
-#: ../data/preferences.glade.h:35
+#: ../data/preferences.ui.h:35
 msgid "_Open files automatically after download"
-msgstr "פ_תח קבצים אוטומטית לאחר ההורדה"
+msgstr "פ_תיחת הקבצים אוטומטית לאחר ההורדה"
 
-#: ../data/preferences.glade.h:36
+#: ../data/preferences.ui.h:36
 msgid "_Percentage"
 msgstr "_אחוזים"
 
-#: ../data/preferences.glade.h:37
+#: ../data/preferences.ui.h:37
 msgid "_Proxy requires authentication"
 msgstr "ה_מתווך דורש אימות"
 
-#: ../data/preferences.glade.h:38
+#: ../data/preferences.ui.h:38
 msgid "_User:"
 msgstr "_משתמש:"
 
-#: ../data/preferences.glade.h:39
+#: ../data/preferences.ui.h:39
 msgid "files"
 msgstr "קבצים"
 
-#: ../data/preferences.glade.h:40
+#: ../data/preferences.ui.h:40
 msgid "kB/sec"
-msgstr "קילו-בתים לשנייה"
+msgstr "קילו־בתים לשנייה"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
-msgstr "העבר הורדות ל-GWGet"
+msgstr "העברת הורדות ל־GWGet"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:2
 msgid "GWGet"
@@ -507,63 +483,84 @@ msgstr "לא ידוע"
 msgid "Failed"
 msgstr "נכשל"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "מושהה"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:242
 msgid "Waiting"
 msgstr "ממתין"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "לא התחיל"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "לא רץ"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "לא מחובר"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "מחובר"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "מקבל"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "הושלם"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
 msgstr "לא ניתן להוסיף הורדה זו"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
 msgstr "הורדה זו כבר נתווספה"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
 msgid "Error opening file"
 msgstr "שגיאה בפתיחת הקובץ"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "לא ניתן לפתוח את הקובץ"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:796
 msgid "Download Complete"
 msgstr "ההורדה הושלמה"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"הקובץ %s הוא רשימת קובצי MP3.\n"
+"האם להוריד את הקבצים אותם הוא מכיל?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "האם להוריד את הקבצים ברשימת ה־MP3?"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "לא"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "כן"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
@@ -577,159 +574,144 @@ msgstr "Destination directory for the download"
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:244 ../src/main.c:276
-msgid "Gwget Download Manager"
-msgstr "Gwget Download Manager"
-
-#: ../src/main.c:262 ../src/main_window_cb.c:191
+#: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:436
 msgid "File Name"
 msgstr "שם קובץ"
 
-#: ../src/main_window.c:438
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "מצב"
 
-#: ../src/main_window.c:450
+#: ../src/main_window.c:464
 msgid "Current Size"
 msgstr "גודל נוכחי"
 
-#: ../src/main_window.c:462
+#: ../src/main_window.c:477
 msgid "Total Size"
 msgstr "גודל סופי"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:489 ../src/main_window.c:495
 msgid "Percentage"
 msgstr "אחוזים"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:503
 msgid "Elapsed Time"
 msgstr "זמן שעבר"
 
-#: ../src/main_window.c:497
+#: ../src/main_window.c:515
 msgid "Remaining Time"
 msgstr "זמן שנותר"
 
-#: ../src/main_window.c:508
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "מהירות"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:579
 msgid "Error starting the download"
 msgstr "שגיאה בהתחלת ההורדה"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:579
 msgid "There was an unexpected error starting the download"
 msgstr "חלה שגיאה לא צפויה בהתחלת ההורדה"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:819
 msgid "Stop current downloads?"
-msgstr "לעצור את ההורדות הנוכחיות?"
+msgstr "האם לעצור את ההורדות הנוכחיות?"
 
-#: ../src/main_window.c:792
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
-msgstr "נותרה לפחות הורדה פעילה אחת. לבטל את כל ההורדות הפעילות?"
+msgstr "נותרה לפחות הורדה פעילה אחת. אם לבטל את כל ההורדות הפעילות?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "לא"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "כן"
-
-#: ../src/main_window_cb.c:105
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
 msgstr "שגיאה בהורדה"
 
-#: ../src/main_window_cb.c:194
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "מנהל הורדות עבור GNOME."
 
-#: ../src/main_window_cb.c:196
+#: ../src/main_window_cb.c:192
 msgid "translator-credits"
 msgstr ""
 "מארק קרפיבנר <mark125@gmail.com>\n"
 "חזי עמיאל <hezy.amiel@gmail.com>\n"
+"ירון שהרבני <sh.yaron@gmail.com>\n"
 "\n"
 "פרוייקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
-msgstr "בחר תיקייה"
+msgstr "בחירת תיקייה"
 
-#: ../src/main_window_cb.c:624
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
 "(URL: %s)"
 msgstr ""
-"לבטל את ההורדה הנוכחית?\n"
+"האם לבטל את ההורדה הנוכחית?\n"
 "(כתובת: %s)"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
-msgstr "למחוק את ההורדה?"
+msgstr "האם למחוק את ההורדה?"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete"
-msgstr "מחק"
+msgstr "מחיקה"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
-msgstr "להסיר הורדות שהושלמו מהרשימה?"
+msgstr "האם להסיר הורדות שהושלמו מהרשימה?"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
-#: ../src/main_window_cb.c:689
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
-msgstr "להסיר הורדות לא פעילות מהרשימה?"
+msgstr "האם להסיר הורדות לא פעילות מהרשימה?"
 
-#: ../src/main_window_cb.c:721
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
-msgstr "להסיר את כל ההורדות מהרשימה?"
+msgstr "האם להסיר את כל ההורדות מהרשימה?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:879
 #, c-format
-msgid "error %d when accessing %s: %s\n"
-msgstr "שגיאה %d בעת גישה ל-%s: %s\n"
+msgid "MD5SUM Check PASSED!"
+msgstr "בדיקת סכום ה־MD5 הצליחה!"
 
-#: ../src/main_window_cb.c:887
+#: ../src/main_window_cb.c:882
 #, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span weight=\"bold\">בדיקת סכום MD5 עברה בהצלחה!</span>"
+msgid "MD5SUM Check FAILED!"
+msgstr "בדיקת סכום ה־MD5 נכשלה!"
 
-#: ../src/main_window_cb.c:890
-#, c-format
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span weight=\"bold\">השוואת סכום MD5 נכשלה!</span>"
-
-#: ../src/main_window_cb.c:1211
+#: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
-msgstr "הגבלת מהירות ההורדה תיושם רק עבור הורדות חדשות או הורדות ששותחלו"
+msgstr ""
+"הגבלת מהירות ההורדה תיושם רק עבור הורדות חדשות או הורדות שהופעלו מההתחלה"
 
-#: ../src/main_window_cb.c:1227
+#: ../src/main_window_cb.c:1223
 #, c-format
 msgid "Remove %s ?"
-msgstr "להסיר את %s?"
+msgstr "האם להסיר את %s?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1224
 msgid "Really remove this download from the list?"
-msgstr "להסיר את ההורדה מהרשימה?"
+msgstr "האם להסיר את ההורדה מהרשימה?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1224
 msgid "Remove download"
-msgstr "הסר הורדה"
+msgstr "הסרת הורדה"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1280
 msgid "Couldn't open the folder"
 msgstr "לא ניתן לפתוח את התיקייה"
 
@@ -741,47 +723,101 @@ msgstr "כלום"
 msgid "Downloads"
 msgstr "הורדות"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "Socket error"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Connection refused\n"
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "Connection refused"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "No route to host"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Connection refused when downloading URL:\n"
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "Connection refused when downloading URL:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Host not found\n"
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Host not found"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Name or service not known"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Unsupported protocol"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "Refusing to truncate existing file"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
-msgstr "Unknown error"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Unable to resolve host address"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
+msgstr "Unknown error "
+
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "File not found"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "Can't continue download, existing local file conflicts with remote file"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "Can't write to target directory"
+
+#~ msgid "Cancel download"
+#~ msgstr "בטל הורדה"
+
+#~ msgid "Cancel the download"
+#~ msgstr "בטל את ההורדה"
+
+#~ msgid "Continue download"
+#~ msgstr "המשך הורדה"
+
+#~ msgid "Continue with the download"
+#~ msgstr "המשך את ההורדה"
+
+#~ msgid "Information"
+#~ msgstr "מידע"
+
+#~ msgid "Pause download"
+#~ msgstr "השהה הורדה"
+
+#~ msgid "Pause the download"
+#~ msgstr "השהה את ההורדה"
+
+#~ msgid "label"
+#~ msgstr "תווית"
+
+#~ msgid "local_file_text"
+#~ msgstr "local_file_text"
+
+#~ msgid "url_text"
+#~ msgstr "url_text"
+
+#~ msgid "error %d when accessing %s: %s\n"
+#~ msgstr "שגיאה %d בעת גישה ל-%s: %s\n"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+#~ msgstr "<span weight=\"bold\">בדיקת סכום MD5 עברה בהצלחה!</span>"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+#~ msgstr "<span weight=\"bold\">השוואת סכום MD5 נכשלה!</span>"
+
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#~ msgstr "Unsupported protocol - you need wget >= 1.7 for https:\n"
