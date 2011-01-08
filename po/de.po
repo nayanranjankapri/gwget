@@ -4,19 +4,21 @@
 # Frank Arnold <frank@scirocco-5v-turbo.de>, 2004, 2005.
 # Hendrik Brandt <heb@gnome-de.org>, 2004.
 # Mario Blättermann <mariobl@gnome.org>, 2009, 2010.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gwget&component=general\n"
-"POT-Creation-Date: 2010-03-06 21:36+0000\n"
-"PO-Revision-Date: 2010-03-07 18:16+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"POT-Creation-Date: 2010-11-26 21:25+0000\n"
+"PO-Revision-Date: 2011-01-08 09:15+0100\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/gwget.desktop.in.in.h:1
 msgid "Download Manager"
@@ -36,11 +38,11 @@ msgstr "Bei jedem Download nach dem Speicherort fragen"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
-msgstr "Links konvertieren"
+msgstr "Verweise konvertieren"
 
 #: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
-msgstr "Konvertierung zu relativen Links im rekursiven Modus."
+msgstr "Konvertierung zu relativen Verweisen im rekursiven Modus."
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
@@ -52,15 +54,15 @@ msgstr "Seiteninhalte herunterladen"
 
 #: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
-msgstr "Relativen Links folgen"
+msgstr "Relativen Verweisen folgen"
 
 #: ../data/gwget.schemas.in.h:7
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Wenn »true«, wird beim Start eines neuen Downloads immer nach einem "
-"Zielordner gefragt. Wenn »false«, wird immer in den Vorgabeordner "
+"Ist diese Einstellung aktiv, wird beim Start eines neuen Downloads immer "
+"nach einem Zielordner gefragt. Ansonsten wird immer in den Vorgabeordner "
 "gespeichert, ohne den Benutzer zu fragen."
 
 #: ../data/gwget.schemas.in.h:8
@@ -133,7 +135,7 @@ msgstr "Legt fest, ob die Statuszeile angezeigt werden soll oder nicht."
 
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
-msgstr "Legt fest, ob die Statusleiste angezeigt werden soll oder nicht."
+msgstr "Legt fest, ob die Werkzeugleiste angezeigt werden soll oder nicht."
 
 #: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
 msgid "    "
@@ -235,19 +237,21 @@ msgstr "Eigenschaften"
 
 #: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
 msgid "Recursive"
-msgstr "Links folgen"
+msgstr "Verweisen folgen"
 
 #: ../data/gwget.ui.h:26
 msgid "Recursive options"
-msgstr "Optionen zum Folgen von Links"
+msgstr "Optionen zum Folgen von Verweisen"
 
 #: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
 msgid "Remove all"
 msgstr "Alles entfernen"
 
+# Es handelt sich um den Dialog, der nach Klicken auf »Remove completed downloads« erscheint. Entfernen ist an dieser Stelle noch nicht abgeschlossen.
+# Gemeint ist: Vollständige (Downloads) entfernen
 #: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
 msgid "Remove completed"
-msgstr "Entfernen abgeschlossen"
+msgstr "Vollständige entfernen"
 
 #: ../data/gwget.ui.h:29
 msgid "Remove completed downloads"
@@ -339,7 +343,7 @@ msgstr "<span weight=\"bold\">Allgemeines</span>"
 
 #: ../data/preferences.ui.h:6
 msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Verweise</span>"
 
 #: ../data/preferences.ui.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
@@ -367,7 +371,7 @@ msgstr "Keine Ordner _anlegen"
 
 #: ../data/preferences.ui.h:13
 msgid "Follow _relative links only"
-msgstr "Nur _relativen Links folgen"
+msgstr "Nur _relativen Verweisen folgen"
 
 #: ../data/preferences.ui.h:14
 msgid "General"
@@ -419,7 +423,7 @@ msgstr "Downloads nach Neustart fo_rtsetzen"
 
 #: ../data/preferences.ui.h:27
 msgid "_Convert links"
-msgstr "Links _konvertieren"
+msgstr "Verweise _konvertieren"
 
 #: ../data/preferences.ui.h:28
 msgid "_Current Size"
