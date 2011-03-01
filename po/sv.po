@@ -1,16 +1,17 @@
 # Swedish messages for gwget.
-# Copyright (C) 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Copyright (C) 2005-2011 Free Software Foundation, Inc.
 # Christian Rose <menthos@menthos.com>, 2005.
-# Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-07 12:45+0200\n"
-"PO-Revision-Date: 2009-07-07 21:42+0100\n"
+"POT-Creation-Date: 2011-03-01 01:01+0100\n"
+"PO-Revision-Date: 2011-03-01 08:53+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,6 +131,351 @@ msgstr "Huruvida statusraden ska visas eller inte."
 msgid "Whether to display the toolbar."
 msgstr "Huruvida verktygsraden ska visas eller inte."
 
+#: ../data/gwget.ui.h:1
+#: ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Hämta</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Infoga MD5-summa att jämföra med</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Egenskaper</b>"
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Ny hämtning</span>"
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "Töm"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "Jämför MD5-summa"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: ../data/gwget.ui.h:10
+#: ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638
+#: ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget - Hämtningshanterare"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "Lokal katalog:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "Lokal fil:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "MD5-summa:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimediafiler (videofilmer och bilder)"
+
+#: ../data/gwget.ui.h:15
+msgid "New Download"
+msgstr "Ny hämtning"
+
+#: ../data/gwget.ui.h:16
+msgid "New download"
+msgstr "Ny hämtning"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "Öppna"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "Öppna katalog"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "Öppna fil"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "Öppna målkatalogen"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "Gör paus"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "Gör paus i alla"
+
+#: ../data/gwget.ui.h:23
+msgid "Pause all downloads"
+msgstr "Pausa alla hämtningar"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "Egenskaper"
+
+#: ../data/gwget.ui.h:25
+#: ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "Rekursivt"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "Alternativ för rekursivitet"
+
+#: ../data/gwget.ui.h:27
+#: ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Ta bort alla"
+
+#: ../data/gwget.ui.h:28
+#: ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Ta bort slutförda"
+
+#: ../data/gwget.ui.h:29
+msgid "Remove completed downloads"
+msgstr "Ta bort slutförda hämtningar"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "Ta bort från listan"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "Ta bort från listan"
+
+#: ../data/gwget.ui.h:32
+#: ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Ta bort inaktiva"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "Återuppta alla"
+
+#: ../data/gwget.ui.h:34
+msgid "Resume all downloads"
+msgstr "Återuppta alla hämtningar"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "Spara i:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "Stat_usrad"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "Endast indexfilen"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "Denna plats (spegel)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "Verifiera..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_Arkiv"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_Hämta"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "R_edigera"
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "_Verktygsrad"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_Visa"
+
+#: ../data/preferences.ui.h:1
+msgid "   "
+msgstr "   "
+
+#: ../data/preferences.ui.h:3
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Beteende</span>"
+
+#: ../data/preferences.ui.h:4
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Kolumnlista</span>"
+
+#: ../data/preferences.ui.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">Allmänt</span>"
+
+#: ../data/preferences.ui.h:6
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Länkar</span>"
+
+#: ../data/preferences.ui.h:7
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Proxykonfiguration</span>"
+
+#: ../data/preferences.ui.h:8
+msgid "Column List"
+msgstr "Kolumnlista"
+
+#: ../data/preferences.ui.h:9
+msgid "Default _GNOME network settings"
+msgstr "Standardnätverksinställningar i _GNOME"
+
+#: ../data/preferences.ui.h:10
+msgid "Direct _Internet connection"
+msgstr "Direktanslutning till _Internet"
+
+#: ../data/preferences.ui.h:11
+msgid "Do_wnload Speed"
+msgstr "Hä_mtningshastighet"
+
+#: ../data/preferences.ui.h:12
+msgid "Don't _create directories"
+msgstr "Skapa _inte kataloger"
+
+#: ../data/preferences.ui.h:13
+msgid "Follow _relative links only"
+msgstr "Följ endast _relativa länkar"
+
+#: ../data/preferences.ui.h:14
+msgid "General"
+msgstr "Allmänt"
+
+#: ../data/preferences.ui.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr "Begränsa anta_let samtidiga hämtningar till:"
+
+#: ../data/preferences.ui.h:16
+msgid "Network"
+msgstr "Nätverk"
+
+#: ../data/preferences.ui.h:17
+msgid "P_ort:"
+msgstr "P_ort:"
+
+#: ../data/preferences.ui.h:18
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: ../data/preferences.ui.h:19
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: ../data/preferences.ui.h:20
+msgid "Pro_xy:"
+msgstr "Pro_xyserver:"
+
+#: ../data/preferences.ui.h:22
+msgid "Remaining _Time"
+msgstr "Åt_erstående tid"
+
+#: ../data/preferences.ui.h:23
+msgid "Sa_ve in:"
+msgstr "S_para i:"
+
+#: ../data/preferences.ui.h:24
+msgid "Total _Size"
+msgstr "Total _storlek"
+
+#: ../data/preferences.ui.h:25
+msgid "_Ask where to save for each download"
+msgstr "_Fråga var filen ska sparas för varje hämtning"
+
+#: ../data/preferences.ui.h:26
+msgid "_Continue downloads on startup"
+msgstr "Åt_eruppta hämtningar vid uppstart"
+
+#: ../data/preferences.ui.h:27
+msgid "_Convert links"
+msgstr "_Konventera länkar"
+
+#: ../data/preferences.ui.h:28
+msgid "_Current Size"
+msgstr "A_ktuell storlek"
+
+#: ../data/preferences.ui.h:29
+msgid "_Download page requisites"
+msgstr "Krav på _hämtningssida"
+
+#: ../data/preferences.ui.h:30
+msgid "_Elapsed Time"
+msgstr "_Förfluten tid"
+
+#: ../data/preferences.ui.h:31
+msgid "_Limit download speed to:"
+msgstr "_Begränsa hämtningshastighet till:"
+
+#: ../data/preferences.ui.h:32
+msgid "_Manual proxy configuration"
+msgstr "_Manuell proxykonfiguration"
+
+#: ../data/preferences.ui.h:33
+msgid "_Maximum depth level:"
+msgstr "_Maximal nivådjup:"
+
+#: ../data/preferences.ui.h:34
+msgid "_Number of retries:"
+msgstr "An_tal återförsök:"
+
+#: ../data/preferences.ui.h:35
+msgid "_Open files automatically after download"
+msgstr "_Öppna filer automatiskt efter hämtning"
+
+#: ../data/preferences.ui.h:36
+msgid "_Percentage"
+msgstr "_Procentandel"
+
+#: ../data/preferences.ui.h:37
+msgid "_Proxy requires authentication"
+msgstr "_Proxyserver kräver autentisering"
+
+#: ../data/preferences.ui.h:38
+msgid "_User:"
+msgstr "Anvä_ndare:"
+
+#: ../data/preferences.ui.h:39
+msgid "files"
+msgstr "filer"
+
+#: ../data/preferences.ui.h:40
+msgid "kB/sec"
+msgstr "kB/s"
+
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
 msgstr "Vidarebefordra hämtningar till GWGet"
@@ -146,68 +492,68 @@ msgstr "Okänd"
 msgid "Failed"
 msgstr "Misslyckades"
 
-#: ../src/gwget_data.c:207
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "fastnad"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:242
 msgid "Waiting"
 msgstr "Väntar"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "Inte startad"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "Kör inte"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "Inte ansluten"
 
-#: ../src/gwget_data.c:247
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "Ansluten"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "Hämtar"
 
-#: ../src/gwget_data.c:251
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "Slutfört"
 
-#: ../src/gwget_data.c:255
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "Fel"
 
-#: ../src/gwget_data.c:693
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
 msgstr "Kan inte lägga till denna hämtning"
 
-#: ../src/gwget_data.c:694
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
 msgstr "Denna hämtning har redan lagts till"
 
-#: ../src/gwget_data.c:745
+#: ../src/gwget_data.c:748
 #: ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1255
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1257
+#: ../src/main_window_cb.c:1280
 msgid "Error opening file"
 msgstr "Fel vid öppnande av fil"
 
-#: ../src/gwget_data.c:745
+#: ../src/gwget_data.c:748
 #: ../src/main_window_cb.c:110
-#: ../src/main_window_cb.c:1255
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "Kunde inte öppna filen"
 
-#: ../src/gwget_data.c:793
+#: ../src/gwget_data.c:796
 msgid "Download Complete"
 msgstr "Hämtning slutförd"
 
-#: ../src/gwget_data.c:809
+#: ../src/gwget_data.c:812
 #, c-format
 msgid ""
 "The file %s is an MP3 playlist.\n"
@@ -216,16 +562,16 @@ msgstr ""
 "Filen %s är en MP3-spellista.\n"
 "Hämta filerna som den innehåller?"
 
-#: ../src/gwget_data.c:811
+#: ../src/gwget_data.c:814
 msgid "Download files in MP3 playlist?"
 msgstr "Hämta filer i MP3-spellista?"
 
-#: ../src/gwget_data.c:812
+#: ../src/gwget_data.c:815
 #: ../src/main_window.c:820
 msgid "No"
 msgstr "Nej"
 
-#: ../src/gwget_data.c:812
+#: ../src/gwget_data.c:815
 #: ../src/main_window.c:820
 msgid "Yes"
 msgstr "Ja"
@@ -300,13 +646,6 @@ msgstr "Det finns åtminstone en aktiv hämtning kvar. Verkligen avbryta alla k�
 msgid "Error in download"
 msgstr "Fel vid hämtning"
 
-#: ../src/main_window_cb.c:140
-#: ../src/main_window_cb.c:636
-#: ../src/main_window_cb.c:675
-#: ../src/main_window_cb.c:743
-msgid "Gwget - Download Manager"
-msgstr "Gwget - Hämtningshanterare"
-
 #: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "Hämtningshanterare för GNOME."
@@ -314,18 +653,18 @@ msgstr "Hämtningshanterare för GNOME."
 #: ../src/main_window_cb.c:192
 msgid "translator-credits"
 msgstr ""
-"Daniel Nylander\n"
+"Daniel Nylander <po@danielnylander.se>\n"
 "Christian Rose\n"
 "\n"
 "Skicka synpunkter på översättningen till\n"
-"tp-sv@listor.tp-sv.se"
+"<tp-sv@listor.tp-sv.se>."
 
-#: ../src/main_window_cb.c:572
+#: ../src/main_window_cb.c:574
 #: ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Välj mapp"
 
-#: ../src/main_window_cb.c:628
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
@@ -334,70 +673,58 @@ msgstr ""
 "Verkligen avbryta aktuell hämtning?\n"
 "(Url: %s)"
 
-#: ../src/main_window_cb.c:629
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
 msgstr "Ta bort hämtning?"
 
-#: ../src/main_window_cb.c:629
+#: ../src/main_window_cb.c:631
 msgid "Delete"
 msgstr "Ta bort"
 
-#: ../src/main_window_cb.c:659
-msgid "Remove completed"
-msgstr "Ta bort slutförda"
-
-#: ../src/main_window_cb.c:659
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "Verkligen ta bort slutförda hämtningar från listan?"
 
-#: ../src/main_window_cb.c:659
+#: ../src/main_window_cb.c:661
 msgid "Remove"
 msgstr "Ta bort"
 
-#: ../src/main_window_cb.c:693
-msgid "Remove inactive"
-msgstr "Ta bort inaktiva"
-
-#: ../src/main_window_cb.c:693
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
 msgstr "Verkligen ta bort inaktiva hämtningar från listan?"
 
-#: ../src/main_window_cb.c:725
-msgid "Remove all"
-msgstr "Ta bort alla"
-
-#: ../src/main_window_cb.c:725
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "Verkligen ta bort alla hämtningar från listan?"
 
-#: ../src/main_window_cb.c:877
+#: ../src/main_window_cb.c:879
 #, c-format
 msgid "MD5SUM Check PASSED!"
 msgstr "MD5SUM-kontroll OK!"
 
-#: ../src/main_window_cb.c:880
+#: ../src/main_window_cb.c:882
 #, c-format
 msgid "MD5SUM Check FAILED!"
 msgstr "MD5SUM-kontroll MISSLYCKADES!"
 
-#: ../src/main_window_cb.c:1205
+#: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr "Ny begränsning för hämtningshastighet kommer att gälla endast för nya eller omstartade hämtningar"
 
-#: ../src/main_window_cb.c:1221
+#: ../src/main_window_cb.c:1223
 #, c-format
 msgid "Remove %s ?"
 msgstr "Ta bort %s?"
 
-#: ../src/main_window_cb.c:1222
+#: ../src/main_window_cb.c:1224
 msgid "Really remove this download from the list?"
 msgstr "Verkligen ta bort denna hämtning från listan?"
 
-#: ../src/main_window_cb.c:1222
+#: ../src/main_window_cb.c:1224
 msgid "Remove download"
 msgstr "Ta bort hämtning"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1280
 msgid "Couldn't open the folder"
 msgstr "Kunde inte öppna mappen"
 
@@ -466,108 +793,18 @@ msgstr "Kan inte fortsätta hämtning, befintlig lokal fil är i konflikt med fj
 msgid "Can't write to target directory"
 msgstr "Kan inte skriva till målkatalog"
 
-#~ msgid "    "
-#~ msgstr "    "
-#~ msgid "<b>Download</b>"
-#~ msgstr "<b>Hämta</b>"
-#~ msgid "<b>Insert MD5 sum to compare with</b>"
-#~ msgstr "<b>Infoga MD5-summa att jämföra med</b>"
-#~ msgid "<b>Properties</b>"
-#~ msgstr "<b>Egenskaper</b>"
-#~ msgid "<span weight=\"bold\">New Download</span>"
-#~ msgstr "<span weight=\"bold\">Ny hämtning</span>"
-#~ msgid "Cancel"
-#~ msgstr "Avbryt"
 #~ msgid "Cancel download"
 #~ msgstr "Avbryt hämtning"
 #~ msgid "Cancel the download"
 #~ msgstr "Avbryt hämtningen"
-#~ msgid "Clear"
-#~ msgstr "Töm"
-#~ msgid "Compare md5 sum"
-#~ msgstr "Jämför MD5-summa"
-#~ msgid "Continue"
-#~ msgstr "Fortsätt"
 #~ msgid "Continue download"
 #~ msgstr "Fortsätt hämtning"
 #~ msgid "Continue with the download"
 #~ msgstr "Fortsätt med hämtningen"
-#~ msgid "Help"
-#~ msgstr "Hjälp"
 #~ msgid "Information"
 #~ msgstr "Information"
-#~ msgid "Local Directory:"
-#~ msgstr "Lokal katalog:"
-#~ msgid "Local File:"
-#~ msgstr "Lokal fil:"
-#~ msgid "Md5 Sum:"
-#~ msgstr "MD5-summa:"
-#~ msgid "Multimedia files (Videos and images)"
-#~ msgstr "Multimediafiler (videofilmer och bilder)"
-#~ msgid "New Download"
-#~ msgstr "Ny hämtning"
-#~ msgid "New download"
-#~ msgstr "Ny hämtning"
-#~ msgid "Open"
-#~ msgstr "Öppna"
-#~ msgid "Open directory"
-#~ msgstr "Öppna katalog"
-#~ msgid "Open file"
-#~ msgstr "Öppna fil"
-#~ msgid "Open target directory"
-#~ msgstr "Öppna målkatalogen"
-#~ msgid "Pause"
-#~ msgstr "Gör paus"
-#~ msgid "Pause all"
-#~ msgstr "Gör paus i alla"
-#~ msgid "Pause all downloads"
-#~ msgstr "Pausa alla hämtningar"
 #~ msgid "Pause download"
 #~ msgstr "Gör paus i hämtning"
 #~ msgid "Pause the download"
 #~ msgstr "Gör paus i hämtningen"
-#~ msgid "Properties"
-#~ msgstr "Egenskaper"
-#~ msgid "Recursive"
-#~ msgstr "Rekursivt"
-#~ msgid "Recursive options"
-#~ msgstr "Alternativ för rekursivitet"
-#~ msgid "Remove completed downloads"
-#~ msgstr "Ta bort slutförda hämtningar"
-#~ msgid "Remove from List"
-#~ msgstr "Ta bort från listan"
-#~ msgid "Remove from list"
-#~ msgstr "Ta bort från listan"
-#~ msgid "Resume all"
-#~ msgstr "Återuppta alla"
-#~ msgid "Resume all downloads"
-#~ msgstr "Återuppta alla hämtningar"
-#~ msgid "Save in:"
-#~ msgstr "Spara i:"
-#~ msgid "Stat_usbar"
-#~ msgstr "Stat_usrad"
-#~ msgid "The index file only"
-#~ msgstr "Endast indexfilen"
-#~ msgid "This site (mirror)"
-#~ msgstr "Denna plats (spegel)"
-#~ msgid "URL:"
-#~ msgstr "URL:"
-#~ msgid "Verify..."
-#~ msgstr "Verifiera..."
-#~ msgid "_Archive"
-#~ msgstr "_Arkiv"
-#~ msgid "_Download"
-#~ msgstr "_Hämta"
-#~ msgid "_Edit"
-#~ msgstr "R_edigera"
-#~ msgid "_Toolbar"
-#~ msgstr "_Verktygsrad"
-#~ msgid "_View"
-#~ msgstr "_Visa"
-#~ msgid "   "
-#~ msgstr "   "
-#~ msgid "<span weight=\"bold\">Behavior</span>"
-#~ msgstr "<span weight=\"bold\">Beteende</span>"
-#~ msgid "<span weight=\"bold\">Column List</span>"
-#~ msgstr "<span weight=\"bold\">Kolumnlista</span>"
 
