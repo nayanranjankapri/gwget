@@ -7,7 +7,7 @@
   <name xml:lang="en">Gwget Download Manager</name>
   <shortdesc xml:lang="en">Download manager for Gnome</shortdesc>
   <homepage rdf:resource="http://projects.gnome.org/gwget" />
-  <download-page rdf:resource="ftp://ftp.gnome.org/pub/GNOME/sources/gwget/"/>
+  <download-page rdf:resource="http://download.gnome.org/sources/gwget/"/>
   <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=gwget"/>
 
   <maintainer>
