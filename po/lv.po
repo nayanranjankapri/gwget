@@ -5,345 +5,119 @@
 # Raivis Dejus <orvils@gmail.com>, 2007.
 # OpenOffice localization project <dev@lv.opeoffice.org>, 2007.
 # GWGet <moskvi4@one.lv>, 2007.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-17 11:16+0300\n"
-"PO-Revision-Date: 2007-08-17 11:19+0300\n"
-"Last-Translator: Raivis Dejus <orvils@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gwget&component=general\n"
+"POT-Creation-Date: 2010-03-06 21:36+0000\n"
+"PO-Revision-Date: 2011-03-31 22:31+0300\n"
+"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
-#: ../data/gwget.glade.h:1 ../data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
+#: ../data/gwget.desktop.in.in.h:1
+#| msgid "Gwget Download Manager"
+msgid "Download Manager"
+msgstr "Lejupielāžu pārvaldnieks"
 
-#: ../data/gwget.glade.h:2
-msgid "<b>Download</b>"
-msgstr "Ielāde"
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr "Lejupielādējiet failus no Interneta"
 
-#: ../data/gwget.glade.h:3
-msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr "<b>Ievietot MD5 summu lai salidzinātu ar</b>"
-
-#: ../data/gwget.glade.h:4
-msgid "<b>Properties</b>"
-msgstr "<b>Ipašības</b>"
-
-#: ../data/gwget.glade.h:5
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Jaunā ielāde</span>"
-
-#: ../data/gwget.glade.h:6
-msgid "Cancel"
-msgstr "Atsaukt"
-
-#: ../data/gwget.glade.h:7
-msgid "Cancel download"
-msgstr "Atcelt ielādi"
-
-#: ../data/gwget.glade.h:8
-msgid "Cancel the download"
-msgstr "Atcelt ielādi"
-
-#: ../data/gwget.glade.h:9
-msgid "Clear"
-msgstr "Notīrīt"
-
-#: ../data/gwget.glade.h:10
-msgid "Compare md5 sum"
-msgstr "Salidzināt md5 summu"
-
-#: ../data/gwget.glade.h:11
-msgid "Continue"
-msgstr "Turpināt"
-
-#: ../data/gwget.glade.h:12
-msgid "Continue download"
-msgstr "Turpināt lejupielādi"
-
-#: ../data/gwget.glade.h:13
-msgid "Continue with the download"
-msgstr "Turpināt ar lejupielādi"
-
-#: ../data/gwget.glade.h:14 ../src/main_window_cb.c:144
-#: ../src/main_window_cb.c:632 ../src/main_window_cb.c:671
-#: ../src/main_window_cb.c:739
-msgid "Gwget - Download Manager"
-msgstr "Gwget Ielādes menedžeris"
-
-#: ../data/gwget.glade.h:15
-msgid "Help"
-msgstr "Palīdzība"
-
-#: ../data/gwget.glade.h:16
-msgid "Information"
-msgstr "Informācija"
-
-#: ../data/gwget.glade.h:17
-msgid "Local Directory:"
-msgstr "Lokāles direktorija:"
-
-#: ../data/gwget.glade.h:18
-msgid "Local File:"
-msgstr "Lokālais fails:"
-
-#: ../data/gwget.glade.h:19
-msgid "Md5 Sum:"
-msgstr "Md5 summa:"
-
-#: ../data/gwget.glade.h:20
-msgid "Multimedia files (Videos and images)"
-msgstr "Multimedija faili (Video un bildes)"
-
-#: ../data/gwget.glade.h:21
-msgid "New Download"
-msgstr "Jauna ielāde"
-
-#: ../data/gwget.glade.h:22
-msgid "Open"
-msgstr "Atvērt"
-
-#: ../data/gwget.glade.h:23
-msgid "Open directory"
-msgstr "Atvērt direktoriju"
-
-#: ../data/gwget.glade.h:24
-msgid "Open file"
-msgstr "Atvērt failu"
-
-#: ../data/gwget.glade.h:25
-msgid "Open target directory"
-msgstr "Atvērt mērķa direktoriju"
-
-#: ../data/gwget.glade.h:26
-msgid "Pause"
-msgstr "Pauze"
-
-#: ../data/gwget.glade.h:27
-msgid "Pause all"
-msgstr "Pārtraukt visus"
-
-#: ../data/gwget.glade.h:28
-msgid "Pause download"
-msgstr "Apstāt ielādi"
-
-#: ../data/gwget.glade.h:29
-msgid "Pause the download"
-msgstr "Apstāt ielādi"
-
-#: ../data/gwget.glade.h:30
-msgid "Properties"
-msgstr "Iestatījumi"
-
-#: ../data/gwget.glade.h:31 ../data/preferences.glade.h:21
-msgid "Recursive"
-msgstr "Rekursīvi"
-
-#: ../data/gwget.glade.h:32
-msgid "Recursive options"
-msgstr "Rekursīvas uzstadijumi"
-
-#: ../data/gwget.glade.h:33 ../src/main_window_cb.c:721
-msgid "Remove all"
-msgstr "Izdzēst visus"
-
-#: ../data/gwget.glade.h:34 ../src/main_window_cb.c:655
-msgid "Remove completed"
-msgstr "Izdēst pabeigtus"
-
-#: ../data/gwget.glade.h:35
-msgid "Remove from List"
-msgstr "Izdzēst no saraksta"
-
-#: ../data/gwget.glade.h:36
-msgid "Remove from list"
-msgstr "Izdzēst no saraksta"
-
-#: ../data/gwget.glade.h:37 ../src/main_window_cb.c:689
-msgid "Remove inactive"
-msgstr "Izdzēst neaktīvus"
-
-#: ../data/gwget.glade.h:38
-msgid "Resume all"
-msgstr "Turpināt visus"
-
-#: ../data/gwget.glade.h:39
-msgid "Save in:"
-msgstr "Saglabāt iekšā:"
-
-#: ../data/gwget.glade.h:40
-msgid "Stat_usbar"
-msgstr "Status_josla"
-
-#: ../data/gwget.glade.h:41
-msgid "The index file only"
-msgstr "Tīkai faila indeksu"
-
-#: ../data/gwget.glade.h:42
-msgid "This site (mirror)"
-msgstr "Tikai weblapu(spoguli)"
-
-#: ../data/gwget.glade.h:43
-msgid "URL:"
-msgstr "URL:"
-
-#: ../data/gwget.glade.h:44
-msgid "Verify..."
-msgstr "Pārbaudīt..."
-
-#: ../data/gwget.glade.h:45
-msgid "_Archive"
-msgstr "_Arhīvs"
-
-#: ../data/gwget.glade.h:46
-msgid "_Download"
-msgstr "_Lejupielādēt"
-
-#: ../data/gwget.glade.h:47
-msgid "_Edit"
-msgstr "R_ediģēt"
-
-#: ../data/gwget.glade.h:48
-msgid "_Toolbar"
-msgstr "_Rīkujosla"
-
-#: ../data/gwget.glade.h:49
-msgid "_View"
-msgstr "_Skats"
-
-#: ../data/gwget.glade.h:50
-msgid "gtk-about"
-msgstr "gtk-par"
-
-#: ../data/gwget.glade.h:51
-msgid "gtk-cancel"
-msgstr "gtk-atcelt"
-
-#: ../data/gwget.glade.h:52
-msgid "gtk-close"
-msgstr "gtk-aizvērt"
-
-#: ../data/gwget.glade.h:53
-msgid "gtk-new"
-msgstr "gtk-jauns"
-
-#: ../data/gwget.glade.h:54
-msgid "gtk-ok"
-msgstr "gtk-ok"
-
-#: ../data/gwget.glade.h:55
-msgid "gtk-preferences"
-msgstr "gtk-uzstadījumi"
-
-#: ../data/gwget.glade.h:56
-msgid "gtk-properties"
-msgstr "gtk-ipatnības"
-
-#: ../data/gwget.glade.h:57
-msgid "gtk-quit"
-msgstr "gtk-iziet"
-
-#: ../data/gwget.glade.h:58
-msgid "label"
-msgstr "etiķete"
-
-#: ../data/gwget.glade.h:59
-msgid "local_file_text"
-msgstr "lakāla_faila_teksts"
-
-#: ../data/gwget.glade.h:60
-msgid "url_text"
-msgstr "url_teksts"
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Gwget lejupielādes pārvaldnieks"
 
 #: ../data/gwget.schemas.in.h:1
 msgid "Ask where to save each new download"
-msgstr "Jautāt kur saglabāt katru jauno ielādi"
+msgstr "Jautāt, kur saglabāt katru jauno lejupielādi"
 
 #: ../data/gwget.schemas.in.h:2
 msgid "Convert Links"
-msgstr "konvertēt saites"
+msgstr "Pārveidot saites"
 
 #: ../data/gwget.schemas.in.h:3
 msgid "Convert to relative links in recursive mode."
-msgstr "Konvertēt relatīvas saites rekursīva režīma."
+msgstr "Pārveidot relatīvas saites rekursīva režīma."
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
-msgstr "Noklusēta ielādes direktorija"
+msgstr "Noklusēta lejupielādes mape"
 
 #: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
-msgstr "Ielādēt lapas rekvizītus"
+msgstr "Lejupielādēt lapas rekvizītus"
 
 #: ../data/gwget.schemas.in.h:6
 msgid "Follow relative links"
-msgstr "Sēkot relatīvam saitem"
+msgstr "Sekot relatīvajām saitēm"
 
 #: ../data/gwget.schemas.in.h:7
 msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Ja pareizi, vienmēr jautāt par merķa mapi kad sāk jauno ielādi. Ja nepareizi,"
-"vienmēr sagalabāt noklusetajā direktorijā bez lietotāja jautašanas."
+"Ja patiess, vienmēr jautāt par mērķa mapi, kad sāk jauno lejupielādi. "
+"Ja aplams, vienmēr saglabāt noklusētajā mapē, nejautājot lietotājam."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
-msgstr "Ierobiežot maksimalo ātrumu"
+msgstr "Ierobežot maksimālo ātrumu"
 
 #: ../data/gwget.schemas.in.h:9
 msgid "Limit number of simultaneous downloads"
-msgstr "Ierobiežot vienlaicigu ielādu skaitu"
+msgstr "Ierobežot vienlaicīgo lejupielāžu skaitu"
 
 #: ../data/gwget.schemas.in.h:10
 msgid "Maximum depth in recursive mode"
-msgstr "Maksimālais dzīļums rekursīva režimā"
+msgstr "Maksimālais dziļums rekursīvajā režīmā"
 
 #: ../data/gwget.schemas.in.h:11
 msgid "Maximum number of simultaneous downloads"
-msgstr "Maksimalais vienlaicīgu ielādu skaits"
+msgstr "Maksimālais vienlaicīgo lejupielāžu skaits"
 
 #: ../data/gwget.schemas.in.h:12
 msgid "Maximum speed limit"
-msgstr "Maksimāla ātruma robeža"
+msgstr "Maksimālā ātruma ierobežojums"
 
 #: ../data/gwget.schemas.in.h:13
 msgid "Number of downloads"
-msgstr "Ielādu sakits"
+msgstr "Lejupielāžu skaits"
 
 #: ../data/gwget.schemas.in.h:14
 msgid "Number of retries"
-msgstr "Meģinājumu skaits"
+msgstr "Atkārtoto mēģinājumu skaits"
 
 #: ../data/gwget.schemas.in.h:15
 msgid "Open the file after download"
-msgstr "Avert failu pēc ielādes"
+msgstr "Atvērt failu pēc lejupielādes"
 
 #: ../data/gwget.schemas.in.h:16
 msgid "Resume downloads at startup"
-msgstr "Turpināt ielādi ar sākšanu"
+msgstr "Palaižoties turpināt lejupielādi"
 
 #: ../data/gwget.schemas.in.h:17
 msgid "View download speed column"
-msgstr "Skatīt ielādes ātruma kolonnu"
+msgstr "Skatīt lejupielādes ātruma kolonnu"
 
 #: ../data/gwget.schemas.in.h:18
 msgid "View elapsed time column"
-msgstr "Skatīt izterēta laika kolonna"
+msgstr "Skatīt pagājušā laika kolonnu"
 
 #: ../data/gwget.schemas.in.h:19
 msgid "View percentage column"
-msgstr "Skatīt "
+msgstr "Skatīt procentu kolonnu"
 
 #: ../data/gwget.schemas.in.h:20
 msgid "View remaining time column"
-msgstr "Skatīt procentu kolonnu"
+msgstr "Skatīt atlikušā laika kolonnu"
 
 #: ../data/gwget.schemas.in.h:21
 msgid "View statusbar"
@@ -351,11 +125,11 @@ msgstr "Skatīt statusa joslu"
 
 #: ../data/gwget.schemas.in.h:22
 msgid "View toolbar"
-msgstr "Skatīt rīkujoslu"
+msgstr "Skatīt rīkjoslu"
 
 #: ../data/gwget.schemas.in.h:23
 msgid "View total size column"
-msgstr "Skatīt kopēja izmēra kolonnu"
+msgstr "Skatīt kopējā izmēra kolonnu"
 
 #: ../data/gwget.schemas.in.h:24
 msgid "Whether to display the statusbar."
@@ -363,163 +137,354 @@ msgstr "Vai radīt statusa joslu."
 
 #: ../data/gwget.schemas.in.h:25
 msgid "Whether to display the toolbar."
-msgstr "Vai radīt rīku joslu."
+msgstr "Vai radīt rīkjoslu."
 
-#: ../data/preferences.glade.h:1
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:2
+msgid "<b>Download</b>"
+msgstr "<b>Lejupielāde</b>"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b>Ievietot MD5 summu, lai salīdzinātu ar</b>"
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr "<b>Īpašības</b>"
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Jaunā lejupielāde</span>"
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr "Attīrīt"
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr "Salīdzināt md5 summu"
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "Turpināt"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+msgid "Gwget - Download Manager"
+msgstr "Gwget — lejupielādes pārvaldnieks"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr "Lokālā mape:"
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr "Lokālais fails:"
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr "Md5 summa:"
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr "Multimediju faili (video un attēli)"
+
+#: ../data/gwget.ui.h:15
+msgid "New Download"
+msgstr "Jauna lejupielāde"
+
+#: ../data/gwget.ui.h:16
+#| msgid "New Download"
+msgid "New download"
+msgstr "Jauna lejupielāde"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr "Atvērt"
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr "Atvērt mapi"
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr "Atvērt failu"
+
+#: ../data/gwget.ui.h:20
+msgid "Open target directory"
+msgstr "Atvērt mērķa mapi"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "Pauzēt"
+
+#: ../data/gwget.ui.h:22
+msgid "Pause all"
+msgstr "Pauzēt visas"
+
+#: ../data/gwget.ui.h:23
+#| msgid "Pause download"
+msgid "Pause all downloads"
+msgstr "Pauzēt visas lejupielādes"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr "Iestatījumi"
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr "Rekursijas"
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr "Rekursijas opcijas "
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Izdzēst visus"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Izņemt pabeigtās"
+
+#: ../data/gwget.ui.h:29
+#| msgid "Remove completed"
+msgid "Remove completed downloads"
+msgstr "Izņemt pabeigtās lejupielādes"
+
+#: ../data/gwget.ui.h:30
+msgid "Remove from List"
+msgstr "Izņemt no saraksta"
+
+#: ../data/gwget.ui.h:31
+msgid "Remove from list"
+msgstr "Izņemt no saraksta"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Izņemt neaktīvās"
+
+#: ../data/gwget.ui.h:33
+msgid "Resume all"
+msgstr "Turpināt visas"
+
+#: ../data/gwget.ui.h:34
+#| msgid "Remove download"
+msgid "Resume all downloads"
+msgstr "Turpināt visas lejupielādes"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "Saglabāt mapē:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr "Stat_usa josla"
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr "Tikai indeksa failu"
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr "Šo vietni (spogulis)"
+
+#: ../data/gwget.ui.h:39
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr "Pārbaudīt..."
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr "_Arhīvs"
+
+#: ../data/gwget.ui.h:42
+msgid "_Download"
+msgstr "_Lejupielādēt"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr "R_ediģēt"
+
+#: ../data/gwget.ui.h:44
+#| msgid "Help"
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr "_Rīkjosla"
+
+#: ../data/gwget.ui.h:46
+msgid "_View"
+msgstr "_Skats"
+
+#: ../data/preferences.ui.h:1
 msgid "   "
 msgstr "   "
 
-#: ../data/preferences.glade.h:3
+#: ../data/preferences.ui.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
 msgstr "<span weight=\"bold\">Uzvedība</span>"
 
-#: ../data/preferences.glade.h:4
+#: ../data/preferences.ui.h:4
 msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">Kolonnu sarakst</span>"
+msgstr "<span weight=\"bold\">Kolonnu saraksts</span>"
 
-#: ../data/preferences.glade.h:5
+#: ../data/preferences.ui.h:5
 msgid "<span weight=\"bold\">General</span>"
-msgstr "<span weight=\"bold\">Vispārājs</span>"
+msgstr "<span weight=\"bold\">Vispārējs</span>"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.ui.h:6
 msgid "<span weight=\"bold\">Links</span>"
 msgstr "<span weight=\"bold\">Saites</span>"
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.ui.h:7
 msgid "<span weight=\"bold\">Proxy Configuration</span>"
-msgstr "<span weight=\"bold\">Starpnieka konfiguracija</span>"
+msgstr "<span weight=\"bold\">Starpnieka konfigurācija</span>"
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.ui.h:8
 msgid "Column List"
 msgstr "Kolonnu saraksts"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.ui.h:9
 msgid "Default _GNOME network settings"
-msgstr "Noklusētas_GNOME tīkla uzstadijumi"
+msgstr "Noklusētie _GNOME tīkla iestatījumi"
 
-#: ../data/preferences.glade.h:10
+#: ../data/preferences.ui.h:10
 msgid "Direct _Internet connection"
-msgstr "Tiešais _interneta savienojums"
+msgstr "Tiešais _Interneta savienojums"
 
-#: ../data/preferences.glade.h:11
+#: ../data/preferences.ui.h:11
 msgid "Do_wnload Speed"
-msgstr "Ie_lādes ātrums"
+msgstr "Lejupie_lādes ātrums"
 
-#: ../data/preferences.glade.h:12
+#: ../data/preferences.ui.h:12
 msgid "Don't _create directories"
-msgstr "Ne_izveidot direktorijas"
+msgstr "Ne_izveidot mapes"
 
-#: ../data/preferences.glade.h:13
+#: ../data/preferences.ui.h:13
 msgid "Follow _relative links only"
-msgstr "Sekot _relatīvam saitēm tīkai"
+msgstr "Sekot tikai _relatīvajām saitēm"
 
-#: ../data/preferences.glade.h:14
+#: ../data/preferences.ui.h:14
 msgid "General"
 msgstr "Vispārējs"
 
-#: ../data/preferences.glade.h:15
+#: ../data/preferences.ui.h:15
 msgid "Limit _number of simultaneous download to:"
-msgstr "Ierobiežot _vienlaicīgu ielodu skaitu uz:"
+msgstr "Ierobežot vie_nlaicīgu lejupielāžu skaitu līdz:"
 
-#: ../data/preferences.glade.h:16
+#: ../data/preferences.ui.h:16
 msgid "Network"
-msgstr "TIkls"
+msgstr "Tīkls"
 
-#: ../data/preferences.glade.h:17
+#: ../data/preferences.ui.h:17
 msgid "P_ort:"
 msgstr "P_orts:"
 
-#: ../data/preferences.glade.h:18
+#: ../data/preferences.ui.h:18
 msgid "Password:"
 msgstr "Parole:"
 
-#: ../data/preferences.glade.h:19
+#: ../data/preferences.ui.h:19
 msgid "Preferences"
-msgstr "Uzstādījumi"
+msgstr "Iestatījumi"
 
-#: ../data/preferences.glade.h:20
+#: ../data/preferences.ui.h:20
 msgid "Pro_xy:"
-msgstr "Starp_niekserveris:"
+msgstr "Starpnie_ks:"
 
-#: ../data/preferences.glade.h:22
+#: ../data/preferences.ui.h:22
 msgid "Remaining _Time"
-msgstr "Atlikušais _Laiks"
+msgstr "A_tlikušais laiks"
 
-#: ../data/preferences.glade.h:23
+#: ../data/preferences.ui.h:23
 msgid "Sa_ve in:"
-msgstr "Saglabāt uz:"
+msgstr "Sa_glabāt mapē:"
 
-#: ../data/preferences.glade.h:24
+#: ../data/preferences.ui.h:24
 msgid "Total _Size"
-msgstr "Kopīgais izmērs"
+msgstr "Kopējais izmērs"
 
-#: ../data/preferences.glade.h:25
+#: ../data/preferences.ui.h:25
 msgid "_Ask where to save for each download"
-msgstr "_Jautāt kur saglabāt katru ielādi"
+msgstr "J_autāt, kur saglabāt katru lejupielādi"
 
-#: ../data/preferences.glade.h:26
+#: ../data/preferences.ui.h:26
 msgid "_Continue downloads on startup"
-msgstr "_Turpināt ielādi pēc sākšanas"
+msgstr "_Turpināt lejupielādi pēc palaišanas"
 
-#: ../data/preferences.glade.h:27
+#: ../data/preferences.ui.h:27
 msgid "_Convert links"
-msgstr "_Konvertēt saites"
+msgstr "_Pārveidot saites"
 
-#: ../data/preferences.glade.h:28
+#: ../data/preferences.ui.h:28
 msgid "_Current Size"
-msgstr "_Tēkošais izmērs"
+msgstr "_Pašreizējais izmērs"
 
-#: ../data/preferences.glade.h:29
+#: ../data/preferences.ui.h:29
 msgid "_Download page requisites"
-msgstr "_Ielādes lapu rekvizīti"
+msgstr "Lejupielā_dēt lapas rekvizītus"
 
-#: ../data/preferences.glade.h:30
+#: ../data/preferences.ui.h:30
 msgid "_Elapsed Time"
-msgstr "_Izteteretājs laiks"
+msgstr "_Pavadītais laiks"
 
-#: ../data/preferences.glade.h:31
+#: ../data/preferences.ui.h:31
 msgid "_Limit download speed to:"
-msgstr "_Ierobežot ielādu skaitu uz:"
+msgstr "Ierobežot _lejupielāžu skaitu līdz:"
 
-#: ../data/preferences.glade.h:32
+#: ../data/preferences.ui.h:32
 msgid "_Manual proxy configuration"
-msgstr "Manuala starpnieka konfiguracija"
+msgstr "_Pašrocīgā starpnieka konfigurācija"
 
-#: ../data/preferences.glade.h:33
+#: ../data/preferences.ui.h:33
 msgid "_Maximum depth level:"
-msgstr "_Maksmalais dzīļuma līmenis:"
+msgstr "_Maksimālais dziļuma līmenis:"
 
-#: ../data/preferences.glade.h:34
+#: ../data/preferences.ui.h:34
 msgid "_Number of retries:"
-msgstr "_Metģinājumu skaits:"
+msgstr "_Mēģinājumu skaits:"
 
-#: ../data/preferences.glade.h:35
+#: ../data/preferences.ui.h:35
 msgid "_Open files automatically after download"
-msgstr "_Automatiski atvērt failus pēc ielādes"
+msgstr "Aut_omātiski atvērt failus pēc lejupielādēšanas"
 
-#: ../data/preferences.glade.h:36
+#: ../data/preferences.ui.h:36
 msgid "_Percentage"
 msgstr "_Procenti"
 
-#: ../data/preferences.glade.h:37
+#: ../data/preferences.ui.h:37
 msgid "_Proxy requires authentication"
-msgstr "_Starpniekam vajadziga autentifikacija"
+msgstr "Star_pnieks pieprasa autentificēšanos"
 
-#: ../data/preferences.glade.h:38
+#: ../data/preferences.ui.h:38
 msgid "_User:"
-msgstr "Lietotājs:"
+msgstr "_Lietotājs:"
 
-#: ../data/preferences.glade.h:39
+#: ../data/preferences.ui.h:39
 msgid "files"
 msgstr "faili"
 
-#: ../data/preferences.glade.h:40
+#: ../data/preferences.ui.h:40
 msgid "kB/sec"
 msgstr "kB/sek"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:1
 msgid "Forward downloads to GWGet"
-msgstr "Pārsutīt ielādes uz GWGet"
+msgstr "Pārsūtīt lejupielādes uz GWGet"
 
 #: ../epiphany-extension/gwget.xml.in.in.h:2
 msgid "GWGet"
@@ -533,228 +498,237 @@ msgstr "Nezināms"
 msgid "Failed"
 msgstr "Neizdevās"
 
-#: ../src/gwget_data.c:201
+#: ../src/gwget_data.c:210
 msgid "stalled"
-msgstr "Neizdevās"
+msgstr "apstādināts"
 
-#: ../src/gwget_data.c:233
+#: ../src/gwget_data.c:242
 msgid "Waiting"
-msgstr "Gaidu"
+msgstr "Gaida"
 
-#: ../src/gwget_data.c:235
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "Nav iesākts"
 
-#: ../src/gwget_data.c:237
+#: ../src/gwget_data.c:246
 msgid "Not Running"
-msgstr "Nestrādā"
+msgstr "Nav palaists"
 
-#: ../src/gwget_data.c:239
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "Nav savienots"
 
-#: ../src/gwget_data.c:241
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "Savienots"
 
-#: ../src/gwget_data.c:243
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
 msgstr "Atgriež"
 
-#: ../src/gwget_data.c:245
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "Pabeigts"
 
-#: ../src/gwget_data.c:249
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "Kļūda"
 
-#: ../src/gwget_data.c:687
+#: ../src/gwget_data.c:696
 msgid "Unable to add this download"
-msgstr "Nevar pielikt šo ielādi"
+msgstr "Nevar pievienot šo lejupielādi"
 
-#: ../src/gwget_data.c:688
+#: ../src/gwget_data.c:697
 msgid "This download is already added"
-msgstr "Šī ielāde ir jau pievienota"
+msgstr "Šī lejupielāde ir jau pievienota"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259 ../src/main_window_cb.c:1278
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
 msgid "Error opening file"
-msgstr "Kļūda atverot failu"
+msgstr "Kļūda, atverot failu"
 
-#: ../src/gwget_data.c:736 ../src/main_window_cb.c:114
-#: ../src/main_window_cb.c:1259
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
 msgid "Couldn't open the file"
 msgstr "Nevārēja atvērt failu"
 
-#: ../src/gwget_data.c:784
+#: ../src/gwget_data.c:796
 msgid "Download Complete"
-msgstr "Ielāde pabeigta"
+msgstr "Lejupielāde pabeigta"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Fails %s ir MP3 repertuārs.\n"
+"Lejupielādēt failus, ko tas satur?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "Lejupielādēt MP3 failus no repertuāra?"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "Nē"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "Jā"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
-msgstr "Stārtēt gwget notifikācija laukā"
+msgstr "Palaist gwget paziņojumu laukā"
 
 #: ../src/main.c:41
 msgid "Destination directory for the download"
-msgstr "Merķa direktorija ielādei"
+msgstr "Mērķa mape lejupielādei"
 
 #: ../src/main.c:42
 msgid "[URL]"
 msgstr "[URL]"
 
-#: ../src/main.c:244 ../src/main.c:276
-msgid "Gwget Download Manager"
-msgstr "Gwget ielādes menedžeris"
-
-#: ../src/main.c:262 ../src/main_window_cb.c:191
+#: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
 msgstr "Gwget"
 
-#: ../src/main_window.c:430
+#: ../src/main_window.c:436
 msgid "File Name"
-msgstr "Faila Vārds"
+msgstr "Faila nosaukums"
 
-#: ../src/main_window.c:438
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "Stāvoklis"
 
-#: ../src/main_window.c:450
+#: ../src/main_window.c:464
 msgid "Current Size"
-msgstr "Tēkošais stāvoklis"
+msgstr "Pašreizējais izmērs"
 
-#: ../src/main_window.c:462
+#: ../src/main_window.c:477
 msgid "Total Size"
-msgstr "Kopījais izmērs"
+msgstr "Kopējais izmērs"
 
-#: ../src/main_window.c:473 ../src/main_window.c:479
+#: ../src/main_window.c:489 ../src/main_window.c:495
 msgid "Percentage"
 msgstr "Procenti"
 
-#: ../src/main_window.c:486
+#: ../src/main_window.c:503
 msgid "Elapsed Time"
 msgstr "Pavadītais laiks"
 
-#: ../src/main_window.c:497
+#: ../src/main_window.c:515
 msgid "Remaining Time"
-msgstr "Atlikuūais Laiks"
+msgstr "Atlikušais laiks"
 
-#: ../src/main_window.c:508
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "Ātrums"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:579
 msgid "Error starting the download"
-msgstr "Kļūda startējot ielādi"
+msgstr "Kļūda, sākot lejupielādi"
 
-#: ../src/main_window.c:555
+#: ../src/main_window.c:579
 msgid "There was an unexpected error starting the download"
-msgstr "Notika negaidīta kļūda startējot ielādi"
+msgstr "Notika negaidīta kļūda, sākot lejupielādēšanu"
 
-#: ../src/main_window.c:791
+#: ../src/main_window.c:819
 msgid "Stop current downloads?"
-msgstr "Apstāt tekošas ielādes?"
+msgstr "Apturēt pašreizējās lejupielādes?"
 
-#: ../src/main_window.c:792
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
-"Atliek vismaz viena aktīva ielāde. Vai tiešam atcelt visas stradājošas "
-"parsūtīšanas?"
+"Ir palikusi vismaz viena aktīva lejupielāde. Vai tiešam atcelt visas aktīvās "
+"pārsūtīšanas?"
 
-#: ../src/main_window.c:792
-msgid "No"
-msgstr "Nē"
-
-#: ../src/main_window.c:792
-msgid "Yes"
-msgstr "Jā"
-
-#: ../src/main_window_cb.c:105
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
-msgstr "Kļūda atverot failu"
+msgstr "Kļūda lejupielādē"
 
-#: ../src/main_window_cb.c:194
+#: ../src/main_window_cb.c:190
 msgid "Download Manager for GNOME."
 msgstr "GNOME lejupielāžu pārvaldnieks."
 
-#: ../src/main_window_cb.c:196
+#: ../src/main_window_cb.c:192
 msgid "translator-credits"
-msgstr "Raivis Dejus <orvils@gmail.com>"
+msgstr ""
+"Raivis Dejus <orvils@gmail.com> "
+"Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
-#: ../src/main_window_cb.c:568 ../src/new_window.c:136
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr "Izvēlēties mapi"
 
-#: ../src/main_window_cb.c:624
+#: ../src/main_window_cb.c:630
 #, c-format
 msgid ""
 "Really cancel current download?\n"
 "(URL: %s)"
 msgstr ""
-"Tiešam atcelt tēkošo ielādi?\n"
+"Tiešam atcelt pašreizējo lejupielādi?\n"
 "(URL: %s)"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete download?"
-msgstr "Izdzēst ielādi?"
+msgstr "Izdzēst lejupielādi?"
 
-#: ../src/main_window_cb.c:625
+#: ../src/main_window_cb.c:631
 msgid "Delete"
 msgstr "Dzēst"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
-msgstr "Tiešam dzēst pabeigtas ielādes no saraksta?"
+msgstr "Tiešam izņemt pabeigtās lejupielādes no saraksta?"
 
-#: ../src/main_window_cb.c:655
+#: ../src/main_window_cb.c:661
 msgid "Remove"
-msgstr "Aizvākt"
+msgstr "Izņemt"
 
-#: ../src/main_window_cb.c:689
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
-msgstr "Tiešam aizvākt nektīvas ielādes no saraklsta?"
+msgstr "Tiešam izņemt neaktīvās lejupielādes no saraksta?"
 
-#: ../src/main_window_cb.c:721
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
-msgstr "Tiešam aizvākt visas ielādes no saraksta?"
+msgstr "Tiešam izņemt visas lejupielādes no saraksta?"
 
-#: ../src/main_window_cb.c:857 ../src/main_window_cb.c:875
+#: ../src/main_window_cb.c:879
 #, c-format
-msgid "error %d when accessing %s: %s\n"
-msgstr "Kļūda %d pieejot %s: %s?\n"
+msgid "MD5SUM Check PASSED!"
+msgstr "MD5SUM pārbaude izturēta!"
 
-#: ../src/main_window_cb.c:887
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">MD5SUMMAS Parbaude Sekmīga!</span>"
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr "MD5SUM pārbaude NAV izturēta!"
 
-#: ../src/main_window_cb.c:890
-msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
-msgstr "<span size=\"large\" weight=\"bold\">MD5SUMMas Parbaude NESEKMĪGA!</span>"
-
-#: ../src/main_window_cb.c:1211
+#: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
 msgstr ""
-"Jaunais ielādes atruma robeža atteiksies tīkai jaonajiem un pārsāktajiem "
-"ielādēm"
+"Jaunais lejupielādes ātruma ierobežojums atteiksies tikai uz no jauna "
+"sāktajām "
+"lejupielādēm"
 
-#: ../src/main_window_cb.c:1227
+#: ../src/main_window_cb.c:1223
 #, c-format
 msgid "Remove %s ?"
-msgstr "Aizvākt %s ?"
+msgstr "Izņemt %s ?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1224
 msgid "Really remove this download from the list?"
-msgstr "Tiešām aizvākt šo ielādi no sarakstā?"
+msgstr "Tiešām izņemt šo lejupielādi no saraksta?"
 
-#: ../src/main_window_cb.c:1228
+#: ../src/main_window_cb.c:1224
 msgid "Remove download"
-msgstr "Aizvākt ielādi"
+msgstr "Izņemt lejupielādi"
 
-#: ../src/main_window_cb.c:1278
+#: ../src/main_window_cb.c:1280
 msgid "Couldn't open the folder"
-msgstr "Nevarēja atvert mapi"
+msgstr "Nevarēja atvērt mapi"
 
 #: ../src/systray.c:120
 msgid "Nothing"
@@ -764,47 +738,128 @@ msgstr "Nekas"
 msgid "Downloads"
 msgstr "Lejupielādes"
 
-#: ../src/wget-log.c:123
+#: ../src/wget-log.c:187
 msgid "Socket error"
-msgstr "ligzdas kļūda"
+msgstr "Ligzdas kļūda"
 
-#: ../src/wget-log.c:125
-msgid "Connection refused\n"
-msgstr "Savienojumam atteiks?\n"
+#: ../src/wget-log.c:190
+#| msgid "Connection refused\n"
+msgid "Connection refused"
+msgstr "Savienojums atteiks"
 
-#: ../src/wget-log.c:127
+#: ../src/wget-log.c:193
 msgid "No route to host"
-msgstr "Nav ceļa resursdatoram"
+msgstr "Nav ceļa līdz datoram"
 
-#: ../src/wget-log.c:129
-msgid "Connection refused when downloading URL:\n"
-msgstr "Savienojumam atteikts URL ielādes laikā:\n"
+#: ../src/wget-log.c:196
+#| msgid "Connection refused when downloading URL:\n"
+msgid "Connection refused when downloading URL:"
+msgstr "Savienojumam atteikts URL ielādes laikā:"
 
-#: ../src/wget-log.c:131
-msgid "Host not found\n"
-msgstr "Resursdators nav atrasts\n"
+#: ../src/wget-log.c:199
+#| msgid "Host not found\n"
+msgid "Host not found"
+msgstr "Tīkla dators nav atrasts"
 
-#: ../src/wget-log.c:133
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Neatbalstītajs protokols - vajag wget >1.7 priekš https:\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Nezināms nosaukums vai serviss"
 
-#: ../src/wget-log.c:136
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Neatbalstīts protokols"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
-msgstr "Atteicu pastāvošo failu apraut"
+msgstr "Atsakās apraut esošo failu"
 
-#: ../src/wget-log.c:138
-msgid "Unknown error"
-msgstr "Nezināma kļūda"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Nevar atrast tīkla datora adresi"
 
-#: ../src/wget-log.c:149 ../src/wget-log.c:155
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+#| msgid "Unknown error"
+msgid "Unknown error "
+msgstr "Nezināma kļūda "
+
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "Fails nav atrasts"
 
-#: ../src/wget-log.c:162
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
-msgstr "Nevar turpināt ielādi, pastavošais lokālais fails konfliktē ar attālo failu"
+msgstr ""
+"Nevar turpināt lejupielādi, esošais lokālais fails konfliktē ar attālo failu"
 
-#: ../src/wget-log.c:221
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
-msgstr "Nevar rakstī mērķa direktorija"
+msgstr "Nevar rakstīt mērķa mapē"
 
+#~ msgid "Cancel download"
+#~ msgstr "Atcelt ielādi"
+
+#~ msgid "Cancel the download"
+#~ msgstr "Atcelt ielādi"
+
+#~ msgid "Continue download"
+#~ msgstr "Turpināt lejupielādi"
+
+#~ msgid "Continue with the download"
+#~ msgstr "Turpināt ar lejupielādi"
+
+#~ msgid "Information"
+#~ msgstr "Informācija"
+
+#~ msgid "Pause the download"
+#~ msgstr "Apstāt ielādi"
+
+#~ msgid "gtk-about"
+#~ msgstr "gtk-par"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-atcelt"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-aizvērt"
+
+#~ msgid "gtk-new"
+#~ msgstr "gtk-jauns"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-preferences"
+#~ msgstr "gtk-uzstadījumi"
+
+#~ msgid "gtk-properties"
+#~ msgstr "gtk-ipatnības"
+
+#~ msgid "gtk-quit"
+#~ msgstr "gtk-iziet"
+
+#~ msgid "label"
+#~ msgstr "etiķete"
+
+#~ msgid "local_file_text"
+#~ msgstr "lakāla_faila_teksts"
+
+#~ msgid "url_text"
+#~ msgstr "url_teksts"
+
+#~ msgid "error %d when accessing %s: %s\n"
+#~ msgstr "Kļūda %d pieejot %s: %s?\n"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check PASSED!</span>"
+#~ msgstr ""
+#~ "<span size=\"large\" weight=\"bold\">MD5SUMMAS Parbaude Sekmīga!</span>"
+
+#~ msgid "<span size=\"large\" weight=\"bold\">MD5SUM Check FAILED!</span>"
+#~ msgstr ""
+#~ "<span size=\"large\" weight=\"bold\">MD5SUMMas Parbaude NESEKMĪGA!</span>"
+
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#~ msgstr "Neatbalstītajs protokols - vajag wget >1.7 priekš https:\n"
