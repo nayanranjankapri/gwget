@@ -1,3 +1,5 @@
-[encoding: UTF-8]
+# List of source files containing translatable strings that should not be
+# translated.
+# Please keep this file sorted alphabetically.
 data/gwget.glade
 data/preferences.glade
