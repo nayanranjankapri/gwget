@@ -2,15 +2,15 @@
 # Copyright © 2004-2006 Gnome i18n Project for Vietnamese.
 # Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2006.
-#
+# Lê Trường An <xinemdungkhoc1@gmail.com>, 2011.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget Gnome HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gwget&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gwget&component=general\n"
 "POT-Creation-Date: 2010-03-06 21:36+0000\n"
-"PO-Revision-Date: 2006-04-11 18:27+0930\n"
-"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"PO-Revision-Date: 2011-05-05 20:41+0700\n"
+"Last-Translator: Lê Trường An <xinemdungkhoc1@gmail.com>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,14 +19,13 @@ msgstr ""
 "X-Generator: LocFactoryEditor 1.6b36\n"
 
 #: ../data/gwget.desktop.in.in.h:1
-#, fuzzy
 #| msgid "Gwget Download Manager"
 msgid "Download Manager"
-msgstr "Gwget — Bộ Quản lý Tải về"
+msgstr "Bộ Quản lý Tải về"
 
 #: ../data/gwget.desktop.in.in.h:2
 msgid "Download files from the Internet"
-msgstr ""
+msgstr "Tải tập tin về từ Internet"
 
 #: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
 msgid "Gwget Download Manager"
@@ -61,10 +60,8 @@ msgid ""
 "If true, always ask for a destination folder when starting a new download. "
 "If false, always save in the default directory without asking the user."
 msgstr ""
-"Nếu đúng thì luôn luôn nhắc nhập thư mục đích khi bắt đầu tải về tập tin "
-"mới.\n"
-"Còn nếu sai, luôn luôn lưu tập tin tải về vào thư mục mặc định, không hỏi "
-"người dùng về gì."
+"Nếu đúng thì luôn luôn nhắc nhập thư mục đích khi bắt đầu tải về tập tin mới.\n"
+"Còn nếu sai, luôn luôn lưu tập tin tải về vào thư mục mặc định, không hỏi người dùng về gì."
 
 #: ../data/gwget.schemas.in.h:8
 msgid "Limit maximum speed"
@@ -143,20 +140,18 @@ msgid "    "
 msgstr "    "
 
 #: ../data/gwget.ui.h:2
-#, fuzzy
 #| msgid "_Download"
 msgid "<b>Download</b>"
-msgstr "Tải _về"
+msgstr "<b>Tải về</b>"
 
 #: ../data/gwget.ui.h:3
 msgid "<b>Insert MD5 sum to compare with</b>"
-msgstr ""
+msgstr "<b>Chèn vào mã MD5 để so sánh với</b>"
 
 #: ../data/gwget.ui.h:4
-#, fuzzy
 #| msgid "Properties"
 msgid "<b>Properties</b>"
-msgstr "Thuộc tính"
+msgstr "<b>Thuộc tính</b>"
 
 #: ../data/gwget.ui.h:5
 msgid "<span weight=\"bold\">New Download</span>"
@@ -168,11 +163,11 @@ msgstr "Thôi"
 
 #: ../data/gwget.ui.h:7
 msgid "Clear"
-msgstr ""
+msgstr "Xóa trống"
 
 #: ../data/gwget.ui.h:8
 msgid "Compare md5 sum"
-msgstr ""
+msgstr "So sánh mã md5"
 
 #: ../data/gwget.ui.h:9
 msgid "Continue"
@@ -194,7 +189,7 @@ msgstr "Tập tin cục bộ :"
 
 #: ../data/gwget.ui.h:13
 msgid "Md5 Sum:"
-msgstr ""
+msgstr "Mã MD5:"
 
 #: ../data/gwget.ui.h:14
 msgid "Multimedia files (Videos and images)"
@@ -217,13 +212,11 @@ msgid "Open directory"
 msgstr "Mở thư mục"
 
 #: ../data/gwget.ui.h:19
-#, fuzzy
 #| msgid "Open"
 msgid "Open file"
-msgstr "Mở"
+msgstr "Mở tập tin"
 
 #: ../data/gwget.ui.h:20
-#, fuzzy
 #| msgid "Open the target directory"
 msgid "Open target directory"
 msgstr "Mở thư mục đích"
@@ -261,10 +254,9 @@ msgid "Remove completed"
 msgstr "Gỡ bỏ tải về xong"
 
 #: ../data/gwget.ui.h:29
-#, fuzzy
 #| msgid "Remove completed"
 msgid "Remove completed downloads"
-msgstr "Gỡ bỏ tải về xong"
+msgstr "Gỡ bỏ các tải về đã hoàn tất"
 
 #: ../data/gwget.ui.h:30
 msgid "Remove from List"
@@ -308,11 +300,11 @@ msgstr "Địa chỉ Mạng:"
 
 #: ../data/gwget.ui.h:40
 msgid "Verify..."
-msgstr ""
+msgstr "Xác nhận..."
 
 #: ../data/gwget.ui.h:41
 msgid "_Archive"
-msgstr ""
+msgstr "_Lưu trữ"
 
 #: ../data/gwget.ui.h:42
 msgid "_Download"
@@ -320,21 +312,20 @@ msgstr "Tải _về"
 
 #: ../data/gwget.ui.h:43
 msgid "_Edit"
-msgstr ""
+msgstr "_Chỉnh sửa"
 
 #: ../data/gwget.ui.h:44
 msgid "_Help"
-msgstr ""
+msgstr "Trợ _giúp"
 
 #: ../data/gwget.ui.h:45
 msgid "_Toolbar"
 msgstr "Thanh _công cụ"
 
 #: ../data/gwget.ui.h:46
-#, fuzzy
 #| msgid "_New"
 msgid "_View"
-msgstr "_Mới"
+msgstr "_Hiển thị"
 
 #: ../data/preferences.ui.h:1
 msgid "   "
@@ -568,34 +559,34 @@ msgid ""
 "The file %s is an MP3 playlist.\n"
 "Download the files that it contains?"
 msgstr ""
+"Tập tin %s là một danh sách MP3.\n"
+"Tải về các tập tin được liệt kê trong đó chứ?"
 
 #: ../src/gwget_data.c:814
 msgid "Download files in MP3 playlist?"
-msgstr ""
+msgstr "Tải về các tập tin trong danh sách MP3?"
 
 #: ../src/gwget_data.c:815 ../src/main_window.c:820
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: ../src/gwget_data.c:815 ../src/main_window.c:820
 msgid "Yes"
-msgstr ""
+msgstr "Đồng ý"
 
 #: ../src/main.c:40
 msgid "Launch gwget in the notification area"
-msgstr ""
+msgstr "Khởi chạy gwget trong vùng thông báo"
 
 #: ../src/main.c:41
-#, fuzzy
 #| msgid "Continue with the download"
 msgid "Destination directory for the download"
-msgstr "Tiếp tục tải về"
+msgstr "Thư mục chứa tập tin tải về"
 
 #: ../src/main.c:42
-#, fuzzy
 #| msgid "URL:"
 msgid "[URL]"
-msgstr "Địa chỉ Mạng:"
+msgstr "[URL]"
 
 #: ../src/main.c:226 ../src/main_window_cb.c:187
 msgid "Gwget"
@@ -642,18 +633,13 @@ msgid "There was an unexpected error starting the download"
 msgstr "Gặp lỗi bất ngờ khi khởi chạy việc tải về"
 
 #: ../src/main_window.c:819
-#, fuzzy
 #| msgid "Cancel current downloads?"
 msgid "Stop current downloads?"
-msgstr "Thôi các việc tải về hiện thời không?"
+msgstr "Dừng các tải về hiện tại?"
 
 #: ../src/main_window.c:820
-msgid ""
-"There is at least one active download left. Really cancel all running "
-"transfers?"
-msgstr ""
-"Còn ít nhất một việc tải về đang hoạt động. Thật sự muốn thôi mọi truyền tải "
-"đang chạy không?"
+msgid "There is at least one active download left. Really cancel all running transfers?"
+msgstr "Còn đang tải về ít nhất một tập tin. Thật sự hủy tải về chứ?"
 
 #: ../src/main_window_cb.c:98
 msgid "Error in download"
@@ -681,14 +667,13 @@ msgstr ""
 "(Địa chỉ Mạng: %s)"
 
 #: ../src/main_window_cb.c:631
-#, fuzzy
 #| msgid "Cancel download?"
 msgid "Delete download?"
-msgstr "Thôi tải về không?"
+msgstr "Xóa tải về?"
 
 #: ../src/main_window_cb.c:631
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
@@ -709,12 +694,12 @@ msgstr "Thật sự muốn gỡ bỏ mọi mục tải về ra khỏi danh sách
 #: ../src/main_window_cb.c:879
 #, c-format
 msgid "MD5SUM Check PASSED!"
-msgstr ""
+msgstr "Kiểm tra mã MD5 ĐÚNG!"
 
 #: ../src/main_window_cb.c:882
 #, c-format
 msgid "MD5SUM Check FAILED!"
-msgstr ""
+msgstr "Kiểm tra mã MD5 SAI!"
 
 #: ../src/main_window_cb.c:1207
 msgid "New download speed limit will apply only to new or restarted downloads"
@@ -752,34 +737,31 @@ msgid "Socket error"
 msgstr "Lỗi ổ cắm"
 
 #: ../src/wget-log.c:190
-#, fuzzy
 #| msgid "Connection refused\n"
 msgid "Connection refused"
-msgstr "Kết nối bị từ chối\n"
+msgstr "Kết nối bị từ chối"
 
 #: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "Không có tuyến đến máy chủ"
 
 #: ../src/wget-log.c:196
-#, fuzzy
 #| msgid "Connection refused when downloading URL:\n"
 msgid "Connection refused when downloading URL:"
-msgstr "Kết nối bị từ chối khi tải về địa chỉ Mạng:\n"
+msgstr "Kết nối bị từ chối khi tải về URL:"
 
 #: ../src/wget-log.c:199
-#, fuzzy
 #| msgid "Host not found\n"
 msgid "Host not found"
-msgstr "Không tìm thấy máy\n"
+msgstr "Không tìm thấy máy"
 
 #: ../src/wget-log.c:202
 msgid "Name or service not known"
-msgstr ""
+msgstr "Không biết tên dịch vụ"
 
 #: ../src/wget-log.c:205
 msgid "Unsupported protocol"
-msgstr ""
+msgstr "Giao thức không được hỗ trợ"
 
 #: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
@@ -787,14 +769,13 @@ msgstr "Từ chối cắt xén tập tin hiện có"
 
 #: ../src/wget-log.c:211
 msgid "Unable to resolve host address"
-msgstr ""
+msgstr "Không thể phân giải địa chỉ máy"
 
 #.
 #. * All other possible output may as well be reported, since we treat it
 #. * as an error. We tag the message as unknown to make it more meaningful.
 #.
 #: ../src/wget-log.c:225
-#, fuzzy
 #| msgid "Unknown error"
 msgid "Unknown error "
 msgstr "Lỗi không xác định"
