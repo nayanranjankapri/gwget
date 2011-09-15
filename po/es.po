@@ -8,14 +8,16 @@
 # Miguel Angel Nieto <correo@miguelangelnieto.net>, 2005.
 # Juan Percy Rojas Cruz <juanperojas@gmail.com>, 2008, 2009.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gwget&component=general\n"
-"POT-Creation-Date: 2010-03-06 21:36+0000\n"
-"PO-Revision-Date: 2010-03-07 15:01+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2010-03-07 14:02+0000\n"
+"PO-Revision-Date: 2011-09-15 16:37+0200\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +51,7 @@ msgstr "Convertir a enlaces relativos en modo recursivo."
 
 #: ../data/gwget.schemas.in.h:4
 msgid "Default Download Directory"
-msgstr "Directorio de descarga predeterminado"
+msgstr "Carpeta de descarga predeterminada"
 
 #: ../data/gwget.schemas.in.h:5
 msgid "Download Page Requisites"
@@ -65,7 +67,7 @@ msgid ""
 "If false, always save in the default directory without asking the user."
 msgstr ""
 "Si es «true» pedir siempre una carpeta de destino al iniciar una descarga "
-"nueva. Si es  «false» guardar siempre en el directorio predeterminado sin "
+"nueva. Si es  «false» guardar siempre en la carpeta predeterminado sin "
 "preguntar al usuario."
 
 #: ../data/gwget.schemas.in.h:8
@@ -184,7 +186,7 @@ msgstr "Gwget - Gestor de descargas"
 
 #: ../data/gwget.ui.h:11
 msgid "Local Directory:"
-msgstr "Directorio local:"
+msgstr "Carpeta local:"
 
 #: ../data/gwget.ui.h:12
 msgid "Local File:"
@@ -212,7 +214,7 @@ msgstr "Abrir"
 
 #: ../data/gwget.ui.h:18
 msgid "Open directory"
-msgstr "Abrir directorio"
+msgstr "Abrir carpeta"
 
 #: ../data/gwget.ui.h:19
 msgid "Open file"
@@ -315,7 +317,6 @@ msgid "_Edit"
 msgstr "_Editar"
 
 #: ../data/gwget.ui.h:44
-#| msgid "Help"
 msgid "_Help"
 msgstr "Ay_uda"
 
@@ -369,7 +370,7 @@ msgstr "_Velocidad de descarga"
 
 #: ../data/preferences.ui.h:12
 msgid "Don't _create directories"
-msgstr "No _crear directorios"
+msgstr "No _crear carpetas"
 
 #: ../data/preferences.ui.h:13
 msgid "Follow _relative links only"
