@@ -2,20 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fran Dieguez <frandieguez@gnome.org>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gwget&component=general\n"
-"POT-Creation-Date: 2010-07-06 19:52+0000\n"
-"PO-Revision-Date: 2010-11-22 20:29+0100\n"
-"Last-Translator: marcoslans <marcoslansgarza@gmail.com>\n"
-"Language-Team: galician <marcoslansgarza@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-25 13:21+0200\n"
+"PO-Revision-Date: 2011-09-25 13:21+0200\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-Language: Galician\n"
 
 #: ../data/gwget.desktop.in.in.h:1
@@ -137,7 +138,7 @@ msgstr "Indica se mostrar a barra de ferramentas."
 
 #: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
 msgid "    "
-msgstr ""
+msgstr "    "
 
 #: ../data/gwget.ui.h:2
 msgid "<b>Download</b>"
@@ -323,7 +324,7 @@ msgstr "_Visualización"
 
 #: ../data/preferences.ui.h:1
 msgid "   "
-msgstr ""
+msgstr "   "
 
 #: ../data/preferences.ui.h:3
 msgid "<span weight=\"bold\">Behavior</span>"
