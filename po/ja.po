@@ -6,57 +6,690 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget2 0.6\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-12 20:41+0200\n"
-"PO-Revision-Date: 2003-09-30 17:22+0200\n"
-"Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-09-25 11:21+0000\n"
+"PO-Revision-Date: 2012-01-11 22:26+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main_window.c:231
+#: ../data/gwget.desktop.in.in.h:1
 #, fuzzy
-msgid "File Type"
-msgstr "ファイル名"
+msgid "Download Manager"
+msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャー。"
 
-#: src/main_window.c:240
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download files from the Internet"
+msgstr ""
+
+#: ../data/gwget.desktop.in.in.h:3 ../src/main.c:207 ../src/main.c:240
+#, fuzzy
+msgid "Gwget Download Manager"
+msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャー。"
+
+#: ../data/gwget.schemas.in.h:1
+msgid "Ask where to save each new download"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert Links"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:3
+msgid "Convert to relative links in recursive mode."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:5
+msgid "Download Page Requisites"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:6
+msgid "Follow relative links"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:7
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum number of simultaneous downloads"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum speed limit"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:13
+#, fuzzy
+#| msgid "Pause download"
+msgid "Number of downloads"
+msgstr "ダウンロードの停止"
+
+#: ../data/gwget.schemas.in.h:14
+#, fuzzy
+#| msgid "Number of retries: "
+msgid "Number of retries"
+msgstr "再試行の回数: "
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Open the file after download"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:16
+#, fuzzy
+msgid "Resume downloads at startup"
+msgstr "スタートアップ時にダウンロードを再開しますか?"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:20
+#, fuzzy
+#| msgid "Remaining Time"
+msgid "View remaining time column"
+msgstr "残り時間"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View statusbar"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:22
+msgid "View toolbar"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:23
+msgid "View total size column"
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr ""
+
+#: ../data/gwget.schemas.in.h:25
+msgid "Whether to display the toolbar."
+msgstr ""
+
+#: ../data/gwget.ui.h:1 ../data/preferences.ui.h:2
+msgid "    "
+msgstr ""
+
+#: ../data/gwget.ui.h:2
+#, fuzzy
+msgid "<b>Download</b>"
+msgstr "新規ダウンロード"
+
+#: ../data/gwget.ui.h:3
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr ""
+
+#: ../data/gwget.ui.h:4
+msgid "<b>Properties</b>"
+msgstr ""
+
+#: ../data/gwget.ui.h:5
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr ""
+
+#: ../data/gwget.ui.h:6
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: ../data/gwget.ui.h:7
+msgid "Clear"
+msgstr ""
+
+#: ../data/gwget.ui.h:8
+msgid "Compare md5 sum"
+msgstr ""
+
+#: ../data/gwget.ui.h:9
+msgid "Continue"
+msgstr "再開"
+
+#: ../data/gwget.ui.h:10 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
+#, fuzzy
+msgid "Gwget - Download Manager"
+msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャー。"
+
+#: ../data/gwget.ui.h:11
+msgid "Local Directory:"
+msgstr ""
+
+#: ../data/gwget.ui.h:12
+msgid "Local File:"
+msgstr ""
+
+#: ../data/gwget.ui.h:13
+msgid "Md5 Sum:"
+msgstr ""
+
+#: ../data/gwget.ui.h:14
+msgid "Multimedia files (Videos and images)"
+msgstr ""
+
+#: ../data/gwget.ui.h:15
+#, fuzzy
+msgid "New Download"
+msgstr "新規ダウンロード"
+
+#: ../data/gwget.ui.h:16
+#, fuzzy
+#| msgid "Pause download"
+msgid "New download"
+msgstr "ダウンロードの停止"
+
+#: ../data/gwget.ui.h:17
+msgid "Open"
+msgstr ""
+
+#: ../data/gwget.ui.h:18
+msgid "Open directory"
+msgstr ""
+
+#: ../data/gwget.ui.h:19
+msgid "Open file"
+msgstr ""
+
+#: ../data/gwget.ui.h:20
+#, fuzzy
+#| msgid "Select target directory"
+msgid "Open target directory"
+msgstr "ターゲットディレクトリの選択"
+
+#: ../data/gwget.ui.h:21
+msgid "Pause"
+msgstr "停止"
+
+#: ../data/gwget.ui.h:22
+#, fuzzy
+#| msgid "Pause"
+msgid "Pause all"
+msgstr "停止"
+
+#: ../data/gwget.ui.h:23
+#, fuzzy
+#| msgid "Pause download"
+msgid "Pause all downloads"
+msgstr "ダウンロードの停止"
+
+#: ../data/gwget.ui.h:24
+msgid "Properties"
+msgstr ""
+
+#: ../data/gwget.ui.h:25 ../data/preferences.ui.h:21
+msgid "Recursive"
+msgstr ""
+
+#: ../data/gwget.ui.h:26
+msgid "Recursive options"
+msgstr ""
+
+#: ../data/gwget.ui.h:27 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "すべて削除"
+
+#: ../data/gwget.ui.h:28 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "完了したものを削除"
+
+#: ../data/gwget.ui.h:29
+#, fuzzy
+#| msgid "Remove completed downloads from list"
+msgid "Remove completed downloads"
+msgstr "完了したダウンロードを一覧から削除"
+
+#: ../data/gwget.ui.h:30
+#, fuzzy
+#| msgid "Remove completed"
+msgid "Remove from List"
+msgstr "完了したものを削除"
+
+#: ../data/gwget.ui.h:31
+#, fuzzy
+#| msgid "Remove completed"
+msgid "Remove from list"
+msgstr "完了したものを削除"
+
+#: ../data/gwget.ui.h:32 ../src/main_window_cb.c:695
+#, fuzzy
+#| msgid "Remove completed"
+msgid "Remove inactive"
+msgstr "完了したものを削除"
+
+#: ../data/gwget.ui.h:33
+#, fuzzy
+#| msgid "Remove all"
+msgid "Resume all"
+msgstr "すべて削除"
+
+#: ../data/gwget.ui.h:34
+#, fuzzy
+#| msgid "Pause download"
+msgid "Resume all downloads"
+msgstr "ダウンロードの停止"
+
+#: ../data/gwget.ui.h:35
+msgid "Save in:"
+msgstr "保存先:"
+
+#: ../data/gwget.ui.h:36
+msgid "Stat_usbar"
+msgstr ""
+
+#: ../data/gwget.ui.h:37
+msgid "The index file only"
+msgstr ""
+
+#: ../data/gwget.ui.h:38
+msgid "This site (mirror)"
+msgstr ""
+
+#: ../data/gwget.ui.h:39
+#, fuzzy
+#| msgid "URL: "
+msgid "URL:"
+msgstr "URL: "
+
+#: ../data/gwget.ui.h:40
+msgid "Verify..."
+msgstr ""
+
+#: ../data/gwget.ui.h:41
+msgid "_Archive"
+msgstr ""
+
+#: ../data/gwget.ui.h:42
+#, fuzzy
+msgid "_Download"
+msgstr "新規ダウンロード"
+
+#: ../data/gwget.ui.h:43
+msgid "_Edit"
+msgstr ""
+
+#: ../data/gwget.ui.h:44
+msgid "_Help"
+msgstr ""
+
+#: ../data/gwget.ui.h:45
+msgid "_Toolbar"
+msgstr ""
+
+#: ../data/gwget.ui.h:46
+#, fuzzy
+#| msgid "_New"
+msgid "_View"
+msgstr "新規(_N)"
+
+#: ../data/preferences.ui.h:1
+msgid "   "
+msgstr ""
+
+#: ../data/preferences.ui.h:3
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr ""
+
+#: ../data/preferences.ui.h:4
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr ""
+
+#: ../data/preferences.ui.h:5
+msgid "<span weight=\"bold\">General</span>"
+msgstr ""
+
+#: ../data/preferences.ui.h:6
+msgid "<span weight=\"bold\">Links</span>"
+msgstr ""
+
+#: ../data/preferences.ui.h:7
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr ""
+
+#: ../data/preferences.ui.h:8
+msgid "Column List"
+msgstr ""
+
+#: ../data/preferences.ui.h:9
+msgid "Default _GNOME network settings"
+msgstr ""
+
+#: ../data/preferences.ui.h:10
+msgid "Direct _Internet connection"
+msgstr ""
+
+#: ../data/preferences.ui.h:11
+#, fuzzy
+msgid "Do_wnload Speed"
+msgstr "新規ダウンロード"
+
+#: ../data/preferences.ui.h:12
+#, fuzzy
+#| msgid "Can't write to target directory"
+msgid "Don't _create directories"
+msgstr "ターゲットディレクトリに書き込めません"
+
+#: ../data/preferences.ui.h:13
+msgid "Follow _relative links only"
+msgstr ""
+
+#: ../data/preferences.ui.h:14
+msgid "General"
+msgstr "一般"
+
+#: ../data/preferences.ui.h:15
+msgid "Limit _number of simultaneous download to:"
+msgstr ""
+
+#: ../data/preferences.ui.h:16
+msgid "Network"
+msgstr ""
+
+#: ../data/preferences.ui.h:17
+msgid "P_ort:"
+msgstr ""
+
+#: ../data/preferences.ui.h:18
+msgid "Password:"
+msgstr ""
+
+#: ../data/preferences.ui.h:19
+msgid "Preferences"
+msgstr "設定"
+
+#: ../data/preferences.ui.h:20
+msgid "Pro_xy:"
+msgstr ""
+
+#: ../data/preferences.ui.h:22
+#, fuzzy
+#| msgid "Remaining Time"
+msgid "Remaining _Time"
+msgstr "残り時間"
+
+#: ../data/preferences.ui.h:23
+#, fuzzy
+#| msgid "Save in:"
+msgid "Sa_ve in:"
+msgstr "保存先:"
+
+#: ../data/preferences.ui.h:24
+#, fuzzy
+#| msgid "Total Size"
+msgid "Total _Size"
+msgstr "トータルサイズ"
+
+#: ../data/preferences.ui.h:25
+msgid "_Ask where to save for each download"
+msgstr ""
+
+#: ../data/preferences.ui.h:26
+#, fuzzy
+msgid "_Continue downloads on startup"
+msgstr "スタートアップ時にダウンロードを再開しますか?"
+
+#: ../data/preferences.ui.h:27
+msgid "_Convert links"
+msgstr ""
+
+#: ../data/preferences.ui.h:28
+#, fuzzy
+#| msgid "Current Size"
+msgid "_Current Size"
+msgstr "現在のサイズ"
+
+#: ../data/preferences.ui.h:29
+msgid "_Download page requisites"
+msgstr ""
+
+#: ../data/preferences.ui.h:30
+#, fuzzy
+#| msgid "Elapsed Time"
+msgid "_Elapsed Time"
+msgstr "経過時間"
+
+#: ../data/preferences.ui.h:31
+msgid "_Limit download speed to:"
+msgstr ""
+
+#: ../data/preferences.ui.h:32
+msgid "_Manual proxy configuration"
+msgstr ""
+
+#: ../data/preferences.ui.h:33
+msgid "_Maximum depth level:"
+msgstr ""
+
+#: ../data/preferences.ui.h:34
+#, fuzzy
+#| msgid "Number of retries: "
+msgid "_Number of retries:"
+msgstr "再試行の回数: "
+
+#: ../data/preferences.ui.h:35
+msgid "_Open files automatically after download"
+msgstr ""
+
+#: ../data/preferences.ui.h:36
+#, fuzzy
+#| msgid "Percentage"
+msgid "_Percentage"
+msgstr "パーセンテージ"
+
+#: ../data/preferences.ui.h:37
+msgid "_Proxy requires authentication"
+msgstr ""
+
+#: ../data/preferences.ui.h:38
+msgid "_User:"
+msgstr ""
+
+#: ../data/preferences.ui.h:39
+msgid "files"
+msgstr ""
+
+#: ../data/preferences.ui.h:40
+msgid "kB/sec"
+msgstr ""
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "Forward downloads to GWGet"
+msgstr ""
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+#, fuzzy
+msgid "GWGet"
+msgstr "Gwget2"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
+#, fuzzy
+msgid "Unknown"
+msgstr "不明なエラー"
+
+#: ../src/custom-cell-renderer-progressbar.c:99
+#, fuzzy
+msgid "Failed"
+msgstr "停止"
+
+#: ../src/gwget_data.c:210
+msgid "stalled"
+msgstr "停止"
+
+#: ../src/gwget_data.c:242
+msgid "Waiting"
+msgstr ""
+
+#: ../src/gwget_data.c:244
+msgid "Not Started"
+msgstr "開始していません"
+
+#: ../src/gwget_data.c:246
+msgid "Not Running"
+msgstr "実行していません"
+
+#: ../src/gwget_data.c:248
+msgid "Not Connected"
+msgstr "接続していません"
+
+#: ../src/gwget_data.c:250
+msgid "Connected"
+msgstr "接続しました"
+
+#: ../src/gwget_data.c:252
+msgid "Retrieving"
+msgstr "取得中です"
+
+#: ../src/gwget_data.c:254
+msgid "Completed"
+msgstr "完了しました"
+
+#: ../src/gwget_data.c:258
+msgid "Error"
+msgstr "エラー"
+
+#: ../src/gwget_data.c:696
+msgid "Unable to add this download"
+msgstr ""
+
+#: ../src/gwget_data.c:697
+msgid "This download is already added"
+msgstr ""
+
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
+msgid "Error opening file"
+msgstr ""
+
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
+msgid "Couldn't open the file"
+msgstr ""
+
+#: ../src/gwget_data.c:796
+#, fuzzy
+#| msgid "Completed"
+msgid "Download Complete"
+msgstr "完了しました"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr ""
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr ""
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr ""
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr ""
+
+#: ../src/main.c:41
+#, fuzzy
+#| msgid "Default directory for downloaded data"
+msgid "Destination directory for the download"
+msgstr "ダウンロードしたデータのデフォルトディレクトリ"
+
+#: ../src/main.c:42
+#, fuzzy
+#| msgid "URL: "
+msgid "[URL]"
+msgstr "URL: "
+
+#: ../src/main.c:226 ../src/main_window_cb.c:187
+#, fuzzy
+msgid "Gwget"
+msgstr "Gwget2"
+
+#: ../src/main_window.c:436
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/main_window.c:250
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "状態"
 
-#: src/main_window.c:259
+#: ../src/main_window.c:464
 msgid "Current Size"
 msgstr "現在のサイズ"
 
-#: src/main_window.c:269
+#: ../src/main_window.c:477
 msgid "Total Size"
 msgstr "トータルサイズ"
 
-#: src/main_window.c:279 src/main_window.c:284
+#: ../src/main_window.c:489 ../src/main_window.c:495
 msgid "Percentage"
 msgstr "パーセンテージ"
 
-#: src/main_window.c:289
+#: ../src/main_window.c:503
 msgid "Elapsed Time"
 msgstr "経過時間"
 
-#: src/main_window.c:299
+#: ../src/main_window.c:515
 msgid "Remaining Time"
 msgstr "残り時間"
 
-#: src/main_window.c:309
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "速度"
 
-#: src/main_window.c:539
-msgid "Cancel current downloads?"
+#: ../src/main_window.c:579
+#, fuzzy
+msgid "Error starting the download"
+msgstr "新規ダウンロード"
+
+#: ../src/main_window.c:579
+msgid "There was an unexpected error starting the download"
+msgstr ""
+
+#: ../src/main_window.c:819
+#, fuzzy
+#| msgid "Cancel current downloads?"
+msgid "Stop current downloads?"
 msgstr "現在のダウンロードをキャンセルしますか?"
 
-#: src/main_window.c:539
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
@@ -64,226 +697,197 @@ msgstr ""
 "一つ以上のダウンロードが残っています。実行中の転送を本当にすべてキャンセルし"
 "ますか?"
 
-#: src/main_window_cb.c:95
+#: ../src/main_window_cb.c:98
 #, fuzzy
 msgid "Error in download"
 msgstr "新規ダウンロード"
 
-#: src/main_window_cb.c:100
-msgid "Error opening file"
-msgstr ""
-
-#: src/main_window_cb.c:100
-msgid "Couldn't open the file"
-msgstr ""
-
-#: src/main_window_cb.c:143
+#: ../src/main_window_cb.c:190
 #, fuzzy
-msgid "Download Manager for Gnome2."
-msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャ。"
+msgid "Download Manager for GNOME."
+msgstr "wgetをバックエンドに使った、GNOME2ダウンロードマネージャー。"
 
-#: src/main_window_cb.c:149
-msgid "translator_credits"
+#: ../src/main_window_cb.c:192
+#, fuzzy
+#| msgid "translator_credits"
+msgid "translator-credits"
 msgstr "中井 幸博 <nakai@gnome.gr.jp>"
 
-#: src/main_window_cb.c:161
-#, fuzzy
-msgid "Gwget"
-msgstr "Gwget2"
-
-#: src/main_window_cb.c:391 src/new_window.c:151
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
 msgstr ""
 
-#: src/main_window_cb.c:448
-#, c-format
-msgid "Really cancel current download? (Url: %s)"
+#: ../src/main_window_cb.c:630
+#, fuzzy, c-format
+#| msgid "Really cancel current download? (Url: %s)"
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
 msgstr "現在のダウンロードを本当にキャンセルしますか? (URL: %s)"
 
-#: src/main_window_cb.c:449
-msgid "Cancel download?"
+#: ../src/main_window_cb.c:631
+#, fuzzy
+#| msgid "Cancel download?"
+msgid "Delete download?"
 msgstr "ダウンロードをキャンセルしますか?"
 
-#: src/main_window_cb.c:475
-msgid "Remove completed"
-msgstr "完了したものを削除"
+#: ../src/main_window_cb.c:631
+msgid "Delete"
+msgstr ""
 
-#: src/main_window_cb.c:475
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
 msgstr "完了したダウンロードを本当に一覧から削除しますか?"
 
-#: src/main_window_cb.c:504
-msgid "Remove not running"
-msgstr "実行していないものを削除"
-
-#: src/main_window_cb.c:504
-msgid "Really remove not running downloads from the list?"
-msgstr "実行していないダウンロードを本当に一覧から削除しますか?"
-
-#: src/main_window_cb.c:534
-msgid "Remove all"
+#: ../src/main_window_cb.c:661
+#, fuzzy
+#| msgid "Remove all"
+msgid "Remove"
 msgstr "すべて削除"
 
-#: src/main_window_cb.c:534
+#: ../src/main_window_cb.c:695
+#, fuzzy
+#| msgid "Really remove all downloads from the list?"
+msgid "Really remove inactive downloads from the list?"
+msgstr "すべてのダウンロードを本当に一覧から削除しますか?"
+
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
 msgstr "すべてのダウンロードを本当に一覧から削除しますか?"
 
-#: src/gwget_data.c:172
-msgid "stalled"
-msgstr "停止"
-
-#: src/gwget_data.c:201
-msgid "Not Started"
-msgstr "開始していません"
-
-#: src/gwget_data.c:203
-msgid "Not Running"
-msgstr "実行していません"
-
-#: src/gwget_data.c:205
-msgid "Not Connected"
-msgstr "接続していません"
-
-#: src/gwget_data.c:207
-msgid "Connected"
-msgstr "接続しました"
-
-#: src/gwget_data.c:209
-msgid "Retrieving"
-msgstr "取得中です"
-
-#: src/gwget_data.c:211
-msgid "Completed"
-msgstr "完了しました"
-
-#: src/gwget_data.c:215
+#: ../src/main_window_cb.c:879
 #, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
+msgid "MD5SUM Check PASSED!"
 msgstr ""
 
-#: src/gwget_data.c:222
-msgid "Error"
-msgstr "エラー"
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr ""
 
-#: src/wget-log.c:83
+#: ../src/main_window_cb.c:1207
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr ""
+
+#: ../src/main_window_cb.c:1223
+#, fuzzy, c-format
+#| msgid "Remove all"
+msgid "Remove %s ?"
+msgstr "すべて削除"
+
+#: ../src/main_window_cb.c:1224
+#, fuzzy
+#| msgid "Really remove all downloads from the list?"
+msgid "Really remove this download from the list?"
+msgstr "すべてのダウンロードを本当に一覧から削除しますか?"
+
+#: ../src/main_window_cb.c:1224
+#, fuzzy
+#| msgid "Pause download"
+msgid "Remove download"
+msgstr "ダウンロードの停止"
+
+#: ../src/main_window_cb.c:1280
+msgid "Couldn't open the folder"
+msgstr ""
+
+#: ../src/systray.c:120
+#, fuzzy
+msgid "Nothing"
+msgstr "実行していません"
+
+#: ../src/systray.c:127
+#, fuzzy
+msgid "Downloads"
+msgstr "新規ダウンロード"
+
+#: ../src/wget-log.c:187
 msgid "Socket error"
 msgstr "ソケットエラー"
 
-#: src/wget-log.c:85
-msgid "Connection refused\n"
+#: ../src/wget-log.c:190
+#, fuzzy
+#| msgid "Connection refused\n"
+msgid "Connection refused"
 msgstr "接続が拒否されました\n"
 
-#: src/wget-log.c:87
+#: ../src/wget-log.c:193
 msgid "No route to host"
 msgstr "ホストへの経路がありません"
 
-#: src/wget-log.c:89
-msgid "Connection refused when downloading URL:\n"
+#: ../src/wget-log.c:196
+#, fuzzy
+#| msgid "Connection refused when downloading URL:\n"
+msgid "Connection refused when downloading URL:"
 msgstr "ダウンロード中に接続が拒否されました URL:\n"
 
-#: src/wget-log.c:91
-msgid "Host not found\n"
+#: ../src/wget-log.c:199
+#, fuzzy
+#| msgid "Host not found\n"
+msgid "Host not found"
 msgstr "ホストが見つかりません\n"
 
-#: src/wget-log.c:93
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "サポートされていないプロトコル - wget 1.7 以上が必要です https:\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr ""
 
-#: src/wget-log.c:96
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr ""
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
 msgstr "存在するファイルの切り捨てを拒否しています"
 
-#: src/wget-log.c:98
-msgid "Unknown error"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr ""
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+#, fuzzy
+#| msgid "Unknown error"
+msgid "Unknown error "
 msgstr "不明なエラー"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
 msgstr "ファイルが見つかりませんでした"
 
-#: src/wget-log.c:122
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
 "ダウンロードを再開できません。ローカルにあるファイルがリモートファイルと衝突"
 "しています"
 
-#: src/wget-log.c:169
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
 msgstr "ターゲットディレクトリに書き込めません"
 
-#: src/custom-cell-renderer-progressbar.c:36
 #, fuzzy
-msgid "Unknown"
-msgstr "不明なエラー"
+#~ msgid "File Type"
+#~ msgstr "ファイル名"
 
-#: src/custom-cell-renderer-progressbar.c:99
-#, fuzzy
-msgid "Failed"
-msgstr "停止"
+#~ msgid "Remove not running"
+#~ msgstr "実行していないものを削除"
 
-#: src/systray.c:133
-#, fuzzy
-msgid "Nothing"
-msgstr "実行していません"
+#~ msgid "Really remove not running downloads from the list?"
+#~ msgstr "実行していないダウンロードを本当に一覧から削除しますか?"
 
-#: src/systray.c:140
-#, fuzzy
-msgid "Downloads"
-msgstr "新規ダウンロード"
-
-#~ msgid "_New"
-#~ msgstr "新規(_N)"
-
-#~ msgid "Pause download"
-#~ msgstr "ダウンロードの停止"
-
-#~ msgid "Pause"
-#~ msgstr "停止"
-
-#~ msgid "Continue"
-#~ msgstr "再開"
-
-#~ msgid "Remove completed downloads from list"
-#~ msgstr "完了したダウンロードを一覧から削除"
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#~ msgstr "サポートされていないプロトコル - wget 1.7 以上が必要です https:\n"
 
 #~ msgid "Stop and delete downloaded file"
 #~ msgstr "中止してダウンロードしたファイルを削除"
 
-#~ msgid "Cancel"
-#~ msgstr "キャンセル"
-
 #~ msgid "Question"
 #~ msgstr "質問"
-
-#~ msgid "URL: "
-#~ msgstr "URL: "
 
 #~ msgid "*"
 #~ msgstr "*"
 
-#~ msgid "Save in:"
-#~ msgstr "保存先:"
-
-#~ msgid "Select target directory"
-#~ msgstr "ターゲットディレクトリの選択"
-
-#~ msgid "Preferences"
-#~ msgstr "設定"
-
 #~ msgid "Save in: "
 #~ msgstr "保存先:"
-
-#~ msgid "Default directory for downloaded data"
-#~ msgstr "ダウンロードしたデータのデフォルトディレクトリ"
-
-#~ msgid "Number of retries: "
-#~ msgstr "再試行の回数: "
-
-#, fuzzy
-#~ msgid "Continue downloads on startup?"
-#~ msgstr "スタートアップ時にダウンロードを再開しますか?"
-
-#~ msgid "General"
-#~ msgstr "一般"
