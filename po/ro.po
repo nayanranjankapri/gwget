@@ -1,452 +1,833 @@
 # Romanian translation for gwget
-# 
 # Spoială Cristian <s_cristian@ezrs.com>
-#
+# Alexandru Baicoianu <baicoianu.alexandru@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gwget\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-13 12:28+0300\n"
-"PO-Revision-Date: 2004-09-28 11:35+0300\n"
-"Last-Translator: Spoială Cristian <s_cristian@ezrs.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gwget&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-03-29 16:15+0000\n"
+"PO-Revision-Date: 2010-12-20 17:10+0300\n"
+"Last-Translator: Alexandru Baicoianu <baicoianu.alexandru@gmail.com>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Virtaal 0.5.2\n"
 
-#: data/GNOME_Gwget.server.in.in.h:1
-msgid "gwget application"
-msgstr "aplicaţia gwget"
+#: ../data/gwget.desktop.in.in.h:1 ../src/main.c:207 ../src/main.c:240
+msgid "Gwget Download Manager"
+msgstr "Gwget - Manager de descărcări"
 
-#: data/GNOME_Gwget.server.in.in.h:2
-msgid "gwget automation factory"
-msgstr "gwget automation factory"
+#: ../data/gwget.desktop.in.in.h:2
+msgid "Download Manager"
+msgstr "Manager de transferuri"
 
-#: data/about.glade.h:1
-msgid "About Gwget"
-msgstr "Despre Gwget"
+#: ../data/gwget.desktop.in.in.h:3
+msgid "Download files from the Internet"
+msgstr "Descarcă fișiere de pe internet"
 
-#: data/about.glade.h:2
-msgid "GNU GPL Version 2"
-msgstr "GNU GPL versiunea 2"
+#: ../data/gwget.schemas.in.h:1
+msgid "Convert Links"
+msgstr "Convertește legăturile"
 
-#: data/about.glade.h:3
-msgid "Gwget: Download Manager for Gnome 2"
-msgstr "Gwget:Manager de transferuri pentru Gnome2"
+#: ../data/gwget.schemas.in.h:2
+msgid "Convert to relative links in recursive mode."
+msgstr "Schimbă din legăturile relative în mod recursiv."
 
-#: data/about.glade.h:4
-msgid "translator-credits"
-msgstr "Spoiala Cristian <scristian@gmail.com>"
+#: ../data/gwget.schemas.in.h:3
+msgid "Download Page Requisites"
+msgstr "Pagina de cerinţe pentru descărcări"
 
-#: data/gwget.glade.h:1 data/preferences.glade.h:2
-msgid "    "
-msgstr "    "
+#: ../data/gwget.schemas.in.h:4
+msgid "Default Download Directory"
+msgstr "Director de descărcare implicit"
 
-#: data/gwget.glade.h:2
-msgid "<span weight=\"bold\">Download:</span>"
-msgstr "<span weight=\"bold\">Transfer:</span>"
+#: ../data/gwget.schemas.in.h:5
+msgid "Ask where to save each new download"
+msgstr "Întreabă unde se vor salva noile fișiere descărcate"
 
-#: data/gwget.glade.h:3
-msgid "<span weight=\"bold\">Properties</span>"
-msgstr "<span weight=\"bold\">Proprietăţi</span>"
+#: ../data/gwget.schemas.in.h:6
+msgid ""
+"If true, always ask for a destination folder when starting a new download. "
+"If false, always save in the default directory without asking the user."
+msgstr ""
+"Dacă este bifat, întreabă mereu dosarul pentru noile descărcări. Dacă este "
+"nebifat, salvează întotdeauna în directorul implicit fără a întreba "
+"utilizatorul."
 
-#: data/gwget.glade.h:4
-msgid "Cancel"
-msgstr "Renunţă"
+#: ../data/gwget.schemas.in.h:7
+msgid "Follow relative links"
+msgstr "Urmărește legăturile relevante"
 
-#: data/gwget.glade.h:5
-msgid "Continue"
-msgstr "Continuă"
+#: ../data/gwget.schemas.in.h:8
+msgid "Limit maximum speed"
+msgstr "Limitează viteza maximă"
 
-#: data/gwget.glade.h:6
+#: ../data/gwget.schemas.in.h:9
+msgid "Limit number of simultaneous downloads"
+msgstr "Limitează numărul de descărcări simultane"
+
+#: ../data/gwget.schemas.in.h:10
+msgid "Maximum depth in recursive mode"
+msgstr "Nivel maxim de adâncime în modul recursiv"
+
+#: ../data/gwget.schemas.in.h:11
+msgid "Maximum speed limit"
+msgstr "Limită viteză maximă"
+
+#: ../data/gwget.schemas.in.h:12
+msgid "Maximum number of simultaneous downloads"
+msgstr "Numărul maxim de descărcări simultane"
+
+#: ../data/gwget.schemas.in.h:13
+msgid "Number of downloads"
+msgstr "Număr de descărcări"
+
+#: ../data/gwget.schemas.in.h:14
+msgid "Number of retries"
+msgstr "Număr de încercări"
+
+#: ../data/gwget.schemas.in.h:15
+msgid "Resume downloads at startup"
+msgstr "Continuă transferurile la pornire"
+
+#: ../data/gwget.schemas.in.h:16
+msgid "Open the file after download"
+msgstr "Deschide fișier după descărcare"
+
+#: ../data/gwget.schemas.in.h:17
+msgid "View download speed column"
+msgstr "Vizualizează coloana pentru viteza de descărcare"
+
+#: ../data/gwget.schemas.in.h:18
+msgid "View elapsed time column"
+msgstr "Vizualizează coloana pentru timp scurs"
+
+#: ../data/gwget.schemas.in.h:19
+msgid "View percentage column"
+msgstr "Vizualizează coloana pentru procentaje"
+
+#: ../data/gwget.schemas.in.h:20
+msgid "View remaining time column"
+msgstr "Vizualizează coloana pentru timp rămas"
+
+#: ../data/gwget.schemas.in.h:21
+msgid "View toolbar"
+msgstr "Vizualizează bara de unelte"
+
+#: ../data/gwget.schemas.in.h:22
+msgid "Whether to display the toolbar."
+msgstr "Dacă să se afișeze bara de unelte."
+
+#: ../data/gwget.schemas.in.h:23
+msgid "View statusbar"
+msgstr "Vizualizează bara de stare"
+
+#: ../data/gwget.schemas.in.h:24
+msgid "Whether to display the statusbar."
+msgstr "Dacă să se afișeze bara de stare."
+
+#: ../data/gwget.schemas.in.h:25
+msgid "View total size column"
+msgstr "Vizualizează coloană în mărime completă"
+
+#: ../data/gwget.ui.h:1 ../src/main_window_cb.c:140
+#: ../src/main_window_cb.c:638 ../src/main_window_cb.c:677
+#: ../src/main_window_cb.c:745
 msgid "Gwget - Download Manager"
-msgstr "Gwget: Manager de transferuri"
+msgstr "Manager de descărcări gwet"
 
-#: data/gwget.glade.h:7
-msgid "Local Directory: "
-msgstr "Director local:"
+#: ../data/gwget.ui.h:2
+msgid "_Archive"
+msgstr "_Arhivă"
 
-#: data/gwget.glade.h:8
-msgid "Local File: "
-msgstr "Fişier local:"
+#: ../data/gwget.ui.h:3
+msgid "Resume all"
+msgstr "Reluați tot"
 
-#: data/gwget.glade.h:9
-msgid "Multimedia files (Videos and images)"
-msgstr "Fişiere multimedia (video şi imagini)"
+#: ../data/gwget.ui.h:4
+msgid "Pause all"
+msgstr "Pune totul în pauză"
 
-#: data/gwget.glade.h:10
-msgid "New download"
-msgstr "Transfer nou"
+#: ../data/gwget.ui.h:5
+msgid "_Edit"
+msgstr "_Editare"
 
-#: data/gwget.glade.h:11
+#: ../data/gwget.ui.h:6
+msgid "Remove from List"
+msgstr "Eliminați din listă"
+
+#: ../data/gwget.ui.h:7 ../src/main_window_cb.c:661
+msgid "Remove completed"
+msgstr "Eliminați descărcările terminate"
+
+#: ../data/gwget.ui.h:8 ../src/main_window_cb.c:695
+msgid "Remove inactive"
+msgstr "Eliminați descărcările inactive"
+
+#: ../data/gwget.ui.h:9 ../src/main_window_cb.c:727
+msgid "Remove all"
+msgstr "Eliminați toate descărcările"
+
+#: ../data/gwget.ui.h:10
+msgid "_Download"
+msgstr "_Descărcări"
+
+#: ../data/gwget.ui.h:11
 msgid "Pause"
 msgstr "Pauză"
 
-#: data/gwget.glade.h:12
-msgid "Pause download"
-msgstr "Pauză la transfer"
+#: ../data/gwget.ui.h:12
+msgid "Continue"
+msgstr "Continuă"
 
-#: data/gwget.glade.h:13
-msgid "Properties"
-msgstr "Proprietăţi"
+#: ../data/gwget.ui.h:13
+msgid "Cancel"
+msgstr "Renunţă"
 
-#: data/gwget.glade.h:14
-msgid "Question"
-msgstr "Întrebare"
+#: ../data/gwget.ui.h:14
+msgid "_View"
+msgstr "_Vizualizează"
 
-#: data/gwget.glade.h:15 data/preferences.glade.h:25
-msgid "Recursive"
-msgstr "Recursiv"
-
-#: data/gwget.glade.h:16
-msgid "Recursive options"
-msgstr "Opţiuni pentru recursivitate"
-
-#: data/gwget.glade.h:17
-#, fuzzy
-msgid "Remove"
-msgstr "Ştergeţi toate"
-
-#: data/gwget.glade.h:18 src/main_window_cb.c:558
-msgid "Remove all"
-msgstr "Ştergeţi toate"
-
-#: data/gwget.glade.h:19
-msgid "Remove all downloads from list"
-msgstr "Ştergeţi toate transferurile din listă"
-
-#: data/gwget.glade.h:20 src/main_window_cb.c:499
-msgid "Remove completed"
-msgstr "Ştergeţi transferurile terminate"
-
-#: data/gwget.glade.h:21
-msgid "Remove completed downloads from list"
-msgstr "Ştergeţi transferurile terminate din listă"
-
-#: data/gwget.glade.h:22 src/main_window_cb.c:528
-msgid "Remove inactive"
-msgstr "Ştergeţi transferurile inactive"
-
-#: data/gwget.glade.h:23
-msgid "Remove inactive downloads from list"
-msgstr "Ştergeţi toate transferurile inactive din listă"
-
-#: data/gwget.glade.h:24
-msgid "Stop and delete downloaded file"
-msgstr "Opreşte şi şterge fişierul transferat"
-
-#: data/gwget.glade.h:25
-msgid "The index file only"
-msgstr "Numai fişierul index"
-
-#: data/gwget.glade.h:26
-msgid "This site (mirror)"
-msgstr "Acest site (mirror)"
-
-#: data/gwget.glade.h:27
-msgid "Url:"
-msgstr "Url:"
-
-#: data/gwget.glade.h:28
-msgid "_New"
-msgstr "_Nou"
-
-#: data/gwget.glade.h:29
+#: ../data/gwget.ui.h:15
 msgid "_Toolbar"
 msgstr "_Bara de unelte"
 
-#: data/newdownload.glade.h:1 data/preferences.glade.h:4
-msgid "*"
-msgstr "*"
+#: ../data/gwget.ui.h:16
+msgid "Stat_usbar"
+msgstr "Bară _stare"
 
-#: data/newdownload.glade.h:2
-msgid "<span weight=\"bold\">New Download</span>"
-msgstr "<span weight=\"bold\">Transfer nou</span>"
+#: ../data/gwget.ui.h:17
+msgid "_Help"
+msgstr "_Ajutor"
 
-#: data/newdownload.glade.h:3
+#: ../data/gwget.ui.h:18
+msgid "New download"
+msgstr "Descărcare nouă"
+
+#: ../data/gwget.ui.h:19
+msgid "Resume all downloads"
+msgstr "Reluați toate descărcările"
+
+#: ../data/gwget.ui.h:20
+msgid "Pause all downloads"
+msgstr "Suspendează toate descărcările"
+
+#: ../data/gwget.ui.h:21
+msgid "Remove completed downloads"
+msgstr "Eliminați descărcările terminate din listă"
+
+#: ../data/gwget.ui.h:22
+msgid "Clear"
+msgstr "Șterge"
+
+#: ../data/gwget.ui.h:23
+msgid "Open"
+msgstr "Deschide"
+
+#: ../data/gwget.ui.h:24
+msgid "Open file"
+msgstr "Deschide fișier"
+
+#: ../data/gwget.ui.h:25
+msgid "Open directory"
+msgstr "Deschide director"
+
+#: ../data/gwget.ui.h:26
+msgid "Open target directory"
+msgstr "Deschide directorul țintă"
+
+#: ../data/gwget.ui.h:27
+msgid "Remove from list"
+msgstr "Eliminați din listă"
+
+#: ../data/gwget.ui.h:28
+msgid "Recursive options"
+msgstr "Opțiuni pentru recursivitate"
+
+#: ../data/gwget.ui.h:29
+msgid "<b>Download</b>"
+msgstr "<b>Descărcare</b>"
+
+#: ../data/gwget.ui.h:30 ../data/preferences.ui.h:15
+msgid "    "
+msgstr "    "
+
+#: ../data/gwget.ui.h:31
+msgid "The index file only"
+msgstr "Numai fișierul index"
+
+#: ../data/gwget.ui.h:32
+msgid "Multimedia files (Videos and images)"
+msgstr "Fișiere multimedia (video și imagini)"
+
+#: ../data/gwget.ui.h:33
+msgid "This site (mirror)"
+msgstr "Acest site (alternativ)"
+
+#: ../data/gwget.ui.h:34 ../data/preferences.ui.h:22
+msgid "Recursive"
+msgstr "Recursiv"
+
+#: ../data/gwget.ui.h:35
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: ../data/gwget.ui.h:36
+msgid "<b>Properties</b>"
+msgstr "<b>Proprietăți</b>"
+
+#: ../data/gwget.ui.h:37
+msgid "URL:"
+msgstr "URL: "
+
+#: ../data/gwget.ui.h:38
+msgid "Local File:"
+msgstr "Fișier local:"
+
+#: ../data/gwget.ui.h:39
+msgid "Local Directory:"
+msgstr "Director local:"
+
+#: ../data/gwget.ui.h:40
+msgid "Md5 Sum:"
+msgstr "Sumă Md5:"
+
+#: ../data/gwget.ui.h:41
+msgid "Verify..."
+msgstr "Verifică.."
+
+#: ../data/gwget.ui.h:42
+msgid "Compare md5 sum"
+msgstr "Compară sumă md5"
+
+#: ../data/gwget.ui.h:43
+msgid "<b>Insert MD5 sum to compare with</b>"
+msgstr "<b> Inserați suma MD5 cu care să se facă compararea</b>"
+
+#: ../data/gwget.ui.h:44
 msgid "New Download"
-msgstr "Transfer nou"
+msgstr "Descărcare nouă"
 
-#: data/newdownload.glade.h:4 data/preferences.glade.h:27
+#: ../data/gwget.ui.h:45
 msgid "Save in:"
 msgstr "Salvează în:"
 
-#: data/newdownload.glade.h:5
-msgid "URL: "
-msgstr "URL: "
+#: ../data/gwget.ui.h:46
+msgid "<span weight=\"bold\">New Download</span>"
+msgstr "<span weight=\"bold\">Descărcare nouă</span>"
 
-#: data/preferences.glade.h:1
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: ../data/preferences.ui.h:2
+msgid "<span weight=\"bold\">General</span>"
+msgstr "<span weight=\"bold\">General</span>"
+
+#: ../data/preferences.ui.h:3
 msgid "   "
 msgstr "   "
 
-#: data/preferences.glade.h:3
-msgid "  KB"
-msgstr "  KB"
+#: ../data/preferences.ui.h:4
+msgid "Sa_ve in:"
+msgstr "_Salvează în:"
 
-#: data/preferences.glade.h:5
-msgid "<b>General</b>"
-msgstr "<b>General</b>"
+#: ../data/preferences.ui.h:5
+msgid "_Ask where to save for each download"
+msgstr "_Întreabă unde se va salva fiecare fișier"
 
-#: data/preferences.glade.h:6
-msgid "<span weight=\"bold\">Behavior</span>"
-msgstr "<span weight=\"bold\">Comportament</span>"
+#: ../data/preferences.ui.h:6
+msgid "_Continue downloads on startup"
+msgstr "_Continuă descărcările la pornire"
 
-#: data/preferences.glade.h:7
-msgid "<span weight=\"bold\">Column List</span>"
-msgstr "<span weight=\"bold\">Lista de coloane</span>"
+#: ../data/preferences.ui.h:7
+msgid "_Limit download speed to:"
+msgstr "_Limitează viteza de descărcare la: "
 
-#: data/preferences.glade.h:8
-msgid "<span weight=\"bold\">Links</span>"
-msgstr "<span weight=\"bold\">Legături</span>"
+#: ../data/preferences.ui.h:8
+msgid "kB/sec"
+msgstr "kB/sec"
 
-#: data/preferences.glade.h:9
-msgid "Column List"
-msgstr "Lista de coloane"
+#: ../data/preferences.ui.h:9
+msgid "Limit _number of simultaneous download to:"
+msgstr "Limitează _numărul de descărcări simultane la:"
 
-#: data/preferences.glade.h:10
-msgid "Continue downloads on startup"
-msgstr "Continuă transferurile la pornire"
+#: ../data/preferences.ui.h:10
+msgid "files"
+msgstr "fișiere"
 
-#: data/preferences.glade.h:11
-msgid "Convert links"
-msgstr "Converteşte legăturile"
+#: ../data/preferences.ui.h:11
+msgid "_Open files automatically after download"
+msgstr "_Deschide fișierele automat după descărcare"
 
-#: data/preferences.glade.h:12 src/main_window.c:259
-msgid "Current Size"
-msgstr "Mărime curentă"
+#: ../data/preferences.ui.h:12
+msgid "_Number of retries:"
+msgstr "_Număr de încercări:"
 
-#: data/preferences.glade.h:13
-msgid "Don't create directories"
-msgstr "Nu creaţi directoarele"
-
-#: data/preferences.glade.h:14
-msgid "Download Speed"
-msgstr "Viteza la transfer"
-
-#: data/preferences.glade.h:15
-msgid "Download page requisites"
-msgstr "Pagina de cerinţe pentru transfer"
-
-#: data/preferences.glade.h:16 src/main_window.c:289
-msgid "Elapsed Time"
-msgstr "Timp trecut"
-
-#: data/preferences.glade.h:17
-msgid "File Type Image"
-msgstr "Imaginea tipului de fişier"
-
-#: data/preferences.glade.h:18
-msgid "Follow relative links only"
-msgstr "Urmăreşte numai legăturile relevante"
-
-#: data/preferences.glade.h:19
+#: ../data/preferences.ui.h:13
 msgid "General"
 msgstr "General"
 
-#: data/preferences.glade.h:20
-msgid "Limit download speed to: "
-msgstr "Limitează viteza de transfer la: "
+#: ../data/preferences.ui.h:14
+msgid "<span weight=\"bold\">Behavior</span>"
+msgstr "<span weight=\"bold\">Comportament</span>"
 
-#: data/preferences.glade.h:21
-msgid "Maximum depth level: "
-msgstr "Nivel maxim de adâncime:"
+#: ../data/preferences.ui.h:16
+msgid "_Download page requisites"
+msgstr "Pagina de _cerințe pentru transfer"
 
-#: data/preferences.glade.h:22
-msgid "Number of retries:"
-msgstr "Număr de încercări:"
+#: ../data/preferences.ui.h:17
+msgid "Don't _create directories"
+msgstr "Nu _creați directoarele"
 
-#: data/preferences.glade.h:23 src/main_window.c:279 src/main_window.c:284
-msgid "Percentage"
-msgstr "Procent"
+#: ../data/preferences.ui.h:18
+msgid "_Maximum depth level:"
+msgstr "_Nivel maxim de adâncime:"
 
-#: data/preferences.glade.h:24
-msgid "Preferences"
-msgstr "Preferinţe"
+#: ../data/preferences.ui.h:19
+msgid "<span weight=\"bold\">Links</span>"
+msgstr "<span weight=\"bold\">Legături</span>"
 
-#: data/preferences.glade.h:26 src/main_window.c:299
-msgid "Remaining Time"
-msgstr "Timp Rămas"
+#: ../data/preferences.ui.h:20
+msgid "Follow _relative links only"
+msgstr "Urmărește numai legăturile relative"
 
-#: data/preferences.glade.h:28 src/main_window.c:269
-msgid "Total Size"
-msgstr "Mărime totală"
+#: ../data/preferences.ui.h:21
+msgid "_Convert links"
+msgstr "_Convertește legăturile"
 
-#: src/custom-cell-renderer-progressbar.c:36
+#: ../data/preferences.ui.h:23
+msgid "<span weight=\"bold\">Proxy Configuration</span>"
+msgstr "<span weight=\"bold\">Proprietăți</span>"
+
+#: ../data/preferences.ui.h:24
+msgid "Direct _Internet connection"
+msgstr "Conexiune _directă la internet"
+
+#: ../data/preferences.ui.h:25
+msgid "Default _GNOME network settings"
+msgstr "Setări de _rețea GNOME implicite"
+
+#: ../data/preferences.ui.h:26
+msgid "_Manual proxy configuration"
+msgstr "_Configurare manuală proxy"
+
+#: ../data/preferences.ui.h:27
+msgid "Pro_xy:"
+msgstr "Pro_xy:"
+
+#: ../data/preferences.ui.h:28
+msgid "P_ort:"
+msgstr "P_ort:"
+
+#: ../data/preferences.ui.h:29
+msgid "_Proxy requires authentication"
+msgstr "_Proxyul necesită autentificare"
+
+#: ../data/preferences.ui.h:30
+msgid "_User:"
+msgstr "_Utilizator:"
+
+#: ../data/preferences.ui.h:31
+msgid "Password:"
+msgstr "Parolă:"
+
+#: ../data/preferences.ui.h:32
+msgid "Network"
+msgstr "Rețea"
+
+#: ../data/preferences.ui.h:33
+msgid "<span weight=\"bold\">Column List</span>"
+msgstr "<span weight=\"bold\">Lista de coloane</span>"
+
+#: ../data/preferences.ui.h:34
+msgid "_Current Size"
+msgstr "_Mărime curentă"
+
+#: ../data/preferences.ui.h:35
+msgid "Total _Size"
+msgstr "Mărime _totală"
+
+#: ../data/preferences.ui.h:36
+msgid "_Percentage"
+msgstr "_Procent"
+
+#: ../data/preferences.ui.h:37
+msgid "_Elapsed Time"
+msgstr "_Timp scurs"
+
+#: ../data/preferences.ui.h:38
+msgid "Remaining _Time"
+msgstr "Timp _rămas"
+
+#: ../data/preferences.ui.h:39
+msgid "Do_wnload Speed"
+msgstr "Viteză de d_escărcare"
+
+#: ../data/preferences.ui.h:40
+msgid "Column List"
+msgstr "Listă de coloane"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:1
+msgid "GWGet"
+msgstr "GwGet"
+
+#: ../epiphany-extension/gwget.xml.in.in.h:2
+msgid "Forward downloads to GWGet"
+msgstr "Redirecționează descărcările la GwGet"
+
+#: ../src/custom-cell-renderer-progressbar.c:36
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: src/custom-cell-renderer-progressbar.c:99
+#: ../src/custom-cell-renderer-progressbar.c:99
 msgid "Failed"
-msgstr "Eşuare"
+msgstr "Eşuat"
 
-#: src/gwget_data.c:173
+#: ../src/gwget_data.c:210
 msgid "stalled"
 msgstr "blocat"
 
-#: src/gwget_data.c:203
+#: ../src/gwget_data.c:242
+msgid "Waiting"
+msgstr "În așteptare"
+
+#: ../src/gwget_data.c:244
 msgid "Not Started"
 msgstr "Nu a pornit"
 
-#: src/gwget_data.c:205
+#: ../src/gwget_data.c:246
 msgid "Not Running"
 msgstr "Nu rulează"
 
-#: src/gwget_data.c:207
+#: ../src/gwget_data.c:248
 msgid "Not Connected"
 msgstr "Nu s-a conectat"
 
-#: src/gwget_data.c:209
+#: ../src/gwget_data.c:250
 msgid "Connected"
 msgstr "Conectat"
 
-#: src/gwget_data.c:211
+#: ../src/gwget_data.c:252
 msgid "Retrieving"
-msgstr "Se transferă"
+msgstr "Se obține"
 
-#: src/gwget_data.c:213
+#: ../src/gwget_data.c:254
 msgid "Completed"
 msgstr "Gata"
 
-#: src/gwget_data.c:217
-#, c-format
-msgid ""
-"Download Completed\n"
-"(%s)"
-msgstr ""
-"Transfer terminat\n"
-"(%s)"
-
-#: src/gwget_data.c:224
+#: ../src/gwget_data.c:258
 msgid "Error"
 msgstr "Eroare"
 
-#: src/main_window.c:231
-msgid "File Type"
-msgstr "Tipul fişierului"
+#: ../src/gwget_data.c:696
+msgid "Unable to add this download"
+msgstr "Nu se poate adăuga această descărcare"
 
-#: src/main_window.c:240
+#: ../src/gwget_data.c:697
+msgid "This download is already added"
+msgstr "Această descărcare există deja"
+
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257 ../src/main_window_cb.c:1280
+msgid "Error opening file"
+msgstr "Eroare la deschiderea fișierului"
+
+#: ../src/gwget_data.c:748 ../src/main_window_cb.c:110
+#: ../src/main_window_cb.c:1257
+msgid "Couldn't open the file"
+msgstr "Nu s-a putut deschide fișierul"
+
+#: ../src/gwget_data.c:796
+msgid "Download Complete"
+msgstr ""
+"Descărcare terminată\n"
+"(%s)"
+
+#: ../src/gwget_data.c:812
+#, c-format
+msgid ""
+"The file %s is an MP3 playlist.\n"
+"Download the files that it contains?"
+msgstr ""
+"Fișierul %s este o listă de redare MP3.\n"
+"Descarcați și fișiere pe care le conține?"
+
+#: ../src/gwget_data.c:814
+msgid "Download files in MP3 playlist?"
+msgstr "Descărcați fișierele în lista de redare?"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "No"
+msgstr "Nu"
+
+#: ../src/gwget_data.c:815 ../src/main_window.c:820
+msgid "Yes"
+msgstr "Da"
+
+#: ../src/main.c:40
+msgid "Launch gwget in the notification area"
+msgstr "Lansează gwget în zona de notificare"
+
+#: ../src/main.c:41
+msgid "Destination directory for the download"
+msgstr "Director pentru descărcare"
+
+#: ../src/main.c:42
+msgid "[URL]"
+msgstr "[URL]"
+
+#: ../src/main.c:226 ../src/main_window_cb.c:187
+msgid "Gwget"
+msgstr "Gwget"
+
+#: ../src/main_window.c:436
 msgid "File Name"
-msgstr "Numele fişierului"
+msgstr "Numele fișierului"
 
-#: src/main_window.c:250
+#: ../src/main_window.c:451
 msgid "State"
 msgstr "Stare"
 
-#: src/main_window.c:309
+#: ../src/main_window.c:464
+msgid "Current Size"
+msgstr "Mărime curentă"
+
+#: ../src/main_window.c:477
+msgid "Total Size"
+msgstr "Mărime totală"
+
+#: ../src/main_window.c:489 ../src/main_window.c:495
+msgid "Percentage"
+msgstr "Procentaj"
+
+#: ../src/main_window.c:503
+msgid "Elapsed Time"
+msgstr "Timp scurs"
+
+#: ../src/main_window.c:515
+msgid "Remaining Time"
+msgstr "Timp rămas"
+
+#: ../src/main_window.c:527
 msgid "Speed"
 msgstr "Viteză"
 
-#: src/main_window.c:540
-msgid "Cancel current downloads?"
-msgstr "Anulaţi transferurile curente?"
+#: ../src/main_window.c:579
+msgid "Error starting the download"
+msgstr "Eroare la pornirea descărcării"
 
-#: src/main_window.c:540
+#: ../src/main_window.c:579
+msgid "There was an unexpected error starting the download"
+msgstr "A apărut o eroare la pornirea descărcării"
+
+#: ../src/main_window.c:819
+msgid "Stop current downloads?"
+msgstr "Opriți descărcările curente?"
+
+#: ../src/main_window.c:820
 msgid ""
 "There is at least one active download left. Really cancel all running "
 "transfers?"
 msgstr ""
-"Mai este cel puţin un transfer activ rămas. Chiar doriţi să anulaţi toate "
-"transferurile care rulează?"
+"Mai este cel puțin o descărcare activă rămasă. Chiar doriți să anulați toate "
+"descărcările care rulează?"
 
-#: src/main_window_cb.c:94
+#: ../src/main_window_cb.c:98
 msgid "Error in download"
-msgstr "Eroare la transfer"
+msgstr "Eroare la descărcare"
 
-#: src/main_window_cb.c:99
-msgid "Error opening file"
-msgstr "Eroare la deschiderea fişierului"
+#: ../src/main_window_cb.c:190
+msgid "Download Manager for GNOME."
+msgstr "Manager de descărcări pentru Gnome."
 
-#: src/main_window_cb.c:99
-msgid "Couldn't open the file"
-msgstr "Nu s-a putut deschide fişierul"
+#: ../src/main_window_cb.c:192
+msgid "translator-credits"
+msgstr "Alexandru Băicoianu <baicoianu.alexandru@gmail.com>"
 
-#: src/main_window_cb.c:163
-msgid "Download Manager for Gnome2."
-msgstr "Manager de transferuri pentru Gnome2"
-
-#: src/main_window_cb.c:169
-msgid "translator_credits"
-msgstr "Spoiala Cristian <scristian@gmail.com>"
-
-#: src/main_window_cb.c:181
-msgid "Gwget"
-msgstr "Gwget"
-
-#: src/main_window_cb.c:415 src/new_window.c:117
+#: ../src/main_window_cb.c:574 ../src/new_window.c:127
 msgid "Select Folder"
-msgstr "Selectează director"
+msgstr "Selectează dosar"
 
-#: src/main_window_cb.c:472
+#: ../src/main_window_cb.c:630
 #, c-format
-msgid "Really cancel current download? (Url: %s)"
-msgstr "Chiar doriţi să anulaţi transferul? (Url: %s)"
+msgid ""
+"Really cancel current download?\n"
+"(URL: %s)"
+msgstr ""
+"Chiar doriți să anulați descărcarea? \n"
+"(URL: %s)"
 
-#: src/main_window_cb.c:473
-msgid "Cancel download?"
-msgstr "Anulaţi transferul ?"
+#: ../src/main_window_cb.c:631
+msgid "Delete download?"
+msgstr "Ștergeți descărcarea ?"
 
-#: src/main_window_cb.c:499
+#: ../src/main_window_cb.c:631
+msgid "Delete"
+msgstr "Șterge"
+
+#: ../src/main_window_cb.c:661
 msgid "Really remove completed downloads from the list?"
-msgstr "Chiar doriţi să ştergeţi transferurile terminate din listă?"
+msgstr "Chiar doriți să eliminați descărcările terminate din listă?"
 
-#: src/main_window_cb.c:528
+#: ../src/main_window_cb.c:661
+msgid "Remove"
+msgstr "Elimină"
+
+#: ../src/main_window_cb.c:695
 msgid "Really remove inactive downloads from the list?"
-msgstr "Sigur doriţi să scoateţi transferurile inactive din listă ?"
+msgstr "Sigur doriți să eliminați descărcările inactive din listă ?"
 
-#: src/main_window_cb.c:558
+#: ../src/main_window_cb.c:727
 msgid "Really remove all downloads from the list?"
-msgstr "Scoateţi toate transferurile din listă ?"
+msgstr "Sigur eliminați toate descărcările din listă ?"
 
-#: src/systray.c:135
+#: ../src/main_window_cb.c:879
+#, c-format
+msgid "MD5SUM Check PASSED!"
+msgstr "Verificarea MD5SUM a trecut succes!"
+
+#: ../src/main_window_cb.c:882
+#, c-format
+msgid "MD5SUM Check FAILED!"
+msgstr "Verificarea MD5SUM a eșuat!"
+
+#: ../src/main_window_cb.c:1207
+msgid "New download speed limit will apply only to new or restarted downloads"
+msgstr "Noua limită de descărcare va intra în vigoare la noile descărcări."
+
+#: ../src/main_window_cb.c:1223
+#, c-format
+msgid "Remove %s ?"
+msgstr "Ștergeți %s ?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Really remove this download from the list?"
+msgstr "Sigur eliminați toate descărcările din listă ?"
+
+#: ../src/main_window_cb.c:1224
+msgid "Remove download"
+msgstr "Elimină sarcină descărcată"
+
+#: ../src/main_window_cb.c:1280
+msgid "Couldn't open the folder"
+msgstr "Nu s-a putut deschide dosarul"
+
+#: ../src/systray.c:120
 msgid "Nothing"
 msgstr "Nimic"
 
-#: src/systray.c:142
+#: ../src/systray.c:127
 msgid "Downloads"
-msgstr "Transferuri"
+msgstr "Descărcări"
 
-#: src/wget-log.c:83
+#: ../src/wget-log.c:187
 msgid "Socket error"
-msgstr "Eroare la socket"
+msgstr "Eroare de socket"
 
-#: src/wget-log.c:85
-msgid "Connection refused\n"
-msgstr "Conexiune refuzată\n"
+#: ../src/wget-log.c:190
+msgid "Connection refused"
+msgstr "Conexiune refuzată"
 
-#: src/wget-log.c:87
+#: ../src/wget-log.c:193
 msgid "No route to host"
-msgstr "Nici o rută către această destinaţie"
+msgstr "Nicio rută către gazdă"
 
-#: src/wget-log.c:89
-msgid "Connection refused when downloading URL:\n"
-msgstr "Conexiune refuzată în timp ce se transfera URL-ul:\n"
+#: ../src/wget-log.c:196
+msgid "Connection refused when downloading URL:"
+msgstr "Conexiune refuzată în timp ce se descărca URL-ul:"
 
-#: src/wget-log.c:91
-msgid "Host not found\n"
-msgstr "Destinaţia nu putut fi găsită\n"
+#: ../src/wget-log.c:199
+msgid "Host not found"
+msgstr "Gazda nu a fost găsită"
 
-#: src/wget-log.c:93
-msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
-msgstr "Protocol nesuportat - aveţi nevoie de wget>= 1.7 pentru https:\n"
+#: ../src/wget-log.c:202
+msgid "Name or service not known"
+msgstr "Nume sau serviciu necunoscut"
 
-#: src/wget-log.c:96
+#: ../src/wget-log.c:205
+msgid "Unsupported protocol"
+msgstr "Protocol incompatibil"
+
+#: ../src/wget-log.c:208
 msgid "Refusing to truncate existing file"
-msgstr "Se refuză trunchierea fişierului existent"
+msgstr "Se refuză trunchierea fișierului existent"
 
-#: src/wget-log.c:98
-msgid "Unknown error"
+#: ../src/wget-log.c:211
+msgid "Unable to resolve host address"
+msgstr "Nu s-a putut rezolva adresa gazdă"
+
+#.
+#. * All other possible output may as well be reported, since we treat it
+#. * as an error. We tag the message as unknown to make it more meaningful.
+#.
+#: ../src/wget-log.c:225
+msgid "Unknown error "
 msgstr "Eroare necunoscută"
 
-#: src/wget-log.c:109 src/wget-log.c:115
+#: ../src/wget-log.c:238 ../src/wget-log.c:245
 msgid "File not found"
-msgstr "Fişierul nu s-a găsit"
+msgstr "Fișierul nu s-a găsit"
 
-#: src/wget-log.c:122
+#: ../src/wget-log.c:252
 msgid "Can't continue download, existing local file conflicts with remote file"
 msgstr ""
-"Nu se poate continua transferul, fişierul de scris este în conflict cu "
-"fişierul local"
+"Nu se poate continua descărcarea, fișierul existent este în conflict cu "
+"fișierul local"
 
-#: src/wget-log.c:169
+#: ../src/wget-log.c:303
 msgid "Can't write to target directory"
-msgstr "Nu se poate scrie în directorul specificat"
+msgstr "Nu se poate scrie în directorul țintă"
+
+#~ msgid "gwget application"
+#~ msgstr "aplicaţia gwget"
+
+#~ msgid "gwget automation factory"
+#~ msgstr "gwget automation factory"
+
+#~ msgid "About Gwget"
+#~ msgstr "Despre Gwget"
+
+#~ msgid "GNU GPL Version 2"
+#~ msgstr "GNU GPL versiunea 2"
+
+#~ msgid "Gwget: Download Manager for Gnome 2"
+#~ msgstr "Gwget:Manager de transferuri pentru Gnome2"
+
+#~ msgid "<span weight=\"bold\">Download:</span>"
+#~ msgstr "<span weight=\"bold\">Transfer:</span>"
+
+#~ msgid "Question"
+#~ msgstr "Întrebare"
+
+#~ msgid "Remove inactive downloads from list"
+#~ msgstr "Ştergeţi toate transferurile inactive din listă"
+
+#~ msgid "Stop and delete downloaded file"
+#~ msgstr "Opreşte şi şterge fişierul transferat"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "  KB"
+#~ msgstr "  KB"
+
+#~ msgid "<b>General</b>"
+#~ msgstr "<b>General</b>"
+
+#~ msgid "File Type Image"
+#~ msgstr "Imaginea tipului de fişier"
+
+#~ msgid "File Type"
+#~ msgstr "Tipul fişierului"
+
+#~ msgid "translator_credits"
+#~ msgstr "Spoiala Cristian <scristian@gmail.com>"
+
+#~ msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+#~ msgstr "Protocol nesuportat - aveţi nevoie de wget>= 1.7 pentru https:\n"
