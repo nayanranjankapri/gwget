@@ -344,7 +344,7 @@
 	 <owner>gwget</owner>
 	 <type>string</type>
 	 <default></default>
-	 <locale name="c">
+	 <locale name="C">
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -356,7 +356,7 @@
 	 <owner>gwget</owner>
 	 <type>int</type>
 	 <default>8080</default>
-	 <locale name="c">
+	 <locale name="C">
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -368,7 +368,7 @@
 	 <owner>gwget</owner>
 	 <type>bool</type>
 	 <default>false</default>
-	 <locale name="c">
+	 <locale name="C">
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -380,7 +380,7 @@
 	 <owner>gwget</owner>
 	 <type>string</type>
 	 <default></default>
-	 <locale name="c">
+	 <locale name="C">
 	   <short></short>
 	   <long></long>
 	 </locale>
@@ -392,7 +392,7 @@
 	 <owner>gwget</owner>
 	 <type>string</type>
 	 <default></default>
-	 <locale name="c">
+	 <locale name="C">
 	   <short></short>
 	   <long></long>
 	 </locale>
